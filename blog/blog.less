@@ -1,0 +1,107 @@
+@import '../settings.less';
+
+
+
+.blog {
+    
+    .post-author {
+
+        img {
+            .object-fit(cover);
+            .round;
+            margin-bottom: 0;
+        }
+    }
+    #hero {
+        font-family: @myriad-pro;
+        color: @gray;
+
+        .post-title {
+            color: @white;
+        }
+        .post-author {
+
+            img {
+                .size(40px);
+                border: @medium-border @white;
+            }
+            .author-name {
+                font-weight: @normal;
+                color: @white;
+            }
+        }
+        .post-date {
+            font-weight: @light;
+            .uppercase;
+        }
+    }
+    article.post {
+        font-family: @myriad-pro;
+        line-height: @line-height;
+        font-weight: @light;
+        color: @black;
+
+        section {
+            .padding-y(30px);
+            border-bottom: @thin-border @gray;
+        }
+        .post-content {
+
+            p {
+                font-size: 18px;
+                line-height: @line-height;
+            }
+            p:first-child:first-letter {
+                display: inline-block;
+                float: left;
+                margin-top: -.1em;
+                margin-right: @base-margin / 2;
+                font-size: 120px;
+                line-height: 1;
+                font-weight: @bold;
+                color: @red;
+            }
+        }
+        .post-cta {
+            font-weight: @bold;
+        }
+        .post-tags {
+            color: @dark-gray;
+        }
+        .post-author {
+            color: @dark-gray;
+
+            .author-title {
+                font-weight: @bold;
+            }
+            img {
+                .size(120px);
+            }
+            .author-bio {
+                font-weight: @normal;
+            }
+        }
+        .post-footer section:last-child {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+    }
+    #featured-posts {
+
+        .featured-post {
+            .display(flex);
+            .align-items(center);
+            height: 400px;
+            padding: 40px 20px 80px;
+
+            @media @medium {
+                height: 500px;
+                padding: 60px 0 80px;
+            }
+            @media @large {
+                height: 600px;
+                padding: 80px 0;
+            }
+        }
+    }
+}

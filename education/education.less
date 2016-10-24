@@ -1,0 +1,220 @@
+@import '../settings.less';
+
+
+
+// OVERVIEW
+
+.education.page #hero.background-image { background-image: url('/Strategy/media/images/services-support/education_banner.jpg'); }
+#jump-start-classes #hero.background-image { background-image: url('/Strategy/media/images/homepage/hero-banners/jump-start-banner.jpg'); }
+
+#mix-certifications .mix,
+.jplist-hidden {
+    display: none;
+}
+
+#reviews {
+    padding: 20px 0;
+    
+    .slick-dots {
+        margin-top: 20px;
+    }
+}
+
+
+
+// COURSE LIST
+
+#course-list {
+    
+    .loading {
+        display: block;
+        .position(fixed, 0, 0, 0, 0);
+        z-index: -1;
+        background: fade(@white, 75%);
+        opacity: 0;
+        
+        .spinner-bars {
+            .position(absolute, 50%, 50%);
+            .translate(-50%, -50%);
+        }
+    }
+    
+    &.loading-courses .loading {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+#courses.hasSelectedItem .course {
+    display: none;
+}
+        
+.gridder-list {
+    cursor: pointer;
+    .transition;
+}
+.gridder-content {
+    display: none;
+}
+.gridder-show {
+    width: 100%;
+    float: left;
+    padding: 10px;
+    font-family: @myriad-pro;
+    
+    .course-description {
+        font-weight: @light;
+        color: @white;
+    }
+}
+.gridder-padding {
+    position: relative;
+    padding: 30px;
+    background: @black;
+}
+.gridder-navigation {
+    .position(absolute, 0, @right:0);
+    
+    a {
+        display: inline-block;
+        .size(40px);
+        position: relative;
+        background: @charcoal;
+        .transition;
+        
+        &.gridder-close {
+            float: right;
+            .shape-x(20px, @light-gray);
+        }
+        &.gridder-nav {
+            border-right: @thin-border @dark-gray;
+            
+            &:before {
+                content: "\e901";
+                display: block;
+                .position(absolute, 50%, 50%);
+                .translate(-50%, -50%);
+                font-family: 'icomoon'; .pretty-icon;
+                font-size: 16px; line-height: 1;
+                color: @light-gray;
+            }
+            &.prev:before {
+                .transform(translate(-50%, -50%) rotate(180deg));
+                .transform-origin(center, center);
+            }
+            &.disabled {
+                opacity: .35;
+                cursor: default;
+            }
+        }
+        &.gridder-close:hover,
+        &.gridder-nav:not(.disabled):hover {
+            background: @jet;
+            color: lighten(@light-gray, 20%);
+        }
+        
+    }
+}
+.course-details {
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    color: @gray;
+    
+    * {
+        font-size: 12px;
+    }
+    a {
+        color: @gray;
+        .transition;
+        
+        &:hover, &:active, &:focus {
+            color: @white;
+        }
+    }
+    sup {
+    
+        &.help {
+            display: inline-block;
+            .size(1.5em);
+            .round;
+            margin-left: .25em;
+            background: fade(@red, 75%);
+
+            > a {
+                display: table-cell;
+                vertical-align: middle; text-align: center;
+                .size(1.5em);
+                color: @white;
+                .transition;
+            }
+            &:hover, &:active, &:focus {
+                background: @red;
+
+                > a { color: @white; }
+            }
+        }
+    }
+}
+.course-number {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 4px 7px;
+    background: @red;
+    color: @white;
+    font-weight: @bold;
+}
+.course-price-option {
+    padding: 5px 0;
+    
+    i.icon {
+        font-size: 32px;
+    }
+}
+@media @large-down {
+    .course-information {
+        padding-bottom: 10px !important;
+        border-bottom: @thick-border @gray;
+    }
+}
+.sessions {
+    margin-bottom: 10px;
+    border-bottom: @medium-border @charcoal;
+    
+    &:last-child { border: 0; }
+    
+    .cta-button { margin: 0; }
+}
+.session {
+    font-size: 14px;
+    font-weight: @normal;
+    color: @white;
+    border-bottom: 1px dashed @charcoal;
+    .transition;
+        
+    &:hover, &:active {
+        background: @jet;
+    }
+    
+    &:last-child { border: 0; }
+}
+.session-language, .session-location {
+    font-weight: @bold;
+}
+@media @small-only {
+    .sessions i.icon {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .session {
+        .padding-y(10px);
+        
+        span {
+            display: block;
+            margin-bottom: -10px;
+            font-size: 12px;
+        }
+        .session-location {
+            margin-bottom: -20px;
+            font-size: 14px;
+        }
+    }
+}

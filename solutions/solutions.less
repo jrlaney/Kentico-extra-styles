@@ -1,0 +1,71 @@
+@import '../settings.less';
+
+
+
+.paginate {
+    visibility: hidden;
+    position: relative;
+    margin: 0 !important;
+    padding: 35px 0 !important;
+    
+    &:after, &:before {
+        visibility: visible;
+        .transition;
+    }
+    &:after {
+        .position(absolute, 50%, 50%);
+        .translate(-50%, -50%);
+        padding: 10px 0;
+        font-family: 'icomoon';
+        font-size: 16px;
+        .pretty-icon;
+    }
+    &:before {
+        .position(absolute, 85%, -40px, -40px);
+        font-size: 8px;
+        line-height: 1.5;
+        .uppercase;
+        text-align: center;
+        opacity: 0;
+    }
+    &.active {
+        
+        &:after {
+            font-size: 32px;
+            color: @red;
+        }
+        &:before {
+            opacity: 1;
+        }
+    }
+    &:nth-child(1) {
+        
+        &:after { content: "\e9ea"; } // bar-graph-search
+        &:before { content: "Customer Insight Analysis"; }
+    }
+    &:nth-child(2) {
+        
+        &:after { content: "\e943"; } // computer
+        &:before { content: "Vendor Portal"; }
+    }
+    &:nth-child(3) {
+        
+        &:after { content: "\e97b"; } // distribution
+        &:before { content: "Distribution Center Operations"; }
+    }
+    &:nth-child(4) {
+        
+        &:after { content: "\e9db"; } // handshake
+        &:before { content: "Customer Engagement"; }
+    }
+    &:nth-child(5) {
+        
+        &:after { content: "\e9d5"; } // badge
+        &:before { content: "Employee Badge"; }
+    }
+    &:nth-child(6) {
+        
+        &:after { content: "\e9d5"; } // badge
+        &:before { content: "Loyalty Badge"; }
+    }
+}

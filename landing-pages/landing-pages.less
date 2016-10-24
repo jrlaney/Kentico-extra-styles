@@ -1,0 +1,334 @@
+@import '../settings.less';
+
+
+
+// OVERRIDES
+
+    // remove secondary-navigation from landing pages
+    .top-banner { display: none; }
+
+    // remove top line from gated landing pages
+    .landing-page .hero .line:first-child,
+    .landing-page #hero .line:first-child { display: none; }
+
+    // vertically center hero sections on gated landing pages
+    .landing-page .hero > .flex-row,
+    .landing-page #hero{ .align-items(center); }
+
+    // remove landing page headline to allow an image on top of the headling on health assessment landing pages
+    .health-assessment.landing-page .hero .text-col h2:first-of-type,
+    .health-assessment.landing-page #hero .text-col h2:first-of-type{ display: none; }
+
+    // change color of text for hero banners with background images
+    .landing-page .hero.background-image .text-col, .landing-page #hero.background-image .text-col { h1, h2, h3, h4, h5, h6, p { color: @white; } }
+
+
+
+// HERO BANNER IMAGES
+
+.landing-page {
+    
+    // default hero banner image for landing pages
+    .hero.background-image, #hero.background-image { background-image: url('/Strategy/media/images/landing-pages/analyst-reviews/resource-banner-bkg_mstr-10.jpg');}
+    
+    // default hero banner image for desktop landing pages
+    &.desktop .hero.background-image { background-image: url('/Strategy/media/images/free-trial/desktop-trial_top-banner-bkg.jpg'); }
+    
+    // default hero banner image for mobile landing pages
+    &.mobile #hero.background-image { background-image: url('/Strategy/media/images/common/banners/mobile.jpg'); }
+    
+    // default hero banner images for solution landing pages
+    &.solutions {
+        
+        &.retail .hero.background-image { background-image: url('/Strategy/media/images/solutions/hero-backgrounds/solutions_retail_hero-banner-bkg.jpg'); }
+        &.banking .hero.background-image { background-image: url('/Strategy/media/images/solutions/hero-backgrounds/solutions_fsi_hero-banner-bkg.jpg'); }
+        &.sales .hero.background-image { background-image: url('/Strategy/media/images/solutions/hero-backgrounds/solutions_sales_hero-banner-bkg.jpg'); }
+        &.healthcare .hero.background-image { background-image: url('/Strategy/media/images/solutions/hero-backgrounds/solutions_healthcare_hero-banner-bkg.jpg'); }
+        &.manufacturing .hero.background-image { background-image: url('/Strategy/media/images/solutions/hero-backgrounds/solutions_manufacturing_hero-banner-bkg.jpg'); }
+        &.higher-education #hero.background-image { background-image: url('/Strategy/media/images/common/banners/higher-education.jpg'); }
+    }
+    
+    // default hero banner image for resource landing pages
+    &.resource .hero.background-image { background-image: url('/Strategy/media/images/free-trial/desktop-trial_top-banner-bkg-old.jpg'); }
+    
+    // default hero banner image for health assessment landing pages
+    &.health-assessment .hero.background-image { background-image: url('/Strategy/media/images/services-support/banner_beta-program-bkg.jpg'); }
+    
+    // default background image for symposium sections
+    section#symposium { background-image: url('/Strategy/media/images/landing-pages/solution-lp/symposium.jpg'); }  
+    
+    // custom hero banner images for customer landing pages
+    #container-store& .hero.background-image { background-image: url('/Strategy/media/images/landing-pages/solution-lp/container-store_banner.jpg');}
+}  
+
+
+
+// GRAPHS
+
+#health-score-poor {
+    .graph-percentage-bar-radial(120px, 20px, @dark-red, @gray, @light-gray);
+}
+#health-score-fair {
+    .graph-percentage-bar-radial(120px, 20px, @orange, @gray, @light-gray);
+}
+#health-score-good {
+    .graph-percentage-bar-radial(120px, 20px, @green, @gray, @light-gray);
+}
+
+
+
+// OTHER
+
+#desktop-help.microsite #dashboards-visualizations img {
+    max-width: none;
+    width: 180%;
+    
+    @media @medium {
+        width: 150%;
+        margin-left: -25%;
+    }
+}
+
+@media @medium {
+    
+    #retail.solutions.landing-page #distribution img { margin-top: 33px; }
+    #manufacturing.solutions.landing-page #stores img[src$="store.png"] { margin-top: 32px }
+}
+
+
+@section-padding: 60px;
+@section-gutter-space: @section-padding + (@column-gutter / 2);
+@bar-size: 80px;
+@bar-thickness: 10px;
+
+@media @large {
+
+    .landing-page {
+           
+        section.lines-contain {
+            overflow: visible;
+            
+            > .flex-row {
+                position: relative;
+                
+                &:before, &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                }
+                &:before {
+                    z-index: 1;
+                }
+            }
+            &-top, &-left, &-right { > .flex-row {
+                
+                &:before {
+                    background-color: @gray;
+                }
+                &:after {
+                    top: @section-padding * -1;
+                    left: @section-padding / 2;
+                    right: @section-padding / 2;
+                    bottom: @section-padding * -2 - (@column-gutter / 2);
+                    .border-x(@thin-border @gray);
+                }
+            } }
+            &-left, &-right {
+
+                > .flex-row:before {
+                    .size(@bar-thickness, @bar-size);
+                    top: @column-gutter / 2;
+                }
+            }
+            &-begin > .flex-row:after {
+                .size(1px, @section-gutter-space);
+                bottom: @section-padding * -1;
+                left: 50%;
+                background-color: @gray;
+            }
+            &-top > .flex-row {
+
+                &:before {
+                    .size(@bar-size, @bar-thickness);
+                    top: @section-padding * -1;
+                    left: 50%;
+                    .translate(-50%, -50%);
+                }
+                &:after {
+                    border-top: @thin-border @gray;
+                }
+            }
+            &-left {
+
+                > .flex-row:before {
+                    left: @section-padding / 2;
+                    .translate(-50%, 0);
+                }
+                &-end > .flex-row {
+
+                    &:after {
+                        border-left: 0;
+                    }
+                }
+            }
+            &-right {
+
+                > .flex-row:before {
+                    right: @section-padding / 2;
+                    .translate(50%, 0);
+                }
+                &-end > .flex-row {
+
+                    &:after {
+                        border-right: 0;
+                    }
+                }
+            }
+            &-end > .flex-row:after {
+                .border-x(0);
+            }
+        }
+        section.lines-path {
+            
+            > .flex-row {
+                position: relative;
+                
+                &:before, &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                }
+                &:before {
+                    .size(@bar-thickness, @bar-size);
+                    z-index: 1;
+                    background-color: @gray;
+                }
+            }
+            &-begin, &-horizontal, &-left, &-right {
+                
+                > .flex-row:after {
+                    top: @section-padding * -1;
+                    bottom: @section-padding * -1;
+                }
+            }
+            &-begin, &-left, &-right {
+                
+                > .flex-row:before {
+                    top: @column-gutter / 2;
+                }
+            }
+            &-horizontal, &-left, &-right {
+                
+                > .flex-row:after {
+                    left: 0;
+                    right: 0;
+                }
+            }
+            &-begin, &-left {
+                
+                > .flex-row:before {
+                    left: 0;
+                    .translate(-50%, 0);
+                }
+            }
+            &-begin {
+                
+                > .flex-row:after {
+                    width: 1000px;
+                    left: -1000px;
+                    border-top: @thin-border @gray;
+                    border-right: @thin-border @gray;
+                }
+            }
+            &-horizontal {
+                
+                > .flex-row:before {
+                    content: none;
+                }
+                > .flex-row:after {
+                    border-top: @thin-border @gray;
+                }
+                > .flex-row > [class*="col-"] {
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        .size(@bar-size, @bar-thickness);
+                        .position(absolute, @section-padding * -1, 50%);
+                        .translate(-50%, -50%);
+                        z-index: 1;
+                        background-color: @gray;
+                    }
+                }
+                &-left > .flex-row:after {
+                    border-left: @thin-border @gray;
+                }
+                &-right > .flex-row:after {
+                    border-right: @thin-border @gray;
+                }
+            }
+            &-left {
+                
+                > .flex-row:after {
+                    border-left: @thin-border @gray;
+                }
+            }
+            &-right .flex-row {
+                
+                &:before {
+                    right: 0;
+                    .translate(50%, 0);
+                }
+                &:after {
+                    border-right: @thin-border @gray;
+                }
+            }
+        }
+    }
+    
+    #retail.solutions.landing-page {
+        
+        #headquarters > .flex-row:before { background-color: @red; }
+        #vendors:before { background-color: @blue; }
+        #distribution:before { background-color: @orange; }
+        #stores > .flex-row:before { background-color: @green; }
+    }
+    
+    #banking.solutions.landing-page {
+        
+        #analytics > .flex-row:before { background-color: @red; }
+        #mobile > .flex-row:before { background-color: @orange; }
+        #security > .flex-row:before { background-color: @blue; }
+        
+        section.lines-contain-left > .flex-row:before { .translate(-50%, -40%); }
+        section.lines-contain-right > .flex-row:before { .translate(50%, -40%); }
+    }
+        
+    #healthcare.solutions.landing-page {
+        
+        #hospital > .flex-row:before { background-color: @red; }
+        #providers > .flex-row:before { background-color: @orange; }
+        #payers > .flex-row:before { background-color: @blue; }
+        #patients > .flex-row:before { background-color: @green; }
+    }
+    
+    #manufacturing.solutions.landing-page {
+        
+        #headquarters > .flex-row:before { background-color: @red; }
+        #vendors:before { background-color: @blue; }
+        #manufacturers:before { background-color: @blue; }
+        #distribution > .flex-row:before { background-color: @orange; }
+        #stores > .flex-row > [class*="col-"]:before { background-color: @green; }
+    }
+}
+
+// solutions
+.icon-header {
+    .display(flex);
+    .align-items(center);
+    
+    i.icon {
+        padding-right: .25em;
+    }
+}

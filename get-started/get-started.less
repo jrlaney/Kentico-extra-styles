@@ -1,0 +1,37 @@
+@import '../settings.less';
+
+
+
+// overrides
+
+#hero.background-image, #hero.background-video {
+    
+    .line:first-child { display: none; }
+    h1 { color: @white; }
+}
+
+
+
+// hero banners
+
+    // default hero banner for free trial pages
+    .free-trial #hero.background-image { background-image: url('/Strategy/media/images/products/analytics/2015/free-trial_top-banner-bkg.jpg');
+        
+    // custom hero banner for desktop page
+    #desktop& { background-image: url('/Strategy/media/images/common/banners/desktop.jpg'); }
+        
+    }
+
+
+
+// desktop page
+
+#desktop {
+    
+    #hero.background-video #form-container {
+        background-color: fade(@pure-black, percentage(@semi-opaque));
+    }
+}
+#data-source-list {
+    .columns(3, @column-gutter);
+}
