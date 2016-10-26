@@ -697,93 +697,144 @@
 }
 
 /*--------------- overview page styles -------------------*/
-.overview-banner {padding-bottom:150px;}
-.overview-banner .overview-gartner-ad {position:absolute; bottom:0; left:0; right:0;}
-.overview-banner .overview-gartner-ad .flex-row .cols {
-  width:auto;
-  -webkit-box-flex:0;
-  -webkit-box-flex:0 1 auto;
-  -moz-box-flex:0 1 auto;
-  -webkit-flex:0 1 auto;
-  -ms-flex:0 1 auto;
-  flex:0 1 auto;
+.overview-banner {
+  position:relative;
+  background-image:url("/Strategy/media/images/capabilities/capabilities_overview_hero-bkg.jpg");
 }
-.overview-banner .overview-gartner-ad .flex-row .cols.shrink {
+.overview-banner .overview-gartner-ad .flex-row .cols {
+-webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  padding:10px; width:100%;
   -webkit-box-flex:0;
   -webkit-box-flex:0 0 auto;
   -moz-box-flex:0 0 auto;
   -webkit-flex:0 0 auto;
   -ms-flex:0 0 auto;
   flex:0 0 auto;
-  max-width: 100%;
 }
+
 /*new overview grid*/
 .overview-panel {
-  height:250px; width:100%;
-  text-align:center;
-  padding:20px;
-  border:1px solid #dddddd;
-  border-width:0 1px 1px 0;
-    -webkit-transition: all 0.3s ease-out 0s;
-    -moz-transition: all 0.3s ease-out 0s;
-    -ms-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
-}
-.overview-panel:hover {background-color:#d9232e; color:#ffffff;}
-.overview-panel .inner {
-  display:block; position:relative;
-  z-index:1;
-  top:50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.overview-panel .icon {
-    -webkit-transition: color 0.4s ease-out 0s;
-    -moz-transition: color 0.4s ease-out 0s;
-    -ms-transition: color 0.4s ease-out 0s;
-  transition: color 0.4s ease-out 0s;
-}
-.overview-panel:hover .icon {color:#ffffff;}
-
-.overview-panel .line.small.white {
+  display:block;
+  position:relative;
+  overflow:hidden;
+  padding:20px 0;
   background-color:#ffffff;
-  width:1px;
-    -webkit-transition: width 0.3s ease-out 0.2s;
-    -moz-transition: width 0.3s ease-out 0.2s;
-    -ms-transition: width 0.3s ease-out 0.2s;
-  transition: width 0.3s ease-out 0.2s;
+  border:1px solid #dddddd;
+  border-width: 0 0 1px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-.overview-panel:hover .line.small {width:30%;}
-.overview-panel .text-white {color:#ffffff;}
-
+.overview-panel .icon {margin-bottom:10px;color:#d9232e;}
+.overview-panel .line.small.white {background-color:#d9232e;}
+.overview-panel .text-white {color:#d9232e;}
 .overview-panel .info {
-  padding:0 15px;
-  color:#ffffff;
-  opacity:0; max-height:0;
-    -webkit-transition: all 0.4s ease 0s;
-    -moz-transition: all 0.4s ease 0s;
-    -ms-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
+  display:block;
+  position:relative;
+  color:#333333;
 }
-.overview-panel:hover .info {
-  max-height:500px; opacity:1;
-    -webkit-transition: max-height 0.7s ease 0s, opacity 0.5s ease 0.1s;
-    -moz-transition: max-height 0.7s ease 0s, opacity 0.5s ease 0.1s;
-    -ms-transition: max-height 0.7s ease 0s, opacity 0.5s ease 0.1s;
-  transition: max-height 0.7s ease 0s, opacity 0.5s ease 0.1s;
-}
-.overview-panel .link {
-  display:none;
-    -webkit-transition: z-index 0.1s ease 0.2s;
-    -moz-transition: z-index 0.1s ease 0.2s;
-    -ms-transition: z-index 0.1s ease 0.2s;
-  transition: z-index 0.1s ease 0.2s;
-}
-.overview-panel:hover .link {display:block; position:absolute; z-index:2; width:100%; height:100%; top:0; left:0; right:0; bottom:0;}
+.overview-panel .link {display:block; position:absolute; z-index:2; width:100%; height:40px; left:0; right:0; bottom:20px;}
 .IE .overview-panel:hover .link {background:url('about:blank');}
-.overview-grid-wrapper .grid-item:nth-child(2n+2) .overview-panel {border-width:0 0 1px 0;}
-.overview-grid-wrapper .grid-item:nth-child(n+9) .overview-panel {border-bottom-width:0;}
+
+/*overview grid*/
+.overview-title-link {display:block;}
+.overview-title-link:hover h2, .overview-title-link:hover i {
+  color:#f32532;
+    -webkit-transition: all 0.4s ease-out 0s;
+    -moz-transition: all 0.4s ease-out 0s;
+    -ms-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+.overview-title-link .line {
+  width:20%;
+    -webkit-transition: all 0.2s ease-out 0s;
+    -moz-transition: all 0.2s ease-out 0s;
+    -ms-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+.overview-title-link:hover .line {width:30%; background-color:#f32532;}
+a.more-link, a:link.more-link {
+  font-weight:bold;
+  color:#777777;
+  margin-top:7px;
+    -webkit-transition: all 0.2s ease-out 0s;
+    -moz-transition: all 0.2s ease-out 0s;
+    -ms-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+a.more-link:hover {color:#d9232e;}
+/*--------------- overview page styles -------------------*/
+.overview-banner {
+  position:relative;
+  background-image:url("/Strategy/media/images/capabilities/capabilities_overview_hero-bkg.jpg");
+}
+.overview-banner .overview-gartner-ad .flex-row .cols {
+-webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  padding:10px; width:100%;
+  -webkit-box-flex:0;
+  -webkit-box-flex:0 0 auto;
+  -moz-box-flex:0 0 auto;
+  -webkit-flex:0 0 auto;
+  -ms-flex:0 0 auto;
+  flex:0 0 auto;
+}
+
+/*new overview grid*/
+.overview-panel {
+  display:block;
+  position:relative;
+  overflow:hidden;
+  padding:20px 0;
+  background-color:#ffffff;
+  border:1px solid #dddddd;
+  border-width: 0 0 1px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.overview-panel .icon {margin-bottom:10px;color:#d9232e;}
+.overview-panel .line.small.white {background-color:#d9232e;}
+.overview-panel .text-white {color:#d9232e;}
+.overview-panel .info {
+  display:block;
+  position:relative;
+  color:#333333;
+}
+.overview-panel .link {display:block; position:absolute; z-index:2; width:100%; height:40px; left:0; right:0; bottom:20px;}
+.IE .overview-panel:hover .link {background:url('about:blank');}
+
+/*overview grid*/
+.overview-title-link {display:block;}
+.overview-title-link:hover h2, .overview-title-link:hover i {
+  color:#f32532;
+    -webkit-transition: all 0.4s ease-out 0s;
+    -moz-transition: all 0.4s ease-out 0s;
+    -ms-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+.overview-title-link .line {
+  width:20%;
+    -webkit-transition: all 0.2s ease-out 0s;
+    -moz-transition: all 0.2s ease-out 0s;
+    -ms-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+.overview-title-link:hover .line {width:30%; background-color:#f32532;}
+a.more-link, a:link.more-link {
+  font-weight:bold;
+  color:#777777;
+  margin-top:7px;
+    -webkit-transition: all 0.2s ease-out 0s;
+    -moz-transition: all 0.2s ease-out 0s;
+    -ms-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+a.more-link:hover {color:#d9232e;}
+
 
 @media @medium {
     /*--------------- overview page styles -------------------*/
