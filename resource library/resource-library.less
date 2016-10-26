@@ -355,7 +355,7 @@
 .resource-col .resource-link .cta-text {
   top:50%;
   margin:10px 0 0 15px; padding:7px 20px;
-  width:calc(100% - 30px);
+  width:~"calc(100% - 30px)";
   font-family:'myriad-pro-n4', 'myriad-pro', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style:normal; font-weight:400;
   font-size:14px; line-height:19px;
@@ -496,7 +496,7 @@
     box-shadow:           1px 1px 1px rgba(0,0,0,0.2);
   }
   /*toggle layout button*/
-  .filter-sort {display:inline-block; width:calc(100% - 56px);}
+  .filter-sort {display:inline-block; width:~"calc(100% - 56px)";}
   .layout-button {display:block; float:right; width:41px; margin-bottom:0;}
   .toggle-layout {
     display:block; position:relative;
@@ -605,11 +605,9 @@
     transition:all 0.2s ease 0s;
   }
   .resource-col .resource-link:hover .resource-image {
-    -webkit-filter: grayscale(1);
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
     filter: gray;
+    -webkit-filter: grayscale(100%);
   }
   .white-paper .resource-col .resource-link:before {background-color:rgba(17, 86, 111, 0.6);}
   .presentation .resource-col .resource-link:before {background-color:rgba(153, 153, 153, 0.6);}
