@@ -6,7 +6,8 @@
 // OVERRIDES
 
     // remove secondary-navigation from landing pages
-    .top-banner { display: none; }
+    .top-banner .secondary-fullwidth { display: none!important; }
+    .top-banner .is-sticky{min-height:0}
 
     // remove top line from gated landing pages
     .landing-page .hero .line:first-child,
@@ -23,24 +24,27 @@
     // change color of text for hero banners with background images
     .landing-page .hero.background-image .text-col, .landing-page #hero.background-image .text-col { h1, h2, h3, h4, h5, h6, p { color: @white; } }
 
+    // change color of text for form if you used an overlay
+    .landing-page .background-image.overlay .form-col {color: @black;}
+
 
 
 // HERO BANNER IMAGES
 
 .landing-page {
-    
+
     // default hero banner image for landing pages
     .hero.background-image, #hero.background-image { background-image: url('/Strategy/media/images/landing-pages/analyst-reviews/resource-banner-bkg_mstr-10.jpg');}
-    
+
     // default hero banner image for desktop landing pages
     &.desktop .hero.background-image { background-image: url('/Strategy/media/images/free-trial/desktop-trial_top-banner-bkg.jpg'); }
-    
+
     // default hero banner image for mobile landing pages
     &.mobile #hero.background-image { background-image: url('/Strategy/media/images/common/banners/mobile.jpg'); }
-    
+
     // default hero banner images for solution landing pages
     &.solutions {
-        
+
         &.retail .hero.background-image { background-image: url('/Strategy/media/images/solutions/hero-backgrounds/solutions_retail_hero-banner-bkg.jpg'); }
         &.banking .hero.background-image { background-image: url('/Strategy/media/images/solutions/hero-backgrounds/solutions_fsi_hero-banner-bkg.jpg'); }
         &.sales .hero.background-image { background-image: url('/Strategy/media/images/solutions/hero-backgrounds/solutions_sales_hero-banner-bkg.jpg'); }
@@ -48,19 +52,19 @@
         &.manufacturing .hero.background-image { background-image: url('/Strategy/media/images/solutions/hero-backgrounds/solutions_manufacturing_hero-banner-bkg.jpg'); }
         &.higher-education #hero.background-image { background-image: url('/Strategy/media/images/common/banners/higher-education.jpg'); }
     }
-    
+
     // default hero banner image for resource landing pages
     &.resource .hero.background-image { background-image: url('/Strategy/media/images/free-trial/desktop-trial_top-banner-bkg-old.jpg'); }
-    
+
     // default hero banner image for health assessment landing pages
     &.health-assessment .hero.background-image { background-image: url('/Strategy/media/images/services-support/banner_beta-program-bkg.jpg'); }
-    
+
     // default background image for symposium sections
-    section#symposium { background-image: url('/Strategy/media/images/landing-pages/solution-lp/symposium.jpg'); }  
-    
+    section#symposium { background-image: url('/Strategy/media/images/landing-pages/solution-lp/symposium.jpg'); }
+
     // custom hero banner images for customer landing pages
     #container-store& .hero.background-image { background-image: url('/Strategy/media/images/landing-pages/solution-lp/container-store_banner.jpg');}
-}  
+}
 
 
 
@@ -83,7 +87,7 @@
 #desktop-help.microsite #dashboards-visualizations img {
     max-width: none;
     width: 180%;
-    
+
     @media @medium {
         width: 150%;
         margin-left: -25%;
@@ -91,7 +95,7 @@
 }
 
 @media @medium {
-    
+
     #retail.solutions.landing-page #distribution img { margin-top: 33px; }
     #manufacturing.solutions.landing-page #stores img[src$="store.png"] { margin-top: 32px }
 }
@@ -105,13 +109,13 @@
 @media @large {
 
     .landing-page {
-           
+
         section.lines-contain {
             overflow: visible;
-            
+
             > .flex-row {
                 position: relative;
-                
+
                 &:before, &:after {
                     content: '';
                     display: block;
@@ -122,7 +126,7 @@
                 }
             }
             &-top, &-left, &-right { > .flex-row {
-                
+
                 &:before {
                     background-color: @gray;
                 }
@@ -190,10 +194,10 @@
             }
         }
         section.lines-path {
-            
+
             > .flex-row {
                 position: relative;
-                
+
                 &:before, &:after {
                     content: '';
                     display: block;
@@ -206,34 +210,34 @@
                 }
             }
             &-begin, &-horizontal, &-left, &-right {
-                
+
                 > .flex-row:after {
                     top: @section-padding * -1;
                     bottom: @section-padding * -1;
                 }
             }
             &-begin, &-left, &-right {
-                
+
                 > .flex-row:before {
                     top: @column-gutter / 2;
                 }
             }
             &-horizontal, &-left, &-right {
-                
+
                 > .flex-row:after {
                     left: 0;
                     right: 0;
                 }
             }
             &-begin, &-left {
-                
+
                 > .flex-row:before {
                     left: 0;
                     .translate(-50%, 0);
                 }
             }
             &-begin {
-                
+
                 > .flex-row:after {
                     width: 1000px;
                     left: -1000px;
@@ -242,7 +246,7 @@
                 }
             }
             &-horizontal {
-                
+
                 > .flex-row:before {
                     content: none;
                 }
@@ -270,13 +274,13 @@
                 }
             }
             &-left {
-                
+
                 > .flex-row:after {
                     border-left: @thin-border @gray;
                 }
             }
             &-right .flex-row {
-                
+
                 &:before {
                     right: 0;
                     .translate(50%, 0);
@@ -287,35 +291,35 @@
             }
         }
     }
-    
+
     #retail.solutions.landing-page {
-        
+
         #headquarters > .flex-row:before { background-color: @red; }
         #vendors:before { background-color: @blue; }
         #distribution:before { background-color: @orange; }
         #stores > .flex-row:before { background-color: @green; }
     }
-    
+
     #banking.solutions.landing-page {
-        
+
         #analytics > .flex-row:before { background-color: @red; }
         #mobile > .flex-row:before { background-color: @orange; }
         #security > .flex-row:before { background-color: @blue; }
-        
+
         section.lines-contain-left > .flex-row:before { .translate(-50%, -40%); }
         section.lines-contain-right > .flex-row:before { .translate(50%, -40%); }
     }
-        
+
     #healthcare.solutions.landing-page {
-        
+
         #hospital > .flex-row:before { background-color: @red; }
         #providers > .flex-row:before { background-color: @orange; }
         #payers > .flex-row:before { background-color: @blue; }
         #patients > .flex-row:before { background-color: @green; }
     }
-    
+
     #manufacturing.solutions.landing-page {
-        
+
         #headquarters > .flex-row:before { background-color: @red; }
         #vendors:before { background-color: @blue; }
         #manufacturers:before { background-color: @blue; }
@@ -328,8 +332,230 @@
 .icon-header {
     .display(flex);
     .align-items(center);
-    
+
     i.icon {
         padding-right: .25em;
     }
+}
+
+
+
+//STYLES FOR OLDER PAGES COPIED OVER PLUS SOME TRUNCATED STUFF
+
+//FOR A TOP BANNER WITH THE FORM ANCHORED TO THE BOTTOM
+.background-image.form-bottom {
+    overflow:hidden;
+    padding-top:0; padding-bottom:0;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center center;
+    background-color:@black;
+    background-image: url('/Strategy/media/images/landing-pages/analyst-reviews/resource-banner-bkg_mstr-10.jpg');
+
+    // default hero banner image for desktop landing pages
+    &.desktop {background-image: url('/Strategy/media/images/free-trial/desktop-trial_top-banner-bkg.jpg');}
+
+    // default hero banner image for mobile landing pages
+    &.mobile {background-image: url('/Strategy/media/images/common/banners/mobile.jpg');}
+
+    // hero banner image with a worker at a desk
+    &.worker {background-image:url('/Strategy/media/images/common/banners/desk-worker.jpg');}
+
+    // hero banner image with mobile BI and coffee
+    &.coffee {background-image:url('/Strategy/media/images/common/banners/coffee-and-bi.jpg');}
+
+    // hero banner image with world 2016 bkg
+    &.world-2016 {background-image:url(/Strategy/media/images/landing-pages/events_world2016-bkg.jpg);}
+
+    // hero banner image for blueprint landing page
+    &.blueprint {background-image:url('/Strategy/media/images/landing-pages/events-and-sign-ups/mobile-blueprint_hero-banner.jpg');}
+
+    &.masked {
+            &:before {
+            position:absolute; z-index:1;
+            content:'';
+            height:100%; width:100%;
+            top:0; left:0;
+            background-color:@pure-black; opacity:0.5;
+        }
+    }
+    .flex-row {-webkit-align-items:center;align-items:center;-webkit-box-align:end;-moz-box-align:end;}
+    .text-col, .form-col {position:relative; z-index:2;}
+    .text-col {
+        h1, h2, h3, h4, h5, h6, p {color:@pure-white;}
+        .line.red {background-color:@pure-white;}
+    }
+    .form-col {
+        padding-bottom:0px;
+        #form-container {
+          margin-top:30px; padding-bottom:10px;
+          background:@pure-white;
+          box-shadow: 3px 3px 10px rgba(0,0,0, 0.2);
+        }
+    }
+}
+.background-color.form-bottom {
+    overflow:hidden;
+    padding-top:0; padding-bottom:0;
+    .flex-row {-webkit-align-items:center;align-items:center;-webkit-box-align:end;-moz-box-align:end;}
+    .text-col, .form-col {position:relative; z-index:2;}
+    .text-col {
+        h1, h2, h3, h4, h5, h6, p {color:@pure-white;}
+        .line.red {background-color:@pure-white;}
+    }
+    .form-col {
+        color:@black;
+        padding-bottom:0px;
+        #form-container {
+          margin-top:30px; padding-bottom:10px;
+          background:@pure-white;
+          box-shadow: 3px 3px 10px rgba(0,0,0, 0.2);
+        }
+    }
+}
+
+//FOR THUMNAIL WITH VIDEO AND ZOOM IN ON HOVER
+.video-thumb {
+  position:relative;
+  display:block;
+  height:0;
+  padding-bottom:57%;
+
+  background-color:#333333;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:100%;
+
+    -webkit-transition: all 0.2s ease 0.1s;
+    -moz-transition: all 0.2s ease 0.1s;
+    -ms-transition: all 0.2s ease 0.1s;
+    -o-transition: all 0.2s ease 0.1s;
+  transition: all 0.2s ease 0.1s;
+  &:hover {background-size:103%;}
+  .play-btn {
+    display:block;
+    position:absolute;
+    width:70px;
+    height:70px;
+    top:50%; left:50%;
+    margin-top:-35px; margin-left:-35px;
+  }
+  .mask {
+    display:block;
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(0,0,0,0.2);
+
+      -webkit-transition: all 0.2s ease 0.1s;
+      -moz-transition: all 0.2s ease 0.1s;
+      -ms-transition: all 0.2s ease 0.1s;
+      -o-transition: all 0.2s ease 0.1s;
+    transition: all 0.2s ease 0.1s;
+  }
+  &:hover .mask {background: rgba(0,0,0,0.0);}
+}
+//IMAGE ZOOM IN WITH ICON
+.image-zoom {position:relative; display:block;}
+.image-zoom .view-btn {position:absolute; top:50%; left:50%; margin-left:-35px; margin-top:-35px; height:75px; width:75px;}
+.image-zoom-popup {max-width:90%;}
+
+//FOR IFRAMED FORMS
+.form-holder {position:relative; display:block; width:100%; max-width:490px; height:480px; margin:20px auto 0 auto;}
+
+@media @medium {
+    .form-holder {height:450px;}
+}
+.form-holder iframe {position:absolute; top:0; left:0; bottom:0; right:0; width:100%; height:100%; background:transparent;}
+
+/* customer thumb - dark to light background on hover (set bkg img on html) */
+.customer-panel {
+  position:relative;
+  overflow:hidden;
+  display:block;
+  height:300px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-color:#333333;
+  background-position:center center;
+}
+
+.customer-panel .logo-mask {
+  display:block;
+  position:absolute;
+  z-index:2;
+  height:100%; width:100%;
+  background:rgba(0,0,0,0.75);
+  opacity:1;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.customer-panel .logo {
+  position:absolute;
+  display:block;
+  max-width:70%;
+  top:50%; left:50%;
+  opacity:1;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.customer-panel:hover .logo-mask {opacity:0.6; z-index:1;}
+.customer-panel:hover .logo {opacity:0;}
+
+.customer-panel .info {
+  display:block; position:absolute;
+  z-index:1;
+  width:80%;
+  font-family:"myriad-pro-n3","myriad-pro",Helvetica,Arial,sans-serif;
+  font-weight:300;
+  color:#ffffff;
+  opacity:0;
+  padding:0px;
+  top:50%; left:50%;
+      -webkit-transform: translate(-50%, -55%);
+      -ms-transform: translate(-50%, -55%);
+  transform: translate(-50%, -55%);
+    -webkit-transition: all 0.4s ease-out 0s;
+    -moz-transition: all 0.4s ease-out 0s;
+    -ms-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+.customer-panel:hover .info {
+  opacity:1; z-index:2;
+    -webkit-transition-delay:0.2s;
+    -moz-transition-delay:0.2s;
+    -ms-transition-delay:0.2s;
+  transition-delay:0.2s;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.customer-panel .info .customer-name {font-size:36px; line-height:42px;}
+.customer-panel .info .play-btn {height:70px; width:70px; margin-bottom:15px;}
+@media (max-width: 765px) {
+  /*customer panels*/
+  .customer-panel {height:auto;}
+  .customer-panel .info {
+    position:relative;
+    width:90%;
+    padding:20px;
+    top:auto; left:auto;
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .customer-panel:hover .info {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
 }
