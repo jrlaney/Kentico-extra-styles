@@ -5,13 +5,14 @@
 
 .blog {
     
-    .post-author {
+    .author-photo {
+        .object-fit(cover);
+        .round;
+    }
 
-        img {
-            .object-fit(cover);
-            .round;
-            margin-bottom: 0;
-        }
+    .author-name {
+        border-bottom: @thin-border transparent;
+        .transition;
     }
     #hero {
         font-family: @myriad-pro;
@@ -20,27 +21,36 @@
         .post-title {
             color: @white;
         }
-        .post-author {
-
-            img {
-                .size(40px);
-                border: @medium-border @white;
-            }
-            .author-name {
-                font-weight: @normal;
-                color: @white;
-            }
-        }
         .post-date {
             font-weight: @light;
             .uppercase;
         }
+        .post-author {
+            .display(flex);
+            .justify-content(center);
+            .align-items(center);
+        }
+        .author-byline {
+            color: @gray;
+        }
+        .author-photo {
+            margin: 0 (@column-gutter / 2) 0 0;
+            .size(40px);
+            border: @medium-border @gray;
+            .transition;
+            
+            &:hover, &:active { border-color: @white; }
+        }
+        .author-name {
+            display: inline-block;
+            .padding-y(2px);
+            font-weight: @normal;
+            color: @white;
+
+            &:hover, &:active { border-color: @white; }
+        }
     }
-    article.post {
-        font-family: @myriad-pro;
-        line-height: @line-height;
-        font-weight: @light;
-        color: @black;
+    .post {
 
         section {
             .padding-y(30px);
@@ -49,41 +59,56 @@
         .post-content {
 
             p {
-                font-size: 18px;
-                line-height: @line-height;
-            }
-            p:first-child:first-letter {
-                display: inline-block;
-                float: left;
-                margin-top: -.1em;
-                margin-right: @base-margin / 2;
-                font-size: 120px;
-                line-height: 1;
-                font-weight: @bold;
-                color: @red;
+                font-family: @myriad-pro;
+                font-size: 16px;
+                line-height: 1.7;
+                
+                &:first-of-type {
+                    color: @red;
+                
+                    &:first-letter {
+                        display: inline-block;
+                        float: left;
+                        font-size: 8.5em;
+                        line-height: .75em;
+                        margin: 0 @base-margin @base-margin -0.075em;
+                        font-weight: @bold;
+                    }
+                }
             }
         }
         .post-cta {
-            font-weight: @bold;
-        }
-        .post-tags {
-            color: @dark-gray;
-        }
-        .post-author {
-            color: @dark-gray;
-
-            .author-title {
+            
+            p {
+                font-family: @myriad-pro;
+                font-size: 16px;
+                line-height: 1.7;
                 font-weight: @bold;
             }
-            img {
-                .size(120px);
-            }
-            .author-bio {
-                font-weight: @normal;
+        }
+        .post-tags {
+            font-size: 12px;
+            .uppercase;
+            color: @dark-gray;
+        }
+        .author-title {
+            margin-bottom: @base-margin / 2;
+            font-weight: @bold;
+        }
+        .author-name {
+            
+            &:hover, &:active {
+                border-color: @a1hover;
             }
         }
+        .author-photo {
+            .size(120px);
+            border: @thick-border @gray;
+        }
+        .author-bio {
+            font-size: 12px;
+        }
         .post-footer section:last-child {
-            padding-bottom: 0;
             border-bottom: 0;
         }
     }

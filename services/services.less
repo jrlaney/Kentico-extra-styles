@@ -3,20 +3,24 @@
 
 
 
-#services #hero.background-image { background-image: url('/Strategy/media/images/common/banners/services.jpg'); }
+// hero banners
+
+    // default hero banner
+    .services #hero.background-image { background-image: url('/Strategy/media/images/common/banners/services.jpg'); }
+
+    // custom hero banner for support page
+    #customer-support #hero.background-image { background-image: url('/Strategy/media/images/common/banners/support.jpg'); }
+
+    // banner for the older pages
+    .services-banner {
+        background: url(https://www.microstrategy.com/Strategy/media/images/support/support_top-banner-bkg.jpg) no-repeat center center #11566f;
+        background-size: cover;
+    }
 
 
-//banner for the older pages
-.services-banner {
-    background: url(https://www.microstrategy.com/Strategy/media/images/support/support_top-banner-bkg.jpg) no-repeat center center #11566f;
-    background-size: cover;
-}
+
+// for older pages
 
 .support-quotes .banner {min-height: 390px;}
-
-@media @medium {
-	.support-quotes .banner {min-height: 170px;}
-}
-@media @large {
-	.support-quotes .banner {min-height: 150px;}
-}
+@media @medium { .support-quotes .banner {min-height: 170px;} }
+@media @large { .support-quotes .banner {min-height: 150px;} }
