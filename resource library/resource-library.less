@@ -1,3 +1,5 @@
+@import '../settings.less';
+
 
 
 /*RESET FIX ZOOM ON IOS*/
@@ -467,11 +469,24 @@
 
 
 
+// STYLES FOR VISITED RESOURCES
 
-
-
-
-
+#resource-list a.card:visited:not(:hover):not(:active) {
+    border-top-color: @gray;
+    
+    .card-corner,
+    .line {
+        background-color: @gray;
+    }
+    
+    .resource-title,
+    .resource-description,
+    .resource-type,
+    .text-block,
+    .button {
+        color: @gray;
+    }
+}
 
 
 
