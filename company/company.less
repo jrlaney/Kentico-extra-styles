@@ -1,7 +1,6 @@
 @import '../settings.less';
 
 .top-banner.overview {background-image: url(/Strategy/media/images/company/company_hero-bkg_overview.jpg);}
-.top-banner.press-kit {background-image: url(/Strategy/media/images/company/presskit_hero-bkg.jpg);}
 .text-uppercase {font-family:@myriad-pro; letter-spacing:0.1em; font-weight:400}
 
 /* Timeline */
@@ -255,7 +254,11 @@
 .message-col .form-panel.active {opacity:1; transform:translateY(0);}
 .message-col #message-form.form-panel {position:relative; height:auto; width:auto; top:auto; left:auto;}
 
-
+// PRESS KIT STYLES
+.top-banner.press-kit {background-image: url(/Strategy/media/images/company/company_hero-bkg_press-kit.jpg);}
+#press-contact .background-trans-black {background-color: rgba(0,0,0,0.2);}
+#press-kit-screenshots .grid-item .overlay-black:after {.transition(); background-color: rgba(0,0,0,0.3);}
+#press-kit-screenshots .grid-item:hover .overlay-black:after {background-color: rgba(0,0,0,0.0);}
 
 
 
