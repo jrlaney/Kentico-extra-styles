@@ -1,3 +1,5 @@
+@import '../settings.less';
+
 /*new banner*/
 .careers-banner {
   display:block; position:relative;
@@ -34,13 +36,101 @@
   border:3px solid rgba(0,0,0,0.2);
   margin:30px 0;
   background:rgba(0,0,0,0.2);
+  iframe {
+    position: absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+  }
 }
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+
+//CUSTOM VALUES SLIDER
+#values-slider {
+    padding-left:30px; padding-right:30px;
+    @media @medium { padding-left:104px; padding-right:104px; }
+
+    .slick-arrow{
+        top:0; bottom:0;
+        padding: @base-margin;
+        opacity:0.5;
+        &:hover {opacity:1;}
+    }
+    .slick-slide {
+        padding-top:0; padding-bottom:0;
+        @media @medium {padding-top:200px; padding-bottom:50px; .align-items(flex-start);}
+    }
+    .slick-dots {
+        .position(absolute, @left:50%, @top:@column-gutter);
+        .translateX(-50%);
+        @media @medium {height:180px;}
+        & > li {
+            padding:0 20px;
+            max-width:20%;
+            margin-left:-4px;
+
+            .values-nav {
+                display:block; position:relative;
+                cursor:pointer;
+                padding:15px;
+                text-align:center;
+                font-family:@myriad-pro;
+                .uppercase;
+                font-weight:400;
+                opacity:0.4;
+                .transition;
+
+                &:before {
+                    display:block;
+                    font-family: 'icomoon';
+                    .pretty-icon;
+                    margin:0 auto 20px auto;
+                    font-size:70px;
+                    .transition;
+                }
+                &:after {
+                    display:block; position:absolute;
+                    content:'';
+                    bottom:-10px; left:50%;
+                    margin-left:-9px;
+                    width:0; height:0;
+                    border-left: 9px solid transparent;
+                    border-right: 9px solid transparent;
+                    border-top: 10px solid transparent;
+                    .transition;
+                }
+                &:hover {opacity:.75;}
+
+                &.engaged:before {content:'\e95b'}
+                &.precise:before {content:'\ea2c'}
+                &.agile:before {content:'\e97e'}
+                &.transparent:before {content:'\e98a'}
+                &.cheerful:before {content:'\e93a'}
+            }
+            &.slick-active .values-nav {
+                opacity:1;
+                padding:15px 20px;
+                &.engaged {
+                    &:before {color:@red;}
+                    &:after {border-top-color:@red;}
+                }
+                &.precise {
+                    &:before {color:@blue;}
+                    &:after {border-top-color:@blue;}
+                }
+                &.agile {
+                    &:before {color:@green;}
+                    &:after {border-top-color:@green;}
+                }
+                &.transparent {
+                    &:before {color:@navy-blue;}
+                    &:after {border-top-color:@navy-blue;}
+                }
+                &.cheerful {
+                    &:before {color:@orange;}
+                    &:after {border-top-color:@orange;}
+                }
+            }
+        }
+    }
 }
 
 /*new job search*/
@@ -124,8 +214,8 @@
   .image-section {height:50vh; min-height:500px;}
   .smartWidget .srSearchForm {width:60%; vertical-align:middle;}
   .smartWidget input[type=text].srSearchInput {width:75%; max-width:none; margin-bottom:0px; padding:6px 10px;}
-  .smartWidget .srSearchButton {width:calc(25% - 10px); margin-left:10px;}
-  .smartWidget .srSearchOption {width:calc(20% - 10px); margin-left:10px; margin-top:0; vertical-align:middle;}
+  .smartWidget .srSearchButton {width:~"calc(25% - 10px)"; margin-left:10px;}
+  .smartWidget .srSearchOption {width:~"calc(20% - 10px)"; margin-left:10px; margin-top:0; vertical-align:middle;}
 }
 
 
