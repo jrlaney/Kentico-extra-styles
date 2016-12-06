@@ -574,7 +574,72 @@
         max-width:170%;
     }
 
+    #custom-mobile-apps {
+        .description-block {
+            display:none;
+            position:relative;
+            @media @medium { display:block;}
+        }
+        .animated-block {
+            position:relative;
+            padding:30px 0px;
+            & > p {display:block;}
+
+            @media @medium {
+                padding:15px 30px;
+                & > p {display:none;}
+            }
+        }
+        .mstr-icon, .customapp-icon {
+            display:block; margin:0 auto;
+            max-width:70px;
+            
+            @media @medium {max-width:100px;}
+            @media @large {max-width:150px;}
+        }
+        .icon {
+            position:absolute;
+            top:100%; left:50%;
+            font-size:20px;
+                -webkit-transform: rotate(90deg) translate(-50% , 10px);
+            transform: rotate(90deg) translate(-50% , 10px);
+            @media @medium {
+                display:block;
+                top:50%; left:100%;
+                font-size:30px;
+                    -webkit-transform: rotate(0deg) translate(-15px, -50%);
+                transform: rotate(0deg) translate(-15px, -50%);
+            }
+        }
+
+        //animations for the horizontal view
+        @media @medium {
+            .description-block {opacity:0; .translateY(20%);}
+            .animated-block {opacity:0; .translateX(-20%);}
+            &.passed-view {
+                .animated-block {
+                    .animation(fade-slide-right 0.4s ease-out 0.3s normal forwards);
+                    &.second {.animation-delay(1.0s~"!important");}
+                    &.third {.animation-delay(1.7s~"!important");}
+                }
+                .description-block {
+                    .animation(fade-slide-up 0.4s ease-out 0.5s normal forwards);
+                    &.second {.animation-delay(1.2s~"!important");}
+                    &.third {.animation-delay(1.9s~"!important");}
+                }
+            }
+        }
+    }
+
 }
+.keyframes(fade-slide-right;{
+    0%{opacity:0; .translateX(-20%);}
+    100%{opacity:1; .translateX(0);}
+});
+.keyframes(fade-slide-up;{
+    0%{opacity:0; .translateY(20%);}
+    100%{opacity:1; .translateY(0);}
+});
 
 
 
