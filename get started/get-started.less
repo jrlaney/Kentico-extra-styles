@@ -22,9 +22,6 @@
     #desktop& { background-image: url('/Strategy/media/images/common/banners/desktop.jpg'); }
 
     }
-    .eval-page-banner {
-      background-image: url('/Strategy/media/images/products/analytics/2015/analytics_eval-edition-hero-bkg.jpg');
-    }
 
 
 
@@ -40,7 +37,42 @@
     .columns(3, @column-gutter);
 }
 
+//EVAL EDITION PAGE
+.eval-page-banner {
+    background-image: url('/Strategy/media/images/products/analytics/2015/analytics_eval-edition-hero-bkg.jpg');
 
+    .text-col {
+        color:#ffffff;
+        h1.text-large {font-size:45px; line-height:50px;}
+        .text-red {color:#ffffff;}
+        .line.red:first-child {display:none;}
+    }
+    .form-col {
+        h2:first-child {font-size:22px; line-height:28px; font-weight:400;}
+    }
+}
+
+ul.triangle-list {
+    list-style: none;
+
+    & > li {
+        position:relative;
+        padding-bottom:10px;
+        &:before {
+            display:block; position:absolute;
+            content:'';
+            top:3px; left:-30px;
+            width:0; height:0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid @red;
+            border-top: 10px solid transparent;
+        }
+    }
+    &.orange > li:before {border-right-color:@orange;}
+    &.green > li:before {border-right-color:@green;}
+    &.blue > li:before {border-right-color:@blue;}
+    &.navy-blue > li:before {border-right-color:@navy-blue;}
+}
 
 
 //OLDER VERSIONS OF THE FREE TRIAL PAGE (for intl, delete when updated)
