@@ -52,32 +52,34 @@ section.view {
             
         .text-col {
             opacity: 0;
-            .translateX(@base-margin * -1);
+            .translateX(@base-spacing * -1);
             .transition(.5s);
         }
-        &.passed-view .text-col {
-            opacity: 1;
-            .translateX(0);
+        .device-wrapper .screenshot {
+            opacity: 0;
+            .transition(.5s);
+        }
+        &.passed-view {
+            
+            .text-col {
+                opacity: 1;
+                .translateX(0);
+            }
+            .device-wrapper .screenshot {
+                opacity: 1;
+            }
         }
     }
 }
 
-#restful-api-diagram-wrapper {
+.media-col {
+    overflow: hidden;
     background-color: @light-gray;
-    padding: extract(@section-padding, 1);
+    
+    .device-wrapper {
         
-    .loop-media-queries(@i) when (@i > 1) {
-        .loop-media-queries(@i - 1);
-
-        @query: extract(@queries, @i);
-        @screen-size-class: extract(@screen-size-classes, @i);
-
-        @media @query {
-
-            padding: extract(@section-padding, @i);
-        }
+        &.mac-monitor { margin-bottom: -15%; }
     }
-    .loop-media-queries(length(@queries));
 }
 
 #restful-api-diagram {
@@ -92,7 +94,7 @@ section.view {
     }
     
     .icon {
-        margin-bottom: @base-margin / 2;
+        margin-bottom: @base-spacing / 2;
     }
     .block {
         position: relative;
@@ -137,7 +139,7 @@ section.view {
             padding: @column-gutter / 4;
         }
         .icon {
-            margin-bottom: @base-margin / 4;
+            margin-bottom: @base-spacing / 4;
         }
         &:before {
             content: '';
