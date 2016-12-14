@@ -13,6 +13,57 @@
     }
 }
 
+.resource-thumbnail {
+    display:block; position:relative;
+    .thumbnail {position:relative; z-index:0;}
+    .cta {
+        display:block; z-index:2;
+        .position(absolute, 50%, 50%, null, null);
+        .translate(-50%, -50%);
+        font-family:@myriad-pro;
+        font-style:normal;
+        font-weight:400;
+        .uppercase;
+        font-size:18px;
+        color:@white;
+        opacity:0;
+        .transition;
+        :hover& {.translate(-50%, ~"calc(-50% + 40px)"); .opacity(0.99);}
+    }
+    &:before { //icon stuff
+        display:block; z-index:2;
+        .position(absolute, 50%, 50%, null, null);
+        .translate(-50%, -50%);
+        font-family:'icomoon';
+        font-size:70px;
+        color:@white;
+        .pretty-icon;
+        .transition;
+        :hover& {.translate(-50%, ~"calc(-50% - 25px)");}
+
+        .video& {content:'\e828';}
+        .presentation& {content:'\e825';}
+        .document& {content:'\ea08';}
+        .ebook& {content:'\e822';}
+        .brochure& {content:'\e81f';}
+        .analyst-review& {content:'\e937';}
+        .webcast& {content:'\e996';}
+        .success-story& {content:'\e969';}
+        .tech-guide& {content:'\e822';}
+        .white-paper& {content:'\e82b';}
+    }
+    &:after { //black overlay
+        display:block; z-index:1;
+        .position(absolute, 0, 0, 0, 0);
+        width:100%; height:100%;
+        content:'';
+        background-color:@pure-black;
+        background-color:fade(@pure-black, 30%);
+        .transition;
+        :hover& {background-color:fade(@pure-black, 60%);}
+    }
+}
+
 
 // special typography for capabilities pages
 
@@ -729,7 +780,7 @@
         float:right;
     }
 
-    #emm {
+    #mobile-sdk {
         .description-block {
             display:none;
             position:relative;
@@ -749,8 +800,7 @@
             display:block; margin:0 auto;
             max-width:70px;
 
-            @media @medium {max-width:100px;}
-            @media @large {max-width:150px;}
+            @media @medium {max-width:100%;}
         }
         .icon {
             position:absolute;
