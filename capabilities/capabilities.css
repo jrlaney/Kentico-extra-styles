@@ -1,6 +1,9 @@
 h1,
 h2,
 h3,
+.h1,
+.h2,
+.h3,
 h4,
 h5,
 h6,
@@ -15,6 +18,9 @@ ol {
 h1:last-child,
 h2:last-child,
 h3:last-child,
+.h1:last-child,
+.h2:last-child,
+.h3:last-child,
 h4:last-child,
 h5:last-child,
 h6:last-child,
@@ -26,6 +32,9 @@ ol:last-child {
 h1.line-break,
 h2.line-break,
 h3.line-break,
+.h1.line-break,
+.h2.line-break,
+.h3.line-break,
 h4.line-break,
 h5.line-break,
 h6.line-break,
@@ -365,6 +374,340 @@ a > img:only-child {
 @media only screen and (min-width: 1200px) {
   #advanced-analytics #hero img {
     margin-left: -40%;
+  }
+}
+#data-connectivity .gridder {
+  position: relative;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+#data-connectivity .gridder:after {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #444444;
+  background: -webkit-linear-gradient(45deg, #222222, #444444);
+  background: linear-gradient(45deg, #222222, #444444);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out 0.5s;
+  transition: opacity 0.3s ease-out 0.5s;
+}
+#data-connectivity .gridder .grid-item {
+  padding: 5px;
+  z-index: 2;
+  -webkit-order: -1;
+  order: -1;
+}
+.no-flexbox.flexboxtweener #data-connectivity .gridder .grid-item {
+  -ms-flex-order: -1;
+}
+#data-connectivity .gridder .card {
+  cursor: pointer;
+  border: none;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: opacity 0.3s ease-in 0.5s, transform 0.3s ease-in 0.5s, box-shadow 0.2s ease-out 0s;
+  transition: opacity 0.3s ease-in 0.5s, transform 0.3s ease-in 0.5s, box-shadow 0.2s ease-out 0s;
+}
+#data-connectivity .gridder .gridder-show {
+  position: absolute;
+  z-index: 3;
+  padding: 0;
+  width: 100%;
+  top: 0px;
+  left: 10px;
+  margin-left: -10px;
+  margin-right: -10px;
+  overflow: hidden;
+  color: #ffffff;
+  text-align: left;
+}
+#data-connectivity .gridder .gridder-padding {
+  display: block;
+  position: relative;
+  padding: 70px 20px 40px 20px;
+  -webkit-animation: fade-in-down 0.5s 0s ease-out both;
+  -moz-animation: fade-in-down 0.5s 0s ease-out both;
+  animation: fade-in-down 0.5s 0s ease-out both;
+}
+#data-connectivity .gridder .gridder-close {
+  position: absolute;
+  z-index: 3;
+  top: 35px;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+#data-connectivity .gridder .gridder-close:before,
+#data-connectivity .gridder .gridder-close:after {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-right: -15px;
+  height: 30px;
+  width: 2px;
+  background-color: #dddddd;
+}
+#data-connectivity .gridder .gridder-close:before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#data-connectivity .gridder .gridder-close:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#data-connectivity .gridder .gridder-close:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #FFFFFF;
+}
+#data-connectivity .gridder .gridder-nav {
+  position: absolute;
+  z-index: 3;
+  top: 35px;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+#data-connectivity .gridder .gridder-nav:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #FFFFFF;
+}
+#data-connectivity .gridder .gridder-nav.next {
+  left: 50px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+#data-connectivity .gridder .gridder-nav.disabled,
+#data-connectivity .gridder .gridder-nav.disabled:hover {
+  opacity: 0.2;
+  cursor: default;
+  background-color: rgba(0, 0, 0, 0);
+}
+#data-connectivity .gridder .gridder-nav:before,
+#data-connectivity .gridder .gridder-nav:after {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 50%;
+  left: 50%;
+  margin-left: -4px;
+  height: 18px;
+  width: 2px;
+  background-color: #dddddd;
+}
+#data-connectivity .gridder .gridder-nav:before {
+  margin-top: -15px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#data-connectivity .gridder .gridder-nav:after {
+  margin-top: -3px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#data-connectivity .gridder .gridder-back {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 20px 10px 40px;
+  height: 35px;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #CCCCCC;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+#data-connectivity .gridder .gridder-back:before,
+#data-connectivity .gridder .gridder-back:after {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 50%;
+  left: 20px;
+  height: 10px;
+  width: 2px;
+  background-color: #CCCCCC;
+}
+#data-connectivity .gridder .gridder-back:before {
+  margin-top: -9px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#data-connectivity .gridder .gridder-back:after {
+  margin-top: -2px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#data-connectivity .gridder.hasSelectedItem .card {
+  /*opening timing on the cards*/
+  opacity: 0;
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+  -webkit-transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s, box-shadow 0.2s ease-out 0s;
+  transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s, box-shadow 0.2s ease-out 0s;
+}
+#data-connectivity .gridder.hasSelectedItem:after {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-out 0.3s;
+  transition: opacity 0.5s ease-out 0.3s;
+}
+@media only screen and (min-width: 768px) {
+  #data-connectivity .gridder {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 60px;
+  }
+  #data-connectivity .gridder .grid-item {
+    padding: 10px;
+  }
+  #data-connectivity .gridder .gridder-show {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  #data-connectivity .gridder .gridder-padding {
+    padding: 70px 50px 0 50px;
+  }
+  #data-connectivity .gridder .gridder-close {
+    top: 0;
+  }
+  #data-connectivity .gridder .gridder-nav {
+    top: 50%;
+    height: 100px;
+    margin-top: -30px;
+  }
+  #data-connectivity .gridder .gridder-nav.next {
+    right: 0;
+    left: auto;
+  }
+  #data-connectivity .gridder .gridder-back {
+    right: auto;
+    height: auto;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  #data-connectivity .gridder .component-card .title {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  #data-connectivity .gridder .gridder-back {
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: all 0.2s ease-out 0s;
+    transition: all 0.2s ease-out 0s;
+  }
+  #data-connectivity .gridder .gridder-back:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #data-connectivity .gridder {
+    padding-bottom: 80px;
+  }
+}
+#data-connectivity .gridder-content {
+  display: none;
+}
+@-moz-keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-moz-keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 @media only screen and (min-width: 980px) {
