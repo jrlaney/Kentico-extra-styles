@@ -210,6 +210,17 @@
 
 #data-connectivity {
 
+    #hero {
+        padding-bottom: 20px;
+        @media @medium { padding-bottom: 30px; }
+        @media @large { padding-bottom: 40px; }
+
+        .device-wrapper {
+            width:200%; float:right; margin-right:-10%;
+            @media @xlarge {width:150%;}
+        }
+    }
+
     .gridder {
         position:relative; overflow:hidden;
         padding-left:20px;
@@ -233,7 +244,8 @@
         }
         .card {
             cursor:pointer;
-            border:none;
+            border-top-color:@gainsboro;
+            .card-image-content {border-bottom:1px solid @gainsboro;}
             //ANIMATED PROPERTIES
             opacity:1;
             .translateY(0);
