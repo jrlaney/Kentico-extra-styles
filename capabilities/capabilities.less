@@ -1,6 +1,68 @@
 @import '../settings.less';
 @import '../overrides.less';
 
+//responsive wrapper for wistia thumbnail video embeds
+.video-wrapper {
+    position:relative;
+    display:block;
+    padding-bottom:56.25%; //16:9 ratio
+    .video-embed {
+        position:absolute;
+        top:0; left:0;
+        height:100%; width:100%;
+    }
+}
+
+.resource-thumbnail {
+    display:block; position:relative;
+    .thumbnail {position:relative; z-index:0;}
+    .cta {
+        display:block; z-index:2;
+        .position(absolute, 50%, 50%, null, null);
+        .translate(-50%, -50%);
+        font-family:@myriad-pro;
+        font-style:normal;
+        font-weight:400;
+        .uppercase;
+        font-size:18px;
+        color:@white;
+        opacity:0;
+        .transition;
+        :hover& {.translate(-50%, ~"calc(-50% + 40px)"); .opacity(0.99);}
+    }
+    &:before { //icon stuff
+        display:block; z-index:2;
+        .position(absolute, 50%, 50%, null, null);
+        .translate(-50%, -50%);
+        font-family:'icomoon';
+        font-size:70px;
+        color:@white;
+        .pretty-icon;
+        .transition;
+        :hover& {.translate(-50%, ~"calc(-50% - 25px)");}
+
+        .video& {content:'\e828';}
+        .presentation& {content:'\e825';}
+        .document& {content:'\ea08';}
+        .ebook& {content:'\e822';}
+        .brochure& {content:'\e81f';}
+        .analyst-review& {content:'\e937';}
+        .webcast& {content:'\e996';}
+        .success-story& {content:'\e969';}
+        .tech-guide& {content:'\e822';}
+        .white-paper& {content:'\e82b';}
+    }
+    &:after { //black overlay
+        display:block; z-index:1;
+        .position(absolute, 0, 0, 0, 0);
+        width:100%; height:100%;
+        content:'';
+        background-color:@pure-black;
+        background-color:fade(@pure-black, 30%);
+        .transition;
+        :hover& {background-color:fade(@pure-black, 60%);}
+    }
+}
 
 
 // special typography for capabilities pages
@@ -145,6 +207,205 @@
         }
     }
 }
+
+#data-connectivity {
+
+    #hero {
+        padding-bottom: 20px;
+        @media @medium { padding-bottom: 30px; }
+        @media @large { padding-bottom: 40px; }
+
+        .device-wrapper {
+            width:200%; float:right; margin-right:-10%;
+            @media @xlarge {width:150%;}
+        }
+    }
+
+    .gridder {
+        position:relative; overflow:hidden;
+        padding-left:20px;
+        padding-right:20px;
+        padding-bottom:40px;
+        .transition;
+        &:after { //the dark background that shows up when the grid is opened
+            display:block; position:absolute; z-index:1;
+            content:"";
+            width:100%; height:100%;
+            top:0; left:0; right:0; bottom:0;
+            .angled-gradient(#222222, #444444);
+
+            //animated portion
+            opacity:0;
+            .transition(0.3s, ease-out, opacity, 0.5s);
+        }
+        .grid-item {
+            padding:5px; z-index:2;
+            .order(-1);
+        }
+        .card {
+            cursor:pointer;
+            border-top-color:@gainsboro;
+            .card-image-content {border-bottom:1px solid @gainsboro;}
+            //ANIMATED PROPERTIES
+            opacity:1;
+            .translateY(0);
+            -webkit-transition:opacity 0.3s ease-in 0.5s, transform 0.3s ease-in 0.5s, box-shadow 0.2s ease-out 0s;
+            transition:opacity 0.3s ease-in 0.5s, transform 0.3s ease-in 0.5s, box-shadow 0.2s ease-out 0s;
+        }
+        .gridder-show {
+            position:absolute; z-index:3;
+            padding:0;
+            width:100%; top:0px; left:10px;
+            margin-left:-10px; margin-right:-10px;
+            overflow:hidden;
+            color:#ffffff; text-align:left;
+        }
+        .gridder-padding {
+            display:block; position:relative;
+            padding:70px 20px 40px 20px;
+
+            //animation for when the content block appears
+            .animation(fade-in-down 0.5s 0s ease-out both);
+        }
+        .gridder-close {
+            position:absolute; z-index:3;
+            top:35px; right:0;
+            height:50px; width:50px;
+            cursor:pointer;
+            &:before,
+            &:after {
+                position:absolute; display:block;
+                content:"";
+                top:50%; left:50%;
+                margin-top:-15px; margin-right:-15px;
+                height:30px; width:2px;
+                background-color:#dddddd;
+            }
+            &:before {.rotate(45deg);}
+            &:after {.rotate(-45deg);}
+            //ANIMATED PROPERTIES
+            background-color:rgba(0,0,0,0.0);
+            .transition;
+            &:hover {background-color:rgba(0,0,0,0.4); color:@white;}
+        }
+        .gridder-nav {
+            position:absolute; z-index:3;
+            top:35px; left:0;
+            height:50px; width:50px;
+            cursor:pointer;
+            //ANIMATED PROPERTIES
+            background-color:rgba(0,0,0,0.0);
+            .transition;
+            &:hover {background-color:rgba(0,0,0,0.4); color:@white;}
+            &.next {
+                left:50px;
+                .rotate(180deg);
+            }
+            &.disabled,
+            &.disabled:hover {
+                opacity:0.2;
+                cursor:default;
+                background-color:rgba(0,0,0,0.0);
+            }
+            &:before,
+            &:after {
+                position:absolute; display:block;
+                content:"";
+                top:50%; left:50%; margin-left:-4px;
+                height:18px; width:2px;
+                background-color:#dddddd;
+            }
+            &:before {
+                margin-top:-15px;
+                .rotate(45deg);
+            }
+            &:after {
+                margin-top:-3px;
+                .rotate(-45deg);
+            }
+        }
+        .gridder-back {
+            position:absolute; z-index:3;
+            top:0; left:0; right:0;
+            padding:10px 20px 10px 40px;
+            height:35px;
+            background-color:rgba(0,0,0,0.4);
+            font-family:@myriad-pro;
+            font-weight:300;
+            font-size:14px; line-height:16px;
+            color:@gray; .uppercase;
+            &:before,
+            &:after {
+                position:absolute; display:block;
+                content:"";
+                top:50%; left:20px;
+                height:10px; width:2px;
+                background-color:@gray;
+            }
+            &:before {
+                margin-top:-9px;
+                .rotate(45deg);
+            }
+            &:after {
+                margin-top:-2px;
+                .rotate(-45deg);
+            }
+        }
+
+        //ANIMATION END STATES
+        &.hasSelectedItem {
+            .card {
+                /*opening timing on the cards*/
+                opacity:0;
+                .translateY(10px);
+                -webkit-transition:opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s, box-shadow 0.2s ease-out 0s;
+                transition:opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s, box-shadow 0.2s ease-out 0s;
+            }
+            &:after {
+              opacity:1;
+              .transition(0.5s, ease-out, opacity, 0.3s);
+            }
+        }
+
+        @media @medium {
+            margin-left:0; margin-right:0;
+            padding-left:0; padding-right:0; padding-bottom:60px;
+            .grid-item {padding:10px;}
+            .gridder-show {position:relative; top:auto; left:auto;}
+            .gridder-padding {padding:70px 50px 0 50px;}
+            .gridder-close {top:0;}
+            .gridder-nav {
+                top:50%;
+                height:100px;
+                margin-top:-30px;
+                &.next {right:0; left:auto;}
+            }
+            .gridder-back {
+                right:auto;
+                height:auto;
+                font-size:18px; line-height:20px;
+            }
+            .component-card .title {font-size:26px; line-height:32px;}
+            .gridder-back {
+                background-color:rgba(0,0,0,0.0);
+                .transition;
+            }
+            .gridder-back:hover {background-color:rgba(0,0,0,0.4); color:#ffffff;}
+        }
+        @media @large {padding-bottom:80px;}
+    }// end gridder stuff
+
+    .gridder-content {display:none;}
+
+}
+.keyframes(fade-in-up;{
+    0% {opacity:0; .translateY(50px);}
+    100% {opacity:1; .translateY(0);}
+});
+.keyframes(fade-in-down;{
+    0% {opacity:0; .translateY(-10px);}
+    100% {opacity:1; .translateY(0);}
+});
 
 #big-data {
 
@@ -564,17 +825,161 @@
 }
 
 #embedded-bi {
+    @media @medium {
+        #embedded-bi-types .split-col {
+            &:first-child {padding-right:50px; border-right:1px solid @dark-gray;}
+            &:last-child {padding-left:50px;}
+        }
+    }
 
-    #sdk-branded-apps .device-wrapper {
+    #embedded-bi-diagram .cards .card .card-content {padding:20px 10px;}
+
+    #embedded-bi-diagram-platform {
+        position:relative;
+        &:before {
+            position:absolute; display:block;
+            content:'';
+            width:1px; height:22.5px;
+            bottom:-22.5px; left:50%;
+            background-color:@gray;
+        }
+        @media @medium {
+            &:before {height:15px; bottom:-15px;}
+        }
+        @media @large {
+            margin-bottom:7.5px;
+            &:before {height:22.5px; bottom:-22.5px;}
+        }
+    }
+
+    #embedded-bi-diagram-components {
+        .grid-item {
+            position:relative;
+            &:before {
+                position:absolute; display:block; z-index:0;
+                content:'';
+                width:1px; height:15px;
+                top:-7.5px; left:50%; margin-left:-1px;
+                background-color:@gray;
+            }
+            @media @medium {
+                &:before {margin-left:0;}
+                &:nth-child(-n+3):before {height:22.4px; top:-15px;}
+                &:after {
+                    position:absolute; display:block; z-index:0;
+                    content:'';
+                    height:1px; width:100%;
+                    top:-15px;
+                    right:0; left:0;
+                    background-color:@gray;
+                }
+                &:nth-child(n+4):after {display:none;}
+                &:nth-child(3n+1):after {left:50%; width:50%;}
+                &:nth-child(3n):after {right:50%; width:50%;}
+            }
+            @media @large {
+                &:nth-child(n+4):before {height:22.4px; top:-15px;}
+                &:nth-child(n+4):after {display:block;}
+                &:nth-child(3n+1):after {left:0; width:100%;}
+                &:nth-child(3n):after {right:0; width:100%;}
+                &:first-child:after {left:50%; width:50%;}
+                &:last-child:after {right:50%; width:50%;}
+            }
+        }
+    }
+
+    #rest-api {
+        #rest-api-diagram {
+            .services-block {
+                position:relative;
+                padding:80px 0 80px 0;
+                h3, .line {margin-bottom:10px;}
+                .services-icon {
+                    position:relative; z-index:1;
+                    background-color:@red;
+                    color:@white;
+                    padding:10px;
+                    font-family:@myriad-pro;
+                    font-size:14px;
+
+                    @media @medium {font-size:12px;}
+                }
+                &:before {
+                    display:block; position:absolute; z-index:0;
+                    content:'';
+                    left:50%; top:50%;
+                    .translateY(-50%);
+                    height:100%; width:2px;
+                    background-color:@gray;
+                }
+                .interaction {
+                    display:inline-block; position:absolute;
+                    font-family:@myriad-pro;
+                    font-weight:600;
+                    .uppercase; color:@navy-blue;
+                    width:50%;
+                    padding:0 20px;
+                    top:75%;
+                    .icon {display:block; font-size:20px; margin:5px 0;}
+                    &.json {
+                        left:0;
+                        .icon {.rotate(90deg);}
+                    }
+                    &.rest-api {
+                        right:0;
+                        .icon {.rotate(-90deg);}
+                    }
+                }
+                @media @medium {
+                    padding:20px;
+                    &:before {height:2px; width:~"calc(100% + 30px)"; left:-15px; .translateY(0);}
+                    .interaction {
+                        display:block;
+                        padding:0;
+                        top:50%; right:0;
+                        width:~"calc(50% - 60px)";
+                        white-space:nowrap;
+                        .icon {position:absolute; font-size:16px; left:50%; margin-left:-10px;}
+                        &.json {
+                            padding-top:20px;
+                            right:0; left:auto; top:auto; bottom:~"calc(50% + 10px)";
+                            .icon {.rotate(0deg); top:-2px;}
+                        }
+                        &.rest-api {
+                            padding-bottom:20px;
+                            top:~"calc(50% + 10px)";
+                            .icon {.rotate(180deg); bottom:-2px;}
+                        }
+                    }
+                }
+                @media @xlarge {
+                    .interaction {
+                        .icon {left:auto; margin-left:0;}
+                        &.json {
+                            padding-top:0; padding-left:20px; padding-right:20px;
+                            .icon {top:-2px; right:0;}
+                        }
+                        &.rest-api {
+                            padding-bottom:0; padding-right:20px; padding-left:20px;
+                            .icon {top:-2px; left:0;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #web-sdk .device-wrapper {
         width:150%;
         margin-left:-50px;
     }
 
-    #custom-charts-graphs img {
+    #visualization-sdk img {
         max-width:170%;
+        float:right;
     }
 
-    #custom-mobile-apps {
+    #mobile-sdk {
         .description-block {
             display:none;
             position:relative;
@@ -593,9 +998,8 @@
         .mstr-icon, .customapp-icon {
             display:block; margin:0 auto;
             max-width:70px;
-            
-            @media @medium {max-width:100px;}
-            @media @large {max-width:150px;}
+
+            @media @medium {max-width:100%;}
         }
         .icon {
             position:absolute;
