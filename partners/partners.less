@@ -1,0 +1,44 @@
+@import '../settings.less';
+@import '../overrides.less';
+
+
+
+.partners #hero.background-image { background-image: url('/Strategy/media/images/common/banners/partners.jpg'); }
+
+#partner-resources {
+    overflow: hidden;
+    padding: 0;
+    .transition(.5s);
+    
+    max-height: @thick;
+    
+    &.section-open { 
+        max-height: 500px;
+        @media @medium { max-height: 300px; }
+    }
+    
+    &-trigger {
+        position: absolute;
+        
+        left: @column-gutter / 2;
+        bottom: -40px;
+        
+        @media @medium {
+            left: 50%;
+            bottom: -80px;
+            .translateX(-50%);
+        }
+        @media @large {
+            bottom: -120px;
+        }
+    }
+}
+
+#partner-spotlights {
+    
+    .logo {
+        max-width: 80%;
+        max-height: 100px;
+        @media @xlarge { max-height: 150px; }
+    }
+}
