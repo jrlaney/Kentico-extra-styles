@@ -245,7 +245,15 @@
         .card {
             cursor:pointer;
             border-top-color:@gainsboro;
-            .card-image-content {border-bottom:1px solid @gainsboro;}
+            .card-image-content {
+                border-bottom:1px solid @gainsboro;
+                .logo {
+                    .position(absolute, 50%, 50%, null, null);
+                    max-height: ~"calc(100% - 40px)";
+                    max-width: ~"calc(100% - 40px)";
+                    .translate(-50%, -50%);
+                }
+            }
             //ANIMATED PROPERTIES
             opacity:1;
             .translateY(0);
