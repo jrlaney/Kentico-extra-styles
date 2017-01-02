@@ -6,19 +6,15 @@
 .partners #hero.background-image { background-image: url('/Strategy/media/images/common/banners/partners.jpg'); }
 
 #partner-resources {
-    overflow: hidden;
     padding: 0;
-    .transition(.5s);
     
-    max-height: @thick;
-    
-    &.section-open { 
-        max-height: 500px;
-        @media @medium { max-height: 300px; }
-    }
-    
-    &-trigger {
+    &-header {
         position: absolute;
+        padding: @button-padding;
+        font-size: extract(@button-base-sizes, 2);
+        background-color: @navy-blue;
+        color: @white;
+        .uppercase;
         
         left: @column-gutter / 2;
         bottom: -40px;
@@ -31,6 +27,11 @@
         @media @large {
             bottom: -120px;
         }
+    }
+    
+    a[href*="mailto"] {
+        color: @light-gray;
+        &:hover, &:active { color: @white; text-decoration: underline; }
     }
 }
 
