@@ -1218,6 +1218,7 @@ transform: translateX(-10px);
   padding:15px 10px 30px 90px;
   border-top:1px solid #cccccc;
 }
+.news-section .newswire {z-index:0;}
 .news-section .newswire, .news-section .news_nav {
   display:inline-block;
     *display: inline;
@@ -1244,10 +1245,12 @@ transform: translateX(-10px);
   font-family:"myriad-pro-n4","myriad-pro",Helvetica,Arial,sans-serif;
   font-style:normal;
   font-weight:400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   color:#ffffff!important;
   text-align:center;
-  font-size:16px;
-  line-height:16px;
+  font-size:14px;
+  line-height:14px;
   margin:0;
   transition: background-color 0.2s ease-out;
 }
@@ -1267,8 +1270,8 @@ transform: translateX(-10px);
 .news-section .icon-wrapper .news-icon:hover .stem {border-top-color:#4789a3;}
 
 .news-section .newswire {width:90%; padding:0;}
-.news-section .newswire a {display:block; padding:3px 0;}
-.news-section .newswire .date {padding-right:10px; border-right:1px solid #cccccc; color:#555555;}
+.news-section .newswire a {width:100%; display:block; padding:3px 0;}
+.news-section .newswire .date {padding-right:10px; border-right:1px solid #cccccc; color:#555555; min-height:1px; min-width:1px;}
 .news-section .newswire .news_link {padding:0 10px; border-right:1px solid #cccccc; color:#555555; transition: color 0.2s ease-out;}
 .news-section .newswire .source {padding:0 10px; color:#999999;}
 .news-section .newswire a:hover .news_link, .news-section .newswire a:hover .source, .news-section .newswire a:hover .date {color:#4ea2f6;}
@@ -1572,7 +1575,7 @@ transform: translateX(-10px);
   }
 
   .news-section .newswire {width:auto; margin:0 35px; text-align:center;}
-  .news-section .newswire a {display:block; width:100%; padding:10px 0; text-align:center;}
+  .news-section .newswire a {display:block; width:100%; padding:10px 10px; text-align:center;}
   .news-section .newswire .date {display:block; padding-right:0px; border-right:none;}
   .news-section .newswire .news_link {display:block; padding:0; border-right:none;}
   .news-section .newswire .source {display:block; padding:5px 0; margin:5px 0;}
@@ -1684,6 +1687,7 @@ transform: translateX(-10px);
   .mstr-10-mobile .head, .mstr-10-analytics .head, .secure-cloud .head {font-size:50px; line-height:55px;}
   .mstr-10-mobile .sub, .mstr-10-analytics .sub, .secure-cloud .sub {font-size:26px; line-height:32px;}
 
+  .news-section .newswire a {text-align:center;}
 }
 
 
