@@ -1,1 +1,1850 @@
-h1,h2,h3,.h1,.h2,.h3,h4,h5,h6,p,ul,ol{margin-top:0;padding-top:0;padding-bottom:0;margin-bottom:20px}h1:last-child,h2:last-child,h3:last-child,.h1:last-child,.h2:last-child,.h3:last-child,h4:last-child,h5:last-child,h6:last-child,p:last-child,ul:last-child,ol:last-child{margin-bottom:0}h1.line-break,h2.line-break,h3.line-break,.h1.line-break,.h2.line-break,.h3.line-break,h4.line-break,h5.line-break,h6.line-break,p.line-break,ul.line-break,ol.line-break{margin-top:-20px}.line{margin-bottom:20px}.line:last-child{margin-bottom:0}img{margin-bottom:20px}img:last-child{margin-bottom:0}a>img:only-child{margin-bottom:20px}.top-banner .secondary-fullwidth{display:none !important}.top-banner .is-sticky{min-height:0}.landing-page .hero .line:first-child,.landing-page #hero .line:first-child{display:none}.landing-page .hero>.flex-row,.landing-page #hero{-webkit-align-items:center;align-items:center}.no-flexbox.flexboxtweener .landing-page .hero>.flex-row,.no-flexbox.flexboxtweener .landing-page #hero{-ms-flex-align:center}.health-assessment.landing-page .hero .text-col h2:first-of-type,.health-assessment.landing-page #hero .text-col h2:first-of-type{display:none}.landing-page .hero.background-image .text-col h1,.landing-page #hero.background-image .text-col h1,.landing-page .hero.background-image .text-col h2,.landing-page #hero.background-image .text-col h2,.landing-page .hero.background-image .text-col h3,.landing-page #hero.background-image .text-col h3,.landing-page .hero.background-image .text-col h4,.landing-page #hero.background-image .text-col h4,.landing-page .hero.background-image .text-col h5,.landing-page #hero.background-image .text-col h5,.landing-page .hero.background-image .text-col h6,.landing-page #hero.background-image .text-col h6,.landing-page .hero.background-image .text-col p,.landing-page #hero.background-image .text-col p{color:#fff}.landing-page .background-image.overlay .form-col{color:#333}.landing-page .hero.background-image,.landing-page #hero.background-image{background-image:url('/Strategy/media/images/landing-pages/analyst-reviews/resource-banner-bkg_mstr-10.jpg')}.landing-page.desktop .hero.background-image{background-image:url('/Strategy/media/images/free-trial/desktop-trial_top-banner-bkg.jpg')}.landing-page.mobile #hero.background-image{background-image:url('/Strategy/media/images/common/banners/mobile.jpg')}.landing-page.solutions.retail .hero.background-image{background-image:url('/Strategy/media/images/solutions/hero-backgrounds/solutions_retail_hero-banner-bkg.jpg')}.landing-page.solutions.banking .hero.background-image{background-image:url('/Strategy/media/images/solutions/hero-backgrounds/solutions_fsi_hero-banner-bkg.jpg')}.landing-page.solutions.sales .hero.background-image{background-image:url('/Strategy/media/images/solutions/hero-backgrounds/solutions_sales_hero-banner-bkg.jpg')}.landing-page.solutions.healthcare .hero.background-image{background-image:url('/Strategy/media/images/solutions/hero-backgrounds/solutions_healthcare_hero-banner-bkg.jpg')}.landing-page.solutions.manufacturing .hero.background-image{background-image:url('/Strategy/media/images/solutions/hero-backgrounds/solutions_manufacturing_hero-banner-bkg.jpg')}.landing-page.solutions.higher-education #hero.background-image{background-image:url('/Strategy/media/images/common/banners/higher-education.jpg')}.landing-page.resource .hero.background-image{background-image:url('/Strategy/media/images/free-trial/desktop-trial_top-banner-bkg-old.jpg')}.landing-page.health-assessment .hero.background-image{background-image:url('/Strategy/media/images/services-support/banner_beta-program-bkg.jpg')}.landing-page section#symposium{background-image:url('/Strategy/media/images/landing-pages/solution-lp/symposium.jpg')}#container-store.landing-page .hero.background-image{background-image:url('/Strategy/media/images/landing-pages/solution-lp/container-store_banner.jpg')}#health-score-poor{width:120px;height:120px;background:#ccc}#health-score-poor .circle .mask,#health-score-poor .circle .fill{width:120px;height:120px}#health-score-poor .circle .mask{clip:rect(0, 120px, 120px, 60px)}#health-score-poor .circle .mask .fill{clip:rect(0, 60px, 120px, 0);background:#c31f29}#health-score-poor .inset{width:100px;height:100px;top:10px;left:10px;background:#f2f2f2}#health-score-fair{width:120px;height:120px;background:#ccc}#health-score-fair .circle .mask,#health-score-fair .circle .fill{width:120px;height:120px}#health-score-fair .circle .mask{clip:rect(0, 120px, 120px, 60px)}#health-score-fair .circle .mask .fill{clip:rect(0, 60px, 120px, 0);background:#ff9100}#health-score-fair .inset{width:100px;height:100px;top:10px;left:10px;background:#f2f2f2}#health-score-good{width:120px;height:120px;background:#ccc}#health-score-good .circle .mask,#health-score-good .circle .fill{width:120px;height:120px}#health-score-good .circle .mask{clip:rect(0, 120px, 120px, 60px)}#health-score-good .circle .mask .fill{clip:rect(0, 60px, 120px, 0);background:#68aa00}#health-score-good .inset{width:100px;height:100px;top:10px;left:10px;background:#f2f2f2}#desktop-help.microsite #dashboards-visualizations img{max-width:none;width:180%}@media only screen and (min-width: 768px){#desktop-help.microsite #dashboards-visualizations img{width:150%;margin-left:-25%}}@media only screen and (min-width: 768px){#retail.solutions.landing-page #distribution img{margin-top:33px}#manufacturing.solutions.landing-page #stores img[src$="store.png"]{margin-top:32px}}@media only screen and (min-width: 980px){.landing-page section.lines-contain{overflow:visible}.landing-page section.lines-contain>.flex-row{position:relative}.landing-page section.lines-contain>.flex-row:before,.landing-page section.lines-contain>.flex-row:after{content:'';display:block;position:absolute}.landing-page section.lines-contain>.flex-row:before{z-index:1}.landing-page section.lines-contain-top>.flex-row:before,.landing-page section.lines-contain-left>.flex-row:before,.landing-page section.lines-contain-right>.flex-row:before{background-color:#ccc}.landing-page section.lines-contain-top>.flex-row:after,.landing-page section.lines-contain-left>.flex-row:after,.landing-page section.lines-contain-right>.flex-row:after{top:-60px;left:30px;right:30px;bottom:-135px;border-left:1px solid #ccc;border-right:1px solid #ccc}.landing-page section.lines-contain-left>.flex-row:before,.landing-page section.lines-contain-right>.flex-row:before{width:10px;height:80px;top:15px}.landing-page section.lines-contain-begin>.flex-row:after{width:1px;height:75px;bottom:-60px;left:50%;background-color:#ccc}.landing-page section.lines-contain-top>.flex-row:before{width:80px;height:10px;top:-60px;left:50%;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%)}.landing-page section.lines-contain-top>.flex-row:after{border-top:1px solid #ccc}.landing-page section.lines-contain-left>.flex-row:before{left:30px;-webkit-transform:translate(-50%, 0);transform:translate(-50%, 0)}.landing-page section.lines-contain-left-end>.flex-row:after{border-left:0}.landing-page section.lines-contain-right>.flex-row:before{right:30px;-webkit-transform:translate(50%, 0);transform:translate(50%, 0)}.landing-page section.lines-contain-right-end>.flex-row:after{border-right:0}.landing-page section.lines-contain-end>.flex-row:after{border-left:0;border-right:0}.landing-page section.lines-path>.flex-row{position:relative}.landing-page section.lines-path>.flex-row:before,.landing-page section.lines-path>.flex-row:after{content:'';display:block;position:absolute}.landing-page section.lines-path>.flex-row:before{width:10px;height:80px;z-index:1;background-color:#ccc}.landing-page section.lines-path-begin>.flex-row:after,.landing-page section.lines-path-horizontal>.flex-row:after,.landing-page section.lines-path-left>.flex-row:after,.landing-page section.lines-path-right>.flex-row:after{top:-60px;bottom:-60px}.landing-page section.lines-path-begin>.flex-row:before,.landing-page section.lines-path-left>.flex-row:before,.landing-page section.lines-path-right>.flex-row:before{top:15px}.landing-page section.lines-path-horizontal>.flex-row:after,.landing-page section.lines-path-left>.flex-row:after,.landing-page section.lines-path-right>.flex-row:after{left:0;right:0}.landing-page section.lines-path-begin>.flex-row:before,.landing-page section.lines-path-left>.flex-row:before{left:0;-webkit-transform:translate(-50%, 0);transform:translate(-50%, 0)}.landing-page section.lines-path-begin>.flex-row:after{width:1000px;left:-1000px;border-top:1px solid #ccc;border-right:1px solid #ccc}.landing-page section.lines-path-horizontal>.flex-row:before{content:none}.landing-page section.lines-path-horizontal>.flex-row:after{border-top:1px solid #ccc}.landing-page section.lines-path-horizontal>.flex-row>[class*="col-"]{position:relative}.landing-page section.lines-path-horizontal>.flex-row>[class*="col-"]:before{content:'';display:block;width:80px;height:10px;position:absolute;top:-60px;left:50%;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);z-index:1;background-color:#ccc}.landing-page section.lines-path-horizontal-left>.flex-row:after{border-left:1px solid #ccc}.landing-page section.lines-path-horizontal-right>.flex-row:after{border-right:1px solid #ccc}.landing-page section.lines-path-left>.flex-row:after{border-left:1px solid #ccc}.landing-page section.lines-path-right .flex-row:before{right:0;-webkit-transform:translate(50%, 0);transform:translate(50%, 0)}.landing-page section.lines-path-right .flex-row:after{border-right:1px solid #ccc}#retail.solutions.landing-page #headquarters>.flex-row:before{background-color:#d9232e}#retail.solutions.landing-page #vendors:before{background-color:#4789a3}#retail.solutions.landing-page #distribution:before{background-color:#ff9100}#retail.solutions.landing-page #stores>.flex-row:before{background-color:#68aa00}#banking.solutions.landing-page #analytics>.flex-row:before{background-color:#d9232e}#banking.solutions.landing-page #mobile>.flex-row:before{background-color:#ff9100}#banking.solutions.landing-page #security>.flex-row:before{background-color:#4789a3}#banking.solutions.landing-page section.lines-contain-left>.flex-row:before{-webkit-transform:translate(-50%, -40%);transform:translate(-50%, -40%)}#banking.solutions.landing-page section.lines-contain-right>.flex-row:before{-webkit-transform:translate(50%, -40%);transform:translate(50%, -40%)}#healthcare.solutions.landing-page #hospital>.flex-row:before{background-color:#d9232e}#healthcare.solutions.landing-page #providers>.flex-row:before{background-color:#ff9100}#healthcare.solutions.landing-page #payers>.flex-row:before{background-color:#4789a3}#healthcare.solutions.landing-page #patients>.flex-row:before{background-color:#68aa00}#manufacturing.solutions.landing-page #headquarters>.flex-row:before{background-color:#d9232e}#manufacturing.solutions.landing-page #vendors:before{background-color:#4789a3}#manufacturing.solutions.landing-page #manufacturers:before{background-color:#4789a3}#manufacturing.solutions.landing-page #distribution>.flex-row:before{background-color:#ff9100}#manufacturing.solutions.landing-page #stores>.flex-row>[class*="col-"]:before{background-color:#68aa00}}.icon-header{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center}.no-flexbox.flexboxtweener .icon-header{display:-ms-flexbox}.no-flexbox.flexboxtweener .icon-header>*{display:inline-block}.no-flexbox.no-flexboxtweener .icon-header{display:block}.no-flexbox.no-flexboxtweener .icon-header:before,.no-flexbox.no-flexboxtweener .icon-header:after{content:'';display:table}.no-flexbox.no-flexboxtweener .icon-header:after{clear:both}.no-flexbox.no-flexboxtweener .icon-header>*{display:inline-block;float:left}.no-flexbox.flexboxtweener .icon-header{-ms-flex-align:center}.icon-header .icon{padding-right:.25em}.background-image.form-bottom{overflow:hidden;padding-top:0;padding-bottom:0;background-repeat:no-repeat;background-size:cover;background-position:center center;background-color:#333;background-image:url('/Strategy/media/images/landing-pages/analyst-reviews/resource-banner-bkg_mstr-10.jpg')}.background-image.form-bottom.desktop{background-image:url('/Strategy/media/images/free-trial/desktop-trial_top-banner-bkg.jpg')}.background-image.form-bottom.mobile{background-image:url('/Strategy/media/images/common/banners/mobile.jpg')}.background-image.form-bottom.worker{background-image:url('/Strategy/media/images/common/banners/desk-worker.jpg')}.background-image.form-bottom.coffee{background-image:url('/Strategy/media/images/common/banners/coffee-and-bi.jpg')}.background-image.form-bottom.world-2016{background-image:url(/Strategy/media/images/landing-pages/events_world2016-bkg.jpg)}.background-image.form-bottom.blueprint{background-image:url('/Strategy/media/images/landing-pages/events-and-sign-ups/mobile-blueprint_hero-banner.jpg')}.background-image.form-bottom.masked:before{position:absolute;z-index:1;content:'';height:100%;width:100%;top:0;left:0;background-color:#000;opacity:.5}.background-image.form-bottom .flex-row{-webkit-align-items:center;align-items:center;-webkit-box-align:end;-moz-box-align:end}.background-image.form-bottom .text-col,.background-image.form-bottom .form-col{position:relative;z-index:2}.background-image.form-bottom .text-col h1,.background-image.form-bottom .text-col h2,.background-image.form-bottom .text-col h3,.background-image.form-bottom .text-col h4,.background-image.form-bottom .text-col h5,.background-image.form-bottom .text-col h6,.background-image.form-bottom .text-col p{color:#fff}.background-image.form-bottom .text-col .line.red{background-color:#fff}.background-image.form-bottom .form-col{padding-bottom:0}.background-image.form-bottom .form-col #form-container{margin-top:30px;padding-bottom:10px;background:#fff;box-shadow:3px 3px 10px rgba(0,0,0,0.2)}.background-color.form-bottom{overflow:hidden;padding-top:0;padding-bottom:0}.background-color.form-bottom .flex-row{-webkit-align-items:center;align-items:center;-webkit-box-align:end;-moz-box-align:end}.background-color.form-bottom .text-col,.background-color.form-bottom .form-col{position:relative;z-index:2}.background-color.form-bottom .text-col h1,.background-color.form-bottom .text-col h2,.background-color.form-bottom .text-col h3,.background-color.form-bottom .text-col h4,.background-color.form-bottom .text-col h5,.background-color.form-bottom .text-col h6,.background-color.form-bottom .text-col p{color:#fff}.background-color.form-bottom .text-col .line.red{background-color:#fff}.background-color.form-bottom .form-col{color:#333;padding-bottom:0}.background-color.form-bottom .form-col #form-container{margin-top:30px;padding-bottom:10px;background:#fff;box-shadow:3px 3px 10px rgba(0,0,0,0.2)}.video-thumb{position:relative;display:block;height:0;padding-bottom:57%;background-color:#333;background-repeat:no-repeat;background-position:center center;background-size:100%;-webkit-transition:all .2s ease .1s;-moz-transition:all .2s ease .1s;-ms-transition:all .2s ease .1s;-o-transition:all .2s ease .1s;transition:all .2s ease .1s}.video-thumb:hover{background-size:103%}.video-thumb .play-btn{display:block;position:absolute;width:70px;height:70px;top:50%;left:50%;margin-top:-35px;margin-left:-35px}.video-thumb .mask{display:block;position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.2);-webkit-transition:all .2s ease .1s;-moz-transition:all .2s ease .1s;-ms-transition:all .2s ease .1s;-o-transition:all .2s ease .1s;transition:all .2s ease .1s}.video-thumb:hover .mask{background:rgba(0,0,0,0)}.image-zoom{position:relative;display:block}.image-zoom .view-btn{position:absolute;top:50%;left:50%;margin-left:-35px;margin-top:-35px;height:75px;width:75px}.image-zoom-popup{max-width:90%}.form-holder{position:relative;display:block;width:100%;max-width:490px;height:480px;margin:20px auto 0 auto}@media only screen and (min-width: 768px){.form-holder{height:450px}}.form-holder iframe{position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%;background:transparent}.customer-panel{position:relative;overflow:hidden;display:block;height:300px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;background-repeat:no-repeat;background-size:cover;background-color:#333;background-position:center center}.customer-panel .logo-mask{display:block;position:absolute;z-index:2;height:100%;width:100%;background:rgba(0,0,0,0.75);opacity:1;-webkit-transition:all .4s ease-out;-moz-transition:all .4s ease-out;-ms-transition:all .4s ease-out;transition:all .4s ease-out}.customer-panel .logo{position:absolute;display:block;max-width:70%;top:50%;left:50%;opacity:1;-webkit-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%);-webkit-transition:all .4s ease-out;-moz-transition:all .4s ease-out;-ms-transition:all .4s ease-out;transition:all .4s ease-out}.customer-panel:hover .logo-mask{opacity:.6;z-index:1}.customer-panel:hover .logo{opacity:0}.customer-panel .info{display:block;position:absolute;z-index:1;width:80%;font-family:"myriad-pro-n3","myriad-pro",Helvetica,Arial,sans-serif;font-weight:300;color:#fff;opacity:0;padding:0;top:50%;left:50%;-webkit-transform:translate(-50%, -55%);-ms-transform:translate(-50%, -55%);transform:translate(-50%, -55%);-webkit-transition:all .4s ease-out 0s;-moz-transition:all .4s ease-out 0s;-ms-transition:all .4s ease-out 0s;transition:all .4s ease-out 0s}.customer-panel:hover .info{opacity:1;z-index:2;-webkit-transition-delay:.2s;-moz-transition-delay:.2s;-ms-transition-delay:.2s;transition-delay:.2s;-webkit-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%)}.customer-panel .info .customer-name{font-size:36px;line-height:42px}.customer-panel .info .play-btn{height:70px;width:70px;margin-bottom:15px}@media (max-width:765px){.customer-panel{height:auto}.customer-panel .info{position:relative;width:90%;padding:20px;top:auto;left:auto;-webkit-transform:translate(0, 0);-ms-transform:translate(0, 0);transform:translate(0, 0)}.customer-panel:hover .info{-webkit-transform:translate(0, 0);-ms-transform:translate(0, 0);transform:translate(0, 0)}}.report-graphic{display:block;position:relative;margin:0 10px 10px 0}.report-graphic .page{display:block;position:relative;z-index:3;background-color:#fff;border:1px solid #ddd}.report-graphic:before,.report-graphic:after{display:block;position:absolute;content:"";background-color:#fff;border:1px solid #ddd;height:100%;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.report-graphic:before{z-index:2;top:3px;left:3px}.report-graphic:after{z-index:1;top:6px;left:6px}.report-graphic .line{margin-left:20px;margin-right:20px}.report-graphic .line.red{margin-top:40px}.report-graphic .title{font-size:36px;line-height:42px;padding:7px 20px 5px 20px;margin:0}.report-graphic .subtitle{font-size:22px;line-height:28px;padding:5px 20px 40px 20px;margin:0}.report-graphic .link-box{display:block;position:absolute;z-index:4;background-color:#fff;background-color:rgba(255,255,255,0.8);top:1px;left:1px;right:1px;bottom:0;text-align:middle}.report-graphic .link-box .center{text-align:center;position:absolute;padding:0;margin:0;width:100%;top:50%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}.report-graphic .link-box .icon{display:block;margin:0 auto;height:100px;width:100px}.report-graphic .link-box{opacity:0;-webkit-transition:all .4s ease-out;-moz-transition:all .4s ease-out;-ms-transition:all .4s ease-out;transition:all .4s ease-out}.report-graphic:hover .link-box{opacity:1}.report-graphic .link-box .icon{-webkit-transform:scale(.75);-ms-transform:scale(.75);transform:scale(.75);-webkit-transition:all .4s ease-out;-moz-transition:all .4s ease-out;-ms-transition:all .4s ease-out;transition:all .4s ease-out}.report-graphic:hover .link-box .icon{transform:scale(1)}.report-graphic .link-box .cta-text{opacity:0;-webkit-transform:translateY(-10px);-ms-transform:translateY(-10px);transform:translateY(-10px);-webkit-transition:all .4s ease-out .2s;-moz-transition:all .4s ease-out .2s;-ms-transition:all .4s ease-out .2s;transition:all .4s ease-out .2s}.report-graphic:hover .link-box .cta-text{opacity:1;-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0)}@media (max-width:765px){.report-graphic .link-box .center{padding:20px}.report-graphic .title{font-size:26px;line-height:32px}.report-graphic .subtitle{font-size:18px;line-height:24px}}
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+}
+h1:last-child,
+h2:last-child,
+h3:last-child,
+.h1:last-child,
+.h2:last-child,
+.h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child,
+ul:last-child,
+ol:last-child {
+  margin-bottom: 0;
+}
+h1.line-break,
+h2.line-break,
+h3.line-break,
+.h1.line-break,
+.h2.line-break,
+.h3.line-break,
+h4.line-break,
+h5.line-break,
+h6.line-break,
+p.line-break,
+ul.line-break,
+ol.line-break {
+  margin-top: -20px;
+}
+.line {
+  margin-bottom: 20px;
+}
+.line:last-child {
+  margin-bottom: 0;
+}
+img {
+  margin-bottom: 20px;
+}
+img:last-child {
+  margin-bottom: 0;
+}
+a > img:only-child {
+  margin-bottom: 20px;
+}
+.top-banner .secondary-fullwidth {
+  display: none!important;
+}
+.top-banner .is-sticky {
+  min-height: 0;
+}
+.landing-page .hero .line:first-child,
+.landing-page #hero .line:first-child {
+  display: none;
+}
+.landing-page .hero > .flex-row,
+.landing-page #hero {
+  -webkit-align-items: center;
+  align-items: center;
+}
+.no-flexbox.flexboxtweener .landing-page .hero > .flex-row,
+.no-flexbox.flexboxtweener .landing-page #hero {
+  -ms-flex-align: center;
+}
+.health-assessment.landing-page .hero .text-col h2:first-of-type,
+.health-assessment.landing-page #hero .text-col h2:first-of-type {
+  display: none;
+}
+.landing-page .hero.background-image .text-col h1,
+.landing-page #hero.background-image .text-col h1,
+.landing-page .hero.background-image .text-col h2,
+.landing-page #hero.background-image .text-col h2,
+.landing-page .hero.background-image .text-col h3,
+.landing-page #hero.background-image .text-col h3,
+.landing-page .hero.background-image .text-col h4,
+.landing-page #hero.background-image .text-col h4,
+.landing-page .hero.background-image .text-col h5,
+.landing-page #hero.background-image .text-col h5,
+.landing-page .hero.background-image .text-col h6,
+.landing-page #hero.background-image .text-col h6,
+.landing-page .hero.background-image .text-col p,
+.landing-page #hero.background-image .text-col p {
+  color: #ffffff;
+}
+.landing-page .background-image.overlay .form-col {
+  color: #333333;
+}
+.landing-page .hero.background-image,
+.landing-page #hero.background-image {
+  background-image: url('/Strategy/media/images/landing-pages/analyst-reviews/resource-banner-bkg_mstr-10.jpg');
+}
+.landing-page.desktop .hero.background-image {
+  background-image: url('/Strategy/media/images/free-trial/desktop-trial_top-banner-bkg.jpg');
+}
+.landing-page.mobile #hero.background-image {
+  background-image: url('/Strategy/media/images/common/banners/mobile.jpg');
+}
+.landing-page.solutions.retail .hero.background-image {
+  background-image: url('/Strategy/media/images/solutions/hero-backgrounds/solutions_retail_hero-banner-bkg.jpg');
+}
+.landing-page.solutions.banking .hero.background-image {
+  background-image: url('/Strategy/media/images/solutions/hero-backgrounds/solutions_fsi_hero-banner-bkg.jpg');
+}
+.landing-page.solutions.sales .hero.background-image {
+  background-image: url('/Strategy/media/images/solutions/hero-backgrounds/solutions_sales_hero-banner-bkg.jpg');
+}
+.landing-page.solutions.healthcare .hero.background-image {
+  background-image: url('/Strategy/media/images/solutions/hero-backgrounds/solutions_healthcare_hero-banner-bkg.jpg');
+}
+.landing-page.solutions.manufacturing .hero.background-image {
+  background-image: url('/Strategy/media/images/solutions/hero-backgrounds/solutions_manufacturing_hero-banner-bkg.jpg');
+}
+.landing-page.solutions.higher-education #hero.background-image {
+  background-image: url('/Strategy/media/images/common/banners/higher-education.jpg');
+}
+.landing-page.resource .hero.background-image {
+  background-image: url('/Strategy/media/images/free-trial/desktop-trial_top-banner-bkg-old.jpg');
+}
+.landing-page.health-assessment .hero.background-image {
+  background-image: url('/Strategy/media/images/services-support/banner_beta-program-bkg.jpg');
+}
+.landing-page section#symposium {
+  background-image: url('/Strategy/media/images/landing-pages/solution-lp/symposium.jpg');
+}
+#container-store.landing-page .hero.background-image {
+  background-image: url('/Strategy/media/images/landing-pages/solution-lp/container-store_banner.jpg');
+}
+#health-score-poor {
+  width: 120px;
+  height: 120px;
+  background: #cccccc;
+}
+#health-score-poor .circle .mask,
+#health-score-poor .circle .fill {
+  width: 120px;
+  height: 120px;
+}
+#health-score-poor .circle .mask {
+  clip: rect(0px, 120px, 120px, 60px);
+}
+#health-score-poor .circle .mask .fill {
+  clip: rect(0px, 60px, 120px, 0px);
+  background: #c31f29;
+}
+#health-score-poor .inset {
+  width: 100px;
+  height: 100px;
+  top: 10px;
+  left: 10px;
+  background: #f2f2f2;
+}
+#health-score-fair {
+  width: 120px;
+  height: 120px;
+  background: #cccccc;
+}
+#health-score-fair .circle .mask,
+#health-score-fair .circle .fill {
+  width: 120px;
+  height: 120px;
+}
+#health-score-fair .circle .mask {
+  clip: rect(0px, 120px, 120px, 60px);
+}
+#health-score-fair .circle .mask .fill {
+  clip: rect(0px, 60px, 120px, 0px);
+  background: #ff9100;
+}
+#health-score-fair .inset {
+  width: 100px;
+  height: 100px;
+  top: 10px;
+  left: 10px;
+  background: #f2f2f2;
+}
+#health-score-good {
+  width: 120px;
+  height: 120px;
+  background: #cccccc;
+}
+#health-score-good .circle .mask,
+#health-score-good .circle .fill {
+  width: 120px;
+  height: 120px;
+}
+#health-score-good .circle .mask {
+  clip: rect(0px, 120px, 120px, 60px);
+}
+#health-score-good .circle .mask .fill {
+  clip: rect(0px, 60px, 120px, 0px);
+  background: #68aa00;
+}
+#health-score-good .inset {
+  width: 100px;
+  height: 100px;
+  top: 10px;
+  left: 10px;
+  background: #f2f2f2;
+}
+#desktop-help.microsite #dashboards-visualizations img {
+  max-width: none;
+  width: 180%;
+}
+@media only screen and (min-width: 768px) {
+  #desktop-help.microsite #dashboards-visualizations img {
+    width: 150%;
+    margin-left: -25%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #retail.solutions.landing-page #distribution img {
+    margin-top: 33px;
+  }
+  #manufacturing.solutions.landing-page #stores img[src$="store.png"] {
+    margin-top: 32px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .landing-page section.lines-contain {
+    overflow: visible;
+  }
+  .landing-page section.lines-contain > .flex-row {
+    position: relative;
+  }
+  .landing-page section.lines-contain > .flex-row:before,
+  .landing-page section.lines-contain > .flex-row:after {
+    content: '';
+    display: block;
+    position: absolute;
+  }
+  .landing-page section.lines-contain > .flex-row:before {
+    z-index: 1;
+  }
+  .landing-page section.lines-contain-top > .flex-row:before,
+  .landing-page section.lines-contain-left > .flex-row:before,
+  .landing-page section.lines-contain-right > .flex-row:before {
+    background-color: #cccccc;
+  }
+  .landing-page section.lines-contain-top > .flex-row:after,
+  .landing-page section.lines-contain-left > .flex-row:after,
+  .landing-page section.lines-contain-right > .flex-row:after {
+    top: -60px;
+    left: 30px;
+    right: 30px;
+    bottom: -135px;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+  }
+  .landing-page section.lines-contain-left > .flex-row:before,
+  .landing-page section.lines-contain-right > .flex-row:before {
+    width: 10px;
+    height: 80px;
+    top: 15px;
+  }
+  .landing-page section.lines-contain-begin > .flex-row:after {
+    width: 1px;
+    height: 75px;
+    bottom: -60px;
+    left: 50%;
+    background-color: #cccccc;
+  }
+  .landing-page section.lines-contain-top > .flex-row:before {
+    width: 80px;
+    height: 10px;
+    top: -60px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .landing-page section.lines-contain-top > .flex-row:after {
+    border-top: 1px solid #cccccc;
+  }
+  .landing-page section.lines-contain-left > .flex-row:before {
+    left: 30px;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+  .landing-page section.lines-contain-left-end > .flex-row:after {
+    border-left: 0;
+  }
+  .landing-page section.lines-contain-right > .flex-row:before {
+    right: 30px;
+    -webkit-transform: translate(50%, 0);
+    transform: translate(50%, 0);
+  }
+  .landing-page section.lines-contain-right-end > .flex-row:after {
+    border-right: 0;
+  }
+  .landing-page section.lines-contain-end > .flex-row:after {
+    border-left: 0;
+    border-right: 0;
+  }
+  .landing-page section.lines-path > .flex-row {
+    position: relative;
+  }
+  .landing-page section.lines-path > .flex-row:before,
+  .landing-page section.lines-path > .flex-row:after {
+    content: '';
+    display: block;
+    position: absolute;
+  }
+  .landing-page section.lines-path > .flex-row:before {
+    width: 10px;
+    height: 80px;
+    z-index: 1;
+    background-color: #cccccc;
+  }
+  .landing-page section.lines-path-begin > .flex-row:after,
+  .landing-page section.lines-path-horizontal > .flex-row:after,
+  .landing-page section.lines-path-left > .flex-row:after,
+  .landing-page section.lines-path-right > .flex-row:after {
+    top: -60px;
+    bottom: -60px;
+  }
+  .landing-page section.lines-path-begin > .flex-row:before,
+  .landing-page section.lines-path-left > .flex-row:before,
+  .landing-page section.lines-path-right > .flex-row:before {
+    top: 15px;
+  }
+  .landing-page section.lines-path-horizontal > .flex-row:after,
+  .landing-page section.lines-path-left > .flex-row:after,
+  .landing-page section.lines-path-right > .flex-row:after {
+    left: 0;
+    right: 0;
+  }
+  .landing-page section.lines-path-begin > .flex-row:before,
+  .landing-page section.lines-path-left > .flex-row:before {
+    left: 0;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+  .landing-page section.lines-path-begin > .flex-row:after {
+    width: 1000px;
+    left: -1000px;
+    border-top: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+  }
+  .landing-page section.lines-path-horizontal > .flex-row:before {
+    content: none;
+  }
+  .landing-page section.lines-path-horizontal > .flex-row:after {
+    border-top: 1px solid #cccccc;
+  }
+  .landing-page section.lines-path-horizontal > .flex-row > [class*="col-"] {
+    position: relative;
+  }
+  .landing-page section.lines-path-horizontal > .flex-row > [class*="col-"]:before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 10px;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: #cccccc;
+  }
+  .landing-page section.lines-path-horizontal-left > .flex-row:after {
+    border-left: 1px solid #cccccc;
+  }
+  .landing-page section.lines-path-horizontal-right > .flex-row:after {
+    border-right: 1px solid #cccccc;
+  }
+  .landing-page section.lines-path-left > .flex-row:after {
+    border-left: 1px solid #cccccc;
+  }
+  .landing-page section.lines-path-right .flex-row:before {
+    right: 0;
+    -webkit-transform: translate(50%, 0);
+    transform: translate(50%, 0);
+  }
+  .landing-page section.lines-path-right .flex-row:after {
+    border-right: 1px solid #cccccc;
+  }
+  #retail.solutions.landing-page #headquarters > .flex-row:before {
+    background-color: #d9232e;
+  }
+  #retail.solutions.landing-page #vendors:before {
+    background-color: #4789a3;
+  }
+  #retail.solutions.landing-page #distribution:before {
+    background-color: #ff9100;
+  }
+  #retail.solutions.landing-page #stores > .flex-row:before {
+    background-color: #68aa00;
+  }
+  #banking.solutions.landing-page #analytics > .flex-row:before {
+    background-color: #d9232e;
+  }
+  #banking.solutions.landing-page #mobile > .flex-row:before {
+    background-color: #ff9100;
+  }
+  #banking.solutions.landing-page #security > .flex-row:before {
+    background-color: #4789a3;
+  }
+  #banking.solutions.landing-page section.lines-contain-left > .flex-row:before {
+    -webkit-transform: translate(-50%, -40%);
+    transform: translate(-50%, -40%);
+  }
+  #banking.solutions.landing-page section.lines-contain-right > .flex-row:before {
+    -webkit-transform: translate(50%, -40%);
+    transform: translate(50%, -40%);
+  }
+  #healthcare.solutions.landing-page #hospital > .flex-row:before {
+    background-color: #d9232e;
+  }
+  #healthcare.solutions.landing-page #providers > .flex-row:before {
+    background-color: #ff9100;
+  }
+  #healthcare.solutions.landing-page #payers > .flex-row:before {
+    background-color: #4789a3;
+  }
+  #healthcare.solutions.landing-page #patients > .flex-row:before {
+    background-color: #68aa00;
+  }
+  #manufacturing.solutions.landing-page #headquarters > .flex-row:before {
+    background-color: #d9232e;
+  }
+  #manufacturing.solutions.landing-page #vendors:before {
+    background-color: #4789a3;
+  }
+  #manufacturing.solutions.landing-page #manufacturers:before {
+    background-color: #4789a3;
+  }
+  #manufacturing.solutions.landing-page #distribution > .flex-row:before {
+    background-color: #ff9100;
+  }
+  #manufacturing.solutions.landing-page #stores > .flex-row > [class*="col-"]:before {
+    background-color: #68aa00;
+  }
+}
+.icon-header {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.no-flexbox.flexboxtweener .icon-header {
+  display: -ms-flexbox;
+}
+.no-flexbox.flexboxtweener .icon-header > * {
+  display: inline-block;
+}
+.no-flexbox.no-flexboxtweener .icon-header {
+  display: block;
+}
+.no-flexbox.no-flexboxtweener .icon-header:before,
+.no-flexbox.no-flexboxtweener .icon-header:after {
+  content: '';
+  display: table;
+}
+.no-flexbox.no-flexboxtweener .icon-header:after {
+  clear: both;
+}
+.no-flexbox.no-flexboxtweener .icon-header > * {
+  display: inline-block;
+  float: left;
+}
+.no-flexbox.flexboxtweener .icon-header {
+  -ms-flex-align: center;
+}
+.icon-header .icon {
+  padding-right: .25em;
+}
+.graph {
+  position: relative;
+  display: inline-block;
+}
+.graph-percentage.graph-bar.graph-radial {
+  border-radius: 50%;
+}
+.graph-percentage.graph-bar.graph-radial .circle .mask,
+.graph-percentage.graph-bar.graph-radial .circle .fill {
+  border-radius: 50%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+.graph-percentage.graph-bar.graph-radial .inset {
+  border-radius: 50%;
+  position: absolute;
+}
+.graph-percentage.graph-bar.graph-radial .inset > .content {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.graph-percentage.graph-bar.graph-radial[progress="100"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="100"] .circle .fill {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="100"] .circle .fill.fix {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="99"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="99"] .circle .fill {
+  -webkit-transform: rotate(178.2deg);
+  transform: rotate(178.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="99"] .circle .fill.fix {
+  -webkit-transform: rotate(356.4deg);
+  transform: rotate(356.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="98"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="98"] .circle .fill {
+  -webkit-transform: rotate(176.4deg);
+  transform: rotate(176.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="98"] .circle .fill.fix {
+  -webkit-transform: rotate(352.8deg);
+  transform: rotate(352.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="97"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="97"] .circle .fill {
+  -webkit-transform: rotate(174.6deg);
+  transform: rotate(174.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="97"] .circle .fill.fix {
+  -webkit-transform: rotate(349.2deg);
+  transform: rotate(349.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="96"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="96"] .circle .fill {
+  -webkit-transform: rotate(172.8deg);
+  transform: rotate(172.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="96"] .circle .fill.fix {
+  -webkit-transform: rotate(345.6deg);
+  transform: rotate(345.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="95"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="95"] .circle .fill {
+  -webkit-transform: rotate(171deg);
+  transform: rotate(171deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="95"] .circle .fill.fix {
+  -webkit-transform: rotate(342deg);
+  transform: rotate(342deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="94"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="94"] .circle .fill {
+  -webkit-transform: rotate(169.2deg);
+  transform: rotate(169.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="94"] .circle .fill.fix {
+  -webkit-transform: rotate(338.4deg);
+  transform: rotate(338.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="93"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="93"] .circle .fill {
+  -webkit-transform: rotate(167.4deg);
+  transform: rotate(167.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="93"] .circle .fill.fix {
+  -webkit-transform: rotate(334.8deg);
+  transform: rotate(334.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="92"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="92"] .circle .fill {
+  -webkit-transform: rotate(165.6deg);
+  transform: rotate(165.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="92"] .circle .fill.fix {
+  -webkit-transform: rotate(331.2deg);
+  transform: rotate(331.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="91"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="91"] .circle .fill {
+  -webkit-transform: rotate(163.8deg);
+  transform: rotate(163.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="91"] .circle .fill.fix {
+  -webkit-transform: rotate(327.6deg);
+  transform: rotate(327.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="90"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="90"] .circle .fill {
+  -webkit-transform: rotate(162deg);
+  transform: rotate(162deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="90"] .circle .fill.fix {
+  -webkit-transform: rotate(324deg);
+  transform: rotate(324deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="89"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="89"] .circle .fill {
+  -webkit-transform: rotate(160.2deg);
+  transform: rotate(160.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="89"] .circle .fill.fix {
+  -webkit-transform: rotate(320.4deg);
+  transform: rotate(320.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="88"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="88"] .circle .fill {
+  -webkit-transform: rotate(158.4deg);
+  transform: rotate(158.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="88"] .circle .fill.fix {
+  -webkit-transform: rotate(316.8deg);
+  transform: rotate(316.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="87"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="87"] .circle .fill {
+  -webkit-transform: rotate(156.6deg);
+  transform: rotate(156.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="87"] .circle .fill.fix {
+  -webkit-transform: rotate(313.2deg);
+  transform: rotate(313.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="86"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="86"] .circle .fill {
+  -webkit-transform: rotate(154.8deg);
+  transform: rotate(154.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="86"] .circle .fill.fix {
+  -webkit-transform: rotate(309.6deg);
+  transform: rotate(309.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="85"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="85"] .circle .fill {
+  -webkit-transform: rotate(153deg);
+  transform: rotate(153deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="85"] .circle .fill.fix {
+  -webkit-transform: rotate(306deg);
+  transform: rotate(306deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="84"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="84"] .circle .fill {
+  -webkit-transform: rotate(151.2deg);
+  transform: rotate(151.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="84"] .circle .fill.fix {
+  -webkit-transform: rotate(302.4deg);
+  transform: rotate(302.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="83"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="83"] .circle .fill {
+  -webkit-transform: rotate(149.4deg);
+  transform: rotate(149.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="83"] .circle .fill.fix {
+  -webkit-transform: rotate(298.8deg);
+  transform: rotate(298.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="82"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="82"] .circle .fill {
+  -webkit-transform: rotate(147.6deg);
+  transform: rotate(147.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="82"] .circle .fill.fix {
+  -webkit-transform: rotate(295.2deg);
+  transform: rotate(295.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="81"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="81"] .circle .fill {
+  -webkit-transform: rotate(145.8deg);
+  transform: rotate(145.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="81"] .circle .fill.fix {
+  -webkit-transform: rotate(291.6deg);
+  transform: rotate(291.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="80"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="80"] .circle .fill {
+  -webkit-transform: rotate(144deg);
+  transform: rotate(144deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="80"] .circle .fill.fix {
+  -webkit-transform: rotate(288deg);
+  transform: rotate(288deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="79"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="79"] .circle .fill {
+  -webkit-transform: rotate(142.2deg);
+  transform: rotate(142.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="79"] .circle .fill.fix {
+  -webkit-transform: rotate(284.4deg);
+  transform: rotate(284.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="78"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="78"] .circle .fill {
+  -webkit-transform: rotate(140.4deg);
+  transform: rotate(140.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="78"] .circle .fill.fix {
+  -webkit-transform: rotate(280.8deg);
+  transform: rotate(280.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="77"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="77"] .circle .fill {
+  -webkit-transform: rotate(138.6deg);
+  transform: rotate(138.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="77"] .circle .fill.fix {
+  -webkit-transform: rotate(277.2deg);
+  transform: rotate(277.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="76"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="76"] .circle .fill {
+  -webkit-transform: rotate(136.8deg);
+  transform: rotate(136.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="76"] .circle .fill.fix {
+  -webkit-transform: rotate(273.6deg);
+  transform: rotate(273.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="75"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="75"] .circle .fill {
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="75"] .circle .fill.fix {
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="74"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="74"] .circle .fill {
+  -webkit-transform: rotate(133.2deg);
+  transform: rotate(133.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="74"] .circle .fill.fix {
+  -webkit-transform: rotate(266.4deg);
+  transform: rotate(266.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="73"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="73"] .circle .fill {
+  -webkit-transform: rotate(131.4deg);
+  transform: rotate(131.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="73"] .circle .fill.fix {
+  -webkit-transform: rotate(262.8deg);
+  transform: rotate(262.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="72"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="72"] .circle .fill {
+  -webkit-transform: rotate(129.6deg);
+  transform: rotate(129.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="72"] .circle .fill.fix {
+  -webkit-transform: rotate(259.2deg);
+  transform: rotate(259.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="71"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="71"] .circle .fill {
+  -webkit-transform: rotate(127.8deg);
+  transform: rotate(127.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="71"] .circle .fill.fix {
+  -webkit-transform: rotate(255.6deg);
+  transform: rotate(255.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="70"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="70"] .circle .fill {
+  -webkit-transform: rotate(126deg);
+  transform: rotate(126deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="70"] .circle .fill.fix {
+  -webkit-transform: rotate(252deg);
+  transform: rotate(252deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="69"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="69"] .circle .fill {
+  -webkit-transform: rotate(124.2deg);
+  transform: rotate(124.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="69"] .circle .fill.fix {
+  -webkit-transform: rotate(248.4deg);
+  transform: rotate(248.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="68"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="68"] .circle .fill {
+  -webkit-transform: rotate(122.4deg);
+  transform: rotate(122.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="68"] .circle .fill.fix {
+  -webkit-transform: rotate(244.8deg);
+  transform: rotate(244.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="67"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="67"] .circle .fill {
+  -webkit-transform: rotate(120.6deg);
+  transform: rotate(120.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="67"] .circle .fill.fix {
+  -webkit-transform: rotate(241.2deg);
+  transform: rotate(241.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="66"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="66"] .circle .fill {
+  -webkit-transform: rotate(118.8deg);
+  transform: rotate(118.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="66"] .circle .fill.fix {
+  -webkit-transform: rotate(237.6deg);
+  transform: rotate(237.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="65"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="65"] .circle .fill {
+  -webkit-transform: rotate(117deg);
+  transform: rotate(117deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="65"] .circle .fill.fix {
+  -webkit-transform: rotate(234deg);
+  transform: rotate(234deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="64"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="64"] .circle .fill {
+  -webkit-transform: rotate(115.2deg);
+  transform: rotate(115.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="64"] .circle .fill.fix {
+  -webkit-transform: rotate(230.4deg);
+  transform: rotate(230.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="63"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="63"] .circle .fill {
+  -webkit-transform: rotate(113.4deg);
+  transform: rotate(113.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="63"] .circle .fill.fix {
+  -webkit-transform: rotate(226.8deg);
+  transform: rotate(226.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="62"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="62"] .circle .fill {
+  -webkit-transform: rotate(111.6deg);
+  transform: rotate(111.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="62"] .circle .fill.fix {
+  -webkit-transform: rotate(223.2deg);
+  transform: rotate(223.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="61"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="61"] .circle .fill {
+  -webkit-transform: rotate(109.8deg);
+  transform: rotate(109.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="61"] .circle .fill.fix {
+  -webkit-transform: rotate(219.6deg);
+  transform: rotate(219.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="60"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="60"] .circle .fill {
+  -webkit-transform: rotate(108deg);
+  transform: rotate(108deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="60"] .circle .fill.fix {
+  -webkit-transform: rotate(216deg);
+  transform: rotate(216deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="59"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="59"] .circle .fill {
+  -webkit-transform: rotate(106.2deg);
+  transform: rotate(106.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="59"] .circle .fill.fix {
+  -webkit-transform: rotate(212.4deg);
+  transform: rotate(212.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="58"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="58"] .circle .fill {
+  -webkit-transform: rotate(104.4deg);
+  transform: rotate(104.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="58"] .circle .fill.fix {
+  -webkit-transform: rotate(208.8deg);
+  transform: rotate(208.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="57"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="57"] .circle .fill {
+  -webkit-transform: rotate(102.6deg);
+  transform: rotate(102.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="57"] .circle .fill.fix {
+  -webkit-transform: rotate(205.2deg);
+  transform: rotate(205.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="56"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="56"] .circle .fill {
+  -webkit-transform: rotate(100.8deg);
+  transform: rotate(100.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="56"] .circle .fill.fix {
+  -webkit-transform: rotate(201.6deg);
+  transform: rotate(201.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="55"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="55"] .circle .fill {
+  -webkit-transform: rotate(99deg);
+  transform: rotate(99deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="55"] .circle .fill.fix {
+  -webkit-transform: rotate(198deg);
+  transform: rotate(198deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="54"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="54"] .circle .fill {
+  -webkit-transform: rotate(97.2deg);
+  transform: rotate(97.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="54"] .circle .fill.fix {
+  -webkit-transform: rotate(194.4deg);
+  transform: rotate(194.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="53"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="53"] .circle .fill {
+  -webkit-transform: rotate(95.4deg);
+  transform: rotate(95.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="53"] .circle .fill.fix {
+  -webkit-transform: rotate(190.8deg);
+  transform: rotate(190.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="52"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="52"] .circle .fill {
+  -webkit-transform: rotate(93.6deg);
+  transform: rotate(93.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="52"] .circle .fill.fix {
+  -webkit-transform: rotate(187.2deg);
+  transform: rotate(187.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="51"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="51"] .circle .fill {
+  -webkit-transform: rotate(91.8deg);
+  transform: rotate(91.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="51"] .circle .fill.fix {
+  -webkit-transform: rotate(183.6deg);
+  transform: rotate(183.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="50"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="50"] .circle .fill {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="50"] .circle .fill.fix {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="49"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="49"] .circle .fill {
+  -webkit-transform: rotate(88.2deg);
+  transform: rotate(88.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="49"] .circle .fill.fix {
+  -webkit-transform: rotate(176.4deg);
+  transform: rotate(176.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="48"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="48"] .circle .fill {
+  -webkit-transform: rotate(86.4deg);
+  transform: rotate(86.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="48"] .circle .fill.fix {
+  -webkit-transform: rotate(172.8deg);
+  transform: rotate(172.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="47"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="47"] .circle .fill {
+  -webkit-transform: rotate(84.6deg);
+  transform: rotate(84.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="47"] .circle .fill.fix {
+  -webkit-transform: rotate(169.2deg);
+  transform: rotate(169.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="46"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="46"] .circle .fill {
+  -webkit-transform: rotate(82.8deg);
+  transform: rotate(82.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="46"] .circle .fill.fix {
+  -webkit-transform: rotate(165.6deg);
+  transform: rotate(165.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="45"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="45"] .circle .fill {
+  -webkit-transform: rotate(81deg);
+  transform: rotate(81deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="45"] .circle .fill.fix {
+  -webkit-transform: rotate(162deg);
+  transform: rotate(162deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="44"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="44"] .circle .fill {
+  -webkit-transform: rotate(79.2deg);
+  transform: rotate(79.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="44"] .circle .fill.fix {
+  -webkit-transform: rotate(158.4deg);
+  transform: rotate(158.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="43"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="43"] .circle .fill {
+  -webkit-transform: rotate(77.4deg);
+  transform: rotate(77.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="43"] .circle .fill.fix {
+  -webkit-transform: rotate(154.8deg);
+  transform: rotate(154.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="42"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="42"] .circle .fill {
+  -webkit-transform: rotate(75.6deg);
+  transform: rotate(75.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="42"] .circle .fill.fix {
+  -webkit-transform: rotate(151.2deg);
+  transform: rotate(151.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="41"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="41"] .circle .fill {
+  -webkit-transform: rotate(73.8deg);
+  transform: rotate(73.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="41"] .circle .fill.fix {
+  -webkit-transform: rotate(147.6deg);
+  transform: rotate(147.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="40"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="40"] .circle .fill {
+  -webkit-transform: rotate(72deg);
+  transform: rotate(72deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="40"] .circle .fill.fix {
+  -webkit-transform: rotate(144deg);
+  transform: rotate(144deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="39"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="39"] .circle .fill {
+  -webkit-transform: rotate(70.2deg);
+  transform: rotate(70.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="39"] .circle .fill.fix {
+  -webkit-transform: rotate(140.4deg);
+  transform: rotate(140.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="38"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="38"] .circle .fill {
+  -webkit-transform: rotate(68.4deg);
+  transform: rotate(68.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="38"] .circle .fill.fix {
+  -webkit-transform: rotate(136.8deg);
+  transform: rotate(136.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="37"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="37"] .circle .fill {
+  -webkit-transform: rotate(66.6deg);
+  transform: rotate(66.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="37"] .circle .fill.fix {
+  -webkit-transform: rotate(133.2deg);
+  transform: rotate(133.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="36"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="36"] .circle .fill {
+  -webkit-transform: rotate(64.8deg);
+  transform: rotate(64.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="36"] .circle .fill.fix {
+  -webkit-transform: rotate(129.6deg);
+  transform: rotate(129.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="35"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="35"] .circle .fill {
+  -webkit-transform: rotate(63deg);
+  transform: rotate(63deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="35"] .circle .fill.fix {
+  -webkit-transform: rotate(126deg);
+  transform: rotate(126deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="34"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="34"] .circle .fill {
+  -webkit-transform: rotate(61.2deg);
+  transform: rotate(61.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="34"] .circle .fill.fix {
+  -webkit-transform: rotate(122.4deg);
+  transform: rotate(122.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="33"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="33"] .circle .fill {
+  -webkit-transform: rotate(59.4deg);
+  transform: rotate(59.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="33"] .circle .fill.fix {
+  -webkit-transform: rotate(118.8deg);
+  transform: rotate(118.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="32"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="32"] .circle .fill {
+  -webkit-transform: rotate(57.6deg);
+  transform: rotate(57.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="32"] .circle .fill.fix {
+  -webkit-transform: rotate(115.2deg);
+  transform: rotate(115.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="31"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="31"] .circle .fill {
+  -webkit-transform: rotate(55.8deg);
+  transform: rotate(55.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="31"] .circle .fill.fix {
+  -webkit-transform: rotate(111.6deg);
+  transform: rotate(111.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="30"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="30"] .circle .fill {
+  -webkit-transform: rotate(54deg);
+  transform: rotate(54deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="30"] .circle .fill.fix {
+  -webkit-transform: rotate(108deg);
+  transform: rotate(108deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="29"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="29"] .circle .fill {
+  -webkit-transform: rotate(52.2deg);
+  transform: rotate(52.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="29"] .circle .fill.fix {
+  -webkit-transform: rotate(104.4deg);
+  transform: rotate(104.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="28"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="28"] .circle .fill {
+  -webkit-transform: rotate(50.4deg);
+  transform: rotate(50.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="28"] .circle .fill.fix {
+  -webkit-transform: rotate(100.8deg);
+  transform: rotate(100.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="27"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="27"] .circle .fill {
+  -webkit-transform: rotate(48.6deg);
+  transform: rotate(48.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="27"] .circle .fill.fix {
+  -webkit-transform: rotate(97.2deg);
+  transform: rotate(97.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="26"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="26"] .circle .fill {
+  -webkit-transform: rotate(46.8deg);
+  transform: rotate(46.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="26"] .circle .fill.fix {
+  -webkit-transform: rotate(93.6deg);
+  transform: rotate(93.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="25"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="25"] .circle .fill {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="25"] .circle .fill.fix {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="24"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="24"] .circle .fill {
+  -webkit-transform: rotate(43.2deg);
+  transform: rotate(43.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="24"] .circle .fill.fix {
+  -webkit-transform: rotate(86.4deg);
+  transform: rotate(86.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="23"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="23"] .circle .fill {
+  -webkit-transform: rotate(41.4deg);
+  transform: rotate(41.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="23"] .circle .fill.fix {
+  -webkit-transform: rotate(82.8deg);
+  transform: rotate(82.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="22"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="22"] .circle .fill {
+  -webkit-transform: rotate(39.6deg);
+  transform: rotate(39.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="22"] .circle .fill.fix {
+  -webkit-transform: rotate(79.2deg);
+  transform: rotate(79.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="21"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="21"] .circle .fill {
+  -webkit-transform: rotate(37.8deg);
+  transform: rotate(37.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="21"] .circle .fill.fix {
+  -webkit-transform: rotate(75.6deg);
+  transform: rotate(75.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="20"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="20"] .circle .fill {
+  -webkit-transform: rotate(36deg);
+  transform: rotate(36deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="20"] .circle .fill.fix {
+  -webkit-transform: rotate(72deg);
+  transform: rotate(72deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="19"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="19"] .circle .fill {
+  -webkit-transform: rotate(34.2deg);
+  transform: rotate(34.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="19"] .circle .fill.fix {
+  -webkit-transform: rotate(68.4deg);
+  transform: rotate(68.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="18"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="18"] .circle .fill {
+  -webkit-transform: rotate(32.4deg);
+  transform: rotate(32.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="18"] .circle .fill.fix {
+  -webkit-transform: rotate(64.8deg);
+  transform: rotate(64.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="17"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="17"] .circle .fill {
+  -webkit-transform: rotate(30.6deg);
+  transform: rotate(30.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="17"] .circle .fill.fix {
+  -webkit-transform: rotate(61.2deg);
+  transform: rotate(61.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="16"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="16"] .circle .fill {
+  -webkit-transform: rotate(28.8deg);
+  transform: rotate(28.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="16"] .circle .fill.fix {
+  -webkit-transform: rotate(57.6deg);
+  transform: rotate(57.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="15"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="15"] .circle .fill {
+  -webkit-transform: rotate(27deg);
+  transform: rotate(27deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="15"] .circle .fill.fix {
+  -webkit-transform: rotate(54deg);
+  transform: rotate(54deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="14"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="14"] .circle .fill {
+  -webkit-transform: rotate(25.2deg);
+  transform: rotate(25.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="14"] .circle .fill.fix {
+  -webkit-transform: rotate(50.4deg);
+  transform: rotate(50.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="13"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="13"] .circle .fill {
+  -webkit-transform: rotate(23.4deg);
+  transform: rotate(23.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="13"] .circle .fill.fix {
+  -webkit-transform: rotate(46.8deg);
+  transform: rotate(46.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="12"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="12"] .circle .fill {
+  -webkit-transform: rotate(21.6deg);
+  transform: rotate(21.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="12"] .circle .fill.fix {
+  -webkit-transform: rotate(43.2deg);
+  transform: rotate(43.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="11"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="11"] .circle .fill {
+  -webkit-transform: rotate(19.8deg);
+  transform: rotate(19.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="11"] .circle .fill.fix {
+  -webkit-transform: rotate(39.6deg);
+  transform: rotate(39.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="10"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="10"] .circle .fill {
+  -webkit-transform: rotate(18deg);
+  transform: rotate(18deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="10"] .circle .fill.fix {
+  -webkit-transform: rotate(36deg);
+  transform: rotate(36deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="9"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="9"] .circle .fill {
+  -webkit-transform: rotate(16.2deg);
+  transform: rotate(16.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="9"] .circle .fill.fix {
+  -webkit-transform: rotate(32.4deg);
+  transform: rotate(32.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="8"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="8"] .circle .fill {
+  -webkit-transform: rotate(14.4deg);
+  transform: rotate(14.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="8"] .circle .fill.fix {
+  -webkit-transform: rotate(28.8deg);
+  transform: rotate(28.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="7"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="7"] .circle .fill {
+  -webkit-transform: rotate(12.6deg);
+  transform: rotate(12.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="7"] .circle .fill.fix {
+  -webkit-transform: rotate(25.2deg);
+  transform: rotate(25.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="6"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="6"] .circle .fill {
+  -webkit-transform: rotate(10.8deg);
+  transform: rotate(10.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="6"] .circle .fill.fix {
+  -webkit-transform: rotate(21.6deg);
+  transform: rotate(21.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="5"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="5"] .circle .fill {
+  -webkit-transform: rotate(9deg);
+  transform: rotate(9deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="5"] .circle .fill.fix {
+  -webkit-transform: rotate(18deg);
+  transform: rotate(18deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="4"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="4"] .circle .fill {
+  -webkit-transform: rotate(7.2deg);
+  transform: rotate(7.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="4"] .circle .fill.fix {
+  -webkit-transform: rotate(14.4deg);
+  transform: rotate(14.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="3"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="3"] .circle .fill {
+  -webkit-transform: rotate(5.4deg);
+  transform: rotate(5.4deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="3"] .circle .fill.fix {
+  -webkit-transform: rotate(10.8deg);
+  transform: rotate(10.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="2"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="2"] .circle .fill {
+  -webkit-transform: rotate(3.6deg);
+  transform: rotate(3.6deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="2"] .circle .fill.fix {
+  -webkit-transform: rotate(7.2deg);
+  transform: rotate(7.2deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="1"] .circle .mask.full,
+.graph-percentage.graph-bar.graph-radial[progress="1"] .circle .fill {
+  -webkit-transform: rotate(1.8deg);
+  transform: rotate(1.8deg);
+}
+.graph-percentage.graph-bar.graph-radial[progress="1"] .circle .fill.fix {
+  -webkit-transform: rotate(3.6deg);
+  transform: rotate(3.6deg);
+}
+.background-image.form-bottom {
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: #333333;
+  background-image: url('/Strategy/media/images/landing-pages/analyst-reviews/resource-banner-bkg_mstr-10.jpg');
+}
+.background-image.form-bottom.desktop {
+  background-image: url('/Strategy/media/images/free-trial/desktop-trial_top-banner-bkg.jpg');
+}
+.background-image.form-bottom.mobile {
+  background-image: url('/Strategy/media/images/common/banners/mobile.jpg');
+}
+.background-image.form-bottom.worker {
+  background-image: url('/Strategy/media/images/common/banners/desk-worker.jpg');
+}
+.background-image.form-bottom.coffee {
+  background-image: url('/Strategy/media/images/common/banners/coffee-and-bi.jpg');
+}
+.background-image.form-bottom.world-2016 {
+  background-image: url(/Strategy/media/images/landing-pages/events_world2016-bkg.jpg);
+}
+.background-image.form-bottom.blueprint {
+  background-image: url('/Strategy/media/images/landing-pages/events-and-sign-ups/mobile-blueprint_hero-banner.jpg');
+}
+.background-image.form-bottom.masked:before {
+  position: absolute;
+  z-index: 1;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  opacity: 0.5;
+}
+.background-image.form-bottom .flex-row {
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-align: end;
+  -moz-box-align: end;
+}
+.background-image.form-bottom .text-col,
+.background-image.form-bottom .form-col {
+  position: relative;
+  z-index: 2;
+}
+.background-image.form-bottom .text-col h1,
+.background-image.form-bottom .text-col h2,
+.background-image.form-bottom .text-col h3,
+.background-image.form-bottom .text-col h4,
+.background-image.form-bottom .text-col h5,
+.background-image.form-bottom .text-col h6,
+.background-image.form-bottom .text-col p {
+  color: #ffffff;
+}
+.background-image.form-bottom .text-col .line.red {
+  background-color: #ffffff;
+}
+.background-image.form-bottom .form-col {
+  padding-bottom: 0px;
+}
+.background-image.form-bottom .form-col #form-container {
+  margin-top: 30px;
+  padding-bottom: 10px;
+  background: #ffffff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.background-color.form-bottom {
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.background-color.form-bottom .flex-row {
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-align: end;
+  -moz-box-align: end;
+}
+.background-color.form-bottom .text-col,
+.background-color.form-bottom .form-col {
+  position: relative;
+  z-index: 2;
+}
+.background-color.form-bottom .text-col h1,
+.background-color.form-bottom .text-col h2,
+.background-color.form-bottom .text-col h3,
+.background-color.form-bottom .text-col h4,
+.background-color.form-bottom .text-col h5,
+.background-color.form-bottom .text-col h6,
+.background-color.form-bottom .text-col p {
+  color: #ffffff;
+}
+.background-color.form-bottom .text-col .line.red {
+  background-color: #ffffff;
+}
+.background-color.form-bottom .form-col {
+  color: #333333;
+  padding-bottom: 0px;
+}
+.background-color.form-bottom .form-col #form-container {
+  margin-top: 30px;
+  padding-bottom: 10px;
+  background: #ffffff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.video-thumb {
+  position: relative;
+  display: block;
+  height: 0;
+  padding-bottom: 57%;
+  background-color: #333333;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  -webkit-transition: all 0.2s ease 0.1s;
+  -moz-transition: all 0.2s ease 0.1s;
+  -ms-transition: all 0.2s ease 0.1s;
+  -o-transition: all 0.2s ease 0.1s;
+  transition: all 0.2s ease 0.1s;
+}
+.video-thumb:hover {
+  background-size: 103%;
+}
+.video-thumb .play-btn {
+  display: block;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 50%;
+  left: 50%;
+  margin-top: -35px;
+  margin-left: -35px;
+}
+.video-thumb .mask {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.2s ease 0.1s;
+  -moz-transition: all 0.2s ease 0.1s;
+  -ms-transition: all 0.2s ease 0.1s;
+  -o-transition: all 0.2s ease 0.1s;
+  transition: all 0.2s ease 0.1s;
+}
+.video-thumb:hover .mask {
+  background: rgba(0, 0, 0, 0);
+}
+.image-zoom {
+  position: relative;
+  display: block;
+}
+.image-zoom .view-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -35px;
+  margin-top: -35px;
+  height: 75px;
+  width: 75px;
+}
+.image-zoom-popup {
+  max-width: 90%;
+}
+.form-holder {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 490px;
+  height: 480px;
+  margin: 20px auto 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  .form-holder {
+    height: 450px;
+  }
+}
+.form-holder iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+/* customer thumb - dark to light background on hover (set bkg img on html) */
+.customer-panel {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  height: 300px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #333333;
+  background-position: center center;
+}
+.customer-panel .logo-mask {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 1;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.customer-panel .logo {
+  position: absolute;
+  display: block;
+  max-width: 70%;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.customer-panel:hover .logo-mask {
+  opacity: 0.6;
+  z-index: 1;
+}
+.customer-panel:hover .logo {
+  opacity: 0;
+}
+.customer-panel .info {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+  font-family: "myriad-pro-n3", "myriad-pro", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  opacity: 0;
+  padding: 0px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -55%);
+  -ms-transform: translate(-50%, -55%);
+  transform: translate(-50%, -55%);
+  -webkit-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  -ms-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+.customer-panel:hover .info {
+  opacity: 1;
+  z-index: 2;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -ms-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.customer-panel .info .customer-name {
+  font-size: 36px;
+  line-height: 42px;
+}
+.customer-panel .info .play-btn {
+  height: 70px;
+  width: 70px;
+  margin-bottom: 15px;
+}
+@media (max-width: 765px) {
+  /*customer panels*/
+  .customer-panel {
+    height: auto;
+  }
+  .customer-panel .info {
+    position: relative;
+    width: 90%;
+    padding: 20px;
+    top: auto;
+    left: auto;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .customer-panel:hover .info {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+.report-graphic {
+  display: block;
+  position: relative;
+  margin: 0 10px 10px 0;
+}
+.report-graphic .page {
+  display: block;
+  position: relative;
+  z-index: 3;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+}
+.report-graphic:before,
+.report-graphic:after {
+  display: block;
+  position: absolute;
+  content: "";
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  height: 100%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.report-graphic:before {
+  z-index: 2;
+  top: 3px;
+  left: 3px;
+}
+.report-graphic:after {
+  z-index: 1;
+  top: 6px;
+  left: 6px;
+}
+.report-graphic .line {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.report-graphic .line.red {
+  margin-top: 40px;
+}
+.report-graphic .title {
+  font-size: 36px;
+  line-height: 42px;
+  padding: 7px 20px 5px 20px;
+  margin: 0;
+}
+.report-graphic .subtitle {
+  font-size: 22px;
+  line-height: 28px;
+  padding: 5px 20px 40px 20px;
+  margin: 0;
+}
+.report-graphic .link-box {
+  display: block;
+  position: absolute;
+  z-index: 4;
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.8);
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 0;
+  text-align: middle;
+}
+.report-graphic .link-box .center {
+  text-align: center;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  top: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.report-graphic .link-box .icon {
+  display: block;
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+}
+/*animations*/
+.report-graphic .link-box {
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.report-graphic:hover .link-box {
+  opacity: 1;
+}
+.report-graphic .link-box .icon {
+  -webkit-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  transform: scale(0.75);
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.report-graphic:hover .link-box .icon {
+  transform: scale(1);
+}
+.report-graphic .link-box .cta-text {
+  opacity: 0;
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px);
+  -webkit-transition: all 0.4s ease-out 0.2s;
+  -moz-transition: all 0.4s ease-out 0.2s;
+  -ms-transition: all 0.4s ease-out 0.2s;
+  transition: all 0.4s ease-out 0.2s;
+}
+.report-graphic:hover .link-box .cta-text {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+}
+@media (max-width: 765px) {
+  .report-graphic .link-box .center {
+    padding: 20px;
+  }
+  .report-graphic .title {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  .report-graphic .subtitle {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

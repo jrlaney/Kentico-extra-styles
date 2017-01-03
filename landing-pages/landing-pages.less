@@ -339,6 +339,54 @@
 }
 
 
+// GRAPHS
+
+.graph {
+    position: relative;
+    display: inline-block;
+}
+.graph-percentage.graph-bar.graph-radial {
+    .round;
+
+    .circle {
+
+        .mask, .fill {
+            .round;
+            position: absolute;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            .transition;
+        }
+    }
+    .inset {
+        .round;
+        position: absolute;
+
+        > .content {
+            display: inline-block;
+            .position(absolute, 50%, 50%);
+            .translate(-50%, -50%);
+        }
+    }
+}
+.create-graph-percentage-classes(@i) when (@i > 0) {
+
+    @increment: 180deg / 100;
+
+    .graph-percentage.graph-bar.graph-radial[progress="@{i}"] .circle {
+
+        .mask.full, .fill {
+            .rotate(@increment * @i);
+        }
+        .fill.fix {
+            .rotate(@increment * @i * 2);
+        }
+    }
+    .create-graph-percentage-classes(@i - 1);
+}
+.create-graph-percentage-classes(100);
+
+
 
 //STYLES FOR OLDER PAGES COPIED OVER PLUS SOME TRUNCATED STUFF
 
