@@ -181,7 +181,7 @@
   margin-top: -1px;
   height: 2px;
   width: 100%;
-  border-bottom: 3px solid #CCCCCC;
+  border-bottom: 3px solid #cccccc;
 }
 .scrollbar .handle {
   width: 100px;
@@ -308,19 +308,19 @@
   border-top: 10px solid transparent;
 }
 #values-slider .slick-slide.component-red ul > li:before {
-  border-right-color: #D9232E;
+  border-right-color: #d9232e;
 }
 #values-slider .slick-slide.component-orange ul > li:before {
-  border-right-color: #FF9100;
+  border-right-color: #ff9100;
 }
 #values-slider .slick-slide.component-green ul > li:before {
-  border-right-color: #68AA00;
+  border-right-color: #68aa00;
 }
 #values-slider .slick-slide.component-blue ul > li:before {
-  border-right-color: #4789A3;
+  border-right-color: #4789a3;
 }
 #values-slider .slick-slide.component-navy-blue ul > li:before {
-  border-right-color: #11566F;
+  border-right-color: #11566f;
 }
 #values-slider .slick-dots {
   position: absolute;
@@ -407,34 +407,34 @@
   padding: 15px 20px;
 }
 #values-slider .slick-dots > li.slick-active .values-nav.engaged:before {
-  color: #D9232E;
+  color: #d9232e;
 }
 #values-slider .slick-dots > li.slick-active .values-nav.engaged:after {
-  border-top-color: #D9232E;
+  border-top-color: #d9232e;
 }
 #values-slider .slick-dots > li.slick-active .values-nav.precise:before {
-  color: #4789A3;
+  color: #4789a3;
 }
 #values-slider .slick-dots > li.slick-active .values-nav.precise:after {
-  border-top-color: #4789A3;
+  border-top-color: #4789a3;
 }
 #values-slider .slick-dots > li.slick-active .values-nav.agile:before {
-  color: #68AA00;
+  color: #68aa00;
 }
 #values-slider .slick-dots > li.slick-active .values-nav.agile:after {
-  border-top-color: #68AA00;
+  border-top-color: #68aa00;
 }
 #values-slider .slick-dots > li.slick-active .values-nav.transparent:before {
-  color: #11566F;
+  color: #11566f;
 }
 #values-slider .slick-dots > li.slick-active .values-nav.transparent:after {
-  border-top-color: #11566F;
+  border-top-color: #11566f;
 }
 #values-slider .slick-dots > li.slick-active .values-nav.cheerful:before {
-  color: #FF9100;
+  color: #ff9100;
 }
 #values-slider .slick-dots > li.slick-active .values-nav.cheerful:after {
-  border-top-color: #FF9100;
+  border-top-color: #ff9100;
 }
 #careers {
   position: relative;
@@ -637,7 +637,7 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 #press-contact .card.component-white .card-header .card-corner {
-  color: #11566F;
+  color: #11566f;
 }
 #press-kit-screenshots .grid-item .overlay-black:after {
   -webkit-transition: all 0.2s ease-out 0s;
