@@ -131,3 +131,103 @@
         }
     }
 }
+
+
+
+
+// old styles
+
+.breadcrumb {
+	margin-bottom:5px;
+
+	hr {margin:10px 0 5px 0;}
+    p {font-size:11px; color:@gray;}
+}
+
+.social-selector { 
+	display: block; 
+	width: auto; 
+	margin: 0 0 10px 0; 
+	overflow: hidden; 
+
+	.social-option { 
+		display: block; 
+		float: left; 
+		height: 25px; 
+		margin: 5px 0 0 0; 
+		padding: 0 10px; 
+		text-align: center; 
+		width: auto; 
+		border-right: 1px solid @gray; 
+	}
+	.social-option-graphic { 
+		display: block; 
+		float: left; 
+		height: 40px; 
+		margin: 0; 
+		padding: 5px 5px 5px 0; 
+		text-align: center; 
+		width: auto; 
+	}
+}
+
+.rightside { 
+	padding: 0 0 30px 20px; 
+	border-left: 1px solid @gray; 
+
+	.box, .right-side-ad { padding: 0 5px 20px 5px; }
+
+	.curated-item { 
+		position: relative; 
+		display: table; 
+		overflow: hidden; 
+		width: 100%; 
+		margin: 20px 0 0 0; 
+		padding: 0; 
+		height: 50px; 
+
+		img { position: absolute;  display: block;  height: 50px;  widht: 50px;  left: 0;  top: 50%;  margin-top: -25px; }
+		p { 
+        	font-size: 12px; 
+        	line-height: 15px; 
+        	font-weight: bold; 
+            display: table-cell;  vertical-align: middle; 
+            padding: 0 0 0 60px; 
+        }
+	}
+	.generated { 
+		padding: 5px 0 5px 35px; 
+		min-height: 30px; 
+		&.document { background: url(/Strategy/media/images/common/icons/resources/resource-icon_doc.png) no-repeat left center transparent; }
+		&.webcast { background: url(/Strategy/media/images/common/icons/resources/resource-icon_webcast.png) no-repeat left center transparent; }
+		&.event { background: url(/Strategy/media/images/common/icons/resources/resource-icon_event.png) no-repeat left center transparent; }
+		&.download { background: url(/Strategy/media/images/common/icons/resources/resource-icon_doc.png) no-repeat left center transparent; }
+	}
+	.news-list-item { 
+		display: block; 
+		padding: 20px 0 5px 0; 
+		border-bottom: 2px solid @gainsboro; 
+		.transition-spec(border, 0.2s, ease-out); 
+
+		img { margin: 0; }
+		p { margin: 0;  padding: 5px 0; }
+		&:hover { border-bottom: 2px solid @green; }
+	}
+}
+.rightside-title { 
+	color: @charcoal; 
+	border-bottom: 1px solid @gray; 
+	margin: 5px 0; 
+	font-family: @lucida-grande; 
+	font-size: 14px; 
+	line-height: 17px; 
+	font-weight: normal; 
+}
+
+.more-cta-text { 
+    float: right; 
+	width: auto; 
+    margin-bottom: 5px ; 
+    padding-right: 0; 
+	overflow: hidden; 
+}

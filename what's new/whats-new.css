@@ -337,7 +337,7 @@ section.view p {
   height: 14.66%;
   margin: 1%;
   border-radius: 10%;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   opacity: 0;
 }
 @media only screen and (min-width: 768px) {
