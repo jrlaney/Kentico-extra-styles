@@ -95,7 +95,7 @@ a > img:only-child {
 .landing-page #hero.background-image .text-col h6,
 .landing-page .hero.background-image .text-col p,
 .landing-page #hero.background-image .text-col p {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .landing-page .background-image.overlay .form-col {
   color: #333333;
@@ -143,7 +143,7 @@ a > img:only-child {
 #health-score-poor {
   width: 120px;
   height: 120px;
-  background: #cccccc;
+  background: #CCCCCC;
 }
 #health-score-poor .circle .mask,
 #health-score-poor .circle .fill {
@@ -167,7 +167,7 @@ a > img:only-child {
 #health-score-fair {
   width: 120px;
   height: 120px;
-  background: #cccccc;
+  background: #CCCCCC;
 }
 #health-score-fair .circle .mask,
 #health-score-fair .circle .fill {
@@ -179,7 +179,7 @@ a > img:only-child {
 }
 #health-score-fair .circle .mask .fill {
   clip: rect(0px, 60px, 120px, 0px);
-  background: #ff9100;
+  background: #FF9100;
 }
 #health-score-fair .inset {
   width: 100px;
@@ -191,7 +191,7 @@ a > img:only-child {
 #health-score-good {
   width: 120px;
   height: 120px;
-  background: #cccccc;
+  background: #CCCCCC;
 }
 #health-score-good .circle .mask,
 #health-score-good .circle .fill {
@@ -203,7 +203,7 @@ a > img:only-child {
 }
 #health-score-good .circle .mask .fill {
   clip: rect(0px, 60px, 120px, 0px);
-  background: #68aa00;
+  background: #68AA00;
 }
 #health-score-good .inset {
   width: 100px;
@@ -249,7 +249,7 @@ a > img:only-child {
   .landing-page section.lines-contain-top > .flex-row:before,
   .landing-page section.lines-contain-left > .flex-row:before,
   .landing-page section.lines-contain-right > .flex-row:before {
-    background-color: #cccccc;
+    background-color: #CCCCCC;
   }
   .landing-page section.lines-contain-top > .flex-row:after,
   .landing-page section.lines-contain-left > .flex-row:after,
@@ -258,8 +258,8 @@ a > img:only-child {
     left: 30px;
     right: 30px;
     bottom: -135px;
-    border-left: 1px solid #cccccc;
-    border-right: 1px solid #cccccc;
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
   }
   .landing-page section.lines-contain-left > .flex-row:before,
   .landing-page section.lines-contain-right > .flex-row:before {
@@ -272,7 +272,7 @@ a > img:only-child {
     height: 75px;
     bottom: -60px;
     left: 50%;
-    background-color: #cccccc;
+    background-color: #CCCCCC;
   }
   .landing-page section.lines-contain-top > .flex-row:before {
     width: 80px;
@@ -283,7 +283,7 @@ a > img:only-child {
     transform: translate(-50%, -50%);
   }
   .landing-page section.lines-contain-top > .flex-row:after {
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid #CCCCCC;
   }
   .landing-page section.lines-contain-left > .flex-row:before {
     left: 30px;
@@ -318,7 +318,7 @@ a > img:only-child {
     width: 10px;
     height: 80px;
     z-index: 1;
-    background-color: #cccccc;
+    background-color: #CCCCCC;
   }
   .landing-page section.lines-path-begin > .flex-row:after,
   .landing-page section.lines-path-horizontal > .flex-row:after,
@@ -347,14 +347,14 @@ a > img:only-child {
   .landing-page section.lines-path-begin > .flex-row:after {
     width: 1000px;
     left: -1000px;
-    border-top: 1px solid #cccccc;
-    border-right: 1px solid #cccccc;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
   }
   .landing-page section.lines-path-horizontal > .flex-row:before {
     content: none;
   }
   .landing-page section.lines-path-horizontal > .flex-row:after {
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid #CCCCCC;
   }
   .landing-page section.lines-path-horizontal > .flex-row > [class*="col-"] {
     position: relative;
@@ -370,16 +370,16 @@ a > img:only-child {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 1;
-    background-color: #cccccc;
+    background-color: #CCCCCC;
   }
   .landing-page section.lines-path-horizontal-left > .flex-row:after {
-    border-left: 1px solid #cccccc;
+    border-left: 1px solid #CCCCCC;
   }
   .landing-page section.lines-path-horizontal-right > .flex-row:after {
-    border-right: 1px solid #cccccc;
+    border-right: 1px solid #CCCCCC;
   }
   .landing-page section.lines-path-left > .flex-row:after {
-    border-left: 1px solid #cccccc;
+    border-left: 1px solid #CCCCCC;
   }
   .landing-page section.lines-path-right .flex-row:before {
     right: 0;
@@ -387,28 +387,28 @@ a > img:only-child {
     transform: translate(50%, 0);
   }
   .landing-page section.lines-path-right .flex-row:after {
-    border-right: 1px solid #cccccc;
+    border-right: 1px solid #CCCCCC;
   }
   #retail.solutions.landing-page #headquarters > .flex-row:before {
-    background-color: #d9232e;
+    background-color: #D9232E;
   }
   #retail.solutions.landing-page #vendors:before {
-    background-color: #4789a3;
+    background-color: #4789A3;
   }
   #retail.solutions.landing-page #distribution:before {
-    background-color: #ff9100;
+    background-color: #FF9100;
   }
   #retail.solutions.landing-page #stores > .flex-row:before {
-    background-color: #68aa00;
+    background-color: #68AA00;
   }
   #banking.solutions.landing-page #analytics > .flex-row:before {
-    background-color: #d9232e;
+    background-color: #D9232E;
   }
   #banking.solutions.landing-page #mobile > .flex-row:before {
-    background-color: #ff9100;
+    background-color: #FF9100;
   }
   #banking.solutions.landing-page #security > .flex-row:before {
-    background-color: #4789a3;
+    background-color: #4789A3;
   }
   #banking.solutions.landing-page section.lines-contain-left > .flex-row:before {
     -webkit-transform: translate(-50%, -40%);
@@ -419,31 +419,31 @@ a > img:only-child {
     transform: translate(50%, -40%);
   }
   #healthcare.solutions.landing-page #hospital > .flex-row:before {
-    background-color: #d9232e;
+    background-color: #D9232E;
   }
   #healthcare.solutions.landing-page #providers > .flex-row:before {
-    background-color: #ff9100;
+    background-color: #FF9100;
   }
   #healthcare.solutions.landing-page #payers > .flex-row:before {
-    background-color: #4789a3;
+    background-color: #4789A3;
   }
   #healthcare.solutions.landing-page #patients > .flex-row:before {
-    background-color: #68aa00;
+    background-color: #68AA00;
   }
   #manufacturing.solutions.landing-page #headquarters > .flex-row:before {
-    background-color: #d9232e;
+    background-color: #D9232E;
   }
   #manufacturing.solutions.landing-page #vendors:before {
-    background-color: #4789a3;
+    background-color: #4789A3;
   }
   #manufacturing.solutions.landing-page #manufacturers:before {
-    background-color: #4789a3;
+    background-color: #4789A3;
   }
   #manufacturing.solutions.landing-page #distribution > .flex-row:before {
-    background-color: #ff9100;
+    background-color: #FF9100;
   }
   #manufacturing.solutions.landing-page #stores > .flex-row > [class*="col-"]:before {
-    background-color: #68aa00;
+    background-color: #68AA00;
   }
 }
 .icon-header {
@@ -1407,6 +1407,70 @@ a > img:only-child {
   -webkit-transform: rotate(3.6deg);
   transform: rotate(3.6deg);
 }
+#dashboard-showcase-about {
+  overflow: hidden;
+}
+#dashboard-showcase-about .cutoff-img {
+  float: left;
+}
+@media only screen and (min-width: 768px) {
+  #dashboard-showcase-about .cutoff-img {
+    max-width: none;
+  }
+}
+#dashboard-showcase-prizes .contain {
+  overflow: hidden;
+}
+#dashboard-showcase-prizes .prize-title {
+  position: relative;
+  z-index: 0;
+  word-break: break-all;
+  font-size: 70px;
+  line-height: 0.65em;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: 800;
+  opacity: 0.2;
+}
+#dashboard-showcase-prizes .prize-title sup {
+  font-size: 50%;
+  left: -0.25em;
+  top: -0.65em;
+}
+#dashboard-showcase-prizes .prize-img {
+  position: relative;
+  z-index: 1;
+  margin-top: -25px;
+}
+@media only screen and (min-width: 768px) {
+  #dashboard-showcase-prizes .contain {
+    padding: 20px;
+  }
+  #dashboard-showcase-prizes .prize-title {
+    font-size: 80px;
+  }
+  #dashboard-showcase-prizes .prize-img {
+    margin-top: -30px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #dashboard-showcase-prizes .prize-title {
+    font-size: 100px;
+    line-height: 0.65em;
+  }
+  #dashboard-showcase-prizes .prize-img {
+    margin-top: -40px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #dashboard-showcase-prizes .prize-title {
+    font-size: 130px;
+    line-height: 0.65em;
+  }
+  #dashboard-showcase-prizes .prize-img {
+    margin-top: -50px;
+  }
+}
 .background-image.form-bottom {
   overflow: hidden;
   padding-top: 0;
@@ -1464,10 +1528,10 @@ a > img:only-child {
 .background-image.form-bottom .text-col h5,
 .background-image.form-bottom .text-col h6,
 .background-image.form-bottom .text-col p {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .background-image.form-bottom .text-col .line.red {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 .background-image.form-bottom .form-col {
   padding-bottom: 0px;
@@ -1475,7 +1539,7 @@ a > img:only-child {
 .background-image.form-bottom .form-col #form-container {
   margin-top: 30px;
   padding-bottom: 10px;
-  background: #ffffff;
+  background: #FFFFFF;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 .background-color.form-bottom {
@@ -1501,10 +1565,10 @@ a > img:only-child {
 .background-color.form-bottom .text-col h5,
 .background-color.form-bottom .text-col h6,
 .background-color.form-bottom .text-col p {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .background-color.form-bottom .text-col .line.red {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 .background-color.form-bottom .form-col {
   color: #333333;
@@ -1513,7 +1577,7 @@ a > img:only-child {
 .background-color.form-bottom .form-col #form-container {
   margin-top: 30px;
   padding-bottom: 10px;
-  background: #ffffff;
+  background: #FFFFFF;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 .video-thumb {
