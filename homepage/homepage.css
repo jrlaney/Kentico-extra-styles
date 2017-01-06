@@ -4,6 +4,286 @@
   max-height: 700px;
 }
 /*----------------------------------------------hero banner reusable styles*/
+#sequence {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+  height: 420px;
+}
+#sequence > .sequence-canvas {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#sequence > .sequence-canvas > li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+}
+#sequence .hp-banner .hp-banner-inner {
+  position: relative;
+  width: 1080px;
+  margin: 0 auto;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+}
+#sequence .hp-banner .hp-banner-inner img {
+  max-width: none;
+}
+#sequence .hp-banner .hp-banner-inner:before,
+#sequence .hp-banner .hp-banner-inner:after {
+  display: table;
+  content: "";
+}
+#sequence .hp-banner .hp-banner-inner:after {
+  clear: both;
+}
+#sequence .hp-banner.animate-in {
+  opacity: 1;
+}
+#sequence .hp-banner.animate-in .hp-banner-inner {
+  opacity: 1;
+}
+#sequence .hp-banner.animate-out {
+  opacity: 0!important;
+  /*makes all child elements of banners animate out quickly*/
+}
+#sequence .hp-banner.animate-out .hp-banner-inner {
+  opacity: 0 !important;
+}
+#sequence .hp-banner.animate-out .hp-banner-inner * {
+  -webkit-transition: all all 0.2s ease-in 0.1s ease-out 0s !important;
+  transition: all all 0.2s ease-in 0.1s ease-out 0s !important;
+}
+/*pager dots and arrows for banners*/
+.sequence-pagination {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  text-align: center;
+  height: 30px;
+  width: 100%;
+  background: transparent;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.sequence-pagination span {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 10px;
+  background-clip: padding-box;
+  background: #bbbbbb;
+  border: 2px solid #bbbbbb;
+  height: 17px;
+  width: 17px;
+  margin: 4px 3px;
+  position: relative;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.sequence:hover .sequence-pagination span {
+  opacity: 1;
+}
+.sequence:hover .sequence-pagination span.current {
+  background: transparent;
+  border: 2px solid #cccccc;
+}
+.sequence .banner-arrow {
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  height: 100%;
+  width: 50px;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0);
+  background-position: center center;
+  cursor: pointer;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.sequence .banner-arrow:hover {
+  background-color: #333333;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.sequence .banner-arrow.sequence-next {
+  right: 0;
+  background-image: url(/Strategy/media/images/common/icons/carousel-arrow_next-gray.png);
+}
+.sequence .banner-arrow.sequence-next:hover {
+  background-image: url(/Strategy/media/images/common/icons/carousel-arrow_next-white.png);
+}
+.sequence .banner-arrow.sequence-prev {
+  left: 0;
+  background-image: url(/Strategy/media/images/common/icons/carousel-arrow_prev-gray.png);
+}
+.sequence .banner-arrow.sequence-prev:hover {
+  background-image: url(/Strategy/media/images/common/icons/carousel-arrow_prev-white.png);
+}
+@media only screen and (max-width: 767px) {
+  #sequence {
+    width: auto;
+  }
+  #sequence .hp-banner .hp-banner-inner {
+    margin: 0 40px;
+    width: auto;
+  }
+  .sequence .banner-arrow {
+    width: 35px;
+  }
+  .sequence .banner-arrow:hover {
+    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .sequence .banner-arrow.sequence-next:hover {
+    background-image: url(/Strategy/media/images/common/icons/carousel-arrow_next-gray.png);
+  }
+  .sequence .banner-arrow.sequence-prev:hover {
+    background-image: url(/Strategy/media/images/common/icons/carousel-arrow_prev-gray.png);
+  }
+  .sequence-pagination {
+    display: none!important;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  #sequence .hp-banner .hp-banner-inner {
+    width: auto;
+    padding: 0 40px;
+  }
+  .sequence-pagination {
+    height: 35px;
+  }
+  .sequence-pagination span {
+    height: 22px;
+    width: 22px;
+    border-radius: 25px;
+    background-clip: padding-box;
+  }
+}
+@media only screen and (min-width: 980px) and (max-width: 1199px) {
+  #sequence .hp-banner .hp-banner-inner {
+    width: auto;
+    padding: 0 40px;
+  }
+}
+.customer-logo-list {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+.customer-logo-list .image-logo,
+.customer-logo-list .text-logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 16.6%;
+  padding: 10px 10px 10px 14px;
+  margin: 0 0 0 -4px;
+}
+.customer-logo-list.three-up .image-logo,
+.customer-logo-list.three-up .text-logo {
+  width: 33%;
+}
+.customer-logo-list.four-up .image-logo,
+.customer-logo-list.four-up .text-logo {
+  width: 25%;
+}
+.customer-logo-list.five-up .image-logo,
+.customer-logo-list.five-up .text-logo {
+  width: 20%;
+}
+.customer-logo-list.six-up .image-logo,
+.customer-logo-list.six-up .text-logo {
+  width: 16.6%;
+}
+.customer-logo-list .text-logo .logo-wrapper {
+  position: relative;
+  width: 100%;
+}
+.customer-logo-list .text-logo .logo-wrapper:before {
+  padding-top: 59%;
+  display: block;
+  content: "";
+}
+.customer-logo-list .text-logo .logo-wrapper .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+.customer-logo-list .text-logo .logo-wrapper .content .text-wrapper {
+  position: relative;
+  display: table;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  padding: 0;
+}
+.customer-logo-list .text-logo .logo-wrapper .content .text-wrapper .text {
+  position: relative;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  margin: auto;
+  padding: 10px;
+  background: #f9f9f9;
+}
+@media only screen and (max-width: 767px) {
+  .customer-logo-list {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+  .customer-logo-list .image-logo,
+  .customer-logo-list .text-logo,
+  .customer-logo-list.three-up .image-logo,
+  .customer-logo-list.three-up .text-logo,
+  .customer-logo-list.four-up .image-logo,
+  .customer-logo-list.four-up .text-logo,
+  .customer-logo-list.five-up .image-logo,
+  .customer-logo-list.five-up .text-logo,
+  .customer-logo-list.six-up .image-logo,
+  .customer-logo-list.six-up .text-logo {
+    width: 150px;
+    padding: 10px 5px 10px 9px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .customer-logo-list {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .customer-logo-list .image-logo,
+  .customer-logo-list .text-logo {
+    padding: 5px 5px 5px 9px;
+  }
+}
+@media only screen and (min-width: 980px) and (max-width: 1199px) {
+  .customer-logo-list {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  .customer-logo-list .image-logo,
+  .customer-logo-list .text-logo {
+    padding: 7px 7px 7px 11px;
+  }
+}
 .full-width-banner {
   position: relative;
   height: 700px;
@@ -1332,7 +1612,7 @@
   padding: 150px 7% 0 7%;
 }
 .nine-s-content {
-  background: url(/Strategy/media/images/products/analytics/2015/background-img-placeholder-dark.jpg) no-repeat fixed center top / cover #ccc;
+  background: url(/Strategy/media/images/products/analytics/2015/background-img-placeholder-dark.jpg) no-repeat fixed center top / cover #cccccc;
 }
 .analytics-banner .content-zone {
   display: block;
