@@ -137,13 +137,6 @@
 
 // old styles
 
-.breadcrumb {
-	margin-bottom:5px;
-
-	hr {margin:10px 0 5px 0;}
-    p {font-size:11px; color:@gray;}
-}
-
 .social-selector { 
 	display: block; 
 	width: auto; 
@@ -213,6 +206,25 @@
 		p { margin: 0;  padding: 5px 0; }
 		&:hover { border-bottom: 2px solid @green; }
 	}
+    
+    @media @small-only {
+		margin-top: 40px; 
+		padding: 20px; 
+		border-left: none; 
+		border-top: 2px solid @light-blue; 
+		background: @snow; 
+
+		.box, .right-side-ad { padding: 0 0 10px 0; }
+		.news-list-item { border-bottom-color: @green; }
+    }
+    @media @medium-only {
+        
+        .box, .right-side-ad { padding: 0 0 20px 0; }
+        .curated-item { 
+            img { height: 40px;  widht: 40px;  margin-top: -20px; }
+            p { padding: 0 0 0 50px; }
+        }
+    }
 }
 .rightside-title { 
 	color: @charcoal; 
