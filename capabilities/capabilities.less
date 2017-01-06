@@ -764,6 +764,10 @@
         .slide {
             padding: @base-spacing;
             .flex-direction(column);
+            
+            @media @small-only {
+                img { width: 80vw; }
+            }
         }
 
         &:before, &:after {
