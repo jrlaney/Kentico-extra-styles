@@ -43,6 +43,15 @@ ul.line-break,
 ol.line-break {
   margin-top: -20px;
 }
+ul,
+ol {
+  padding-left: 1em;
+}
+ul li,
+ol li {
+  padding-left: 1em;
+  margin-bottom: 10px;
+}
 .line {
   margin-bottom: 20px;
 }
