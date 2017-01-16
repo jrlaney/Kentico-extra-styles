@@ -5,14 +5,23 @@
 
 .blog {
     
+    .wistia_responsive_padding {
+        .margin-y(@base-spacing * 2);
+        background-color: @dark-gray;
+        border: @thin-border @dark-gray;
+    }
     .author-photo {
         .object-fit(cover);
         .round;
     }
-
     .author-name {
         border-bottom: @thin-border transparent;
         .transition;
+    }
+    .tag-name, .search-query, #hero .author-name {
+        font-weight: @bold;
+        font-style: italic;
+        color: @red;
     }
     #hero {
         font-family: @myriad-pro;
@@ -27,11 +36,12 @@
         }
         .post-author {
             .display(flex);
-            .justify-content(center);
+            @media @medium { .justify-content(center); }
             .align-items(center);
         }
         .author-byline {
             color: @gray;
+            letter-spacing: .02em;
         }
         .author-photo {
             margin: 0 (@column-gutter / 2) 0 0;
@@ -46,44 +56,89 @@
             .padding-y(2px);
             font-weight: @normal;
             color: @white;
-
+        }
+        a.author-name {
+            
             &:hover, &:active { border-color: @white; }
+        }
+        .archive-title, .author-bio {
+            color: @white;
+        }
+        .author-bio {
+            font-size: 18px;
+            line-height: 1.6;
+            font-weight: @light;
+            letter-spacing: .005em;
         }
     }
     .post {
 
         section {
-            .padding-y(30px);
-            border-bottom: @thin-border @gray;
+            .padding-y(20px);
         }
-        .post-content {
-
+        > section:first-child {
+            padding-top: 0;
+        }
+        p, li {
+            font-family: @myriad-pro;
+            font-weight: @light;
+            font-size: 18px;
+            line-height: 1.6;
+            letter-spacing: .005em;
+        }
+        h4 {
+            font-family: @myriad-pro;
+            font-size: 24px;
+            line-height: 1.6;
+            letter-spacing: .01em;
+        }
+        p + h4 {
+            margin-top: @base-spacing * 2;
+        }
+        img {
+            padding: 0 !important;
+            border: @thin-border @dark-gray;
+        }
+        .post-title {
+            font-weight: @normal;
+        }
+        .post-summary {
+            
             p {
-                font-family: @myriad-pro;
-                font-size: 16px;
-                line-height: 1.7;
-                
-                &:first-of-type {
-                    color: @red;
-                
-                    &:first-letter {
-                        display: inline-block;
-                        float: left;
-                        font-size: 8.5em;
-                        line-height: .75em;
-                        margin: 0 @base-spacing @base-spacing -0.075em;
-                        font-weight: @bold;
-                    }
-                }
+                font-size: 20px;
+                font-weight: @normal;
             }
+            &:after {
+                content: "";
+                display: block;
+                width: 50px;
+                height: @thick;
+                .margin-x(auto);
+                margin-top: @base-spacing * 2;
+                background-color: @red;
+            }
+        }
+        .post-author {
+            font-size: 16px;
+        }
+        .post-author-panel {
+            padding: @base-spacing / 2 * 3;
+            background-color: @light-gray;
+            .drop-shadow;
         }
         .post-cta {
             
             p {
-                font-family: @myriad-pro;
-                font-size: 16px;
-                line-height: 1.7;
                 font-weight: @bold;
+            }
+            &:before {
+                content: "";
+                display: block;
+                width: 50px;
+                height: @thick;
+                .margin-x(auto);
+                margin-bottom: @base-spacing * 2;
+                background-color: @gray;
             }
         }
         .post-tags {
@@ -95,18 +150,14 @@
             margin-bottom: @base-spacing / 2;
             font-weight: @bold;
         }
-        .author-name {
-            
-            &:hover, &:active {
-                border-color: @a1hover;
-            }
-        }
         .author-photo {
             .size(120px);
-            border: @thick-border @gray;
+            border: @medium-border @gray;
         }
         .author-bio {
-            font-size: 12px;
+            font-size: 14px;
+            font-weight: @normal;
+            letter-spacing: .01em;
         }
         .post-footer section:last-child {
             border-bottom: 0;
@@ -128,6 +179,80 @@
                 height: 600px;
                 padding: 80px 0;
             }
+        }
+    }
+    #comments {
+        background-color: @light-gray;
+        
+        .InfoLabel {
+            display: block;
+            margin-bottom: @base-spacing;
+            font-family: @myriad-pro;
+            color: @dark-gray;
+        }
+        .comment {
+            margin: @base-spacing 0;
+            padding: @base-spacing / 2 * 3;
+            background-color: @white;
+            .drop-shadow;
+            font-family: @myriad-pro;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .comment-header {
+            .display(flex);
+            .justify-content(space-between);
+            .align-items(center);
+            padding-bottom: @base-spacing;
+            border-bottom: @thin-border @light-gray;
+            
+            .CommentUserName {
+                font-size: 18px;
+                font-weight: @bold;
+            }
+            .CommentDate {
+                font-size: 15px;
+                font-weight: @light;
+                letter-spacing: 0.01em;
+            }
+        }
+        .comment-content {
+            .padding-y(@base-spacing);
+        }
+        .comment-admin-links {
+            .display(flex);
+            .justify-content(flex-end);
+            margin: 0 -5px;
+            
+            a {
+                margin: 5px;
+                font-size: 12px;
+                .uppercase;
+                color: @red;
+            }
+        }
+        .comment-form-container {
+            margin-top: @base-spacing * 2;
+        }
+        input, textarea {
+            margin-bottom: 5px;
+        }
+        .comment-form-title {
+            font-size: 18px;
+            font-weight: @bold;
+            text-transform: none;
+            letter-spacing: normal;
+        }
+        #comment-form .InfoLabel {
+            margin-top: @base-spacing * -1;
+        }
+        .form-control-error {
+            font-family: @myriad-pro;
+            font-size: 12px;
+            font-weight: @normal;
+            text-transform: none;
+            letter-spacing: normal;
+            color: @red;
         }
     }
 }

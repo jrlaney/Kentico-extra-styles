@@ -43,6 +43,15 @@ ul.line-break,
 ol.line-break {
   margin-top: -20px;
 }
+ul,
+ol {
+  padding-left: 1em;
+}
+ul li,
+ol li {
+  padding-left: 1em;
+  margin-bottom: 10px;
+}
 .line {
   margin-bottom: 20px;
 }
@@ -58,6 +67,12 @@ img:last-child {
 a > img:only-child {
   margin-bottom: 20px;
 }
+.blog .wistia_responsive_padding {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: #999999;
+  border: 1px solid #999999;
+}
 .blog .author-photo {
   -o-object-fit: cover;
   object-fit: cover;
@@ -67,6 +82,13 @@ a > img:only-child {
   border-bottom: 1px solid transparent;
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
+}
+.blog .tag-name,
+.blog .search-query,
+.blog #hero .author-name {
+  font-weight: 700;
+  font-style: italic;
+  color: #d9232e;
 }
 .blog #hero {
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -83,8 +105,6 @@ a > img:only-child {
 .blog #hero .post-author {
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
   -webkit-align-items: center;
   align-items: center;
 }
@@ -109,14 +129,21 @@ a > img:only-child {
   display: inline-block;
   float: left;
 }
-.no-flexbox.flexboxtweener .blog #hero .post-author {
-  -ms-flex-pack: center;
+@media only screen and (min-width: 768px) {
+  .blog #hero .post-author {
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  .no-flexbox.flexboxtweener .blog #hero .post-author {
+    -ms-flex-pack: center;
+  }
 }
 .no-flexbox.flexboxtweener .blog #hero .post-author {
   -ms-flex-align: center;
 }
 .blog #hero .author-byline {
   color: #cccccc;
+  letter-spacing: .02em;
 }
 .blog #hero .author-photo {
   margin: 0 15px 0 0;
@@ -137,36 +164,85 @@ a > img:only-child {
   font-weight: 400;
   color: #ffffff;
 }
-.blog #hero .author-name:hover,
-.blog #hero .author-name:active {
+.blog #hero a.author-name:hover,
+.blog #hero a.author-name:active {
   border-color: #ffffff;
 }
+.blog #hero .archive-title,
+.blog #hero .author-bio {
+  color: #ffffff;
+}
+.blog #hero .author-bio {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 300;
+  letter-spacing: .005em;
+}
 .blog .post section {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #cccccc;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-.blog .post .post-content p {
+.blog .post > section:first-child {
+  padding-top: 0;
+}
+.blog .post p,
+.blog .post li {
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: .005em;
+}
+.blog .post h4 {
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.6;
+  letter-spacing: .01em;
+}
+.blog .post p + h4 {
+  margin-top: 40px;
+}
+.blog .post img {
+  padding: 0 !important;
+  border: 1px solid #999999;
+}
+.blog .post .post-title {
+  font-weight: 400;
+}
+.blog .post .post-summary p {
+  font-size: 20px;
+  font-weight: 400;
+}
+.blog .post .post-summary:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  background-color: #d9232e;
+}
+.blog .post .post-author {
   font-size: 16px;
-  line-height: 1.7;
 }
-.blog .post .post-content p:first-of-type {
-  color: #d9232e;
-}
-.blog .post .post-content p:first-of-type:first-letter {
-  display: inline-block;
-  float: left;
-  font-size: 8.5em;
-  line-height: .75em;
-  margin: 0 20px 20px -0.075em;
-  font-weight: 700;
+.blog .post .post-author-panel {
+  padding: 30px;
+  background-color: #f2f2f2;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 }
 .blog .post .post-cta p {
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.7;
   font-weight: 700;
+}
+.blog .post .post-cta:before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  background-color: #cccccc;
 }
 .blog .post .post-tags {
   font-size: 12px;
@@ -178,17 +254,15 @@ a > img:only-child {
   margin-bottom: 10px;
   font-weight: 700;
 }
-.blog .post .author-name:hover,
-.blog .post .author-name:active {
-  border-color: #4ea2f6;
-}
 .blog .post .author-photo {
   width: 120px;
   height: 120px;
-  border: 5px solid #cccccc;
+  border: 2px solid #cccccc;
 }
 .blog .post .author-bio {
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .01em;
 }
 .blog .post .post-footer section:last-child {
   border-bottom: 0;
@@ -236,6 +310,136 @@ a > img:only-child {
     height: 600px;
     padding: 80px 0;
   }
+}
+.blog #comments {
+  background-color: #f2f2f2;
+}
+.blog #comments .InfoLabel {
+  display: block;
+  margin-bottom: 20px;
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #999999;
+}
+.blog #comments .comment {
+  margin: 20px 0;
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.blog #comments .comment-header {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.no-flexbox.flexboxtweener .blog #comments .comment-header {
+  display: -ms-flexbox;
+}
+.no-flexbox.flexboxtweener .blog #comments .comment-header > * {
+  display: inline-block;
+}
+.no-flexbox.no-flexboxtweener .blog #comments .comment-header {
+  display: block;
+}
+.no-flexbox.no-flexboxtweener .blog #comments .comment-header:before,
+.no-flexbox.no-flexboxtweener .blog #comments .comment-header:after {
+  content: '';
+  display: table;
+}
+.no-flexbox.no-flexboxtweener .blog #comments .comment-header:after {
+  clear: both;
+}
+.no-flexbox.no-flexboxtweener .blog #comments .comment-header > * {
+  display: inline-block;
+  float: left;
+}
+.no-flexbox.flexboxtweener .blog #comments .comment-header {
+  -ms-flex-pack: justify;
+}
+.no-flexbox.flexboxtweener .blog #comments .comment-header {
+  -ms-flex-align: center;
+}
+.blog #comments .comment-header .CommentUserName {
+  font-size: 18px;
+  font-weight: 700;
+}
+.blog #comments .comment-header .CommentDate {
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+.blog #comments .comment-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.blog #comments .comment-admin-links {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  margin: 0 -5px;
+}
+.no-flexbox.flexboxtweener .blog #comments .comment-admin-links {
+  display: -ms-flexbox;
+}
+.no-flexbox.flexboxtweener .blog #comments .comment-admin-links > * {
+  display: inline-block;
+}
+.no-flexbox.no-flexboxtweener .blog #comments .comment-admin-links {
+  display: block;
+}
+.no-flexbox.no-flexboxtweener .blog #comments .comment-admin-links:before,
+.no-flexbox.no-flexboxtweener .blog #comments .comment-admin-links:after {
+  content: '';
+  display: table;
+}
+.no-flexbox.no-flexboxtweener .blog #comments .comment-admin-links:after {
+  clear: both;
+}
+.no-flexbox.no-flexboxtweener .blog #comments .comment-admin-links > * {
+  display: inline-block;
+  float: left;
+}
+.no-flexbox.flexboxtweener .blog #comments .comment-admin-links {
+  -ms-flex-pack: end;
+}
+.blog #comments .comment-admin-links a {
+  margin: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #d9232e;
+}
+.blog #comments .comment-form-container {
+  margin-top: 40px;
+}
+.blog #comments input,
+.blog #comments textarea {
+  margin-bottom: 5px;
+}
+.blog #comments .comment-form-title {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.blog #comments #comment-form .InfoLabel {
+  margin-top: -20px;
+}
+.blog #comments .form-control-error {
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #d9232e;
 }
 .social-selector {
   display: block;
