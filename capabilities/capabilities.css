@@ -67,132 +67,13 @@ img:last-child {
 a > img:only-child {
   margin-bottom: 20px;
 }
-.video-wrapper {
-  position: relative;
-  display: block;
-  padding-bottom: 56.25%;
-}
-.video-wrapper .video-embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-.resource-thumbnail {
-  display: block;
-  position: relative;
-}
-.resource-thumbnail .thumbnail {
-  position: relative;
-  z-index: 0;
-}
-.resource-thumbnail .cta {
-  display: block;
-  z-index: 2;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 18px;
-  color: #ffffff;
-  opacity: 0;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
-}
-:hover.resource-thumbnail .cta {
-  -webkit-transform: translate(-50%, calc(-50% + 40px));
-  transform: translate(-50%, calc(-50% + 40px));
-  opacity: 0.99;
-}
-.resource-thumbnail:before {
-  display: block;
-  z-index: 2;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-family: microstrategy;
-  font-size: 70px;
-  color: #ffffff;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
-}
-:hover.resource-thumbnail:before {
-  -webkit-transform: translate(-50%, calc(-50% - 25px));
-  transform: translate(-50%, calc(-50% - 25px));
-}
-.video.resource-thumbnail:before {
-  content: '\e828';
-}
-.presentation.resource-thumbnail:before {
-  content: '\e825';
-}
-.document.resource-thumbnail:before {
-  content: '\ea08';
-}
-.ebook.resource-thumbnail:before {
-  content: '\e822';
-}
-.brochure.resource-thumbnail:before {
-  content: '\e81f';
-}
-.analyst-review.resource-thumbnail:before {
-  content: '\e937';
-}
-.webcast.resource-thumbnail:before {
-  content: '\e996';
-}
-.success-story.resource-thumbnail:before {
-  content: '\e969';
-}
-.tech-guide.resource-thumbnail:before {
-  content: '\e822';
-}
-.white-paper.resource-thumbnail:before {
-  content: '\e82b';
-}
-.resource-thumbnail:after {
-  display: block;
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: '';
-  background-color: #000000;
-  background-color: rgba(0, 0, 0, 0.3);
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
-}
-:hover.resource-thumbnail:after {
-  background-color: rgba(0, 0, 0, 0.6);
-}
 .capabilities .page-title {
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 20px;
   line-height: 22px;
   text-transform: uppercase;
   letter-spacing: 5px;
-  color: #d9232e;
+  color: #D9232E;
 }
 #capabilities section.no-padding [class*="col"] {
   display: -webkit-flex;
@@ -284,7 +165,7 @@ a > img:only-child {
   left: 50%;
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;
-  border-top: 50px solid #ffffff;
+  border-top: 50px solid #FFFFFF;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
@@ -449,7 +330,7 @@ a > img:only-child {
 }
 #data-connectivity .gridder .card {
   cursor: pointer;
-  border-top-color: #dddddd;
+  border-top-color: #DDDDDD;
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
@@ -457,7 +338,7 @@ a > img:only-child {
   transition: opacity 0.3s ease-in 0.5s, transform 0.3s ease-in 0.5s, box-shadow 0.2s ease-out 0s;
 }
 #data-connectivity .gridder .card .card-image-content {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #DDDDDD;
 }
 #data-connectivity .gridder .card .card-image-content .logo {
   position: absolute;
@@ -524,7 +405,7 @@ a > img:only-child {
 }
 #data-connectivity .gridder .gridder-close:hover {
   background-color: rgba(0, 0, 0, 0.4);
-  color: #ffffff;
+  color: #FFFFFF;
 }
 #data-connectivity .gridder .gridder-nav {
   position: absolute;
@@ -540,7 +421,7 @@ a > img:only-child {
 }
 #data-connectivity .gridder .gridder-nav:hover {
   background-color: rgba(0, 0, 0, 0.4);
-  color: #ffffff;
+  color: #FFFFFF;
 }
 #data-connectivity .gridder .gridder-nav.next {
   left: 50px;
@@ -588,7 +469,7 @@ a > img:only-child {
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
-  color: #cccccc;
+  color: #CCCCCC;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -601,7 +482,7 @@ a > img:only-child {
   left: 20px;
   height: 10px;
   width: 2px;
-  background-color: #cccccc;
+  background-color: #CCCCCC;
 }
 #data-connectivity .gridder .gridder-back:before {
   margin-top: -9px;
@@ -866,7 +747,7 @@ a > img:only-child {
     position: absolute;
     bottom: -30px;
     left: 50%;
-    background-color: #cccccc;
+    background-color: #CCCCCC;
   }
   #big-data #hadoop-diagram-platform {
     padding-top: 15px;
@@ -883,7 +764,7 @@ a > img:only-child {
     position: absolute;
     bottom: -30px;
     left: 50%;
-    background-color: #cccccc;
+    background-color: #CCCCCC;
   }
   #big-data #hadoop-diagram-sql {
     padding-top: 15px;
@@ -899,7 +780,7 @@ a > img:only-child {
     position: absolute;
     top: -15px;
     left: 50%;
-    background-color: #cccccc;
+    background-color: #CCCCCC;
   }
   #big-data #hadoop-diagram-sql .grid-item:after {
     content: '';
@@ -909,7 +790,7 @@ a > img:only-child {
     top: -15px;
     right: 0;
     left: 0;
-    background-color: #cccccc;
+    background-color: #CCCCCC;
   }
   #big-data #hadoop-diagram-sql .grid-item:first-child:after {
     left: 50%;
@@ -1178,7 +1059,7 @@ a > img:only-child {
 }
 #dashboards #dashboards-slider .buttons-row .btn:hover,
 #dashboards #dashboards-slider .buttons-row .btn.active {
-  color: #d9232e;
+  color: #D9232E;
 }
 #dashboards #dashboards-slider .buttons-row .btn .text {
   display: block;
@@ -1331,7 +1212,7 @@ a > img:only-child {
   height: 22.5px;
   bottom: -22.5px;
   left: 50%;
-  background-color: #cccccc;
+  background-color: #CCCCCC;
 }
 @media only screen and (min-width: 768px) {
   #embedded-bi #embedded-bi-diagram-platform:before {
@@ -1361,7 +1242,7 @@ a > img:only-child {
   top: -7.5px;
   left: 50%;
   margin-left: -1px;
-  background-color: #cccccc;
+  background-color: #CCCCCC;
 }
 @media only screen and (min-width: 768px) {
   #embedded-bi #embedded-bi-diagram-components .grid-item:before {
@@ -1381,7 +1262,7 @@ a > img:only-child {
     top: -15px;
     right: 0;
     left: 0;
-    background-color: #cccccc;
+    background-color: #CCCCCC;
   }
   #embedded-bi #embedded-bi-diagram-components .grid-item:nth-child(n+4):after {
     display: none;
@@ -1431,8 +1312,8 @@ a > img:only-child {
 #embedded-bi #rest-api #rest-api-diagram .services-block .services-icon {
   position: relative;
   z-index: 1;
-  background-color: #d9232e;
-  color: #ffffff;
+  background-color: #D9232E;
+  color: #FFFFFF;
   padding: 10px;
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -1453,7 +1334,7 @@ a > img:only-child {
   transform: translateY(-50%);
   height: 100%;
   width: 2px;
-  background-color: #cccccc;
+  background-color: #CCCCCC;
 }
 #embedded-bi #rest-api #rest-api-diagram .services-block .interaction {
   display: inline-block;
@@ -1462,7 +1343,7 @@ a > img:only-child {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #11566f;
+  color: #11566F;
   width: 50%;
   padding: 0 20px;
   top: 75%;
