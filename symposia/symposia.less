@@ -1,3 +1,5 @@
+@import '../settings.less';
+
 /*=======================================================================
 =      Main styles are for smallest screen size - larger sizes are specified in media queries          =
 ==========================================================================*/
@@ -11,7 +13,7 @@
   cursor:pointer;
   background-color:#f2f2f2;
   padding:10px; margin-bottom:10px;
-  font-family:"myriad-pro-n3","myriad-pro",Helvetica,Arial,sans-serif;
+  font-family:@myriad-pro;
   font-style:normal;
   font-weight:300;
   font-size:18px; line-height:20px;
@@ -32,21 +34,21 @@
   position:relative;
   background-color:#333333;
   overflow:hidden;
-  background-image:url(/Strategy/media/images/learn/symposia/2016/symposia_overview_hero-banner.jpg);
+  background-image:url(/getmedia/b03015fc-cbe0-4634-b210-68011851ad81/symposia);
 }
 .symposium-banner.overview {padding-bottom:110px;}
 .symposium-banner .scrolldown {
   position:absolute;
-  text-transform:uppercase;
   bottom:30px; left:50%;
   margin-left:-100px;
   width:200px;
   padding:0 0 30px 0;
   background:url(/Strategy/media/images/common/icons/icon_scrolldown_white.png) no-repeat bottom center transparent;
-  font-family:"myriad-pro-n3","myriad-pro",Helvetica,Arial,sans-serif;
+  font-family:"myriad-pro-n4","myriad-pro",Helvetica,Arial,sans-serif;
   font-style:normal;
-  font-weight:300;
-  font-size:18px; line-height:20px;
+  font-weight:400;
+  font-size:16px; line-height:20px;
+  .uppercase;
   color:#ffffff;
   text-align:center;
 }
