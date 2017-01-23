@@ -7,3 +7,40 @@ section:not(#introduction) {
     border-bottom: @medium-border @gray;
     &:last-child { border-bottom: 0; }
 }
+
+code {
+    display: inline-block;
+    padding: 0 .25em;
+    background-color: @light-gray;
+
+    &.block {
+        display: block;
+        margin-bottom: @base-spacing;
+        &:last-child { margin-bottom: 0; }
+        padding: 20px;
+        background-color: @black;
+        color: @white;
+
+        .html { color: @blue; }
+        .attribute { color: @green; }
+        .value { color: @orange; }
+
+        .loop-number(@i) when (@i > 0) {
+            .loop-number(@i - 1);
+
+            .indent-@{i} { padding-left: @i * 20px; }
+        }
+        .loop-number(10);
+    }
+}
+figure {
+    background-color: @white;
+    border: @thick-border @gray;
+    margin-bottom: @base-spacing;
+    &:last-child { margin-bottom: 0; }
+    padding: 20px;
+
+    + code.block {
+        margin-top: @base-spacing * -1;
+    }
+}

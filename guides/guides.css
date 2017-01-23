@@ -73,3 +73,69 @@ section:not(#introduction) {
 section:not(#introduction):last-child {
   border-bottom: 0;
 }
+code {
+  display: inline-block;
+  padding: 0 .25em;
+  background-color: #f2f2f2;
+}
+code.block {
+  display: block;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #333333;
+  color: #ffffff;
+}
+code.block:last-child {
+  margin-bottom: 0;
+}
+code.block .html {
+  color: #4789a3;
+}
+code.block .attribute {
+  color: #68aa00;
+}
+code.block .value {
+  color: #ff9100;
+}
+code.block .indent-1 {
+  padding-left: 20px;
+}
+code.block .indent-2 {
+  padding-left: 40px;
+}
+code.block .indent-3 {
+  padding-left: 60px;
+}
+code.block .indent-4 {
+  padding-left: 80px;
+}
+code.block .indent-5 {
+  padding-left: 100px;
+}
+code.block .indent-6 {
+  padding-left: 120px;
+}
+code.block .indent-7 {
+  padding-left: 140px;
+}
+code.block .indent-8 {
+  padding-left: 160px;
+}
+code.block .indent-9 {
+  padding-left: 180px;
+}
+code.block .indent-10 {
+  padding-left: 200px;
+}
+figure {
+  background-color: #ffffff;
+  border: 5px solid #cccccc;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+figure:last-child {
+  margin-bottom: 0;
+}
+figure + code.block {
+  margin-top: -20px;
+}
