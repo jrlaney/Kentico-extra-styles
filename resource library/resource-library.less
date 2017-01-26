@@ -408,8 +408,9 @@
 }
 
 /*for a video resource*/
+#resource-video {padding-top:0; padding-bottom:0;}
 .video-wrapper {display:block; position:relative;}
-.video-wrapper.ratio16-9 {padding-bottom:56.25%;}
+.video-wrapper.ratio16-9 {padding-top:56.25%;}
 .video-wrapper iframe, .video-wrapper .wistia_embed {
   display:block; position:absolute; z-index:1;
   height:100%; width:100%;
@@ -440,14 +441,14 @@
 #resource-information.success-story .info-col .resource-button.document-button {display:none;}
 
 /*video play animations*/
-#resource-video.gated-video .video-wrapper {padding-bottom:0px;}
-#resource-video.gated-video.video-ready .video-wrapper {padding-bottom:200px;}
+#resource-video.gated-video .video-wrapper {padding-top:0px;}
+#resource-video.gated-video.video-ready .video-wrapper {padding-top:200px;}
 #resource-video .video-wrapper {
-  padding-bottom:200px;
+  padding-top:200px;
     -webkit-transition:padding 1s ease 0s;
   transition:padding 1s ease 0s;
 }
-#resource-video.video-playing .video-wrapper {padding-bottom:56.25%}
+#resource-video.video-playing .video-wrapper {padding-top:56.25%}
 #resource-video .video-wrapper iframe,
 #resource-video .video-wrapper .wistia_embed {
   opacity:0; z-index:1;
@@ -473,12 +474,12 @@
 
 #resource-list a.card:visited:not(:hover):not(:active) {
     border-top-color: @gray;
-    
+
     .card-corner,
     .line {
         background-color: @gray;
     }
-    
+
     .resource-title,
     .resource-description,
     .resource-type,
@@ -690,7 +691,7 @@
   }
   #resource-video .resource-col .resource-link:hover .cta-icon {margin-bottom:0px;}
   #resource-video .video-wrapper,
-  #resource-video.gated-video.video-ready .video-wrapper {padding-bottom:300px; }
+  #resource-video.gated-video.video-ready .video-wrapper {padding-top:300px; }
 }
 
 

@@ -47,7 +47,7 @@
   overflow: hidden;
   background-image: url(/getmedia/b03015fc-cbe0-4634-b210-68011851ad81/symposia);
 }
-.symposium-banner.overview {
+.symposium-banner.overview .container {
   padding-bottom: 110px;
 }
 .symposium-banner .scrolldown {
