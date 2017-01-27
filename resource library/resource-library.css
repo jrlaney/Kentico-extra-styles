@@ -613,12 +613,16 @@ select {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 /*for a video resource*/
+#resource-video {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 .video-wrapper {
   display: block;
   position: relative;
 }
 .video-wrapper.ratio16-9 {
-  padding-bottom: 56.25%;
+  padding-top: 56.25%;
 }
 .video-wrapper iframe,
 .video-wrapper .wistia_embed {
@@ -673,18 +677,18 @@ select {
 }
 /*video play animations*/
 #resource-video.gated-video .video-wrapper {
-  padding-bottom: 0px;
+  padding-top: 0px;
 }
 #resource-video.gated-video.video-ready .video-wrapper {
-  padding-bottom: 200px;
+  padding-top: 200px;
 }
 #resource-video .video-wrapper {
-  padding-bottom: 200px;
+  padding-top: 200px;
   -webkit-transition: padding 1s ease 0s;
   transition: padding 1s ease 0s;
 }
 #resource-video.video-playing .video-wrapper {
-  padding-bottom: 56.25%;
+  padding-top: 56.25%;
 }
 #resource-video .video-wrapper iframe,
 #resource-video .video-wrapper .wistia_embed {
@@ -1049,7 +1053,7 @@ select {
   }
   #resource-video .video-wrapper,
   #resource-video.gated-video.video-ready .video-wrapper {
-    padding-bottom: 300px;
+    padding-top: 300px;
   }
 }
 /* Medium devices (desktops, 992px and up) */
