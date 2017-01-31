@@ -237,23 +237,6 @@ section {
 .controls .btn.next {
   right: 0px;
 }
-.video-wrapper {
-  display: block;
-  position: relative;
-}
-.video-wrapper.ratio16-9 {
-  padding-bottom: 56.25%;
-}
-.video-wrapper iframe,
-.video-wrapper .wistia_embed {
-  display: block;
-  position: absolute;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
 .cutoff-img {
   display: block;
   margin: 0 auto;
