@@ -52,6 +52,14 @@ ol li {
   padding-left: 1em;
   margin-bottom: 10px;
 }
+* + h1,
+* + h2,
+* + h3,
+* + h4,
+* + h5,
+* + h6 {
+  margin-top: 30px;
+}
 .line {
   margin-bottom: 20px;
 }

@@ -1,4 +1,5 @@
 @import 'settings.less';
+
 // TYPOGRAPHY
 
 h1, h2, h3, .h1, .h2, .h3, h4, h5, h6, p, ul, ol {
@@ -20,6 +21,9 @@ ul, ol {
         padding-left: 1em;
         margin-bottom: @base-spacing / 2;
     }
+}
+* + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+    margin-top: @base-spacing / 2 * 3;
 }
 .line {
     margin-bottom: @base-spacing;
