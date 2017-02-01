@@ -2,7 +2,7 @@
   display: inline-block;
   text-align: center;
   padding: 20px 40px;
-  color: #FFFFFF;
+  color: #ffffff;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
@@ -25,7 +25,7 @@
   margin-top: 15px;
 }
 .icon-cta:hover {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media only screen and (min-width: 768px) {
   .icon-cta {
@@ -194,7 +194,7 @@
     opacity: 0.99;
   }
   #whats-new .cards .card:hover .button {
-    background-color: #D9232E;
+    background-color: #d9232e;
   }
 }
 #explore-product .link-block {
@@ -206,7 +206,7 @@
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
 }
 .no-flexbox.flexboxtweener #explore-product .link-block {
   display: -ms-flexbox;

@@ -101,7 +101,7 @@
 }
 .sequence:hover .sequence-pagination span.current {
   background: transparent;
-  border: 2px solid #CCCCCC;
+  border: 2px solid #cccccc;
 }
 .sequence .banner-arrow {
   display: block;
@@ -242,7 +242,7 @@
   vertical-align: middle;
   margin: auto;
   padding: 10px;
-  background: #F9F9F9;
+  background: #f9f9f9;
 }
 @media only screen and (max-width: 767px) {
   .customer-logo-list {
@@ -1612,7 +1612,7 @@
   padding: 150px 7% 0 7%;
 }
 .nine-s-content {
-  background: url(/Strategy/media/images/products/analytics/2015/background-img-placeholder-dark.jpg) no-repeat fixed center top / cover #ccc;
+  background: url(/Strategy/media/images/products/analytics/2015/background-img-placeholder-dark.jpg) no-repeat fixed center top / cover #cccccc;
 }
 .analytics-banner .content-zone {
   display: block;
