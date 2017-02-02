@@ -171,11 +171,12 @@
             top:0; left:0; right:0; bottom:0;
             .angled-gradient(#222222, #444444);
 
-            //animated portion
+            //animated properties
             opacity:0;
             .transition(0.3s, ease-out, opacity, 0.5s);
         }
         .grid-item {
+            position:relative;
             padding:5px; z-index:2;
             .order(-1);
         }
@@ -191,7 +192,7 @@
                     .translate(-50%, -50%);
                 }
             }
-            //ANIMATED PROPERTIES
+            //animated properties
             opacity:1;
             .translateY(0);
             -webkit-transition:opacity 0.3s ease-in 0.5s, transform 0.3s ease-in 0.5s, box-shadow 0.2s ease-out 0s;
