@@ -43,12 +43,12 @@ ol li {
   padding-left: 1em;
   margin-bottom: 10px;
 }
-* + h1,
-* + h2,
-* + h3,
-* + h4,
-* + h5,
-* + h6 {
+p + h1,
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6 {
   margin-top: 30px;
 }
 .line {
@@ -72,7 +72,7 @@ a > img:only-child {
   line-height: 22px;
   text-transform: uppercase;
   letter-spacing: 5px;
-  color: #D9232E;
+  color: #d9232e;
 }
 #capabilities section.no-padding [class*="col"] {
   display: -webkit-flex;
@@ -164,7 +164,7 @@ a > img:only-child {
   left: 50%;
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;
-  border-top: 50px solid #FFFFFF;
+  border-top: 50px solid #ffffff;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
@@ -330,7 +330,7 @@ a > img:only-child {
 }
 #data-connectivity .gridder .card {
   cursor: pointer;
-  border-top-color: #DDDDDD;
+  border-top-color: #dddddd;
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
@@ -338,7 +338,7 @@ a > img:only-child {
   transition: opacity 0.3s ease-in 0.5s, transform 0.3s ease-in 0.5s, box-shadow 0.2s ease-out 0s;
 }
 #data-connectivity .gridder .card .card-image-content {
-  border-bottom: 1px solid #DDDDDD;
+  border-bottom: 1px solid #dddddd;
 }
 #data-connectivity .gridder .card .card-image-content .logo {
   position: absolute;
@@ -405,7 +405,7 @@ a > img:only-child {
 }
 #data-connectivity .gridder .gridder-close:hover {
   background-color: rgba(0, 0, 0, 0.4);
-  color: #FFFFFF;
+  color: #ffffff;
 }
 #data-connectivity .gridder .gridder-nav {
   position: absolute;
@@ -421,7 +421,7 @@ a > img:only-child {
 }
 #data-connectivity .gridder .gridder-nav:hover {
   background-color: rgba(0, 0, 0, 0.4);
-  color: #FFFFFF;
+  color: #ffffff;
 }
 #data-connectivity .gridder .gridder-nav.next {
   left: 50px;
@@ -469,7 +469,7 @@ a > img:only-child {
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
-  color: #CCCCCC;
+  color: #cccccc;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -482,7 +482,7 @@ a > img:only-child {
   left: 20px;
   height: 10px;
   width: 2px;
-  background-color: #CCCCCC;
+  background-color: #cccccc;
 }
 #data-connectivity .gridder .gridder-back:before {
   margin-top: -9px;
@@ -747,7 +747,7 @@ a > img:only-child {
     position: absolute;
     bottom: -30px;
     left: 50%;
-    background-color: #CCCCCC;
+    background-color: #cccccc;
   }
   #big-data #hadoop-diagram-platform {
     padding-top: 15px;
@@ -764,7 +764,7 @@ a > img:only-child {
     position: absolute;
     bottom: -30px;
     left: 50%;
-    background-color: #CCCCCC;
+    background-color: #cccccc;
   }
   #big-data #hadoop-diagram-sql {
     padding-top: 15px;
@@ -780,7 +780,7 @@ a > img:only-child {
     position: absolute;
     top: -15px;
     left: 50%;
-    background-color: #CCCCCC;
+    background-color: #cccccc;
   }
   #big-data #hadoop-diagram-sql .grid-item:after {
     content: '';
@@ -790,7 +790,7 @@ a > img:only-child {
     top: -15px;
     right: 0;
     left: 0;
-    background-color: #CCCCCC;
+    background-color: #cccccc;
   }
   #big-data #hadoop-diagram-sql .grid-item:first-child:after {
     left: 50%;
@@ -1059,7 +1059,7 @@ a > img:only-child {
 }
 #dashboards #dashboards-slider .buttons-row .btn:hover,
 #dashboards #dashboards-slider .buttons-row .btn.active {
-  color: #D9232E;
+  color: #d9232e;
 }
 #dashboards #dashboards-slider .buttons-row .btn .text {
   display: block;
@@ -1212,7 +1212,7 @@ a > img:only-child {
   height: 22.5px;
   bottom: -22.5px;
   left: 50%;
-  background-color: #CCCCCC;
+  background-color: #cccccc;
 }
 @media only screen and (min-width: 768px) {
   #embedded-bi #embedded-bi-diagram-platform:before {
@@ -1242,7 +1242,7 @@ a > img:only-child {
   top: -7.5px;
   left: 50%;
   margin-left: -1px;
-  background-color: #CCCCCC;
+  background-color: #cccccc;
 }
 @media only screen and (min-width: 768px) {
   #embedded-bi #embedded-bi-diagram-components .grid-item:before {
@@ -1262,7 +1262,7 @@ a > img:only-child {
     top: -15px;
     right: 0;
     left: 0;
-    background-color: #CCCCCC;
+    background-color: #cccccc;
   }
   #embedded-bi #embedded-bi-diagram-components .grid-item:nth-child(n+4):after {
     display: none;
@@ -1312,8 +1312,8 @@ a > img:only-child {
 #embedded-bi #rest-api #rest-api-diagram .services-block .services-icon {
   position: relative;
   z-index: 1;
-  background-color: #D9232E;
-  color: #FFFFFF;
+  background-color: #d9232e;
+  color: #ffffff;
   padding: 10px;
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -1334,7 +1334,7 @@ a > img:only-child {
   transform: translateY(-50%);
   height: 100%;
   width: 2px;
-  background-color: #CCCCCC;
+  background-color: #cccccc;
 }
 #embedded-bi #rest-api #rest-api-diagram .services-block .interaction {
   display: inline-block;
@@ -1343,7 +1343,7 @@ a > img:only-child {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #11566F;
+  color: #11566f;
   width: 50%;
   padding: 0 20px;
   top: 75%;
