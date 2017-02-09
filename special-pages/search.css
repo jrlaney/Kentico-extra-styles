@@ -66,3 +66,33 @@ img:last-child {
 a > img:only-child {
   margin-bottom: 20px;
 }
+.results-item {
+  padding: 30px 0;
+  border-bottom: 1px solid #CCCCCC;
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.results-item:last-child {
+  border-bottom: 0;
+}
+.results-item-title {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.results-item-title a:visited {
+  color: #999999;
+}
+.results-item-url {
+  font-size: 13px;
+  font-style: italic;
+  letter-spacing: .01em;
+  color: #999999;
+}
+.search-query {
+  font-weight: 700;
+  font-style: italic;
+  color: #D9232E;
+}
+.total-results-number {
+  font-weight: 700;
+  color: #333333;
+}

@@ -1,2 +1,33 @@
 @import '../settings.less';
 @import '../overrides.less';
+
+
+.results-item {
+    padding: @column-gutter 0;
+    border-bottom: @thin-border @gray;
+    &:last-child { border-bottom: 0; }
+    font-family: @myriad-pro;
+}
+.results-item-title {
+    margin-bottom: @base-spacing / 2;
+    font-weight: @bold;
+    
+    a:visited {
+        color: @dark-gray;
+    }
+}
+.results-item-url {
+    font-size: 13px;
+    font-style: italic;
+    letter-spacing: .01em;
+    color: @dark-gray;
+}
+.search-query {
+    font-weight: @bold;
+    font-style: italic;
+    color: @red;
+}
+.total-results-number {
+    font-weight: @bold;
+    color: @black;
+}
