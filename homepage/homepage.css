@@ -1,8 +1,9 @@
 .icon-cta {
   display: inline-block;
   text-align: center;
-  padding: 20px 40px;
-  color: #ffffff;
+  vertical-align: top;
+  padding: 20px;
+  color: #FFFFFF;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
@@ -25,10 +26,11 @@
   margin-top: 15px;
 }
 .icon-cta:hover {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 @media only screen and (min-width: 768px) {
   .icon-cta {
+    padding: 20px 30px;
     margin-right: 20px;
   }
   .icon-cta:last-child {
@@ -37,6 +39,51 @@
   .icon-cta:hover {
     background-color: rgba(217, 35, 46, 0.5);
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+}
+@media only screen and (min-width: 980px) {
+  .icon-cta {
+    padding: 20px 40px;
+  }
+}
+.logo {
+  display: block;
+  height: auto;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-height: calc(100% - 20px);
+  max-width: calc(100% - 20px);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.logo.grayscale {
+  filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+}
+.logo.text-logo {
+  width: calc(100% - 20px);
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.2em;
+  color: #777777;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .logo.text-logo {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .logo.text-logo {
+    font-size: 25px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .logo.text-logo {
+    font-size: 30px;
   }
 }
 .background-fixed {
@@ -97,6 +144,11 @@
   -webkit-animation: fade-slide-up 0.5s ease-out 1.2s normal forwards;
   -moz-animation: fade-slide-up 0.5s ease-out 1.2s normal forwards;
   animation: fade-slide-up 0.5s ease-out 1.2s normal forwards;
+}
+@media only screen and (min-width: 768px) {
+  #hero .icon-cta {
+    max-width: calc(33.3% - 24px);
+  }
 }
 @-moz-keyframes fade-slide-up {
   0% {
@@ -170,7 +222,37 @@
     transform: translateY(0);
   }
 }
+@media only screen and (min-width: 768px) {
+  #whats-new .cards .grid-item {
+    width: 369px;
+  }
+  #whats-new .cards .grid-item.double-size {
+    width: 738px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #whats-new .cards .grid-item {
+    width: 316.66666667px;
+  }
+  #whats-new .cards .grid-item.double-size {
+    width: 633.33333333px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #whats-new .cards .grid-item {
+    width: 390px;
+  }
+  #whats-new .cards .grid-item.double-size {
+    width: 780px;
+  }
+}
+#whats-new .slick-arrow {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 #whats-new .cards .card {
+  height: 100%;
   border: none;
 }
 #whats-new .cards .card .card-header {
@@ -179,22 +261,87 @@
 #whats-new .cards .card .card-header .card-image {
   min-width: 100%;
 }
-@media only screen and (min-width: 768px) {
-  #whats-new .cards .card .card-header .card-image {
-    opacity: 0.9;
-    -webkit-transition: all 0.2s ease-out 0s;
-    transition: all 0.2s ease-out 0s;
-  }
+#whats-new .cards .card .card-header:after {
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
 }
 @media only screen and (min-width: 768px) {
   #whats-new .cards .card:hover {
     border: none;
   }
-  #whats-new .cards .card:hover .card-image {
-    opacity: 0.99;
-  }
   #whats-new .cards .card:hover .button {
-    background-color: #d9232e;
+    background-color: #D9232E;
+  }
+  #whats-new .cards .card:hover .card-header:after {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+#whats-new .world2017-mini-banner {
+  background: url('/getmedia/8ed310af-592f-4ebf-8e96-31cd93678071/homepage-ad-background') no-repeat center center transparent;
+  background-size: cover;
+}
+#whats-new .world2017-mini-banner .content-col {
+  margin-top: 15px;
+}
+@media only screen and (min-width: 768px) {
+  #whats-new .world2017-mini-banner .content-col {
+    margin-top: 0;
+    margin-left: 25px;
+    padding-left: 15px;
+    border-left: 3px solid #D9232E;
+  }
+  #whats-new .world2017-mini-banner .content-col .line {
+    display: none;
+  }
+}
+#whats-new .world2017-mini-banner .customer-speaker-logos {
+  margin-top: 25px;
+}
+@media only screen and (max-width: 767px) {
+  #whats-new .world2017-mini-banner .customer-speaker-logos .grid-item {
+    padding: 5px;
+  }
+}
+#whats-new .world2017-mini-banner .customer-speaker-logos .ratio {
+  background-color: #FFFFFF;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #f2f2f2;
+}
+#whats-new .world2017-mini-banner .customer-speaker-logos .ratio .logo {
+  max-height: calc(100% - 10px);
+  max-width: calc(100% - 10px);
+}
+#whats-new .world2017-mini-banner .customer-speaker-logos .ratio .logo.text-logo {
+  font-size: 14px;
+  line-height: 1.1em;
+}
+#whats-new .world2017-mini-banner .customer-speaker-logos .ratio .logo.text-logo.text-small {
+  font-size: 12px;
+}
+#whats-new .world2017-mini-banner .customer-speaker-logos .ratio .logo.text-logo.text-tiny {
+  font-size: 10px;
+}
+@media only screen and (min-width: 768px) {
+  #whats-new .world2017-mini-banner .customer-speaker-logos .ratio .logo.text-logo {
+    font-size: 26px;
+  }
+  #whats-new .world2017-mini-banner .customer-speaker-logos .ratio .logo.text-logo.text-small {
+    font-size: 20px;
+  }
+  #whats-new .world2017-mini-banner .customer-speaker-logos .ratio .logo.text-logo.text-tiny {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #whats-new .world2017-mini-banner .customer-speaker-logos .ratio .logo.text-logo {
+    font-size: 30px;
+  }
+  #whats-new .world2017-mini-banner .customer-speaker-logos .ratio .logo.text-logo.text-small {
+    font-size: 22px;
+  }
+  #whats-new .world2017-mini-banner .customer-speaker-logos .ratio .logo.text-logo.text-tiny {
+    font-size: 20px;
   }
 }
 #explore-product .link-block {
@@ -206,7 +353,7 @@
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border: 1px solid #ffffff;
+  border: 1px solid #FFFFFF;
 }
 .no-flexbox.flexboxtweener #explore-product .link-block {
   display: -ms-flexbox;
@@ -260,20 +407,6 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
 }
-#customers .logo {
-  display: block;
-  height: auto;
-  width: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  max-height: calc(100% - 20px);
-  max-width: calc(100% - 20px);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-#customers .logo.grayscale {
-  filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
-  filter: gray;
-  -webkit-filter: grayscale(100%);
+#customers .ratio {
+  overflow: hidden;
 }
