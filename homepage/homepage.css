@@ -251,8 +251,14 @@
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+#whats-new .slick-slide {
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}
+.no-flexbox.flexboxtweener #whats-new .slick-slide {
+  -ms-flex-align: stretch;
+}
 #whats-new .cards .card {
-  height: 100%;
   border: none;
 }
 #whats-new .cards .card .card-header {
