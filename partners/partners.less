@@ -43,3 +43,35 @@
         @media @xlarge { max-height: 150px; }
     }
 }
+
+#partners-list {
+    
+    .partner-card {
+        position: relative;
+        .aspect-ratio(1, 1);
+        background-color: @white;
+        border: @thin-border @gray;
+        &:hover, &:active { border-color: @red; }
+        .transition;
+        cursor: pointer;
+    }
+    .partner-logo {
+        .max-size(75%, 100px);
+        .position(absolute, 50%, 50%);
+        .translate(-50%, -50%);
+    }
+    .partner-name,
+    .partner-description {
+        display: none;
+    }
+    .no-results {
+        padding: @column-gutter / 2;
+        text-align: center;
+        
+        p {
+            font-family: @myriad-pro;
+            font-size: 18px;
+            line-height: @line-height;
+        }
+    }
+}
