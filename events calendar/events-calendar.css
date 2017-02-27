@@ -1,5 +1,13 @@
+.hover-overlay-lighten .overlay:after {
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+.hover-overlay-lighten:hover .overlay:after {
+  background-color: rgba(0, 0, 0, 0);
+}
 #hero.background-image {
-  background-image: url('/Strategy/media/images/common/banners/events.jpg');
+  background-image: url('/getmedia/1fd836d0-96bb-4f6f-ac34-c6784cbec71f/events');
 }
 #hero {
   padding: 40px 0;
@@ -770,7 +778,7 @@
     position: absolute;
     content: "";
     height: 1px;
-    width: calc(140%);
+    width: calc(100% + 40px);
     bottom: 0;
     left: -20px;
     background-color: #dddddd;

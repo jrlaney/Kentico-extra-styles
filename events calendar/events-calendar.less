@@ -1,6 +1,12 @@
 @import '../settings.less';
 
-#hero.background-image { background-image: url('/Strategy/media/images/common/banners/events.jpg'); }
+//special hover class for image lightening on hover of the card
+.hover-overlay-lighten {
+    .overlay:after {background-color: fade(@pure-black, 10%); .transition;}
+    &:hover .overlay:after {background-color: fade(@pure-black, 0%);}
+}
+
+#hero.background-image { background-image: url('/getmedia/1fd836d0-96bb-4f6f-ac34-c6784cbec71f/events'); }
 #hero {
   padding: 40px 0;
 }
@@ -467,7 +473,7 @@
   .grid .event-card .title:after {
     display:block; position:absolute;
     content:"";
-    height:1px; width:calc(100% + 40px); bottom:0; left:-20px;
+    height:1px; width:~"calc(100% + 40px)"; bottom:0; left:-20px;
     background-color:#dddddd;
   }
   .grid .event-card .description {padding:15px 0;}
