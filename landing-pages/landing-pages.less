@@ -100,6 +100,20 @@
     #manufacturing.solutions.landing-page #stores img[src$="store.png"] { margin-top: 32px }
 }
 
+//LOGOS
+.ratio .logo {
+	display:block;
+	.position(absolute, 50%, 50%, null, null);
+	height:auto; width:auto;
+	max-height:~"calc(100% - 40px)";
+	max-width:~"calc(100% - 40px)";
+	.translate(-50%,-50%);
+	&.spacing0 {max-height:100%; max-width:100%;}
+	&.spacing5 {max-height:~"calc(100% - 10px)"; max-width:~"calc(100% - 10px)";}
+	&.spacing10 {max-height:~"calc(100% - 20px)"; max-width:~"calc(100% - 20px)";}
+}
+
+
 
 @section-padding: 60px;
 @section-gutter-space: @section-padding + (@column-gutter / 2);
