@@ -262,6 +262,9 @@ a > img:only-child {
   max-height: calc(100% - 20px);
   max-width: calc(100% - 20px);
 }
+.logo-grid .logo {
+  max-width: 80%;
+}
 @media only screen and (min-width: 980px) {
   .landing-page section.lines-contain {
     overflow: visible;
