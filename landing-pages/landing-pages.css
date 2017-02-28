@@ -136,6 +136,12 @@ a > img:only-child {
 .landing-page.solutions.higher-education #hero.background-image {
   background-image: url('/Strategy/media/images/common/banners/higher-education.jpg');
 }
+.landing-page.education #hero.background-image {
+  background-image: url('/getmedia/d12af49b-de8e-4532-a199-f7a33f36dbf3/education');
+}
+.landing-page.academics #hero.background-image {
+  background-image: url('/getmedia/d4b9af9c-74d8-4b7c-8e41-cb991cb66387/jumpstart');
+}
 .landing-page.resource .hero.background-image {
   background-image: url('/Strategy/media/images/free-trial/desktop-trial_top-banner-bkg-old.jpg');
 }
@@ -219,6 +225,25 @@ a > img:only-child {
   top: 10px;
   left: 10px;
   background: #f2f2f2;
+}
+.iframe-form-container {
+  padding: 30px;
+  background-color: #FFFFFF;
+  color: #333333;
+}
+.iframe-form-container .form-wrapper {
+  height: 410px;
+}
+.form-wrapper {
+  position: relative;
+  width: 100%;
+}
+.form-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 #desktop-help.microsite #dashboards-visualizations img {
   max-width: none;
