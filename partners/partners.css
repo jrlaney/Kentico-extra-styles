@@ -402,3 +402,27 @@ a > img:only-child {
     max-width: 300px;
   }
 }
+blockquote {
+  position: relative;
+  margin: 0;
+  padding-left: 2.5em;
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  font-weight: 300;
+  font-size: 16px;
+}
+blockquote:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.25em;
+  left: -5em;
+  border-left: 2.5em solid transparent;
+  border-top: 2.5em solid transparent;
+  border-right: 2.5em solid #FFFFFF;
+}
+blockquote footer {
+  margin-top: 10px;
+  font-weight: 700;
+  font-style: normal;
+}

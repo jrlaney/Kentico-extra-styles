@@ -209,3 +209,30 @@
         }
     }
 }
+
+blockquote {
+    position: relative;
+    margin: 0;
+    padding-left: 2.5em;
+    font-family: @myriad-pro;
+    line-height: @line-height;
+    font-weight: @light;
+    
+    // default
+    font-size: 16px;
+    
+    &:before {
+        content: '';
+        display: block;
+        .position(absolute, .25em, -5em);
+        border-left: 2.5em solid transparent;
+        border-top: 2.5em solid transparent;
+        border-right: 2.5em solid @white;
+    }
+    
+    footer {
+        margin-top: @base-spacing / 2;
+        font-weight: @bold;
+        font-style: normal;
+    }
+}
