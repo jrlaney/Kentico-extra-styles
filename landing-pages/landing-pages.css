@@ -118,6 +118,9 @@ a > img:only-child {
 .landing-page.mobile #hero.background-image {
   background-image: url('/Strategy/media/images/common/banners/mobile.jpg');
 }
+.landing-page.features.embedded-analytics {
+  background-image: url('/getmedia/6e625b85-56e3-4ac6-a4d9-7a1b216679f7/embedded-analytics');
+}
 .landing-page.solutions.retail .hero.background-image {
   background-image: url('/Strategy/media/images/solutions/hero-backgrounds/solutions_retail_hero-banner-bkg.jpg');
 }
