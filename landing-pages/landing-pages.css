@@ -139,8 +139,11 @@ a > img:only-child {
 .landing-page.education #hero.background-image {
   background-image: url('/getmedia/d12af49b-de8e-4532-a199-f7a33f36dbf3/education');
 }
-.landing-page.academics #hero.background-image {
-  background-image: url('/getmedia/d4b9af9c-74d8-4b7c-8e41-cb991cb66387/jumpstart');
+.landing-page.academics.students #hero.background-image {
+  background-image: url('/getmedia/4789f7ca-6699-4c17-b7fa-ae092e9de135/students');
+}
+.landing-page.academics.instructors #hero.background-image {
+  background-image: url('/getmedia/3452a3b2-0530-426c-b6d0-08f8230c934b/instructors');
 }
 .landing-page.resource .hero.background-image {
   background-image: url('/Strategy/media/images/free-trial/desktop-trial_top-banner-bkg-old.jpg');
