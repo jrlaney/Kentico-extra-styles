@@ -163,6 +163,81 @@ a > img:only-child {
 #container-store.landing-page .hero.background-image {
   background-image: url('/Strategy/media/images/landing-pages/solution-lp/container-store_banner.jpg');
 }
+.angles-canvas {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.angles-canvas .angle {
+  display: block;
+  width: auto;
+  position: absolute;
+  right: 0;
+  fill-rule: evenodd;
+}
+.angles-canvas .angle.top {
+  height: 45%;
+  top: 0;
+  opacity: .5;
+}
+@media only screen and (max-width: 767px) {
+  .angles-canvas .angle.top {
+    display: none;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .angles-canvas .angle.top {
+    height: 60%;
+  }
+}
+.angles-canvas .angle.bottom {
+  height: 80%;
+  bottom: 0;
+  opacity: .6;
+}
+@media only screen and (max-width: 767px) {
+  .angles-canvas .angle.bottom {
+    display: none;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .angles-canvas .angle.bottom {
+    height: 110%;
+  }
+}
+.angles-canvas.red .angle {
+  fill: #D9232E;
+}
+.angles-canvas.blue .angle {
+  fill: #4789A3;
+}
+.angles-canvas.navy-blue .angle {
+  fill: #11566F;
+}
+.angles-canvas.orange .angle {
+  fill: #FF9100;
+}
+.angles-canvas.green .angle {
+  fill: #68AA00;
+}
+.angles-canvas.gray .angle {
+  fill: #CCCCCC;
+}
+.angles-canvas.light-gray .angle {
+  fill: #f2f2f2;
+}
+.angles-canvas.dark-gray .angle {
+  fill: #999999;
+}
+.angles-canvas.black .angle {
+  fill: #333333;
+}
+.angles-canvas.white .angle {
+  fill: #FFFFFF;
+}
 #health-score-poor {
   width: 120px;
   height: 120px;

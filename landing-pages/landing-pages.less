@@ -88,6 +88,49 @@
 
 
 
+// BACKGROUNDS WITH ANGLES
+
+.angles-canvas {
+    position: absolute !important;
+    top: 0; left: 0; right: 0; bottom: 0;
+    overflow: hidden;
+    
+    .angle {
+        display: block;
+        width: auto;
+        .position(absolute, @right:0);
+        fill-rule: evenodd;
+        
+        &.top {
+            @media @small-only { display: none; }
+            height: 45%;
+            @media @large { height: 60%; }
+            top: 0;
+            opacity: .5;
+        }
+        &.bottom {
+            @media @small-only { display: none; }
+            height: 80%;
+            @media @large { height: 110%; }
+            bottom: 0;
+            opacity: .6;
+        }
+    }
+    
+    // colors
+    .loop-colors(@i) when (@i > 0) {
+        .loop-colors(@i - 1);
+
+        @color-class: extract(@color-classes, @i);
+        @color: extract(@colors, @i);
+
+        &.@{color-class} .angle { fill: @color; }
+    }
+    .loop-colors(length(@color-classes));
+}
+
+
+
 // GRAPHS
 
 #health-score-poor {
