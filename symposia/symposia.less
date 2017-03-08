@@ -5,52 +5,46 @@
 ==========================================================================*/
 /*mit it up styles*/
 #mix-symposia {overflow:hidden;}
-#mix-symposia .grid-item {display:none;}
+#mix-symposia .grid-item {display:none; position:relative; z-index:1;}
 .mix-filters {position:relative;}
 .mix-filters .filter {
-  display:block; position:relative;
-  text-transform:uppercase;
-  cursor:pointer;
-  background-color:#f2f2f2;
-  padding:10px; margin-bottom:10px;
-  font-family:@myriad-pro;
-  font-style:normal;
-  font-weight:300;
-  font-size:18px; line-height:20px;
-  color:#999999;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-  box-sizing: border-box;
-    -webkit-transition:all 0.2s ease-out;
-    -moz-transition:all 0.2s ease-out;
-    -o-transition:all 0.2s ease-out;
-  transition:all 0.2s ease-out;
+    display:block; position:relative;
+    text-transform:uppercase;
+    cursor:pointer;
+    background-color:#f2f2f2;
+    padding:10px; margin-bottom:10px;
+    font-family:@myriad-pro;
+    font-style:normal;
+    font-weight:300;
+    font-size:18px; line-height:20px;
+    color:#999999;
+    .transition;
 }
 .mix-filters .filter:hover {color:#D9232E;}
 .mix-filters .filter.active {color:#ffffff; background-color:#D9232E;}
 
 /*hero banner*/
 .symposium-banner {
-  position:relative;
-  background-color:#333333;
-  overflow:hidden;
-  background-image:url(/getmedia/b03015fc-cbe0-4634-b210-68011851ad81/symposia);
+    position:relative; z-index:10;
+    background-color:#333333;
+    overflow:hidden;
+    background-image:url(/getmedia/b03015fc-cbe0-4634-b210-68011851ad81/symposia);
 }
 .symposium-banner.overview .container {padding-bottom:110px;}
 .symposium-banner .scrolldown {
-  position:absolute;
-  bottom:30px; left:50%;
-  margin-left:-100px;
-  width:200px;
-  padding:0 0 30px 0;
-  background:url(/Strategy/media/images/common/icons/icon_scrolldown_white.png) no-repeat bottom center transparent;
-  font-family:"myriad-pro-n4","myriad-pro",Helvetica,Arial,sans-serif;
-  font-style:normal;
-  font-weight:400;
-  font-size:16px; line-height:20px;
-  .uppercase;
-  color:#ffffff;
-  text-align:center;
+    position:absolute;
+    bottom:30px; left:50%;
+    margin-left:-100px;
+    width:200px;
+    padding:0 0 30px 0;
+    background:url(/Strategy/media/images/common/icons/icon_scrolldown_white.png) no-repeat bottom center transparent;
+    font-family:@myriad-pro;
+    font-style:normal;
+    font-weight:400;
+    font-size:16px; line-height:20px;
+    .uppercase;
+    color:#ffffff;
+    text-align:center;
 }
 
 /*----overview page--*/

@@ -7,6 +7,8 @@
 }
 #mix-symposia .grid-item {
   display: none;
+  position: relative;
+  z-index: 1;
 }
 .mix-filters {
   position: relative;
@@ -25,13 +27,8 @@
   font-size: 18px;
   line-height: 20px;
   color: #999999;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
 }
 .mix-filters .filter:hover {
   color: #D9232E;
@@ -43,6 +40,7 @@
 /*hero banner*/
 .symposium-banner {
   position: relative;
+  z-index: 10;
   background-color: #333333;
   overflow: hidden;
   background-image: url(/getmedia/b03015fc-cbe0-4634-b210-68011851ad81/symposia);
@@ -58,7 +56,7 @@
   width: 200px;
   padding: 0 0 30px 0;
   background: url(/Strategy/media/images/common/icons/icon_scrolldown_white.png) no-repeat bottom center transparent;
-  font-family: "myriad-pro-n4", "myriad-pro", Helvetica, Arial, sans-serif;
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
