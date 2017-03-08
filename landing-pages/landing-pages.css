@@ -108,60 +108,68 @@ a > img:only-child {
 .landing-page .background-image.overlay .form-col {
   color: #333333;
 }
-.landing-page .hero.background-image,
-.landing-page #hero.background-image {
+#hero.background-image {
   background-image: url('/getmedia/68437a18-5129-4e1d-b6ab-4da328d490ec/microstrategy-10');
 }
-.landing-page.desktop .hero.background-image {
-  background-image: url('/getmedia/97a4b0f1-a811-45f4-b556-272f87f183ed/desktop');
-}
-.landing-page.mobile #hero.background-image {
-  background-image: url('/getmedia/3860d01d-5f68-4830-9ce0-024ce4b75ded/mobile');
-}
-.landing-page.features.embedded-analytics #hero.background-image {
-  background-image: url('/getmedia/6e625b85-56e3-4ac6-a4d9-7a1b216679f7/embedded-analytics');
-}
-.landing-page.solutions.retail #hero.background-image {
-  background-image: url('/getmedia/389bacbd-e868-44d9-a0df-c757fe7bdc24/retail');
-}
-.landing-page.solutions.banking #hero.background-image {
-  background-image: url(': /getmedia/d873f654-bfff-4f52-8713-7aebe2d66bc8/banking');
-}
-.landing-page.solutions.sales #hero.background-image {
-  background-image: url('/getmedia/e5a10e33-8f00-48ed-be2f-2940a0bec304/sales');
-}
-.landing-page.solutions.healthcare #hero.background-image {
-  background-image: url('/getmedia/e739b77d-9271-4e19-a755-463250e873ba/healthcare');
-}
-.landing-page.solutions.manufacturing .hero.background-image {
-  background-image: url('/Strategy/media/images/solutions/hero-backgrounds/solutions_manufacturing_hero-banner-bkg.jpg');
-}
-.landing-page.solutions.higher-education #hero.background-image {
-  background-image: url('/Strategy/media/images/common/banners/higher-education.jpg');
-}
-.landing-page.competitors #hero.background-image {
+.competitors #hero.background-image {
   background-image: url('/getmedia/15396046-3ebb-40b8-9c9e-30627ddf54ef/analytics-dashboard-on-glass-desk');
 }
-.landing-page.education #hero.background-image {
+.health-assessment #hero.background-image {
+  background-image: url('/getmedia/363276df-682e-42e4-9fcc-7621ebc50878/laptop-on-desk-with-espresso-and-sketchbook');
+}
+.education #hero.background-image {
   background-image: url('/getmedia/d12af49b-de8e-4532-a199-f7a33f36dbf3/education');
 }
-.landing-page.academics.students #hero.background-image {
+.academics.students #hero.background-image {
   background-image: url('/getmedia/4789f7ca-6699-4c17-b7fa-ae092e9de135/students');
 }
-.landing-page.academics.instructors #hero.background-image {
+.academics.instructors #hero.background-image {
   background-image: url('/getmedia/3452a3b2-0530-426c-b6d0-08f8230c934b/instructors');
 }
-.landing-page.resource .hero.background-image {
-  background-image: url('/Strategy/media/images/free-trial/desktop-trial_top-banner-bkg-old.jpg');
+.desktop #hero.background-image {
+  background-image: url('/getmedia/97a4b0f1-a811-45f4-b556-272f87f183ed/desktop');
 }
-.landing-page.health-assessment .hero.background-image {
-  background-image: url('/Strategy/media/images/services-support/banner_beta-program-bkg.jpg');
+.analytics #hero.background-image {
+  background-image: url('/getmedia/98e213c0-439c-4450-b1b8-ff71bafc1ec3/analytics');
 }
-.landing-page section#symposium {
+.mobile #hero.background-image {
+  background-image: url('/getmedia/3860d01d-5f68-4830-9ce0-024ce4b75ded/mobile');
+}
+.cloud #hero.background-image {
+  background-image: url('/getmedia/35ab5009-ad93-4516-8b9a-071f5799712d/cloud');
+}
+.data-discovery #hero.background-image {
+  background-image: url('/getmedia/47f7bd5d-d2bb-45cd-93cc-ee69b309fb05/data-discovery');
+}
+.embedded-analytics #hero.background-image {
+  background-image: url('/getmedia/6e625b85-56e3-4ac6-a4d9-7a1b216679f7/embedded-analytics');
+}
+.retail #hero.background-image {
+  background-image: url('/getmedia/389bacbd-e868-44d9-a0df-c757fe7bdc24/retail');
+}
+.banking #hero.background-image {
+  background-image: url('/getmedia/d873f654-bfff-4f52-8713-7aebe2d66bc8/banking');
+}
+.sales #hero.background-image {
+  background-image: url('/getmedia/e5a10e33-8f00-48ed-be2f-2940a0bec304/sales');
+}
+.healthcare #hero.background-image {
+  background-image: url('/getmedia/e739b77d-9271-4e19-a755-463250e873ba/healthcare');
+}
+.manufacturing #hero.background-image {
+  background-image: url('/getmedia/20f97917-db4e-40eb-89b2-f09c2d48b1ba/manufacturing');
+}
+.higher-education #hero.background-image {
+  background-image: url('/getmedia/6880d700-f8b3-4f81-9539-45c1e30f15a8/higher-education');
+}
+#the-container-store #hero.background-image {
+  background-image: url('/getmedia/584f0faf-301a-48a4-81aa-ea07eaee1066/the-container-store');
+}
+#tableau #hero.background-image {
+  background-image: url('');
+}
+section#symposium {
   background-image: url('/getmedia/b03015fc-cbe0-4634-b210-68011851ad81/symposia');
-}
-#container-store.landing-page .hero.background-image {
-  background-image: url('/Strategy/media/images/landing-pages/solution-lp/container-store_banner.jpg');
 }
 .angles-canvas {
   position: absolute !important;
