@@ -721,18 +721,18 @@ select {
   line-height: 25px;
 }
 #resource-list a.card:visited:not(:hover):not(:active) {
-  border-top-color: #cccccc;
+  border-top-color: #CCCCCC;
 }
 #resource-list a.card:visited:not(:hover):not(:active) .card-corner,
 #resource-list a.card:visited:not(:hover):not(:active) .line {
-  background-color: #cccccc;
+  background-color: #CCCCCC;
 }
 #resource-list a.card:visited:not(:hover):not(:active) .resource-title,
 #resource-list a.card:visited:not(:hover):not(:active) .resource-description,
 #resource-list a.card:visited:not(:hover):not(:active) .resource-type,
 #resource-list a.card:visited:not(:hover):not(:active) .text-block,
 #resource-list a.card:visited:not(:hover):not(:active) .button {
-  color: #cccccc;
+  color: #CCCCCC;
 }
 /*=======================================================================
 =            Increasing resolution Media Queries           =

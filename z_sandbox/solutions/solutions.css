@@ -36,11 +36,11 @@ ol.line-break {
 }
 ul,
 ol {
-  padding-left: 1em;
+  padding: 0 0 0 1em;
 }
 ul li,
 ol li {
-  padding-left: 1em;
+  padding: 0 0 0 1em;
   margin-bottom: 10px;
 }
 p + h1,
@@ -103,7 +103,7 @@ a > img:only-child {
 }
 .fp-controlArrow:hover,
 .fp-controlArrow:active {
-  color: #d9232e;
+  color: #D9232E;
 }
 .fp-controlArrow[style="display: none;"] {
   opacity: 0.25;
@@ -129,9 +129,9 @@ a > img:only-child {
   background: #999999 !important;
 }
 #fp-nav ul li:hover a span {
-  background: #cccccc !important;
+  background: #CCCCCC !important;
 }
 #fp-nav ul li a.active span,
 #fp-nav ul li:hover a.active span {
-  background: #d9232e !important;
+  background: #D9232E !important;
 }

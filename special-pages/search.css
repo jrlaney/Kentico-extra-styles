@@ -36,11 +36,11 @@ ol.line-break {
 }
 ul,
 ol {
-  padding-left: 1em;
+  padding: 0 0 0 1em;
 }
 ul li,
 ol li {
-  padding-left: 1em;
+  padding: 0 0 0 1em;
   margin-bottom: 10px;
 }
 p + h1,
@@ -76,7 +76,7 @@ a > img:only-child {
 }
 .results-item-title {
   margin-bottom: 10px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .results-item-title a:visited {
   color: #999999;
@@ -88,11 +88,11 @@ a > img:only-child {
   color: #999999;
 }
 .search-query {
-  font-weight: 700;
+  font-weight: 600;
   font-style: italic;
   color: #D9232E;
 }
 .total-results-number {
-  font-weight: 700;
+  font-weight: 600;
   color: #333333;
 }

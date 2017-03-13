@@ -36,11 +36,11 @@ ol.line-break {
 }
 ul,
 ol {
-  padding-left: 1em;
+  padding: 0 0 0 1em;
 }
 ul li,
 ol li {
-  padding-left: 1em;
+  padding: 0 0 0 1em;
   margin-bottom: 10px;
 }
 p + h1,
@@ -74,9 +74,9 @@ a > img:only-child {
 .blog.archive .archive-title .tag-name,
 .blog.archive .archive-title .search-query,
 .blog.archive .archive-title .author-name {
-  font-weight: 700;
+  font-weight: 600;
   font-style: italic;
-  color: #d9232e;
+  color: #D9232E;
 }
 .blog.archive .post {
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -107,7 +107,7 @@ a > img:only-child {
 }
 .blog.single .post h4,
 .blog.single .post h5 {
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.01em;
 }
 .blog.single .post p,
@@ -159,7 +159,7 @@ a > img:only-child {
 }
 .blog.single .post .post-summary a,
 .blog.single .post .post-cta a {
-  font-weight: 700;
+  font-weight: 600;
 }
 .blog.single .post .post-summary:after {
   content: "";
@@ -167,7 +167,7 @@ a > img:only-child {
   width: 50px;
   height: 5px;
   margin: 40px auto 0 auto;
-  background-color: #d9232e;
+  background-color: #D9232E;
 }
 .blog.single .post .post-cta:before {
   content: "";
@@ -175,7 +175,7 @@ a > img:only-child {
   width: 50px;
   height: 5px;
   margin: 0 auto 40px auto;
-  background-color: #cccccc;
+  background-color: #CCCCCC;
 }
 .blog.single .post .post-tags {
   font-size: 12px;
@@ -190,12 +190,12 @@ a > img:only-child {
 }
 .blog.single .post .post-author .author-title {
   margin-bottom: 10px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .blog.single .post .post-author .author-photo {
   width: 120px;
   height: 120px;
-  border: 5px solid #cccccc;
+  border: 5px solid #CCCCCC;
 }
 .blog.single .post .post-author .author-bio {
   font-size: 14px;
@@ -214,7 +214,7 @@ a > img:only-child {
 .blog.single #comments .comment {
   margin: 20px 0;
   padding: 30px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -259,7 +259,7 @@ a > img:only-child {
 }
 .blog.single #comments .comment-header .CommentUserName {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .blog.single #comments .comment-header .CommentDate {
   font-size: 15px;
@@ -306,7 +306,7 @@ a > img:only-child {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #d9232e;
+  color: #D9232E;
 }
 .blog.single #comments .comment-form-container {
   margin-top: 40px;
@@ -317,7 +317,7 @@ a > img:only-child {
 }
 .blog.single #comments .comment-form-title {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: none;
   letter-spacing: normal;
 }
@@ -326,10 +326,10 @@ a > img:only-child {
   margin-top: 20px;
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 12px;
-  color: #68aa00;
+  color: #68AA00;
 }
 .blog.single #comments #comment-form .error-message {
-  color: #d9232e;
+  color: #D9232E;
 }
 .blog.single #comments .form-control-error {
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -337,7 +337,7 @@ a > img:only-child {
   font-weight: 400;
   text-transform: none;
   letter-spacing: normal;
-  color: #d9232e;
+  color: #D9232E;
 }
 .blog #hero {
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -386,17 +386,17 @@ a > img:only-child {
   margin: 0 15px 0 0;
   width: 40px;
   height: 40px;
-  border: 2px solid #cccccc;
+  border: 2px solid #CCCCCC;
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
 }
 .blog #hero .author-photo:hover,
 .blog #hero .author-photo:active {
-  border-color: #ffffff;
+  border-color: #FFFFFF;
 }
 .blog #hero .author-byline {
   letter-spacing: .02em;
-  color: #cccccc;
+  color: #CCCCCC;
 }
 .blog #hero .author-name {
   display: inline-block;
@@ -404,19 +404,19 @@ a > img:only-child {
   padding-bottom: 2px;
   border-bottom: 1px solid transparent;
   font-weight: 400;
-  color: #ffffff;
+  color: #FFFFFF;
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
 }
 .blog #hero .author-name:hover,
 .blog #hero .author-name:active {
-  border-color: #ffffff;
+  border-color: #FFFFFF;
 }
 .blog #hero .post-date {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #cccccc;
+  color: #CCCCCC;
 }
 .blog #hero .featured-post {
   display: -webkit-flex;
@@ -526,7 +526,7 @@ a > img:only-child {
   #section-navigation:hover:after,
   #section-navigation:active:after,
   #section-navigation:focus:after {
-    color: #cccccc;
+    color: #CCCCCC;
   }
 }
 #section-navigation-menu {
@@ -669,7 +669,7 @@ a > img:only-child {
     max-height: 100vh;
     z-index: 100;
     padding: 20px 15px;
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid #CCCCCC;
   }
 }
 .section-title {
@@ -683,7 +683,7 @@ a > img:only-child {
   .section-title {
     margin: 0 1em 0 0;
     padding: 0 1em 0 0;
-    border-right: 1px solid #cccccc;
+    border-right: 1px solid #CCCCCC;
   }
 }
 .section-title:hover,
@@ -758,6 +758,6 @@ a > img:only-child {
 .is-sticky #section-navigation {
   left: 0;
   right: 0;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border-bottom: 1px solid #999999;
 }

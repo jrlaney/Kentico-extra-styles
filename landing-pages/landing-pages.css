@@ -36,11 +36,11 @@ ol.line-break {
 }
 ul,
 ol {
-  padding-left: 1em;
+  padding: 0 0 0 1em;
 }
 ul li,
 ol li {
-  padding-left: 1em;
+  padding: 0 0 0 1em;
   margin-bottom: 10px;
 }
 p + h1,
@@ -165,9 +165,6 @@ a > img:only-child {
 #the-container-store #hero.background-image {
   background-image: url('/getmedia/584f0faf-301a-48a4-81aa-ea07eaee1066/the-container-store');
 }
-#tableau #hero.background-image {
-  background-image: url('');
-}
 section#symposium {
   background-image: url('/getmedia/b03015fc-cbe0-4634-b210-68011851ad81/symposia');
 }
@@ -247,73 +244,73 @@ section#symposium {
   fill: #FFFFFF;
 }
 #health-score-poor {
-  width: 120px;
-  height: 120px;
+  width: 60px;
+  height: 60px;
   background: #CCCCCC;
 }
 #health-score-poor .circle .mask,
 #health-score-poor .circle .fill {
-  width: 120px;
-  height: 120px;
+  width: 60px;
+  height: 60px;
 }
 #health-score-poor .circle .mask {
-  clip: rect(0px, 120px, 120px, 60px);
+  clip: rect(0px, 60px, 60px, 30px);
 }
 #health-score-poor .circle .mask .fill {
-  clip: rect(0px, 60px, 120px, 0px);
+  clip: rect(0px, 30px, 60px, 0px);
   background: #c31f29;
 }
 #health-score-poor .inset {
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   top: 10px;
   left: 10px;
   background: #f2f2f2;
 }
 #health-score-fair {
-  width: 120px;
-  height: 120px;
+  width: 60px;
+  height: 60px;
   background: #CCCCCC;
 }
 #health-score-fair .circle .mask,
 #health-score-fair .circle .fill {
-  width: 120px;
-  height: 120px;
+  width: 60px;
+  height: 60px;
 }
 #health-score-fair .circle .mask {
-  clip: rect(0px, 120px, 120px, 60px);
+  clip: rect(0px, 60px, 60px, 30px);
 }
 #health-score-fair .circle .mask .fill {
-  clip: rect(0px, 60px, 120px, 0px);
+  clip: rect(0px, 30px, 60px, 0px);
   background: #FF9100;
 }
 #health-score-fair .inset {
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   top: 10px;
   left: 10px;
   background: #f2f2f2;
 }
 #health-score-good {
-  width: 120px;
-  height: 120px;
+  width: 60px;
+  height: 60px;
   background: #CCCCCC;
 }
 #health-score-good .circle .mask,
 #health-score-good .circle .fill {
-  width: 120px;
-  height: 120px;
+  width: 60px;
+  height: 60px;
 }
 #health-score-good .circle .mask {
-  clip: rect(0px, 120px, 120px, 60px);
+  clip: rect(0px, 60px, 60px, 30px);
 }
 #health-score-good .circle .mask .fill {
-  clip: rect(0px, 60px, 120px, 0px);
+  clip: rect(0px, 30px, 60px, 0px);
   background: #68AA00;
 }
 #health-score-good .inset {
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   top: 10px;
   left: 10px;
   background: #f2f2f2;

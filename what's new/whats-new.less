@@ -82,6 +82,26 @@ section.view {
     }
 }
 
+#integrated-qr-scanner {
+    
+    img {
+        display: block;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    @media @xlarge {
+        
+        img {
+            opacity: 0;
+            .transition(.5s);
+        }
+        &.passed-view img {
+            opacity: 1;
+        }
+    }
+}
+
 #restful-api-diagram {
     text-align: center;
     font-family: @myriad-pro;

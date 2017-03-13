@@ -36,11 +36,11 @@ ol.line-break {
 }
 ul,
 ol {
-  padding-left: 1em;
+  padding: 0 0 0 1em;
 }
 ul li,
 ol li {
-  padding-left: 1em;
+  padding: 0 0 0 1em;
   margin-bottom: 10px;
 }
 p + h1,
@@ -130,7 +130,7 @@ a > img:only-child {
 }
 .gridder-show .course-description {
   font-weight: 300;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .gridder-padding {
   position: relative;
@@ -229,20 +229,20 @@ a > img:only-child {
 .course-details {
   text-transform: uppercase;
   letter-spacing: 0.01em;
-  color: #cccccc;
+  color: #CCCCCC;
 }
 .course-details * {
   font-size: 12px;
 }
 .course-details a {
-  color: #cccccc;
+  color: #CCCCCC;
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
 }
 .course-details a:hover,
 .course-details a:active,
 .course-details a:focus {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .course-details sup.help {
   display: inline-block;
@@ -258,27 +258,27 @@ a > img:only-child {
   text-align: center;
   width: 1.5em;
   height: 1.5em;
-  color: #ffffff;
+  color: #FFFFFF;
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
 }
 .course-details sup.help:hover,
 .course-details sup.help:active,
 .course-details sup.help:focus {
-  background: #d9232e;
+  background: #D9232E;
 }
 .course-details sup.help:hover > a,
 .course-details sup.help:active > a,
 .course-details sup.help:focus > a {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .course-number {
   display: inline-block;
   margin-bottom: 10px;
   padding: 4px 7px;
-  background: #d9232e;
-  color: #ffffff;
-  font-weight: 700;
+  background: #D9232E;
+  color: #FFFFFF;
+  font-weight: 600;
 }
 .course-price-option {
   padding: 5px 0;
@@ -289,7 +289,7 @@ a > img:only-child {
 @media only screen and (max-width: 1199px) {
   .course-information {
     padding-bottom: 10px !important;
-    border-bottom: 2px solid #cccccc;
+    border-bottom: 2px solid #CCCCCC;
   }
 }
 .sessions {
@@ -305,7 +305,7 @@ a > img:only-child {
 .session {
   font-size: 14px;
   font-weight: 400;
-  color: #ffffff;
+  color: #FFFFFF;
   border-bottom: 1px dashed #555555;
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
@@ -319,7 +319,7 @@ a > img:only-child {
 }
 .session-language,
 .session-location {
-  font-weight: 700;
+  font-weight: 600;
 }
 @media only screen and (max-width: 767px) {
   .sessions i.icon {
@@ -351,5 +351,5 @@ a > img:only-child {
   margin-bottom: 10px;
   font-size: 18px;
   line-height: 1.4;
-  font-weight: 700;
+  font-weight: 600;
 }

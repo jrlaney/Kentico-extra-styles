@@ -36,11 +36,11 @@ ol.line-break {
 }
 ul,
 ol {
-  padding-left: 1em;
+  padding: 0 0 0 1em;
 }
 ul li,
 ol li {
-  padding-left: 1em;
+  padding: 0 0 0 1em;
   margin-bottom: 10px;
 }
 p + h1,
@@ -283,7 +283,7 @@ a > img:only-child {
   color: #FFFFFF;
 }
 .gridder-expanded-content .partner-name {
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -297,7 +297,7 @@ a > img:only-child {
 .gridder-expanded-content .partner-category-title {
   font-size: 16px;
   line-height: 1.4;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #999999;
@@ -423,6 +423,6 @@ blockquote:before {
 }
 blockquote footer {
   margin-top: 10px;
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
 }

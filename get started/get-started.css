@@ -36,11 +36,11 @@ ol.line-break {
 }
 ul,
 ol {
-  padding-left: 1em;
+  padding: 0 0 0 1em;
 }
 ul li,
 ol li {
-  padding-left: 1em;
+  padding: 0 0 0 1em;
   margin-bottom: 10px;
 }
 p + h1,
@@ -72,7 +72,7 @@ a > img:only-child {
 }
 #hero.background-image h1,
 #hero.background-video h1 {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .free-trial #hero.background-image {
   background-image: url('/Strategy/media/images/products/analytics/2015/free-trial_top-banner-bkg.jpg');
@@ -128,20 +128,20 @@ ul.triangle-list > li:before {
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
-  border-right: 10px solid #d9232e;
+  border-right: 10px solid #D9232E;
   border-top: 10px solid transparent;
 }
 ul.triangle-list.orange > li:before {
-  border-right-color: #ff9100;
+  border-right-color: #FF9100;
 }
 ul.triangle-list.green > li:before {
-  border-right-color: #68aa00;
+  border-right-color: #68AA00;
 }
 ul.triangle-list.blue > li:before {
-  border-right-color: #4789a3;
+  border-right-color: #4789A3;
 }
 ul.triangle-list.navy-blue > li:before {
-  border-right-color: #11566f;
+  border-right-color: #11566F;
 }
 /*=======================================================================
 =      Main styles are for smallest screen size - larger sizes are specified in media queries          =

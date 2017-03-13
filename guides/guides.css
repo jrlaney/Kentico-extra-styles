@@ -36,11 +36,11 @@ ol.line-break {
 }
 ul,
 ol {
-  padding-left: 1em;
+  padding: 0 0 0 1em;
 }
 ul li,
 ol li {
-  padding-left: 1em;
+  padding: 0 0 0 1em;
   margin-bottom: 10px;
 }
 p + h1,
@@ -67,7 +67,7 @@ a > img:only-child {
   margin-bottom: 20px;
 }
 section:not(#introduction) {
-  border-bottom: 2px solid #cccccc;
+  border-bottom: 2px solid #CCCCCC;
 }
 section:not(#introduction):last-child {
   border-bottom: 0;
@@ -82,19 +82,19 @@ code.block {
   margin-bottom: 20px;
   padding: 20px;
   background-color: #333333;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 code.block:last-child {
   margin-bottom: 0;
 }
 code.block .html {
-  color: #4789a3;
+  color: #4789A3;
 }
 code.block .attribute {
-  color: #68aa00;
+  color: #68AA00;
 }
 code.block .value {
-  color: #ff9100;
+  color: #FF9100;
 }
 code.block .indent-1 {
   padding-left: 20px;
@@ -127,8 +127,8 @@ code.block .indent-10 {
   padding-left: 200px;
 }
 figure {
-  background-color: #ffffff;
-  border: 5px solid #cccccc;
+  background-color: #FFFFFF;
+  border: 5px solid #CCCCCC;
   margin-bottom: 20px;
   padding: 20px;
 }
