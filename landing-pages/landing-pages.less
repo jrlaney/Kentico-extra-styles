@@ -138,6 +138,59 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
 
 
 
+// SHAPES
+
+.square {
+    .display(flex);
+    .justify-content(center);
+    .align-items(center);
+    .margin-x(auto);
+    margin-bottom: @base-spacing;
+    &:last-child { margin-bottom: 0; }
+    
+    // sizes
+    .loop-sizes(@i) when (@i > 0) {
+        .loop-sizes(@i - 1);
+
+        @size-class: extract(@size-classes, @i);
+        @size: extract(@icon-sizes, @i);
+
+        &.@{size-class} {
+            .size(@size * 2);
+            padding: @size / 2;
+            font-size: @size;
+        }
+    }
+    .loop-sizes(length(@size-classes));
+}
+
+.circle {
+    .display(flex);
+    .justify-content(center);
+    .align-items(center);
+    .round;
+    .margin-x(auto);
+    margin-bottom: @base-spacing;
+    &:last-child { margin-bottom: 20px; }
+    
+    // sizes
+    .loop-sizes(@i) when (@i > 0) {
+        .loop-sizes(@i - 1);
+
+        @size-class: extract(@size-classes, @i);
+        @size: extract(@icon-sizes, @i);
+
+        &.@{size-class} {
+            .size(@size * 2);
+            padding: @size / 2;
+            font-size: @size;
+        }
+    }
+    .loop-sizes(length(@size-classes));
+}
+
+
+
 
 // LEAD GEN FORMS
 
