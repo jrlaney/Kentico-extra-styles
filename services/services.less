@@ -2,6 +2,7 @@
 @import '../overrides.less';
 
 
+    ul li {padding:0;}
 
 // hero banners
 
@@ -22,10 +23,10 @@
 // support
 
 #customer-support {
-    
+
     #support-packages thead th {
         .flex-direction(column);
-        
+
         @media @small-only {
             padding: 20px 10px;
         }
@@ -34,6 +35,155 @@
         }
     }
 }
+
+
+// professional services
+#bi-journey {
+    .journey-graph-mobile {
+        position:relative;
+        .time-block {
+            margin-left:20px; padding-left:40px; padding-bottom:40px;
+            border-left:2px dashed @dark-gray;
+            .text-block {margin-bottom:7.5px;}
+            .stage-item {
+                position:relative; overflow:visible;
+                margin-left:-20px;
+                font-weight:600;
+                &:after {
+                    content:'';
+                    display:block; position:absolute; z-index:1;
+                    height:15px; width:15px;
+                    background-color:@red;
+                    top:-15px; left:-29px;
+                    .round;
+                }
+            }
+            .stage-tag {margin-left:-20px;}
+        }
+        //arrow and the bottom of the dashed line
+        &:before {
+            content:'';
+            display:block; position:absolute; z-index:1;
+            left:6px; bottom:-10px;
+            width:0; height:0;
+            border-left:15px solid transparent;
+            border-right:15px solid transparent;
+
+            border-top:15px solid @dark-gray;
+        }
+    }
+
+
+    .journey-graph {
+        position:relative;
+        padding:0 0 0 36px;
+        .label {
+            display:block; width:auto;
+            padding:10px 0;
+            font-family:@myriad-pro;
+            font-size:16px; line-height:1em;
+            white-space:nowrap;
+            .uppercase;
+            font-weight:600;
+            color:@dark-gray;
+        }
+        .y-axis-bar {
+            position:relative;
+            .label.y-axis {
+                position:absolute; top:50%; left:-18px; .transform(translateX(-50%) translateY(-50%) rotate(-90deg));
+                @media @xlarge {left:20px;}
+            }
+        }
+        .x-axis-bar {
+            position:relative; overflow:visible;
+            border-top:2px dashed @dark-gray;
+            .grid-item {
+                position:relative; overflow:visible;
+                &:after {
+                    content:'';
+                    display:block; position:absolute; z-index:1;
+                    height:15px; width:15px;
+                    background-color:@red;
+                    bottom:100%; left:50%; margin-bottom:-5.5px; margin-left:-7.5px;
+                    .round;
+                }
+            }
+            &:before {
+                content:'';
+                display:block; position:absolute; z-index:1;
+                right:-16px; top:-16px;
+                width:0; height:0;
+                border-top:15px solid transparent;
+                border-bottom:15px solid transparent;
+
+                border-left:15px solid @dark-gray;
+            }
+        }
+        .line.thick {height:30px; display:block; width:auto; margin-top:5px;}
+    }
+}
+
+#ps-offerings {
+    #mix-wrapper {
+        overflow:hidden;
+        .grid-item {display:none; position:relative; z-index:1;}
+    }
+    .mix-filters {
+        position:relative;
+        .filter {
+            display:block; position:relative;
+            cursor:pointer;
+            background-color:@white-smoke;
+            padding:10px; margin-bottom:10px;
+            font-family:@myriad-pro;
+            .uppercase;
+            font-style:normal;
+            font-size:18px; line-height:20px;
+            color:@dark-gray;
+            .transition;
+            &:hover {color:@black;}
+            &.active {color:@white; background-color:@black;}
+            &.red {
+                &:hover {color:@red;}
+                &.active {color:@white; background-color:@red;}
+            }
+            &.orange {
+                &:hover {color:@orange;}
+                &.active {color:@white; background-color:@orange;}
+            }
+            &.green {
+                &:hover {color:@green;}
+                &.active {color:@white; background-color:@green;}
+            }
+            &.blue {
+                &:hover {color:@blue;}
+                &.active {color:@white; background-color:@blue;}
+            }
+            &.navy-blue {
+                &:hover {color:@navy-blue;}
+                &.active {color:@white; background-color:@navy-blue;}
+            }
+            @media @medium {
+                &.active:before {
+                    position:absolute; display:block;
+                    content:"";
+                    bottom:-10px; left:50%; margin-left:-5px;
+                    width:0; height:0;
+                    border-left:9px solid transparent;
+                    border-right:9px solid transparent;
+                    border-top:10px solid @black;
+                    .transition;
+                }
+                &.red.active:before {border-top-color:@red;}
+                &.orange.active:before {border-top-color:@orange;}
+                &.green.active:before {border-top-color:@green;}
+                &.blue.active:before {border-top-color:@blue;}
+                &.navy-blue.active:before {border-top-color:@navy-blue;}
+            }
+        }
+    }
+}
+
 
 // for older pages
 
