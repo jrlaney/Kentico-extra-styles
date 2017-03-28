@@ -34,22 +34,9 @@ ul.line-break,
 ol.line-break {
   margin-top: -20px;
 }
-ul,
-ol {
-  padding: 0 0 0 1em;
-}
 ul li,
 ol li {
-  padding: 0 0 0 1em;
   margin-bottom: 10px;
-}
-p + h1,
-p + h2,
-p + h3,
-p + h4,
-p + h5,
-p + h6 {
-  margin-top: 30px;
 }
 .line {
   margin-bottom: 20px;
@@ -72,6 +59,7 @@ a > img:only-child {
   line-height: 22px;
   text-transform: uppercase;
   letter-spacing: 5px;
+  font-weight: 400;
   color: #D9232E;
 }
 #capabilities section.no-padding [class*="col"] {
@@ -1612,6 +1600,74 @@ a > img:only-child {
     opacity: 1;
     -webkit-transform: translateY(0);
     transform: translateY(0);
+  }
+}
+#transactions #hero .img-col {
+  position: relative;
+}
+#transactions #hero .img-col .ipad {
+  z-index: 0;
+  width: 150%;
+  float: right;
+  margin-right: 15%;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 980px) {
+  #transactions #hero .img-col .ipad {
+    margin-bottom: 30px;
+  }
+}
+#transactions #hero .img-col .iphone {
+  position: absolute;
+  width: 35%;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1;
+}
+@media only screen and (max-width: 767px) {
+  #transactions #take-action .iphone {
+    position: relative;
+    z-index: 1;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: -70%;
+  }
+  #transactions #take-action .ipad {
+    position: relative;
+    z-index: 0;
+    width: 120%;
+  }
+  #transactions #take-action .ipad.left {
+    float: right;
+    margin-right: 50%;
+  }
+  #transactions #take-action .ipad.right {
+    float: left;
+    margin-left: 50%;
+    margin-top: -70%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #transactions #take-action {
+    padding-top: 0;
+  }
+  #transactions #take-action:before {
+    z-index: 1;
+  }
+  #transactions #take-action .flex-row {
+    z-index: 0;
+  }
+  #transactions #take-action .ipad {
+    z-index: 0;
+    width: 150%;
+  }
+  #transactions #take-action .ipad.left {
+    float: right;
+    margin-bottom: 20%;
+  }
+  #transactions #take-action .ipad.right {
+    float: left;
+    margin-bottom: 50%;
   }
 }
 /* customer thumb - dark to light background on hover (set bkg img on html) */
