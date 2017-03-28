@@ -58,3 +58,6 @@ img:last-child {
 a > img:only-child {
   margin-bottom: 20px;
 }
+#product-packaging #hero.background-image {
+  background-image: url('/getmedia/2838b8b1-25b0-43f6-824f-142739031279/two-monitors-wood-desk');
+}
