@@ -98,6 +98,7 @@ a > img:only-child {
 }
 #to-top.hidden {
   opacity: 0;
+  visibility: hidden;
 }
 #to-top .label {
   display: -webkit-flex;
