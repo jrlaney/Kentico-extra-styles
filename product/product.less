@@ -2,3 +2,56 @@
 @import '../overrides.less';
 
 #product-packaging #hero.background-image { background-image: url('/getmedia/2838b8b1-25b0-43f6-824f-142739031279/two-monitors-wood-desk'); }
+
+
+
+
+// explore nav
+
+#explore {
+    
+    .ratio {
+        max-height: 300px;
+    }
+    .section-name {
+        font-size: 18px;
+        @media @medium { font-size: 16px; }
+        @media @large { font-size: 21px; }
+        line-height: @line-height;
+        font-family: @myriad-pro;
+        .uppercase;
+    }
+}
+
+#to-top {
+    position: fixed;
+    bottom: @column-gutter / 2; right: @column-gutter / 2;
+    @media @medium { bottom: @column-gutter; right: @column-gutter; }
+    @media @large { bottom: @column-gutter + @column-gutter / 2; right: @column-gutter + @column-gutter / 2; }
+    z-index: 1;
+    .transition(.4s);
+    
+    &.hidden {
+        opacity: 0;
+    }
+    
+    .label {
+        .display(flex);
+        .align-items(center);
+        height: extract(@icon-sizes, 3) * 2;
+        .position(absolute, @right: (extract(@icon-sizes, 3) * 2));
+        opacity: 0;
+        .transition;
+        text-align: center;
+        background-color: darken(@dark-gray, @darken);
+        font-size: 12px;
+        font-family: @myriad-pro;
+        color: @white;
+        .uppercase;
+    }
+    
+    &:hover, &:active { .label {
+        opacity: 1;
+        padding: 0 (extract(@icon-sizes, 3) / 2);
+    } }
+}

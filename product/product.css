@@ -56,3 +56,94 @@ a > img:only-child {
 #product-packaging #hero.background-image {
   background-image: url('/getmedia/2838b8b1-25b0-43f6-824f-142739031279/two-monitors-wood-desk');
 }
+#explore .ratio {
+  max-height: 300px;
+}
+#explore .section-name {
+  font-size: 18px;
+  line-height: 1.4;
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+@media only screen and (min-width: 768px) {
+  #explore .section-name {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #explore .section-name {
+    font-size: 21px;
+  }
+}
+#to-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 1;
+  -webkit-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+@media only screen and (min-width: 768px) {
+  #to-top {
+    bottom: 30px;
+    right: 30px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #to-top {
+    bottom: 45px;
+    right: 45px;
+  }
+}
+#to-top.hidden {
+  opacity: 0;
+}
+#to-top .label {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 64px;
+  position: absolute;
+  right: 64px;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+  text-align: center;
+  background-color: #8c8c8c;
+  font-size: 12px;
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.no-flexbox.flexboxtweener #to-top .label {
+  display: -ms-flexbox;
+}
+.no-flexbox.flexboxtweener #to-top .label > * {
+  display: inline-block;
+}
+.no-flexbox.no-flexboxtweener #to-top .label {
+  display: block;
+}
+.no-flexbox.no-flexboxtweener #to-top .label:before,
+.no-flexbox.no-flexboxtweener #to-top .label:after {
+  content: '';
+  display: table;
+}
+.no-flexbox.no-flexboxtweener #to-top .label:after {
+  clear: both;
+}
+.no-flexbox.no-flexboxtweener #to-top .label > * {
+  display: inline-block;
+  float: left;
+}
+.no-flexbox.flexboxtweener #to-top .label {
+  -ms-flex-align: center;
+}
+#to-top:hover .label,
+#to-top:active .label {
+  opacity: 1;
+  padding: 0 16px;
+}
