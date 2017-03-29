@@ -88,29 +88,64 @@
 
 
 
-// solutions nav
 
-#solutions-nav {
-    .position(fixed, 50%, 0);
-    .translateY(-50%);
-    z-index: 10;
+// explore nav
+
+#explore {
     
-    .solution-section-name {
+    .ratio {
+        max-height: 300px;
+    }
+    .section-name {
+        font-size: 18px;
+        @media @medium { font-size: 16px; }
+        @media @large { font-size: 21px; }
+        line-height: @line-height;
+        font-family: @myriad-pro;
+        .uppercase;
+    }
+}
+
+#to-top {
+    position: fixed;
+    bottom: @column-gutter / 2; right: @column-gutter / 2;
+    @media @medium { bottom: @column-gutter; right: @column-gutter; }
+    @media @large { bottom: @column-gutter + @column-gutter / 2; right: @column-gutter + @column-gutter / 2; }
+    z-index: 1;
+    .transition(.4s);
+    
+    &.hidden {
+        opacity: 0;
+    }
+    
+    .label {
         .display(flex);
         .align-items(center);
-        .size(0px, extract(@icon-sizes, 3) * 2);
-        .position(absolute, @left: (extract(@icon-sizes, 3) * 2));
+        height: extract(@icon-sizes, 3) * 2;
+        .position(absolute, @right: (extract(@icon-sizes, 3) * 2));
         opacity: 0;
         .transition;
-        background-color: darken(@black, @darken);
-        font-size: 14px;
+        text-align: center;
+        background-color: darken(@dark-gray, @darken);
+        font-size: 12px;
         font-family: @myriad-pro;
         color: @white;
         .uppercase;
     }
-    .icon-block:hover .solution-section-name {
-        width: auto;
+    
+    &:hover, &:active { .label {
         opacity: 1;
         padding: 0 (extract(@icon-sizes, 3) / 2);
+    } }
+}
+
+
+
+// customers
+
+#customers {
+    
+    .logo {
+        .max-size(65%, 100px);
     }
 }
