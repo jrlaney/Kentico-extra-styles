@@ -215,6 +215,12 @@ a > img:only-child {
     font-size: 21px;
   }
 }
+#explore .label {
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
 #to-top {
   position: fixed;
   bottom: 15px;
