@@ -714,6 +714,12 @@
             max-width: none;
         }
     }
+    #emm-solutions .device-mockup {
+        float:right;
+        width:150%;
+        margin-right:10%;
+        @media @large {width:120%;}
+    }
     #mobile-slider {
 
         .slide {
@@ -1076,8 +1082,27 @@
         float:right;
         margin-right:10%;
         @media @large {width:130%;}
+
+        .app-lock {
+            position:absolute;
+            width:4%;
+            right:26%; top:6%;
+            opacity:0;
+            .animation(app-lock-animation 10s 2s ease-out infinite);
+            &.left-icon {
+                right:45%;
+                .animation(app-lock-animation 10s 2.5s ease-out infinite);
+            }
+        }
     }
 }
+.keyframes(app-lock-animation;{
+    0% {opacity:0; .transform(scale(2) translateY(-10px));}
+    3% {opacity:1; .transform(scale(1) translateY(0));}
+    70% {opacity:1; .transform(scale(1) translateY(0));}
+    73% {opacity:0; .transform(translateY(10px));}
+    100% {opacity:0; .transform(translateY(10px));}
+});
 
 
 
