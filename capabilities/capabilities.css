@@ -1665,7 +1665,7 @@ a > img:only-child {
     z-index: 1;
     width: 40%;
     margin-left: 30%;
-    margin-top: -70%;
+    margin-top: -50%;
   }
   #transactions #take-action .image-row .ipad {
     position: relative;
@@ -1674,19 +1674,15 @@ a > img:only-child {
   }
   #transactions #take-action .image-row .ipad.left {
     float: right;
-    margin-right: 50%;
+    margin-right: 10%;
   }
   #transactions #take-action .image-row .ipad.right {
     float: left;
-    margin-left: 50%;
-    margin-top: -70%;
+    margin-left: 10%;
+    margin-top: -50%;
   }
 }
 @media only screen and (min-width: 768px) {
-  #transactions #take-action .image-row {
-    perspective: 1000px;
-    perspective-origin: center 75%;
-  }
   #transactions #take-action .image-row .iphone {
     width: 85%;
     margin: 0 auto;
@@ -1694,20 +1690,17 @@ a > img:only-child {
   }
   #transactions #take-action .image-row .ipad {
     z-index: 0;
-    width: 200%;
-    margin-bottom: 50px;
+    width: 170%;
   }
   #transactions #take-action .image-row .ipad.left {
     float: right;
-    margin-right: -30%;
-    -webkit-transform: rotateY(-10deg) rotateY(-5deg);
-    transform: rotateY(-10deg) rotateY(-5deg);
+    margin-right: -35%;
+    margin-bottom: 40%;
   }
   #transactions #take-action .image-row .ipad.right {
     float: left;
-    margin-left: -30%;
-    -webkit-transform: rotateY(10deg) rotateY(5deg);
-    transform: rotateY(10deg) rotateY(5deg);
+    margin-left: -35%;
+    margin-bottom: 20%;
   }
 }
 #emm #hero .ipad {
