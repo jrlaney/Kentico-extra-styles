@@ -1659,49 +1659,30 @@ a > img:only-child {
   bottom: 20px;
   z-index: 1;
 }
-@media only screen and (max-width: 767px) {
-  #transactions #take-action .image-row .iphone {
-    position: relative;
-    z-index: 1;
-    width: 40%;
-    margin-left: 30%;
-    margin-top: -50%;
-  }
-  #transactions #take-action .image-row .ipad {
-    position: relative;
-    z-index: 0;
-    width: 120%;
-  }
-  #transactions #take-action .image-row .ipad.left {
-    float: right;
-    margin-right: 10%;
-  }
-  #transactions #take-action .image-row .ipad.right {
-    float: left;
-    margin-left: 10%;
-    margin-top: -50%;
-  }
+#transactions #take-action .image-row {
+  position: relative;
 }
-@media only screen and (min-width: 768px) {
-  #transactions #take-action .image-row .iphone {
-    width: 85%;
-    margin: 0 auto;
-    z-index: 1;
-  }
-  #transactions #take-action .image-row .ipad {
-    z-index: 0;
-    width: 170%;
-  }
-  #transactions #take-action .image-row .ipad.left {
-    float: right;
-    margin-right: -35%;
-    margin-bottom: 40%;
-  }
-  #transactions #take-action .image-row .ipad.right {
-    float: left;
-    margin-left: -35%;
-    margin-bottom: 20%;
-  }
+#transactions #take-action .image-row .iphone {
+  position: absolute;
+  z-index: 2;
+  width: 15%;
+  bottom: 0;
+  right: 0;
+}
+#transactions #take-action .image-row .ipad {
+  width: 60%;
+}
+#transactions #take-action .image-row .ipad.left {
+  position: relative;
+  z-index: 0;
+  margin-left: 0;
+  margin-bottom: 10%;
+}
+#transactions #take-action .image-row .ipad.right {
+  position: absolute;
+  z-index: 1;
+  bottom: 5%;
+  left: 35%;
 }
 #emm #hero .ipad {
   z-index: 0;
