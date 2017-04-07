@@ -56,22 +56,39 @@ a > img:only-child {
 .partners #hero.background-image {
   background-image: url('/Strategy/media/images/common/banners/partners.jpg');
 }
-#partner-resources {
-  padding: 0;
+.accordion-trigger {
+  position: relative;
+  padding-right: 3em;
+  text-align: left;
 }
-#partner-resources-header {
+.accordion-trigger:after {
+  content: '\ea91';
+  font-family: microstrategy;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
   position: absolute;
-  padding: 0.75em 1.25em 0.75em;
-  font-size: 14px;
-  background-color: #11566F;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  top: 50%;
+  right: 1.25em;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.accordion-trigger.activated:after {
+  content: '\e9ad';
+}
+#partner-resources-trigger {
+  position: absolute;
   left: 15px;
   bottom: -40px;
 }
 @media only screen and (min-width: 768px) {
-  #partner-resources-header {
+  #partner-resources-trigger {
     left: 50%;
     bottom: -80px;
     -webkit-transform: translateX(-50%);
@@ -79,17 +96,39 @@ a > img:only-child {
   }
 }
 @media only screen and (min-width: 980px) {
-  #partner-resources-header {
+  #partner-resources-trigger {
     bottom: -120px;
   }
 }
-#partner-resources a[href*="mailto"] {
-  color: #f2f2f2;
+#partner-resources {
+  max-height: 0px;
+  padding: 0;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
 }
-#partner-resources a[href*="mailto"]:hover,
-#partner-resources a[href*="mailto"]:active {
-  color: #FFFFFF;
-  text-decoration: underline;
+#partner-resources.expanded {
+  max-height: 1500px;
+  padding: 40px 0;
+}
+@media only screen and (min-width: 768px) {
+  #partner-resources.expanded {
+    max-height: 1000px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #partner-resources.expanded {
+    max-height: 750px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #partner-resources.expanded {
+    padding: 50px 0;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #partner-resources.expanded {
+    padding: 60px 0;
+  }
 }
 #partner-spotlights .logo {
   max-width: 80%;

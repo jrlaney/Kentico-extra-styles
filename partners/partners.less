@@ -5,33 +5,52 @@
 
 .partners #hero.background-image { background-image: url('/Strategy/media/images/common/banners/partners.jpg'); }
 
-#partner-resources {
-    padding: 0;
-    
-    &-header {
-        position: absolute;
-        padding: @button-padding;
-        font-size: extract(@button-base-sizes, 2);
-        background-color: @navy-blue;
-        color: @white;
-        .uppercase;
+.accordion-trigger {
+    position: relative;
+    padding-right: 3em;
+    text-align: left;
         
-        left: @column-gutter / 2;
-        bottom: -40px;
-        
-        @media @medium {
-            left: 50%;
-            bottom: -80px;
-            .translateX(-50%);
-        }
-        @media @large {
-            bottom: -120px;
-        }
+    &:after {
+        content: '\ea91';
+        font-family: @icon-font-name;
+        .pretty-icon;
+        display: inline-block;
+        .position(absolute, 50%, @right:1.25em);
+        .translateY(-50%);
     }
     
-    a[href*="mailto"] {
-        color: @light-gray;
-        &:hover, &:active { color: @white; text-decoration: underline; }
+    &.activated:after {
+        content: '\e9ad';
+    }
+}
+
+#partner-resources-trigger {
+    position: absolute;
+    left: @column-gutter / 2;
+    bottom: -40px;
+
+    @media @medium {
+        left: 50%;
+        bottom: -80px;
+        .translateX(-50%);
+    }
+    @media @large {
+        bottom: -120px;
+    }
+}
+
+#partner-resources {
+    max-height: 0px;
+    padding: 0;
+    .transition;
+    
+    &.expanded {
+        max-height: 1500px;
+        @media @medium { max-height: 1000px; }
+        @media @large { max-height: 750px; }
+        padding: 40px 0;
+        @media @medium { padding: 50px 0; }
+        @media @large { padding: 60px 0; }
     }
 }
 
