@@ -3,8 +3,53 @@
 
 
 
-.document-category {
-    padding: 20px 0;
-    @media @medium { padding: 30px 0; }
-    @media @large { padding: 40px 0; }
+#legal-documents {
+    background-color: @light-gray;
+}
+.legal-document p {
+    font-family: @myriad-pro;
+    font-size: 16px;
+    line-height: @line-height;
+}
+.legal-document-name {
+    font-weight: @normal;
+}
+.legal-document-category {
+    margin-top: @base-spacing / -2;
+    font-weight: @bold;
+    color: @dark-gray;
+}
+.legal-document-date {
+    margin-top: @base-spacing * -1;
+    color: @dark-gray;
+}
+.legal-document-description {
+    font-weight: @light;
+}
+
+
+
+div.document-toggle {
+  display: flex;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  font-family: myriad-pro-n3,myriad-pro,'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  color: #333333;
+  height: 39px;
+}
+
+div.document-toggle .toggle-button {
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+div.document-toggle .toggle-button.active {
+  background-color: #d9232e;
+  color: white;
 }
