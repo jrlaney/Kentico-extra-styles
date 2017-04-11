@@ -27,6 +27,8 @@ section {overflow:hidden;}
     text-align:left;
     color:@light-gray;
     transform: translateX(65px);
+    
+    .IE10 & .text {max-width:185px;}
 }
 .frame .timeline-list .timeline-item:before {
     display:block; position:absolute; z-index:2;
@@ -240,6 +242,8 @@ section {overflow:hidden;}
         margin:0 80px 0 -200px; padding:0 0 20px 30px;
         width:320px;
         .translateX(140px);
+
+        .IE10 & .text {max-width:305px;}
     }
     .frame .timeline-list .timeline-item:nth-child(even) {margin-top:175px;}
 
@@ -302,32 +306,6 @@ section {overflow:hidden;}
     .scrolled-to .slide-left {.animation(fade-slide-left 0.4s ease-out 0s normal forwards);}
     .scrolled-to .slide-right {.animation(fade-slide-right 0.4s ease-out 0s normal forwards);}
     .scrolled-to .slide-down {.animation(fade-slide-down 0.4s ease-out 0s normal forwards);}
-
-    .keyframes(opacity-reveal;{
-        0%{opacity:0;}
-        100%{opacity:1;}
-    });
-    .keyframes(timeline-reveal;{
-        0%{opacity:0; max-height:400px;}
-        100%{opacity:1; max-height:2000px;}
-    });
-
-    .keyframes(fade-slide-up;{
-        0%{opacity:0; .translateY(20%);}
-        100%{opacity:1; .translateY(0);}
-    });
-    .keyframes(fade-slide-down;{
-        0%{opacity:0; .translateY(-20%);}
-        100%{opacity:1; .translateY(0);}
-    });
-    .keyframes(fade-slide-left;{
-        0%{opacity:0; .translateX(20%);}
-        100%{opacity:1; .translateX(0);}
-    });
-    .keyframes(fade-slide-right;{
-        0%{opacity:0; .translateX(-20%);}
-        100%{opacity:1; .translateX(0);}
-    });
 }
 
 
@@ -346,3 +324,30 @@ section {overflow:hidden;}
     #low-cost .cutoff-img {.translateX(-15%);}
 
 }
+
+//KEYFRAMES FOR EVERYTHING
+.keyframes(opacity-reveal;{
+    0%{opacity:0;}
+    100%{opacity:1;}
+});
+.keyframes(timeline-reveal;{
+    0%{opacity:0; max-height:400px;}
+    100%{opacity:1; max-height:2000px;}
+});
+
+.keyframes(fade-slide-up;{
+    0%{opacity:0; .translateY(20%);}
+    100%{opacity:1; .translateY(0);}
+});
+.keyframes(fade-slide-down;{
+    0%{opacity:0; .translateY(-20%);}
+    100%{opacity:1; .translateY(0);}
+});
+.keyframes(fade-slide-left;{
+    0%{opacity:0; .translateX(20%);}
+    100%{opacity:1; .translateX(0);}
+});
+.keyframes(fade-slide-right;{
+    0%{opacity:0; .translateX(-20%);}
+    100%{opacity:1; .translateX(0);}
+});

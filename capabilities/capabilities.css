@@ -1792,6 +1792,72 @@ a > img:only-child {
     transform: translateY(10px);
   }
 }
+#secure-gateways #hero .img-col {
+  position: relative;
+}
+#secure-gateways #hero .img-col .macbook-pro {
+  z-index: 0;
+  margin-left: 7%;
+  margin-bottom: 7%;
+}
+#secure-gateways #hero .img-col .ipad {
+  position: absolute;
+  z-index: 1;
+  width: 55%;
+  left: 7%;
+  bottom: 7%;
+}
+#secure-gateways #hero .img-col .iphone {
+  position: absolute;
+  z-index: 2;
+  width: 15%;
+  left: 20px;
+  bottom: 20px;
+}
+#secure-gateways #physical-infrastructure .img-col {
+  position: relative;
+}
+#secure-gateways #physical-infrastructure .img-col .ipad {
+  z-index: 0;
+  width: 150%;
+  float: left;
+  margin-left: 20%;
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 980px) {
+  #secure-gateways #physical-infrastructure .img-col .ipad {
+    margin-bottom: 40px;
+  }
+}
+#secure-gateways #physical-infrastructure .img-col .iphone {
+  position: absolute;
+  z-index: 1;
+  width: 35%;
+  left: 10%;
+  bottom: 15px;
+}
+#secure-gateways #logical-access .img-col {
+  position: relative;
+}
+#secure-gateways #logical-access .img-col .macbook-air {
+  z-index: 0;
+  width: 200%;
+  float: right;
+  margin-right: 10%;
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 980px) {
+  #secure-gateways #logical-access .img-col .macbook-air {
+    margin-bottom: 40px;
+  }
+}
+#secure-gateways #logical-access .img-col .iphone {
+  position: absolute;
+  z-index: 1;
+  width: 35%;
+  right: 10%;
+  bottom: 15px;
+}
 /* customer thumb - dark to light background on hover (set bkg img on html) */
 .customer-thumb {
   display: block;
