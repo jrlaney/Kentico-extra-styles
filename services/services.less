@@ -71,12 +71,19 @@
 
             border-top:15px solid @dark-gray;
         }
-    }
+    }//end mobile bi journey graph
 
 
     .journey-graph {
         position:relative;
         padding:0 0 0 36px;
+        .axis-item {
+            font-family:@myriad-pro;
+            .uppercase;
+            font-size:16px; line-height:1em;
+            font-weight:600;
+            margin:0 5px 0 0;
+        }
         .label {
             display:block; width:auto;
             padding:10px 0;
@@ -99,6 +106,10 @@
             border-top:2px dashed @dark-gray;
             .grid-item {
                 position:relative; overflow:visible;
+                text-align:center;
+                color:@black;
+                .transition;
+                &:hover {background-color:@white-smoke;}
                 &:after {
                     content:'';
                     display:block; position:absolute; z-index:1;
@@ -106,6 +117,13 @@
                     background-color:@red;
                     bottom:100%; left:50%; margin-bottom:-5.5px; margin-left:-7.5px;
                     .round;
+                }
+                .axis-item {color:@monsoon; @media @medium-only {font-size:12px;}}
+                .icon {
+                    font-size:20px;
+                    padding:0;
+                    height:20px; width:20px;
+                    &:before {height:20px; width:20px;}
                 }
             }
             &:before {
@@ -120,8 +138,51 @@
             }
         }
         .line.thick {height:30px; display:block; width:auto; margin-top:5px;}
+    }//end desktop journey graph
+}
+//popups with the bi maturity curve graphic
+.bi-maturity-curve {
+    &.white-popup {max-width:1100px; width:90%;}
+    ul li {margin-bottom:0;}
+
+    .bi-maturity-curve-graph {
+        position:relative;
+        > .flex-row {width:auto;}
+        .label {
+            display:block; width:auto;
+            padding:10px 0;
+            font-family:@myriad-pro;
+            font-size:16px; line-height:1em;
+            white-space:nowrap;
+            .uppercase;
+            font-weight:600;
+            color:@dark-gray;
+            text-align:center;
+            &.y-axis {
+                position:absolute;
+                top:40%; left:30px;
+                .transform(translateY(-50%) translateX(-50%) rotate(-90deg));
+            }
+        }
+        .y-axis-bar {
+            position:relative; overflow:hidden;
+            border-left:3px dashed @gray;
+            padding:40px 0 0 0; margin-left:60px;
+            .curve-graphic {
+                position:absolute;
+                height:~"calc(100% - 40px)";
+                bottom:20px; right:43%;
+            }
+            > div {
+                color:@dark-gray;
+                &.selected {color:@red;}
+            }
+        }
+        .x-axis-bar {position:relative; border-top:3px dashed @gray; margin:0 0 0 60px;}
     }
 }
+
+
 
 #ps-offerings {
     #mix-wrapper {

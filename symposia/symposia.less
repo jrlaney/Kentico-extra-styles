@@ -192,3 +192,40 @@
 @media only screen and (min-width: 1200px) {
 
 }
+
+//temporary for the world workshop hero banner
+#hero.world2017-hero {
+	display:block;
+	background-color:@white-smoke;
+	@media @medium {padding:60px 0;}
+	@media @large {padding:100px 0;}
+
+	> div {position:relative; z-index:1;}
+	&:before, &:after {
+		display:block; position:absolute; z-index:0;
+		content:'';
+		background-repeat:no-repeat;
+		background-position:center;
+		background-size:cover;
+	}
+	//top left corner
+	@top-left-width:   774px;
+	@top-left-height:  397px;
+	&:before {
+		top:0; left:-150px;
+		width:300px; height:(@top-left-height / @top-left-width) * 300px;
+		background-image:url(/getmedia/44b5c5c0-d4cb-484e-897b-c3b867c2e4d8/banner-patterns_banner-left-corner);
+		@media @medium {right:62%; left:auto; width:500px; height:(@top-left-height / @top-left-width) * 500px;}
+		@media @large {width:@top-left-width; height:@top-left-height;}
+	}
+	//bottom right corner
+	@bottom-right-width:   730px;
+	@bottom-right-height:  379px;
+	&:after {
+		bottom:0; left:50%;
+		width:300px; height:(@bottom-right-height / @bottom-right-width) * 300px;
+		background-image:url(/getmedia/8deb0886-f7bf-4cca-90a9-957c9523cf96/banner-patterns_banner-right-corner);
+		@media @medium {left:70%; width:500px; height:(@bottom-right-height / @bottom-right-width) * 500px;}
+		@media @large {left:63%; width:@bottom-right-width; height:@bottom-right-height;}
+	}
+}
