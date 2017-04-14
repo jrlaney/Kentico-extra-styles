@@ -169,16 +169,25 @@
             border-left:3px dashed @gray;
             padding:40px 0 0 0; margin-left:60px;
             .curve-graphic {
-                position:absolute;
+                position:absolute; z-index:0;
                 height:~"calc(100% - 40px)";
                 bottom:20px; right:43%;
             }
             > div {
+                position:relative; z-index:1;
                 color:@dark-gray;
                 &.selected {color:@red;}
             }
         }
         .x-axis-bar {position:relative; border-top:3px dashed @gray; margin:0 0 0 60px;}
+
+        //for the full graph
+        &.full-details {
+            .y-axis-bar {
+                .curve-graphic {right:53%;}
+                > div {color:@black;}
+            }
+        }
     }
 }
 

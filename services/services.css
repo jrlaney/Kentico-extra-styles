@@ -289,11 +289,14 @@ ul li {
 }
 .bi-maturity-curve .bi-maturity-curve-graph .y-axis-bar .curve-graphic {
   position: absolute;
+  z-index: 0;
   height: calc(100% - 40px);
   bottom: 20px;
   right: 43%;
 }
 .bi-maturity-curve .bi-maturity-curve-graph .y-axis-bar > div {
+  position: relative;
+  z-index: 1;
   color: #999999;
 }
 .bi-maturity-curve .bi-maturity-curve-graph .y-axis-bar > div.selected {
@@ -303,6 +306,12 @@ ul li {
   position: relative;
   border-top: 3px dashed #CCCCCC;
   margin: 0 0 0 60px;
+}
+.bi-maturity-curve .bi-maturity-curve-graph.full-details .y-axis-bar .curve-graphic {
+  right: 53%;
+}
+.bi-maturity-curve .bi-maturity-curve-graph.full-details .y-axis-bar > div {
+  color: #333333;
 }
 #ps-offerings #mix-wrapper {
   overflow: hidden;
