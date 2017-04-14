@@ -41,14 +41,14 @@
 
     // default hero banner images for health assessment landing pages
     .health-assessment & { background-image: url('/getmedia/363276df-682e-42e4-9fcc-7621ebc50878/laptop-on-desk-with-espresso-and-sketchbook'); }
-    
+
     // default hero banner images for education landing pages
     .education & { background-image: url('/getmedia/d12af49b-de8e-4532-a199-f7a33f36dbf3/education'); }
 
     // default hero banner images for academics landing pages
     .academics.students & { background-image: url('/getmedia/4789f7ca-6699-4c17-b7fa-ae092e9de135/students'); }
     .academics.instructors & { background-image: url('/getmedia/3452a3b2-0530-426c-b6d0-08f8230c934b/instructors'); }
-    
+
     // default hero banner images for product landing pages
     .desktop & { background-image: url('/getmedia/97a4b0f1-a811-45f4-b556-272f87f183ed/desktop'); }
 
@@ -71,7 +71,7 @@
 
     // custom hero banner images for customer landing pages
     #the-container-store & { background-image: url('/getmedia/584f0faf-301a-48a4-81aa-ea07eaee1066/the-container-store');}
-    
+
     // custom hero banner images for competitor landing pages
 
 }
@@ -87,13 +87,13 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
     position: absolute !important;
     top: 0; left: 0; right: 0; bottom: 0;
     overflow: hidden;
-    
+
     .angle {
         display: block;
         width: auto;
         .position(absolute, @right:0);
         fill-rule: evenodd;
-        
+
         &.top {
             @media @small-only { display: none; }
             height: 45%;
@@ -109,7 +109,7 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
             opacity: .6;
         }
     }
-    
+
     // colors
     .loop-colors(@i) when (@i > 0) {
         .loop-colors(@i - 1);
@@ -147,7 +147,7 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
     .margin-x(auto);
     margin-bottom: @base-spacing;
     &:last-child { margin-bottom: 0; }
-    
+
     // sizes
     .loop-sizes(@i) when (@i > 0) {
         .loop-sizes(@i - 1);
@@ -172,7 +172,7 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
     .margin-x(auto);
     margin-bottom: @base-spacing;
     &:last-child { margin-bottom: 20px; }
-    
+
     // sizes
     .loop-sizes(@i) when (@i > 0) {
         .loop-sizes(@i - 1);
@@ -198,7 +198,7 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
     padding: @column-gutter;
     background-color: @white;
     color: @black;
-    
+
     .form-wrapper {
         height: 410px;
     }
@@ -206,7 +206,7 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
 .form-wrapper {
     position: relative;
     width: 100%;
-    
+
     iframe {
         .position(absolute, 0, 0);
         .size(100%);
@@ -231,22 +231,6 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
 
     #retail.solutions.landing-page #distribution img { margin-top: 33px; }
     #manufacturing.solutions.landing-page #stores img[src$="store.png"] { margin-top: 32px }
-}
-
-// LOGOS
-.ratio .logo {
-	display:block;
-	.position(absolute, 50%, 50%, null, null);
-	height:auto; width:auto;
-	max-height:~"calc(100% - 40px)";
-	max-width:~"calc(100% - 40px)";
-	.translate(-50%,-50%);
-	&.spacing0 {max-height:100%; max-width:100%;}
-	&.spacing5 {max-height:~"calc(100% - 10px)"; max-width:~"calc(100% - 10px)";}
-	&.spacing10 {max-height:~"calc(100% - 20px)"; max-width:~"calc(100% - 20px)";}
-}
-.logo-grid .logo {
-    max-width: 80%;
 }
 
 
@@ -591,6 +575,43 @@ section {overflow:hidden;}
     }
 }
 #fastfood-features .stretch .item {height:100%;}
+
+//World 2017 confetti banner
+#hero.world2017-hero {
+	display:block;
+	background-color:@white-smoke;
+	@media @medium {padding:60px 0;}
+	@media @large {padding:100px 0;}
+
+	> div {position:relative; z-index:1;}
+	&:before, &:after {
+		display:block; position:absolute; z-index:0;
+		content:'';
+		background-repeat:no-repeat;
+		background-position:center;
+		background-size:cover;
+	}
+	//top left corner
+	@top-left-width:   774px;
+	@top-left-height:  397px;
+	&:before {
+		top:0; left:-150px;
+		width:300px; height:(@top-left-height / @top-left-width) * 300px;
+		background-image:url(/getmedia/44b5c5c0-d4cb-484e-897b-c3b867c2e4d8/banner-patterns_banner-left-corner);
+		@media @medium {right:62%; left:auto; width:500px; height:(@top-left-height / @top-left-width) * 500px;}
+		@media @large {width:@top-left-width; height:@top-left-height;}
+	}
+	//bottom right corner
+	@bottom-right-width:   730px;
+	@bottom-right-height:  379px;
+	&:after {
+		bottom:0; left:50%;
+		width:300px; height:(@bottom-right-height / @bottom-right-width) * 300px;
+		background-image:url(/getmedia/8deb0886-f7bf-4cca-90a9-957c9523cf96/banner-patterns_banner-right-corner);
+		@media @medium {left:70%; width:500px; height:(@bottom-right-height / @bottom-right-width) * 500px;}
+		@media @large {left:63%; width:@bottom-right-width; height:@bottom-right-height;}
+	}
+}
 
 
 //STYLES FOR OLDER PAGES COPIED OVER PLUS SOME TRUNCATED STUFF
