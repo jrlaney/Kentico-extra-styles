@@ -89,7 +89,7 @@
   -moz-animation: fade-slide-down 0.5s ease-out 0.9s normal forwards;
   animation: fade-slide-down 0.5s ease-out 0.9s normal forwards;
 }
-#hero .customer-speaker-logos {
+#hero #countdown-timer {
   opacity: 0;
   -webkit-animation: fade-slide-up 0.5s ease-out 1s normal forwards;
   -moz-animation: fade-slide-up 0.5s ease-out 1s normal forwards;
@@ -204,58 +204,41 @@
   font-size: 16px;
   margin: 0;
 }
-#hero.world2017-hero .customer-speaker-logos .grid-item {
-  padding: 5px;
-  margin-right: 3px;
-}
-@media only screen and (min-width: 768px) {
-  #hero.world2017-hero .customer-speaker-logos .grid-item {
-    padding: 7.5px;
-  }
-}
-#hero.world2017-hero .customer-speaker-logos .ratio {
-  background-color: #f2f2f2;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-  border: 1px solid #f2f2f2;
-}
-#hero.world2017-hero .customer-speaker-logos .ratio .logo.text-logo {
+#hero #countdown-timer {
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #777777;
+  font-size: 60px;
+  line-height: 1em;
+  font-weight: 400;
+  letter-spacing: -1px;
+  color: #11566F;
+}
+#hero #countdown-timer .timer-block {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #f2f2f2;
+  padding: 10px;
+  min-width: 143px;
   text-align: center;
+  margin-top: 15px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+#hero #countdown-timer .timer-block .time-unit {
+  display: block;
+  margin: 5px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   font-size: 14px;
-  line-height: 1.1em;
-}
-#hero.world2017-hero .customer-speaker-logos .ratio .logo.text-logo.text-small {
-  font-size: 12px;
-}
-#hero.world2017-hero .customer-speaker-logos .ratio .logo.text-logo.text-tiny {
-  font-size: 10px;
-}
-@media only screen and (min-width: 768px) {
-  #hero.world2017-hero .customer-speaker-logos .ratio .logo.text-logo {
-    font-size: 26px;
-  }
-  #hero.world2017-hero .customer-speaker-logos .ratio .logo.text-logo.text-small {
-    font-size: 20px;
-  }
-  #hero.world2017-hero .customer-speaker-logos .ratio .logo.text-logo.text-tiny {
-    font-size: 18px;
-  }
+  line-height: 18px;
 }
 @media only screen and (min-width: 980px) {
-  #hero.world2017-hero .customer-speaker-logos .ratio .logo.text-logo {
-    font-size: 25px;
+  #hero #countdown-timer {
+    font-size: 95px;
+    line-height: 1em;
+    white-space: nowrap;
   }
-}
-@media only screen and (min-width: 1200px) {
-  #hero.world2017-hero .customer-speaker-logos .ratio .logo.text-logo {
-    font-size: 30px;
-  }
-  #hero.world2017-hero .customer-speaker-logos .ratio .logo.text-logo.text-small {
-    font-size: 22px;
-  }
-  #hero.world2017-hero .customer-speaker-logos .ratio .logo.text-logo.text-tiny {
-    font-size: 20px;
+  #hero #countdown-timer .timer-block .time-unit {
+    font-size: 18px;
+    line-height: 18px;
   }
 }
 @-moz-keyframes fade-slide-up {

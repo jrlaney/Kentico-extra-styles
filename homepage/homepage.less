@@ -59,7 +59,7 @@
 	.world-lockup {           opacity:0; .animation(fade-slide-down 0.5s ease-out 0.5s normal forwards);}
 	.title {                  opacity:0; .animation(fade-slide-down 0.5s ease-out 0.7s normal forwards);}
 	.subtitle {               opacity:0; .animation(fade-slide-down 0.5s ease-out 0.9s normal forwards);}
-	.customer-speaker-logos { opacity:0; .animation(fade-slide-up 0.5s ease-out 1s normal forwards);}
+	#countdown-timer {        opacity:0; .animation(fade-slide-up 0.5s ease-out 1s normal forwards);}
 	.icon-cta {               opacity:0; .animation(fade-slide-up 0.5s ease-out 1.2s normal forwards);}
 
 	&.world2017-hero {
@@ -111,37 +111,36 @@
 				> p {font-weight:400; font-size:16px; margin:0;}
 			}
 		}
+	}
 
-		.customer-speaker-logos {
-			.grid-item{padding:5px; margin-right:3px;}
-			@media @medium {.grid-item{padding:7.5px;}}
-			.ratio {
-				background-color:@light-gray;
-				.box-shadow(1px 1px 5px fade(@pure-black, 20%));
-				border:1px solid @light-gray;
-				.logo.text-logo {
-					font-family:@myriad-pro;
-					color:@monsoon;
-					text-align:center;
-					font-size:14px; line-height:1.1em;
-					&.text-small {font-size:12px;}
-					&.text-tiny {font-size:10px;}
-					@media @medium {
-						font-size:26px;
-						&.text-small {font-size:20px;}
-						&.text-tiny {font-size:18px;}
-					}
-					@media @large {font-size:25px;}
-					@media @xlarge {
-						font-size:30px;
-						&.text-small {font-size:22px;}
-						&.text-tiny {font-size:20px;}
-					}
-				}
+	//COUNTDOWN TIMER
+	#countdown-timer {
+		font-family:@myriad-pro;
+		font-size:60px; line-height:1em;
+		font-weight:400;
+		letter-spacing:-1px;
+		color:@navy-blue;
+		.timer-block {
+			display:inline-block; vertical-align:top;
+			background-color:@white-smoke;
+			padding:10px;
+			min-width:143px;
+			text-align:center;
+			margin-top:15px;
+			.box-shadow(1px 1px 3px fade(@pure-black, 20%));
+			.time-unit {
+				display:block; margin:5px 0;
+				.uppercase;
+				font-size:14px; line-height:18px;
 			}
+		}
+		@media @large {
+			font-size:95px; line-height:1em; white-space:nowrap;
+			.timer-block .time-unit {font-size:18px; line-height:18px;}
 		}
 	}
 }
+
 
 .keyframes(fade-slide-up;{
     0%{opacity:0; .translateY(20%);}
