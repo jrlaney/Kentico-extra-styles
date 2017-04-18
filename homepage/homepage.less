@@ -61,6 +61,7 @@
 	.subtitle {               opacity:0; .animation(fade-slide-down 0.5s ease-out 0.9s normal forwards);}
 	#countdown-timer {        opacity:0; .animation(fade-slide-up 0.5s ease-out 1s normal forwards);}
 	.icon-cta {               opacity:0; .animation(fade-slide-up 0.5s ease-out 1.2s normal forwards);}
+	.keynote-live-card {      opacity:0; .animation(fade-slide-up-zoom-in 0.5s ease-out 1.5s normal forwards);}
 
 	&.world2017-hero {
 		display:block;
@@ -139,6 +140,38 @@
 			.timer-block .time-unit {font-size:18px; line-height:18px;}
 		}
 	}
+
+	//LIVE-STREAD CARD
+	.keynote-live-card {
+		display:block; position:relative;
+		padding:20px;
+		text-align:center;
+		color:@white;
+		background-repeat:no-repeat;
+		background-position:center;
+		background-size:cover;
+		background-image:url(/getmedia/aebdd3e3-3ee6-480f-ac2e-f378e19b2e88/World2016_crowd);
+	    .box-shadow(1px 1px 5px fade(@pure-black, 20%));
+		.button {min-width:300px;}
+		.icon {font-size:60px; line-height:1em; margin-bottom:20px;}
+		> * {position:relative; z-index:1;}
+		&:after {
+			position:absolute; z-index:0;
+			content:'';
+			height:100%; width:100%;
+			top:0; left:0;
+			background-color:@pure-black; opacity:0.4;
+			.transition;
+		}
+		&:hover {
+			.box-shadow(1px 1px 5px fade(@pure-black, 40%));
+			&:after {opacity:0.3;}
+		}
+		@media @medium {
+			padding:50px 30px;
+			.icon {font-size:80px; line-height:1em;}
+		}
+	}
 }
 
 
@@ -150,7 +183,10 @@
     0%{opacity:0; .translateY(-20%);}
     100%{opacity:1; .translateY(0);}
 });
-
+.keyframes(fade-slide-up-zoom-in;{
+    0%{opacity:0; .transform(translateY(50px) scale(1.2));}
+    100%{opacity:1; .transform(translateY(0) scale(1));}
+});
 
 
 

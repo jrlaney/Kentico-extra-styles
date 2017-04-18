@@ -101,6 +101,12 @@
   -moz-animation: fade-slide-up 0.5s ease-out 1.2s normal forwards;
   animation: fade-slide-up 0.5s ease-out 1.2s normal forwards;
 }
+#hero .keynote-live-card {
+  opacity: 0;
+  -webkit-animation: fade-slide-up-zoom-in 0.5s ease-out 1.5s normal forwards;
+  -moz-animation: fade-slide-up-zoom-in 0.5s ease-out 1.5s normal forwards;
+  animation: fade-slide-up-zoom-in 0.5s ease-out 1.5s normal forwards;
+}
 #hero.world2017-hero {
   display: block;
   background-color: #FFFFFF;
@@ -241,6 +247,58 @@
     line-height: 18px;
   }
 }
+#hero .keynote-live-card {
+  display: block;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(/getmedia/aebdd3e3-3ee6-480f-ac2e-f378e19b2e88/World2016_crowd);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+#hero .keynote-live-card .button {
+  min-width: 300px;
+}
+#hero .keynote-live-card .icon {
+  font-size: 60px;
+  line-height: 1em;
+  margin-bottom: 20px;
+}
+#hero .keynote-live-card > * {
+  position: relative;
+  z-index: 1;
+}
+#hero .keynote-live-card:after {
+  position: absolute;
+  z-index: 0;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  opacity: 0.4;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+#hero .keynote-live-card:hover {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+#hero .keynote-live-card:hover:after {
+  opacity: 0.3;
+}
+@media only screen and (min-width: 768px) {
+  #hero .keynote-live-card {
+    padding: 50px 30px;
+  }
+  #hero .keynote-live-card .icon {
+    font-size: 80px;
+    line-height: 1em;
+  }
+}
 @-moz-keyframes fade-slide-up {
   0% {
     opacity: 0;
@@ -311,6 +369,42 @@
     opacity: 1;
     -webkit-transform: translateY(0);
     transform: translateY(0);
+  }
+}
+@-moz-keyframes fade-slide-up-zoom-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px) scale(1.2);
+    transform: translateY(50px) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+}
+@-webkit-keyframes fade-slide-up-zoom-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px) scale(1.2);
+    transform: translateY(50px) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes fade-slide-up-zoom-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px) scale(1.2);
+    transform: translateY(50px) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
   }
 }
 #whats-new .slick-arrow {
