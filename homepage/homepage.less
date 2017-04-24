@@ -33,10 +33,9 @@
 	@media @large {padding:@base-spacing @base-spacing * 2;}
 	&.white {
 		color:@white;
-		background-color:fade(@red, 50%);
-		.box-shadow(1px 1px 5px fade(@pure-black, 50%));
+		.box-shadow(1px 1px 5px fade(@pure-black, 0%));
 		.icon {color:@white;}
-		&:hover {color:@white;}
+		&:hover {color:@white; background-color:fade(@red, 50%); .box-shadow(1px 1px 5px fade(@pure-black, 50%));}
 	}
 }
 
@@ -52,129 +51,15 @@
 //HERO BANNER STYLES
 #hero {
 	overflow:hidden;
-	//background-image: url(/getmedia/2838b8b1-25b0-43f6-824f-142739031279/two-monitors-wood-desk);
+	background-image: url(/getmedia/2838b8b1-25b0-43f6-824f-142739031279/two-monitors-wood-desk);
 	@media @medium {.icon-cta {max-width:~"calc(33.3% - 24px)";}}
 
 	//animations after loading
-	.world-lockup {           opacity:0; .animation(fade-slide-down 0.5s ease-out 0.5s normal forwards);}
-	.title {                  opacity:0; .animation(fade-slide-down 0.5s ease-out 0.7s normal forwards);}
-	.subtitle {               opacity:0; .animation(fade-slide-down 0.5s ease-out 0.9s normal forwards);}
-	#countdown-timer {        opacity:0; .animation(fade-slide-up 0.5s ease-out 1s normal forwards);}
-	.icon-cta {               opacity:0; .animation(fade-slide-up 0.5s ease-out 1.2s normal forwards);}
-	.keynote-live-card {      opacity:0; .animation(fade-slide-up-zoom-in 0.5s ease-out 1.5s normal forwards);}
+	.title {     opacity:0; .animation(fade-slide-down 0.5s ease-out 0.7s normal forwards);}
+	.subtitle {  opacity:0; .animation(fade-slide-down 0.5s ease-out 0.9s normal forwards);}
+	.icon-cta {  opacity:0; .animation(fade-slide-up 0.5s ease-out 1.2s normal forwards);}
 
-	&.world2017-hero {
-		display:block;
-		background-color:@white;
-		background-image:none;
-		@media @medium {padding:40px 0;}
-		@media @large {padding:80px 0;}
-
-		> div {position:relative; z-index:1;}
-		&:before, &:after {
-			display:block; position:absolute; z-index:0;
-			content:'';
-			background-repeat:no-repeat;
-			background-position:center;
-			background-size:cover;
-		}
-		//top left corner
-		@top-left-width:   774px;
-		@top-left-height:  397px;
-		&:before {
-			top:0; left:-150px;
-			width:300px; height:(@top-left-height / @top-left-width) * 300px;
-			background-image:url(/getmedia/44b5c5c0-d4cb-484e-897b-c3b867c2e4d8/banner-patterns_banner-left-corner);
-			@media @medium {right:62%; left:auto; width:500px; height:(@top-left-height / @top-left-width) * 500px;}
-			@media @large {width:@top-left-width; height:@top-left-height;}
-		}
-		//bottom right corner
-		@bottom-right-width:   730px;
-		@bottom-right-height:  379px;
-		&:after {
-			bottom:0; left:50%;
-			width:300px; height:(@bottom-right-height / @bottom-right-width) * 300px;
-			background-image:url(/getmedia/8deb0886-f7bf-4cca-90a9-957c9523cf96/banner-patterns_banner-right-corner);
-			@media @medium {left:70%; width:500px; height:(@bottom-right-height / @bottom-right-width) * 500px;}
-			@media @large {left:63%; width:@bottom-right-width; height:@bottom-right-height;}
-		}
-		.world-lockup {
-			margin-bottom:20px;
-			@media @small-only {margin-top:30px;}
-			.world-logo {
-				margin-left:0;
-				width:70px; margin-right:20px;
-				@media @large {width:90px;}
-			}
-			.text-content {
-				border-left:5px solid @red; padding-left:15px;
-				> h3 {font-size:18px; margin:0px; padding-bottom:5px;}
-				> p {font-weight:400; font-size:16px; margin:0;}
-			}
-		}
-	}
-
-	//COUNTDOWN TIMER
-	#countdown-timer {
-		font-family:@myriad-pro;
-		font-size:60px; line-height:1em;
-		font-weight:400;
-		letter-spacing:-1px;
-		color:@navy-blue;
-		.timer-block {
-			display:inline-block; vertical-align:top;
-			background-color:@white-smoke;
-			padding:10px;
-			min-width:143px;
-			text-align:center;
-			margin-top:15px;
-			.box-shadow(1px 1px 3px fade(@pure-black, 20%));
-			.time-unit {
-				display:block; margin:5px 0;
-				.uppercase;
-				font-size:14px; line-height:18px;
-			}
-		}
-		@media @large {
-			font-size:95px; line-height:1em; white-space:nowrap;
-			.timer-block .time-unit {font-size:18px; line-height:18px;}
-		}
-	}
-
-	//LIVE-STREAD CARD
-	.keynote-live-card {
-		display:block; position:relative;
-		padding:20px;
-		text-align:center;
-		color:@white;
-		background-repeat:no-repeat;
-		background-position:center;
-		background-size:cover;
-		background-image:url(/getmedia/aebdd3e3-3ee6-480f-ac2e-f378e19b2e88/World2016_crowd);
-	    .box-shadow(1px 1px 5px fade(@pure-black, 20%));
-		.button {min-width:300px;}
-		.icon {font-size:60px; line-height:1em; margin-bottom:20px;}
-		> * {position:relative; z-index:1;}
-		&:after {
-			position:absolute; z-index:0;
-			content:'';
-			height:100%; width:100%;
-			top:0; left:0;
-			background-color:@pure-black; opacity:0.4;
-			.transition;
-		}
-		&:hover {
-			.box-shadow(1px 1px 5px fade(@pure-black, 40%));
-			&:after {opacity:0.3;}
-		}
-		@media @medium {
-			padding:50px 30px;
-			.icon {font-size:80px; line-height:1em;}
-		}
-	}
 }
-
-
 .keyframes(fade-slide-up;{
     0%{opacity:0; .translateY(20%);}
     100%{opacity:1; .translateY(0);}
@@ -182,10 +67,6 @@
 .keyframes(fade-slide-down;{
     0%{opacity:0; .translateY(-20%);}
     100%{opacity:1; .translateY(0);}
-});
-.keyframes(fade-slide-up-zoom-in;{
-    0%{opacity:0; .transform(translateY(50px) scale(1.2));}
-    100%{opacity:1; .transform(translateY(0) scale(1));}
 });
 
 

@@ -46,14 +46,15 @@
 }
 .icon-cta.white {
   color: #FFFFFF;
-  background-color: rgba(217, 35, 46, 0.5);
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
 }
 .icon-cta.white .icon {
   color: #FFFFFF;
 }
 .icon-cta.white:hover {
   color: #FFFFFF;
+  background-color: rgba(217, 35, 46, 0.5);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 .background-fixed {
   background-attachment: fixed;
@@ -65,17 +66,12 @@
 }
 #hero {
   overflow: hidden;
+  background-image: url(/getmedia/2838b8b1-25b0-43f6-824f-142739031279/two-monitors-wood-desk);
 }
 @media only screen and (min-width: 768px) {
   #hero .icon-cta {
     max-width: calc(33.3% - 24px);
   }
-}
-#hero .world-lockup {
-  opacity: 0;
-  -webkit-animation: fade-slide-down 0.5s ease-out 0.5s normal forwards;
-  -moz-animation: fade-slide-down 0.5s ease-out 0.5s normal forwards;
-  animation: fade-slide-down 0.5s ease-out 0.5s normal forwards;
 }
 #hero .title {
   opacity: 0;
@@ -89,215 +85,11 @@
   -moz-animation: fade-slide-down 0.5s ease-out 0.9s normal forwards;
   animation: fade-slide-down 0.5s ease-out 0.9s normal forwards;
 }
-#hero #countdown-timer {
-  opacity: 0;
-  -webkit-animation: fade-slide-up 0.5s ease-out 1s normal forwards;
-  -moz-animation: fade-slide-up 0.5s ease-out 1s normal forwards;
-  animation: fade-slide-up 0.5s ease-out 1s normal forwards;
-}
 #hero .icon-cta {
   opacity: 0;
   -webkit-animation: fade-slide-up 0.5s ease-out 1.2s normal forwards;
   -moz-animation: fade-slide-up 0.5s ease-out 1.2s normal forwards;
   animation: fade-slide-up 0.5s ease-out 1.2s normal forwards;
-}
-#hero .keynote-live-card {
-  opacity: 0;
-  -webkit-animation: fade-slide-up-zoom-in 0.5s ease-out 1.5s normal forwards;
-  -moz-animation: fade-slide-up-zoom-in 0.5s ease-out 1.5s normal forwards;
-  animation: fade-slide-up-zoom-in 0.5s ease-out 1.5s normal forwards;
-}
-#hero.world2017-hero {
-  display: block;
-  background-color: #FFFFFF;
-  background-image: none;
-}
-@media only screen and (min-width: 768px) {
-  #hero.world2017-hero {
-    padding: 40px 0;
-  }
-}
-@media only screen and (min-width: 980px) {
-  #hero.world2017-hero {
-    padding: 80px 0;
-  }
-}
-#hero.world2017-hero > div {
-  position: relative;
-  z-index: 1;
-}
-#hero.world2017-hero:before,
-#hero.world2017-hero:after {
-  display: block;
-  position: absolute;
-  z-index: 0;
-  content: '';
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-#hero.world2017-hero:before {
-  top: 0;
-  left: -150px;
-  width: 300px;
-  height: 153.87596899px;
-  background-image: url(/getmedia/44b5c5c0-d4cb-484e-897b-c3b867c2e4d8/banner-patterns_banner-left-corner);
-}
-@media only screen and (min-width: 768px) {
-  #hero.world2017-hero:before {
-    right: 62%;
-    left: auto;
-    width: 500px;
-    height: 256.45994832px;
-  }
-}
-@media only screen and (min-width: 980px) {
-  #hero.world2017-hero:before {
-    width: 774px;
-    height: 397px;
-  }
-}
-#hero.world2017-hero:after {
-  bottom: 0;
-  left: 50%;
-  width: 300px;
-  height: 155.75342466px;
-  background-image: url(/getmedia/8deb0886-f7bf-4cca-90a9-957c9523cf96/banner-patterns_banner-right-corner);
-}
-@media only screen and (min-width: 768px) {
-  #hero.world2017-hero:after {
-    left: 70%;
-    width: 500px;
-    height: 259.5890411px;
-  }
-}
-@media only screen and (min-width: 980px) {
-  #hero.world2017-hero:after {
-    left: 63%;
-    width: 730px;
-    height: 379px;
-  }
-}
-#hero.world2017-hero .world-lockup {
-  margin-bottom: 20px;
-}
-@media only screen and (max-width: 767px) {
-  #hero.world2017-hero .world-lockup {
-    margin-top: 30px;
-  }
-}
-#hero.world2017-hero .world-lockup .world-logo {
-  margin-left: 0;
-  width: 70px;
-  margin-right: 20px;
-}
-@media only screen and (min-width: 980px) {
-  #hero.world2017-hero .world-lockup .world-logo {
-    width: 90px;
-  }
-}
-#hero.world2017-hero .world-lockup .text-content {
-  border-left: 5px solid #D9232E;
-  padding-left: 15px;
-}
-#hero.world2017-hero .world-lockup .text-content > h3 {
-  font-size: 18px;
-  margin: 0px;
-  padding-bottom: 5px;
-}
-#hero.world2017-hero .world-lockup .text-content > p {
-  font-weight: 400;
-  font-size: 16px;
-  margin: 0;
-}
-#hero #countdown-timer {
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 60px;
-  line-height: 1em;
-  font-weight: 400;
-  letter-spacing: -1px;
-  color: #11566F;
-}
-#hero #countdown-timer .timer-block {
-  display: inline-block;
-  vertical-align: top;
-  background-color: #f2f2f2;
-  padding: 10px;
-  min-width: 143px;
-  text-align: center;
-  margin-top: 15px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
-#hero #countdown-timer .timer-block .time-unit {
-  display: block;
-  margin: 5px 0;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 14px;
-  line-height: 18px;
-}
-@media only screen and (min-width: 980px) {
-  #hero #countdown-timer {
-    font-size: 95px;
-    line-height: 1em;
-    white-space: nowrap;
-  }
-  #hero #countdown-timer .timer-block .time-unit {
-    font-size: 18px;
-    line-height: 18px;
-  }
-}
-#hero .keynote-live-card {
-  display: block;
-  position: relative;
-  padding: 20px;
-  text-align: center;
-  color: #FFFFFF;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: url(/getmedia/aebdd3e3-3ee6-480f-ac2e-f378e19b2e88/World2016_crowd);
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-}
-#hero .keynote-live-card .button {
-  min-width: 300px;
-}
-#hero .keynote-live-card .icon {
-  font-size: 60px;
-  line-height: 1em;
-  margin-bottom: 20px;
-}
-#hero .keynote-live-card > * {
-  position: relative;
-  z-index: 1;
-}
-#hero .keynote-live-card:after {
-  position: absolute;
-  z-index: 0;
-  content: '';
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: #000000;
-  opacity: 0.4;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
-}
-#hero .keynote-live-card:hover {
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
-}
-#hero .keynote-live-card:hover:after {
-  opacity: 0.3;
-}
-@media only screen and (min-width: 768px) {
-  #hero .keynote-live-card {
-    padding: 50px 30px;
-  }
-  #hero .keynote-live-card .icon {
-    font-size: 80px;
-    line-height: 1em;
-  }
 }
 @-moz-keyframes fade-slide-up {
   0% {
@@ -369,42 +161,6 @@
     opacity: 1;
     -webkit-transform: translateY(0);
     transform: translateY(0);
-  }
-}
-@-moz-keyframes fade-slide-up-zoom-in {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(50px) scale(1.2);
-    transform: translateY(50px) scale(1.2);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0) scale(1);
-    transform: translateY(0) scale(1);
-  }
-}
-@-webkit-keyframes fade-slide-up-zoom-in {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(50px) scale(1.2);
-    transform: translateY(50px) scale(1.2);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0) scale(1);
-    transform: translateY(0) scale(1);
-  }
-}
-@keyframes fade-slide-up-zoom-in {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(50px) scale(1.2);
-    transform: translateY(50px) scale(1.2);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0) scale(1);
-    transform: translateY(0) scale(1);
   }
 }
 #whats-new .slick-arrow {
