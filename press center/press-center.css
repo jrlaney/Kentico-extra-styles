@@ -63,6 +63,10 @@ a > img:only-child {
   margin-left: auto;
   margin-right: auto;
 }
+#press-center .company-logo {
+  max-width: 75%;
+  max-height: 125px;
+}
 .loading {
   position: absolute;
   top: 0;
