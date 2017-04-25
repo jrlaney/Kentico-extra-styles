@@ -54,6 +54,9 @@ a > img:only-child {
   margin-bottom: 20px;
 }
 .partners #hero.background-image {
+  background-image: url('/getmedia/f7467b6a-e8f0-46bb-85cf-de71b8a35b7b/businesspeople-looking-at-mobile-device');
+}
+#become-a-partner.background-image {
   background-image: url('/Strategy/media/images/common/banners/partners.jpg');
 }
 .accordion-trigger {
@@ -130,14 +133,13 @@ a > img:only-child {
     padding: 60px 0;
   }
 }
-#partner-spotlights .logo {
-  max-width: 80%;
+#featured-partners .partner-logo {
+  max-width: 60%;
   max-height: 100px;
 }
-@media only screen and (min-width: 1200px) {
-  #partner-spotlights .logo {
-    max-height: 150px;
-  }
+#partner-logos .partner-logo {
+  max-width: 90%;
+  max-height: 100px;
 }
 #partners-list .partner-card {
   position: relative;
@@ -152,17 +154,17 @@ a > img:only-child {
 #partners-list .partner-card:active {
   border-color: #D9232E;
 }
+#partners-list .partner-card .partner-info {
+  display: none;
+}
 #partners-list .partner-logo {
-  max-width: 75%;
+  max-width: 65%;
   max-height: 100px;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-}
-#partners-list .partner-info {
-  display: none;
 }
 #partners-list .no-results {
   padding: 15px;
@@ -304,23 +306,21 @@ a > img:only-child {
   background: #222222;
   color: #ffffff;
 }
-.gridder-expanded-content {
+.partner-info {
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #FFFFFF;
 }
-.gridder-expanded-content .partner-name {
+.partner-info .partner-name {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-.gridder-expanded-content .partner-description {
+.partner-info .partner-description {
   font-size: 15px;
   line-height: 1.4;
   font-weight: 300;
   letter-spacing: .01em;
-  color: #f2f2f2;
 }
-.gridder-expanded-content .partner-category-title {
+.partner-info .partner-section-title {
   font-size: 16px;
   line-height: 1.4;
   font-weight: 600;
@@ -328,42 +328,30 @@ a > img:only-child {
   letter-spacing: 0.05em;
   color: #999999;
 }
-.gridder-expanded-content .partner-categories {
+.partner-info .partner-categories,
+.partner-info .partner-tags,
+.partner-info .partner-countries {
   font-weight: 300;
   letter-spacing: .05em;
   color: #999999;
 }
-.gridder-expanded-content .partner-categories a {
+.partner-info .partner-category,
+.partner-info .partner-tag,
+.partner-info .partner-country {
+  color: #999999;
+}
+.gridder-show .partner-info {
+  color: #FFFFFF;
+}
+.gridder-show .partner-info .partner-description {
+  color: #f2f2f2;
+}
+.gridder-show .partner-info .partner-category,
+.gridder-show .partner-info .partner-tag,
+.gridder-show .partner-info .partner-country {
   color: #CCCCCC;
 }
-.gridder-expanded-content .partner-categories a:hover,
-.gridder-expanded-content .partner-categories a:active {
-  color: #FFFFFF;
-  text-decoration: underline;
-}
-.loading-animation {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 0;
-  background: rgba(255, 255, 255, 0.7);
-}
-.loading-animation .spinner-bars {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.loading .loading-animation {
-  z-index: 1;
-  opacity: 1;
-}
-.partners.spotlight .partnership-logos {
+.partnership-logos {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
@@ -375,60 +363,60 @@ a > img:only-child {
   font-size: 24px;
   color: #CCCCCC;
 }
-.no-flexbox.flexboxtweener .partners.spotlight .partnership-logos {
+.no-flexbox.flexboxtweener .partnership-logos {
   display: -ms-flexbox;
 }
-.no-flexbox.flexboxtweener .partners.spotlight .partnership-logos > * {
+.no-flexbox.flexboxtweener .partnership-logos > * {
   display: inline-block;
 }
-.no-flexbox.no-flexboxtweener .partners.spotlight .partnership-logos {
+.no-flexbox.no-flexboxtweener .partnership-logos {
   display: block;
 }
-.no-flexbox.no-flexboxtweener .partners.spotlight .partnership-logos:before,
-.no-flexbox.no-flexboxtweener .partners.spotlight .partnership-logos:after {
+.no-flexbox.no-flexboxtweener .partnership-logos:before,
+.no-flexbox.no-flexboxtweener .partnership-logos:after {
   content: '';
   display: table;
 }
-.no-flexbox.no-flexboxtweener .partners.spotlight .partnership-logos:after {
+.no-flexbox.no-flexboxtweener .partnership-logos:after {
   clear: both;
 }
-.no-flexbox.no-flexboxtweener .partners.spotlight .partnership-logos > * {
+.no-flexbox.no-flexboxtweener .partnership-logos > * {
   display: inline-block;
   float: left;
 }
-.no-flexbox.flexboxtweener .partners.spotlight .partnership-logos {
+.no-flexbox.flexboxtweener .partnership-logos {
   -ms-flex-direction: column;
 }
 @media only screen and (min-width: 768px) {
-  .partners.spotlight .partnership-logos {
+  .partnership-logos {
     -webkit-flex-direction: row;
     flex-direction: row;
   }
-  .no-flexbox.flexboxtweener .partners.spotlight .partnership-logos {
+  .no-flexbox.flexboxtweener .partnership-logos {
     -ms-flex-direction: row;
   }
 }
-.no-flexbox.flexboxtweener .partners.spotlight .partnership-logos {
+.no-flexbox.flexboxtweener .partnership-logos {
   -ms-flex-align: center;
 }
-.no-flexbox.flexboxtweener .partners.spotlight .partnership-logos {
+.no-flexbox.flexboxtweener .partnership-logos {
   -ms-flex-pack: center;
 }
-.partners.spotlight .partnership-logos .logo {
+.partnership-logos .logo {
   max-width: 250px;
   margin: 10px 0;
 }
 @media only screen and (min-width: 768px) {
-  .partners.spotlight .partnership-logos .logo {
+  .partnership-logos .logo {
     margin: 0 20px;
   }
 }
 @media only screen and (min-width: 980px) {
-  .partners.spotlight .partnership-logos .logo {
+  .partnership-logos .logo {
     max-width: 300px;
   }
 }
-blockquote {
+.company.page blockquote {
   position: relative;
   margin: 0;
   padding-left: 2.5em;
@@ -437,7 +425,7 @@ blockquote {
   font-weight: 300;
   font-size: 16px;
 }
-blockquote:before {
+.company.page blockquote:before {
   content: '';
   display: block;
   position: absolute;
@@ -447,7 +435,7 @@ blockquote:before {
   border-top: 2.5em solid transparent;
   border-right: 2.5em solid #FFFFFF;
 }
-blockquote footer {
+.company.page blockquote footer {
   margin-top: 10px;
   font-weight: 600;
   font-style: normal;
