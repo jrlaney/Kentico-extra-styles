@@ -72,9 +72,14 @@ a > img:only-child {
 }
 .gridder-padding {
   position: relative;
-  padding: 30px;
+  padding: 65px 15px 15px;
   background-color: #FFFFFF;
   border: 1px solid #CCCCCC;
+}
+@media only screen and (min-width: 768px) {
+  .gridder-padding {
+    padding: 65px 30px 30px;
+  }
 }
 .gridder-navigation {
   display: -webkit-flex;
@@ -197,6 +202,11 @@ a > img:only-child {
 .gridder-expanded-content p {
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
+}
+@media only screen and (min-width: 768px) {
+  .gridder-expanded-content .solution-image {
+    max-height: 600px;
+  }
 }
 #explore .ratio {
   max-height: 300px;
