@@ -1,6 +1,9 @@
 h1,
+.h1,
 h2,
+.h2,
 h3,
+.h3,
 h4,
 h5,
 h6,
@@ -13,8 +16,11 @@ ol {
   margin-bottom: 20px;
 }
 h1:last-child,
+.h1:last-child,
 h2:last-child,
+.h2:last-child,
 h3:last-child,
+.h3:last-child,
 h4:last-child,
 h5:last-child,
 h6:last-child,
@@ -24,8 +30,11 @@ ol:last-child {
   margin-bottom: 0;
 }
 h1.line-break,
+.h1.line-break,
 h2.line-break,
+.h2.line-break,
 h3.line-break,
+.h3.line-break,
 h4.line-break,
 h5.line-break,
 h6.line-break,
@@ -53,8 +62,17 @@ img:last-child {
 a > img:only-child {
   margin-bottom: 20px;
 }
-#product-packaging #hero.background-image {
+.product #hero.background-image {
   background-image: url('/getmedia/2838b8b1-25b0-43f6-824f-142739031279/two-monitors-wood-desk');
+}
+.device-mockup-group {
+  position: relative;
+  overflow: hidden;
+}
+.device-mockup-group .device-mockup {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
 }
 #explore .ratio {
   max-height: 300px;
@@ -147,4 +165,808 @@ a > img:only-child {
 #to-top:active .label {
   opacity: 1;
   padding: 0 16px;
+}
+#how-it-works section.view {
+  padding: 0;
+}
+#how-it-works section.view p {
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 300;
+  letter-spacing: .01em;
+}
+@media only screen and (max-width: 1199px) {
+  #how-it-works section.view .text-col {
+    position: relative;
+    z-index: 1;
+  }
+  #how-it-works section.view .text-col:before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -15px;
+    left: 66px;
+    -webkit-transform-origin: center center left;
+    transform-origin: center center left;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: #FFFFFF;
+  }
+}
+@media only screen and (max-width: 979px) {
+  #how-it-works section.view .text-col:before {
+    left: 51px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #how-it-works section.view .text-col:before {
+    left: 36px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #how-it-works section.view .text-col {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+    -webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s;
+  }
+  #how-it-works section.view .device-mockup .screen {
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s;
+  }
+  #how-it-works section.view.passed-view .text-col {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  #how-it-works section.view.passed-view .device-mockup .screen {
+    opacity: 1;
+  }
+}
+#how-it-works .media-col {
+  background-color: #f2f2f2;
+}
+#server-diagram .servers-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.no-flexbox.flexboxtweener #server-diagram .servers-container {
+  display: -ms-flexbox;
+}
+.no-flexbox.flexboxtweener #server-diagram .servers-container > * {
+  display: inline-block;
+}
+.no-flexbox.no-flexboxtweener #server-diagram .servers-container {
+  display: block;
+}
+.no-flexbox.no-flexboxtweener #server-diagram .servers-container:before,
+.no-flexbox.no-flexboxtweener #server-diagram .servers-container:after {
+  content: '';
+  display: table;
+}
+.no-flexbox.no-flexboxtweener #server-diagram .servers-container:after {
+  clear: both;
+}
+.no-flexbox.no-flexboxtweener #server-diagram .servers-container > * {
+  display: inline-block;
+  float: left;
+}
+.no-flexbox.flexboxtweener #server-diagram .servers-container {
+  -ms-flex-pack: center;
+}
+#server-diagram .servers {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  max-width: 600px;
+}
+.no-flexbox.flexboxtweener #server-diagram .servers {
+  display: -ms-flexbox;
+}
+.no-flexbox.flexboxtweener #server-diagram .servers > * {
+  display: inline-block;
+}
+.no-flexbox.no-flexboxtweener #server-diagram .servers {
+  display: block;
+}
+.no-flexbox.no-flexboxtweener #server-diagram .servers:before,
+.no-flexbox.no-flexboxtweener #server-diagram .servers:after {
+  content: '';
+  display: table;
+}
+.no-flexbox.no-flexboxtweener #server-diagram .servers:after {
+  clear: both;
+}
+.no-flexbox.no-flexboxtweener #server-diagram .servers > * {
+  display: inline-block;
+  float: left;
+}
+.no-flexbox.flexboxtweener #server-diagram .servers {
+  -ms-flex-wrap: wrap;
+}
+.no-flexbox.flexboxtweener #server-diagram .servers {
+  -ms-flex-pack: center;
+}
+@media only screen and (min-width: 768px) {
+  #server-diagram .servers {
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  .no-flexbox.flexboxtweener #server-diagram .servers {
+    -ms-flex-pack: center;
+  }
+}
+#server-diagram .server-container {
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
+.no-flexbox.flexboxtweener #server-diagram .server-container {
+  display: -ms-inline-flexbox;
+}
+.no-flexbox.no-flexboxtweener #server-diagram .server-container {
+  display: inline-block;
+}
+.no-flexbox.no-flexboxtweener #server-diagram .server-container:before,
+.no-flexbox.no-flexboxtweener #server-diagram .server-container:after {
+  content: '';
+  display: table;
+}
+.no-flexbox.no-flexboxtweener #server-diagram .server-container:after {
+  clear: both;
+}
+.no-flexbox.no-flexboxtweener #server-diagram .server-container > * {
+  display: inline-block;
+  float: left;
+}
+.no-flexbox.flexboxtweener #server-diagram .server-container {
+  -ms-flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  #server-diagram .server-container {
+    margin: 15px;
+  }
+}
+#server-diagram .server-border {
+  position: absolute;
+  background-color: #CCCCCC;
+}
+#server-diagram .server-border.top,
+#server-diagram .server-border.bottom {
+  height: 2px;
+}
+#server-diagram .server-border.left,
+#server-diagram .server-border.right {
+  width: 2px;
+}
+#server-diagram .server-border.top {
+  top: 0;
+  left: 0;
+  -webkit-transition: width 0.25s ease-out 3.5s;
+  transition: width 0.25s ease-out 3.5s;
+}
+#server-diagram .server-border.right {
+  top: 0;
+  right: 0;
+  -webkit-transition: height 0.25s ease-out 4s;
+  transition: height 0.25s ease-out 4s;
+}
+#server-diagram .server-border.bottom {
+  bottom: 0;
+  right: 0;
+  -webkit-transition: width 0.25s ease-out 4.5s;
+  transition: width 0.25s ease-out 4.5s;
+}
+#server-diagram .server-border.left {
+  bottom: 0;
+  left: 0;
+  -webkit-transition: height 0.25s ease-out 5s;
+  transition: height 0.25s ease-out 5s;
+}
+#server-diagram .server {
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 125px;
+  position: relative;
+  margin: 15px;
+  padding: 0 25px 0 5px;
+  border: 2px solid #CCCCCC;
+}
+.no-flexbox.flexboxtweener #server-diagram .server {
+  display: -ms-inline-flexbox;
+}
+.no-flexbox.no-flexboxtweener #server-diagram .server {
+  display: inline-block;
+}
+.no-flexbox.no-flexboxtweener #server-diagram .server:before,
+.no-flexbox.no-flexboxtweener #server-diagram .server:after {
+  content: '';
+  display: table;
+}
+.no-flexbox.no-flexboxtweener #server-diagram .server:after {
+  clear: both;
+}
+.no-flexbox.no-flexboxtweener #server-diagram .server > * {
+  display: inline-block;
+  float: left;
+}
+.no-flexbox.flexboxtweener #server-diagram .server {
+  -ms-flex-wrap: wrap;
+}
+#server-diagram .server .circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: #CCCCCC;
+  border: 2px solid #CCCCCC;
+}
+#server-diagram .server .circle:last-child {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin: 0;
+  background-color: #D9232E;
+  border-color: #D9232E;
+}
+#server-diagram .server:last-child {
+  margin-top: 0;
+}
+@-moz-keyframes fade-scale-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes fade-scale-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes fade-scale-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    background-color: #D9232E;
+  }
+  40% {
+    background-color: transparent;
+  }
+  60% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #D9232E;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    background-color: #D9232E;
+  }
+  40% {
+    background-color: transparent;
+  }
+  60% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #D9232E;
+  }
+}
+@keyframes blink {
+  0% {
+    background-color: #D9232E;
+  }
+  40% {
+    background-color: transparent;
+  }
+  60% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #D9232E;
+  }
+}
+@-moz-keyframes flicker {
+  0% {
+    background-color: #CCCCCC;
+  }
+  10% {
+    background-color: transparent;
+  }
+  60% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #CCCCCC;
+  }
+}
+@-webkit-keyframes flicker {
+  0% {
+    background-color: #CCCCCC;
+  }
+  10% {
+    background-color: transparent;
+  }
+  60% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #CCCCCC;
+  }
+}
+@keyframes flicker {
+  0% {
+    background-color: #CCCCCC;
+  }
+  10% {
+    background-color: transparent;
+  }
+  60% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #CCCCCC;
+  }
+}
+.passed-view #server-diagram .server-container {
+  -webkit-animation: fade-scale-up 0.5s ease-in;
+  -moz-animation: fade-scale-up 0.5s ease-in;
+  animation: fade-scale-up 0.5s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.passed-view #server-diagram .server-container:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.passed-view #server-diagram .server-container:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.passed-view #server-diagram .server-container:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.passed-view #server-diagram .server-container:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.passed-view #server-diagram .server-container:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+.passed-view #server-diagram .server-container:nth-child(6) {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.passed-view #server-diagram .server .circle {
+  -webkit-animation: flicker 1s infinite;
+  -moz-animation: flicker 1s infinite;
+  animation: flicker 1s infinite;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.passed-view #server-diagram .server .circle:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.passed-view #server-diagram .server .circle:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.passed-view #server-diagram .server .circle:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.passed-view #server-diagram .server .circle:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.passed-view #server-diagram .server .circle:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+.passed-view #server-diagram .server .circle:nth-child(6) {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.passed-view #server-diagram .server .circle:nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+.passed-view #server-diagram .server .circle:nth-child(8) {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+.passed-view #server-diagram .server .circle:nth-child(even) {
+  animation-duration: 1.66s;
+}
+.passed-view #server-diagram .server .circle:last-child {
+  -webkit-animation: blink 2s infinite;
+  -moz-animation: blink 2s infinite;
+  animation: blink 2s infinite;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  animation-delay: 0s;
+}
+#data-sources {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 30px;
+  background-color: #f2f2f2;
+}
+@-moz-keyframes fade-slide-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-10px, -10px);
+    transform: translate(-10px, -10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+@-webkit-keyframes fade-slide-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-10px, -10px);
+    transform: translate(-10px, -10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+@keyframes fade-slide-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-10px, -10px);
+    transform: translate(-10px, -10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+.no-flexbox.flexboxtweener #data-sources {
+  display: -ms-flexbox;
+}
+.no-flexbox.flexboxtweener #data-sources > * {
+  display: inline-block;
+}
+.no-flexbox.no-flexboxtweener #data-sources {
+  display: block;
+}
+.no-flexbox.no-flexboxtweener #data-sources:before,
+.no-flexbox.no-flexboxtweener #data-sources:after {
+  content: '';
+  display: table;
+}
+.no-flexbox.no-flexboxtweener #data-sources:after {
+  clear: both;
+}
+.no-flexbox.no-flexboxtweener #data-sources > * {
+  display: inline-block;
+  float: left;
+}
+.no-flexbox.flexboxtweener #data-sources {
+  -ms-flex-wrap: wrap;
+}
+@media only screen and (min-width: 768px) {
+  #data-sources {
+    padding: 45px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #data-sources {
+    padding: 60px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #data-sources {
+    padding: 60px;
+  }
+}
+#data-sources img {
+  width: 14.66%;
+  height: 14.66%;
+  margin: 1%;
+  background-color: #FFFFFF;
+  border-radius: 10%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+@media only screen and (min-width: 768px) {
+  #data-sources img {
+    width: 10.5%;
+    height: 10.5%;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #data-sources img {
+    width: 8%;
+    height: 8%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #data-sources img {
+    width: 83px;
+    height: 83px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #data-sources img {
+    margin: 5px;
+  }
+}
+.passed-view #data-sources img {
+  -webkit-animation: fade-slide-in 0.5s ease-in;
+  -moz-animation: fade-slide-in 0.5s ease-in;
+  animation: fade-slide-in 0.5s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.passed-view #data-sources img:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.passed-view #data-sources img:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.passed-view #data-sources img:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.passed-view #data-sources img:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.passed-view #data-sources img:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+.passed-view #data-sources img:nth-child(6) {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.passed-view #data-sources img:nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+.passed-view #data-sources img:nth-child(8) {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+.passed-view #data-sources img:nth-child(9) {
+  -webkit-animation-delay: 0.9s;
+  -moz-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+.passed-view #data-sources img:nth-child(10) {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.passed-view #data-sources img:nth-child(11) {
+  -webkit-animation-delay: 1.1s;
+  -moz-animation-delay: 1.1s;
+  animation-delay: 1.1s;
+}
+.passed-view #data-sources img:nth-child(12) {
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+.passed-view #data-sources img:nth-child(13) {
+  -webkit-animation-delay: 1.3s;
+  -moz-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
+.passed-view #data-sources img:nth-child(14) {
+  -webkit-animation-delay: 1.4s;
+  -moz-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+.passed-view #data-sources img:nth-child(15) {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+.passed-view #data-sources img:nth-child(16) {
+  -webkit-animation-delay: 1.6s;
+  -moz-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}
+.passed-view #data-sources img:nth-child(17) {
+  -webkit-animation-delay: 1.7s;
+  -moz-animation-delay: 1.7s;
+  animation-delay: 1.7s;
+}
+.passed-view #data-sources img:nth-child(18) {
+  -webkit-animation-delay: 1.8s;
+  -moz-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
+.passed-view #data-sources img:nth-child(19) {
+  -webkit-animation-delay: 1.9s;
+  -moz-animation-delay: 1.9s;
+  animation-delay: 1.9s;
+}
+.passed-view #data-sources img:nth-child(20) {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+}
+.passed-view #data-sources img:nth-child(21) {
+  -webkit-animation-delay: 2.1s;
+  -moz-animation-delay: 2.1s;
+  animation-delay: 2.1s;
+}
+.passed-view #data-sources img:nth-child(22) {
+  -webkit-animation-delay: 2.2s;
+  -moz-animation-delay: 2.2s;
+  animation-delay: 2.2s;
+}
+.passed-view #data-sources img:nth-child(23) {
+  -webkit-animation-delay: 2.3s;
+  -moz-animation-delay: 2.3s;
+  animation-delay: 2.3s;
+}
+.passed-view #data-sources img:nth-child(24) {
+  -webkit-animation-delay: 2.4s;
+  -moz-animation-delay: 2.4s;
+  animation-delay: 2.4s;
+}
+.passed-view #data-sources img:nth-child(25) {
+  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+.passed-view #data-sources img:nth-child(26) {
+  -webkit-animation-delay: 2.6s;
+  -moz-animation-delay: 2.6s;
+  animation-delay: 2.6s;
+}
+.passed-view #data-sources img:nth-child(27) {
+  -webkit-animation-delay: 2.7s;
+  -moz-animation-delay: 2.7s;
+  animation-delay: 2.7s;
+}
+.passed-view #data-sources img:nth-child(28) {
+  -webkit-animation-delay: 2.8s;
+  -moz-animation-delay: 2.8s;
+  animation-delay: 2.8s;
+}
+.passed-view #data-sources img:nth-child(29) {
+  -webkit-animation-delay: 2.9s;
+  -moz-animation-delay: 2.9s;
+  animation-delay: 2.9s;
+}
+.passed-view #data-sources img:nth-child(30) {
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  animation-delay: 3s;
+}
+#choose-clients .device-mockup.mac-thunderbolt {
+  width: 90%;
+  top: 0;
+  left: 0;
+}
+#choose-clients .device-mockup.ipad {
+  width: 55%;
+  bottom: 5%;
+  right: 5%;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-out 1s;
+  transition: all 0.5s ease-out 1s;
+}
+#choose-clients .device-mockup.ipad .screen {
+  -webkit-transition: all 0.5s ease-out 1.5s;
+  transition: all 0.5s ease-out 1.5s;
+}
+#choose-clients .device-mockup.iphone {
+  width: 15%;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-out 2.5s;
+  transition: all 0.5s ease-out 2.5s;
+}
+#choose-clients .device-mockup.iphone .screen {
+  -webkit-transition: all 0.5s ease-out 3s;
+  transition: all 0.5s ease-out 3s;
+}
+#choose-clients.passed-view .device-mockup.ipad,
+#choose-clients.passed-view .device-mockup.iphone {
+  opacity: 1;
+}
+#setup-server.page #transaction-services .device-mockup.ipad {
+  width: 95%;
+  top: 0;
+  left: 0;
+}
+#setup-server.page #transaction-services .device-mockup.iphone {
+  width: 25%;
+  bottom: 0;
+  right: 0;
 }
