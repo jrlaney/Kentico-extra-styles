@@ -5,9 +5,6 @@
     transition: @args;
 }
 
-/* JUST FOR THE SAMPLE */
-header, nav, .top-banner {display:none!important;}
-
 /* NEW BASE OVERRIDES */
 #container {background-color:#ffffff;}
 body {position:relative;}
@@ -179,19 +176,9 @@ body {position:relative;}
 
                 //animations for menu opening
                 background-color:@charcoal;
-                .transition-open(
-                    ~"background 0.2s ease-out 0s,
-                    transform 0.4s ease-out 0.5s,
-                    opacity 0.4s ease-out 0.5s,
-                    margin 0.2s ease-out 0.5s"
-                );
+                .transition-open(~"background 0.2s ease-out 0s, transform 0.4s ease-out 0.5s, opacity 0.4s ease-out 0.5s, margin 0.2s ease-out 0.5s");
                 &.two {
-                    .transition-open(
-                        ~"background 0.2s ease-out 0s,
-                        transform 0.4s ease-out 0.3s,
-                        opacity 0.4s ease-out 0.5s,
-                        margin 0.2s ease-out 0.5s"
-                    );
+                    .transition-open(~"background 0.2s ease-out 0s, transform 0.4s ease-out 0.3s, opacity 0.4s ease-out 0.5s,margin 0.2s ease-out 0.5s");
                 }
                 .menu-opened & {
                     background-color:@white;
