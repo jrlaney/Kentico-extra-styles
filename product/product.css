@@ -133,7 +133,7 @@ a > img:only-child {
   background-color: #8c8c8c;
   font-size: 12px;
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #ffffff;
+  color: #FFFFFF;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -193,7 +193,7 @@ a > img:only-child {
     transform-origin: center center left;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
-    background-color: #ffffff;
+    background-color: #FFFFFF;
   }
 }
 @media only screen and (max-width: 979px) {
@@ -344,7 +344,7 @@ a > img:only-child {
 }
 #server-diagram .server-border {
   position: absolute;
-  background-color: #cccccc;
+  background-color: #CCCCCC;
 }
 #server-diagram .server-border.top,
 #server-diagram .server-border.bottom {
@@ -387,7 +387,7 @@ a > img:only-child {
   position: relative;
   margin: 15px;
   padding: 0 25px 0 5px;
-  border: 2px solid #cccccc;
+  border: 2px solid #CCCCCC;
 }
 .no-flexbox.flexboxtweener #server-diagram .server {
   display: -ms-inline-flexbox;
@@ -416,8 +416,8 @@ a > img:only-child {
   height: 10px;
   margin: 5px;
   border-radius: 50%;
-  background-color: #cccccc;
-  border: 2px solid #cccccc;
+  background-color: #CCCCCC;
+  border: 2px solid #CCCCCC;
 }
 #server-diagram .server .circle:last-child {
   width: 20px;
@@ -428,8 +428,8 @@ a > img:only-child {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   margin: 0;
-  background-color: #d9232e;
-  border-color: #d9232e;
+  background-color: #D9232E;
+  border-color: #D9232E;
 }
 #server-diagram .server:last-child {
   margin-top: 0;
@@ -472,7 +472,7 @@ a > img:only-child {
 }
 @-moz-keyframes blink {
   0% {
-    background-color: #d9232e;
+    background-color: #D9232E;
   }
   40% {
     background-color: transparent;
@@ -481,12 +481,12 @@ a > img:only-child {
     background-color: transparent;
   }
   100% {
-    background-color: #d9232e;
+    background-color: #D9232E;
   }
 }
 @-webkit-keyframes blink {
   0% {
-    background-color: #d9232e;
+    background-color: #D9232E;
   }
   40% {
     background-color: transparent;
@@ -495,12 +495,12 @@ a > img:only-child {
     background-color: transparent;
   }
   100% {
-    background-color: #d9232e;
+    background-color: #D9232E;
   }
 }
 @keyframes blink {
   0% {
-    background-color: #d9232e;
+    background-color: #D9232E;
   }
   40% {
     background-color: transparent;
@@ -509,12 +509,12 @@ a > img:only-child {
     background-color: transparent;
   }
   100% {
-    background-color: #d9232e;
+    background-color: #D9232E;
   }
 }
 @-moz-keyframes flicker {
   0% {
-    background-color: #cccccc;
+    background-color: #CCCCCC;
   }
   10% {
     background-color: transparent;
@@ -523,12 +523,12 @@ a > img:only-child {
     background-color: transparent;
   }
   100% {
-    background-color: #cccccc;
+    background-color: #CCCCCC;
   }
 }
 @-webkit-keyframes flicker {
   0% {
-    background-color: #cccccc;
+    background-color: #CCCCCC;
   }
   10% {
     background-color: transparent;
@@ -537,12 +537,12 @@ a > img:only-child {
     background-color: transparent;
   }
   100% {
-    background-color: #cccccc;
+    background-color: #CCCCCC;
   }
 }
 @keyframes flicker {
   0% {
-    background-color: #cccccc;
+    background-color: #CCCCCC;
   }
   10% {
     background-color: transparent;
@@ -551,7 +551,7 @@ a > img:only-child {
     background-color: transparent;
   }
   100% {
-    background-color: #cccccc;
+    background-color: #CCCCCC;
   }
 }
 .passed-view #server-diagram .server-container {
@@ -562,32 +562,32 @@ a > img:only-child {
   -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-.passed-view #server-diagram .server-container:nth-child( 1) {
+.passed-view #server-diagram .server-container:nth-child(1) {
   -webkit-animation-delay: 0.1s;
   -moz-animation-delay: 0.1s;
   animation-delay: 0.1s;
 }
-.passed-view #server-diagram .server-container:nth-child( 2) {
+.passed-view #server-diagram .server-container:nth-child(2) {
   -webkit-animation-delay: 0.2s;
   -moz-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
-.passed-view #server-diagram .server-container:nth-child( 3) {
+.passed-view #server-diagram .server-container:nth-child(3) {
   -webkit-animation-delay: 0.3s;
   -moz-animation-delay: 0.3s;
   animation-delay: 0.3s;
 }
-.passed-view #server-diagram .server-container:nth-child( 4) {
+.passed-view #server-diagram .server-container:nth-child(4) {
   -webkit-animation-delay: 0.4s;
   -moz-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
-.passed-view #server-diagram .server-container:nth-child( 5) {
+.passed-view #server-diagram .server-container:nth-child(5) {
   -webkit-animation-delay: 0.5s;
   -moz-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
-.passed-view #server-diagram .server-container:nth-child( 6) {
+.passed-view #server-diagram .server-container:nth-child(6) {
   -webkit-animation-delay: 0.6s;
   -moz-animation-delay: 0.6s;
   animation-delay: 0.6s;
@@ -600,42 +600,42 @@ a > img:only-child {
   -moz-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-.passed-view #server-diagram .server .circle:nth-child( 1) {
+.passed-view #server-diagram .server .circle:nth-child(1) {
   -webkit-animation-delay: 0.1s;
   -moz-animation-delay: 0.1s;
   animation-delay: 0.1s;
 }
-.passed-view #server-diagram .server .circle:nth-child( 2) {
+.passed-view #server-diagram .server .circle:nth-child(2) {
   -webkit-animation-delay: 0.2s;
   -moz-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
-.passed-view #server-diagram .server .circle:nth-child( 3) {
+.passed-view #server-diagram .server .circle:nth-child(3) {
   -webkit-animation-delay: 0.3s;
   -moz-animation-delay: 0.3s;
   animation-delay: 0.3s;
 }
-.passed-view #server-diagram .server .circle:nth-child( 4) {
+.passed-view #server-diagram .server .circle:nth-child(4) {
   -webkit-animation-delay: 0.4s;
   -moz-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
-.passed-view #server-diagram .server .circle:nth-child( 5) {
+.passed-view #server-diagram .server .circle:nth-child(5) {
   -webkit-animation-delay: 0.5s;
   -moz-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
-.passed-view #server-diagram .server .circle:nth-child( 6) {
+.passed-view #server-diagram .server .circle:nth-child(6) {
   -webkit-animation-delay: 0.6s;
   -moz-animation-delay: 0.6s;
   animation-delay: 0.6s;
 }
-.passed-view #server-diagram .server .circle:nth-child( 7) {
+.passed-view #server-diagram .server .circle:nth-child(7) {
   -webkit-animation-delay: 0.7s;
   -moz-animation-delay: 0.7s;
   animation-delay: 0.7s;
 }
-.passed-view #server-diagram .server .circle:nth-child( 8) {
+.passed-view #server-diagram .server .circle:nth-child(8) {
   -webkit-animation-delay: 0.8s;
   -moz-animation-delay: 0.8s;
   animation-delay: 0.8s;
@@ -741,7 +741,7 @@ a > img:only-child {
   width: 14.66%;
   height: 14.66%;
   margin: 1%;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border-radius: 10%;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   opacity: 0;
@@ -777,152 +777,152 @@ a > img:only-child {
   -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-.passed-view #data-sources img:nth-child( 1) {
+.passed-view #data-sources img:nth-child(1) {
   -webkit-animation-delay: 0.1s;
   -moz-animation-delay: 0.1s;
   animation-delay: 0.1s;
 }
-.passed-view #data-sources img:nth-child( 2) {
+.passed-view #data-sources img:nth-child(2) {
   -webkit-animation-delay: 0.2s;
   -moz-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
-.passed-view #data-sources img:nth-child( 3) {
+.passed-view #data-sources img:nth-child(3) {
   -webkit-animation-delay: 0.3s;
   -moz-animation-delay: 0.3s;
   animation-delay: 0.3s;
 }
-.passed-view #data-sources img:nth-child( 4) {
+.passed-view #data-sources img:nth-child(4) {
   -webkit-animation-delay: 0.4s;
   -moz-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
-.passed-view #data-sources img:nth-child( 5) {
+.passed-view #data-sources img:nth-child(5) {
   -webkit-animation-delay: 0.5s;
   -moz-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
-.passed-view #data-sources img:nth-child( 6) {
+.passed-view #data-sources img:nth-child(6) {
   -webkit-animation-delay: 0.6s;
   -moz-animation-delay: 0.6s;
   animation-delay: 0.6s;
 }
-.passed-view #data-sources img:nth-child( 7) {
+.passed-view #data-sources img:nth-child(7) {
   -webkit-animation-delay: 0.7s;
   -moz-animation-delay: 0.7s;
   animation-delay: 0.7s;
 }
-.passed-view #data-sources img:nth-child( 8) {
+.passed-view #data-sources img:nth-child(8) {
   -webkit-animation-delay: 0.8s;
   -moz-animation-delay: 0.8s;
   animation-delay: 0.8s;
 }
-.passed-view #data-sources img:nth-child( 9) {
+.passed-view #data-sources img:nth-child(9) {
   -webkit-animation-delay: 0.9s;
   -moz-animation-delay: 0.9s;
   animation-delay: 0.9s;
 }
-.passed-view #data-sources img:nth-child( 10) {
+.passed-view #data-sources img:nth-child(10) {
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   animation-delay: 1s;
 }
-.passed-view #data-sources img:nth-child( 11) {
+.passed-view #data-sources img:nth-child(11) {
   -webkit-animation-delay: 1.1s;
   -moz-animation-delay: 1.1s;
   animation-delay: 1.1s;
 }
-.passed-view #data-sources img:nth-child( 12) {
+.passed-view #data-sources img:nth-child(12) {
   -webkit-animation-delay: 1.2s;
   -moz-animation-delay: 1.2s;
   animation-delay: 1.2s;
 }
-.passed-view #data-sources img:nth-child( 13) {
+.passed-view #data-sources img:nth-child(13) {
   -webkit-animation-delay: 1.3s;
   -moz-animation-delay: 1.3s;
   animation-delay: 1.3s;
 }
-.passed-view #data-sources img:nth-child( 14) {
+.passed-view #data-sources img:nth-child(14) {
   -webkit-animation-delay: 1.4s;
   -moz-animation-delay: 1.4s;
   animation-delay: 1.4s;
 }
-.passed-view #data-sources img:nth-child( 15) {
+.passed-view #data-sources img:nth-child(15) {
   -webkit-animation-delay: 1.5s;
   -moz-animation-delay: 1.5s;
   animation-delay: 1.5s;
 }
-.passed-view #data-sources img:nth-child( 16) {
+.passed-view #data-sources img:nth-child(16) {
   -webkit-animation-delay: 1.6s;
   -moz-animation-delay: 1.6s;
   animation-delay: 1.6s;
 }
-.passed-view #data-sources img:nth-child( 17) {
+.passed-view #data-sources img:nth-child(17) {
   -webkit-animation-delay: 1.7s;
   -moz-animation-delay: 1.7s;
   animation-delay: 1.7s;
 }
-.passed-view #data-sources img:nth-child( 18) {
+.passed-view #data-sources img:nth-child(18) {
   -webkit-animation-delay: 1.8s;
   -moz-animation-delay: 1.8s;
   animation-delay: 1.8s;
 }
-.passed-view #data-sources img:nth-child( 19) {
+.passed-view #data-sources img:nth-child(19) {
   -webkit-animation-delay: 1.9s;
   -moz-animation-delay: 1.9s;
   animation-delay: 1.9s;
 }
-.passed-view #data-sources img:nth-child( 20) {
+.passed-view #data-sources img:nth-child(20) {
   -webkit-animation-delay: 2s;
   -moz-animation-delay: 2s;
   animation-delay: 2s;
 }
-.passed-view #data-sources img:nth-child( 21) {
+.passed-view #data-sources img:nth-child(21) {
   -webkit-animation-delay: 2.1s;
   -moz-animation-delay: 2.1s;
   animation-delay: 2.1s;
 }
-.passed-view #data-sources img:nth-child( 22) {
+.passed-view #data-sources img:nth-child(22) {
   -webkit-animation-delay: 2.2s;
   -moz-animation-delay: 2.2s;
   animation-delay: 2.2s;
 }
-.passed-view #data-sources img:nth-child( 23) {
+.passed-view #data-sources img:nth-child(23) {
   -webkit-animation-delay: 2.3s;
   -moz-animation-delay: 2.3s;
   animation-delay: 2.3s;
 }
-.passed-view #data-sources img:nth-child( 24) {
+.passed-view #data-sources img:nth-child(24) {
   -webkit-animation-delay: 2.4s;
   -moz-animation-delay: 2.4s;
   animation-delay: 2.4s;
 }
-.passed-view #data-sources img:nth-child( 25) {
+.passed-view #data-sources img:nth-child(25) {
   -webkit-animation-delay: 2.5s;
   -moz-animation-delay: 2.5s;
   animation-delay: 2.5s;
 }
-.passed-view #data-sources img:nth-child( 26) {
+.passed-view #data-sources img:nth-child(26) {
   -webkit-animation-delay: 2.6s;
   -moz-animation-delay: 2.6s;
   animation-delay: 2.6s;
 }
-.passed-view #data-sources img:nth-child( 27) {
+.passed-view #data-sources img:nth-child(27) {
   -webkit-animation-delay: 2.7s;
   -moz-animation-delay: 2.7s;
   animation-delay: 2.7s;
 }
-.passed-view #data-sources img:nth-child( 28) {
+.passed-view #data-sources img:nth-child(28) {
   -webkit-animation-delay: 2.8s;
   -moz-animation-delay: 2.8s;
   animation-delay: 2.8s;
 }
-.passed-view #data-sources img:nth-child( 29) {
+.passed-view #data-sources img:nth-child(29) {
   -webkit-animation-delay: 2.9s;
   -moz-animation-delay: 2.9s;
   animation-delay: 2.9s;
 }
-.passed-view #data-sources img:nth-child( 30) {
+.passed-view #data-sources img:nth-child(30) {
   -webkit-animation-delay: 3s;
   -moz-animation-delay: 3s;
   animation-delay: 3s;
@@ -1002,43 +1002,43 @@ a > img:only-child {
   color: #333333;
 }
 .mix-filters .filter.active {
-  color: #ffffff;
+  color: #FFFFFF;
   background-color: #333333;
 }
 .mix-filters .filter.red:hover {
-  color: #d9232e;
+  color: #D9232E;
 }
 .mix-filters .filter.red.active {
-  color: #ffffff;
-  background-color: #d9232e;
+  color: #FFFFFF;
+  background-color: #D9232E;
 }
 .mix-filters .filter.orange:hover {
-  color: #ff9100;
+  color: #FF9100;
 }
 .mix-filters .filter.orange.active {
-  color: #ffffff;
-  background-color: #ff9100;
+  color: #FFFFFF;
+  background-color: #FF9100;
 }
 .mix-filters .filter.green:hover {
-  color: #68aa00;
+  color: #68AA00;
 }
 .mix-filters .filter.green.active {
-  color: #ffffff;
-  background-color: #68aa00;
+  color: #FFFFFF;
+  background-color: #68AA00;
 }
 .mix-filters .filter.blue:hover {
-  color: #4789a3;
+  color: #4789A3;
 }
 .mix-filters .filter.blue.active {
-  color: #ffffff;
-  background-color: #4789a3;
+  color: #FFFFFF;
+  background-color: #4789A3;
 }
 .mix-filters .filter.navy-blue:hover {
-  color: #11566f;
+  color: #11566F;
 }
 .mix-filters .filter.navy-blue.active {
-  color: #ffffff;
-  background-color: #11566f;
+  color: #FFFFFF;
+  background-color: #11566F;
 }
 @media only screen and (min-width: 768px) {
   .mix-filters .filter.active:before {
@@ -1057,19 +1057,19 @@ a > img:only-child {
     transition: all 0.2s ease-out 0s;
   }
   .mix-filters .filter.red.active:before {
-    border-top-color: #d9232e;
+    border-top-color: #D9232E;
   }
   .mix-filters .filter.orange.active:before {
-    border-top-color: #ff9100;
+    border-top-color: #FF9100;
   }
   .mix-filters .filter.green.active:before {
-    border-top-color: #68aa00;
+    border-top-color: #68AA00;
   }
   .mix-filters .filter.blue.active:before {
-    border-top-color: #4789a3;
+    border-top-color: #4789A3;
   }
   .mix-filters .filter.navy-blue.active:before {
-    border-top-color: #11566f;
+    border-top-color: #11566F;
   }
 }
 #next-page {
@@ -1128,7 +1128,7 @@ section {
   top: 50%;
   left: 0;
   margin-top: -4px;
-  background-color: #cccccc;
+  background-color: #CCCCCC;
 }
 .frame .timeline-list {
   position: relative;
@@ -1163,7 +1163,7 @@ section {
   margin-top: -15px;
   height: 30px;
   width: 15px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 .frame .timeline-list .timeline-item .text {
   opacity: 0.6;
@@ -1183,7 +1183,7 @@ section {
   z-index: 4;
   width: 3px;
   height: 50%;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   left: 0;
   top: 50%;
 }
@@ -1203,8 +1203,8 @@ section {
   height: 24px;
   width: 24px;
   border-radius: 50%;
-  border: 2px solid #cccccc;
-  background-color: #cccccc;
+  border: 2px solid #CCCCCC;
+  background-color: #CCCCCC;
 }
 .frame .timeline-list .timeline-item:nth-child(even) .flag:before {
   top: auto;
@@ -1212,27 +1212,27 @@ section {
 .frame .timeline-list .timeline-item.red:before,
 .frame .timeline-list .timeline-item.red .flag,
 .frame .timeline-list .timeline-item.red .flag:before {
-  background-color: #d9232e;
+  background-color: #D9232E;
 }
 .frame .timeline-list .timeline-item.orange:before,
 .frame .timeline-list .timeline-item.orange .flag,
 .frame .timeline-list .timeline-item.orange .flag:before {
-  background-color: #ff9100;
+  background-color: #FF9100;
 }
 .frame .timeline-list .timeline-item.green:before,
 .frame .timeline-list .timeline-item.green .flag,
 .frame .timeline-list .timeline-item.green .flag:before {
-  background-color: #68aa00;
+  background-color: #68AA00;
 }
 .frame .timeline-list .timeline-item.blue:before,
 .frame .timeline-list .timeline-item.blue .flag,
 .frame .timeline-list .timeline-item.blue .flag:before {
-  background-color: #4789a3;
+  background-color: #4789A3;
 }
 .frame .timeline-list .timeline-item.navy:before,
 .frame .timeline-list .timeline-item.navy .flag,
 .frame .timeline-list .timeline-item.navy .flag:before {
-  background-color: #11566f;
+  background-color: #11566F;
 }
 /* Timeline Scrollbar */
 .scrollbar {
@@ -1253,7 +1253,7 @@ section {
   margin-top: -1px;
   height: 2px;
   width: 100%;
-  border-bottom: 3px solid #cccccc;
+  border-bottom: 3px solid #CCCCCC;
 }
 .scrollbar .handle {
   width: 100px;
@@ -1548,7 +1548,7 @@ section {
     -ms-flex-order: 3;
   }
   .grid-lines .grid-item {
-    border: 1px solid #cccccc;
+    border: 1px solid #CCCCCC;
     padding: 30px;
   }
   .grid-lines .grid-item:nth-child(1) {

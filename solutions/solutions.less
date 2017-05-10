@@ -438,3 +438,102 @@ section.static-links {padding:20px;}
     transform: translate(-370px, 260px);
   }
 }
+
+
+
+
+//HOVER STATE OPTIONS
+.hover-overlay-slide-up {
+    position:relative;
+    .img .img-content {
+        // RESET CENTERING FROM BASE
+        top:auto;
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+        transform: translateY(0);
+        //CENTER THE OVERLAY CONTENT IN THE BOX
+        .display(flex);
+            -webkit-box-flex:0;
+        .flex(0, 1, auto);
+            -webkit-box-orient:vertical;
+            -webkit-box-direction:column;
+        .flex-direction(column);
+        .justify-content(center);
+        // BASE POSITIONING, CONTENT COLOR, AND BACKGROUND COLOR
+        padding:20px;
+        background-color:rgba(0,0,0,0.7);
+        bottom:0;
+        color:@white;
+        .line {background-color:@white;}
+        // FOR THE HOVER ANIMATION
+        min-height:50px;
+        .transition(.2s, ease-in, all, 0.2s);
+        .overlay-content {
+            display:block; position:relative;
+            overflow:hidden;
+            max-height:0px; opacity:0;
+              -webkit-transition:max-height 0.2s ease-out, opacity 0.2s ease-out 0s;
+            transition:max-height 0.2s ease-out, opacity 0.2s ease-out 0s;
+        }
+    }
+    &:hover .img .img-content {
+        min-height:100%;
+        .transition(.2s, ease-out, all, 0s);
+        .overlay-content {
+            max-height:900px; opacity:1;
+              -webkit-transition:max-height 0.4s ease-out 0.1s, opacity 0.4s ease-out 0.2s;
+            transition:max-height 0.4s ease-out 0.1s, opacity 0.4s ease-out 0.2s;
+        }
+    }
+}
+//hover overlay override for touch devices
+.ipad, .iphone, .android {
+    .hover-overlay-slide-up {
+        .img {
+            //GETS RID OF RATIO SO CONTENT WILL DETERMINE THE HEIGHT OF THE BOX INSTEAD
+            &:before {padding-bottom:0!important;}
+
+            .img-content {
+                //CONTENT WILL NOW DETERMINE HEIGHT OF THE BOX
+                position:relative;
+                // SET MASK TO FILL THE WHOLE SPACE
+                min-height:100%;
+                -webkit-transition:none; transition:none;
+                .overlay-content {
+                    max-height:100%; opacity:1;
+                    -webkit-transition:none; transition:none;
+                }
+            }
+        }
+        &:hover .img .img-content {
+            -webkit-transition:none; transition:none;
+            .overlay-content {-webkit-transition:none; transition:none;}
+        }
+    }
+}
+
+@media @small-only {
+
+    .hover-overlay-slide-up {
+        .img {
+            //GETS RID OF RATIO SO CONTENT WILL DETERMINE THE HEIGHT OF THE BOX INSTEAD
+            &:before {padding-bottom:0!important;}
+
+            .img-content {
+                //CONTENT WILL NOW DETERMINE HEIGHT OF THE BOX
+                position:relative;
+                // SET MASK TO FILL THE WHOLE SPACE
+                min-height:100%;
+                -webkit-transition:none; transition:none;
+                .overlay-content {
+                    max-height:100%; opacity:1;
+                    -webkit-transition:none; transition:none;
+                }
+            }
+        }
+        &:hover .img .img-content {
+            -webkit-transition:none; transition:none;
+            .overlay-content {-webkit-transition:none; transition:none;}
+        }
+    }
+}

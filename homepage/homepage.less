@@ -82,18 +82,12 @@
 	}
 	.cards .card {
 		border:none;
-		.card-header {
-			background-color:@pure-black;
-			.card-image {
-				min-width:100%;
-			}
-			&:after {background-color:fade(@pure-black, 10%); .transition;}
-		}
-		@media @medium {
-			&:hover {
+
+		@media @large {
+			
+            &:hover {
 				border:none;
 				.button {background-color:@red;}
-				.card-header:after {background-color:fade(@pure-black, 0%);}
 			}
 		}
 	}

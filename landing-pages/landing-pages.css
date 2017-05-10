@@ -239,6 +239,10 @@ section#symposium {
 .angles-canvas.white .angle {
   fill: #FFFFFF;
 }
+.angles-canvas + .flex-row {
+  position: relative;
+  z-index: 1;
+}
 #health-score-poor {
   width: 60px;
   height: 60px;
@@ -460,7 +464,7 @@ section#symposium {
   color: #333333;
 }
 .iframe-form-container .form-wrapper {
-  height: 410px;
+  height: 500px;
 }
 .form-wrapper {
   position: relative;
