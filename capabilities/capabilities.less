@@ -41,7 +41,7 @@
             @media @large { width: 150%; }
         }
     }
-    section:nth-child(2) {
+    > section:nth-child(2) {
         position: relative;
         padding-top: 70px;
         @media @medium { padding-top: 130px; }
@@ -119,14 +119,14 @@
     .card {
         cursor:pointer;
         border-top-color:@gainsboro;
-        .card-image-content {
+        .card-content:first-child {
             border-bottom:1px solid @gainsboro;
-            .logo {
-                .position(absolute, 50%, 50%, null, null);
-                max-height: ~"calc(100% - 40px)";
-                max-width: ~"calc(100% - 40px)";
-                .translate(-50%, -50%);
-            }
+        }
+        .card-content .logo {
+            .position(absolute, 50%, 50%, null, null);
+            max-height: ~"calc(100% - 40px)";
+            max-width: ~"calc(100% - 40px)";
+            .translate(-50%, -50%);
         }
         //animated properties
         opacity:1;
@@ -1085,6 +1085,10 @@
             opacity:0;
             .animation(app-lock-animation 7s 2s ease-out infinite);
         }
+    }
+    #emm-vendors .logo {
+        max-height: ~"calc(100% - 20px)";
+        max-width: ~"calc(100% - 20px)";
     }
 }
 .keyframes(app-lock-animation;{
