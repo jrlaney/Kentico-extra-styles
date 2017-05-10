@@ -1,6 +1,9 @@
 h1,
+.h1,
 h2,
+.h2,
 h3,
+.h3,
 h4,
 h5,
 h6,
@@ -13,8 +16,11 @@ ol {
   margin-bottom: 20px;
 }
 h1:last-child,
+.h1:last-child,
 h2:last-child,
+.h2:last-child,
 h3:last-child,
+.h3:last-child,
 h4:last-child,
 h5:last-child,
 h6:last-child,
@@ -24,8 +30,11 @@ ol:last-child {
   margin-bottom: 0;
 }
 h1.line-break,
+.h1.line-break,
 h2.line-break,
+.h2.line-break,
 h3.line-break,
+.h3.line-break,
 h4.line-break,
 h5.line-break,
 h6.line-break,
@@ -1701,15 +1710,9 @@ a > img:only-child {
   right: 26%;
   top: 6%;
   opacity: 0;
-  -webkit-animation: app-lock-animation 10s 2s ease-out infinite;
-  -moz-animation: app-lock-animation 10s 2s ease-out infinite;
-  animation: app-lock-animation 10s 2s ease-out infinite;
-}
-#emm #hero .ipad .app-lock.left-icon {
-  right: 45%;
-  -webkit-animation: app-lock-animation 10s 2.5s ease-out infinite;
-  -moz-animation: app-lock-animation 10s 2.5s ease-out infinite;
-  animation: app-lock-animation 10s 2.5s ease-out infinite;
+  -webkit-animation: app-lock-animation 7s 2s ease-out infinite;
+  -moz-animation: app-lock-animation 7s 2s ease-out infinite;
+  animation: app-lock-animation 7s 2s ease-out infinite;
 }
 @-moz-keyframes app-lock-animation {
   0% {
@@ -1717,17 +1720,17 @@ a > img:only-child {
     -webkit-transform: scale(2) translateY(-10px);
     transform: scale(2) translateY(-10px);
   }
-  3% {
+  5% {
     opacity: 1;
     -webkit-transform: scale(1) translateY(0);
     transform: scale(1) translateY(0);
   }
-  70% {
+  90% {
     opacity: 1;
     -webkit-transform: scale(1) translateY(0);
     transform: scale(1) translateY(0);
   }
-  73% {
+  95% {
     opacity: 0;
     -webkit-transform: translateY(10px);
     transform: translateY(10px);
@@ -1744,17 +1747,17 @@ a > img:only-child {
     -webkit-transform: scale(2) translateY(-10px);
     transform: scale(2) translateY(-10px);
   }
-  3% {
+  5% {
     opacity: 1;
     -webkit-transform: scale(1) translateY(0);
     transform: scale(1) translateY(0);
   }
-  70% {
+  90% {
     opacity: 1;
     -webkit-transform: scale(1) translateY(0);
     transform: scale(1) translateY(0);
   }
-  73% {
+  95% {
     opacity: 0;
     -webkit-transform: translateY(10px);
     transform: translateY(10px);
@@ -1771,17 +1774,17 @@ a > img:only-child {
     -webkit-transform: scale(2) translateY(-10px);
     transform: scale(2) translateY(-10px);
   }
-  3% {
+  5% {
     opacity: 1;
     -webkit-transform: scale(1) translateY(0);
     transform: scale(1) translateY(0);
   }
-  70% {
+  90% {
     opacity: 1;
     -webkit-transform: scale(1) translateY(0);
     transform: scale(1) translateY(0);
   }
-  73% {
+  95% {
     opacity: 0;
     -webkit-transform: translateY(10px);
     transform: translateY(10px);
