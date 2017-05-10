@@ -178,26 +178,12 @@
 #whats-new .cards .card {
   border: none;
 }
-#whats-new .cards .card .card-header {
-  background-color: #000000;
-}
-#whats-new .cards .card .card-header .card-image {
-  min-width: 100%;
-}
-#whats-new .cards .card .card-header:after {
-  background-color: rgba(0, 0, 0, 0.1);
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
-}
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 980px) {
   #whats-new .cards .card:hover {
     border: none;
   }
   #whats-new .cards .card:hover .button {
     background-color: #D9232E;
-  }
-  #whats-new .cards .card:hover .card-header:after {
-    background-color: rgba(0, 0, 0, 0);
   }
 }
 #explore-product .link-block {
