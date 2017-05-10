@@ -148,6 +148,10 @@ a > img:only-child {
   font-weight: 400;
   letter-spacing: 0.005em;
 }
+.blog.single .post .post-content [class*="wistia"],
+.blog.single .post .post-content [class*="wistia"] div {
+  margin: 0;
+}
 .blog.single .post .post-summary p,
 .blog.single .post .post-cta p {
   font-size: 20px;
