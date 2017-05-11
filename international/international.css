@@ -434,3 +434,21 @@
 .social-icon-new.rss:hover {
   background-color: #FF9100;
 }
+a.card {
+  color: inherit !important;
+}
+.card .card-image-content {
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+  max-width: none;
+  width: 100%;
+}
+.no-flexbox.flexboxtweener .card .card-image-content {
+  -ms-flex: 0 1 auto;
+}
+.card .card-footer {
+  padding: 0 !important;
+}
+.card .card-footer.padded {
+  padding: 0 30px 30px !important;
+}
