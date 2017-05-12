@@ -179,9 +179,6 @@
   #whats-new .cards .card:hover {
     border: none;
   }
-  #whats-new .cards .card:hover .button {
-    background-color: #D9232E;
-  }
 }
 #explore-product .link-block {
   display: -webkit-flex;
