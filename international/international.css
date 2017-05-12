@@ -443,9 +443,6 @@ a.card {
   max-width: none;
   width: 100%;
 }
-.no-flexbox.flexboxtweener .card .card-image-content {
-  -ms-flex: 0 1 auto;
-}
 .card .card-footer {
   padding: 0 !important;
 }

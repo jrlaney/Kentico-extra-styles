@@ -422,24 +422,15 @@ section {
     -webkit-order: 1;
     order: 1;
   }
-  .no-flexbox.flexboxtweener #ease-of-use .text-col-first {
-    -ms-flex-order: 1;
-  }
   #ease-of-use .report-col {
     -webkit-order: 2;
     order: 2;
     position: relative;
     height: 300px;
   }
-  .no-flexbox.flexboxtweener #ease-of-use .report-col {
-    -ms-flex-order: 2;
-  }
   #ease-of-use .text-col-last {
     -webkit-order: 3;
     order: 3;
-  }
-  .no-flexbox.flexboxtweener #ease-of-use .text-col-last {
-    -ms-flex-order: 3;
   }
   .grid-lines .grid-item {
     border: 1px solid #CCCCCC;

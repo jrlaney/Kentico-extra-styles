@@ -205,27 +205,6 @@ a > img:only-child {
   top: 0;
   right: 0;
 }
-.no-flexbox.flexboxtweener .gridder-navigation {
-  display: -ms-flexbox;
-}
-.no-flexbox.flexboxtweener .gridder-navigation > * {
-  display: inline-block;
-}
-.no-flexbox.no-flexboxtweener .gridder-navigation {
-  display: block;
-}
-.no-flexbox.no-flexboxtweener .gridder-navigation:before,
-.no-flexbox.no-flexboxtweener .gridder-navigation:after {
-  content: '';
-  display: table;
-}
-.no-flexbox.no-flexboxtweener .gridder-navigation:after {
-  clear: both;
-}
-.no-flexbox.no-flexboxtweener .gridder-navigation > * {
-  display: inline-block;
-  float: left;
-}
 .gridder-navigation a {
   -webkit-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -237,9 +216,6 @@ a > img:only-child {
   background: #555555;
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
-}
-.no-flexbox.flexboxtweener .gridder-navigation a {
-  -ms-flex: 1 1 auto;
 }
 .gridder-navigation a.gridder-close {
   -webkit-order: 1;
@@ -273,9 +249,6 @@ a > img:only-child {
 .gridder-navigation a.gridder-close:active:after,
 .gridder-navigation a.gridder-close:focus:after {
   background: #ffffff;
-}
-.no-flexbox.flexboxtweener .gridder-navigation a.gridder-close {
-  -ms-flex-order: 1;
 }
 .gridder-navigation a.gridder-nav {
   border-right: 1px solid #999999;
@@ -372,44 +345,11 @@ a > img:only-child {
   font-size: 24px;
   color: #CCCCCC;
 }
-.no-flexbox.flexboxtweener .partnership-logos {
-  display: -ms-flexbox;
-}
-.no-flexbox.flexboxtweener .partnership-logos > * {
-  display: inline-block;
-}
-.no-flexbox.no-flexboxtweener .partnership-logos {
-  display: block;
-}
-.no-flexbox.no-flexboxtweener .partnership-logos:before,
-.no-flexbox.no-flexboxtweener .partnership-logos:after {
-  content: '';
-  display: table;
-}
-.no-flexbox.no-flexboxtweener .partnership-logos:after {
-  clear: both;
-}
-.no-flexbox.no-flexboxtweener .partnership-logos > * {
-  display: inline-block;
-  float: left;
-}
-.no-flexbox.flexboxtweener .partnership-logos {
-  -ms-flex-direction: column;
-}
 @media only screen and (min-width: 768px) {
   .partnership-logos {
     -webkit-flex-direction: row;
     flex-direction: row;
   }
-  .no-flexbox.flexboxtweener .partnership-logos {
-    -ms-flex-direction: row;
-  }
-}
-.no-flexbox.flexboxtweener .partnership-logos {
-  -ms-flex-align: center;
-}
-.no-flexbox.flexboxtweener .partnership-logos {
-  -ms-flex-pack: center;
 }
 .partnership-logos .logo {
   max-width: 250px;

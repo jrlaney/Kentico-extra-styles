@@ -79,9 +79,6 @@ a > img:only-child {
   -webkit-flex-direction: column;
   flex-direction: column;
 }
-.no-flexbox.flexboxtweener #reviews .slick-slide {
-  -ms-flex-direction: column;
-}
 #reviews .slick-dots {
   margin-top: 20px;
 }

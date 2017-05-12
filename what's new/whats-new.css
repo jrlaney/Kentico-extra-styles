@@ -312,30 +312,6 @@ section.view p {
     transform: translate(0, 0);
   }
 }
-.no-flexbox.flexboxtweener #data-sources {
-  display: -ms-flexbox;
-}
-.no-flexbox.flexboxtweener #data-sources > * {
-  display: inline-block;
-}
-.no-flexbox.no-flexboxtweener #data-sources {
-  display: block;
-}
-.no-flexbox.no-flexboxtweener #data-sources:before,
-.no-flexbox.no-flexboxtweener #data-sources:after {
-  content: '';
-  display: table;
-}
-.no-flexbox.no-flexboxtweener #data-sources:after {
-  clear: both;
-}
-.no-flexbox.no-flexboxtweener #data-sources > * {
-  display: inline-block;
-  float: left;
-}
-.no-flexbox.flexboxtweener #data-sources {
-  -ms-flex-wrap: wrap;
-}
 @media only screen and (min-width: 768px) {
   #data-sources {
     padding: 45px;

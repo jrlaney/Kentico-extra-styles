@@ -98,27 +98,6 @@ a > img:only-child {
   right: 0;
   padding: 20px;
 }
-.no-flexbox.flexboxtweener .gridder-navigation {
-  display: -ms-flexbox;
-}
-.no-flexbox.flexboxtweener .gridder-navigation > * {
-  display: inline-block;
-}
-.no-flexbox.no-flexboxtweener .gridder-navigation {
-  display: block;
-}
-.no-flexbox.no-flexboxtweener .gridder-navigation:before,
-.no-flexbox.no-flexboxtweener .gridder-navigation:after {
-  content: '';
-  display: table;
-}
-.no-flexbox.no-flexboxtweener .gridder-navigation:after {
-  clear: both;
-}
-.no-flexbox.no-flexboxtweener .gridder-navigation > * {
-  display: inline-block;
-  float: left;
-}
 .gridder-navigation a {
   -webkit-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -128,9 +107,6 @@ a > img:only-child {
   padding: 20px;
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
-}
-.no-flexbox.flexboxtweener .gridder-navigation a {
-  -ms-flex: 1 1 auto;
 }
 .gridder-navigation a.gridder-close {
   -webkit-order: 1;
@@ -164,9 +140,6 @@ a > img:only-child {
 .gridder-navigation a.gridder-close:active:after,
 .gridder-navigation a.gridder-close:focus:after {
   background: #cccccc;
-}
-.no-flexbox.flexboxtweener .gridder-navigation a.gridder-close {
-  -ms-flex-order: 1;
 }
 .gridder-navigation a.gridder-nav:before {
   content: "\e901";
@@ -285,30 +258,6 @@ a > img:only-child {
   color: #FFFFFF;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-}
-.no-flexbox.flexboxtweener #to-top .label {
-  display: -ms-flexbox;
-}
-.no-flexbox.flexboxtweener #to-top .label > * {
-  display: inline-block;
-}
-.no-flexbox.no-flexboxtweener #to-top .label {
-  display: block;
-}
-.no-flexbox.no-flexboxtweener #to-top .label:before,
-.no-flexbox.no-flexboxtweener #to-top .label:after {
-  content: '';
-  display: table;
-}
-.no-flexbox.no-flexboxtweener #to-top .label:after {
-  clear: both;
-}
-.no-flexbox.no-flexboxtweener #to-top .label > * {
-  display: inline-block;
-  float: left;
-}
-.no-flexbox.flexboxtweener #to-top .label {
-  -ms-flex-align: center;
 }
 #to-top:hover .label,
 #to-top:active .label {

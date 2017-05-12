@@ -79,9 +79,6 @@ ul li {
   -webkit-flex-direction: column;
   flex-direction: column;
 }
-.no-flexbox.flexboxtweener #customer-support #support-packages thead th {
-  -ms-flex-direction: column;
-}
 @media only screen and (max-width: 767px) {
   #customer-support #support-packages thead th {
     padding: 20px 10px;

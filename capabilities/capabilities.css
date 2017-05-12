@@ -79,33 +79,6 @@ a > img:only-child {
   -webkit-justify-content: center;
   justify-content: center;
 }
-.no-flexbox.flexboxtweener #capabilities section.no-padding [class*="col"] {
-  display: -ms-flexbox;
-}
-.no-flexbox.flexboxtweener #capabilities section.no-padding [class*="col"] > * {
-  display: inline-block;
-}
-.no-flexbox.no-flexboxtweener #capabilities section.no-padding [class*="col"] {
-  display: block;
-}
-.no-flexbox.no-flexboxtweener #capabilities section.no-padding [class*="col"]:before,
-.no-flexbox.no-flexboxtweener #capabilities section.no-padding [class*="col"]:after {
-  content: '';
-  display: table;
-}
-.no-flexbox.no-flexboxtweener #capabilities section.no-padding [class*="col"]:after {
-  clear: both;
-}
-.no-flexbox.no-flexboxtweener #capabilities section.no-padding [class*="col"] > * {
-  display: inline-block;
-  float: left;
-}
-.no-flexbox.flexboxtweener #capabilities section.no-padding [class*="col"] {
-  -ms-flex-direction: column;
-}
-.no-flexbox.flexboxtweener #capabilities section.no-padding [class*="col"] {
-  -ms-flex-pack: center;
-}
 @media only screen and (min-width: 980px) {
   #capabilities section.no-padding [class*="col"] {
     min-height: 500px;
@@ -242,9 +215,6 @@ a > img:only-child {
   z-index: 2;
   -webkit-order: -1;
   order: -1;
-}
-.no-flexbox.flexboxtweener .gridder .grid-item {
-  -ms-flex-order: -1;
 }
 .gridder .card {
   cursor: pointer;
@@ -1138,9 +1108,6 @@ a > img:only-child {
   padding: 20px;
   -webkit-flex-direction: column;
   flex-direction: column;
-}
-.no-flexbox.flexboxtweener #mobile #mobile-slider .slide {
-  -ms-flex-direction: column;
 }
 @media only screen and (max-width: 767px) {
   #mobile #mobile-slider .slide img {

@@ -284,9 +284,6 @@
     -webkit-align-items: flex-start;
     align-items: flex-start;
   }
-  .no-flexbox.flexboxtweener #values-slider .slick-slide {
-    -ms-flex-align: start;
-  }
 }
 #values-slider .slick-slide ul {
   list-style: none;
@@ -600,9 +597,6 @@
 #contact-us #hero > .flex-row.middle.around-xl {
   -webkit-align-items: flex-start;
   align-items: flex-start;
-}
-.no-flexbox.flexboxtweener #contact-us #hero > .flex-row.middle.around-xl {
-  -ms-flex-align: start;
 }
 #contact-us #hero .text-col > h1 {
   display: none;

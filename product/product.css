@@ -137,30 +137,6 @@ a > img:only-child {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-.no-flexbox.flexboxtweener #to-top .label {
-  display: -ms-flexbox;
-}
-.no-flexbox.flexboxtweener #to-top .label > * {
-  display: inline-block;
-}
-.no-flexbox.no-flexboxtweener #to-top .label {
-  display: block;
-}
-.no-flexbox.no-flexboxtweener #to-top .label:before,
-.no-flexbox.no-flexboxtweener #to-top .label:after {
-  content: '';
-  display: table;
-}
-.no-flexbox.no-flexboxtweener #to-top .label:after {
-  clear: both;
-}
-.no-flexbox.no-flexboxtweener #to-top .label > * {
-  display: inline-block;
-  float: left;
-}
-.no-flexbox.flexboxtweener #to-top .label {
-  -ms-flex-align: center;
-}
 #to-top:hover .label,
 #to-top:active .label {
   opacity: 1;
@@ -237,30 +213,6 @@ a > img:only-child {
   -webkit-justify-content: center;
   justify-content: center;
 }
-.no-flexbox.flexboxtweener #server-diagram .servers-container {
-  display: -ms-flexbox;
-}
-.no-flexbox.flexboxtweener #server-diagram .servers-container > * {
-  display: inline-block;
-}
-.no-flexbox.no-flexboxtweener #server-diagram .servers-container {
-  display: block;
-}
-.no-flexbox.no-flexboxtweener #server-diagram .servers-container:before,
-.no-flexbox.no-flexboxtweener #server-diagram .servers-container:after {
-  content: '';
-  display: table;
-}
-.no-flexbox.no-flexboxtweener #server-diagram .servers-container:after {
-  clear: both;
-}
-.no-flexbox.no-flexboxtweener #server-diagram .servers-container > * {
-  display: inline-block;
-  float: left;
-}
-.no-flexbox.flexboxtweener #server-diagram .servers-container {
-  -ms-flex-pack: center;
-}
 #server-diagram .servers {
   display: -webkit-flex;
   display: flex;
@@ -270,40 +222,10 @@ a > img:only-child {
   justify-content: center;
   max-width: 600px;
 }
-.no-flexbox.flexboxtweener #server-diagram .servers {
-  display: -ms-flexbox;
-}
-.no-flexbox.flexboxtweener #server-diagram .servers > * {
-  display: inline-block;
-}
-.no-flexbox.no-flexboxtweener #server-diagram .servers {
-  display: block;
-}
-.no-flexbox.no-flexboxtweener #server-diagram .servers:before,
-.no-flexbox.no-flexboxtweener #server-diagram .servers:after {
-  content: '';
-  display: table;
-}
-.no-flexbox.no-flexboxtweener #server-diagram .servers:after {
-  clear: both;
-}
-.no-flexbox.no-flexboxtweener #server-diagram .servers > * {
-  display: inline-block;
-  float: left;
-}
-.no-flexbox.flexboxtweener #server-diagram .servers {
-  -ms-flex-wrap: wrap;
-}
-.no-flexbox.flexboxtweener #server-diagram .servers {
-  -ms-flex-pack: center;
-}
 @media only screen and (min-width: 768px) {
   #server-diagram .servers {
     -webkit-justify-content: center;
     justify-content: center;
-  }
-  .no-flexbox.flexboxtweener #server-diagram .servers {
-    -ms-flex-pack: center;
   }
 }
 #server-diagram .server-container {
@@ -315,27 +237,6 @@ a > img:only-child {
   opacity: 0;
   -webkit-transform: scale(0.8);
   transform: scale(0.8);
-}
-.no-flexbox.flexboxtweener #server-diagram .server-container {
-  display: -ms-inline-flexbox;
-}
-.no-flexbox.no-flexboxtweener #server-diagram .server-container {
-  display: inline-block;
-}
-.no-flexbox.no-flexboxtweener #server-diagram .server-container:before,
-.no-flexbox.no-flexboxtweener #server-diagram .server-container:after {
-  content: '';
-  display: table;
-}
-.no-flexbox.no-flexboxtweener #server-diagram .server-container:after {
-  clear: both;
-}
-.no-flexbox.no-flexboxtweener #server-diagram .server-container > * {
-  display: inline-block;
-  float: left;
-}
-.no-flexbox.flexboxtweener #server-diagram .server-container {
-  -ms-flex-direction: column;
 }
 @media only screen and (min-width: 768px) {
   #server-diagram .server-container {
@@ -388,27 +289,6 @@ a > img:only-child {
   margin: 15px;
   padding: 0 25px 0 5px;
   border: 2px solid #CCCCCC;
-}
-.no-flexbox.flexboxtweener #server-diagram .server {
-  display: -ms-inline-flexbox;
-}
-.no-flexbox.no-flexboxtweener #server-diagram .server {
-  display: inline-block;
-}
-.no-flexbox.no-flexboxtweener #server-diagram .server:before,
-.no-flexbox.no-flexboxtweener #server-diagram .server:after {
-  content: '';
-  display: table;
-}
-.no-flexbox.no-flexboxtweener #server-diagram .server:after {
-  clear: both;
-}
-.no-flexbox.no-flexboxtweener #server-diagram .server > * {
-  display: inline-block;
-  float: left;
-}
-.no-flexbox.flexboxtweener #server-diagram .server {
-  -ms-flex-wrap: wrap;
 }
 #server-diagram .server .circle {
   display: inline-block;
@@ -697,30 +577,6 @@ a > img:only-child {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
   }
-}
-.no-flexbox.flexboxtweener #data-sources {
-  display: -ms-flexbox;
-}
-.no-flexbox.flexboxtweener #data-sources > * {
-  display: inline-block;
-}
-.no-flexbox.no-flexboxtweener #data-sources {
-  display: block;
-}
-.no-flexbox.no-flexboxtweener #data-sources:before,
-.no-flexbox.no-flexboxtweener #data-sources:after {
-  content: '';
-  display: table;
-}
-.no-flexbox.no-flexboxtweener #data-sources:after {
-  clear: both;
-}
-.no-flexbox.no-flexboxtweener #data-sources > * {
-  display: inline-block;
-  float: left;
-}
-.no-flexbox.flexboxtweener #data-sources {
-  -ms-flex-wrap: wrap;
 }
 @media only screen and (min-width: 768px) {
   #data-sources {
@@ -1528,24 +1384,15 @@ section {
     -webkit-order: 1;
     order: 1;
   }
-  .no-flexbox.flexboxtweener #ease-of-use .text-col-first {
-    -ms-flex-order: 1;
-  }
   #ease-of-use .report-col {
     -webkit-order: 2;
     order: 2;
     position: relative;
     height: 300px;
   }
-  .no-flexbox.flexboxtweener #ease-of-use .report-col {
-    -ms-flex-order: 2;
-  }
   #ease-of-use .text-col-last {
     -webkit-order: 3;
     order: 3;
-  }
-  .no-flexbox.flexboxtweener #ease-of-use .text-col-last {
-    -ms-flex-order: 3;
   }
   .grid-lines .grid-item {
     border: 1px solid #CCCCCC;
