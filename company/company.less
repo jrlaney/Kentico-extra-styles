@@ -320,7 +320,6 @@
 
 // CONTACT US SECTION STYLES
 #contact-us {
-
     > .flex-row {position:relative; z-index:3;}
     #background-map {
         position:absolute; z-index:0;
@@ -339,12 +338,13 @@
         > .flex-row.middle.around-xl {.align-items(flex-start);}
 
         .text-col > h1 {display:none;}
-        .office-container {
+        .hero-container {
             position:relative;
-            margin-top:20px; padding:60px 20px 20px 20px;
+            margin-top:10px; padding:20px;
             background-color:@white;
             .box-shadow(1px 1px 5px fade(@pure-black, 50%));
             color:@black;
+            &.offices {padding-top:60px;}
             #office-selector {
                 display:block; position:absolute;
                 top:0; left:0;
@@ -356,7 +356,7 @@
         }
         .form-col {
             #form-container {
-                margin-top:20px; padding:20px;
+                margin-top:10px; padding:20px;
                 background-color:@white;
                 .box-shadow(1px 1px 5px fade(@pure-black, 50%));
             }

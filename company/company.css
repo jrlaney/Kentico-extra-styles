@@ -601,15 +601,18 @@
 #contact-us #hero .text-col > h1 {
   display: none;
 }
-#contact-us #hero .office-container {
+#contact-us #hero .hero-container {
   position: relative;
-  margin-top: 20px;
-  padding: 60px 20px 20px 20px;
+  margin-top: 10px;
+  padding: 20px;
   background-color: #FFFFFF;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
   color: #333333;
 }
-#contact-us #hero .office-container #office-selector {
+#contact-us #hero .hero-container.offices {
+  padding-top: 60px;
+}
+#contact-us #hero .hero-container #office-selector {
   display: block;
   position: absolute;
   top: 0;
@@ -620,7 +623,7 @@
   padding-left: 25px;
 }
 #contact-us #hero .form-col #form-container {
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 20px;
   background-color: #FFFFFF;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
