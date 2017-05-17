@@ -365,6 +365,43 @@ a > img:only-child {
     max-width: 300px;
   }
 }
+.oem.page #platform .accordion .toggler {
+  padding: 15px 20px;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+.oem.page #platform .accordion .toggler:before {
+  display: inline-block;
+  position: relative;
+  content: '';
+  width: 0;
+  height: 0;
+  margin-right: 10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #D9232E;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+  background-color: transparent;
+  margin-top: 0;
+  left: auto;
+  top: auto;
+}
+.oem.page #platform .accordion .toggler:after {
+  display: none;
+}
+.oem.page #platform .accordion .toggler.expanded {
+  background-color: #D9232E;
+  color: #FFFFFF;
+}
+.oem.page #platform .accordion .toggler.expanded:before {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  border-top-color: #FFFFFF;
+}
+.oem.page #platform .accordion .element {
+  padding: 15px 20px;
+}
 .company.page blockquote {
   position: relative;
   margin: 0;
