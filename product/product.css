@@ -62,6 +62,9 @@ img:last-child {
 a > img:only-child {
   margin-bottom: 20px;
 }
+section {
+  overflow: hidden;
+}
 .product #hero.background-image {
   background-image: url('/getmedia/2838b8b1-25b0-43f6-824f-142739031279/two-monitors-wood-desk');
 }
@@ -826,6 +829,116 @@ a > img:only-child {
   bottom: 0;
   right: 0;
 }
+#next-page {
+  padding: 0;
+}
+#next-page .button {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+@media only screen and (min-width: 768px) {
+  #next-page .button {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #next-page .button {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #next-page .button {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+#next-page .next-page-title {
+  display: block;
+  margin-top: -10px;
+}
+.background-blue.darken {
+  background-color: #44788c;
+}
+#connect-data #hero {
+  overflow: visible;
+  color: #FFFFFF;
+}
+#connect-data #hero .flex-row {
+  position: relative;
+  z-index: 1;
+}
+#connect-data #hero .logo-lockup .text-uppercase {
+  letter-spacing: 0.2em;
+}
+#connect-data #hero .logo-lockup .icon {
+  font-size: 75px;
+}
+#connect-data #hero .angle-wrapper {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+#connect-data #hero .angle-wrapper .angle {
+  position: absolute;
+  top: 0;
+}
+#connect-data #hero .angle-wrapper .angle.left {
+  z-index: 2;
+  right: 50%;
+  width: 100%;
+  padding-bottom: 100%;
+  -webkit-transform: translateX(600px);
+  transform: translateX(600px);
+  mix-blend-mode: multiply;
+}
+@media only screen and (min-width: 768px) {
+  #connect-data #hero .angle-wrapper .angle.left {
+    -webkit-transform: translateX(384px);
+    transform: translateX(384px);
+  }
+}
+@media only screen and (min-width: 980px) {
+  #connect-data #hero .angle-wrapper .angle.left {
+    -webkit-transform: translateX(490px);
+    transform: translateX(490px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #connect-data #hero .angle-wrapper .angle.left {
+    -webkit-transform: translateX(600px);
+    transform: translateX(600px);
+  }
+}
+#connect-data #hero .angle-wrapper .angle.right {
+  z-index: 1;
+  width: 50%;
+  left: 50%;
+  padding-bottom: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#connect-data #hero .angle-wrapper.red .angle.left {
+  background-color: #D9232E;
+}
+#connect-data #hero .angle-wrapper.orange .angle.left {
+  background-color: #FF9100;
+}
+#connect-data #hero .angle-wrapper.green .angle.left {
+  background-color: #68AA00;
+}
+#connect-data #hero .angle-wrapper.blue .angle.left {
+  background-color: #4789A3;
+}
+#connect-data #hero .angle-wrapper.navy-blue .angle.left {
+  background-color: #11566F;
+}
 #mix-wrapper {
   overflow: hidden;
 }
@@ -928,41 +1041,6 @@ a > img:only-child {
     border-top-color: #11566F;
   }
 }
-#next-page {
-  padding: 0;
-}
-#next-page .button {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-@media only screen and (min-width: 768px) {
-  #next-page .button {
-    padding-top: 45px;
-    padding-bottom: 45px;
-  }
-}
-@media only screen and (min-width: 980px) {
-  #next-page .button {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #next-page .button {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
-#next-page .next-page-title {
-  display: block;
-  margin-top: -10px;
-}
-.background-blue.darken {
-  background-color: #44788c;
-}
-section {
-  overflow: hidden;
-}
 .timeline-wrapper {
   position: relative;
 }
@@ -1033,6 +1111,13 @@ section {
   margin-top: 210px;
   padding: 20px 0 0 30px;
 }
+.frame .timeline-list .timeline-item:nth-child(even) .flag {
+  bottom: 50%;
+  top: auto;
+}
+.frame .timeline-list .timeline-item:nth-child(even) .flag:before {
+  top: auto;
+}
 .frame .timeline-list .timeline-item .flag {
   display: block;
   position: absolute;
@@ -1042,10 +1127,6 @@ section {
   background-color: #FFFFFF;
   left: 0;
   top: 50%;
-}
-.frame .timeline-list .timeline-item:nth-child(even) .flag {
-  bottom: 50%;
-  top: auto;
 }
 .frame .timeline-list .timeline-item .flag:before {
   display: block;
@@ -1062,32 +1143,29 @@ section {
   border: 2px solid #CCCCCC;
   background-color: #CCCCCC;
 }
-.frame .timeline-list .timeline-item:nth-child(even) .flag:before {
-  top: auto;
-}
-.frame .timeline-list .timeline-item.red:before,
-.frame .timeline-list .timeline-item.red .flag,
-.frame .timeline-list .timeline-item.red .flag:before {
+.frame .timeline-list.red:before,
+.frame .timeline-list.red .flag,
+.frame .timeline-list.red .flag:before {
   background-color: #D9232E;
 }
-.frame .timeline-list .timeline-item.orange:before,
-.frame .timeline-list .timeline-item.orange .flag,
-.frame .timeline-list .timeline-item.orange .flag:before {
+.frame .timeline-list.orange:before,
+.frame .timeline-list.orange .flag,
+.frame .timeline-list.orange .flag:before {
   background-color: #FF9100;
 }
-.frame .timeline-list .timeline-item.green:before,
-.frame .timeline-list .timeline-item.green .flag,
-.frame .timeline-list .timeline-item.green .flag:before {
+.frame .timeline-list.green:before,
+.frame .timeline-list.green .flag,
+.frame .timeline-list.green .flag:before {
   background-color: #68AA00;
 }
-.frame .timeline-list .timeline-item.blue:before,
-.frame .timeline-list .timeline-item.blue .flag,
-.frame .timeline-list .timeline-item.blue .flag:before {
+.frame .timeline-list.blue:before,
+.frame .timeline-list.blue .flag,
+.frame .timeline-list.blue .flag:before {
   background-color: #4789A3;
 }
-.frame .timeline-list .timeline-item.navy:before,
-.frame .timeline-list .timeline-item.navy .flag,
-.frame .timeline-list .timeline-item.navy .flag:before {
+.frame .timeline-list.navy:before,
+.frame .timeline-list.navy .flag,
+.frame .timeline-list.navy .flag:before {
   background-color: #11566F;
 }
 /* Timeline Scrollbar */
@@ -1168,7 +1246,6 @@ section {
   border-radius: 50%;
   background-color: #bbbbbb;
 }
-/* Timeline Controls */
 .controls {
   display: block;
   position: absolute;
