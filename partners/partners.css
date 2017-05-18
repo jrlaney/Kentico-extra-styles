@@ -434,11 +434,11 @@ a > img:only-child {
     -webkit-align-items: flex-start;
     align-items: flex-start;
     float: none;
-    width: 50%;
   }
   .oem.page #platform .panelstack.vertical-panelstack .panel-nav {
     z-index: 1;
     padding-bottom: 0;
+    width: 40%;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
     background-color: #333333;
   }
@@ -466,7 +466,7 @@ a > img:only-child {
     height: 0;
     border-top: 7px solid transparent;
     border-bottom: 7px solid transparent;
-    border-left: 7px solid #999999;
+    border-left: 7px solid #FFFFFF;
     margin: 0;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
@@ -492,6 +492,7 @@ a > img:only-child {
   }
   .oem.page #platform .panelstack.vertical-panelstack .panel-content {
     z-index: 0;
+    width: 60%;
     border: none;
     opacity: 0;
     -webkit-animation: fade-slide-right 0.3s ease-out 0.2s normal forwards;
@@ -502,10 +503,10 @@ a > img:only-child {
 }
 @media only screen and (min-width: 980px) {
   .oem.page #platform .panelstack.vertical-panelstack .panel-nav {
-    width: 40%;
+    width: 30%;
   }
   .oem.page #platform .panelstack.vertical-panelstack .panel-content {
-    width: 60%;
+    width: 70%;
     padding: 30px 50px;
   }
 }

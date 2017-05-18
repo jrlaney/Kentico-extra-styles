@@ -275,11 +275,11 @@
                     .flex-wrap(wrap);
                     .align-items(flex-start);
                     float:none;
-                    width:50%;
                 }
                 .panel-nav {
                     z-index:1;
                      padding-bottom:0;
+                     width:40%;
                      .box-shadow(1px 1px 10px fade(@pure-black, 20%));
                      background-color:@black;
                      .panel-nav-elem {
@@ -301,9 +301,8 @@
                                  width:0; height:0;
                                  border-top:7px solid transparent;
                                  border-bottom:7px solid transparent;
-                                 border-left:7px solid @dark-gray;
+                                 border-left:7px solid @white;
                                  margin:0;
-
                                  .translate(0, -50%);
                                  .transition;
                              }
@@ -326,21 +325,22 @@
                 }
                 .panel-content {
                     z-index:0;
-                     border:none;
-                     opacity:0;
-                     .animation(fade-slide-right 0.3s ease-out 0.2s normal forwards);
-                     padding:30px;
+                    width:60%;
+                    border:none;
+                    opacity:0;
+                    .animation(fade-slide-right 0.3s ease-out 0.2s normal forwards);
+                    padding:30px;
                 }//end panel content
             }// end panelstack vertical
-        }//end media query
+        }//end medium media query
         @media @large {
             .panelstack.vertical-panelstack {
-                .panel-nav {width:40%;}
-                .panel-content {width:60%; padding:30px 50px;}
+                .panel-nav {width:30%;}
+                .panel-content {width:70%; padding:30px 50px;}
             }
-        }
-    }//end oem
-}
+        }//end large media query
+    }//end platform row
+}//end oem
 .keyframes(fade-slide-right;{
     0%{opacity:0; .translateX(-10%);}
     100%{opacity:1; .translateX(0);}
