@@ -1,3 +1,5 @@
+@import '../settings.less';
+
 /*=======================================================================
 =      Main styles are for smallest screen size - larger sizes are specified in media queries          =
 ==========================================================================*/
@@ -29,6 +31,110 @@
   font-size:18px; line-height:20px;
   padding-bottom:10px;
 }
+
+//new vertical panelstack
+@media @medium {
+    .panelstack.vertical-panelstack {
+        .display(flex);
+        .flex(0, 1, auto);
+        width: 100%;
+        .flex-direction(row);
+        .flex-wrap(wrap);
+        .justify-content(start);
+        .align-items(stretch);
+        background-color:@light-gray;
+
+        .panel-nav, .panel-content {
+            .flex(0, 1, auto);
+            .display(flex);
+            .flex-direction(column);
+            .flex-wrap(wrap);
+            .align-items(flex-start);
+            float:none;
+        }
+        .panel-nav {
+            z-index:1;
+             padding-bottom:0;
+             width:40%;
+             .box-shadow(1px 1px 10px fade(@pure-black, 20%));
+             background-color:@black;
+             .panel-nav-elem {
+                 width:100%;
+                 border:none;
+                 > a {
+                     color:@white;
+                     padding:15px 40px 15px 20px;
+                     opacity:0.5;
+                     &:hover {
+                         color:@white;
+                         opacity:1;
+                         background-color: fade(@pure-black, 10%);
+                     }
+                     &:before {
+                         display:block; position:absolute;
+                         content:'';
+                         top:50%; right:15px;
+                         width:0; height:0;
+                         border-top:7px solid transparent;
+                         border-bottom:7px solid transparent;
+                         border-left:7px solid @white;
+                         margin:0;
+                         .translate(0, -50%);
+                         .transition;
+                     }
+                     &:after {display:none;}
+                 }//end > a
+                 &.active-panel > a {
+                     opacity:1;
+                     background-color:@red;
+                     color:@white;
+                     &:before {
+                         opacity:1;
+                         border-top-width:10px;
+                         border-bottom-width:10px;
+                         border-left-width:10px;
+                         border-left-color:@red;
+                         .translate(25px, -50%);
+                     }
+                 }//end active panel styles
+             }//end panel-nav-elem
+        }
+        .panel-content {
+            z-index:0;
+            width:60%;
+            border:none;
+            opacity:0;
+            .animation(fade-slide-right 0.3s ease-out 0.2s normal forwards);
+            padding:30px;
+        }//end panel content
+    }// end panelstack vertical
+
+    .panelstack.vertical-panelstack {
+        .loop-colors(@i) when (@i > 0) {
+            .loop-colors(@i - 1);
+
+            @color-class: extract(@color-classes, @i);
+            @color: extract(@colors, @i);
+
+            &.@{color-class} {
+                .panel-nav .panel-nav-elem.active-panel>a {background-color:@color}
+                .panel-nav .panel-nav-elem.active-panel>a:before {border-left-color:@color;}
+            }
+        }
+        .loop-colors(length(@color-classes));
+    }
+}//end medium media query
+@media @large {
+    .panelstack.vertical-panelstack {
+        .panel-nav {width:30%;}
+        .panel-content {width:70%; padding:30px 50px;}
+    }
+}//end large media query
+.keyframes(fade-slide-right;{
+    0%{opacity:0; .translateX(-10%);}
+    100%{opacity:1; .translateX(0);}
+});
+
 
 /* header with icon */
 h1.icon-header, h2.icon-header, h3.icon-header, h4.icon-header, h5.icon-header, h6.icon-header {
@@ -1101,6 +1207,72 @@ padding-left:20px; padding-right:20px;
   max-width: 400px;
   }
 
+
+/*-----------------cloud page------------*/
+#services-and-tools {
+    .icon-col {
+        position:relative;
+        @media @medium {padding-bottom:35px; margin-bottom:20px;}
+
+        .grid-item {.display(inline-flex);}
+        .background-white {
+            .flex(0, 1, auto);
+            .display(flex);
+            .flex-direction(row);
+            .flex-wrap(wrap);
+            .align-items(flex-start);
+            width: 100%;
+            position: relative;
+            > p {width:100%;}
+        }
+        .label {
+            @media @small-only {
+                .display(flex);
+                .flex(0, 0, 100%);
+            }
+            display:block; position:relative;
+            padding:25px 25px 30px 25px; margin:0;
+            font-family:@myriad-pro;
+            font-size:14px; line-height:1em;
+            font-weight:600;
+            .uppercase;
+            color:@gray;
+            text-align:center;
+
+            @media @medium {
+                position:absolute;
+                bottom:0; left:0;
+                width:50%;
+                padding:25px 0 0 0;
+                &.full {
+                    width:100%;
+                    .line {width:~"calc(50% - 40px)";}
+                }
+                &.two-third {width:66.66%}
+                &.one-third {width:33.33%}
+                &:last-of-type {left:auto; right:0;}
+            }
+            .line {
+                position:absolute;
+                top:15px; left:50%;
+                .translateX(-50%);
+                height:1px; width:~"calc(100% - 40px)";
+                background-color:@gray;
+                &:before, &:after {
+                    position:absolute;
+                    content:'';
+                    bottom:0; left:0;
+                    height:15px; width:1px;
+                    background-color:@gray;
+                }
+                &:after {left:auto; right:0;}
+            }
+        }
+    }
+}
+
+
+
 /*-----------------pricing page------------*/
 .price-chart-wrapper .grid-item {position:relative; z-index:1;}
 .price-chart-wrapper .type {
@@ -1630,7 +1802,6 @@ padding-left:20px; padding-right:20px;
 
 /* Medium devices (desktops, 992px and up) */
 @media only screen and (min-width: 992px)  {
-  section {padding:80px 0; margin:0;} /*wrapper for each section*/
   .sub-highlight-row {padding-top:160px;}
   .sub-highlight-row:before {border-top-width:100px;}
 
@@ -1662,7 +1833,7 @@ padding-left:20px; padding-right:20px;
   .platform-diagram .line.bottom.right {width:70%;}
   .platform-diagram .line.bottom.right:before {height:330px;}
   .platform-diagram .line.bottom.right:after {width:90%; top:330px;}
-    
+
 
   /*------------component sub pages------------*/
   .gridder {padding-bottom:80px;}

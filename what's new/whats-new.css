@@ -136,6 +136,26 @@ section.view p {
 .media-col .device-mockup.mac-thunderbolt {
   margin-bottom: -15%;
 }
+#aws .media-col .resource-thumbnail {
+  margin: 0 auto -15% auto;
+  width: 75%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+@media only screen and (min-width: 768px) {
+  #aws .media-col .resource-thumbnail {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #aws .media-col .resource-thumbnail {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #aws .media-col .resource-thumbnail {
+    width: 70%;
+  }
+}
 #integrated-qr-scanner img {
   display: block;
   max-width: 250px;

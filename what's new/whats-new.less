@@ -9,7 +9,7 @@ section.view {
     padding: 0;
     background-color: @black;
     color: @white;
-    
+
     p {
         font-family: @myriad-pro;
         font-size: 16px;
@@ -17,14 +17,14 @@ section.view {
         font-weight: @light;
         letter-spacing: .01em;
     }
-    
+
     .text-col {
-        
+
         @media @large-down {
-            
+
             position: relative;
             z-index: 1;
-            
+
             &:before {
                 content: '';
                 display: block;
@@ -36,20 +36,20 @@ section.view {
             }
         }
         @media @medium-down {
-            
+
             &:before {
                 left: extract(@section-padding, 2) + 6;
             }
         }
         @media @small-only {
-            
+
             &:before {
                 left: extract(@section-padding, 1) + 6;
             }
         }
     }
     @media @xlarge {
-            
+
         .text-col {
             opacity: 0;
             .translateX(@base-spacing * -1);
@@ -60,7 +60,7 @@ section.view {
             .transition(.5s);
         }
         &.passed-view {
-            
+
             .text-col {
                 opacity: 1;
                 .translateX(0);
@@ -75,23 +75,34 @@ section.view {
 .media-col {
     overflow: hidden;
     background-color: @light-gray;
-    
+
     .device-mockup {
-        
+
         &.mac-thunderbolt { margin-bottom: -15%; }
     }
 }
 
+#aws {
+    .media-col .resource-thumbnail {
+        margin:0 auto -15% auto;
+        width:75%;
+        .box-shadow(5px 5px 10px fade(@pure-black, 40%));
+        @media @medium {width:50%;}
+        @media @large {width:60%;}
+        @media @xlarge {width:70%;}
+    }
+}
+
 #integrated-qr-scanner {
-    
+
     img {
         display: block;
         max-width: 250px;
         margin: 0 auto;
     }
-    
+
     @media @xlarge {
-        
+
         img {
             opacity: 0;
             .transition(.5s);
@@ -108,11 +119,11 @@ section.view {
     font-weight: @light;
     .uppercase;
     color: @black;
-    
+
     > .flex-row {
         margin-bottom: @column-gutter / 2;
     }
-    
+
     .icon {
         margin-bottom: @base-spacing / 2;
     }
@@ -122,9 +133,9 @@ section.view {
         background-color: @white;
         border: @thin-border @gray;
     }
-    
+
     #third-party-application {
-        
+
         .icon {
             display: block;
         }
@@ -135,12 +146,12 @@ section.view {
         line-height: @line-height;
         font-weight: @bold;
         color: @white;
-        
+
         .block {
             background-color: @red;
             border: 0;
         }
-        
+
         &:before, &:after {
             content: '';
             display: block;
@@ -154,7 +165,7 @@ section.view {
     #data {
         position: relative;
         color: @dark-gray;
-        
+
         .block {
             padding: @column-gutter / 4;
         }
@@ -169,15 +180,15 @@ section.view {
             background-color: @gray;
         }
     }
-    
+
     opacity: 0;
     .scale(1.1);
-    
+
     .keyframes(scale-in, {
         0%   { opacity: 0; .scale(1.1); }
         100% { opacity: 1; .scale(1); }
     });
-    
+
     .passed-view & {
         .animation(scale-in 1s ease-in);
         .animation-fill-mode(forwards);
@@ -185,19 +196,19 @@ section.view {
 }
 
 #data-sources {
-    
+
     @data-sources-count: 30;
-    
+
     .keyframes(fade-slide-in, {
         0%   { opacity: 0; .translate(-10px, -10px); }
         100% { opacity: 1; .translate(0, 0); }
     });
-    
+
     .display(flex);
     .flex-wrap(wrap);
-    
+
     padding: extract(@section-padding, 1);
-        
+
     .loop-media-queries(@i) when (@i > 1) {
         .loop-media-queries(@i - 1);
 
@@ -210,9 +221,9 @@ section.view {
         }
     }
     .loop-media-queries(length(@queries));
-    
+
     background-color: @light-gray;
-    
+
     img {
         .size(14.66%);
         @media @medium { .size(10.5%); }
@@ -223,11 +234,11 @@ section.view {
         border-radius: 10%;
         .drop-shadow(2px, 2px, 4px);
         opacity: 0;
-        
+
         .passed-view & {
             .animation(fade-slide-in .5s ease-in);
             .animation-fill-mode(forwards);
-            
+
             .loop-number(@i) when (@i > 0) {
                 .loop-number(@i - 1);
 
@@ -237,7 +248,7 @@ section.view {
             }
             .loop-number(@data-sources-count);
         }
-    }    
+    }
 }
 
 section:not(.passed-view) .bp-2000:after {
