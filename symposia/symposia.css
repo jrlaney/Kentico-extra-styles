@@ -1,7 +1,3 @@
-/*=======================================================================
-=      Main styles are for smallest screen size - larger sizes are specified in media queries          =
-==========================================================================*/
-/*mit it up styles*/
 #mix-symposia {
   overflow: hidden;
 }
@@ -16,163 +12,33 @@
 .mix-filters .filter {
   display: block;
   position: relative;
-  text-transform: uppercase;
   cursor: pointer;
   background-color: #f2f2f2;
   padding: 10px;
   margin-bottom: 10px;
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   font-size: 18px;
   line-height: 20px;
   color: #999999;
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
 }
+@media only screen and (min-width: 768px) {
+  .mix-filters .filter .filter {
+    margin: 0;
+  }
+}
 .mix-filters .filter:hover {
   color: #D9232E;
 }
 .mix-filters .filter.active {
-  color: #ffffff;
+  color: #FFFFFF;
   background-color: #D9232E;
 }
-/*hero banner*/
-.symposium-banner {
-  position: relative;
-  z-index: 10;
-  background-color: #333333;
-  overflow: hidden;
-  background-image: url(/getmedia/b03015fc-cbe0-4634-b210-68011851ad81/symposia);
-}
-.symposium-banner.overview .container {
-  padding-bottom: 110px;
-}
-.symposium-banner .scrolldown {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  margin-left: -100px;
-  width: 200px;
-  padding: 0 0 30px 0;
-  background: url(/Strategy/media/images/common/icons/icon_scrolldown_white.png) no-repeat bottom center transparent;
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #ffffff;
-  text-align: center;
-}
-/*----overview page--*/
-/*panels*/
-.symposia-cards.cards .card {
-  border-top-color: #ffffff;
-}
-.symposia-cards.cards .card.component-red .card-header.fixed-top {
-  top: -1px;
-  left: -1px;
-}
-.symposia-cards.cards .card.component-red .card-header .card-corner {
-  height: 55px;
-  width: 55px;
-  background-color: #ffffff;
-  padding: 5px;
-}
-.symposia-cards.cards .date .month {
-  font-size: 14px;
-  line-height: 1em;
-  color: #777777;
-  font-weight: 400;
-}
-.symposia-cards.cards .date .day {
-  font-size: 25px;
-  line-height: 1em;
-  color: #df3741;
-}
-.symposia-cards.cards .card .img:after {
-  display: block;
-  position: absolute;
-  z-index: 1;
-  content: '';
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  -webkit-transition: background 0.2s ease-out;
-  transition: background 0.2s ease-out;
-}
-.symposia-cards.cards .card:hover .img:after {
-  background-color: rgba(0, 0, 0, 0);
-}
-.symposia-cards.cards .card .card-content {
-  padding-bottom: 15px;
-}
-.symposia-cards.cards .card .card-footer {
-  padding: 0 25px 25px 25px;
-}
-/*------- Workshops page ------*/
-.workshops-materials .step-number {
-  display: block;
-  position: relative;
-  margin: 0 auto 10px auto;
-  height: 65px;
-  width: 65px;
-  text-align: center;
-  font-family: "myriad-pro-n3", "myriad-pro", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 60px;
-  line-height: 60px;
-  color: #d9232e;
-  border: 1px solid #d9232e;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-}
-.lvl {
-  position: relative;
-  color: #68aa00;
-  white-space: nowrap;
-  margin-left: 5px;
-  padding-left: 15px;
-}
-.lvl:before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 3px;
-  height: 10px;
-  width: 10px;
-  background-color: #68aa00;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-}
-.lvl.intermediate {
-  color: #ff9100;
-}
-.lvl.intermediate:before {
-  background-color: #ff9100;
-}
-.lvl.advanced {
-  color: #d9232e;
-}
-.lvl.advanced:before {
-  background-color: #d9232e;
-}
-/*=======================================================================
-=            Increasing resolution Media Queries           =
-==========================================================================*/
-/* Small devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  /*mixitup buttons*/
-  .mix-filters .filter {
-    margin: 0;
-  }
   .mix-filters .filter.active:before {
     position: absolute;
     display: block;
@@ -185,138 +51,31 @@
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
     border-top: 10px solid #D9232E;
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-  }
-  /*symposia overview panels*/
-  .symposia-panel .details {
-    padding: 10px 30px 20px 20px;
-  }
-  .symposia-panel .image:before {
-    display: block;
-    position: absolute;
-    z-index: 2;
-    content: "";
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: #000000;
-  }
-  .symposia-panel .image .place {
-    font-size: 30px;
-    line-height: 32px;
-  }
-  .symposia-panel .image .date-block {
-    height: 50px;
-    width: 50px;
-    font-size: 14px;
-    line-height: 16px;
-  }
-  .symposia-panel .image .date-block span {
-    font-size: 25px;
-  }
-  /*animations*/
-  .symposia-panel .image:before {
-    opacity: 0.2;
-    -webkit-transition: opacity 0.2s ease-out;
-    -moz-transition: opacity 0.2s ease-out;
-    -o-transition: opacity 0.2s ease-out;
-    transition: opacity 0.2s ease-out;
-  }
-  .symposia-panel:hover .image:before {
-    opacity: 0;
-  }
-  .symposia-panel .details {
-    border-color: #dddddd;
-    -webkit-transition: border 0.2s ease-out;
-    -moz-transition: border 0.2s ease-out;
-    -o-transition: border 0.2s ease-out;
-    transition: border 0.2s ease-out;
-  }
-  .symposia-panel:hover .details {
-    border-color: #D9232E;
-  }
-  .workshops-materials .cta-button.tiny {
-    min-width: 120px;
+    -webkit-transition: all 0.2s ease-out 0s;
+    transition: all 0.2s ease-out 0s;
   }
 }
-/* Medium devices (desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .workshops-materials .cta-button.tiny {
-    min-width: 170px;
-  }
-}
-/* Large devices (large desktops, 1200px and up) */
-#hero.world2017-hero {
-  display: block;
-  background-color: #f2f2f2;
-}
-@media only screen and (min-width: 768px) {
-  #hero.world2017-hero {
-    padding: 60px 0;
-  }
-}
-@media only screen and (min-width: 980px) {
-  #hero.world2017-hero {
-    padding: 100px 0;
-  }
-}
-#hero.world2017-hero > div {
+/*hero banner*/
+.symposium-banner {
   position: relative;
-  z-index: 1;
+  z-index: 10;
+  background-color: #333333;
+  overflow: hidden;
+  background-image: url(/getmedia/b03015fc-cbe0-4634-b210-68011851ad81/symposia);
 }
-#hero.world2017-hero:before,
-#hero.world2017-hero:after {
-  display: block;
-  position: absolute;
-  z-index: 0;
-  content: '';
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.symposium-banner.dark-bkg .secondary-fullwidth .section-navigation a {
+  text-decoration: none;
 }
-#hero.world2017-hero:before {
-  top: 0;
-  left: -150px;
-  width: 300px;
-  height: 153.87596899px;
-  background-image: url(/getmedia/44b5c5c0-d4cb-484e-897b-c3b867c2e4d8/banner-patterns_banner-left-corner);
+/*----overview page--*/
+/*panels*/
+.symposia-cards.cards .card.component-red .card-header .card-corner {
+  padding: 10px;
+  background-color: #FFFFFF;
 }
-@media only screen and (min-width: 768px) {
-  #hero.world2017-hero:before {
-    right: 62%;
-    left: auto;
-    width: 500px;
-    height: 256.45994832px;
-  }
+.symposia-cards.cards .card.component-red .card-header .card-corner.date .month {
+  color: #777777;
+  font-weight: 400;
 }
-@media only screen and (min-width: 980px) {
-  #hero.world2017-hero:before {
-    width: 774px;
-    height: 397px;
-  }
-}
-#hero.world2017-hero:after {
-  bottom: 0;
-  left: 50%;
-  width: 300px;
-  height: 155.75342466px;
-  background-image: url(/getmedia/8deb0886-f7bf-4cca-90a9-957c9523cf96/banner-patterns_banner-right-corner);
-}
-@media only screen and (min-width: 768px) {
-  #hero.world2017-hero:after {
-    left: 70%;
-    width: 500px;
-    height: 259.5890411px;
-  }
-}
-@media only screen and (min-width: 980px) {
-  #hero.world2017-hero:after {
-    left: 63%;
-    width: 730px;
-    height: 379px;
-  }
+.symposia-cards.cards .card.component-red .card-header .card-corner.date .day {
+  color: #D9232E;
 }
