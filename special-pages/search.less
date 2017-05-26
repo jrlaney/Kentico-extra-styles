@@ -3,29 +3,37 @@
 
 
 .results-item {
-    padding: @column-gutter 0;
-    border-bottom: @thin-border @gray;
+    padding: @base-spacing;
+    border-bottom: @thin-border @light-gray;
     &:last-child { border-bottom: 0; }
     font-family: @myriad-pro;
+    
+    &:visited {
+        
+        .results-item-title,
+        .results-item-url,
+        .search-query {
+            color: @dark-gray;
+        }
+    }
+    &:hover, &:active {
+        background-color: @light-gray;
+    }
 }
 .results-item-title {
     margin-bottom: @base-spacing / 2;
     font-weight: @bold;
-    
-    a:visited {
-        color: @dark-gray;
-    }
+    color: @black;
 }
 .results-item-url {
-    font-size: 13px;
-    font-style: italic;
-    letter-spacing: .01em;
+    font-size: 14px;
     color: @dark-gray;
 }
 .search-query {
     font-weight: @bold;
     font-style: italic;
     color: @red;
+    .transition;
 }
 .total-results-number {
     font-weight: @bold;
