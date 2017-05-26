@@ -239,6 +239,21 @@ section#symposium {
   position: relative;
   z-index: 1;
 }
+#faq .accordion {
+  margin-bottom: 10px;
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+#faq .accordion:last-child {
+  margin-bottom: 0;
+}
+#faq .accordion .toggler {
+  font-size: 18px;
+  line-height: 1.6;
+}
+#faq .accordion .element {
+  padding-left: 1.75em;
+  line-height: 1.6;
+}
 #health-score-poor {
   width: 60px;
   height: 60px;
