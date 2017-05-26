@@ -75,6 +75,9 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.solution-panel.banking {
+  background-image: url(/getmedia/7d46e5ec-43ea-424f-ac6b-2b5ce69e2de9/solutions_banking_hero-banner-bkg);
+}
 .solution-panel.retail {
   background-image: url(/Strategy/media/images/solutions/panel-backgrounds/solutions_overview_retail-panel.jpg);
 }
@@ -90,11 +93,17 @@
 .solution-panel.manufacturing {
   background-image: url(/Strategy/media/images/solutions/panel-backgrounds/solutions_overview_manufacturing-panel.jpg);
 }
+.solution-panel.media {
+  background-image: url(/getmedia/9d092bed-3e05-4747-ba90-46f1dbcf2e6a/media-and-entertainment?width=400);
+}
 .solution-panel.government {
   background-image: url(/Strategy/media/images/solutions/panel-backgrounds/solutions_overview_government-panel.jpg);
 }
 .solution-panel.telco-comms {
   background-image: url(/Strategy/media/images/solutions/panel-backgrounds/solutions_overview_telco-comms-panel.jpg);
+}
+.solution-panel.food-beverage {
+  background-image: url(/Strategy/media/images/z_images-REVISED/banners/generic/fastfood.jpg);
 }
 .solution-panel.local-government {
   background-image: url(/Strategy/media/images/solutions/panel-backgrounds/solutions_overview_local-government-panel.jpg);
@@ -130,6 +139,9 @@
 .top-banner.overview {
   background-image: url(/Strategy/media/images/solutions/hero-backgrounds/solutions_overview_hero-bkg.jpg);
 }
+.top-banner.banking {
+  background-image: url(/getmedia/7d46e5ec-43ea-424f-ac6b-2b5ce69e2de9/solutions_banking_hero-banner-bkg);
+}
 .top-banner.retail {
   background-image: url(/Strategy/media/images/solutions/hero-backgrounds/solutions_retail_hero-banner-bkg.jpg);
 }
@@ -145,11 +157,17 @@
 .top-banner.manufacturing {
   background-image: url(/Strategy/media/images/solutions/hero-backgrounds/solutions_manufacturing_hero-banner-bkg.jpg);
 }
+.top-banner.media {
+  background-image: url(/getmedia/9d092bed-3e05-4747-ba90-46f1dbcf2e6a/media-and-entertainment);
+}
 .top-banner.government {
   background-image: url(/Strategy/media/images/solutions/hero-backgrounds/solutions_government_hero-banner-bkg.jpg);
 }
 .top-banner.telco-comms {
   background-image: url(/Strategy/media/images/solutions/hero-backgrounds/solutions_telco-comms_hero-banner-bkg.jpg);
+}
+.top-banner.food-beverage {
+  background-image: url(/getmedia/3498ef42-f1a6-4550-968b-f9127254fc35/fastfood);
 }
 .top-banner.local-govt {
   background-image: url(/Strategy/media/images/solutions/hero-backgrounds/solutions_local-govt_hero-banner-bkg.jpg);
