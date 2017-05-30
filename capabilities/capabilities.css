@@ -182,6 +182,33 @@ a > img:only-child {
   display: block;
   margin-top: -10px;
 }
+.offpage-image {
+  width: 150%;
+  max-width: none;
+}
+.offpage-image.pc-laptop {
+  width: 180%;
+}
+.offpage-image.left {
+  float: right;
+}
+@media only screen and (min-width: 980px) {
+  .offpage-image.left.pc-laptop,
+  .offpage-image.left.macbook-pro,
+  .offpage-image.left.macbook-air {
+    margin-right: -10%;
+  }
+}
+.offpage-image.right {
+  float: left;
+}
+@media only screen and (min-width: 980px) {
+  .offpage-image.right.pc-laptop,
+  .offpage-image.right.macbook-pro,
+  .offpage-image.right.macbook-air {
+    margin-left: -10%;
+  }
+}
 .gridder {
   position: relative;
   overflow: hidden;
@@ -1211,6 +1238,7 @@ a > img:only-child {
   height: 22.5px;
   bottom: -22.5px;
   left: 50%;
+  margin-left: -1px;
   background-color: #CCCCCC;
 }
 @media only screen and (min-width: 768px) {
@@ -1247,7 +1275,7 @@ a > img:only-child {
   #embedded-bi #embedded-bi-diagram-components .grid-item:before {
     margin-left: 0;
   }
-  #embedded-bi #embedded-bi-diagram-components .grid-item:nth-child(-n+3):before {
+  #embedded-bi #embedded-bi-diagram-components .grid-item:nth-child(-n+4):before {
     height: 22.4px;
     top: -15px;
   }
@@ -1263,31 +1291,31 @@ a > img:only-child {
     left: 0;
     background-color: #CCCCCC;
   }
-  #embedded-bi #embedded-bi-diagram-components .grid-item:nth-child(n+4):after {
+  #embedded-bi #embedded-bi-diagram-components .grid-item:nth-child(n+5):after {
     display: none;
   }
-  #embedded-bi #embedded-bi-diagram-components .grid-item:nth-child(3n+1):after {
+  #embedded-bi #embedded-bi-diagram-components .grid-item:nth-child(4n+1):after {
     left: 50%;
     width: 50%;
   }
-  #embedded-bi #embedded-bi-diagram-components .grid-item:nth-child(3n):after {
+  #embedded-bi #embedded-bi-diagram-components .grid-item:nth-child(4n):after {
     right: 50%;
     width: 50%;
   }
 }
-@media only screen and (min-width: 980px) {
-  #embedded-bi #embedded-bi-diagram-components .grid-item:nth-child(n+4):before {
+@media only screen and (min-width: 1200px) {
+  #embedded-bi #embedded-bi-diagram-components .grid-item:nth-child(n+5):before {
     height: 22.4px;
     top: -15px;
   }
-  #embedded-bi #embedded-bi-diagram-components .grid-item:nth-child(n+4):after {
+  #embedded-bi #embedded-bi-diagram-components .grid-item:nth-child(n+5):after {
     display: block;
   }
-  #embedded-bi #embedded-bi-diagram-components .grid-item:nth-child(3n+1):after {
+  #embedded-bi #embedded-bi-diagram-components .grid-item:nth-child(4n+1):after {
     left: 0;
     width: 100%;
   }
-  #embedded-bi #embedded-bi-diagram-components .grid-item:nth-child(3n):after {
+  #embedded-bi #embedded-bi-diagram-components .grid-item:nth-child(4n):after {
     right: 0;
     width: 100%;
   }
@@ -1435,6 +1463,59 @@ a > img:only-child {
   #embedded-bi #rest-api #rest-api-diagram .services-block .interaction.rest-api .icon {
     top: -2px;
     left: 0;
+  }
+}
+#embedded-bi #push-api #push-api-graphic .logo-col [class*="flex-grid"].compact > .grid-item {
+  padding: 2.5px;
+}
+@media only screen and (min-width: 980px) and (max-width: 1199px) {
+  #embedded-bi #push-api #push-api-graphic .logo-col [class*="flex-grid"].compact > .grid-item {
+    padding: 7.5px;
+  }
+}
+#embedded-bi #push-api #push-api-graphic .arrow-col {
+  position: relative;
+  min-height: 60px;
+}
+#embedded-bi #push-api #push-api-graphic .arrow-col .icon_common_arrow {
+  position: absolute;
+  font-size: 24px;
+  bottom: -6px;
+  left: 50%;
+  margin-left: -12px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+@media only screen and (min-width: 980px) {
+  #embedded-bi #push-api #push-api-graphic .arrow-col .icon_common_arrow {
+    top: 50%;
+    bottom: auto;
+    left: auto;
+    right: -6px;
+    margin-left: 0;
+    margin-top: -12px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+#embedded-bi #push-api #push-api-graphic .arrow-col:before {
+  position: absolute;
+  content: '';
+  background-color: #D9232E;
+  top: 0;
+  left: 50%;
+  margin-left: -1px;
+  width: 2px;
+  height: 100%;
+}
+@media only screen and (min-width: 980px) {
+  #embedded-bi #push-api #push-api-graphic .arrow-col:before {
+    top: 50%;
+    left: 0;
+    margin-left: 0;
+    margin-top: -1px;
+    width: 100%;
+    height: 2px;
   }
 }
 #embedded-bi #web-sdk .device-mockup {
