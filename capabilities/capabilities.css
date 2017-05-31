@@ -1328,141 +1328,95 @@ a > img:only-child {
     width: 50%;
   }
 }
-#embedded-bi #rest-api #rest-api-diagram .services-block {
+#embedded-bi #rest-api #rest-api-diagram .sdk-col .icon {
+  font-size: 24px;
+}
+#embedded-bi #rest-api #rest-api-diagram .line-col {
   position: relative;
-  padding: 80px 0 80px 0;
+  min-height: 100px;
 }
-#embedded-bi #rest-api #rest-api-diagram .services-block h3,
-#embedded-bi #rest-api #rest-api-diagram .services-block .line {
-  margin-bottom: 10px;
+#embedded-bi #rest-api #rest-api-diagram .line-col:before {
+  position: absolute;
+  content: '';
+  background-color: #999999;
+  top: 0;
+  left: 50%;
+  margin-left: -1px;
+  width: 2px;
+  height: 100%;
 }
-#embedded-bi #rest-api #rest-api-diagram .services-block .services-icon {
-  position: relative;
-  z-index: 1;
-  background-color: #D9232E;
-  color: #FFFFFF;
-  padding: 10px;
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 14px;
-}
-@media only screen and (min-width: 768px) {
-  #embedded-bi #rest-api #rest-api-diagram .services-block .services-icon {
-    font-size: 12px;
+@media only screen and (min-width: 980px) {
+  #embedded-bi #rest-api #rest-api-diagram .line-col:before {
+    top: 50%;
+    left: 0;
+    margin-left: 0;
+    margin-top: -1px;
+    width: 100%;
+    height: 2px;
   }
 }
-#embedded-bi #rest-api #rest-api-diagram .services-block:before {
-  display: block;
+#embedded-bi #rest-api #rest-api-diagram .line-col .arrow-block {
   position: absolute;
-  z-index: 0;
-  content: '';
+  top: 0;
   left: 50%;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  height: 100%;
-  width: 2px;
-  background-color: #CCCCCC;
-}
-#embedded-bi #rest-api #rest-api-diagram .services-block .interaction {
-  display: inline-block;
-  position: absolute;
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 600;
+  margin-top: 43px;
+  margin-left: -23px;
+  width: 100px;
+  text-align: right;
+  padding: 5px 25px 10px 5px;
+  color: #4789A3;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #11566F;
-  width: 50%;
-  padding: 0 20px;
-  top: 75%;
-}
-#embedded-bi #rest-api #rest-api-diagram .services-block .interaction .icon {
-  display: block;
-  font-size: 20px;
-  margin: 5px 0;
-}
-#embedded-bi #rest-api #rest-api-diagram .services-block .interaction.json {
-  left: 0;
-}
-#embedded-bi #rest-api #rest-api-diagram .services-block .interaction.json .icon {
+  font-weight: 600;
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-#embedded-bi #rest-api #rest-api-diagram .services-block .interaction.rest-api {
-  right: 0;
+#embedded-bi #rest-api #rest-api-diagram .line-col .arrow-block .icon_common_arrow {
+  position: absolute;
+  bottom: 0;
+  right: -4px;
 }
-#embedded-bi #rest-api #rest-api-diagram .services-block .interaction.rest-api .icon {
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+#embedded-bi #rest-api #rest-api-diagram .line-col .arrow-block:before {
+  position: absolute;
+  content: '';
+  background-color: #4789A3;
+  bottom: 6px;
+  left: 0;
+  height: 1px;
+  width: 100%;
 }
-@media only screen and (min-width: 768px) {
-  #embedded-bi #rest-api #rest-api-diagram .services-block {
-    padding: 20px;
-  }
-  #embedded-bi #rest-api #rest-api-diagram .services-block:before {
-    height: 2px;
-    width: calc(100% + 30px);
-    left: -15px;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  #embedded-bi #rest-api #rest-api-diagram .services-block .interaction {
-    display: block;
-    padding: 0;
+@media only screen and (min-width: 980px) {
+  #embedded-bi #rest-api #rest-api-diagram .line-col .arrow-block {
     top: 50%;
-    right: 0;
-    width: calc(50% - 60px);
-    white-space: nowrap;
-  }
-  #embedded-bi #rest-api #rest-api-diagram .services-block .interaction .icon {
-    position: absolute;
-    font-size: 16px;
-    left: 50%;
-    margin-left: -10px;
-  }
-  #embedded-bi #rest-api #rest-api-diagram .services-block .interaction.json {
-    padding-top: 20px;
-    right: 0;
-    left: auto;
-    top: auto;
-    bottom: calc(50% + 10px);
-  }
-  #embedded-bi #rest-api #rest-api-diagram .services-block .interaction.json .icon {
+    left: 15px;
+    margin-top: -43px;
+    margin-left: 0;
+    width: calc(100% - 30px);
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-    top: -2px;
-  }
-  #embedded-bi #rest-api #rest-api-diagram .services-block .interaction.rest-api {
-    padding-bottom: 20px;
-    top: calc(50% + 10px);
-  }
-  #embedded-bi #rest-api #rest-api-diagram .services-block .interaction.rest-api .icon {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-    bottom: -2px;
   }
 }
-@media only screen and (min-width: 1200px) {
-  #embedded-bi #rest-api #rest-api-diagram .services-block .interaction .icon {
-    left: auto;
+#embedded-bi #rest-api #rest-api-diagram .line-col .arrow-block.reverse {
+  margin-left: -75px;
+  text-align: left;
+  padding: 10px 5px 5px 25px;
+}
+#embedded-bi #rest-api #rest-api-diagram .line-col .arrow-block.reverse .icon_common_arrow {
+  bottom: auto;
+  right: auto;
+  top: 0;
+  left: -4px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+#embedded-bi #rest-api #rest-api-diagram .line-col .arrow-block.reverse:before {
+  bottom: auto;
+  top: 6px;
+}
+@media only screen and (min-width: 980px) {
+  #embedded-bi #rest-api #rest-api-diagram .line-col .arrow-block.reverse {
+    margin-top: 10px;
     margin-left: 0;
-  }
-  #embedded-bi #rest-api #rest-api-diagram .services-block .interaction.json {
-    padding-top: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  #embedded-bi #rest-api #rest-api-diagram .services-block .interaction.json .icon {
-    top: -2px;
-    right: 0;
-  }
-  #embedded-bi #rest-api #rest-api-diagram .services-block .interaction.rest-api {
-    padding-bottom: 0;
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-  #embedded-bi #rest-api #rest-api-diagram .services-block .interaction.rest-api .icon {
-    top: -2px;
-    left: 0;
   }
 }
 #embedded-bi #push-api #push-api-graphic .logo-col [class*="flex-grid"].compact > .grid-item {
@@ -1472,6 +1426,9 @@ a > img:only-child {
   #embedded-bi #push-api #push-api-graphic .logo-col [class*="flex-grid"].compact > .grid-item {
     padding: 7.5px;
   }
+}
+#embedded-bi #push-api #push-api-graphic .cube-col .icon.medium {
+  font-size: 64px;
 }
 #embedded-bi #push-api #push-api-graphic .arrow-col {
   position: relative;

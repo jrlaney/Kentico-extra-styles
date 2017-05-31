@@ -880,83 +880,72 @@
 
     #rest-api {
         #rest-api-diagram {
-            .services-block {
-                position:relative;
-                padding:80px 0 80px 0;
-                h3, .line {margin-bottom:10px;}
-                .services-icon {
-                    position:relative; z-index:1;
-                    background-color:@red;
-                    color:@white;
-                    padding:10px;
-                    font-family:@myriad-pro;
-                    font-size:14px;
-
-                    @media @medium {font-size:12px;}
-                }
-                &:before {
-                    display:block; position:absolute; z-index:0;
-                    content:'';
-                    left:50%; top:50%;
-                    .translateY(-50%);
-                    height:100%; width:2px;
-                    background-color:@gray;
-                }
-                .interaction {
-                    display:inline-block; position:absolute;
-                    font-family:@myriad-pro;
-                    font-weight:600;
-                    .uppercase; color:@navy-blue;
-                    width:50%;
-                    padding:0 20px;
-                    top:75%;
-                    .icon {display:block; font-size:20px; margin:5px 0;}
-                    &.json {
-                        left:0;
-                        .icon {.rotate(90deg);}
-                    }
-                    &.rest-api {
-                        right:0;
-                        .icon {.rotate(-90deg);}
-                    }
-                }
-                @media @medium {
-                    padding:20px;
-                    &:before {height:2px; width:~"calc(100% + 30px)"; left:-15px; .translateY(0);}
-                    .interaction {
-                        display:block;
-                        padding:0;
-                        top:50%; right:0;
-                        width:~"calc(50% - 60px)";
-                        white-space:nowrap;
-                        .icon {position:absolute; font-size:16px; left:50%; margin-left:-10px;}
-                        &.json {
-                            padding-top:20px;
-                            right:0; left:auto; top:auto; bottom:~"calc(50% + 10px)";
-                            .icon {.rotate(0deg); top:-2px;}
-                        }
-                        &.rest-api {
-                            padding-bottom:20px;
-                            top:~"calc(50% + 10px)";
-                            .icon {.rotate(180deg); bottom:-2px;}
-                        }
-                    }
-                }
-                @media @xlarge {
-                    .interaction {
-                        .icon {left:auto; margin-left:0;}
-                        &.json {
-                            padding-top:0; padding-left:20px; padding-right:20px;
-                            .icon {top:-2px; right:0;}
-                        }
-                        &.rest-api {
-                            padding-bottom:0; padding-right:20px; padding-left:20px;
-                            .icon {top:-2px; left:0;}
-                        }
-                    }
-                }
+            .sdk-col {
+                .icon {font-size:24px;}
             }
-        }
+            .line-col {
+                position:relative;
+                min-height:100px;
+
+                &:before {
+                    position:absolute;
+                    content:'';
+                    background-color:@dark-gray;
+                    top:0; left:50%;
+                    margin-left:-1px;
+                    width:2px; height:100%;
+                    @media @large {
+                        top:50%; left:0;
+                        margin-left:0; margin-top:-1px;
+                        width:100%; height:2px;
+                    }
+                }//end the gray line
+
+                .arrow-block {
+                    position:absolute;
+                    top:0; left:50%;
+                    margin-top:43px; margin-left:-23px;
+                    width:100px;
+                    text-align:right;
+                    padding:5px 25px 10px 5px;
+                    color:@blue;
+                    .uppercase;
+                    font-weight:600;
+                    .icon_common_arrow {
+                        position:absolute;
+                        bottom:0; right:-4px;
+                    }
+                    &:before {
+                        position:absolute;
+                        content:'';
+                        background-color:@blue;
+                        bottom:6px; left:0;
+                        height:1px; width:100%;
+                    }
+                    .rotation(90deg);
+                    @media @large {
+                        top:50%; left:15px;
+                        margin-top:-43px; margin-left:0;
+                        width:~"calc(100% - 30px)";
+                        .rotation(0deg);
+                    }
+
+                    &.reverse {
+                        margin-left:-75px;
+                        text-align:left;
+                        padding:10px 5px 5px 25px;
+                        .icon_common_arrow {
+                            bottom:auto; right:auto; top:0; left:-4px;
+                            .rotation(180deg);
+                        }
+                        &:before {bottom:auto; top:6px;}
+                        @media @large {
+                            margin-top:10px; margin-left:0;
+                        }
+                    }//end reversed arrow block
+                }//end arrow block
+            }//end line-col
+        }//end diagram
     }
 
     #push-api {
@@ -964,6 +953,9 @@
             .logo-col [class*="flex-grid"].compact > .grid-item {
                 padding:2.5px;
                 @media @large-only {padding:7.5px;}
+            }
+            .cube-col {
+                .icon.medium {font-size:64px;}
             }
             .arrow-col {
                 position:relative;
