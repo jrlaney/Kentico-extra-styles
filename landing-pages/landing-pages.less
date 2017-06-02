@@ -27,6 +27,9 @@
     // change color of text for form if you used an overlay
     .landing-page .background-image.overlay .form-col {color: @black;}
 
+    //remove the overlay from a background image block
+    .overlay.no-overlay:after {display:none;}
+
 // HERO BANNER IMAGES
 
 #hero.background-image {
@@ -126,16 +129,92 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
 }
 
 
+// SCROLLDOWN BUTTON + ICON
+.scrolldown {
+    position:absolute!important;
+    bottom:0; left:0;
+    width:100%!important;
+    padding:15px 20px;
+    max-height:40px;
+    @media @medium {max-height:80px;}
+    @media @large {max-height:120px;}
+
+    font-family:@myriad-pro;
+    text-align:center;
+    color:@white;
+    .uppercase;
+    font-weight:600;
+    font-size:14px; line-height:1em;
+
+    &:hover {
+        color:@white;
+        background-color: fade(@pure-black, 50%);
+    }
+
+    .cta-text {
+        display:block;
+        margin-bottom:5px;
+        @media @small-only {display:none;}
+    }
+    .icon {
+        @media @medium {font-size:24px;}
+    }
+}
+
+
+//RESOURCE THUMB W/ NO MASK
+@media @medium {
+    .resource-thumbnail.no-mask:after {
+        display:none;
+    }
+}
+
+
+//DIVE WITH COLOR TRIANGLE NEXT TO IT
+.triangle-group {
+    position:relative;
+    padding:5px 0 5px 20px;
+    &:before {
+        display:block; position:absolute;
+        content:'';
+        top:5px; left:-10px;
+        width:0; height:0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid @red;
+        border-top: 10px solid transparent;
+    }
+    @media @medium {
+        padding-left:25px;
+        &:before {
+            left:-15px;
+            border-left-width: 15px;
+            border-right-width: 15px;
+            border-top-width: 15px;
+        }
+    }
+    &.red:before {border-right-color:@red;}
+    &.orange:before {border-right-color:@orange;}
+    &.green:before {border-right-color:@green;}
+    &.blue:before {border-right-color:@blue;}
+    &.navy-blue:before {border-right-color:@navy-blue;}
+
+    &.white:before {border-right-color:@white;}
+    &.light-gray:before {border-right-color:@light-gray;}
+    &.gray:before {border-right-color:@gray;}
+    &.dark-gray:before {border-right-color:@dark-gray;}
+    &.black:before {border-right-color:@black;}
+}
+
 
 // FAQ
 
 #faq {
-    
+
     .accordion {
         margin-bottom: @base-spacing / 2;
         &:last-child { margin-bottom: 0; }
         font-family: @myriad-pro;
-        
+
         .toggler {
             font-size: 18px;
             line-height: 1.6;
@@ -636,6 +715,14 @@ section {overflow:hidden;}
 		@media @medium {left:70%; width:500px; height:(@bottom-right-height / @bottom-right-width) * 500px;}
 		@media @large {left:63%; width:@bottom-right-width; height:@bottom-right-height;}
 	}
+}
+
+
+//CRITICAL CAPABILITIES CUSTOMER PAGE
+#critical-capabilities-customers {
+    #customer-success {
+        .cards .card {background-color:@white-smoke; border-color:@white;}
+    }
 }
 
 

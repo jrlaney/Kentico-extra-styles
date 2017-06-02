@@ -100,6 +100,9 @@ a > img:only-child {
 .landing-page .background-image.overlay .form-col {
   color: #333333;
 }
+.overlay.no-overlay:after {
+  display: none;
+}
 #hero.background-image {
   background-image: url('/getmedia/68437a18-5129-4e1d-b6ab-4da328d490ec/microstrategy-10');
 }
@@ -238,6 +241,112 @@ section#symposium {
 .angles-canvas + .flex-row {
   position: relative;
   z-index: 1;
+}
+.scrolldown {
+  position: absolute!important;
+  bottom: 0;
+  left: 0;
+  width: 100%!important;
+  padding: 15px 20px;
+  max-height: 40px;
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1em;
+}
+@media only screen and (min-width: 768px) {
+  .scrolldown {
+    max-height: 80px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .scrolldown {
+    max-height: 120px;
+  }
+}
+.scrolldown:hover {
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.scrolldown .cta-text {
+  display: block;
+  margin-bottom: 5px;
+}
+@media only screen and (max-width: 767px) {
+  .scrolldown .cta-text {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .scrolldown .icon {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .resource-thumbnail.no-mask:after {
+    display: none;
+  }
+}
+.triangle-group {
+  position: relative;
+  padding: 5px 0 5px 20px;
+}
+.triangle-group:before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #D9232E;
+  border-top: 10px solid transparent;
+}
+@media only screen and (min-width: 768px) {
+  .triangle-group {
+    padding-left: 25px;
+  }
+  .triangle-group:before {
+    left: -15px;
+    border-left-width: 15px;
+    border-right-width: 15px;
+    border-top-width: 15px;
+  }
+}
+.triangle-group.red:before {
+  border-right-color: #D9232E;
+}
+.triangle-group.orange:before {
+  border-right-color: #FF9100;
+}
+.triangle-group.green:before {
+  border-right-color: #68AA00;
+}
+.triangle-group.blue:before {
+  border-right-color: #4789A3;
+}
+.triangle-group.navy-blue:before {
+  border-right-color: #11566F;
+}
+.triangle-group.white:before {
+  border-right-color: #FFFFFF;
+}
+.triangle-group.light-gray:before {
+  border-right-color: #f2f2f2;
+}
+.triangle-group.gray:before {
+  border-right-color: #CCCCCC;
+}
+.triangle-group.dark-gray:before {
+  border-right-color: #999999;
+}
+.triangle-group.black:before {
+  border-right-color: #333333;
 }
 #faq .accordion {
   margin-bottom: 10px;
@@ -1769,6 +1878,10 @@ section {
     width: 730px;
     height: 379px;
   }
+}
+#critical-capabilities-customers #customer-success .cards .card {
+  background-color: #f2f2f2;
+  border-color: #FFFFFF;
 }
 .background-image.form-bottom {
   overflow: hidden;
