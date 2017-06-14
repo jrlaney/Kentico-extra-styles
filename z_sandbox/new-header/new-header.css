@@ -26,11 +26,11 @@ body {
     height: calc(100% - 47px + 18px);
   }
 }
-.cms-bootstrap #primary-menu,
-.cms-bootstrap.menu-opened #header {
+.cms-bootstrap .CMS-preview-mode #primary-menu,
+.cms-bootstrap .CMS-preview-mode.menu-opened #header {
   top: 110px;
 }
-.cms-bootstrap #primary-menu {
+.cms-bootstrap .CMS-preview-mode #primary-menu {
   height: calc(100% - 110px);
 }
 body.menu-opened {
@@ -339,6 +339,10 @@ body.menu-opened {
     justify-content: center;
   }
 }
+#primary-menu .node-navigation {
+  width: 100%;
+  overflow-y: auto;
+}
 @media only screen and (min-width: 768px) {
   #primary-menu .node-navigation {
     display: -webkit-flex;
@@ -348,8 +352,6 @@ body.menu-opened {
     max-width: none;
     -webkit-align-items: stretch;
     align-items: stretch;
-    width: 100%;
-    overflow-y: auto;
     padding: 0;
     margin-left: auto;
     margin-right: auto;

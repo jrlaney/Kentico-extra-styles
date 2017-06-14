@@ -1,14 +1,21 @@
 <script type="text/javascript">
 jQuery(document).ready(function(){
-	//trigger sall menu open animations
+	//trigger all menu open animations
 	$('.primary-menu-button').click(function() {
 	    $('body').toggleClass('menu-opened');
 	});
 
 	//triggers for all the panels and sub panels in the menu
-	$('#primary-menu .parent-node').click(function() {
-	    $(this).siblings().removeClass('active');
-	    $(this).addClass('active');
+	$('#primary-menu .parent-node > .sub-link').click(function() {
+	    $(this).parent('.parent-node').siblings().removeClass('active');
+		$(this).parent('.parent-node').siblings().find('.parent-node.active').removeClass('active');
+	    $(this).parent('.parent-node').addClass('active');
+	});
+
+	//triggers the back button traversal for mobile view
+	$('#primary-menu .parent-node .sub-link.back').click(function() {
+		$(this).closest('.parent-node.active').removeClass('active');
+		$(this).siblings('.parent-node.active').removeClass('active');
 	});
 
 	//set initial color based on active level-1
@@ -27,23 +34,23 @@ jQuery(document).ready(function(){
 	else if ( $('#primary-menu .level-1 > .parent-node.active').hasClass('navy-blue')) {
 		$('#primary-menu').addClass('navy-blue');
 	}
-	
+
 	//triggers color change for level-1 elements
-	$('#primary-menu .level-1 > .parent-node').click(function() {
+	$('#primary-menu .level-1 > .parent-node > .sub-link').click(function() {
 	    $('#primary-menu').removeClass();
-		if ( $(this).hasClass('red')) {
+		if ( $(this).parent('.parent-node').hasClass('red')) {
 		    $('#primary-menu').addClass('red');
 		}
-		else if ( $(this).hasClass('orange')) {
+		else if ( $(this).parent('.parent-node').hasClass('orange')) {
 		    $('#primary-menu').addClass('orange');
 		}
-		else if ( $(this).hasClass('green')) {
+		else if ( $(this).parent('.parent-node').hasClass('green')) {
 		    $('#primary-menu').addClass('green');
 		}
-		else if ( $(this).hasClass('blue')) {
+		else if ( $(this).parent('.parent-node').hasClass('blue')) {
 		    $('#primary-menu').addClass('blue');
 		}
-		else if ( $(this).hasClass('navy-blue')) {
+		else if ( $(this).parent('.parent-node').hasClass('navy-blue')) {
 		    $('#primary-menu').addClass('navy-blue');
 		}
 	});

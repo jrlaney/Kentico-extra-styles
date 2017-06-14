@@ -38,9 +38,9 @@ body {position:relative;}
     height: ~"calc(100% - @{preview-mode-spacer})";
     @media @medium {height: ~"calc(100% - @{preview-mode-spacer} + 18px)";}
 }
-.cms-bootstrap #primary-menu,
-.cms-bootstrap.menu-opened #header {top:@cms-viewer-spacer;}
-.cms-bootstrap #primary-menu {height: ~"calc(100% - @{cms-viewer-spacer})";}
+.cms-bootstrap .CMS-preview-mode #primary-menu,
+.cms-bootstrap .CMS-preview-mode.menu-opened #header {top:@cms-viewer-spacer;}
+.cms-bootstrap .CMS-preview-mode #primary-menu {height: ~"calc(100% - @{cms-viewer-spacer})";}
 
 //get rid of double scroll bar and add padding so the content doesnt pop up when the header goes fixed
 body.menu-opened {
@@ -245,11 +245,11 @@ body.menu-opened {
     }
 
     .node-navigation {
+        width:100%; overflow-y:auto;
         @media @medium {
             .display(flex);
             .flex(1, 1, auto);
             .align-items(stretch);
-    		width:100%; overflow-y:auto;
 
             padding:0;
             margin-left:auto; margin-right:auto;
