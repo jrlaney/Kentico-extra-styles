@@ -16,10 +16,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, h5, h6, p, ul, ol {
 }
 ul, ol {
     //padding: 0 0 0 1em;
-
+    
     li {
-        //padding: 0 0 0 1em;
+        padding-bottom: 0;
         margin-bottom: @base-spacing / 2;
+        &:last-child { margin-bottom: 0; }
     }
 }
 .line {

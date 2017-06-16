@@ -45,7 +45,12 @@ ol.line-break {
 }
 ul li,
 ol li {
+  padding-bottom: 0;
   margin-bottom: 10px;
+}
+ul li:last-child,
+ol li:last-child {
+  margin-bottom: 0;
 }
 .line {
   margin-bottom: 20px;
@@ -76,7 +81,7 @@ a > img:only-child {
 #desktop.free-trial #hero.background-image {
   background-image: url('/Strategy/media/images/common/banners/desktop.jpg');
 }
-#desktop #hero #form-container {
+#desktop #hero #lead-gen-form {
   background-color: rgba(0, 0, 0, 0.7);
   color: #FFFFFF;
 }
