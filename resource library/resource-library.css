@@ -353,6 +353,17 @@ a > img:only-child {
   line-height: 14px;
   white-space: nowrap;
 }
+#resources-list .resource-title {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+#resources-list .resource-description {
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #999999;
+}
 #resources-list .component-gray:hover .card-footer .button {
   background-color: #999999;
 }
@@ -827,17 +838,6 @@ a > img:only-child {
     margin-left:0; margin-right:0;
   }*/
   /*RESOURCE LIST CARD STYLES*/
-  #resources-list .resource-title {
-    font-size: 24px;
-    line-height: 1.4;
-    font-weight: 400;
-  }
-  #resources-list .resource-description {
-    font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.4;
-    color: #999999;
-  }
   #resources-list.list-view .grid-item {
     width: 100%!important;
     -webkit-flex: 0 0 100%;
