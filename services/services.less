@@ -2,7 +2,7 @@
 @import '../overrides.less';
 
 
-    ul li {padding:0;}
+ul li, ul.triangle-list li {padding:0;}
 
 // hero banners
 
@@ -18,7 +18,50 @@
         background-size: cover;
     }
 
+// general styles
 
+#mix-wrapper {
+    overflow:hidden;
+    .grid-item {display:none; position:relative; z-index:1;}
+}
+.mix-filters {
+    position:relative;
+    .filter {
+        .display(flex);
+        .align-items(center);
+
+        position:relative;
+        cursor:pointer;
+        background-color:@white-smoke;
+        padding:10px;
+        min-height:100%;
+
+        font-family:@myriad-pro;
+        .uppercase;
+        font-style:normal;
+        font-size:18px; line-height:20px;
+        color:@dark-gray;
+        text-align:left;
+
+        .transition;
+        &:hover {color:@black;}
+        &.active {color:@white; background-color:@black;}
+        @media @medium {
+            .justify-content(center);
+            text-align:center;
+            &.active:before {
+                position:absolute; display:block;
+                content:"";
+                bottom:-10px; left:50%; margin-left:-5px;
+                width:0; height:0;
+                border-left:9px solid transparent;
+                border-right:9px solid transparent;
+                border-top:10px solid @black;
+                .transition;
+            }
+        }
+    }
+}
 
 // support
 
@@ -38,6 +81,126 @@
 
 
 // professional services
+
+//bi maturity curve graphic
+.bi-maturity-curve {
+    @media @small-only {padding:0 20px;}
+
+    @media @medium {.text-col {padding:30px;}}
+    .bi-maturity-curve-graph {
+        position:relative;
+        padding:30px 0 0 0;
+        > .flex-row {width:auto;}
+        .label {
+            display:block; width:auto;
+            padding:10px;
+            font-family:@myriad-pro;
+            font-size:16px; line-height:1em;
+            white-space:nowrap;
+            .uppercase;
+            font-weight:600;
+            color:@dark-gray;
+            text-align:center;
+            &.y-axis {
+                position:absolute;
+                top:0; left:0;
+                .transform-origin(right, top);
+                .transform(translateX(-100%) rotate(-90deg));
+                &:after {
+                    position:absolute;
+                    content:'';
+                    top:50%; right:100%;
+                    margin-top:-1px;
+                    height:2px; width:100px;
+                    background-color:@red;
+                }
+                &:before {
+                    position:absolute;
+                    font-family:@icon-font-name;
+                    .pretty-icon;
+                    content:'\ea7c';
+                    font-size:24px;
+                    top:50%; right:~"calc(100% + 100px - 17px)";
+                    margin-top:-11.5px;
+                    color:@red;
+                }
+                @media @medium {
+                    .transform-origin(center, center);
+                    top:50%; left:35px;
+                    .transform(translateY(-50%) translateX(-50%) rotate(-90deg));
+                    &:before, &:after {display:none;}
+                }
+            }
+        }
+        .y-axis-bar {
+            position:relative;
+            border-left:3px dashed @gray;
+            margin-left:50px;
+            .flex-direction(column-reverse);
+            @media @medium {
+                overflow:hidden;
+                padding:20px 0 0 0;
+                margin-left:60px;
+                .flex-direction(row);
+            }
+            .curve-graphic {
+                display:none;
+                @media @medium {
+                    display:block; position:absolute; z-index:0;
+                    .transform-origin(top, right);
+                    height:~"calc(100% - 25%)";
+                    top:0; right:55%;
+                    .transform(rotate(-17deg));
+                }
+                @media @large {
+                    height:100%;
+                    right:50%;
+                    .transform(rotate(-5deg));
+                }
+                @media @xlarge {right:43%; .transform(rotate(0deg));}
+            }
+            > div {
+                @media @small-only {
+                    .h3 {
+                        position:relative; z-index:1;
+                        &:before {
+                            display:block; position:absolute;
+                            content:'';
+                            .round;
+                            height:15px; width:15px;
+                            background-color:@red;
+                            top:50%; left:-24px;
+                            margin-top:-8px;
+                        }
+                    }
+                }
+                @media @medium {
+                    padding-left:55%;;
+                    &:nth-child(2) {padding-left:45%; background-color:fade(@pure-black, 3%);}
+                    &:nth-child(3) {padding-left:35%; background-color:fade(@pure-black, 6%);}
+                    &:nth-child(4) {padding-left:25%; background-color:fade(@pure-black, 9%);}
+                    &:nth-child(5) {padding-left:15%; background-color:fade(@pure-black, 12%)}
+                }
+                @media @xlarge {
+                    padding-left:65%;
+                    &:nth-child(2) {padding-left:55%;}
+                    &:nth-child(3) {padding-left:45%;}
+                    &:nth-child(4) {padding-left:35%;}
+                    &:nth-child(5) {padding-left:25%;}
+                }
+            }
+        }//end y-axis bar
+        .x-axis-bar {
+            @media @medium {
+                display:block; position:relative;
+                border-top:3px dashed @gray;
+                margin:0 20px 0 60px;
+            }
+        }//end x-axis bar
+    }//end bi curve graph
+}//end bit maturity section
+
+
 #bi-journey {
     .journey-graph-mobile {
         position:relative;
@@ -54,11 +217,10 @@
                     display:block; position:absolute; z-index:1;
                     height:15px; width:15px;
                     background-color:@red;
-                    top:-15px; left:-29px;
+                    top:0; left:-29px;
                     .round;
                 }
             }
-            .stage-tag {margin-left:-20px;}
         }
         //arrow and the bottom of the dashed line
         &:before {
@@ -96,9 +258,27 @@
         }
         .y-axis-bar {
             position:relative;
+            padding-bottom:20px;
             .label.y-axis {
                 position:absolute; top:50%; left:-18px; .transform(translateX(-50%) translateY(-50%) rotate(-90deg));
                 @media @xlarge {left:20px;}
+            }
+            @media @medium-only {
+                .icon.medium {font-size:20px; &:before{height:20px; width:20px;}}
+            }
+            @media @medium {
+                .background-fills {
+                    position:absolute; z-index:-1;
+                    top:0; left:0;
+                    height:100%;
+                    [class*="flex-grid"] {height:100%;}
+                    .grid-item {
+                        &:nth-child(2) {background-color:fade(@pure-black, 3%);}
+                        &:nth-child(3) {background-color:fade(@pure-black, 6%);}
+                        &:nth-child(4) {background-color:fade(@pure-black, 9%);}
+                        &:nth-child(5) {background-color:fade(@pure-black, 12%);}
+                    }
+                }
             }
         }
         .x-axis-bar {
@@ -109,7 +289,6 @@
                 text-align:center;
                 color:@black;
                 .transition;
-                &:hover {background-color:@white-smoke;}
                 &:after {
                     content:'';
                     display:block; position:absolute; z-index:1;
@@ -140,119 +319,8 @@
         .line.thick {height:30px; display:block; width:auto; margin-top:5px;}
     }//end desktop journey graph
 }
-//popups with the bi maturity curve graphic
-.bi-maturity-curve {
-    &.white-popup {max-width:1100px; width:90%;}
-    ul li {margin-bottom:0;}
-
-    .bi-maturity-curve-graph {
-        position:relative;
-        > .flex-row {width:auto;}
-        .label {
-            display:block; width:auto;
-            padding:10px 0;
-            font-family:@myriad-pro;
-            font-size:16px; line-height:1em;
-            white-space:nowrap;
-            .uppercase;
-            font-weight:600;
-            color:@dark-gray;
-            text-align:center;
-            &.y-axis {
-                position:absolute;
-                top:40%; left:30px;
-                .transform(translateY(-50%) translateX(-50%) rotate(-90deg));
-            }
-        }
-        .y-axis-bar {
-            position:relative; overflow:hidden;
-            border-left:3px dashed @gray;
-            padding:40px 0 0 0; margin-left:60px;
-            .curve-graphic {
-                position:absolute; z-index:0;
-                height:~"calc(100% - 40px)";
-                bottom:20px; right:43%;
-            }
-            > div {
-                position:relative; z-index:1;
-                color:@dark-gray;
-                &.selected {color:@red;}
-            }
-        }
-        .x-axis-bar {position:relative; border-top:3px dashed @gray; margin:0 0 0 60px;}
-
-        //for the full graph
-        &.full-details {
-            .y-axis-bar {
-                .curve-graphic {right:53%;}
-                > div {color:@black;}
-            }
-        }
-    }
-}
 
 
-
-#ps-offerings {
-    #mix-wrapper {
-        overflow:hidden;
-        .grid-item {display:none; position:relative; z-index:1;}
-    }
-    .mix-filters {
-        position:relative;
-        .filter {
-            display:block; position:relative;
-            cursor:pointer;
-            background-color:@white-smoke;
-            padding:10px; margin-bottom:10px;
-            font-family:@myriad-pro;
-            .uppercase;
-            font-style:normal;
-            font-size:18px; line-height:20px;
-            color:@dark-gray;
-            .transition;
-            &:hover {color:@black;}
-            &.active {color:@white; background-color:@black;}
-            &.red {
-                &:hover {color:@red;}
-                &.active {color:@white; background-color:@red;}
-            }
-            &.orange {
-                &:hover {color:@orange;}
-                &.active {color:@white; background-color:@orange;}
-            }
-            &.green {
-                &:hover {color:@green;}
-                &.active {color:@white; background-color:@green;}
-            }
-            &.blue {
-                &:hover {color:@blue;}
-                &.active {color:@white; background-color:@blue;}
-            }
-            &.navy-blue {
-                &:hover {color:@navy-blue;}
-                &.active {color:@white; background-color:@navy-blue;}
-            }
-            @media @medium {
-                &.active:before {
-                    position:absolute; display:block;
-                    content:"";
-                    bottom:-10px; left:50%; margin-left:-5px;
-                    width:0; height:0;
-                    border-left:9px solid transparent;
-                    border-right:9px solid transparent;
-                    border-top:10px solid @black;
-                    .transition;
-                }
-                &.red.active:before {border-top-color:@red;}
-                &.orange.active:before {border-top-color:@orange;}
-                &.green.active:before {border-top-color:@green;}
-                &.blue.active:before {border-top-color:@blue;}
-                &.navy-blue.active:before {border-top-color:@navy-blue;}
-            }
-        }
-    }
-}
 
 
 // for older pages
