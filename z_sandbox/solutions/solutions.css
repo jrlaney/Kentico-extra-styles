@@ -45,7 +45,12 @@ ol.line-break {
 }
 ul li,
 ol li {
+  padding-bottom: 0;
   margin-bottom: 10px;
+}
+ul li:last-child,
+ol li:last-child {
+  margin-bottom: 0;
 }
 .line {
   margin-bottom: 20px;
@@ -68,11 +73,31 @@ a > img:only-child {
 #hero {
   background-image: url('/Strategy/media/images/solutions/hero-backgrounds/solutions_executives_hero-banner-bkg.jpg');
 }
-.gridder.hasSelectedItem .gridder-list {
-  display: none;
+.gridder.cards {
+  display: block;
 }
-.gridder-list .card {
+.gridder.cards .gridder-list .card {
   cursor: pointer;
+}
+.gridder.cards .gridder-list .card .solution-category {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 10px;
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.gridder.cards.hasSelectedItem .gridder-list .card {
+  opacity: .5;
+}
+.gridder.cards.hasSelectedItem .gridder-list .card:hover {
+  opacity: 1;
+}
+.gridder-content {
+  display: none;
 }
 .gridder-show {
   width: 100%;
@@ -81,22 +106,19 @@ a > img:only-child {
 }
 .gridder-padding {
   position: relative;
-  padding: 65px 15px 15px;
+  padding: 15px;
   background-color: #FFFFFF;
   border: 1px solid #CCCCCC;
 }
 @media only screen and (min-width: 768px) {
   .gridder-padding {
-    padding: 65px 30px 30px;
+    padding: 30px;
   }
 }
 .gridder-navigation {
-  display: -webkit-flex;
-  display: flex;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 20px;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  float: right;
 }
 .gridder-navigation a {
   -webkit-flex: 1 1 auto;
@@ -181,9 +203,31 @@ a > img:only-child {
 .gridder-expanded-content {
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-.gridder-expanded-content p {
+.gridder-expanded-content .solution-content {
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
+}
+.gridder-expanded-content .solution-name .icon {
+  margin-right: .75em;
+}
+.gridder-expanded-content .solution-panel-content {
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
   font-weight: 300;
+}
+.gridder-expanded-content .solution-panel-header {
+  margin-top: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #999999;
+}
+.gridder-expanded-content .device-mockup {
+  margin: 0 auto;
+}
+.gridder-expanded-content .device-mockup.iphone {
+  max-width: 250px;
 }
 @media only screen and (min-width: 768px) {
   .gridder-expanded-content .solution-image {
@@ -252,17 +296,47 @@ a > img:only-child {
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
   text-align: center;
-  background-color: #8c8c8c;
-  font-size: 12px;
+  background-color: #404040;
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  white-space: nowrap;
+  color: #FFFFFF;
 }
 #to-top:hover .label,
 #to-top:active .label {
   opacity: 1;
-  padding: 0 16px;
+  padding: 1em;
+}
+.filters.option-group .option {
+  position: relative;
+}
+@media only screen and (min-width: 980px) {
+  .filters.option-group .option:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -7.5px;
+    border-top: 15px solid #11566F;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-out 0s;
+    transition: all 0.2s ease-out 0s;
+  }
+  .filters.option-group .option.checked {
+    background-color: #11566F;
+  }
+  .filters.option-group .option.checked:after {
+    opacity: 1;
+  }
 }
 #customers .logo {
   max-width: 65%;

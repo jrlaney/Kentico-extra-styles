@@ -45,7 +45,12 @@ ol.line-break {
 }
 ul li,
 ol li {
+  padding-bottom: 0;
   margin-bottom: 10px;
+}
+ul li:last-child,
+ol li:last-child {
+  margin-bottom: 0;
 }
 .line {
   margin-bottom: 20px;

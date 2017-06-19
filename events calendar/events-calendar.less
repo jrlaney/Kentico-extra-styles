@@ -1,4 +1,23 @@
 @import '../settings.less';
+@import '../overrides.less';
+
+#section-navigation-sticky-wrapper {
+    
+    .loop-media-queries(@i) when (@i > 0) {
+        .loop-media-queries(@i - 1);
+        
+        @query: extract(@queries, @i);
+        @breakpoint: extract(@breakpoints, @i);
+        
+        @media @query {
+            
+            max-width: @breakpoint;
+        }
+    }
+    .loop-media-queries(length(@queries));
+    
+    margin: 0 auto;
+}
 
 //special hover class for image lightening on hover of the card
 .hover-overlay-lighten {
