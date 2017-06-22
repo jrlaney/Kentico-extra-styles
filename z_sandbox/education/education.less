@@ -1,2 +1,144 @@
 @import '../../settings.less';
 @import '../../overrides.less';
+
+
+
+#promo {
+    padding: 20px 0;
+    @media @medium { padding: 25px 0; }
+    @media @large { padding: 30px 0; }
+}
+
+
+
+.course-title,
+.certification-title {
+    font-weight: @normal;
+}
+.course-description,
+.certification-description {
+    line-height: 1.5;
+}
+.course-title {
+    
+    .course & { color: @black; }
+}
+.course-description {
+    
+    .course & { color: @dark-gray; }
+}
+.certification-title {
+    
+    .certification & { color: @black; }
+    .gridder-expanded-content & {
+        font-size: 32px;
+        line-height: 1.2;
+        color: @white;
+    }
+}
+.certification-description {
+    
+    .certification & { color: @dark-gray; }
+    .gridder-expanded-content & {
+        font-family: @myriad-pro;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: @light;
+        letter-spacing: .01em;
+        color: @white;
+    }
+}
+
+
+
+// gridder
+
+@gridder-nav-size: 80px;
+
+
+.gridder.cards {
+    display: block;
+    
+    .gridder-list .card {
+        cursor: pointer;
+
+        .solution-category {
+            .display(flex);
+            .align-items(center);
+            padding: @base-spacing / 2;
+            font-family: @myriad-pro;
+            font-weight: @bold;
+            .uppercase;
+        }
+    }
+    &.hasSelectedItem .gridder-list .card {
+        opacity: .5;
+        
+        &:hover { opacity: 1; }
+    }
+}
+.gridder-content {
+    display: none;
+}
+.gridder-show {
+    width: 100%;
+    float: left;
+    padding: @column-gutter / 2;
+}
+.gridder-padding {
+    position: relative;
+    padding: @column-gutter / 2;
+    @media @medium { padding: @column-gutter; }
+    background-color: @blue;
+    color: @white;
+}
+.gridder-navigation {
+    .display(inline-flex);
+    float: right;
+    
+    a {
+        .flex(1, 1, auto);
+        display: block;
+        position: relative;
+        padding: @gridder-nav-size / 4;
+        .transition;
+        
+        &.gridder-close {
+            .shape-x(@gridder-nav-size / 4, @gray);
+            .order(1);
+        }
+        &.gridder-nav {
+            
+            &:before {
+                content: "\e901";
+                display: block;
+                .position(absolute, 50%, 50%);
+                .translate(-50%, -50%);
+                font-family: @icon-font-name; .pretty-icon;
+                font-size: 16px; line-height: 1;
+                color: @gray;
+            }
+            &.prev:before {
+                .transform(translate(-50%, -50%) rotate(180deg));
+                .transform-origin(center, center);
+            }
+            &.disabled {
+                opacity: .25;
+                cursor: default;
+            }
+        }
+        &.gridder-nav:not(.disabled):hover:before {
+            color: @white;
+        }
+        &.gridder-close:hover:before,
+        &.gridder-close:hover:after {
+            background-color: @white;
+        }
+    }
+}
+.gridder-expanded-content {
+    
+    .course {
+        border: 0;
+    }
+}

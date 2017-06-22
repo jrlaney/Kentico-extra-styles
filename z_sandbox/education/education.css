@@ -67,3 +67,179 @@ img:last-child {
 a > img:only-child {
   margin-bottom: 20px;
 }
+#promo {
+  padding: 20px 0;
+}
+@media only screen and (min-width: 768px) {
+  #promo {
+    padding: 25px 0;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #promo {
+    padding: 30px 0;
+  }
+}
+.course-title,
+.certification-title {
+  font-weight: 400;
+}
+.course-description,
+.certification-description {
+  line-height: 1.5;
+}
+.course .course-title {
+  color: #333333;
+}
+.course .course-description {
+  color: #999999;
+}
+.certification .certification-title {
+  color: #333333;
+}
+.gridder-expanded-content .certification-title {
+  font-size: 32px;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+.certification .certification-description {
+  color: #999999;
+}
+.gridder-expanded-content .certification-description {
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: .01em;
+  color: #FFFFFF;
+}
+.gridder.cards {
+  display: block;
+}
+.gridder.cards .gridder-list .card {
+  cursor: pointer;
+}
+.gridder.cards .gridder-list .card .solution-category {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 10px;
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.gridder.cards.hasSelectedItem .gridder-list .card {
+  opacity: .5;
+}
+.gridder.cards.hasSelectedItem .gridder-list .card:hover {
+  opacity: 1;
+}
+.gridder-content {
+  display: none;
+}
+.gridder-show {
+  width: 100%;
+  float: left;
+  padding: 15px;
+}
+.gridder-padding {
+  position: relative;
+  padding: 15px;
+  background-color: #4789A3;
+  color: #FFFFFF;
+}
+@media only screen and (min-width: 768px) {
+  .gridder-padding {
+    padding: 30px;
+  }
+}
+.gridder-navigation {
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  float: right;
+}
+.gridder-navigation a {
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  max-width: none;
+  display: block;
+  position: relative;
+  padding: 20px;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+.gridder-navigation a.gridder-close {
+  -webkit-order: 1;
+  order: 1;
+}
+.gridder-navigation a.gridder-close:before,
+.gridder-navigation a.gridder-close:after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-right: -10px;
+  background: #CCCCCC;
+}
+.gridder-navigation a.gridder-close:before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.gridder-navigation a.gridder-close:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.gridder-navigation a.gridder-close:hover:before,
+.gridder-navigation a.gridder-close:active:before,
+.gridder-navigation a.gridder-close:focus:before,
+.gridder-navigation a.gridder-close:hover:after,
+.gridder-navigation a.gridder-close:active:after,
+.gridder-navigation a.gridder-close:focus:after {
+  background: #ffffff;
+}
+.gridder-navigation a.gridder-nav:before {
+  content: "\e901";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: microstrategy;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1;
+  color: #CCCCCC;
+}
+.gridder-navigation a.gridder-nav.prev:before {
+  -webkit-transform: translate(-50%, -50%) rotate(180deg);
+  transform: translate(-50%, -50%) rotate(180deg);
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+.gridder-navigation a.gridder-nav.disabled {
+  opacity: .25;
+  cursor: default;
+}
+.gridder-navigation a.gridder-nav:not(.disabled):hover:before {
+  color: #FFFFFF;
+}
+.gridder-navigation a.gridder-close:hover:before,
+.gridder-navigation a.gridder-close:hover:after {
+  background-color: #FFFFFF;
+}
+.gridder-expanded-content .course {
+  border: 0;
+}
