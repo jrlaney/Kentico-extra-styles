@@ -93,6 +93,12 @@ a > img:only-child {
 #hero.background-image {
   background-image: url('/getmedia/1fd836d0-96bb-4f6f-ac34-c6784cbec71f/events');
 }
+.event .event-type {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
 .event .event-title {
   font-weight: 400;
 }
