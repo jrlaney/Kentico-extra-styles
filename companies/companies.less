@@ -71,72 +71,76 @@
     }
 }
 
-#partners-list {
+#companies-list {
 
-    .partner-card {
-        position: relative;
-        .aspect-ratio(1, 1);
-        background-color: @white;
-        border: @thin-border @gray;
-        &:hover, &:active { border-color: @red; }
-        .transition;
-        cursor: pointer;
-
-        .partner-info {
-            display: none;
-        }
+    [class*="-details"] {
+        display: none;
     }
-    .partner-logo {
+    [class*="-logo"] {
         .max-size(65%, 100px);
         .position(absolute, 50%, 50%);
         .translate(-50%, -50%);
     }
-    .no-results {
-        padding: @column-gutter / 2;
-        text-align: center;
-
-        p {
-            font-family: @myriad-pro;
-            font-size: 18px;
-            line-height: @line-height;
-        }
-    }
 }
 
-#partners.hasSelectedItem ~ .pagination,
-#partners.hasSelectedItem .partner,
+// gridder
+
+@gridder-nav-size: 80px;
+
+
+.gridder.cards {
+    display: block;
+    
+    .gridder-list .card {
+        cursor: pointer;
+
+        .solution-category {
+            .display(flex);
+            .align-items(center);
+            padding: @base-spacing / 2;
+            font-family: @myriad-pro;
+            font-weight: @bold;
+            .uppercase;
+        }
+    }
+    &.hasSelectedItem .gridder-list .card {
+        opacity: .5;
+        
+        &:hover { opacity: 1; }
+    }
+}
 .gridder-content {
     display: none;
 }
-
 .gridder-show {
     width: 100%;
+    float: left;
     padding: @column-gutter / 2;
 }
 .gridder-padding {
     position: relative;
-    padding: @column-gutter;
-    background-color: @black;
+    padding: @column-gutter / 2;
+    @media @medium { padding: @column-gutter; }
+    background-color: @white;
+    border: @thin-border @gray;
 }
 .gridder-navigation {
-    .display(flex);
-    .position(absolute, 0, @right:0);
-
+    .display(inline-flex);
+    float: right;
+    
     a {
         .flex(1, 1, auto);
         display: block;
-        .size(40px);
         position: relative;
-        background: @charcoal;
+        padding: @gridder-nav-size / 4;
         .transition;
-
+        
         &.gridder-close {
-            .shape-x(20px, @light-gray);
+            .shape-x(@gridder-nav-size / 4, @dark-gray);
             .order(1);
         }
         &.gridder-nav {
-            border-right: @thin-border @dark-gray;
-
+            
             &:before {
                 content: "\e901";
                 display: block;
@@ -144,68 +148,56 @@
                 .translate(-50%, -50%);
                 font-family: @icon-font-name; .pretty-icon;
                 font-size: 16px; line-height: 1;
-                color: @light-gray;
+                color: @dark-gray;
             }
             &.prev:before {
                 .transform(translate(-50%, -50%) rotate(180deg));
                 .transform-origin(center, center);
             }
             &.disabled {
-                opacity: .35;
+                opacity: .25;
                 cursor: default;
             }
         }
-        &.gridder-close:hover,
-        &.gridder-nav:not(.disabled):hover {
-            background: @jet;
-            color: lighten(@light-gray, 20%);
+        &.gridder-nav:not(.disabled):hover:before {
+            color: @black;
+        }
+        &.gridder-close:hover:before,
+        &.gridder-close:hover:after {
+            background-color: @black;
         }
     }
 }
-.partner-info {
+.gridder-expanded-content {
     font-family: @myriad-pro;
+    
+    .grid-item {
+        .flex-direction(column);
+    }
 
-    .partner-name {
+    [class*="-name"] {
         font-weight: @bold;
         .uppercase;
     }
-    .partner-description {
+    [class*="-description"] {
         font-size: 15px;
         line-height: @line-height;
         font-weight: @light;
         letter-spacing: .01em;
     }
-    .partner-section-title {
+    [class*="-category-header"] {
+        margin-bottom: @base-spacing / 4;
         font-size: 16px;
         line-height: @line-height;
         font-weight: @bold;
         .uppercase;
         color: @dark-gray;
     }
-    .partner-categories,
-    .partner-tags,
-    .partner-countries {
+    [class*="-category-tags"] {
+        .no-list-style;
         font-weight: @light;
         letter-spacing: .05em;
         color: @dark-gray;
-    }
-    .partner-category,
-    .partner-tag,
-    .partner-country {
-        color: @dark-gray;
-    }
-
-    .gridder-show & {
-        color: @white;
-
-        .partner-description {
-            color: @light-gray;
-        }
-        .partner-category,
-        .partner-tag,
-        .partner-country {
-            color: @gray;
-        }
     }
 }
 
