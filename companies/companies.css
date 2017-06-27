@@ -167,22 +167,8 @@ a > img:only-child {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.gridder.cards {
-  display: block;
-}
 .gridder.cards .gridder-list .card {
   cursor: pointer;
-}
-.gridder.cards .gridder-list .card .solution-category {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  padding: 10px;
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 .gridder.cards.hasSelectedItem .gridder-list .card {
   opacity: .5;
@@ -294,26 +280,26 @@ a > img:only-child {
 .gridder-navigation a.gridder-close:hover:after {
   background-color: #333333;
 }
-.gridder-expanded-content {
+[class*="-details"] {
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-.gridder-expanded-content .grid-item {
+[class*="-details"] .grid-item {
   -webkit-flex-direction: column;
   flex-direction: column;
 }
-.gridder-expanded-content [class*="-name"] {
+[class*="-details"] [class*="-name"] {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-.gridder-expanded-content [class*="-description"] {
+[class*="-details"] [class*="-description"] {
   font-size: 15px;
   line-height: 1.4;
   font-weight: 300;
   letter-spacing: .01em;
 }
-.gridder-expanded-content [class*="-category-header"] {
-  margin-bottom: 5px;
+[class*="-details"] [class*="-category-header"] {
+  margin-bottom: 10px;
   font-size: 16px;
   line-height: 1.4;
   font-weight: 600;
@@ -321,10 +307,11 @@ a > img:only-child {
   letter-spacing: 0.05em;
   color: #999999;
 }
-.gridder-expanded-content [class*="-category-tags"] {
+[class*="-details"] [class*="-category-tags"] {
   list-style: none;
   margin: 0;
   padding: 0;
+  line-height: 1;
   font-weight: 300;
   letter-spacing: .05em;
   color: #999999;
@@ -347,17 +334,17 @@ a > img:only-child {
     flex-direction: row;
   }
 }
-.partnership-logos .logo {
+.partnership-logos [class*="logo"] {
   max-width: 250px;
   margin: 10px 0;
 }
 @media only screen and (min-width: 768px) {
-  .partnership-logos .logo {
+  .partnership-logos [class*="logo"] {
     margin: 0 20px;
   }
 }
 @media only screen and (min-width: 980px) {
-  .partnership-logos .logo {
+  .partnership-logos [class*="logo"] {
     max-width: 300px;
   }
 }
