@@ -1,73 +1,82 @@
 <header id="page-header-interum">
-	<div class="flex-row between">
+	<div class="flex-row middle between">
 
 		<div id="headerlogo" class="logo-zone">
-			<a href="/us" class="logo-link">
-				<img class="logo-img" alt="MicroStrategy Business Intelligence Analytics Mobile Platform" src="/cmstemplates/microstrategy/images/microstrategy_logo.png" />
-			</a>
-			<div class="tagline">Enterprise Analytics and Mobility</div>
+			<div class="logo-lockup">
+				<a href="/us" class="logo-link">
+					<img class="logo-img" alt="MicroStrategy Business Intelligence Analytics Mobile Platform" src="/cmstemplates/microstrategy/images/microstrategy_logo.png" />
+				</a>
+				<div class="tagline">Enterprise Analytics and Mobility</div>
+			</div>
 		</div>
 		<!-- /logo-zone -->
 
-		<div class="menu-button"></div>
+		<div class="menu-button">
+            <div class="menu-toggle">
+                <span class="line one"></span>
+                <span class="line two"></span>
+                <span class="line three"></span>
+            </div>
+		</div>
 
-		<nav class="top-nav-menu" role="navigation">
+		<nav id="primary-navigation" class="top-nav-menu" role="navigation">
 			<div class="menu-item dropdown red">
 				<div class="top-link">Product</div>
 
 				<div class="dropdown">
 
-					<div class="flex-row">
+					<div class="section-wrapper">
 
 						<div class="section main">
-							<a class="section-title" href="/us/capabilities">Product</a>
-							<!-- <a class="link" href="/us/product">Overview</a> -->
-							<a class="link hide-sm-only" href="/us/capabilities">Capabilities</a>
-							<a class="link hide-sm-only" href="/us/capabilities">Platform</a>
-							<a class="link" href="/us/product/whats-new">What's New</a>
-							<a class="link" href="/us/product/why-microstrategy">Why MicroStrategy</a>
-							<a class="link" href="/us/product/packaging">Products and Packaging</a>
+							<span class="section-title">Product</span>
+							<div class="link-list">
+								<!-- <a class="link" href="/us/product">Overview</a> -->
+								<a class="link hide-sm-only" href="/us/capabilities">Capabilities</a>
+								<a class="link hide-sm-only" href="/us/capabilities">Platform</a>
+								<a class="link" href="/us/product/whats-new">What's New</a>
+								<a class="link" href="/us/product/why-microstrategy">Why MicroStrategy</a>
+								<a class="link" href="/us/product/packaging">Products and Packaging</a>
+							</div>
 						</div>
 						<!--/section-->
 
 						<div class="section">
-							<a class="section-title" href="/us/capabilities">Capabilities</a>
-							<div class="flex-row collapse">
-								<div class="col-lg-6">
-									<!-- <a class="link" href="/us/capabilities">Overview</a> -->
-									<a class="link" href="/us/capabilities/advanced-analytics">Advanced Analytics</a>
-									<a class="link" href="/us/capabilities/big-data">Big Data</a>
-									<a class="link" href="/us/capabilities/data-connectivity">Data Connectivity</a>
-									<a class="link" href="/us/capabilities/data-discovery">Data Discovery</a>
-									<a class="link" href="/us/capabilities/dashboards">Dashboards</a>
-									<a class="link" href="/us/capabilities/distribution">Distribution</a>
-									<a class="link" href="/us/capabilities/digital-credentials">Digital Credentials</a>
-								</div>
-								<div class="col-lg-6">
-									<a class="link" href="/us/capabilities/enterprise-reporting">Enterprise Reporting</a>
-									<a class="link" href="/us/capabilities/embedded-analytics">Embedded Analytics</a>
-									<a class="link" href="/us/capabilities/emm">Enterprise Mobility Management</a>
-									<a class="link" href="/us/capabilities/mobile">Mobile</a>
-									<a class="link" href="/us/capabilities/real-time-telemetry">Real-Time Telemetry</a>
-									<a class="link" href="/us/capabilities/transactions">Transactions</a>
-								</div>
+							<span class="section-title">Capabilities</span>
+							<div class="link-list split-col">
+								<a class="link" href="/us/capabilities">Overview</a>
+								<a class="link" href="/us/capabilities/advanced-analytics">Advanced Analytics</a>
+								<a class="link" href="/us/capabilities/big-data">Big Data</a>
+								<a class="link" href="/us/capabilities/data-connectivity">Data Connectivity</a>
+								<a class="link" href="/us/capabilities/data-discovery">Data Discovery</a>
+								<a class="link" href="/us/capabilities/dashboards">Dashboards</a>
+								<a class="link" href="/us/capabilities/distribution">Distribution</a>
+								<a class="link" href="/us/capabilities/digital-credentials">Digital Credentials</a>
+								<a class="link" href="/us/capabilities/enterprise-reporting">Enterprise Reporting</a>
+								<a class="link" href="/us/capabilities/embedded-analytics">Embedded Analytics</a>
+								<a class="link" href="/us/capabilities/emm">Enterprise Mobility Management</a>
+								<a class="link" href="/us/capabilities/mobile">Mobile</a>
+								<a class="link" href="/us/capabilities/real-time-telemetry">Real-Time Telemetry</a>
+								<a class="link" href="/us/capabilities/transactions">Transactions</a>
 							</div>
 						</div>
 						<!--/section-->
 
 						<div class="section" href="/us/platform">
-							<a class="section-title">Platform</a>
-							<!-- <a class="link" href="/us/platform">Overview</a> -->
-							<a class="link" href="/us/platform/clients">Clients</a>
-							<a class="link" href="/us/platform/cloud">Cloud</a>
-							<a class="link" href="/us/platform/enterprise-assets">Enterprise Assets</a>
-							<a class="link" href="/us/platform/metadata-repository">Metadata Repository</a>
-							<a class="link" href="/us/platform/services">Services</a>
-							<a class="link" href="/us/platform/tools">Tools</a>
+							<span class="section-title">Platform</span>
+							<div class="link-list">
+								<a class="link" href="/us/platform">Overview</a>
+								<a class="link" href="/us/platform/clients">Clients</a>
+								<a class="link" href="/us/platform/cloud">Cloud</a>
+								<a class="link" href="/us/platform/enterprise-assets">Enterprise Assets</a>
+								<a class="link" href="/us/platform/metadata-repository">Metadata Repository</a>
+								<a class="link" href="/us/platform/services">Services</a>
+								<a class="link" href="/us/platform/tools">Tools</a>
+							</div>
 						</div>
 						<!--/section-->
 
 					</div>
+					<!--/flex-row-->
 
 				</div>
 				<!--/dropdown-->
@@ -78,35 +87,43 @@
 				<div class="top-link">Services</div>
 
 				<div class="dropdown">
-					<div class="flex-row">
 
-						<div class="section main">
+					<div class="section-wrapper">
+
+						<div class="section">
 							<span class="section-title">Services</span>
-							<a class="link" href="/us/services">Overview</a>
-							<a class="link hide-sm-only" href="/us/services/education">Education</a>
-							<a class="link hide-sm-only" href="/us/services/technical-support">Technical Support</a>
-							<a class="link" href="/us/services/professional-services">Professional Services</a>
-							<a class="link" href="http://community.microstrategy.com" target="_blank">Community</a>
+							<div class="link-list">
+								<a class="link" href="/us/services">Overview</a>
+								<a class="link hide-sm-only" href="/us/services/education">Education</a>
+								<a class="link hide-sm-only" href="/us/services/technical-support">Technical Support</a>
+								<a class="link" href="/us/services/professional-services">Professional Services</a>
+								<a class="link" href="http://community.microstrategy.com" target="_blank">Community</a>
+							</div>
 						</div>
 						<!--/section-->
 
 						<div class="section">
 							<span class="section-title">Education</span>
-							<a class="link" href="/us/services/education">Overview</a>
-							<a class="link" href="/us/services/education">Course List</a>
-							<a class="link" href="/us/services/education">Free Jump Start Classes</a>
-							<a class="link" href="/us/services/education">Learning Portal</a>
-							<a class="link" href="/us/services/education">FAQ</a>
+							<div class="link-list">
+								<a class="link" href="/us/services/education">Overview</a>
+								<a class="link" href="/us/services/education">Course List</a>
+								<a class="link" href="/us/services/education">Free Jump Start Classes</a>
+								<a class="link" href="/us/services/education">Learning Portal</a>
+								<a class="link" href="/us/services/education">FAQ</a>
+							</div>
 						</div>
 						<!--/section-->
 
 						<div class="section">
 							<span class="section-title">Technical Support</span>
-							<a class="link" href="/us/services/technical-support">Overview</a>
-							<a class="link" href="/us/services/technical-support">Support Contacts</a>
-							<a class="link" href="/us/services/technical-support">Expiration Schedule</a>
+							<div class="link-list">
+								<a class="link" href="/us/services/technical-support">Overview</a>
+								<a class="link" href="/us/services/technical-support">Support Contacts</a>
+								<a class="link" href="/us/services/technical-support">Expiration Schedule</a>
+							</div>
 						</div>
 						<!--/section-->
+
 					</div>
 					<!--/flex-row-->
 
@@ -120,43 +137,49 @@
 
 				<div class="dropdown">
 
-					<div class="flex-row">
+					<div class="section-wrapper">
 						<div class="section main">
-							<span class="section-title">Solutions</span>
-							<a class="link" href="/us/solutions">All Solutions</a>
-							<a class="link hide-sm-only" href="/us/solutions">By Industry</a>
-							<a class="link hide-sm-only" href="/us/solutions">By Function</a>
-							<a class="link" href="/us/learn/customers">Customer Stories</a>
-							<a class="link" href="/us/company/partners/bi-for-oem">Embedded Analytics for&nbsp;OEMs</a>
+							<div class="link-list">
+								<!-- <span class="section-title">Solutions</span> -->
+								<a class="link" href="/us/solutions">All Solutions</a>
+								<a class="link hide-sm-only" href="/us/solutions">By Industry</a>
+								<a class="link hide-sm-only" href="/us/solutions">By Function</a>
+								<a class="link" href="/us/learn/customers">Customer Stories</a>
+								<a class="link" href="/us/company/partners/bi-for-oem">Embedded Analytics for&nbsp;OEMs</a>
+							</div>
 						</div>
 						<!--/section-->
 
 						<div class="section">
 							<span class="section-title">By industry</span>
-							<a class="link" href="/us/solutions/by-industry/banking">Banking</a>
-							<a class="link" href="/us/solutions/by-industry/manufacturing-and-cpg">CPG and Manufacturing</a>
-							<a class="link" href="/us/solutions/by-industry/federal-government">Federal Government</a>
-							<a class="link" href="/us/solutions/by-industry/food-and-beverage">Food and Beverage</a>
-							<a class="link" href="/us/solutions/by-industry/healthcare">Healthcare</a>
-							<a class="link" href="/us/solutions/by-industry/higher-education">Higher Education</a>
-							<a class="link" href="/us/solutions/by-industry/insurance">Insurance</a>
-							<a class="link" href="/us/solutions/by-industry/media">Media</a>
-							<a class="link" href="/us/solutions/by-industry/municipal-government">Municipal Government</a>
-							<a class="link" href="/us/solutions/by-industry/retail">Retail</a>
-							<a class="link" href="/us/solutions/by-industry/telecommunications">Telecommunications</a>
+							<div class="link-list split-col">
+								<a class="link" href="/us/solutions/by-industry/banking">Banking</a>
+								<a class="link" href="/us/solutions/by-industry/manufacturing-and-cpg">CPG and Manufacturing</a>
+								<a class="link" href="/us/solutions/by-industry/federal-government">Federal Government</a>
+								<a class="link" href="/us/solutions/by-industry/food-and-beverage">Food and Beverage</a>
+								<a class="link" href="/us/solutions/by-industry/healthcare">Healthcare</a>
+								<a class="link" href="/us/solutions/by-industry/higher-education">Higher Education</a>
+								<a class="link" href="/us/solutions/by-industry/insurance">Insurance</a>
+								<a class="link" href="/us/solutions/by-industry/media">Media</a>
+								<a class="link" href="/us/solutions/by-industry/municipal-government">Municipal Government</a>
+								<a class="link" href="/us/solutions/by-industry/retail">Retail</a>
+								<a class="link" href="/us/solutions/by-industry/telecommunications">Telecommunications</a>
+							</div>
 						</div>
 						<!--/section-->
 
 						<div class="section">
 							<span class="section-title">By function</span>
-							<a class="link" href="/us/solutions/by-function/customer-support">Customer Support</a>
-							<a class="link" href="/us/solutions/by-function/executives">Executives</a>
-							<a class="link" href="/us/solutions/by-function/facilities">Facilities</a>
-							<a class="link" href="/us/solutions/by-function/finance">Finance</a>
-							<a class="link" href="/us/solutions/by-function/hr">Human Resources</a>
-							<a class="link" href="/us/solutions/by-function/it">IT</a>
-							<a class="link" href="/us/solutions/by-function/marketing">Marketing</a>
-							<a class="link" href="/us/solutions/by-function/sales">Sales</a>
+							<div class="link-list">
+								<a class="link" href="/us/solutions/by-function/customer-support">Customer Support</a>
+								<a class="link" href="/us/solutions/by-function/executives">Executives</a>
+								<a class="link" href="/us/solutions/by-function/facilities">Facilities</a>
+								<a class="link" href="/us/solutions/by-function/finance">Finance</a>
+								<a class="link" href="/us/solutions/by-function/hr">Human Resources</a>
+								<a class="link" href="/us/solutions/by-function/it">IT</a>
+								<a class="link" href="/us/solutions/by-function/marketing">Marketing</a>
+								<a class="link" href="/us/solutions/by-function/sales">Sales</a>
+							</div>
 						</div>
 						<!--/section-->
 
@@ -172,23 +195,39 @@
 
 				<div class="dropdown">
 
-					<div class="flex-row">
+					<div class="section-wrapper">
 						<div class="section main">
-							<span class="section-title">Resources</span>
-							<a class="link" href="/us/resources">Overview</a>
-							<a class="link hide-sm-only" href="/us/resources/events">Events</a>
-							<a class="link" href="/us/resources/blog">Blog</a>
-							<a class="link" href="/us/resources/resource-library">Media Library</a>
-							<a class="link" href="/us/resources/press-center">Press Center</a>
-							<a class="link" href="/us/resources/contracts-hub">Contracts Hub</a>
+							<!-- <span class="section-title">Resources</span> -->
+							<div class="link-list">
+								<!-- <a class="link" href="/us/resources">Overview</a> -->
+								<!-- <a class="link hide-sm-only" href="/us/resources/events">Events</a> -->
+								<!-- <a class="link" href="/us/resources/blog">Blog</a> -->
+								<a class="link" href="/us/resources/resource-library">Media Library</a>
+								<a class="link" href="/us/resources/press-center">Press Center</a>
+								<a class="link" href="/us/resources/contracts-hub">Contracts Hub</a>
+							</div>
 						</div>
 						<!--/section-->
 
 						<div class="section">
 							<span class="section-title">Events</span>
-							<a class="link" href="/us/learn/upcoming-events">Upcoming Events</a>
-							<a class="link" href="/us/learn/upcoming-events">Symposium Series</a>
-							<a class="link" href="/us/learn/upcoming-events">World 2018</a>
+							<div class="link-list">
+								<a class="link" href="/us/learn/upcoming-events">Upcoming Events</a>
+								<a class="link" href="/us/learn/upcoming-events">Symposium Series</a>
+								<a class="link" href="/us/learn/upcoming-events">World 2018</a>
+							</div>
+						</div>
+						<!--/section-->
+
+						<div class="section">
+							<span class="section-title">Blog</span>
+							<div class="link-list">
+								<a class="link" href="/us/learn/upcoming-events">MicroStrategy Blog</a>
+								<a class="link" href="/us/learn/upcoming-events">BI trends</a>
+								<a class="link" href="/us/learn/upcoming-events">Data Visualization</a>
+								<a class="link" href="/us/learn/upcoming-events">Stories</a>
+								<a class="link" href="/us/learn/upcoming-events">News and Events</a>
+							</div>
 						</div>
 						<!--/section-->
 
@@ -204,28 +243,36 @@
 
 				<div class="dropdown">
 
-					<div class="flex-row">
+					<div class="section-wrapper">
+
+						<div class="section">
+							<span class="section-title">Careers</span>
+							<div class="link-list">
+								<a class="link" href="/us/company">Search for jobs</a>
+							</div>
+						</div>
+						<!--/section-->
+
+						<div class="section">
+							<span class="section-title">Partners</span>
+							<div class="link-list">
+								<a class="link" href="/us/company/">Find a partner</a>
+								<a class="link" href="/us/company/">Partner Portal</a>
+								<a class="link" href="/us/company/">OEM partnership</a>
+							</div>
+						</div>
+						<!--/section-->
+
 						<div class="section main">
-							<a class="section-title" href="/us/company">Company</a>
-							<a class="link" href="/us/company">Careers</a>
-							<a class="link" href="/us/company">Partners</a>
-							<a class="link" href="/us/company">Investors</a>
-							<a class="link" href="/us/company">Leadership</a>
-							<a class="link" href="/us/company">Contact Us</a>
-						</div>
-						<!--/section-->
-
-						<div class="section">
-							<a class="section-title" href="/us/company/careers">Careers</a>
-							<a class="link" href="/us/company">Search for jobs</a>
-						</div>
-						<!--/section-->
-
-						<div class="section">
-							<a class="section-title" href="/us/company/partners">Partners</a>
-							<a class="link" href="/us/company/">Find a partner</a>
-							<a class="link" href="/us/company/">Partner Portal</a>
-							<a class="link" href="/us/company/">OEM partnership</a>
+							<!-- <span class="section-title">Company</span>-->
+							<div class="link-list">
+								<!--<a class="link" href="/us/company">Careers</a>
+								<a class="link" href="/us/company">Partners</a> -->
+								<a class="link" href="/us/company">About us</a>
+								<a class="link" href="/us/company">Investors</a>
+								<a class="link" href="/us/company">Leadership</a>
+								<a class="link" href="/us/company">Contact Us</a>
+							</div>
 						</div>
 						<!--/section-->
 
@@ -237,7 +284,7 @@
 			<!--/menu-item-->
 
 			<div class="menu-item button-item">
-				<a class="button tiny red" href="/us/get-started" role="link">Start now</a>
+				<a class="button tiny red expand" href="/us/get-started" role="link">Start now</a>
 			</div>
 
 		</nav>
