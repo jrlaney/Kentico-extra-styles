@@ -6,7 +6,7 @@
 #page-header-interum {
   position: relative;
   overflow: visible;
-  z-index: 10 !important;
+  z-index: 600;
   border-bottom: 1px solid #DDDDDD;
   padding: 0px;
   background: #FFFFFF;
@@ -48,7 +48,7 @@
 #page-header-interum .logo-zone .logo-img {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 10px;
+  margin: 0 10px 0 0;
   max-width: 180px;
 }
 @media only screen and (min-width: 768px) {
@@ -231,13 +231,6 @@
   line-height: 1em;
   text-align: center;
 }
-.wf-loading #page-header-interum .menu-item {
-  visibility: hidden;
-}
-.wf-active #page-header-interum .menu-item,
-.wf-inactive #page-header-interum .menu-item {
-  visibility: visible;
-}
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   #page-header-interum .menu-item {
     font-size: 16px;
@@ -262,6 +255,7 @@
 #page-header-interum .menu-item .top-link {
   display: block;
   position: relative;
+  z-index: 11;
   overflow: hidden;
   padding: 15px 20px;
   text-align: left;
@@ -269,6 +263,13 @@
   color: #555555;
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
+}
+.wf-loading #page-header-interum .menu-item .top-link {
+  visibility: hidden;
+}
+.wf-active #page-header-interum .menu-item .top-link,
+.wf-inactive #page-header-interum .menu-item .top-link {
+  visibility: visible;
 }
 @media only screen and (min-width: 768px) {
   #page-header-interum .menu-item .top-link {
@@ -366,8 +367,8 @@
   color: #333333;
   width: 100%;
   max-height: 0;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out 0.2s;
+  transition: all 0.2s ease-out 0.2s;
 }
 @media only screen and (max-width: 767px) {
   #page-header-interum .menu-item.dropdown .dropdown .section:not(.main) .section-title:after {
@@ -438,6 +439,7 @@
 @media only screen and (min-width: 768px) {
   #page-header-interum .menu-item.dropdown .dropdown {
     position: absolute;
+    z-index: 11;
     top: 100%;
     left: 0;
     width: 100vw;
@@ -673,14 +675,15 @@
     background-color: #f2f2f2;
   }
   #page-header-interum .menu-item.dropdown:hover:before {
-    opacity: 1;
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
   #page-header-interum .menu-item.dropdown:hover .top-link {
-    border-bottom: none;
+    z-index: 12;
   }
   #page-header-interum .menu-item.dropdown:hover .dropdown {
+    z-index: 12;
+    overflow: visible;
     max-height: 2000px;
     opacity: 1;
   }

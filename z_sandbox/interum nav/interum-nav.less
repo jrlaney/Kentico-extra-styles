@@ -6,7 +6,7 @@
 #page-header-interum {
 	position:relative;
 	overflow:visible;
-	z-index: 10 !important;
+	z-index: 600;
 	border-bottom:1px solid @gainsboro;
 	padding:0px;
 	background:@white;
@@ -38,7 +38,7 @@
 
         .logo-img {
 			display:inline-block; vertical-align:middle;
-			margin-right:10px;
+			margin:0 10px 0 0;
 			max-width:180px;
 			@media @medium {max-width:190px;}
 			@media @large {max-width:215px;}
@@ -156,8 +156,6 @@
 		font-style:normal; font-weight:400;
 		font-size:18px; line-height:1em;
 		text-align:center;
-		.wf-loading & {visibility:hidden;}
-		.wf-active &, .wf-inactive & {visibility:visible;}
 
 		@media @medium-only {font-size:16px;}
 		@media @medium {
@@ -170,13 +168,15 @@
 		}
 
         .top-link {
-            display:block; position:relative;
+            display:block; position:relative; z-index:11;
 			overflow:hidden;
             padding:15px 20px;
 			text-align:left;
 			cursor:default;
     		color:@charcoal;
 			.transition;
+			.wf-loading & {visibility:hidden;}
+			.wf-active &, .wf-inactive & {visibility:visible;}
 			@media @medium {
 	            .display(flex);
 	            .flex-direction(row);
@@ -237,7 +237,8 @@
 
             //animated elements
             max-height:0;
-			.transition;
+			//.transition;
+			.transition-open(all 0.2s ease-out 0.2s);
 
 			//nested dropdowns for mobile version
 			@media @small-only {
@@ -288,7 +289,7 @@
 			}//mobile only stuff
 
 			@media @medium {
-				position:absolute;
+				position:absolute; z-index:11;
 				top:100%; left:0;
                 width:100vw; max-width:100%;
 				border-bottom:none;
@@ -416,9 +417,11 @@
 			//hover states added for desktop
 			&:hover {
 				background-color:@light-gray;
-				&:before {opacity:1; .translateY(0);}
-				.top-link {border-bottom:none;}
+				&:before {.translateY(0);}
+				.top-link {z-index:12;}
 				.dropdown {
+					z-index:12;
+					overflow:visible;
 					max-height:2000px;
 					opacity:1;
 				}
