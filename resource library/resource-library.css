@@ -407,8 +407,8 @@ a > img:only-child {
   letter-spacing: 0.1em;
 }
 #resource-details .resource-company {
-  display: -webkit-inline-flex;
-  display: inline-flex;
+  display: -webkit-flex;
+  display: flex;
   -webkit-align-items: center;
   align-items: center;
   white-space: nowrap;
