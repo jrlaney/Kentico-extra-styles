@@ -167,6 +167,12 @@ a > img:only-child {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+.gridder.cards {
+  display: block;
+}
+.gridder.cards .gridder-list {
+  width: 100%;
+}
 .gridder.cards .gridder-list .card {
   cursor: pointer;
 }

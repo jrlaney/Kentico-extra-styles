@@ -91,9 +91,14 @@
 
 
 .gridder.cards {
+    display: block;
     
-    .gridder-list .card {
-        cursor: pointer;
+    .gridder-list {
+        width: 100%;
+        
+        .card {
+            cursor: pointer;
+        }
     }
     &.hasSelectedItem .gridder-list .card {
         opacity: .5;
