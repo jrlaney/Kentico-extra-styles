@@ -67,7 +67,7 @@ img:last-child {
 a > img:only-child {
   margin-bottom: 20px;
 }
-.partners #hero.background-image {
+.partner #hero.background-image {
   background-image: url('/getmedia/f7467b6a-e8f0-46bb-85cf-de71b8a35b7b/businesspeople-looking-at-mobile-device');
 }
 #become-a-partner.background-image {
@@ -155,10 +155,10 @@ a > img:only-child {
   max-width: 90%;
   max-height: 100px;
 }
-#companies-list [class*="-details"] {
+#companies-list .partner.card [class*="-details"] {
   display: none;
 }
-#companies-list [class*="-logo"] {
+#companies-list .partner.card [class*="-logo"] {
   max-width: 65%;
   max-height: 100px;
   position: absolute;

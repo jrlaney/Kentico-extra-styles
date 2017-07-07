@@ -3,7 +3,7 @@
 
 
 
-.partners #hero.background-image { background-image: url('/getmedia/f7467b6a-e8f0-46bb-85cf-de71b8a35b7b/businesspeople-looking-at-mobile-device'); }
+.partner #hero.background-image { background-image: url('/getmedia/f7467b6a-e8f0-46bb-85cf-de71b8a35b7b/businesspeople-looking-at-mobile-device'); }
 
 #become-a-partner.background-image { background-image: url('/Strategy/media/images/common/banners/partners.jpg'); }
 
@@ -73,13 +73,15 @@
 
 #companies-list {
 
-    [class*="-details"] {
-        display: none;
-    }
-    [class*="-logo"] {
-        .max-size(65%, 100px);
-        .position(absolute, 50%, 50%);
-        .translate(-50%, -50%);
+    .partner.card {
+        [class*="-details"] {
+            display: none;
+        }
+        [class*="-logo"] {
+            .max-size(65%, 100px);
+            .position(absolute, 50%, 50%);
+            .translate(-50%, -50%);
+        }
     }
 }
 
