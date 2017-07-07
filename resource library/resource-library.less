@@ -2,6 +2,25 @@
 @import '../overrides.less';
 
 
+#section-navigation-sticky-wrapper {
+    
+    .loop-media-queries(@i) when (@i > 0) {
+        .loop-media-queries(@i - 1);
+        
+        @query: extract(@queries, @i);
+        @breakpoint: extract(@breakpoints, @i);
+        
+        @media @query {
+            
+            max-width: @breakpoint;
+        }
+    }
+    .loop-media-queries(length(@queries));
+    
+    margin: 0 auto;
+}
+
+
 
 /* ORDER OF COLUMNS */
 .filter-col {-webkit-order:1; order:1; z-index:2;}
