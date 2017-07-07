@@ -98,6 +98,7 @@ a > img:only-child {
   display: flex;
   -webkit-align-items: center;
   align-items: center;
+  line-height: 1;
 }
 .event .event-title {
   font-weight: 400;
@@ -107,6 +108,9 @@ a > img:only-child {
   font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+.event .event-venue {
+  font-weight: 600;
 }
 .event .event-description {
   color: #999999;
