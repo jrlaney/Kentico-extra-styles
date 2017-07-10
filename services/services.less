@@ -85,11 +85,13 @@ ul li, ul.triangle-list li {padding:0;}
 //bi maturity curve graphic
 .bi-maturity-curve {
     @media @small-only {padding:0 20px;}
-
     @media @medium {.text-col {padding:30px;}}
+
     .bi-maturity-curve-graph {
         position:relative;
         padding:30px 0 0 0;
+        max-width:1050px;
+        margin:0 auto;
         > .flex-row {width:auto;}
         .label {
             display:block; width:auto;
@@ -130,11 +132,11 @@ ul li, ul.triangle-list li {padding:0;}
                     .transform(translateY(-50%) translateX(-50%) rotate(-90deg));
                     &:before, &:after {display:none;}
                 }
-            }
-        }
+            }//end y-axis label
+        }// end .label
         .y-axis-bar {
             position:relative;
-            border-left:3px dashed @gray;
+            border-left:3px solid @gray;
             margin-left:50px;
             .flex-direction(column-reverse);
             @media @medium {
@@ -155,9 +157,9 @@ ul li, ul.triangle-list li {padding:0;}
                 @media @large {
                     height:100%;
                     right:50%;
-                    .transform(rotate(-5deg));
+                    .transform(rotate(0deg));
                 }
-                @media @xlarge {right:43%; .transform(rotate(0deg));}
+                @media @xlarge {right:43%;}
             }
             > div {
                 @media @small-only {
@@ -176,25 +178,25 @@ ul li, ul.triangle-list li {padding:0;}
                 }
                 @media @medium {
                     padding-left:55%;;
-                    &:nth-child(2) {padding-left:45%; background-color:fade(@pure-black, 3%);}
-                    &:nth-child(3) {padding-left:35%; background-color:fade(@pure-black, 6%);}
-                    &:nth-child(4) {padding-left:25%; background-color:fade(@pure-black, 9%);}
-                    &:nth-child(5) {padding-left:15%; background-color:fade(@pure-black, 12%)}
+                    &:nth-child(2) {padding-left:49%; background-color:fade(@pure-black, 3%);}
+                    &:nth-child(3) {padding-left:43%; background-color:fade(@pure-black, 6%);}
+                    &:nth-child(4) {padding-left:35%; background-color:fade(@pure-black, 9%);}
+                    &:nth-child(5) {padding-left:27%; background-color:fade(@pure-black, 12%)}
                 }
                 @media @xlarge {
-                    padding-left:65%;
+                    padding-left:62%;
                     &:nth-child(2) {padding-left:55%;}
-                    &:nth-child(3) {padding-left:45%;}
-                    &:nth-child(4) {padding-left:35%;}
-                    &:nth-child(5) {padding-left:25%;}
+                    &:nth-child(3) {padding-left:47%;}
+                    &:nth-child(4) {padding-left:37%;}
+                    //&:nth-child(5) {padding-left:27%;}
                 }
-            }
+            }//end div inside of the y-axis bar
         }//end y-axis bar
         .x-axis-bar {
             @media @medium {
                 display:block; position:relative;
-                border-top:3px dashed @gray;
-                margin:0 20px 0 60px;
+                border-top:3px solid @gray;
+                margin:0 0 0 60px;
             }
         }//end x-axis bar
     }//end bi curve graph
@@ -318,6 +320,23 @@ ul li, ul.triangle-list li {padding:0;}
         }
         .line.thick {height:30px; display:block; width:auto; margin-top:5px;}
     }//end desktop journey graph
+}
+
+
+#ps-types {
+    .toggler {
+        margin-bottom:0px;
+        &:after {
+            .rotation(90deg);
+            font-size:22px;
+            margin-top:-10px;
+        }
+        &:hover:after {margin-right:0.7em;}
+        &.expanded {
+            background-color:lighten(@black, 10%);
+            &:after {.rotation(270deg);}
+        }
+    }
 }
 
 

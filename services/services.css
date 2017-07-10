@@ -169,6 +169,8 @@ ul.triangle-list li {
 .bi-maturity-curve .bi-maturity-curve-graph {
   position: relative;
   padding: 30px 0 0 0;
+  max-width: 1050px;
+  margin: 0 auto;
 }
 .bi-maturity-curve .bi-maturity-curve-graph > .flex-row {
   width: auto;
@@ -240,7 +242,7 @@ ul.triangle-list li {
 }
 .bi-maturity-curve .bi-maturity-curve-graph .y-axis-bar {
   position: relative;
-  border-left: 3px dashed #CCCCCC;
+  border-left: 3px solid #CCCCCC;
   margin-left: 50px;
   -webkit-flex-direction: column-reverse;
   flex-direction: column-reverse;
@@ -275,15 +277,13 @@ ul.triangle-list li {
   .bi-maturity-curve .bi-maturity-curve-graph .y-axis-bar .curve-graphic {
     height: 100%;
     right: 50%;
-    -webkit-transform: rotate(-5deg);
-    transform: rotate(-5deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 @media only screen and (min-width: 1200px) {
   .bi-maturity-curve .bi-maturity-curve-graph .y-axis-bar .curve-graphic {
     right: 43%;
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
   }
 }
 @media only screen and (max-width: 767px) {
@@ -309,45 +309,42 @@ ul.triangle-list li {
     padding-left: 55%;
   }
   .bi-maturity-curve .bi-maturity-curve-graph .y-axis-bar > div:nth-child(2) {
-    padding-left: 45%;
+    padding-left: 49%;
     background-color: rgba(0, 0, 0, 0.03);
   }
   .bi-maturity-curve .bi-maturity-curve-graph .y-axis-bar > div:nth-child(3) {
-    padding-left: 35%;
+    padding-left: 43%;
     background-color: rgba(0, 0, 0, 0.06);
   }
   .bi-maturity-curve .bi-maturity-curve-graph .y-axis-bar > div:nth-child(4) {
-    padding-left: 25%;
+    padding-left: 35%;
     background-color: rgba(0, 0, 0, 0.09);
   }
   .bi-maturity-curve .bi-maturity-curve-graph .y-axis-bar > div:nth-child(5) {
-    padding-left: 15%;
+    padding-left: 27%;
     background-color: rgba(0, 0, 0, 0.12);
   }
 }
 @media only screen and (min-width: 1200px) {
   .bi-maturity-curve .bi-maturity-curve-graph .y-axis-bar > div {
-    padding-left: 65%;
+    padding-left: 62%;
   }
   .bi-maturity-curve .bi-maturity-curve-graph .y-axis-bar > div:nth-child(2) {
     padding-left: 55%;
   }
   .bi-maturity-curve .bi-maturity-curve-graph .y-axis-bar > div:nth-child(3) {
-    padding-left: 45%;
+    padding-left: 47%;
   }
   .bi-maturity-curve .bi-maturity-curve-graph .y-axis-bar > div:nth-child(4) {
-    padding-left: 35%;
-  }
-  .bi-maturity-curve .bi-maturity-curve-graph .y-axis-bar > div:nth-child(5) {
-    padding-left: 25%;
+    padding-left: 37%;
   }
 }
 @media only screen and (min-width: 768px) {
   .bi-maturity-curve .bi-maturity-curve-graph .x-axis-bar {
     display: block;
     position: relative;
-    border-top: 3px dashed #CCCCCC;
-    margin: 0 20px 0 60px;
+    border-top: 3px solid #CCCCCC;
+    margin: 0 0 0 60px;
   }
 }
 #bi-journey .journey-graph-mobile {
@@ -531,6 +528,25 @@ ul.triangle-list li {
   display: block;
   width: auto;
   margin-top: 5px;
+}
+#ps-types .toggler {
+  margin-bottom: 0px;
+}
+#ps-types .toggler:after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  font-size: 22px;
+  margin-top: -10px;
+}
+#ps-types .toggler:hover:after {
+  margin-right: 0.7em;
+}
+#ps-types .toggler.expanded {
+  background-color: #4d4d4d;
+}
+#ps-types .toggler.expanded:after {
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
 }
 .support-quotes .banner {
   min-height: 390px;
