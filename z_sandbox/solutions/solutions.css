@@ -338,7 +338,3 @@ a > img:only-child {
     opacity: 1;
   }
 }
-#customers .logo {
-  max-width: 65%;
-  max-height: 100px;
-}
