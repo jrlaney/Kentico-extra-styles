@@ -223,14 +223,17 @@ a > img:only-child {
   letter-spacing: 0.05em;
   color: #999999;
 }
-.gridder-expanded-content .device-mockup {
+.gridder-expanded-content .solution-resource .resource-thumbnail {
+  width: 100%;
+}
+.gridder-expanded-content .solution-resource .device-mockup {
   margin: 0 auto;
 }
-.gridder-expanded-content .device-mockup.iphone {
+.gridder-expanded-content .solution-resource .device-mockup.iphone {
   max-width: 250px;
 }
 @media only screen and (min-width: 768px) {
-  .gridder-expanded-content .solution-image {
+  .gridder-expanded-content .solution-resource .solution-image {
     max-height: 600px;
   }
 }

@@ -121,14 +121,20 @@
         .uppercase;
         color: @dark-gray;
     }
-    .device-mockup {
-        margin: 0 auto;
+    .solution-resource {
         
-        &.iphone { max-width: 250px; }
-    }
-    @media @medium {
-        .solution-image {
-            max-height: 600px;
+        .resource-thumbnail {
+            width: 100%;
+        }
+        .device-mockup {
+            margin: 0 auto;
+
+            &.iphone { max-width: 250px; }
+        }
+        @media @medium {
+            .solution-image {
+                max-height: 600px;
+            }
         }
     }
 }
