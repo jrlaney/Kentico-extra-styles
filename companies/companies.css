@@ -168,8 +168,15 @@ a > img:only-child {
   transform: translate(-50%, -50%);
 }
 .company.page h2[class*="-headline"] {
+  margin-bottom: 20px;
   font-weight: 400;
   color: #D9232E;
+}
+.company.page [id*="-pitch"] {
+  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 300;
 }
 .company.page [id*="-pitch"] p {
   font-size: 18px;
