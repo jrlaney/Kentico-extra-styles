@@ -439,7 +439,8 @@ a > img:only-child {
 }
 #resource-details .resource-company .logo {
   display: inline-block;
-  height: 24px;
+  max-width: 150px;
+  max-height: 24px;
   margin-left: .5em;
 }
 #resource-details .resource-company .publication-organization {
@@ -495,13 +496,16 @@ a > img:only-child {
 .analyst-review .resource-link .cta-icon:before {
   content: "\e937" !important;
 }
-#resource-details .resource-description,
-#resource-details .resource-description > * {
+#resource-details .resource-description {
   font-family: 'myriad-pro-n3', 'myriad-pro', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 28px;
+  color: #333333;
+}
+#resource-details .resource-description + p {
+  margin-top: -20px;
 }
 #resource-information .resource-button {
   display: none;
