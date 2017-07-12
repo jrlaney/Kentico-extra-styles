@@ -85,6 +85,35 @@
     }
 }
 
+.company.page {
+    
+    h2[class*="-headline"] {
+        font-weight: @normal;
+        color: @red;
+    }
+    
+    [id*="-pitch"] {
+        
+        p {
+            font-size: 18px;
+            line-height: 1.4;
+            font-weight: @light;
+        }
+    }
+    .card[class*="-solution"] {
+        
+        [class*="-solution-title"] {
+            font-weight: @normal;
+        }
+        [class*="-solution-description"] {
+            font-family: @myriad-pro;
+            font-size: 16px;
+            line-height: 1.4;
+            font-weight: @light;
+        }
+    }
+}
+
 // gridder
 
 @gridder-nav-size: 80px;
