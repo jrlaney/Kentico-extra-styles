@@ -212,6 +212,8 @@ a > img:only-child {
 }
 .gridder-show {
   width: 100%;
+  position: relative;
+  z-index: 1;
   float: left;
   padding: 15px;
 }
