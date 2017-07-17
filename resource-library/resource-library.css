@@ -496,7 +496,9 @@ a > img:only-child {
 .analyst-review .resource-link .cta-icon:before {
   content: "\e937" !important;
 }
-#resource-details .resource-description {
+#resource-details .resource-description,
+#resource-details .resource-description ~ p,
+#resource-details .resource-description ~ ul li {
   font-family: 'myriad-pro-n3', 'myriad-pro', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 300;
