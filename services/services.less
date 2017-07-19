@@ -79,6 +79,57 @@ ul li, ul.triangle-list li {padding:0;}
     }
 }
 
+#support-contacts {
+    #contact-info {
+        .highlight-rows {
+            table-layout: auto;
+
+            .disable-highlight {
+                &:hover {background-color:transparent;}
+                > td:last-child {padding:0;}
+            }
+            .highlight-rows {
+                border:none;
+                tr:first-child {border-top:none;}
+                tr:last-child {border-bottom:none;}
+                td {padding:10px 20px;}
+            }
+
+            @media @small-only {
+                tr, th, td, tbody, thead {
+                    display:block; width:100%;
+                }
+                td {
+                    &:first-child {padding-bottom:5px;}
+                    &:last-child {padding-top:0;}
+                }
+                .highlight-rows td {
+                    padding-left:40px;
+                    &:first-child {padding-bottom:10px;}
+                    &:last-child {padding-top:0;}
+                }
+            }
+        }
+        a {
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+        }
+    }
+}
+
 
 // professional services
 

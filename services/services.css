@@ -156,6 +156,66 @@ ul.triangle-list li {
     margin-bottom: 0;
   }
 }
+#support-contacts #contact-info .highlight-rows {
+  table-layout: auto;
+}
+#support-contacts #contact-info .highlight-rows .disable-highlight:hover {
+  background-color: transparent;
+}
+#support-contacts #contact-info .highlight-rows .disable-highlight > td:last-child {
+  padding: 0;
+}
+#support-contacts #contact-info .highlight-rows .highlight-rows {
+  border: none;
+}
+#support-contacts #contact-info .highlight-rows .highlight-rows tr:first-child {
+  border-top: none;
+}
+#support-contacts #contact-info .highlight-rows .highlight-rows tr:last-child {
+  border-bottom: none;
+}
+#support-contacts #contact-info .highlight-rows .highlight-rows td {
+  padding: 10px 20px;
+}
+@media only screen and (max-width: 767px) {
+  #support-contacts #contact-info .highlight-rows tr,
+  #support-contacts #contact-info .highlight-rows th,
+  #support-contacts #contact-info .highlight-rows td,
+  #support-contacts #contact-info .highlight-rows tbody,
+  #support-contacts #contact-info .highlight-rows thead {
+    display: block;
+    width: 100%;
+  }
+  #support-contacts #contact-info .highlight-rows td:first-child {
+    padding-bottom: 5px;
+  }
+  #support-contacts #contact-info .highlight-rows td:last-child {
+    padding-top: 0;
+  }
+  #support-contacts #contact-info .highlight-rows .highlight-rows td {
+    padding-left: 40px;
+  }
+  #support-contacts #contact-info .highlight-rows .highlight-rows td:first-child {
+    padding-bottom: 10px;
+  }
+  #support-contacts #contact-info .highlight-rows .highlight-rows td:last-child {
+    padding-top: 0;
+  }
+}
+#support-contacts #contact-info a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
 @media only screen and (max-width: 767px) {
   .bi-maturity-curve {
     padding: 0 20px;
