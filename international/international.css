@@ -190,85 +190,21 @@
   background-image: url(/Strategy/media/images-intl/homepage/btn_webcast-bigdata.jpg);
   cursor: pointer;
 }
-.cookie-content-bar {
-  position: absolute;
-  display: block;
-  top: 0px;
-  width: 100%;
+#cookieConsentToolbar {
+  position: relative;
   z-index: 3000;
   background: #f2f2f2;
   border-bottom: 1px solid #DDDDDD;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-.cookie-content-bar .cookiesToolbar {
-  position: relative;
-  display: block;
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 5px;
-}
-.cookie-content-bar .cookiesToolbar .cookie-img {
-  display: block;
-  float: left;
-  margin-right: 7px;
-  padding: 5px 0;
-}
-.cookie-content-bar .cookiesToolbar .cookiesToolbarContent {
-  display: block;
-  padding: 8px 0;
-  font-size: 12px;
-  line-height: 17px;
-  color: #555555;
-}
-.cookie-content-bar .cookiesToolbar .collapseTop {
-  display: block;
-  float: right;
-  padding: 5px 15px;
+#cookieConsentToolbarClose {
   cursor: pointer;
-  font-family: Arial,Baskerville,monospace;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 23px;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
 }
-.cookie-content-bar .cookiesToolbar .collapseTop:hover {
-  background: #FFFFFF;
+#cookieConsentToolbarClose:hover {
   color: #D9232E;
 }
-@media only screen and (max-width: 767px) {
-  .cookie-content-bar {
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .cookie-content-bar .cookiesToolbar {
-    width: auto;
-    padding: 0 5px;
-  }
-  .cookie-content-bar .cookiesToolbar .cookie-img {
-    margin-right: 7px;
-    padding: 11px 0 3px 0;
-  }
-  .cookie-content-bar .cookiesToolbar .cookiesToolbarContent {
-    padding: 8px 40px 8px 0;
-  }
-  .cookie-content-bar .cookiesToolbar .collapseTop {
-    position: absolute;
-    float: none;
-    right: 0;
-    top: 5px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .cookie-content-bar .cookiesToolbar {
-    width: 768px;
-  }
-}
-@media only screen and (min-width: 980px) {
-  .cookie-content-bar .cookiesToolbar {
-    width: 980px;
-  }
+#cookieConsentToolbarContent {
+  font-weight: 600;
 }
 /*-------------------------------------styles for mobile size */
 @media (max-width: 767px) {
