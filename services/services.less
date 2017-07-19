@@ -7,14 +7,14 @@ ul li, ul.triangle-list li {padding:0;}
 // hero banners
 
     // default hero banner
-    .services #hero.background-image { background-image: url('/Strategy/media/images/common/banners/services.jpg'); }
+    .services #hero.background-image { background-image: url('/getmedia/78996cfa-0f66-4fa7-bdbc-a2f8b41c8e6e/mobile-devices-on-desk-with-chart'); }
 
     // custom hero banner for support page
-    #customer-support #hero.background-image { background-image: url('/Strategy/media/images/common/banners/support.jpg'); }
+    .services.support #hero.background-image { background-image: url('/getmedia/e98fff73-ffc1-4ed8-ad45-26c77d607685/support'); }
 
     // banner for the older pages
     .services-banner {
-        background: url(https://www.microstrategy.com/Strategy/media/images/support/support_top-banner-bkg.jpg) no-repeat center center #11566f;
+        background: url(/Strategy/media/images/support/support_top-banner-bkg.jpg) no-repeat center center #11566f;
         background-size: cover;
     }
 
@@ -108,24 +108,22 @@ ul li, ul.triangle-list li {padding:0;}
                     &:first-child {padding-bottom:10px;}
                     &:last-child {padding-top:0;}
                 }
+
+                //make the long link line break in mobile
+                a {
+                    overflow-wrap: break-word;
+                    word-wrap: break-word;
+
+                    -ms-word-break: break-all;
+                    word-break: break-all;
+                    word-break: break-word;
+
+                    -ms-hyphens: auto;
+                    -moz-hyphens: auto;
+                    -webkit-hyphens: auto;
+                    hyphens: auto;
+                }
             }
-        }
-        a {
-
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-
-  -ms-word-break: break-all;
-  /* This is the dangerous one in WebKit, as it breaks things wherever */
-  word-break: break-all;
-  /* Instead use this non-standard one: */
-  word-break: break-word;
-
-  /* Adds a hyphen where the word breaks, if supported (No Blink) */
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
         }
     }
 }
@@ -395,6 +393,6 @@ ul li, ul.triangle-list li {padding:0;}
 
 // for older pages
 
-.support-quotes .banner {min-height: 390px;}
-@media @medium { .support-quotes .banner {min-height: 170px;} }
-@media @large { .support-quotes .banner {min-height: 150px;} }
+#support-quotes .banner {min-height: 390px;}
+@media @medium { #support-quotes .banner {min-height: 170px;} }
+@media @large { #support-quotes .banner {min-height: 150px;} }
