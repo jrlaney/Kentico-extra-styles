@@ -85,7 +85,7 @@ a > img:only-child {
   -webkit-align-items: center;
   align-items: center;
   padding: 10px;
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -201,7 +201,7 @@ a > img:only-child {
   background-color: #333333;
 }
 .gridder-expanded-content {
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .gridder-expanded-content .solution-content {
   -webkit-align-self: flex-start;
@@ -211,7 +211,7 @@ a > img:only-child {
   margin-right: .75em;
 }
 .gridder-expanded-content .solution-panel-content {
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   font-weight: 300;
@@ -243,7 +243,7 @@ a > img:only-child {
 #explore .section-name {
   font-size: 18px;
   line-height: 1.4;
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -260,7 +260,7 @@ a > img:only-child {
 #explore .label {
   font-size: 14px;
   line-height: 1.4;
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 #to-top {
@@ -300,7 +300,7 @@ a > img:only-child {
   transition: all 0.2s ease-out 0s;
   text-align: center;
   background-color: #404040;
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1;
   font-weight: 600;

@@ -173,7 +173,7 @@ a > img:only-child {
   color: #D9232E;
 }
 .company.page [id*="-pitch"] {
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.4;
   font-weight: 300;
@@ -187,7 +187,7 @@ a > img:only-child {
   font-weight: 400;
 }
 .company.page .card[class*="-solution"] [class*="-solution-description"] {
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.4;
   font-weight: 300;
@@ -314,7 +314,7 @@ a > img:only-child {
   background-color: #333333;
 }
 [class*="-details"] {
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 [class*="-details"] .grid-item {
   -webkit-flex-direction: column;
@@ -566,7 +566,7 @@ a > img:only-child {
   position: relative;
   margin: 0;
   padding-left: 2.5em;
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.4;
   font-weight: 300;
   font-size: 16px;

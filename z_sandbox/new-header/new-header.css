@@ -48,7 +48,7 @@ body.menu-opened {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -305,7 +305,7 @@ body.menu-opened {
   left: 0;
   bottom: 0;
   right: 0;
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-style: normal;

@@ -80,7 +80,7 @@ a > img:only-child {
   color: #D9232E;
 }
 .blog.archive .post {
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.6;
 }
 .blog.archive .post .post-title {
@@ -103,7 +103,7 @@ a > img:only-child {
 .blog.single .post p,
 .blog.single .post li,
 .blog.single .post figcaption {
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.6;
 }
 .blog.single .post h4,
@@ -213,7 +213,7 @@ a > img:only-child {
 .blog.single #comments .no-comments {
   display: block;
   margin-bottom: 20px;
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #999999;
 }
 .blog.single #comments .comment {
@@ -221,7 +221,7 @@ a > img:only-child {
   padding: 30px;
   background-color: #FFFFFF;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
 }
@@ -278,7 +278,7 @@ a > img:only-child {
 .blog.single #comments #comment-form .message {
   display: block;
   margin-top: 20px;
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 12px;
   color: #68AA00;
 }
@@ -286,7 +286,7 @@ a > img:only-child {
   color: #D9232E;
 }
 .blog.single #comments .form-control-error {
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: 400;
   text-transform: none;
@@ -294,7 +294,7 @@ a > img:only-child {
   color: #D9232E;
 }
 .blog #hero {
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.6;
 }
 .blog #hero .post-author {
@@ -478,7 +478,7 @@ a > img:only-child {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 #section-navigation-menu li {
   -webkit-flex: 1 1 100%;

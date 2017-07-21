@@ -124,7 +124,7 @@ a > img:only-child {
   width: 100%;
   float: left;
   padding: 10px;
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .gridder-show .course-description {
   font-weight: 300;
