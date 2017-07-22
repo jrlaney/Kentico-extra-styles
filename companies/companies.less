@@ -73,11 +73,12 @@
 
 #companies-list {
 
-    .partner.card {
-        [class*="-details"] {
+    .company.card {
+        
+        .company-details {
             display: none;
         }
-        [class*="-logo"] {
+        .company-logo {
             .max-size(65%, 100px);
             .position(absolute, 50%, 50%);
             .translate(-50%, -50%);
@@ -87,13 +88,13 @@
 
 .company.page {
     
-    h2[class*="-headline"] {
+    h2.company-headline {
         margin-bottom: @base-spacing;
         font-weight: @normal;
         color: @red;
     }
     
-    [id*="-pitch"] {
+    #company-pitch {
         font-family: @myriad-pro;
         font-size: 18px;
         line-height: 1.4;
@@ -105,12 +106,12 @@
             font-weight: @light;
         }
     }
-    .card[class*="-solution"] {
+    .card.company-solution {
         
-        [class*="-solution-title"] {
+        .company-solution-title {
             font-weight: @normal;
         }
-        [class*="-solution-description"] {
+        .company-solution-description {
             font-family: @myriad-pro;
             font-size: 16px;
             line-height: 1.4;
@@ -125,7 +126,6 @@
 
 
 .gridder.cards {
-    display: block;
     
     .gridder-list {
         width: 100%;
@@ -201,23 +201,23 @@
         }
     }
 }
-[class*="-details"] {
+.company-details {
     font-family: @myriad-pro;
     
     .grid-item {
         .flex-direction(column);
     }
-    [class*="-name"] {
+    .company-name {
         font-weight: @bold;
         .uppercase;
     }
-    [class*="-description"] {
+    .company-description {
         font-size: 15px;
         line-height: @line-height;
         font-weight: @light;
         letter-spacing: .01em;
     }
-    [class*="-category-header"] {
+    .company-category-header {
         margin-bottom: @base-spacing / 2;
         font-size: 16px;
         line-height: @line-height;
@@ -225,7 +225,7 @@
         .uppercase;
         color: @dark-gray;
     }
-    [class*="-category-tags"] {
+    .company-category-tags {
         .no-list-style;
         line-height: 1;
         font-weight: @light;
@@ -243,7 +243,7 @@
     font-size: 24px;
     color: @gray;
 
-    [class*="logo"] {
+    .company-logo {
         max-width: 250px;
         margin: (@base-spacing / 2) 0;
         @media @medium { margin: 0 @base-spacing; }

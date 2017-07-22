@@ -254,7 +254,7 @@ section#symposium {
   width: 100%!important;
   padding: 15px 20px;
   max-height: 40px;
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-align: center;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -355,7 +355,7 @@ section#symposium {
 }
 #faq .accordion {
   margin-bottom: 10px;
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 #faq .accordion:last-child {
   margin-bottom: 0;
