@@ -318,9 +318,6 @@
   font-size:18px; line-height:28px;
     color: @black;
 }
-#resource-details .resource-description + p {
-    margin-top: @base-spacing * -1;
-}
 #resource-information .resource-button {display:none; cursor:pointer;}
 
 /* styles for the form
@@ -439,6 +436,44 @@
   transition:opacity 1s ease 0s;
 }
 #resource-media.video-playing .media-wrapper .resource-link {opacity:0; z-index:-1;}
+
+#resource-dashboard {
+    
+    &-bottom-bar {
+        display: none;
+        .justify-content(space-between);
+        .align-items(center);
+        position: relative;
+        z-index: 2;
+        background-color: #3B3B3B;
+        
+        .video-playing & {
+            .display(flex);
+        }
+    }
+    &-link {
+        padding: @icon-block-padding;
+        font-family: @myriad-pro;
+        font-size: 11px;
+        line-height: 1;
+    }
+    &-size-trigger {
+        background-color: fade(@blue, percentage(@semi-opaque));
+        opacity: 0;
+        cursor: pointer;
+        .transition;
+        
+        .video-playing & {
+            opacity: 1;
+        }
+        &:hover {
+            background-color: @blue;
+        }
+        .expand &:before {
+            content: '\e9ef';
+        }
+    }
+}
 
 /* for the related resources row */
 #related-resources {
@@ -613,7 +648,6 @@
     -webkit-filter: grayscale(100%);
   }
   /*video play animations*/
-  .media-wrapper .wistia_embed {max-height:432px;}
   #resource-media .media-wrapper,
   .gated.resource #resource-media.video-ready .media-wrapper {padding-top:300px; }
 }
@@ -664,7 +698,6 @@
   }
 
   /* INDIVIDUAL RESOURCE PAGE STYLES */
-  .media-wrapper .wistia_embed {max-height:460px;}
   #resource-details .resource-title {font-size:40px; line-height:45px;}
   #resource-details .resource-type {font-size:18px; line-height:18px;}
   #resource-details .resource-link .cta-icon:before {font-size:64px;}
@@ -679,5 +712,4 @@
 @media only screen and (min-width: 1200px) {
   /* INDIVIDUAL RESOURCE PAGE STYLES */
   #resource-details .resource-title {font-size:45px; line-height:55px;}
-  .media-wrapper .wistia_embed {max-height:562.5px;}
 }
