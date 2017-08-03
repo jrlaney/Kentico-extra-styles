@@ -654,9 +654,6 @@
   position: relative;
   overflow: hidden;
   background-color: #333333;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 .careers-banner .banner-content {
   position: relative;
@@ -683,31 +680,23 @@
   background-size: cover;
 }
 /*fullwidth image banners*/
+.image-section > .flex-row {
+  min-height: 65vh;
+}
+.image-section .background-trans-white {
+  background-color: rgba(255, 255, 255, 0.9);
+}
 .image-section.diverse-people {
   background-image: url(/Strategy/media/images/company/careers/careers_overview_diverse-ppl-bkg.jpg);
 }
 .image-section.work-life {
   background-image: url(/Strategy/media/images/company/careers/careers_overview_work-life-bkg.jpg);
 }
+.image-section.at-the-table {
+  background-image: url(/getmedia/d2a0bf7e-2893-4ab7-8c35-903a2b7b9edb/at-the-table);
+}
 .global-team {
   background-image: url(/Strategy/media/images/company/careers/careers_overview_global-team-bkg.jpg);
-}
-.video-wrapper {
-  position: relative;
-  padding-bottom: 52.50%;
-  /* 16:9 */
-  padding-top: 25px;
-  height: 0;
-  border: 3px solid rgba(0, 0, 0, 0.2);
-  margin: 30px 0;
-  background: rgba(0, 0, 0, 0.2);
-}
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 /*new job search*/
 .smartWidget .srSearch {
@@ -800,10 +789,6 @@
 }
 /* Small devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .image-section {
-    height: 50vh;
-    min-height: 500px;
-  }
   .smartWidget .srSearchForm {
     width: 60%;
     vertical-align: middle;
