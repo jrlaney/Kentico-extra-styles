@@ -76,6 +76,111 @@ ul.triangle-list {
 }
 
 
+// DEMO PAGE
+
+#demo-cta {
+    width: 480px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 100;
+    -webkit-transform: translate(-475px, -50%);
+    transform: translate(-475px, -50%);
+    padding: 40px 80px 40px 40px;
+    background: #C5202A;
+    -webkit-transition: all .2s ease-out 0s;
+    transition: all .2s ease-out 0s
+}
+
+#demo-cta .tab {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 150% 150%;
+    transform-origin: 150% 150%;
+    background: #C5202A;
+    -webkit-transition: all .2s ease-out 0s;
+    transition: all .2s ease-out 0s;
+    cursor: pointer
+}
+
+#demo-cta:hover {
+    -webkit-transform: translate(-465px, -50%);
+    transform: translate(-465px, -50%);
+    background: #D9232E;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.35)
+}
+
+#demo-cta:hover .tab {
+    background: #D9232E;
+    box-shadow: 0 20px #D9232E, -20px 0 #D9232E, 5px 0 20px rgba(0, 0, 0, 0.35)
+}
+
+#demo-cta.open {
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    background: #D9232E;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.25)
+}
+
+#demo-cta.open .tab {
+    background: #D9232E;
+    box-shadow: 0 20px #D9232E, -20px 0 #D9232E, 5px 0 20px rgba(0, 0, 0, 0.35)
+}
+
+#demo-cta .close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 101;
+    -webkit-transition: all .2s ease-out 0s;
+    transition: all .2s ease-out 0s;
+    cursor: pointer
+}
+
+#demo-cta .close:before,
+#demo-cta .close:after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-right: -15px;
+    background: #CCCCCC
+}
+
+#demo-cta .close:before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+#demo-cta .close:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+#demo-cta .close:hover:before,
+#demo-cta .close:active:before,
+#demo-cta .close:focus:before,
+#demo-cta .close:hover:after,
+#demo-cta .close:active:after,
+#demo-cta .close:focus:after {
+    background: #fff
+}
+
+
 //OLDER VERSIONS OF THE FREE TRIAL PAGE (for intl, delete when updated)
 
 
