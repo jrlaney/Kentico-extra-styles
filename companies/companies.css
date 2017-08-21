@@ -155,6 +155,9 @@ a > img:only-child {
   max-width: 90%;
   max-height: 100px;
 }
+.Gecko #companies-list .company.card {
+  display: block !important;
+}
 #companies-list .company.card .company-details {
   display: none;
 }
