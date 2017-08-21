@@ -67,8 +67,12 @@ img:last-child {
 a > img:only-child {
   margin-bottom: 20px;
 }
+#section-navigation-sticky-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 #press-center #hero.background-image {
-  background-image: url('/Strategy/media/images/common/banners/press.jpg');
+  background-image: url('/getmedia/cd722862-2349-4c56-85f1-1ce7feb2314c/press');
 }
 #press-center .company-name {
   display: block;
@@ -81,9 +85,16 @@ a > img:only-child {
   max-width: 75%;
   max-height: 125px;
 }
-#press-center .press-center-title {
+#press-center .publication {
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+#press-center .publication-title {
   font-weight: 400;
 }
-#press-center .news-item-organization {
+#press-center .publication-byline {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+#press-center .publication-organization {
   font-weight: 400;
 }

@@ -68,27 +68,8 @@ a > img:only-child {
   margin-bottom: 20px;
 }
 #section-navigation-sticky-wrapper {
+  max-width: 1200px;
   margin: 0 auto;
-}
-@media only screen {
-  #section-navigation-sticky-wrapper {
-    max-width: none;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #section-navigation-sticky-wrapper {
-    max-width: 768px;
-  }
-}
-@media only screen and (min-width: 980px) {
-  #section-navigation-sticky-wrapper {
-    max-width: 980px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #section-navigation-sticky-wrapper {
-    max-width: 1200px;
-  }
 }
 /* ORDER OF COLUMNS */
 .filter-col {
@@ -361,9 +342,6 @@ a > img:only-child {
   vertical-align: middle;
   float: none;
 }
-#resources-list .card-corner > i {
-  font-size: 1.5em;
-}
 #resources-list .resource-type {
   display: inline-block;
   vertical-align: middle;
@@ -386,27 +364,6 @@ a > img:only-child {
   font-size: 16px;
   line-height: 1.4;
   color: #999999;
-}
-#resources-list .component-gray:hover .card-footer .button {
-  background-color: #999999;
-}
-#resources-list .component-black:hover .card-footer .button {
-  background-color: #333333;
-}
-#resources-list .component-green:hover .card-footer .button {
-  background-color: #68AA00;
-}
-#resources-list .component-red:hover .card-footer .button {
-  background-color: #D9232E;
-}
-#resources-list .component-navy-blue:hover .card-footer .button {
-  background-color: #11566F;
-}
-#resources-list .component-blue:hover .card-footer .button {
-  background-color: #4789A3;
-}
-#resources-list .component-orange:hover .card-footer .button {
-  background-color: #FF9100;
 }
 /* INDIVIDUAL RESOURCE PAGE STYLES */
 #resource-details {
@@ -437,64 +394,19 @@ a > img:only-child {
   white-space: nowrap;
   font-size: 16px;
 }
-#resource-details .resource-company .logo {
-  display: inline-block;
+#resource-details .resource-company > a {
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+#resource-details .resource-company > a .logo {
   max-width: 150px;
   max-height: 24px;
-  margin-left: .5em;
+  margin: 0 0 0 .5em;
 }
 #resource-details .resource-company .publication-organization {
   display: inline-block;
   margin-left: .5em;
   font-weight: 600;
-}
-.white-paper.card .card-corner > i:before {
-  content: "\e82a" !important;
-}
-.white-paper .resource-link .cta-icon:before {
-  content: "\e82b" !important;
-}
-.presentation.card .card-corner > i:before {
-  content: "\e824" !important;
-}
-.presentation .resource-link .cta-icon:before {
-  content: "\e825" !important;
-}
-.brochure.card .card-corner > i:before {
-  content: "\e81e" !important;
-}
-.brochure .resource-link .cta-icon:before {
-  content: "\e81f" !important;
-}
-.video.card .card-corner > i:before {
-  content: "\e827" !important;
-}
-.video .resource-link .cta-icon:before {
-  content: "\e828" !important;
-}
-.tech-guide.card .card-corner > i:before {
-  content: "\e821" !important;
-}
-.tech-guide .resource-link .cta-icon:before {
-  content: "\e822" !important;
-}
-.success-story.card .card-corner > i:before {
-  content: "\e968" !important;
-}
-.success-story .resource-link .cta-icon:before {
-  content: "\e969" !important;
-}
-.webcast.card .card-corner > i:before {
-  content: "\e995" !important;
-}
-.webcast .resource-link .cta-icon:before {
-  content: "\e996" !important;
-}
-.analyst-review.card .card-corner > i:before {
-  content: "\e936" !important;
-}
-.analyst-review .resource-link .cta-icon:before {
-  content: "\e937" !important;
 }
 #resource-details .resource-description,
 #resource-details .resource-description ~ p,

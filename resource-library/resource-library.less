@@ -3,20 +3,7 @@
 
 
 #section-navigation-sticky-wrapper {
-    
-    .loop-media-queries(@i) when (@i > 0) {
-        .loop-media-queries(@i - 1);
-        
-        @query: extract(@queries, @i);
-        @breakpoint: extract(@breakpoints, @i);
-        
-        @media @query {
-            
-            max-width: @breakpoint;
-        }
-    }
-    .loop-media-queries(length(@queries));
-    
+    max-width: @row-width;
     margin: 0 auto;
 }
 
@@ -220,7 +207,6 @@
 
 /* CARD STYLES */
 #resources-list .card-corner {vertical-align:middle; float:none;}
-#resources-list .card-corner > i {font-size:1.5em;}
 #resources-list .resource-type {
   display:inline-block; vertical-align:middle;
   font-family:'myriad-pro-n4', 'myriad-pro', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -244,14 +230,6 @@
     }
 }
 
-#resources-list .component-gray:hover .card-footer .button {background-color:#999999;}
-#resources-list .component-black:hover .card-footer .button {background-color:#333333;}
-#resources-list .component-green:hover .card-footer .button {background-color:#68AA00;}
-#resources-list .component-red:hover .card-footer .button {background-color:#D9232E;}
-#resources-list .component-navy-blue:hover .card-footer .button {background-color:#11566F;}
-#resources-list .component-blue:hover .card-footer .button {background-color:#4789A3;}
-#resources-list .component-orange:hover .card-footer .button {background-color:#FF9100;}
-
 
 /* INDIVIDUAL RESOURCE PAGE STYLES */
 #resource-details {color:#555555;}
@@ -273,10 +251,13 @@
     white-space: nowrap;
     font-size: @resource-company-size;
     
-    .logo {
-        display: inline-block;
-        .max-size(150px, 24px);
-        margin-left: .5em;
+    > a {
+        .display(inline-flex);
+        
+        .logo {
+            .max-size(150px, 24px);
+            margin: 0 0 0 .5em;
+        }
     }
     .publication-organization {
         display: inline-block;
@@ -284,31 +265,6 @@
         font-weight: @bold;
     }
 }
-
-//set icons for each esource type on card, below title on landing page, and in document hover state
-.white-paper.card .card-corner > i:before {content:"\e82a"!important;}
-.white-paper .resource-link .cta-icon:before {content:"\e82b"!important;}
-
-.presentation.card .card-corner > i:before {content:"\e824"!important;}
-.presentation .resource-link .cta-icon:before {content:"\e825"!important;}
-
-.brochure.card .card-corner > i:before {content:"\e81e"!important;}
-.brochure .resource-link .cta-icon:before {content:"\e81f"!important;}
-
-.video.card .card-corner > i:before {content:"\e827"!important;}
-.video .resource-link .cta-icon:before {content:"\e828"!important;}
-
-.tech-guide.card .card-corner > i:before {content:"\e821"!important;}
-.tech-guide .resource-link .cta-icon:before {content:"\e822"!important;}
-
-.success-story.card .card-corner > i:before {content:"\e968"!important;}
-.success-story .resource-link .cta-icon:before {content:"\e969"!important;}
-
-.webcast.card .card-corner > i:before {content:"\e995"!important;}
-.webcast .resource-link .cta-icon:before {content:"\e996"!important;}
-
-.analyst-review.card .card-corner > i:before {content:"\e936"!important;}
-.analyst-review .resource-link .cta-icon:before {content:"\e937"!important;}
 
 #resource-details .resource-description,
 #resource-details .resource-description ~ p,

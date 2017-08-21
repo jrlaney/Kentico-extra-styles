@@ -3,9 +3,14 @@
 
 
 
+#section-navigation-sticky-wrapper {
+    max-width: @row-width;
+    margin: 0 auto;
+}
+
 #press-center {
     
-    #hero.background-image { background-image: url('/Strategy/media/images/common/banners/press.jpg'); }
+    #hero.background-image { background-image: url('/getmedia/cd722862-2349-4c56-85f1-1ce7feb2314c/press'); }
     
     .company-name {
         display: block;
@@ -17,10 +22,16 @@
         max-width: 75%;
         max-height: 125px;
     }
-    .press-center-title {
+    .publication {
+        font-family: @myriad-pro;
+    }
+    .publication-title {
         font-weight: @normal;
     }
-    .news-item-organization {
+    .publication-byline {
+        .uppercase;
+    }
+    .publication-organization {
         font-weight: @normal;
     }
 }
