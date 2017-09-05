@@ -361,3 +361,78 @@ a > img:only-child {
     opacity: 1;
   }
 }
+.logo {
+  margin-bottom: 0px!important;
+}
+.logo.text-logo {
+  width: calc(100% - 20px);
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333333;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2em;
+}
+.logo.text-logo.tiny {
+  font-size: 10px;
+}
+.logo.text-logo.small {
+  font-size: 12px;
+}
+.logo.text-logo.large {
+  font-size: 16px;
+}
+.logo.text-logo.jumbo {
+  font-size: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .logo.text-logo {
+    font-size: 25px;
+  }
+  .logo.text-logo.tiny {
+    font-size: 16px;
+  }
+  .logo.text-logo.small {
+    font-size: 20px;
+  }
+  .logo.text-logo.large {
+    font-size: 30px;
+  }
+  .logo.text-logo.jumbo {
+    font-size: 35px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .logo.text-logo {
+    font-size: 30px;
+  }
+  .logo.text-logo.tiny {
+    font-size: 20px;
+  }
+  .logo.text-logo.small {
+    font-size: 25px;
+  }
+  .logo.text-logo.large {
+    font-size: 35px;
+  }
+  .logo.text-logo.jumbo {
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .logo.text-logo {
+    font-size: 35px;
+  }
+  .logo.text-logo.tiny {
+    font-size: 22px;
+  }
+  .logo.text-logo.small {
+    font-size: 30px;
+  }
+  .logo.text-logo.large {
+    font-size: 40px;
+  }
+  .logo.text-logo.jumbo {
+    font-size: 45px;
+  }
+}
