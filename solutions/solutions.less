@@ -22,7 +22,7 @@
 
 .gridder.cards {
     display: block;
-
+    
     .gridder-list .card {
         cursor: pointer;
 
@@ -37,7 +37,7 @@
     }
     &.hasSelectedItem .gridder-list .card {
         opacity: .5;
-
+        
         &:hover { opacity: 1; }
     }
 }
@@ -59,20 +59,20 @@
 .gridder-navigation {
     .display(inline-flex);
     float: right;
-
+    
     a {
         .flex(1, 1, auto);
         display: block;
         position: relative;
         padding: @gridder-nav-size / 4;
         .transition;
-
+        
         &.gridder-close {
             .shape-x(@gridder-nav-size / 4, @dark-gray);
             .order(1);
         }
         &.gridder-nav {
-
+            
             &:before {
                 content: "\e901";
                 display: block;
@@ -102,7 +102,7 @@
 }
 .gridder-expanded-content {
     font-family: @myriad-pro;
-
+    
     .solution-content {
         .align-self(flex-start);
     }
@@ -122,7 +122,7 @@
         color: @dark-gray;
     }
     .solution-resource {
-
+        
         .resource-thumbnail {
             width: 100%;
         }
@@ -149,14 +149,14 @@
     .translateX(-50%);
     padding: @base-spacing / 2;
     color: @gray;
-
+    
     a {
         display: inline-block;
         padding: 2px 0;
         border-bottom: @thin-border transparent;
         color: @white;
         .transition;
-
+        
         &:hover, &:active {
             border-color: @white;
         }
@@ -169,7 +169,7 @@
 // explore nav
 
 #explore {
-
+    
     .ratio {
         max-height: 300px;
     }
@@ -196,12 +196,12 @@
     @media @large { bottom: @column-gutter + @column-gutter / 2; right: @column-gutter + @column-gutter / 2; }
     z-index: 1;
     .transition(.4s);
-
+    
     &.hidden {
         opacity: 0;
         visibility: hidden;
     }
-
+    
     .label {
         .display(flex);
         .align-items(center);
@@ -219,7 +219,7 @@
         white-space: nowrap;
         color: @white;
     }
-
+    
     &:hover, &:active { .label {
         opacity: 1;
         padding: 1em;
@@ -231,15 +231,15 @@
 // jplist
 
 .filters.option-group {
-
+    
     @checked-color: @navy-blue;
     @checked-triangle-size: 15px;
-
+    
     .option {
         position: relative;
-
+        
         @media @large {
-
+        
             &:after {
                 content: '';
                 display: block;
@@ -254,53 +254,11 @@
             }
             &.checked {
                 background-color: @checked-color;
-
+                    
                 &:after {
                     opacity: 1;
                 }
             }
         }
-    }
-}
-
-//text-based logos
-.logo {
-    margin-bottom:0px!important;
-    &.text-logo {
-        width: ~"calc(100% - 20px)";
-        font-family:@myriad-pro;
-        color:@black;
-        text-align:center;
-        font-weight:600;
-        //background-color:fade(@pure-black, 5%);
-
-        font-size:14px; line-height:1.2em;
-        &.tiny {font-size:10px;}
-        &.small {font-size:12px;}
-        &.large {font-size:16px;}
-        &.jumbo {font-size:20px;}
-
-        @media @medium {
-            font-size:25px;
-            &.tiny {font-size:16px;}
-            &.small {font-size:20px;}
-            &.large {font-size:30px;}
-            &.jumbo {font-size:35px;}
-        }
-        @media @large {
-            font-size:30px;
-            &.tiny {font-size:20px;}
-            &.small {font-size:25px;}
-            &.large {font-size:35px;}
-            &.jumbo {font-size:40px;}
-        }
-        @media @xlarge {
-            font-size:35px;
-            &.tiny {font-size:22px;}
-            &.small {font-size:30px;}
-            &.large {font-size:40px;}
-            &.jumbo {font-size:45px;}
-        }
-
     }
 }
