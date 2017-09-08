@@ -358,12 +358,17 @@
             }
         }
         .form-col {
-            #form-container {
+            #lead-gen-form {
                 margin-top:10px; padding:20px;
                 background-color:@white;
                 .box-shadow(1px 1px 5px fade(@pure-black, 50%));
             }
-            #form-heavyreg .flex-row:first-of-type {display:none;}
+            #form-content .flex-row:first-of-type {display:none;}
+            .button.red {
+                background-color:@black;
+                &:hover {background-color:lighten(@black, 10%);}
+                &:active {background-color:darken(@black, 10%);}
+            }
         }
     }//end hero
 }

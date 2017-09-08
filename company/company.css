@@ -622,14 +622,23 @@
   border-width: 0 0 1px 0;
   padding-left: 25px;
 }
-#contact-us #hero .form-col #form-container {
+#contact-us #hero .form-col #lead-gen-form {
   margin-top: 10px;
   padding: 20px;
   background-color: #FFFFFF;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
-#contact-us #hero .form-col #form-heavyreg .flex-row:first-of-type {
+#contact-us #hero .form-col #form-content .flex-row:first-of-type {
   display: none;
+}
+#contact-us #hero .form-col .button.red {
+  background-color: #333333;
+}
+#contact-us #hero .form-col .button.red:hover {
+  background-color: #4d4d4d;
+}
+#contact-us #hero .form-col .button.red:active {
+  background-color: #1a1a1a;
 }
 .top-banner.press-kit {
   background-image: url(/Strategy/media/images/company/company_hero-bkg_press-kit.jpg);
