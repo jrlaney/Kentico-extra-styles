@@ -71,6 +71,25 @@ a > img:only-child {
   max-width: 1200px;
   margin: 0 auto;
 }
+@media only screen and (min-width: 768px) {
+  #resource-information,
+  #related-resources {
+    padding-left: 79px;
+    padding-right: 79px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .mktoForm .mktoFormRow {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+  .mktoForm .mktoFormCol {
+    -webkit-flex: 1 1 1px;
+    flex: 1 1 1px;
+    max-width: none;
+    width: auto;
+  }
+}
 /* ORDER OF COLUMNS */
 .filter-col {
   -webkit-order: 1;

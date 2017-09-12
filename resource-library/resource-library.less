@@ -7,6 +7,23 @@
     margin: 0 auto;
 }
 
+#resource-information,
+#related-resources {
+  
+  @media @medium { .padding-x(extract(@icon-sizes, 4) + (@column-gutter / 2)); }
+}
+
+@media @medium-only {
+  
+  .mktoForm .mktoFormRow {
+    .flex-direction(row);
+  }
+  .mktoForm .mktoFormCol {
+    .flex(1, 1, 0);
+    width: auto;
+  }
+}
+
 
 
 /* ORDER OF COLUMNS */
