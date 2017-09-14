@@ -156,6 +156,10 @@ ul.triangle-list li {
     margin-bottom: 0;
   }
 }
+.support-quotes .banner {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
 #support-contacts #contact-info .highlight-rows {
   table-layout: auto;
 }
