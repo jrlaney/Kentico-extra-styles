@@ -676,12 +676,15 @@
   top: 0;
   left: 0;
 }
-.careers-banner .image-container .page-rotating-banner {
+.careers-banner .image-container * {
+  height: 100%;
+}
+.careers-banner .image-container .fade-slider {
   position: relative;
   overflow: hidden;
   height: 100%;
 }
-.careers-banner .image-container .page-rotating-banner .banner {
+.careers-banner .image-container .fade-slider .banner {
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
