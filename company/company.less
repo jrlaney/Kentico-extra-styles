@@ -1,5 +1,9 @@
 @import '../settings.less';
 
+.parallax-bkg {
+  .background-cover;
+}
+
 .top-banner.overview {background-image: url(/Strategy/media/images/company/company_hero-bkg_overview.jpg);}
 .text-uppercase {font-family:@myriad-pro; letter-spacing:0.1em; font-weight:400}
 
@@ -141,7 +145,6 @@
     @media @medium { padding-left:104px; padding-right:104px; }
 
     .slick-arrow{
-        top:0; bottom:0;
         padding: @base-spacing;
         opacity:0.5;
         &:hover {opacity:1;}
