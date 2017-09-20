@@ -1,24 +1,6 @@
 @import '../settings.less';
 @import '../overrides.less';
 
-#section-navigation-sticky-wrapper {
-    
-    .loop-media-queries(@i) when (@i > 0) {
-        .loop-media-queries(@i - 1);
-        
-        @query: extract(@queries, @i);
-        @breakpoint: extract(@breakpoints, @i);
-        
-        @media @query {
-            
-            max-width: @breakpoint;
-        }
-    }
-    .loop-media-queries(length(@queries));
-    
-    margin: 0 auto;
-}
-
 #hero.background-image { background-image: url('/getmedia/1fd836d0-96bb-4f6f-ac34-c6784cbec71f/events'); }
 
 .event {
@@ -35,8 +17,15 @@
     .event-date-time {
         font-family: @myriad-pro;
         .uppercase;
+      
+        #symposium & {
+            color: @dark-gray;
+        }
     }
-    .event-venue {
+    .event-location {
+        font-weight: @normal;
+    }
+    .event-date-time {
         font-weight: @bold;
     }
     .event-description {

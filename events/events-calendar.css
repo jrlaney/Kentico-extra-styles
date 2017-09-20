@@ -67,29 +67,6 @@ img:last-child {
 a > img:only-child {
   margin-bottom: 20px;
 }
-#section-navigation-sticky-wrapper {
-  margin: 0 auto;
-}
-@media only screen {
-  #section-navigation-sticky-wrapper {
-    max-width: none;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #section-navigation-sticky-wrapper {
-    max-width: 768px;
-  }
-}
-@media only screen and (min-width: 980px) {
-  #section-navigation-sticky-wrapper {
-    max-width: 980px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #section-navigation-sticky-wrapper {
-    max-width: 1200px;
-  }
-}
 #hero.background-image {
   background-image: url('/getmedia/1fd836d0-96bb-4f6f-ac34-c6784cbec71f/events');
 }
@@ -105,11 +82,18 @@ a > img:only-child {
 }
 .event .event-location,
 .event .event-date-time {
-  font-family: myriad-pro-n3, myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-.event .event-venue {
+#symposium .event .event-location,
+#symposium .event .event-date-time {
+  color: #999999;
+}
+.event .event-location {
+  font-weight: 400;
+}
+.event .event-date-time {
   font-weight: 600;
 }
 .event .event-description {
