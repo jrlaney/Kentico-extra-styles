@@ -93,14 +93,19 @@
 
 
 
-//basic setup for an image going off the page
+
+// basic setup for an image going off the page on the left or right
 .offpage-image {
     width:150%;
     max-width:none;
-    &.pc-laptop {width:180%;}
-    &.left {float:right; @media @large { &.pc-laptop, &.macbook-pro, &.macbook-air {margin-right:-10%;}}}
-    &.right {float:left; @media @large { &.pc-laptop, &.macbook-pro, &.macbook-air {margin-left:-10%;}}}
+    &.left {float:right;}
+    &.right {float:left;}
+    @media @large {
+        &.left {&.pc-laptop, &.macbook-pro, &.macbook-air {margin-right:-10%;}}
+        &.right {&.pc-laptop, &.macbook-pro, &.macbook-air {margin-left:-10%;}}
+    }
 }
+.stacked-mockups {position:relative;}
 
 
 
@@ -309,6 +314,42 @@
 
 
 // page-specific
+
+
+#dossiers {
+    #hero {
+        .hero-screenshots {
+            position:relative;
+            .screenshot- {
+                &center {
+                    position:relative; z-index:1;
+                    max-width:80%;
+                    @media @medium {max-width:700px;}
+                    margin-bottom:0;
+                }
+                &left, &right {
+                    position:absolute; z-index:0;
+                    max-height:80%;
+                    top:50%;
+                    .translateY(-50%); margin-bottom:0;
+                }
+                &left {right:50%;}
+                &right {left:50%;}
+            }
+        }
+    }
+
+    #app-library {
+        .device-mockup {
+            &.macbook-air {position:relative; z-index:0;}
+            &.ipad {
+                position:absolute; z-index:1;
+                width:50%;
+                left:0; bottom:0;
+            }
+        }
+    }
+}
 
 #data-discovery {
 

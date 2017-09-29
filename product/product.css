@@ -77,18 +77,23 @@ a > img:only-child {
 .offpage-image.left {
   float: right;
 }
-.offpage-image.left.pc-laptop,
-.offpage-image.left.macbook-pro,
-.offpage-image.left.macbook-air {
-  margin-right: -10%;
-}
 .offpage-image.right {
   float: left;
 }
-.offpage-image.right.pc-laptop,
-.offpage-image.right.macbook-pro,
-.offpage-image.right.macbook-air {
-  margin-left: -10%;
+@media only screen and (min-width: 980px) {
+  .offpage-image.left.pc-laptop,
+  .offpage-image.left.macbook-pro,
+  .offpage-image.left.macbook-air {
+    margin-right: -10%;
+  }
+  .offpage-image.right.pc-laptop,
+  .offpage-image.right.macbook-pro,
+  .offpage-image.right.macbook-air {
+    margin-left: -10%;
+  }
+}
+.stacked-mockups {
+  position: relative;
 }
 .product #hero.background-image {
   background-image: url('/getmedia/2838b8b1-25b0-43f6-824f-142739031279/two-monitors-wood-desk');
@@ -437,7 +442,7 @@ a > img:only-child {
   opacity: 1;
   padding: 0 16px;
 }
-#whats-new section.view {
+#whats-new:not(.v10-9) section.view {
   padding: 0;
   background-color: #333333;
   color: #FFFFFF;
@@ -458,6 +463,118 @@ a > img:only-child {
 }
 #whats-new .media-col .device-mockup.mac-thunderbolt {
   margin-bottom: -15%;
+}
+#whats-new #hero .scroll-link {
+  position: relative;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.2em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-width: 0 1px 1px 0;
+}
+#whats-new #hero .scroll-link .icon {
+  font-size: 25px;
+}
+#whats-new #hero .scroll-link:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+#whats-new #hero .scroll-link.red:before {
+  background-color: #D9232E;
+}
+#whats-new #hero .scroll-link.orange:before {
+  background-color: #FF9100;
+}
+#whats-new #hero .scroll-link.green:before {
+  background-color: #68AA00;
+}
+#whats-new #hero .scroll-link.blue:before {
+  background-color: #4789A3;
+}
+#whats-new #hero .scroll-link.navy-blue:before {
+  background-color: #11566F;
+}
+#whats-new #hero .scroll-link:hover {
+  padding-left: 20px;
+  padding-right: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#whats-new #hero .scroll-link:hover:before {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+#whats-new #hero .scroll-link:hover.red .icon {
+  color: #D9232E;
+}
+#whats-new #hero .scroll-link:hover.orange .icon {
+  color: #FF9100;
+}
+#whats-new #hero .scroll-link:hover.green .icon {
+  color: #68AA00;
+}
+#whats-new #hero .scroll-link:hover.blue .icon {
+  color: #4789A3;
+}
+#whats-new #hero .scroll-link:hover.navy-blue .icon {
+  color: #11566F;
+}
+#whats-new #dossier .icon-block.white {
+  color: #D9232E;
+}
+#whats-new #dossier .device-mockup {
+  margin-bottom: -40%;
+}
+#whats-new #responsive-design .stacked-mockups {
+  margin-bottom: 40px;
+}
+#whats-new #responsive-design .device-mockup.macbook-pro {
+  position: relative;
+  z-index: 0;
+  margin-left: 15%;
+}
+#whats-new #responsive-design .device-mockup.ipad {
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+  left: 15%;
+  bottom: -10px;
+}
+#whats-new #responsive-design .device-mockup.iphone {
+  position: absolute;
+  z-index: 2;
+  width: 20%;
+  left: 5%;
+  bottom: -20px;
+}
+#whats-new #data-asset-improvements .compact {
+  margin-left: -7.5px;
+}
+#whats-new #data-asset-improvements .ratio {
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+@media only screen and (min-width: 768px) {
+  #whats-new #hierarchy-reporting .report-image {
+    margin-bottom: -30%;
+    width: 90%;
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 #whats-new #aws .media-col .resource-thumbnail {
   margin: 0 auto -15% auto;
