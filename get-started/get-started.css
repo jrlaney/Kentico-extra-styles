@@ -76,10 +76,10 @@ a > img:only-child {
   color: #FFFFFF;
 }
 .free-trial #hero.background-image {
-  background-image: url('/Strategy/media/images/products/analytics/2015/free-trial_top-banner-bkg.jpg');
+  background-image: url('/getmedia/0c8e9c03-65f0-4169-aac4-c3a2f83092e5/laptop-on-desk-side-view');
 }
 #desktop.free-trial #hero.background-image {
-  background-image: url('/Strategy/media/images/common/banners/desktop.jpg');
+  background-image: url('/getmedia/97a4b0f1-a811-45f4-b556-272f87f183ed/desktop');
 }
 #desktop #hero #lead-gen-form {
   background-color: rgba(0, 0, 0, 0.7);
@@ -94,7 +94,7 @@ a > img:only-child {
   column-gap: 30px;
 }
 .eval-page-banner {
-  background-image: url('/Strategy/media/images/products/analytics/2015/analytics_eval-edition-hero-bkg.jpg');
+  background-image: url('/getmedia/a1255576-f845-4c85-bc23-973fdac30dbb/multiple-devices-on-desk-top-view');
 }
 .eval-page-banner .text-col {
   color: #ffffff;
@@ -240,7 +240,7 @@ ul.triangle-list.navy-blue > li:before {
 =      Main styles are for smallest screen size - larger sizes are specified in media queries          =
 ==========================================================================*/
 #free-trial-select {
-  background-image: url(/Strategy/media/images/free-trial/get-started_overview_hero-bkg.jpg);
+  background-image: url(/getmedia/0c8e9c03-65f0-4169-aac4-c3a2f83092e5/laptop-on-desk-side-view);
 }
 #free-trial-select .card {
   background-color: rgba(51, 51, 51, 0.5);
@@ -431,7 +431,7 @@ ul.triangle-list.navy-blue > li:before {
   display: block;
   position: relative;
   overflow: hidden;
-  background: url(/Strategy/media/images/free-trial/desktop-trial_top-banner-bkg.jpg) no-repeat center center #333333;
+  background: url(/getmedia/0c8e9c03-65f0-4169-aac4-c3a2f83092e5/laptop-on-desk-side-view) no-repeat center center #333333;
   background-size: cover;
   padding-bottom: 0px;
   padding-top: 0px;
