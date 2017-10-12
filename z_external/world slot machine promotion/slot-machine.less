@@ -165,6 +165,13 @@
             background-color:@red;
         }
     }
+    //static mode for prizes
+    &.static .body .numbers-wrapper .number .num-object {
+        .animation(none);
+        bottom:auto; top:50%;
+        .translateY(-50%);
+        .slot-icon:last-child {margin-bottom:0;}
+    }
 }
 //line decoration element
 @line-dec-spacer: 12px;
