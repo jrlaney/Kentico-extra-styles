@@ -1,5 +1,12 @@
 @import '../../settings.less';
 
+
+.animation-duration(@duration) {
+    -webkit-animation-duration: @duration;
+    -moz-animation-duration: @duration;
+    animation-duration: @duration;
+}
+
 //woobox overrides
 #slot-machine {
     .input-group label {
@@ -167,9 +174,14 @@
     }
     //static mode for prizes
     &.static .body .numbers-wrapper .number .num-object {
-        .animation(none);
         bottom:auto; top:50%;
         .translateY(-50%);
+        .slot-icon:last-child {margin-bottom:0;}
+    }
+    //animate to stop mode for prizes
+    &.animated-stop .body .numbers-wrapper .number .num-object {
+        bottom:auto; top:50%;
+        .translateY(0);
         .slot-icon:last-child {margin-bottom:0;}
     }
 }
@@ -234,6 +246,8 @@
 
 //rolling number animation
 @slot-speed: 1.5s;
+@stop-slot-speed: 1s;
+@ease-out-pop: cubic-bezier(.85,.85,.84,1.12);
 .number {
     .num-object {
         z-index:1;
@@ -249,13 +263,29 @@
         &:nth-child(2) {.animation-delay(@slot-speed / 2 + 0.4);}
     }
 }
+.slot-machine-graphic {
+    //static version
+    &.static .number {
+        .num-object {.animation(none);}
+    }
+    &.animated-stop .number {
+        .num-object {.animation(slot-stop @stop-slot-speed @ease-out-pop 0s 1 normal forwards);}
+        &:nth-child(2) .num-object {.animation-duration(@stop-slot-speed*2);}
+        &:nth-child(3) .num-object {.animation-duration(@stop-slot-speed*3);}
+    }
+}
 .keyframes(slot-roll;{
     0%{.translateY(-100%);}
     100%{.translateY(100%);}
 });
+.keyframes(slot-stop;{
+    0%{.translateY(-100%);}
+    100%{.translateY(-50%);}
+});
 
 //border lights animation
-@neon-speed: 5s;
+@neon-speed: 3s;
+@blink-speed: 0.25s;
 .slot-machine-graphic {
     .logo-wrapper:before,
     .logo-wrapper:after,
@@ -264,6 +294,26 @@
     .logo-wrapper:after {.animation-delay(0.4s);}
     .more-borders:before {.animation-delay(0.6s);}
     .more-borders:after {.animation-delay(0.8s);}
+
+    &.animated-stop.win {
+        .logo-wrapper:before,
+        .logo-wrapper:after,
+        .more-borders:before,
+        .more-borders:after {opacity:0.2; .animation(neon-blink @blink-speed linear 2.8s infinite alternate forwards);}
+        .logo-wrapper:after {.animation-delay(3s);}
+        .more-borders:before {.animation-delay(2.8s);}
+        .more-borders:after {.animation-delay(3s);}
+    }
+
+    &.animated-stop.lose {
+        .logo-wrapper:before,
+        .logo-wrapper:after,
+        .more-borders:before,
+        .more-borders:after {opacity:0.2; .animation(neon-blink-lose @blink-speed*2 linear 2.8s 1 normal forwards);}
+        .logo-wrapper:after {.animation-delay(2.9s);}
+        .more-borders:before {.animation-delay(3s);}
+        .more-borders:after {.animation-delay(3.1s);}
+    }
 }
 .keyframes(neon-glow;{
     0%{opacity:0.2;}
@@ -271,4 +321,12 @@
     83%{opacity:1;}
     90%{opacity:0.2;}
     100%{opacity:0.2;}
+});
+.keyframes(neon-blink;{
+    0%{opacity:0.2;}
+    100%{opacity:1;}
+});
+.keyframes(neon-blink-lose;{
+    0%{opacity:0.2; border-color:@gray;}
+    100%{opacity:0.7; border-color:@gray;}
 });
