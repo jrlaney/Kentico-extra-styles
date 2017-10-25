@@ -179,10 +179,24 @@
         .slot-icon:last-child {margin-bottom:0;}
     }
     //animate to stop mode for prizes
-    &.animated-stop .body .numbers-wrapper .number .num-object {
-        bottom:auto; top:50%;
-        .translateY(0);
-        .slot-icon:last-child {margin-bottom:0;}
+    &.animated-stop {
+        .body .numbers-wrapper .number .num-object {
+            bottom:auto; top:50%;
+            .translateY(0);
+            .slot-icon:last-child {margin-bottom:0;}
+        }
+        //handle the display for different win states
+        .slot-icon.spin-end {display:none;}
+        &.lose {
+            .number:nth-child(1) .num-object .slot-icon.spin-end.mstr {display:block;}
+            .number:nth-child(2) .num-object .slot-icon.spin-end.gift-card {display:block;}
+            .number:nth-child(3) .num-object .slot-icon.spin-end.swag-bag {display:block;}
+        }
+        &.win.free-pass .slot-icon.spin-end.mstr {display:block;}
+        &.win.tickets .slot-icon.spin-end.tickets {display:block;}
+        &.win.gift-card .slot-icon.spin-end.gift-card {display:block;}
+        &.win.swag-bag .slot-icon.spin-end.swag-bag {display:block;}
+        &.win.discount .slot-icon.spin-end.discount {display:block;}
     }
 }
 //line decoration element

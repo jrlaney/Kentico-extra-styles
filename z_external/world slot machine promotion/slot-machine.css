@@ -292,6 +292,33 @@
 .slot-machine-graphic.animated-stop .body .numbers-wrapper .number .num-object .slot-icon:last-child {
   margin-bottom: 0;
 }
+.slot-machine-graphic.animated-stop .slot-icon.spin-end {
+  display: none;
+}
+.slot-machine-graphic.animated-stop.lose .number:nth-child(1) .num-object .slot-icon.spin-end.mstr {
+  display: block;
+}
+.slot-machine-graphic.animated-stop.lose .number:nth-child(2) .num-object .slot-icon.spin-end.gift-card {
+  display: block;
+}
+.slot-machine-graphic.animated-stop.lose .number:nth-child(3) .num-object .slot-icon.spin-end.swag-bag {
+  display: block;
+}
+.slot-machine-graphic.animated-stop.win.free-pass .slot-icon.spin-end.mstr {
+  display: block;
+}
+.slot-machine-graphic.animated-stop.win.tickets .slot-icon.spin-end.tickets {
+  display: block;
+}
+.slot-machine-graphic.animated-stop.win.gift-card .slot-icon.spin-end.gift-card {
+  display: block;
+}
+.slot-machine-graphic.animated-stop.win.swag-bag .slot-icon.spin-end.swag-bag {
+  display: block;
+}
+.slot-machine-graphic.animated-stop.win.discount .slot-icon.spin-end.discount {
+  display: block;
+}
 .line-decoration {
   width: 300px;
   top: 50%;
