@@ -188,6 +188,10 @@ a > img:only-child {
   font-size: 36px;
   line-height: 1.2;
 }
+.education.list.page .gridder-expanded-content .certification-badge {
+  width: 150px;
+  height: 150px;
+}
 .education.list.page .gridder-expanded-content .certification-description {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -275,8 +279,7 @@ a > img:only-child {
   align-items: center;
   margin-bottom: 0;
 }
-.education.course.page #course-prerequisites .course-panel-subtitle,
-.education.course.page #course-prerequisites .course-detail-list li {
+.education.course.page .course-detail .course-prerequisite {
   white-space: nowrap;
 }
 .education.course.page #no-classes {
