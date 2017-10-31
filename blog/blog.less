@@ -14,13 +14,10 @@
 
     &.archive {
 
-        .archive-title {
-
-            .tag-name, .search-query, .author-name {
-                font-weight: @bold;
-                font-style: italic;
-                color: @red;
-            }
+        .query {
+          font-weight: @bold;
+          font-style: italic;
+          color: @red;
         }
 
         .post {
@@ -176,35 +173,35 @@
             .display(flex);
             @media @medium { .justify-content(center); }
             .align-items(center);
+          
+          &:hover {
+            .author-photo, .author-name { border-color: @white; }
+          }
         }
         .author-photo {
-            margin: 0 (@column-gutter / 2) 0 0;
+            margin: 0;
             .size(40px);
             border: @medium-border @gray;
             .transition;
-
-            &:hover, &:active { border-color: @white; }
-        }
-        .author-byline {
-            letter-spacing: .02em;
-            color: @gray;
         }
         .author-name {
             display: inline-block;
             .padding-y(2px);
             border-bottom: @thin-border transparent;
+            font-size: 18px;
             font-weight: @normal;
             color: @white;
             .transition;
-
-            &:hover, &:active { border-color: @white; }
         }
         .post-date {
             font-size: 14px;
             .uppercase;
             color: @gray;
         }
-
+        
+      #featured-posts:not(.slick-initialized) {
+        opacity: 0;
+      }
         .featured-post {
             .display(flex);
             .align-items(center);

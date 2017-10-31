@@ -72,9 +72,7 @@ a > img:only-child {
   object-fit: cover;
   border-radius: 50%;
 }
-.blog.archive .archive-title .tag-name,
-.blog.archive .archive-title .search-query,
-.blog.archive .archive-title .author-name {
+.blog.archive .query {
   font-weight: 600;
   font-style: italic;
   color: #D9232E;
@@ -223,41 +221,37 @@ a > img:only-child {
     justify-content: center;
   }
 }
+.blog #hero .post-author:hover .author-photo,
+.blog #hero .post-author:hover .author-name {
+  border-color: #FFFFFF;
+}
 .blog #hero .author-photo {
-  margin: 0 15px 0 0;
+  margin: 0;
   width: 40px;
   height: 40px;
   border: 2px solid #CCCCCC;
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
 }
-.blog #hero .author-photo:hover,
-.blog #hero .author-photo:active {
-  border-color: #FFFFFF;
-}
-.blog #hero .author-byline {
-  letter-spacing: .02em;
-  color: #CCCCCC;
-}
 .blog #hero .author-name {
   display: inline-block;
   padding-top: 2px;
   padding-bottom: 2px;
   border-bottom: 1px solid transparent;
+  font-size: 18px;
   font-weight: 400;
   color: #FFFFFF;
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
-}
-.blog #hero .author-name:hover,
-.blog #hero .author-name:active {
-  border-color: #FFFFFF;
 }
 .blog #hero .post-date {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #CCCCCC;
+}
+.blog #hero #featured-posts:not(.slick-initialized) {
+  opacity: 0;
 }
 .blog #hero .featured-post {
   display: -webkit-flex;
