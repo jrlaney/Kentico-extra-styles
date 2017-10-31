@@ -89,12 +89,17 @@ a > img:only-child {
 #academics-overview #hero.background-image {
   background-image: url('/getmedia/fe9ad21a-1f9a-4682-89ff-56fadff6a3ed/higher-education');
 }
-.webcast-title {
+.dashboard.card {
+  border: 0;
+}
+.webcast-title,
+.dashboard-title {
   font-size: 24px;
   line-height: 1.4;
   font-weight: 400;
 }
-.webcast-description {
+.webcast-description,
+.dashboard-description {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.4;
