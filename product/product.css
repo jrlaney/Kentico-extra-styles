@@ -539,6 +539,21 @@ a > img:only-child {
 #whats-new #dossier .device-mockup {
   margin-bottom: -40%;
 }
+#whats-new #collaboration .stacked-mockups {
+  margin-bottom: 40px;
+}
+#whats-new #collaboration .device-mockup.macbook-pro {
+  position: relative;
+  z-index: 0;
+  margin-right: 15%;
+}
+#whats-new #collaboration .device-mockup.ipad {
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+  right: 5%;
+  bottom: -20px;
+}
 #whats-new #responsive-design .stacked-mockups {
   margin-bottom: 40px;
 }
