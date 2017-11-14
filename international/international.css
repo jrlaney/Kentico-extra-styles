@@ -385,3 +385,70 @@ a.card {
 .card .card-footer.padded {
   padding: 0 30px 30px !important;
 }
+.full-width-button {
+  display: block;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-size: 100% 100%;
+  text-align: center;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+.full-width-button .inner {
+  display: inline-block;
+  max-width: 700px;
+  position: relative;
+  padding-right: 80px;
+  text-align: left;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+.full-width-button .inner:before {
+  content: "\e901";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: microstrategy;
+  font-size: 32px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  opacity: .5;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+.full-width-button:hover {
+  background-size: 150% 400%;
+}
+.full-width-button:hover .inner {
+  padding-right: 85px;
+}
+.full-width-button:hover .inner:before {
+  right: 0;
+  opacity: 1;
+}
+@media only screen and (max-width: 767px) {
+  .full-width-button .inner {
+    padding-right: 40px;
+  }
+  .full-width-button .inner:before {
+    top: 20px;
+    right: -5px;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .full-width-button:hover .inner {
+    padding-right: 40px;
+  }
+  .full-width-button:hover .inner:before {
+    right: -10px;
+  }
+}

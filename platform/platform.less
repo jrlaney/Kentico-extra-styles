@@ -1912,3 +1912,64 @@ padding-left:20px; padding-right:20px;
   .price-chart-wrapper .product {min-height:180px;}
   .price-chart-wrapper .features {min-height:160px;}
 }
+
+
+
+.full-width-button {
+	display: block;
+    .padding-x(@column-gutter / 2);
+    background-size: 100% 100%;
+    text-align: center;
+	.transition;
+
+	.inner {
+		display: inline-block;
+        max-width: 700px;
+		position: relative;
+        padding-right: 80px;
+        text-align: left;
+		.transition;
+
+		&:before {
+            content: "\e901";
+            .position(absolute, 50%, @right:10px);
+            .translateY(-50%);
+			font-family: @icon-font-name;
+			font-size: 32px;
+			.pretty-icon;
+			opacity: .5;
+			.transition;
+		}
+	}
+
+	&:hover {
+        background-size: 150% 400%;
+
+		.inner {
+			padding-right: 85px;
+
+			&:before {
+                right: 0;
+                opacity: 1;
+            }
+        }
+	}
+    @media @small-only {
+
+        .inner {
+            padding-right: 40px;
+
+            &:before {
+                top: 20px;
+                right: -5px;
+                .translateY(0);
+                opacity: 1;
+            }
+        }
+		&:hover .inner {
+            padding-right: 40px;
+
+            &:before { right: -10px; }
+        }
+    }
+}
