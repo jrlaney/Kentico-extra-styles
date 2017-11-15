@@ -1225,7 +1225,7 @@ h6.icon-header {
 .gridder.light-blue .component-card:before {
   background: #4789a3;
 }
-.gridder.dark-blue .component-card:before {
+.gridder.navy .component-card:before {
   background: #11566f;
 }
 .gridder .component-card .title {
@@ -1275,12 +1275,12 @@ h6.icon-header {
   background: -webkit-linear-gradient(top, rgba(71, 137, 163, 0) 0%, #4789a3 100%);
   background: linear-gradient(to bottom, rgba(71, 137, 163, 0) 0%, #4789a3 100%);
 }
-.gridder.dark-blue .component-card .sub:after {
+.gridder.navy .component-card .sub:after {
   background: -moz-linear-gradient(top, rgba(17, 86, 111, 0) 0%, #11566f 100%);
   background: -webkit-linear-gradient(top, rgba(17, 86, 111, 0) 0%, #11566f 100%);
   background: linear-gradient(to bottom, rgba(17, 86, 111, 0) 0%, #11566f 100%);
 }
-.gridder .component-card .cta-button.tiny.arrow.learn-more-link {
+.gridder .component-card .button.tiny.arrow.learn-more-link {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1293,7 +1293,7 @@ h6.icon-header {
   padding-right: 15px;
   white-space: nowrap;
 }
-.gridder .component-card:hover .cta-button.tiny.arrow.learn-more-link {
+.gridder .component-card:hover .button.tiny.arrow.learn-more-link {
   padding-right: 40px;
 }
 .gridder .gridder-show {
@@ -1533,7 +1533,7 @@ h6.icon-header {
   -ms-transition: opacity 0.2s ease-out 0.2s;
   transition: opacity 0.2s ease-out 0.2s;
 }
-.gridder .component-card .cta-button.tiny.arrow.learn-more-link:before {
+.gridder .component-card .button.tiny.arrow.learn-more-link:before {
   right: 20px;
   opacity: 0;
   -webkit-transition: all 0.2s ease-out 0s;
@@ -1541,7 +1541,7 @@ h6.icon-header {
   -ms-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
 }
-.gridder .component-card:hover .cta-button.tiny.arrow.learn-more-link:before {
+.gridder .component-card:hover .button.tiny.arrow.learn-more-link:before {
   right: 15px;
   opacity: 1;
   -moz-transition: all 0.2s ease-out 0.2s;
