@@ -304,27 +304,3 @@
 
     }
 }
-
-.img {
-	display: block;
-    position: relative;
-    overflow: hidden;
-	.background-cover;
-
-    &:before {
-        content: '';
-        display: block;
-        position: relative;
-        padding-bottom: 100%;
-    }
-	&.ratio2-1:before { padding-bottom: 50%; }
-	&.ratio4-3:before { padding-bottom: 75%; }
-}
-.img-content {
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    .translateY(-50%);
-    z-index: 2;
-}
