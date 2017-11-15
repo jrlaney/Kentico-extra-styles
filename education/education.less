@@ -1,5 +1,5 @@
-@import '../../settings.less';
-@import '../../overrides.less';
+@import '../settings.less';
+@import '../overrides.less';
 
 
 
@@ -16,7 +16,7 @@
 // get-started
 
 #get-started {
-  
+
   .flex.column .button {
     margin-top: auto;
   }
@@ -32,7 +32,7 @@
 .most-popular {
   position: relative;
   overflow: hidden;
-  
+
   &:before {
     content: "Most Popular";
     display: block;
@@ -55,9 +55,9 @@
 // education overview page
 
 .education.overview #hero {
-    
+
     @media @small-only { padding-bottom: 80px; }
-  
+
     .hero-block {
         padding: 30px;
         @media @medium { padding: 40px; }
@@ -66,9 +66,11 @@
 }
 
 #testimonials-slider {
-  
+
   .testimonial {
     .flex-direction(column);
+    > * { max-width: 100%; }
+
     padding: @column-gutter;
 
     .logo {
@@ -81,22 +83,22 @@
 }
 
 #delivery-options {
-  
+
   .macbook-air {
     width: 85%;
     margin: -25% auto 0 auto;
   }
-  
+
   #environment-slider .image-slide {
     border: @thick-border @gray;
   }
-  
+
   .content-slide {
     .flex-direction(column);
     .align-items(flex-start);
     padding: @column-gutter;
     cursor: default;
-    
+
     &:not(.slick-current) {
       opacity: .5;
     }
@@ -104,13 +106,13 @@
 }
 
 #payment-options {
-  
+
   .payment-option {
     padding: @column-gutter / 2;
     @media @medium { padding: @column-gutter; }
     background-color: @white;
     border: @thin-border @gray;
-    
+
     &.most-popular {
       box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
     }
@@ -143,9 +145,9 @@
     color: @dark-gray;
 }
 .education.list.page {
-    
+
     .certification.card {
-        
+
         .certification-title {
             color: @black;
         }
@@ -154,7 +156,7 @@
         }
     }
     .gridder-expanded-content {
-        
+
         .certification-title {
             font-size: 36px;
             line-height: 1.2;
@@ -171,13 +173,13 @@
         }
         .certification-badge {
             display: inline-block;
-            
+
             @media @medium {
                 margin: 0 @column-gutter 0 0;
             }
         }
         .certification-details {
-            
+
             @media @medium {
                 .display(flex);
                 .align-items(center);
@@ -192,7 +194,7 @@
 
 .education.course.page {
     font-family: @myriad-pro;
-    
+
     .course-title {
         font-size: 30px;
         @media @medium { font-size: 32px; }
@@ -211,7 +213,7 @@
         background-color: @light-gray;
         font-size: 15px;
         line-height: 1.4;
-        
+
         .course-panel-title {
             font-weight: @normal;
         }
@@ -228,16 +230,16 @@
     .course-agenda a {
         .uppercase;
     }
-    
+
     // course details
     .course-detail {
-        
+
         .course-panel-subtitle {
             margin-bottom: 0;
         }
         .course-detail-list {
             .no-list-style;
-            
+
             > li {
                 .display(flex);
                 .align-items(center);
@@ -248,12 +250,12 @@
             white-space: nowrap;
         }
     }
-    
+
     // course classes
     #no-classes {
         text-align: center;
     }
-    
+
     // course instructors
     .instructor-photo {
         .object-fit(cover);
@@ -275,7 +277,7 @@
         font-weight: @light;
     }
     #course-classes {
-        
+
         .instructor {
             .display(inline-flex);
             .align-items(center);
@@ -287,7 +289,7 @@
         }
     }
     #instructors-slider {
-        
+
         .instructor {
             .flex-direction(column);
             padding: @column-gutter / 2;
@@ -340,7 +342,7 @@
 
 
 .gridder {
-  
+
     &.hasSelectedItem {
         display: block;
         font-size: 0;
@@ -359,7 +361,7 @@
     }
     &.hasSelectedItem .gridder-list .card {
         opacity: .5;
-        
+
         &:hover { opacity: 1; }
     }
 }
@@ -382,20 +384,20 @@
 .gridder-navigation {
     .display(inline-flex);
     float: right;
-    
+
     a {
         .flex(1, 1, auto);
         display: block;
         position: relative;
         padding: @gridder-nav-size / 4;
         .transition;
-        
+
         &.gridder-close {
             .shape-x(@gridder-nav-size / 4, @dark-gray);
             .order(1);
         }
         &.gridder-nav {
-            
+
             &:before {
                 content: "\e901";
                 display: block;

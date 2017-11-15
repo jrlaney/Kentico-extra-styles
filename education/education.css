@@ -119,6 +119,9 @@ a > img:only-child {
   flex-direction: column;
   padding: 30px;
 }
+#testimonials-slider .testimonial > * {
+  max-width: 100%;
+}
 #testimonials-slider .testimonial .logo {
   max-width: 250px;
   max-height: 100px;
