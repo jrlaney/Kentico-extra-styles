@@ -155,7 +155,10 @@ h1.icon-header, h2.icon-header, h3.icon-header, h4.icon-header, h5.icon-header, 
     -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.platform-page-selector .platform-select-button .icon {
+.platform-page-selector .platform-select-button > .icon {
+  font-size: 40px;
+}
+.platform-page-selector .platform-select-button .icon > .icon {
   display:block;
   margin:0 auto 15px auto; padding:14px;
   height:70px; width:70px;
@@ -199,21 +202,21 @@ h1.icon-header, h2.icon-header, h3.icon-header, h4.icon-header, h5.icon-header, 
 .platform-page-selector .platform-select-button.overview .arrow {max-width:10%;}
 
 .platform-page-selector .platform-select-button.repository .learn-more-link,
-.platform-page-selector .platform-select-button.repository .icon {background-color:#d9232e;}
+.platform-page-selector .platform-select-button.repository .icon > .icon {background-color:#d9232e;}
 .platform-page-selector .platform-select-button.repository .learn-more-link:hover {background-color:#f32532;}
 
 .platform-page-selector .platform-select-button.tools .learn-more-link,
-.platform-page-selector .platform-select-button.tools .icon {background-color:#ff9100;}
+.platform-page-selector .platform-select-button.tools .icon > .icon {background-color:#ff9100;}
 .platform-page-selector .platform-select-button.tools .learn-more-link:hover {background-color:#FFA733;}
 
 .platform-page-selector .platform-select-button.services .learn-more-link,
-.platform-page-selector .platform-select-button.services .icon {background-color:#4789a3;}
+.platform-page-selector .platform-select-button.services .icon > .icon {background-color:#4789a3;}
 .platform-page-selector .platform-select-button.services .learn-more-link:hover {background-color:#5EA1BB;}
 
 .platform-page-selector .platform-select-button.assets .learn-more-link,
 .platform-page-selector .platform-select-button.clients .learn-more-link,
-.platform-page-selector .platform-select-button.assets .icon,
-.platform-page-selector .platform-select-button.clients .icon {background-color:#11566f;}
+.platform-page-selector .platform-select-button.assets .icon > .icon,
+.platform-page-selector .platform-select-button.clients .icon > .icon {background-color:#11566f;}
 .platform-page-selector .platform-select-button.assets .learn-more-link:hover,
 .platform-page-selector .platform-select-button.clients .learn-more-link:hover {background-color:#1E6C88;}
 
@@ -288,7 +291,7 @@ h1.icon-header, h2.icon-header, h3.icon-header, h4.icon-header, h5.icon-header, 
 
 /*for the full-width next feature button*/
 .full-width-button.next-feature {padding:40px 0;}
-.full-width-button.next-feature .icon {display:block; color:#ffffff; margin-bottom:20px; margin-top:20px; font-size:3em;}
+.full-width-button.next-feature .icon > .icon {display:block; color:#ffffff; margin-bottom:20px; margin-top:20px; font-size:3em;}
 .full-width-button.next-feature .page-title {
   display:block;
   margin:0; padding:0;
@@ -1548,11 +1551,11 @@ padding-left:20px; padding-right:20px;
   .platform-page-selector .platform-select-button .title {font-size:30px; line-height:32px;}
   .platform-page-selector .platform-select-button.overview {padding:20px; height:auto;}
 
-  .platform-page-selector .platform-select-button.repository:hover .icon {color:#d9232e;}
-  .platform-page-selector .platform-select-button.tools:hover .icon {color:#ff9100;}
-  .platform-page-selector .platform-select-button.services:hover .icon {color:#4789a3;}
-  .platform-page-selector .platform-select-button.assets:hover .icon,
-  .platform-page-selector .platform-select-button.clients:hover .icon {color:#11566f;}
+  .platform-page-selector .platform-select-button.repository:hover .icon > .icon {color:#d9232e;}
+  .platform-page-selector .platform-select-button.tools:hover .icon > .icon {color:#ff9100;}
+  .platform-page-selector .platform-select-button.services:hover .icon > .icon {color:#4789a3;}
+  .platform-page-selector .platform-select-button.assets:hover .icon > .icon,
+  .platform-page-selector .platform-select-button.clients:hover .icon > .icon {color:#11566f;}
 
   /*animations*/
   .platform-page-selector .platform-select-button {
@@ -1569,14 +1572,14 @@ padding-left:20px; padding-right:20px;
     color:#333333;
     padding-top:30px;
   }
-  .platform-page-selector .platform-select-button .icon {
+  .platform-page-selector .platform-select-button .icon > .icon {
     padding:20px; font-size:1.2em; height:90px; width:90px;
       -webkit-transition: all 0.4s ease-out;
       -moz-transition: all 0.4s ease-out;
       -ms-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;
   }
-  .platform-page-selector .platform-select-button:hover .icon {
+  .platform-page-selector .platform-select-button:hover .icon > .icon {
     background-color:rgba(255, 255, 255, 0);
     padding:0; margin-bottom:0;
     font-size:1.9em;
