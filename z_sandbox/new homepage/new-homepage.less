@@ -1,0 +1,185 @@
+@import '../../settings.less';
+
+//ICON PLUS CTA TEXT COMBO IN HERO BANNER. MAYBE FOR GLOBAL LATER?
+.icon-cta {
+	display:inline-block;
+	text-align:center;
+	vertical-align:top;
+	padding:@base-spacing;
+	color:@black;
+	.box-shadow(1px 1px 5px fade(@pure-black, 0%));
+	.transition;
+	.icon {
+		color:@red;
+		font-size:50px;
+		@media @large {font-size:75px;}
+	}
+	.cta-text {
+		display:block;
+		font-family:@myriad-pro;
+		font-size:14px; line-height:1em;
+		font-weight:400;
+		.uppercase;
+		margin-top:15px;
+	}
+	@media @medium {
+		padding:@base-spacing @base-spacing * 1.5;
+		margin-right:@base-spacing;
+		&:last-child {margin-right:0;}
+		&:hover {
+			color:@red;
+		}
+	}
+	@media @large {padding:@base-spacing @base-spacing * 2;}
+	&.white {
+		color:@white;
+		.box-shadow(1px 1px 5px fade(@pure-black, 0%));
+		.icon {color:@white;}
+		&:hover {color:@white; background-color:fade(@red, 50%); .box-shadow(1px 1px 5px fade(@pure-black, 50%));}
+	}
+}
+
+.background-fixed {
+	background-attachment:fixed;
+	.ipad &, .iphone &, .android & {background-attachment: scroll;}
+}
+
+
+
+@custom-bez: cubic-bezier(.74,.01,.68,1.24);
+
+//HERO BANNER STYLES
+#hero {
+	overflow:hidden;
+	//background-image: url(/getmedia/2838b8b1-25b0-43f6-824f-142739031279/two-monitors-wood-desk);
+	@media @medium {.icon-cta {max-width:~"calc(33.3% - 24px)";}}
+
+	//animations after loading
+	.title        {opacity:0; .animation(fade-slide-down 0.5s ease-out 0.7s normal forwards);}
+	.line         {opacity:0; .animation(fade-slide-down 0.5s ease-out 0.8s normal forwards);}
+	.subtitle     {opacity:0; .animation(fade-slide-down 0.5s ease-out 0.9s normal forwards);}
+	.button       {opacity:0; .animation(fade-slide-down 0.5s ease-out 1s normal forwards);}
+
+	.device-row   {opacity:0; .animation(fade-slide-up 0.7s @custom-bez 1.4s normal forwards);}
+	//.icon-cta {  opacity:0; .animation(fade-slide-up 0.5s ease-out 1.2s normal forwards);}
+
+	> .flex-row {position:relative; z-index:2;}
+
+	.banner-background {
+		position:absolute; z-index:0;
+		top:0; left:0;
+		height:100%; width:100%;
+
+		opacity:0; .transition(0.5s, ease-out, all, 0.5s);
+		&.first  {background-image: url(/getmedia/94699cb7-2d93-4178-bdea-0e76f188e4ee/airport);}
+		&.second {background-image: url(/getmedia/883b5bde-1caa-423c-8cdd-e14cab6bd2db/storefront);}
+		&.third  {background-image: url(/getmedia/418d0ff9-8db3-4784-87f1-38ab20f9f5b2/559537341);}
+	}
+
+	.device-row {
+		position:relative; height:250px;
+		margin-top:30px;
+		.device-mockup {
+			position:absolute; z-index:3;
+			top:0; left:50%;
+			opacity:0; .translate(-50% , 20px);
+			.transition(0.3s, ease-out, all, 0s);
+		}
+		.macbook-pro {width:85%; }
+		.ipad {width:70%;}
+		.iphone {width:30%;}
+	}
+
+	//animations for the screenshots
+	&.first {
+		.banner-background.first {
+			opacity:1; z-index:1;
+			.transition(0.5s, ease-out, opacity, 0s);
+		}
+		.device-row .device-mockup.first {
+			opacity:1; z-index:1; .translate(-50%, 0);
+			.transition-open(~"opacity 0.3s ease-out 0.3s, transform 0.3s @{custom-bez} 0.3s");
+		}
+	}
+	&.second {
+		.banner-background.second {
+			opacity:1; z-index:1;
+			.transition(0.5s, ease-out, opacity, 0s);
+		}
+		.device-row .device-mockup.second {
+			opacity:1; z-index:1; .translate(-50%, 0);
+			.transition-open(~"opacity 0.3s ease-out 0.3s, transform 0.3s @{custom-bez} 0.3s");
+		}
+	}
+	&.third {
+		.banner-background.third {
+			opacity:1; z-index:1;
+			.transition(0.5s, ease-out, opacity, 0s);
+		}
+		.device-row .device-mockup.third {
+			opacity:1; z-index:1; .translate(-50%, 0);
+			.transition-open(~"opacity 0.3s ease-out 0.3s, transform 0.3s @{custom-bez} 0.3s");
+		}
+	}
+}
+.keyframes(fade-slide-up;{
+    0%{opacity:0; .translateY(20%);}
+    100%{opacity:1; .translateY(0);}
+});
+.keyframes(fade-slide-down;{
+    0%{opacity:0; .translateY(-20%);}
+    100%{opacity:1; .translateY(0);}
+});
+
+
+
+
+#whats-new {
+	.slick-arrow {
+	    top: 50%;
+	    .translateY(-50%);
+	}
+	.slick-slide {
+		.align-items(stretch);
+	}
+	.cards .card {
+		border:none;
+
+		@media @large {
+
+            &:hover {
+				border:none;
+			}
+		}
+	}
+}
+
+
+
+//2x2 BLOCK OF PRODUCT LINKS
+#explore-product {
+	.link-block {
+		.display(flex);
+		.flex-direction(column);
+		.align-items(center);
+		.justify-content(center);
+		border:1px solid @white;
+		> p {margin:20px auto; max-width:500px;}
+		.line {width:150px;}
+		@media @medium {min-height:50vh;}
+	}
+	@media @medium {
+		.overlay-black {
+			&:after {background-color:fade(@pure-black, 60%); .transition;}
+			&:hover:after {background-color:fade(@pure-black, 50%);}
+		}
+	}
+}
+
+
+
+
+//GRID OF CUSTOMER LOGOS
+#customers {
+	.ratio {overflow:hidden;}
+}
