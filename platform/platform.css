@@ -154,10 +154,10 @@
   .panelstack.vertical-panelstack.blue .panel-nav .panel-nav-elem.active-panel > a:before {
     border-left-color: #4789A3;
   }
-  .panelstack.vertical-panelstack.navy .panel-nav .panel-nav-elem.active-panel > a {
+  .panelstack.vertical-panelstack.navy-blue .panel-nav .panel-nav-elem.active-panel > a {
     background-color: #11566F;
   }
-  .panelstack.vertical-panelstack.navy .panel-nav .panel-nav-elem.active-panel > a:before {
+  .panelstack.vertical-panelstack.navy-blue .panel-nav .panel-nav-elem.active-panel > a:before {
     border-left-color: #11566F;
   }
   .panelstack.vertical-panelstack.orange .panel-nav .panel-nav-elem.active-panel > a {
