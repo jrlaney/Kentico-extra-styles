@@ -436,3 +436,32 @@ a > img:only-child {
     font-size: 45px;
   }
 }
+.img {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.img:before {
+  content: '';
+  display: block;
+  position: relative;
+  padding-bottom: 100%;
+}
+.img.ratio2-1:before {
+  padding-bottom: 50%;
+}
+.img.ratio4-3:before {
+  padding-bottom: 75%;
+}
+.img-content {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 2;
+}
