@@ -98,7 +98,8 @@
 			background-color:@light-gray;
 			.box-shadow(1px 1px 5px fade(@pure-black, 20%));
 
-			@media @medium {
+			@media @medium {margin:0; min-height:100%;}
+			@media @large {
 				.flex-direction(row);
 				.align-items(center);
 				.justify-content(flex-end);
@@ -108,23 +109,27 @@
 			.speaker-photo {
 				width:100%;
 				padding-bottom:~"calc(100% - 26px)";
-				.background-cover('/getmedia/84f30e84-bc52-4d40-a445-2bd9ac4cc82d/billy-beane');
-				@media @medium {
+				&.billy-beane    {.background-cover('/getmedia/84f30e84-bc52-4d40-a445-2bd9ac4cc82d/billy-beane');}
+				&.michael-saylor {.background-cover('/getmedia/f4a06969-69b9-43b2-b92a-7ac51cdca378/michael-saylor');}
+				&.tim-lang       {.background-cover('/getmedia/fdbf8141-fb09-4fda-8b2d-460e153c7a5a/tim-lang');}
+				@media @large {
 					position:absolute;
 					top:0; left:0;
 					width:40%; height:100%;
 					padding-bottom:0;
 				}
-				@media @large  {width:35%;}
+				@media @xlarge  {width:35%;}
 			}
 			.info-box {
 				.flex(0, 0, auto);
 				width:100%;
 				padding:20px;
-				@media @medium {width:60%;}
-				@media @large  {width:65%;}
+				@media @large {width:60%;}
+				@media @xlarge  {width:65%;}
 			}
-		}
+		}//end speaker-card
+
+
 
 		.photo-decoration {
 			@media @medium {
@@ -163,18 +168,18 @@
 			&.loc-bottom-right {margin-left:40px;}
 
 			@media @medium {
-				&.loc-top-left     {margin-top:-320px; margin-left:-270px;}
-				&.loc-bottom-left  {margin-left:-550px;}
+				&.loc-top-left     {margin-top:-520px; margin-left:-270px;}
+				&.loc-bottom-left  {margin-top:-300px; margin-left:-550px;}
 				&.loc-bottom-right {margin-top:440px; margin-left:240px;}
 			}
 			@media @large {
-				&.loc-top-left     {margin-top:-400px;}
+				&.loc-top-left     {margin-top:-460px;}
 				&.loc-bottom-left  {margin-top:130px; margin-left:-470px;}
 				&.loc-bottom-right {margin-top:380px; margin-left:370px;}
 			}
 			@media @xlarge {
-				&.loc-top-left     {margin-top:-280px; margin-left:-500px;}
-				&.loc-bottom-left  {margin-top:0; margin-left:-670px;}
+				&.loc-top-left     {margin-top:-370px; margin-left:-500px;}
+				&.loc-bottom-left  {margin-top:-120px; margin-left:-780px;}
 				&.loc-bottom-right {margin-top:320px; margin-left:450px;}
 			}
 		}

@@ -179,6 +179,12 @@
 }
 @media only screen and (min-width: 768px) {
   #hero.world-2018 .speaker-card {
+    margin: 0;
+    min-height: 100%;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #hero.world-2018 .speaker-card {
     -webkit-flex-direction: row;
     flex-direction: row;
     -webkit-align-items: center;
@@ -191,12 +197,26 @@
 #hero.world-2018 .speaker-card .speaker-photo {
   width: 100%;
   padding-bottom: calc(100% - 26px);
+}
+#hero.world-2018 .speaker-card .speaker-photo.billy-beane {
   background-image: url('/getmedia/84f30e84-bc52-4d40-a445-2bd9ac4cc82d/billy-beane');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-@media only screen and (min-width: 768px) {
+#hero.world-2018 .speaker-card .speaker-photo.michael-saylor {
+  background-image: url('/getmedia/f4a06969-69b9-43b2-b92a-7ac51cdca378/michael-saylor');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#hero.world-2018 .speaker-card .speaker-photo.tim-lang {
+  background-image: url('/getmedia/fdbf8141-fb09-4fda-8b2d-460e153c7a5a/tim-lang');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 980px) {
   #hero.world-2018 .speaker-card .speaker-photo {
     position: absolute;
     top: 0;
@@ -206,7 +226,7 @@
     padding-bottom: 0;
   }
 }
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 1200px) {
   #hero.world-2018 .speaker-card .speaker-photo {
     width: 35%;
   }
@@ -218,12 +238,12 @@
   width: 100%;
   padding: 20px;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 980px) {
   #hero.world-2018 .speaker-card .info-box {
     width: 60%;
   }
 }
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 1200px) {
   #hero.world-2018 .speaker-card .info-box {
     width: 65%;
   }
@@ -284,10 +304,11 @@
 }
 @media only screen and (min-width: 768px) {
   #hero.world-2018 .line-decoration.loc-top-left {
-    margin-top: -320px;
+    margin-top: -520px;
     margin-left: -270px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-left {
+    margin-top: -300px;
     margin-left: -550px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-right {
@@ -297,7 +318,7 @@
 }
 @media only screen and (min-width: 980px) {
   #hero.world-2018 .line-decoration.loc-top-left {
-    margin-top: -400px;
+    margin-top: -460px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-left {
     margin-top: 130px;
@@ -310,12 +331,12 @@
 }
 @media only screen and (min-width: 1200px) {
   #hero.world-2018 .line-decoration.loc-top-left {
-    margin-top: -280px;
+    margin-top: -370px;
     margin-left: -500px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-left {
-    margin-top: 0;
-    margin-left: -670px;
+    margin-top: -120px;
+    margin-left: -780px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-right {
     margin-top: 320px;
