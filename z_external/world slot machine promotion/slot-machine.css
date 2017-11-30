@@ -18,24 +18,26 @@
 #slot-machine .actionbutton:active {
   background-color: #c31f29;
 }
+@media only screen and (min-width: 980px) {
+  .form-col .form-box {
+    margin-left: 20px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .form-col .form-box {
+    margin-left: 40px;
+  }
+}
 .slot-machine-graphic {
   display: block;
   position: relative;
   padding: 20px 0;
+  max-width: 800px;
+  margin: 0 auto;
 }
 @media only screen and (min-width: 768px) {
   .slot-machine-graphic {
     padding: 20px 60px 20px 0;
-  }
-}
-@media only screen and (min-width: 980px) {
-  .slot-machine-graphic {
-    margin-right: 20px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .slot-machine-graphic {
-    margin-right: 50px;
   }
 }
 .slot-machine-graphic .top {

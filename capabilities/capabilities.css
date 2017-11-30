@@ -676,6 +676,9 @@ a > img:only-child {
     width: 150%;
   }
 }
+#data-connectivity #connector-list .card .card-content:first-child {
+  border-bottom: 1px solid #ddd;
+}
 @media only screen and (min-width: 980px) {
   #big-data #hero img {
     max-width: none;

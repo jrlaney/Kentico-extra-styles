@@ -24,13 +24,19 @@
     }
 }
 
+//FORM COL
+.form-col .form-box {
+    @media @large {margin-left:20px;}
+    @media @xlarge {margin-left:40px;}
+}
+
 //SLOT MACHINE graphic
 .slot-machine-graphic {
     display:block; position:relative;
     padding:20px 0;
+    max-width:800px;
+    margin:0 auto;
     @media @medium {padding:20px 60px 20px 0;}
-    @media @large {margin-right:20px;}
-    @media @xlarge {margin-right:50px;}
     .top {
         position:relative; z-index:3;
         padding:40px;
