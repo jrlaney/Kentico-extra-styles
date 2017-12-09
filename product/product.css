@@ -533,6 +533,12 @@ a > img:only-child {
 #whats-new #hero .scroll-link:hover.navy-blue .icon {
   color: #11566F;
 }
+#whats-new #updates-10-9 > section {
+  border-bottom: 1px solid #CCCCCC;
+}
+#whats-new #updates-10-9 > section:first-child {
+  border-bottom: 0;
+}
 #whats-new #dossier .icon-block.white {
   color: #D9232E;
 }
@@ -540,19 +546,19 @@ a > img:only-child {
   margin-bottom: -40%;
 }
 #whats-new #collaboration .stacked-mockups {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 #whats-new #collaboration .device-mockup.macbook-pro {
   position: relative;
   z-index: 0;
-  margin-right: 15%;
+  margin-left: 10%;
 }
 #whats-new #collaboration .device-mockup.ipad {
   position: absolute;
   z-index: 1;
-  width: 80%;
-  right: 5%;
-  bottom: -20px;
+  width: 50%;
+  left: 5%;
+  bottom: -10px;
 }
 #whats-new #responsive-design .stacked-mockups {
   margin-bottom: 40px;
@@ -560,21 +566,21 @@ a > img:only-child {
 #whats-new #responsive-design .device-mockup.macbook-pro {
   position: relative;
   z-index: 0;
-  margin-left: 15%;
+  margin-left: 10%;
 }
 #whats-new #responsive-design .device-mockup.ipad {
   position: absolute;
   z-index: 1;
-  width: 80%;
-  left: 15%;
-  bottom: -10px;
+  width: 50%;
+  left: 10%;
+  bottom: -5px;
 }
 #whats-new #responsive-design .device-mockup.iphone {
   position: absolute;
   z-index: 2;
-  width: 20%;
+  width: 10%;
   left: 5%;
-  bottom: -20px;
+  bottom: -10px;
 }
 #whats-new #data-asset-improvements .compact {
   margin-left: -7.5px;

@@ -72,8 +72,8 @@ a > img:only-child {
   font-size: 20px;
   line-height: 22px;
   text-transform: uppercase;
-  letter-spacing: 5px;
-  font-weight: 400;
+  letter-spacing: 0.2em;
+  font-weight: 600;
   color: #D9232E;
 }
 #capabilities section.no-padding [class*="col"] {
@@ -608,6 +608,17 @@ a > img:only-child {
     margin-left: -100%;
   }
 }
+#data-discovery #hero img.offpage-image {
+  position: relative;
+  z-index: -1;
+  width: auto;
+  max-width: 100%;
+}
+@media only screen and (min-width: 980px) {
+  #data-discovery #hero img.offpage-image {
+    max-width: none;
+  }
+}
 @media only screen and (min-width: 768px) {
   #data-discovery #dashboard-design img {
     max-width: none;
@@ -623,6 +634,10 @@ a > img:only-child {
   #data-discovery #dashboard-design img {
     margin-left: -25%;
   }
+}
+#data-discovery #dashboard-design .offpage-image img {
+  margin-left: 0;
+  max-width: 100%;
 }
 @media only screen and (min-width: 768px) {
   #data-discovery #dashboard-sharing img {
@@ -641,6 +656,29 @@ a > img:only-child {
     max-width: 1200px;
     margin-left: -110%;
   }
+}
+#data-discovery #dashboard-sharing .device-mockup.macbook-pro {
+  position: relative;
+  z-index: 0;
+  margin-right: 15%;
+}
+#data-discovery #dashboard-sharing .device-mockup.ipad {
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+  right: 15%;
+  bottom: -10px;
+}
+#data-discovery #dashboard-sharing .device-mockup.iphone {
+  position: absolute;
+  z-index: 2;
+  width: 20%;
+  right: 5%;
+  bottom: -20px;
+}
+#data-discovery #dashboard-sharing .device-mockup img {
+  max-width: 100%;
+  margin-left: 0;
 }
 @media only screen and (min-width: 980px) {
   #advanced-analytics #hero img {
@@ -1281,9 +1319,9 @@ a > img:only-child {
   position: absolute;
   display: block;
   content: '';
-  width: 1px;
+  width: 2px;
   height: 22.5px;
-  bottom: -22.5px;
+  top: 100%;
   left: 50%;
   margin-left: -1px;
   background-color: #CCCCCC;
@@ -1291,7 +1329,6 @@ a > img:only-child {
 @media only screen and (min-width: 768px) {
   #embedded-bi #embedded-bi-diagram-platform:before {
     height: 15px;
-    bottom: -15px;
   }
 }
 @media only screen and (min-width: 980px) {
@@ -1300,8 +1337,11 @@ a > img:only-child {
   }
   #embedded-bi #embedded-bi-diagram-platform:before {
     height: 22.5px;
-    bottom: -22.5px;
   }
+}
+#embedded-bi #embedded-bi-diagram-platform.below-diagram:before {
+  bottom: 100%;
+  top: auto;
 }
 #embedded-bi #embedded-bi-diagram-components .grid-item {
   position: relative;
@@ -1311,7 +1351,7 @@ a > img:only-child {
   display: block;
   z-index: 0;
   content: '';
-  width: 1px;
+  width: 2px;
   height: 15px;
   top: -7.5px;
   left: 50%;
@@ -1331,7 +1371,7 @@ a > img:only-child {
     display: block;
     z-index: 0;
     content: '';
-    height: 1px;
+    height: 2px;
     width: 100%;
     top: -15px;
     right: 0;
@@ -1372,6 +1412,31 @@ a > img:only-child {
   }
   #embedded-bi #embedded-bi-diagram-components .grid-item:last-child:after {
     right: 50%;
+    width: 50%;
+  }
+}
+#embedded-bi #embedded-bi-diagram-components.eight-items .grid-item:before {
+  top: calc(100% - 7.5px);
+  height: 15px;
+}
+#embedded-bi #embedded-bi-diagram-components.eight-items .grid-item:after {
+  top: calc(100% + 7.5px);
+}
+@media only screen and (min-width: 768px) {
+  #embedded-bi #embedded-bi-diagram-components.eight-items .grid-item:nth-child(-n+5):after {
+    display: none;
+  }
+  #embedded-bi #embedded-bi-diagram-components.eight-items .grid-item:nth-child(n+5):after {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #embedded-bi #embedded-bi-diagram-components.eight-items .grid-item:nth-child(n+5):before {
+    height: 15px;
+    top: calc(100% - 7.5px);
+  }
+  #embedded-bi #embedded-bi-diagram-components.eight-items .grid-item:nth-child(4n+1):after {
+    left: 50%;
     width: 50%;
   }
 }
@@ -1444,7 +1509,7 @@ a > img:only-child {
   }
 }
 #embedded-bi #rest-api #rest-api-diagram .line-col .arrow-block.reverse {
-  margin-left: -75px;
+  margin-left: -85px;
   text-align: left;
   padding: 10px 5px 5px 25px;
 }

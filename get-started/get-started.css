@@ -81,9 +81,62 @@ a > img:only-child {
 #desktop.free-trial #hero.background-image {
   background-image: url('/getmedia/97a4b0f1-a811-45f4-b556-272f87f183ed/desktop');
 }
+.offpage-image {
+  width: 150%;
+  max-width: none;
+}
+.offpage-image.left {
+  float: right;
+}
+.offpage-image.right {
+  float: left;
+}
+@media only screen and (min-width: 980px) {
+  .offpage-image.left.pc-laptop,
+  .offpage-image.left.macbook-pro,
+  .offpage-image.left.macbook-air {
+    margin-right: -10%;
+  }
+  .offpage-image.right.pc-laptop,
+  .offpage-image.right.macbook-pro,
+  .offpage-image.right.macbook-air {
+    margin-left: -10%;
+  }
+}
+.stacked-mockups {
+  position: relative;
+}
+.background-gradient-white {
+  background: #FFFFFF;
+  background: -webkit-linear-gradient(180deg, #FFFFFF, #f2f2f2);
+  background: linear-gradient(180deg, #FFFFFF, #f2f2f2);
+}
 #desktop #hero #lead-gen-form {
   background-color: rgba(0, 0, 0, 0.7);
   color: #FFFFFF;
+}
+#desktop #enterprise-platform .device-mockup.macbook-pro {
+  position: relative;
+  z-index: 0;
+  margin-left: 15%;
+}
+#desktop #enterprise-platform .device-mockup.ipad {
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+  left: 15%;
+  bottom: -10px;
+}
+#desktop #enterprise-platform .device-mockup.iphone {
+  position: absolute;
+  z-index: 2;
+  width: 20%;
+  left: 5%;
+  bottom: -20px;
+}
+#desktop #enterprise-platform .device-mockup img {
+  max-width: 100%;
+  margin-left: 0;
 }
 #data-sources {
   -webkit-column-count: 3;
