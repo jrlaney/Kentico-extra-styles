@@ -241,12 +241,13 @@ a > img:only-child {
   align-items: flex-start;
   position: relative;
   overflow: hidden;
-  max-width: 280px;
-  margin: 20px auto;
+  max-width: 250px;
+  margin: 0 auto;
+  min-height: 100%;
   background-color: #f2f2f2;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 979px) {
   #hero.world-2018 .speaker-card {
     -webkit-flex-direction: row;
     flex-direction: row;
@@ -254,18 +255,48 @@ a > img:only-child {
     align-items: center;
     -webkit-justify-content: flex-end;
     justify-content: flex-end;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #hero.world-2018 .speaker-card {
     max-width: none;
   }
 }
 #hero.world-2018 .speaker-card .speaker-photo {
   width: 100%;
   padding-bottom: calc(100% - 26px);
+}
+#hero.world-2018 .speaker-card .speaker-photo.billy-beane {
   background-image: url('/getmedia/84f30e84-bc52-4d40-a445-2bd9ac4cc82d/billy-beane');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-@media only screen and (min-width: 768px) {
+#hero.world-2018 .speaker-card .speaker-photo.michael-saylor {
+  background-image: url('/getmedia/f4a06969-69b9-43b2-b92a-7ac51cdca378/michael-saylor');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#hero.world-2018 .speaker-card .speaker-photo.tim-lang {
+  background-image: url('/getmedia/fdbf8141-fb09-4fda-8b2d-460e153c7a5a/tim-lang');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#hero.world-2018 .speaker-card .speaker-photo.susan-cook {
+  background-image: url('/getmedia/68e5e32b-1cd5-468a-8c5a-581fdcd3f0c1/susan-cook');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#hero.world-2018 .speaker-card .speaker-photo.boris-evelson {
+  background-image: url('/getmedia/682c8aaa-359b-4e49-a3a1-a10ac8487558/boris-evelson');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
   #hero.world-2018 .speaker-card .speaker-photo {
     position: absolute;
     top: 0;
@@ -275,11 +306,6 @@ a > img:only-child {
     padding-bottom: 0;
   }
 }
-@media only screen and (min-width: 980px) {
-  #hero.world-2018 .speaker-card .speaker-photo {
-    width: 35%;
-  }
-}
 #hero.world-2018 .speaker-card .info-box {
   -webkit-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -287,15 +313,13 @@ a > img:only-child {
   width: 100%;
   padding: 20px;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 979px) {
   #hero.world-2018 .speaker-card .info-box {
     width: 60%;
   }
 }
-@media only screen and (min-width: 980px) {
-  #hero.world-2018 .speaker-card .info-box {
-    width: 65%;
-  }
+#hero.world-2018 .customer-speaker-logos .grid-item {
+  padding: 7.5px;
 }
 @media only screen and (min-width: 768px) {
   #hero.world-2018 .photo-decoration {
@@ -353,10 +377,11 @@ a > img:only-child {
 }
 @media only screen and (min-width: 768px) {
   #hero.world-2018 .line-decoration.loc-top-left {
-    margin-top: -320px;
+    margin-top: -720px;
     margin-left: -270px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-left {
+    margin-top: -300px;
     margin-left: -550px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-right {
@@ -366,7 +391,7 @@ a > img:only-child {
 }
 @media only screen and (min-width: 980px) {
   #hero.world-2018 .line-decoration.loc-top-left {
-    margin-top: -400px;
+    margin-top: -660px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-left {
     margin-top: 130px;
@@ -379,12 +404,12 @@ a > img:only-child {
 }
 @media only screen and (min-width: 1200px) {
   #hero.world-2018 .line-decoration.loc-top-left {
-    margin-top: -280px;
+    margin-top: -570px;
     margin-left: -500px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-left {
-    margin-top: 0;
-    margin-left: -670px;
+    margin-top: -120px;
+    margin-left: -780px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-right {
     margin-top: 320px;

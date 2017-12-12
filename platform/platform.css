@@ -470,6 +470,8 @@ h6.icon-header {
   position: relative;
   display: block;
   background-color: #333333;
+  background-position: center;
+  background-size: cover;
   background-image: url("/Strategy/media/images/platform/platform_overview-hero-bkg.jpg");
 }
 /*platform diagram*/

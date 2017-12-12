@@ -169,6 +169,20 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
     }
 }
 
+//iframe styles for demos in magnific popups (education ecourseware page)
+.white-popup.demo-popup {
+    max-width:100%;
+    @media @xlarge {max-width:@large-breakpoint;}
+    .demo-wrapper {
+        position:relative;
+        padding-top:58.6%;
+        .demo-embed {
+            position:absolute;
+            width:100%; height:100%;
+            top:0; left:0;
+        }
+    }
+}
 
 //DIVE WITH COLOR TRIANGLE NEXT TO IT
 .triangle-group {
