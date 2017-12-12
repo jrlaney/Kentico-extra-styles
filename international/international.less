@@ -195,20 +195,16 @@
 
 // cookie consent toolbar
 
-#cookieConsentToolbar {
-    position: relative;
-	z-index: 3000;
-	background: @light-gray;
-	border-bottom: 1px solid @gainsboro;
-	.drop-shadow(0, 1px, 2px, 0.2);
+#cookieConsent {
+  position: relative;
+	z-index: 10;
 
-    &Close {
-        cursor: pointer;
-        &:hover { color: @red; }
-    }
-    &Content {
-        font-weight: @bold;
-    }
+		&Content {
+			padding: 1em 0;
+			font-family: @myriad-pro;
+			font-style: italic;
+			letter-spacing: .01em;
+		}
 }
 
 
