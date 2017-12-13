@@ -108,8 +108,9 @@
 			@media @medium {max-width:none;}
 
 			.speaker-photo {
+				display:block; position:relative;
 				width:100%;
-				padding-bottom:~"calc(100% - 26px)";
+				&:before {content:''; display:block; padding-bottom:100%;}
 				&.billy-beane    {.background-cover('/getmedia/84f30e84-bc52-4d40-a445-2bd9ac4cc82d/billy-beane');}
 				&.michael-saylor {.background-cover('/getmedia/f4a06969-69b9-43b2-b92a-7ac51cdca378/michael-saylor');}
 				&.tim-lang       {.background-cover('/getmedia/fdbf8141-fb09-4fda-8b2d-460e153c7a5a/tim-lang');}
@@ -119,7 +120,6 @@
 					position:absolute;
 					top:0; left:0;
 					width:40%; height:100%;
-					padding-bottom:0;
 				}
 			}
 			.info-box {

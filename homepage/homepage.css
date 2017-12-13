@@ -263,8 +263,14 @@ a > img:only-child {
   }
 }
 #hero.world-2018 .speaker-card .speaker-photo {
+  display: block;
+  position: relative;
   width: 100%;
-  padding-bottom: calc(100% - 26px);
+}
+#hero.world-2018 .speaker-card .speaker-photo:before {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
 }
 #hero.world-2018 .speaker-card .speaker-photo.billy-beane {
   background-image: url('/getmedia/84f30e84-bc52-4d40-a445-2bd9ac4cc82d/billy-beane');
@@ -303,7 +309,6 @@ a > img:only-child {
     left: 0;
     width: 40%;
     height: 100%;
-    padding-bottom: 0;
   }
 }
 #hero.world-2018 .speaker-card .info-box {
