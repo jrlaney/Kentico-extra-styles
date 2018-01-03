@@ -184,7 +184,7 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
     }
 }
 
-//DIVE WITH COLOR TRIANGLE NEXT TO IT
+//DIV WITH COLOR TRIANGLE NEXT TO IT
 .triangle-group {
     position:relative;
     padding:5px 0 5px 20px;
@@ -220,27 +220,30 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
 }
 
 
-//SLOT MACHINE PAGE
-#world2018-navbar {
-    border-bottom:1px solid #ddd;
-    .box-shadow(1px 1px 5px fade(@pure-black, 20%));
-    .logo-lockup {
-        padding:15px;
-        .transition;
-        &:hover {background:@light-gray;}
-        .logo {
-            height:50px; padding-right:15px;
-            margin-bottom:0;
-        }
-        .text {
-            .uppercase;
-            color:@monsoon;
-            font-weight:600;
-            font-size:14px; line-height:1em;
-            .top-line {display:block; font-size:85%; margin-bottom:5px;}
+//DIV WITH A NUMBER NEXT TO IT
+.number-group {
+    position:relative;
+    padding:15px 0 5px 30px;
+    &:before {
+        display:block; position:absolute; z-index:-1;
+        content:'';
+        top:0px; left:0px;
+        font-size:60px; line-height:60px;
+        font-weight:600;
+        color:@gainsboro;
+    }
+    @media @medium {
+        padding-top:30px; padding-left:50px;
+        &:before {
+            font-size:120px; line-height:120px;
         }
     }
+    &.one:before   {content:'1.'}
+    &.two:before   {content:'2.'}
+    &.three:before {content:'3.'}
 }
+
+
 
 
 // FAQ
