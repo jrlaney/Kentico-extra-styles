@@ -4,6 +4,41 @@
   .background-cover;
 }
 
+//DIV WITH COLOR TRIANGLE NEXT TO IT
+.triangle-group {
+    position:relative;
+    padding:5px 0 5px 20px;
+    &:before {
+        display:block; position:absolute;
+        content:'';
+        top:5px; left:-10px;
+        width:0; height:0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid @red;
+        border-top: 10px solid transparent;
+    }
+    @media @medium {
+        padding-left:25px;
+        &:before {
+            left:-15px;
+            border-left-width: 15px;
+            border-right-width: 15px;
+            border-top-width: 15px;
+        }
+    }
+    &.red:before {border-right-color:@red;}
+    &.orange:before {border-right-color:@orange;}
+    &.green:before {border-right-color:@green;}
+    &.blue:before {border-right-color:@blue;}
+    &.navy-blue:before {border-right-color:@navy-blue;}
+
+    &.white:before {border-right-color:@white;}
+    &.light-gray:before {border-right-color:@light-gray;}
+    &.gray:before {border-right-color:@gray;}
+    &.dark-gray:before {border-right-color:@dark-gray;}
+    &.black:before {border-right-color:@black;}
+}
+
 .top-banner.overview {background-image: url(/Strategy/media/images/company/company_hero-bkg_overview.jpg);}
 .text-uppercase {font-family:@myriad-pro; letter-spacing:0.1em; font-weight:400}
 
@@ -324,6 +359,43 @@
     100% {-webkit-transform:translateX(-100%);-ms-transform:translateX(-100%);transform:translateX(-100%);}
 }
 
+#roles-slider {
+    .role-bio-photo {
+        padding:20px 20px 20px 0;
+        margin:0;
+    }
+}
+#roles-nav {
+    padding:0 50px;
+    .role-bio-photo {margin:0 10px 0 0;}
+    .grid-item {
+        padding:7.5px;
+        .align-items(stretch);
+        .role-nav-card {
+            cursor:pointer;
+            width:100%;
+            background-color:@light-gray;
+            padding:10px;
+            box-shadow:1px 1px 5px fade(@pure-black, 0%);
+            border:1px solid @white;
+            opacity:0.6;
+            .transition;
+            .text > p {
+                margin:0; padding:0;
+                &:first-child {margin-bottom:5px;}
+            }
+        }
+        &.slick-current .role-nav-card {
+            opacity:0.99;
+            box-shadow:1px 1px 5px fade(@pure-black, 20%);
+            background-color:@white;
+            border-color:@gainsboro;
+            cursor:default;
+        }
+    }
+    @media @small-only {display:none;}
+}
+
 // CONTACT US SECTION STYLES
 #contact-us {
     > .flex-row {position:relative; z-index:3;}
@@ -404,10 +476,10 @@
     position:absolute; z-index:1;
     height:100%; width:100%;
     top:0; left:0;
-  
+
     * {
         height: 100%;
-    } 
+    }
 }
 .careers-banner .image-container .fade-slider {position:relative; overflow:hidden; height:100%;}
 .careers-banner .image-container .fade-slider .banner {
