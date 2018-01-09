@@ -86,49 +86,13 @@
 			@media @xlarge {width:540px;}
 		}
 
-		.speaker-card {
-			.display(flex);
-		    .flex(0, 1, auto);
-		    .flex-wrap(wrap);
-			.flex-direction(column);
-			.align-items(flex-start);
+		.headshot {padding:0 10px; @media @small-only {width:230px;}}
 
-			position:relative;
-			overflow:hidden;
-			max-width:250px; margin:0 auto;
-			min-height:100%;
-			background-color:@light-gray;
-			.box-shadow(1px 1px 5px fade(@pure-black, 20%));
-
-			@media @medium-only {
-				.flex-direction(row);
-				.align-items(center);
-				.justify-content(flex-end);
-			}
-			@media @medium {max-width:none;}
-
-			.speaker-photo {
-				display:block; position:relative;
-				width:100%;
-				&:before {content:''; display:block; padding-bottom:100%;}
-				&.billy-beane    {.background-cover('/getmedia/84f30e84-bc52-4d40-a445-2bd9ac4cc82d/billy-beane');}
-				&.michael-saylor {.background-cover('/getmedia/f4a06969-69b9-43b2-b92a-7ac51cdca378/michael-saylor');}
-				&.tim-lang       {.background-cover('/getmedia/fdbf8141-fb09-4fda-8b2d-460e153c7a5a/tim-lang');}
-				&.susan-cook     {.background-cover('/getmedia/68e5e32b-1cd5-468a-8c5a-581fdcd3f0c1/susan-cook');}
-				&.boris-evelson  {.background-cover('/getmedia/682c8aaa-359b-4e49-a3a1-a10ac8487558/boris-evelson');}
-				@media @medium-only {
-					position:absolute;
-					top:0; left:0;
-					width:40%; height:100%;
-				}
-			}
-			.info-box {
-				.flex(0, 0, auto);
-				width:100%;
-				padding:20px;
-				@media @medium-only {width:60%;}
-			}
-		}//end speaker-card
+		.featured-speaker-slider {
+			text-align:center;
+			.slick-slide {display:block;}
+			.slick-arrow.slick-disabled {opacity:0.5;}
+		}
 
 		.customer-speaker-logos .grid-item {padding:7.5px;}
 
@@ -153,12 +117,12 @@
 				}
 			}
 			@media @large {
-				left:~"calc(50% + 300px)";
-				width: ~"calc(50% - 300px)";
+				left:~"calc(50% + 400px)";
+				width: ~"calc(50% - 400px)";
 			}
 			@media @xlarge {
-				left:~"calc(50% + 350px)";
-				width: ~"calc(50% - 350px)";
+				left:~"calc(50% + 550px)";
+				width: ~"calc(50% - 550px)";
 			}
 		}//end photo decoration
 
@@ -170,18 +134,18 @@
 
 			@media @medium {
 				&.loc-top-left     {margin-top:-720px; margin-left:-270px;}
-				&.loc-bottom-left  {margin-top:-300px; margin-left:-550px;}
-				&.loc-bottom-right {margin-top:440px; margin-left:240px;}
+				&.loc-bottom-left  {margin-top:-700px; margin-left:-650px;}
+				&.loc-bottom-right {margin-top:750px; margin-left:300px;}
 			}
 			@media @large {
 				&.loc-top-left     {margin-top:-660px;}
-				&.loc-bottom-left  {margin-top:130px; margin-left:-470px;}
-				&.loc-bottom-right {margin-top:380px; margin-left:370px;}
+				&.loc-bottom-left  {margin-top:-700px; margin-left:-750px;}
+				&.loc-bottom-right {margin-top:650px; margin-left:400px;}
 			}
 			@media @xlarge {
 				&.loc-top-left     {margin-top:-570px; margin-left:-500px;}
-				&.loc-bottom-left  {margin-top:-120px; margin-left:-780px;}
-				&.loc-bottom-right {margin-top:320px; margin-left:450px;}
+				&.loc-bottom-left  {margin-top:-600px; margin-left:-850px;}
+				&.loc-bottom-right {margin-top:600px; margin-left:700px;}
 			}
 		}
 		.flagged-reg-button {
@@ -329,7 +293,7 @@
 		border:1px solid @white;
 		> p {margin:20px auto; max-width:500px;}
 		.line {width:150px;}
-		@media @medium {min-height:50vh;}
+		@media @medium {min-height:50vh; max-height:900px;}
 	}
 	@media @medium {
 		.overlay-black {

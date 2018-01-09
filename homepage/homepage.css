@@ -227,101 +227,22 @@ a > img:only-child {
     width: 540px;
   }
 }
-#hero.world-2018 .speaker-card {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  flex: 0 1 auto;
-  max-width: none;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  align-items: flex-start;
-  position: relative;
-  overflow: hidden;
-  max-width: 250px;
-  margin: 0 auto;
-  min-height: 100%;
-  background-color: #f2f2f2;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+#hero.world-2018 .headshot {
+  padding: 0 10px;
 }
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  #hero.world-2018 .speaker-card {
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end;
+@media only screen and (max-width: 767px) {
+  #hero.world-2018 .headshot {
+    width: 230px;
   }
 }
-@media only screen and (min-width: 768px) {
-  #hero.world-2018 .speaker-card {
-    max-width: none;
-  }
+#hero.world-2018 .featured-speaker-slider {
+  text-align: center;
 }
-#hero.world-2018 .speaker-card .speaker-photo {
+#hero.world-2018 .featured-speaker-slider .slick-slide {
   display: block;
-  position: relative;
-  width: 100%;
 }
-#hero.world-2018 .speaker-card .speaker-photo:before {
-  content: '';
-  display: block;
-  padding-bottom: 100%;
-}
-#hero.world-2018 .speaker-card .speaker-photo.billy-beane {
-  background-image: url('/getmedia/84f30e84-bc52-4d40-a445-2bd9ac4cc82d/billy-beane');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-#hero.world-2018 .speaker-card .speaker-photo.michael-saylor {
-  background-image: url('/getmedia/f4a06969-69b9-43b2-b92a-7ac51cdca378/michael-saylor');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-#hero.world-2018 .speaker-card .speaker-photo.tim-lang {
-  background-image: url('/getmedia/fdbf8141-fb09-4fda-8b2d-460e153c7a5a/tim-lang');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-#hero.world-2018 .speaker-card .speaker-photo.susan-cook {
-  background-image: url('/getmedia/68e5e32b-1cd5-468a-8c5a-581fdcd3f0c1/susan-cook');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-#hero.world-2018 .speaker-card .speaker-photo.boris-evelson {
-  background-image: url('/getmedia/682c8aaa-359b-4e49-a3a1-a10ac8487558/boris-evelson');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  #hero.world-2018 .speaker-card .speaker-photo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 40%;
-    height: 100%;
-  }
-}
-#hero.world-2018 .speaker-card .info-box {
-  -webkit-flex: 0 0 auto;
-  flex: 0 0 auto;
-  max-width: none;
-  width: 100%;
-  padding: 20px;
-}
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  #hero.world-2018 .speaker-card .info-box {
-    width: 60%;
-  }
+#hero.world-2018 .featured-speaker-slider .slick-arrow.slick-disabled {
+  opacity: 0.5;
 }
 #hero.world-2018 .customer-speaker-logos .grid-item {
   padding: 7.5px;
@@ -361,14 +282,14 @@ a > img:only-child {
 }
 @media only screen and (min-width: 980px) {
   #hero.world-2018 .photo-decoration {
-    left: calc(50% + 300px);
-    width: calc(50% - 300px);
+    left: calc(50% + 400px);
+    width: calc(50% - 400px);
   }
 }
 @media only screen and (min-width: 1200px) {
   #hero.world-2018 .photo-decoration {
-    left: calc(50% + 350px);
-    width: calc(50% - 350px);
+    left: calc(50% + 550px);
+    width: calc(50% - 550px);
   }
 }
 #hero.world-2018 .line-decoration.loc-top-left {
@@ -386,12 +307,12 @@ a > img:only-child {
     margin-left: -270px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-left {
-    margin-top: -300px;
-    margin-left: -550px;
+    margin-top: -700px;
+    margin-left: -650px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-right {
-    margin-top: 440px;
-    margin-left: 240px;
+    margin-top: 750px;
+    margin-left: 300px;
   }
 }
 @media only screen and (min-width: 980px) {
@@ -399,12 +320,12 @@ a > img:only-child {
     margin-top: -660px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-left {
-    margin-top: 130px;
-    margin-left: -470px;
+    margin-top: -700px;
+    margin-left: -750px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-right {
-    margin-top: 380px;
-    margin-left: 370px;
+    margin-top: 650px;
+    margin-left: 400px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -413,12 +334,12 @@ a > img:only-child {
     margin-left: -500px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-left {
-    margin-top: -120px;
-    margin-left: -780px;
+    margin-top: -600px;
+    margin-left: -850px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-right {
-    margin-top: 320px;
-    margin-left: 450px;
+    margin-top: 600px;
+    margin-left: 700px;
   }
 }
 #hero.world-2018 .flagged-reg-button {
@@ -719,6 +640,7 @@ a > img:only-child {
 @media only screen and (min-width: 768px) {
   #explore-product .link-block {
     min-height: 50vh;
+    max-height: 900px;
   }
 }
 @media only screen and (min-width: 768px) {
