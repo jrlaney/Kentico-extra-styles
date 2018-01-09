@@ -621,51 +621,6 @@
     transform: translateX(-100%);
   }
 }
-#roles-slider .role-bio-photo {
-  padding: 20px 20px 20px 0;
-  margin: 0;
-}
-#roles-nav {
-  padding: 0 50px;
-}
-#roles-nav .role-bio-photo {
-  margin: 0 10px 0 0;
-}
-#roles-nav .grid-item {
-  padding: 7.5px;
-  -webkit-align-items: stretch;
-  align-items: stretch;
-}
-#roles-nav .grid-item .role-nav-card {
-  cursor: pointer;
-  width: 100%;
-  background-color: #f2f2f2;
-  padding: 10px;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
-  border: 1px solid #FFFFFF;
-  opacity: 0.6;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
-}
-#roles-nav .grid-item .role-nav-card .text > p {
-  margin: 0;
-  padding: 0;
-}
-#roles-nav .grid-item .role-nav-card .text > p:first-child {
-  margin-bottom: 5px;
-}
-#roles-nav .grid-item.slick-current .role-nav-card {
-  opacity: 0.99;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-  background-color: #FFFFFF;
-  border-color: #DDDDDD;
-  cursor: default;
-}
-@media only screen and (max-width: 767px) {
-  #roles-nav {
-    display: none;
-  }
-}
 #contact-us > .flex-row {
   position: relative;
   z-index: 3;
@@ -815,7 +770,73 @@
 .global-team {
   background-image: url(/Strategy/media/images/company/careers/careers_overview_global-team-bkg.jpg);
 }
-/*new job search*/
+#roles-slider .role-bio-photo {
+  padding: 20px 20px 20px 0;
+  margin: 0;
+}
+@media only screen and (max-width: 767px) {
+  #roles-slider .role-bio-photo {
+    width: 200px;
+  }
+}
+#roles-slider .slick-slide {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  min-height: 20px;
+}
+@media only screen and (max-width: 767px) {
+  #roles-slider .slick-slide .answers-col {
+    max-height: 600px;
+    overflow: auto;
+    background-color: #f2f2f2;
+  }
+}
+#roles-nav {
+  padding: 0 50px;
+}
+#roles-nav .grid-item {
+  padding: 7.5px;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}
+#roles-nav .grid-item .role-nav-card {
+  cursor: pointer;
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
+  border: 1px solid #FFFFFF;
+  opacity: 0.6;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+#roles-nav .grid-item .role-nav-card .role-bio-photo {
+  margin: 0 10px 0 0;
+}
+#roles-nav .grid-item .role-nav-card .text > p {
+  margin: 0;
+  padding: 0;
+}
+#roles-nav .grid-item .role-nav-card .text > p:first-child {
+  margin-bottom: 5px;
+}
+@media only screen and (max-width: 767px) {
+  #roles-nav .grid-item .role-nav-card {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+  #roles-nav .grid-item .role-nav-card .role-bio-photo {
+    margin: 0 0 10px 0;
+  }
+}
+#roles-nav .grid-item.slick-current .role-nav-card {
+  opacity: 0.99;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  background-color: #FFFFFF;
+  border-color: #DDDDDD;
+  cursor: default;
+}
 .smartWidget .srSearch {
   min-width: 200px;
   height: auto;
