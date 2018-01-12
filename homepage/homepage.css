@@ -133,6 +133,18 @@ a > img:only-child {
 .android .background-fixed {
   background-attachment: scroll;
 }
+.keynote-content {
+  display: none;
+}
+.keynote-sunday .keynote-content.sunday {
+  display: block;
+}
+.keynote-pending .keynote-content.pending {
+  display: block;
+}
+.keynote-live .keynote-content.live {
+  display: block;
+}
 #global-top-ad {
   display: none!important;
 }
