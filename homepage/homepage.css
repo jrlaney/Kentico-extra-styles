@@ -227,26 +227,6 @@ a > img:only-child {
     width: 540px;
   }
 }
-#hero.world-2018 .headshot {
-  padding: 0 10px;
-}
-@media only screen and (max-width: 767px) {
-  #hero.world-2018 .headshot {
-    width: 230px;
-  }
-}
-#hero.world-2018 .featured-speaker-slider {
-  text-align: center;
-}
-#hero.world-2018 .featured-speaker-slider .slick-slide {
-  display: block;
-}
-#hero.world-2018 .featured-speaker-slider .slick-arrow.slick-disabled {
-  opacity: 0.5;
-}
-#hero.world-2018 .customer-speaker-logos .grid-item {
-  padding: 7.5px;
-}
 @media only screen and (min-width: 768px) {
   #hero.world-2018 .photo-decoration {
     position: absolute;
@@ -254,8 +234,8 @@ a > img:only-child {
     overflow: hidden;
     top: 0;
     bottom: 0;
-    left: calc(50% + 230px);
-    width: calc(50% - 230px);
+    left: calc(50% + 250px);
+    width: calc(50% - 250px);
     -webkit-transform: skewX(15deg);
     transform: skewX(15deg);
     -webkit-transform-origin: left top;
@@ -282,14 +262,14 @@ a > img:only-child {
 }
 @media only screen and (min-width: 980px) {
   #hero.world-2018 .photo-decoration {
-    left: calc(50% + 400px);
-    width: calc(50% - 400px);
+    left: calc(50% + 350px);
+    width: calc(50% - 350px);
   }
 }
 @media only screen and (min-width: 1200px) {
   #hero.world-2018 .photo-decoration {
-    left: calc(50% + 550px);
-    width: calc(50% - 550px);
+    left: calc(50% + 450px);
+    width: calc(50% - 450px);
   }
 }
 #hero.world-2018 .line-decoration.loc-top-left {
@@ -303,74 +283,154 @@ a > img:only-child {
 }
 @media only screen and (min-width: 768px) {
   #hero.world-2018 .line-decoration.loc-top-left {
-    margin-top: -720px;
-    margin-left: -270px;
+    margin-top: -300px;
+    margin-left: -400px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-left {
-    margin-top: -700px;
-    margin-left: -650px;
+    margin-top: -300px;
+    margin-left: -700px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-right {
-    margin-top: 750px;
+    margin-top: 500px;
     margin-left: 300px;
   }
 }
 @media only screen and (min-width: 980px) {
   #hero.world-2018 .line-decoration.loc-top-left {
-    margin-top: -660px;
+    margin-top: -350px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-left {
-    margin-top: -700px;
+    margin-top: -200px;
     margin-left: -750px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-right {
-    margin-top: 650px;
-    margin-left: 400px;
+    margin-top: 300px;
+    margin-left: 500px;
   }
 }
 @media only screen and (min-width: 1200px) {
   #hero.world-2018 .line-decoration.loc-top-left {
-    margin-top: -570px;
-    margin-left: -500px;
+    margin-left: -650px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-left {
-    margin-top: -600px;
-    margin-left: -850px;
+    margin-top: 0px;
+    margin-left: -700px;
   }
   #hero.world-2018 .line-decoration.loc-bottom-right {
-    margin-top: 600px;
-    margin-left: 700px;
+    margin-top: 500px;
+    margin-left: 500px;
   }
 }
-#hero.world-2018 .flagged-reg-button {
-  display: inline-block;
+#hero.world-2018 .keynote-live-button {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+  max-width: none;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
   position: relative;
-  vertical-align: middle;
+  padding: 20px;
+  border: 1px solid #FFFFFF;
+  margin: 20px auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #333333;
+  background-image: url(/getmedia/85deb844-cac7-4cf5-a666-cce4633433a5/world2017-keynote-tim-lang?width=900);
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+#hero.world-2018 .keynote-live-button:before {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+#hero.world-2018 .keynote-live-button .icon-col,
+#hero.world-2018 .keynote-live-button .text-col {
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: none;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+#hero.world-2018 .keynote-live-button .icon-col {
   margin-top: 20px;
 }
-#hero.world-2018 .flagged-reg-button .button {
-  margin-top: 0;
-  display: block;
+#hero.world-2018 .keynote-live-button .text-col {
+  font-size: 20px;
+  line-height: 1em;
+  font-weight: 400;
+  text-align: center;
+  color: #FFFFFF;
 }
 @media only screen and (min-width: 768px) {
-  #hero.world-2018 .flagged-reg-button .button {
-    padding: 1em 6.25em;
+  #hero.world-2018 .keynote-live-button {
+    padding: 20px 30px;
+  }
+  #hero.world-2018 .keynote-live-button:hover {
+    border: 1px solid #D9232E;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+  #hero.world-2018 .keynote-live-button:hover:before {
+    background-color: rgba(217, 35, 46, 0.7);
+  }
+  #hero.world-2018 .keynote-live-button .icon-col {
+    width: auto;
+    margin: 0;
+  }
+  #hero.world-2018 .keynote-live-button .text-col {
+    -webkit-flex: 1 1 1px;
+    flex: 1 1 1px;
+    max-width: none;
+    font-size: 30px;
+    line-height: 1em;
+    padding-right: 30px;
+    text-align: left;
   }
 }
-#hero.world-2018 .flagged-reg-button .discount-flag {
-  display: block;
-  background: #c31f29;
-  padding: 5px 10px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  color: #FFFFFF;
-  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  text-transform: none;
-  letter-spacing: normal;
-  font-size: 14px;
-  line-height: 16px;
+#hero.world-2018 #countdown-timer {
+  margin-top: 10px;
+  font-size: 38px;
+  line-height: 1em;
+  font-weight: 400;
 }
-#hero.world-2018 .flagged-reg-button .discount-flag span {
-  font-weight: 600;
+#hero.world-2018 #countdown-timer .timer-block {
+  white-space: nowrap;
+}
+#hero.world-2018 #countdown-timer .time-unit {
+  font-size: 16px;
+  margin: 0 5px 0 -5px;
+}
+@media only screen and (min-width: 768px) {
+  #hero.world-2018 #countdown-timer {
+    font-size: 60px;
+    line-height: 1em;
+  }
+  #hero.world-2018 #countdown-timer .time-unit {
+    font-size: 20px;
+    margin: 0 10px 0 -10px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #hero.world-2018 #countdown-timer {
+    font-size: 80px;
+  }
 }
 .line-decoration {
   position: absolute;

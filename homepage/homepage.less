@@ -86,22 +86,12 @@
 			@media @xlarge {width:540px;}
 		}
 
-		.headshot {padding:0 10px; @media @small-only {width:230px;}}
-
-		.featured-speaker-slider {
-			text-align:center;
-			.slick-slide {display:block;}
-			.slick-arrow.slick-disabled {opacity:0.5;}
-		}
-
-		.customer-speaker-logos .grid-item {padding:7.5px;}
-
 		.photo-decoration {
 			@media @medium {
 				position:absolute; z-index:-2;
 				overflow:hidden;
-				top:0; bottom:0; left:~"calc(50% + 230px)";
-				width: ~"calc(50% - 230px)";
+				top:0; bottom:0; left:~"calc(50% + 250px)";
+				width: ~"calc(50% - 250px)";
 				.transform(skewX(15deg));
 				.transform-origin(left, top);
 				&:before {
@@ -117,12 +107,12 @@
 				}
 			}
 			@media @large {
-				left:~"calc(50% + 400px)";
-				width: ~"calc(50% - 400px)";
+				left:~"calc(50% + 350px)";
+				width: ~"calc(50% - 350px)";
 			}
 			@media @xlarge {
-				left:~"calc(50% + 550px)";
-				width: ~"calc(50% - 550px)";
+				left:~"calc(50% + 450px)";
+				width: ~"calc(50% - 450px)";
 			}
 		}//end photo decoration
 
@@ -133,42 +123,85 @@
 			&.loc-bottom-right {margin-left:40px;}
 
 			@media @medium {
-				&.loc-top-left     {margin-top:-720px; margin-left:-270px;}
-				&.loc-bottom-left  {margin-top:-700px; margin-left:-650px;}
-				&.loc-bottom-right {margin-top:750px; margin-left:300px;}
+				&.loc-top-left     {margin-top:-300px; margin-left:-400px;}
+				&.loc-bottom-left  {margin-top:-300px; margin-left:-700px;}
+				&.loc-bottom-right {margin-top:500px; margin-left:300px;}
 			}
 			@media @large {
-				&.loc-top-left     {margin-top:-660px;}
-				&.loc-bottom-left  {margin-top:-700px; margin-left:-750px;}
-				&.loc-bottom-right {margin-top:650px; margin-left:400px;}
+				&.loc-top-left     {margin-top:-350px;}
+				&.loc-bottom-left  {margin-top:-200px; margin-left:-750px;}
+				&.loc-bottom-right {margin-top:300px; margin-left:500px;}
 			}
 			@media @xlarge {
-				&.loc-top-left     {margin-top:-570px; margin-left:-500px;}
-				&.loc-bottom-left  {margin-top:-600px; margin-left:-850px;}
-				&.loc-bottom-right {margin-top:600px; margin-left:700px;}
+				&.loc-top-left     {margin-left:-650px;}
+				&.loc-bottom-left  {margin-top:0px; margin-left:-700px;}
+				&.loc-bottom-right {margin-top:500px; margin-left:500px;}
 			}
 		}
-		.flagged-reg-button {
-			display:inline-block; position:relative;
-			vertical-align:middle;
-			margin-top:20px;
-			.button {
-				margin-top:0;
-				display:block;
-				@media @medium {padding:1em 6.25em;}
-			}
-			.discount-flag {
-				display:block;
-				background:@dark-red;
-				padding:5px 10px;
-				.box-shadow(1px 1px 3px fade(@pure-black, 20%));
+		.keynote-live-button {
+			.display(flex);
+			.flex(0, 1, auto);
+			.flex-direction(row);
+			.flex-wrap(wrap);
+			.justify-content(space-between);
+			.align-items(center);
+
+			position:relative;
+			padding:20px;
+			border:1px solid @white;
+			margin:20px auto;
+
+			background-repeat:no-repeat;
+			background-position:center center;
+			background-size:cover;
+			background-color:@black;
+			background-image:url(/getmedia/85deb844-cac7-4cf5-a666-cce4633433a5/world2017-keynote-tim-lang?width=900);
+			.transition;
+
+		    &:before {
+		        display:block; position:absolute; z-index:0;
+		        content:'';
+		        height:100%; width:100%;
+		        top:0; left:0;
+		        background-color:fade(@pure-black, 30%);
+				.transition;
+		    }
+			.icon-col, .text-col {.flex(0,0,auto); width:100%; position:relative; z-index:1;}
+			.icon-col {margin-top:20px;}
+			.text-col {
+				font-size:20px; line-height:1em;
+				font-weight: 400;
+				text-align:center;
 				color:@white;
-				font-family:@myriad-pro;
-				text-transform:none; letter-spacing:normal;
-				font-size:14px; line-height:16px;
-				span {font-weight:600;}
 			}
-		}
+			@media @medium {
+				padding:20px 30px;
+				&:hover {
+					border:1px solid @red;
+					box-shadow: 1px 1px 5px fade(@pure-black, 50%);
+					&:before {background-color:fade(@red, 70%);}
+				}
+				.icon-col {width:auto; margin:0;}
+				.text-col {.flex(1,1,0px); font-size:30px; line-height:1em; padding-right:30px; text-align:left;}
+			}
+		}//end keynote live button
+		#countdown-timer {
+			margin-top:10px;
+			font-size:38px; line-height:1em;
+			font-weight:400;
+			.timer-block {white-space:nowrap;}
+			.time-unit {
+				font-size:16px;
+				margin:0 5px 0 -5px;
+			}
+			@media @medium {
+				font-size:60px; line-height:1em;
+				.time-unit {font-size:20px; margin:0 10px 0 -10px;}
+			}
+			@media @large {
+				font-size:80px;
+			}
+		}//end countdown timer
 	}
 }
 //line decoration element
