@@ -1,4 +1,5 @@
 @import '../../settings.less';
+@import '../../overrides.less';
 
 //ICON PLUS CTA TEXT COMBO IN HERO BANNER. MAYBE FOR GLOBAL LATER?
 .icon-cta {
@@ -51,7 +52,7 @@
 //HERO BANNER STYLES
 #hero {
 	overflow:hidden;
-	//background-image: url(/getmedia/2838b8b1-25b0-43f6-824f-142739031279/two-monitors-wood-desk);
+	&.background-image {background-image: url(/getmedia/2838b8b1-25b0-43f6-824f-142739031279/two-monitors-wood-desk);}
 	@media @medium {.icon-cta {max-width:~"calc(33.3% - 24px)";}}
 
 	//animations after loading
@@ -59,7 +60,6 @@
 	.line         {opacity:0; .animation(fade-slide-down 0.5s ease-out 0.8s normal forwards);}
 	.subtitle     {opacity:0; .animation(fade-slide-down 0.5s ease-out 0.9s normal forwards);}
 	.button       {opacity:0; .animation(fade-slide-down 0.5s ease-out 1s normal forwards);}
-
 	.device-row   {opacity:0; .animation(fade-slide-up 0.7s @custom-bez 1.4s normal forwards);}
 	//.icon-cta {  opacity:0; .animation(fade-slide-up 0.5s ease-out 1.2s normal forwards);}
 
@@ -71,9 +71,6 @@
 		height:100%; width:100%;
 
 		opacity:0; .transition(0.5s, ease-out, all, 0.5s);
-		&.first  {background-image: url(/getmedia/94699cb7-2d93-4178-bdea-0e76f188e4ee/airport);}
-		&.second {background-image: url(/getmedia/883b5bde-1caa-423c-8cdd-e14cab6bd2db/storefront);}
-		&.third  {background-image: url(/getmedia/418d0ff9-8db3-4784-87f1-38ab20f9f5b2/559537341);}
 	}
 
 	.device-row {
@@ -121,6 +118,72 @@
 			.transition-open(~"opacity 0.3s ease-out 0.3s, transform 0.3s @{custom-bez} 0.3s");
 		}
 	}
+
+	&.static-version {
+		//animations on loading
+		.device-mockup {opacity:0; .animation(fade-slide-up 0.7s @custom-bez 1.4s normal forwards);}
+		.device-mockup.ipad {.animation-delay(1.6s~"!important");}
+		.device-mockup.iphone {.animation-delay(1.8s~"!important");}
+
+		.angle.top    {opacity:0; .animation(fade-diagonal-down-left 0.3s ease-out 1.6s normal forwards);}
+		.angle.bottom {opacity:0; .animation(fade-diagonal-up-left 0.4s ease-out 1.8s normal forwards);}
+
+		position:relative;
+		overflow:hidden;
+		.stacked-devices {
+			position:relative; height:250px;
+			margin-top:30px;
+			.device-mockup {position:absolute;}
+			.macbook-pro {
+				z-index:3;
+				width:110%;
+				top:0; left:50%; margin-left:-55%;
+			}
+			.ipad {
+				z-index:4;
+				width:60%;
+				top:40%; left:-15%;
+			}
+			.iphone {
+				z-index:5;
+				width:20%;
+				top:40%; right:0;
+			}
+			@media @medium {
+				.macbook-pro {width:90%; margin-left:-45%;}
+				.ipad {width:55%; top:55%; left:-7%;}
+				.iphone {width:20%; top:40%; right:2%;}
+			}
+			@media @xlarge {
+				.ipad {width:50%; left:-3%;}
+				.iphone {right:-3%;}
+			}
+		}//end stacked devices
+	    .angle-wrapper {
+	        display:block; position:absolute; z-index:1;
+	        height:100%; width:100%;
+	        top:0; left:0;
+
+	        &.red .angle {fill:@red;}
+	        &.orange .angle {fill:@orange;}
+	        &.green .angle {fill:@green;}
+	        &.blue .angle {fill:@blue;}
+	        &.navy-blue .angle {fill:@navy-blue;}
+	    }
+	    .angle.top {right:0; top:0; height:auto; width:150%;}
+	    .angle.bottom {right:0; bottom:0; height:auto; width:150%;}
+	    .angle {
+	        display:block; position:absolute;
+	        fill-rule:evenodd;
+	        fill:@pure-black;
+	        mix-blend-mode:multiply;
+	    }
+
+	    @media @medium {
+	        .angle.top {height:40%; width:auto;}
+	        .angle.bottom {height:105%; width:auto;}
+	    }
+	}
 }
 .keyframes(fade-slide-up;{
     0%{opacity:0; .translateY(20%);}
@@ -129,6 +192,18 @@
 .keyframes(fade-slide-down;{
     0%{opacity:0; .translateY(-20%);}
     100%{opacity:1; .translateY(0);}
+});
+.keyframes(fade-diagonal-down-left;{
+    0%{opacity:0; .translate(20%, -10%);}
+    100%{opacity:1; .translate(0, 0);}
+});
+.keyframes(fade-diagonal-up-left;{
+    0%{opacity:0; .translate(10%, 30%);}
+    100%{opacity:1; .translate(0, 0);}
+});
+.keyframes(fade-in;{
+    0%{opacity:0;}
+    100%{opacity:1;}
 });
 
 
@@ -164,9 +239,9 @@
 		.align-items(center);
 		.justify-content(center);
 		border:1px solid @white;
-		> p {margin:20px auto; max-width:500px;}
-		.line {width:150px;}
-		@media @medium {min-height:50vh;}
+		> p {margin-left:auto; margin-right:auto; max-width:500px;}
+		.line {width:70px; height:5px;}
+		@media @medium {min-height:50vh; max-height:700px;}
 	}
 	@media @medium {
 		.overlay-black {
