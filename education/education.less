@@ -122,17 +122,19 @@
 
 
 
-// education list pages
+// education text
 
 .course-title,
-.certification-title {
+.cert-title {
     font-weight: @normal;
 }
 .course-description,
-.certification-description {
+.cert-description {
     line-height: 1.5;
+    color: @dark-gray;
 }
-.course-title {
+.course-title,
+.cert-title {
     color: @black;
 }
 .course-date {
@@ -141,78 +143,54 @@
     font-size: 16px;
     .uppercase;
 }
-.course-description {
-    color: @dark-gray;
-}
-.education.list.page {
-
-    .certification.card {
-
-        .certification-title {
-            color: @black;
-        }
-        .certification-description {
-            color: @dark-gray;
-        }
-    }
-    .gridder-expanded-content {
-
-        .certification-title {
-            font-size: 36px;
-            line-height: 1.2;
-        }
-        .certification-badge {
-            .size(150px);
-        }
-        .certification-description {
-            font-family: @myriad-pro;
-            font-size: 18px;
-            line-height: 1.5;
-            font-weight: @light;
-            letter-spacing: .01em;
-        }
-        .certification-badge {
-            display: inline-block;
-
-            @media @medium {
-                margin: 0 @column-gutter 0 0;
-            }
-        }
-        .certification-details {
-
-            @media @medium {
-                .display(flex);
-                .align-items(center);
-            }
-        }
-    }
-}
 
 
 
-// education course page
+// single course and certification pages
 
-.education.course.page {
+.Education.Single.Page {
     font-family: @myriad-pro;
 
-    .course-title {
-        font-size: 30px;
-        @media @medium { font-size: 32px; }
-        @media @large { font-size: 36px; }
-        line-height: 1.2;
-        font-weight: @normal;
+    .course-header,
+    .cert-header {
+
+        .course-title,
+        .cert-title {
+            font-size: 30px;
+            @media @medium { font-size: 32px; }
+            @media @large { font-size: 36px; }
+            line-height: 1.2;
+            font-weight: @normal;
+        }
+        .course-description {
+            font-size: 16px;
+            @media @large { font-size: 18px; }
+            line-height: 1.5;
+            font-weight: @light;
+        }
     }
-    .course-description {
-        font-size: 16px;
+    .cert-badge {
+        display: inline-block;
+        .size(150px);
+
+        @media @medium {
+            margin: 0 @column-gutter 0 0;
+        }
+    }
+    .cert-description {
+        font-size: 14px;
         @media @large { font-size: 18px; }
         line-height: 1.5;
         font-weight: @light;
     }
-    .course-panel {
+    .course-panel,
+    .cert-panel {
         padding: @base-spacing;
         background-color: @light-gray;
         font-size: 15px;
         line-height: 1.4;
+    }
+    .course-panel {
 
         .course-panel-title {
             font-weight: @normal;
@@ -331,97 +309,5 @@
     .instructor-bio {
         font-size: 16px;
         font-weight: @light;
-    }
-}
-
-
-
-// gridder
-
-@gridder-nav-size: 80px;
-
-
-.gridder {
-
-    &.hasSelectedItem {
-        display: block;
-        font-size: 0;
-    }
-    .gridder-list .card {
-        cursor: pointer;
-
-        .solution-category {
-            .display(flex);
-            .align-items(center);
-            padding: @base-spacing / 2;
-            font-family: @myriad-pro;
-            font-weight: @bold;
-            .uppercase;
-        }
-    }
-    &.hasSelectedItem .gridder-list .card {
-        opacity: .5;
-
-        &:hover { opacity: 1; }
-    }
-}
-.gridder-content {
-    display: none;
-}
-.gridder-show {
-    width: 100%;
-    float: left;
-    padding: @column-gutter / 2;
-    font-size: initial;
-}
-.gridder-padding {
-    position: relative;
-    padding: @column-gutter / 2;
-    @media @medium { padding: @column-gutter; }
-    background-color: darken(@light-gray, 3%);
-    border: @thin-border @gray;
-}
-.gridder-navigation {
-    .display(inline-flex);
-    float: right;
-
-    a {
-        .flex(1, 1, auto);
-        display: block;
-        position: relative;
-        padding: @gridder-nav-size / 4;
-        .transition;
-
-        &.gridder-close {
-            .shape-x(@gridder-nav-size / 4, @dark-gray);
-            .order(1);
-        }
-        &.gridder-nav {
-
-            &:before {
-                content: "\e901";
-                display: block;
-                .position(absolute, 50%, 50%);
-                .translate(-50%, -50%);
-                font-family: @icon-font-name; .pretty-icon;
-                font-size: 16px; line-height: 1;
-                color: @dark-gray;
-            }
-            &.prev:before {
-                .transform(translate(-50%, -50%) rotate(180deg));
-                .transform-origin(center, center);
-            }
-            &.disabled {
-                opacity: .25;
-                cursor: default;
-            }
-        }
-        &.gridder-nav:not(.disabled):hover:before {
-            color: @black;
-        }
-        &.gridder-close:hover:before,
-        &.gridder-close:hover:after {
-            background-color: @black;
-        }
     }
 }
