@@ -5,14 +5,14 @@
 
 // new blog layout and styles
 
-.blog {
+.Blog {
 
     .author-photo {
         .object-fit(cover);
         .round;
     }
 
-    &.archive {
+    &.List {
 
         .query {
           font-weight: @bold;
@@ -39,7 +39,7 @@
         }
     }
 
-    &.single {
+    &.Single {
 
         .post {
 
@@ -173,7 +173,7 @@
             .display(flex);
             @media @medium { .justify-content(center); }
             .align-items(center);
-          
+
           &:hover {
             .author-photo, .author-name { border-color: @white; }
           }
@@ -198,7 +198,7 @@
             .uppercase;
             color: @gray;
         }
-        
+
       #featured-posts:not(.slick-initialized) {
         opacity: 0;
       }
@@ -226,7 +226,7 @@
 
 #comments {
   background-color: @light-gray;
-  
+
   #CommentsList {
     margin-bottom: @base-spacing * 2;
   }
@@ -296,7 +296,7 @@
       text-transform: none;
       letter-spacing: normal;
       color: @red;
-      
+
       &[style*="inline"] {
         display: block !important;
       }
@@ -307,7 +307,7 @@
       font-family: @myriad-pro;
       font-size: 16px;
       color: @green;
-      
+
       &.error {
         color: @red;
       }
