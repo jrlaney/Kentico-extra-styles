@@ -9,12 +9,12 @@
 
 #resource-information,
 #related-resources {
-  
+
   @media @medium { .padding-x(extract(@icon-sizes, 4) + (@column-gutter / 2)); }
 }
 
 @media @medium-only {
-  
+
   .mktoForm .mktoFormRow {
     .flex-direction(row);
   }
@@ -233,7 +233,7 @@
   white-space:nowrap;
 }
 #resources-list {
-      
+
       .resource-title {
         font-size: 24px;
         line-height: 1.4;
@@ -260,17 +260,17 @@
   text-transform:uppercase; letter-spacing:0.1em;
 }
 #resource-details .resource-company {
-    
+
     @resource-company-size: 16px;
-    
+
     .display(flex);
     .align-items(center);
     white-space: nowrap;
     font-size: @resource-company-size;
-    
+
     > a {
         .display(inline-flex);
-        
+
         .logo {
             .max-size(150px, 24px);
             margin: 0 0 0 .5em;
@@ -327,12 +327,12 @@
   transition:all 1s ease 0s;
 }
 
-.gated.resource #resource-information #resource-details .resource-button {
+.Resources.Gated.FormIncomplete #resource-information #resource-details .resource-button {
   opacity:0; margin-top:0px;
     -webkit-transition:all 0.2s ease 0s;
   transition:all 0.2s ease 0s;
 }
-.gated.resource #resource-information #resource-details .resource-button.active {opacity:1; margin-top:20px;}
+.Resources.Gated.FormIncomplete #resource-information #resource-details .resource-button.active {opacity:1; margin-top:20px;}
 
 /* styles for the resource image (document) */
 #resource-media .resource-thumbnail {
@@ -387,8 +387,8 @@
 #resource-information.success-story #resource-details .resource-button.document-button {display:none;}
 
 /*video play animations*/
-.gated.resource #resource-media .media-wrapper {padding-top:0px;}
-.gated.resource #resource-media.video-ready .media-wrapper {padding-top:200px;}
+.Resources.Gated.FormIncomplete #resource-media .media-wrapper {padding-top:0px;}
+.Resources.Gated.FormIncomplete #resource-media.video-ready .media-wrapper {padding-top:200px;}
 #resource-media .media-wrapper {
   padding-top:200px;
     -webkit-transition:padding 1s ease 0s;
@@ -411,7 +411,7 @@
 #resource-media.video-playing .media-wrapper .resource-link {opacity:0; z-index:-1;}
 
 #resource-dashboard {
-    
+
     &-bottom-bar {
         display: none;
         .justify-content(space-between);
@@ -419,7 +419,7 @@
         position: relative;
         z-index: 2;
         background-color: #3B3B3B;
-        
+
         .video-playing & {
             .display(flex);
         }
@@ -435,7 +435,7 @@
         opacity: 0;
         cursor: pointer;
         .transition;
-        
+
         .video-playing & {
             opacity: 1;
         }
@@ -451,7 +451,7 @@
 /* for the related resources row */
 #related-resources {
     border-bottom: @thin-border @gray;
-    
+
     .resource-title {
         font-size: 28px;
         line-height: 1.3;
@@ -477,7 +477,7 @@
 
 /* Small devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    
+
   /*FIX SPACING FOR GRID*/
   #resource-library-overview .search-col {padding-left:15px; padding-right:7.5px;}
   #resource-library-overview .sort-col,
@@ -622,7 +622,7 @@
   }
   /*video play animations*/
   #resource-media .media-wrapper,
-  .gated.resource #resource-media.video-ready .media-wrapper {padding-top:300px; }
+  .Resources.Gated.FormIncomplete #resource-media.video-ready .media-wrapper {padding-top:300px; }
 }
 
 

@@ -13,7 +13,7 @@ ol {
   margin-top: 0;
   padding-top: 0;
   padding-bottom: 0;
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 h1:last-child,
 .h1:last-child,
@@ -41,31 +41,31 @@ h6.line-break,
 p.line-break,
 ul.line-break,
 ol.line-break {
-  margin-top: -20px;
+  margin-top: -1.43rem;
 }
 ul li,
 ol li {
   padding-bottom: 0;
-  margin-bottom: 10px;
+  margin-bottom: 0.715rem;
 }
 ul li:last-child,
 ol li:last-child {
   margin-bottom: 0;
 }
 .line {
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 .line:last-child {
   margin-bottom: 0;
 }
 img {
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 img:last-child {
   margin-bottom: 0;
 }
 a > img:only-child {
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 #section-navigation-sticky-wrapper {
   max-width: 1200px;
@@ -476,13 +476,13 @@ a > img:only-child {
   -webkit-transition: all 1s ease 0s;
   transition: all 1s ease 0s;
 }
-.gated.resource #resource-information #resource-details .resource-button {
+.Resources.Gated.FormIncomplete #resource-information #resource-details .resource-button {
   opacity: 0;
   margin-top: 0px;
   -webkit-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
 }
-.gated.resource #resource-information #resource-details .resource-button.active {
+.Resources.Gated.FormIncomplete #resource-information #resource-details .resource-button.active {
   opacity: 1;
   margin-top: 20px;
 }
@@ -584,10 +584,10 @@ a > img:only-child {
   display: none;
 }
 /*video play animations*/
-.gated.resource #resource-media .media-wrapper {
+.Resources.Gated.FormIncomplete #resource-media .media-wrapper {
   padding-top: 0px;
 }
-.gated.resource #resource-media.video-ready .media-wrapper {
+.Resources.Gated.FormIncomplete #resource-media.video-ready .media-wrapper {
   padding-top: 200px;
 }
 #resource-media .media-wrapper {
@@ -897,7 +897,7 @@ a > img:only-child {
   }
   /*video play animations*/
   #resource-media .media-wrapper,
-  .gated.resource #resource-media.video-ready .media-wrapper {
+  .Resources.Gated.FormIncomplete #resource-media.video-ready .media-wrapper {
     padding-top: 300px;
   }
 }
