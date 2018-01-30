@@ -13,7 +13,7 @@ ol {
   margin-top: 0;
   padding-top: 0;
   padding-bottom: 0;
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 h1:last-child,
 .h1:last-child,
@@ -41,31 +41,31 @@ h6.line-break,
 p.line-break,
 ul.line-break,
 ol.line-break {
-  margin-top: -20px;
+  margin-top: -1.43rem;
 }
 ul li,
 ol li {
   padding-bottom: 0;
-  margin-bottom: 10px;
+  margin-bottom: 0.715rem;
 }
 ul li:last-child,
 ol li:last-child {
   margin-bottom: 0;
 }
 .line {
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 .line:last-child {
   margin-bottom: 0;
 }
 img {
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 img:last-child {
   margin-bottom: 0;
 }
 a > img:only-child {
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 .partner #hero.background-image {
   background-image: url('/getmedia/f7467b6a-e8f0-46bb-85cf-de71b8a35b7b/businesspeople-looking-at-mobile-device');
@@ -170,26 +170,26 @@ a > img:only-child {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.company.page h2.company-headline {
-  margin-bottom: 20px;
+.ClassCompanyStory.Page h2.company-headline {
+  margin-bottom: 1.43rem;
   font-weight: 400;
   color: #D9232E;
 }
-.company.page #company-pitch {
+.ClassCompanyStory.Page #company-pitch {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.4;
   font-weight: 300;
 }
-.company.page #company-pitch p {
+.ClassCompanyStory.Page #company-pitch p {
   font-size: 18px;
   line-height: 1.4;
   font-weight: 300;
 }
-.company.page .card.company-solution .company-solution-title {
+.ClassCompanyStory.Page .card.company-solution .company-solution-title {
   font-weight: 400;
 }
-.company.page .card.company-solution .company-solution-description {
+.ClassCompanyStory.Page .card.company-solution .company-solution-description {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.4;
@@ -332,7 +332,7 @@ a > img:only-child {
   letter-spacing: .01em;
 }
 .company-details .company-category-header {
-  margin-bottom: 10px;
+  margin-bottom: 0.715rem;
   font-size: 16px;
   line-height: 1.4;
   font-weight: 600;
@@ -369,11 +369,11 @@ a > img:only-child {
 }
 .partnership-logos .company-logo {
   max-width: 250px;
-  margin: 10px 0;
+  margin: 0.715rem 0;
 }
 @media only screen and (min-width: 768px) {
   .partnership-logos .company-logo {
-    margin: 0 20px;
+    margin: 0 1.43rem;
   }
 }
 @media only screen and (min-width: 980px) {
@@ -582,7 +582,7 @@ a > img:only-child {
   border-right: 2.5em solid #FFFFFF;
 }
 .company.page blockquote footer {
-  margin-top: 10px;
+  margin-top: 0.715rem;
   font-weight: 600;
   font-style: normal;
 }
