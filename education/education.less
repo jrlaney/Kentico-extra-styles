@@ -118,6 +118,18 @@
   }
 }
 
+#ecourseware {
+    //override the landing page form layout
+    #ecourseware-hero {
+        .flex-row {.justify-content(space-between);}
+        @media @xlarge {
+            .col-xl-5:first-child {.flex(0, 0, 56%); max-width:56%;}
+        }
+    }
+}
+//iframe styles for demos in magnific popups (education ecourseware page)
+.mfp-iframe-scaler {padding-top:58.6%;}
+
 
 
 

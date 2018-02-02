@@ -24,7 +24,7 @@
 //header, nav, .top-banner {display:none!important;}
 
 //ADD SPACERS TO THE TOP TO ACCOUNT FOR FIXED ELEMENTS IN PREVIEW MODE AND IN THE CMS
-@preview-mode-spacer:47px;
+@preview-mode-spacer:17px;
 @cms-viewer-spacer:110px;
 
 #container {background-color:@white;}
@@ -32,11 +32,11 @@ body {position:relative;}
 .CMS-preview-mode #primary-menu,
 .CMS-preview-mode.menu-opened #header {
     top:@preview-mode-spacer;
-    @media @medium {top:@preview-mode-spacer - 18;}
+    //@media @medium {top:@preview-mode-spacer - 18;}
 }
 .CMS-preview-mode #primary-menu {
     height: ~"calc(100% - @{preview-mode-spacer})";
-    @media @medium {height: ~"calc(100% - @{preview-mode-spacer} + 18px)";}
+    //@media @medium {height: ~"calc(100% - @{preview-mode-spacer} + 18px)";}
 }
 .cms-bootstrap .CMS-preview-mode #primary-menu,
 .cms-bootstrap .CMS-preview-mode.menu-opened #header {top:@cms-viewer-spacer;}
@@ -58,6 +58,7 @@ body.menu-opened {
     overflow:hidden;
     width:100%; height:60px;
     background-color:@white;
+
     .prevent-highlight;
     font-family:@myriad-pro;
     font-style:normal; font-weight:400;
@@ -69,9 +70,10 @@ body.menu-opened {
     .transition-open(~"all 0.2s ease-out 0.2s");
     .menu-opened & {
         position:fixed;
-        background-color:transparent;
+        background-color:@red;
         top:0; left:0;
         .transition-open(~"all 0.2s ease-out 0s");
+        @media @medium {background-color:transparent; border-bottom:none;}
     }
 
     //centered row with breakpoints
@@ -83,7 +85,8 @@ body.menu-opened {
         .justify-content(flex-end);
         .align-items(center);
         margin-left:auto; margin-right:auto;
-        @media @medium {max-width:@small-breakpoint;}
+        padding:0 15px;
+        @media @medium {max-width:@small-breakpoint; padding-right:0;}
         @media @large {max-width:@medium-breakpoint;}
         @media @xlarge {max-width:@large-breakpoint;}
     }
@@ -95,7 +98,6 @@ body.menu-opened {
         margin-right:auto;
         .logo-link {
             display:block; position:relative; z-index:2;
-            padding-left:15px;
             .logo-img {
                 display:block;
                 width:180px;
@@ -133,9 +135,11 @@ body.menu-opened {
         }//end tagline
     }//end logo col
     .trial-button {
-        margin:0px!important;
-        border:none!important;
+        display:none;
         @media @medium {
+            display:inline-block;
+            margin:0px!important;
+            border:none!important;
             .transition(.2s, ease-out, all, 0.2s);
             .menu-opened & {
                 background-color:@red;
@@ -148,8 +152,9 @@ body.menu-opened {
     .primary-menu-button {
         position:relative;
         cursor:pointer;
-        height:60px; width:100px;
+        height:60px; width:45px;
         @media @medium {
+            width:100px;
             &:hover {
                 .text.closed {color:@red;}
                 .menu-toggle .line,
@@ -157,23 +162,26 @@ body.menu-opened {
             }
         }
         .text {
-            display:block; position:absolute;
-            top:20px; left:15px;
-            color:@monsoon;
-            &.closed {
-                opacity:1; .translateY(0); color:@monsoon;
-                .transition-open(~"opacity 0.2s ease-out 0.5s, transform 0.2s ease-out 0.5s, color 0.2s ease-out 0s");
-                .menu-opened & {
-                    opacity:0; transform:translateY(-10px);
-                    .transition-open(all 0.2s ease-out 0s);
+            display:none;
+            @media @medium {
+                display:block; position:absolute;
+                top:20px; left:15px;
+                color:@monsoon;
+                &.closed {
+                    opacity:1; .translateY(0); color:@monsoon;
+                    .transition-open(~"opacity 0.2s ease-out 0.5s, transform 0.2s ease-out 0.5s, color 0.2s ease-out 0s");
+                    .menu-opened & {
+                        opacity:0; transform:translateY(-10px);
+                        .transition-open(all 0.2s ease-out 0s);
+                    }
                 }
-            }
-            &.opened {
-                opacity:0; transform:translateY(10px); color:@white;
-                .transition-open(all 0.2s ease-out 0s);
-                .menu-opened & {
-                    opacity:1; transform:translateY(0);
-                    .transition-open(all 0.2s ease-out 0.7s);
+                &.opened {
+                    opacity:0; transform:translateY(10px); color:@white;
+                    .transition-open(all 0.2s ease-out 0s);
+                    .menu-opened & {
+                        opacity:1; transform:translateY(0);
+                        .transition-open(all 0.2s ease-out 0.7s);
+                    }
                 }
             }
         }//end text
@@ -206,10 +214,6 @@ body.menu-opened {
             }//end menu toggle line
         }//end menu toggle
     }//end primary menu button
-    @media @small-only {
-        .logo-col .tagline,
-        .trial-button {display:none;}
-    }
 }
 //when the menu is opened, make it so the site content cant scroll
 @media @medium {body.menu-opened {overflow:hidden;}}
@@ -221,6 +225,7 @@ body.menu-opened {
     overflow:hidden;
     width:100%; height:100%;
     top:0; left:0; bottom:0; right:0;
+
     font-family:@myriad-pro;
     font-size:18px; line-height:24px;
     font-style:normal; font-weight:300;
@@ -245,7 +250,9 @@ body.menu-opened {
     }
 
     .node-navigation {
-        width:100%; overflow-y:auto;
+        width:100%; min-height:100%;
+        overflow:hidden;
+        overflow-y:auto;
         @media @medium {
             .display(flex);
             .flex(1, 1, auto);
@@ -269,16 +276,26 @@ body.menu-opened {
         .flex-wrap(nowrap);
     	.align-items(flex-start);
         position:relative;
-        width:30%;
+        width:100%; min-height:100%;
         padding-top:60px;
-        &.level-1 {padding-top:80px;}
+        &.level-1 {z-index:2; padding-top:80px;}
 
         //animate in when menu is opened
-        opacity:0; .translateX(-10%);
+        opacity:0; .translateX(-100%);
         .transition-open(~"opacity 0.2s ease-in 0s, transform 0.3s ease-out 0s");
         .menu-opened & {
             opacity:1; .translateX(0);
             .transition-open(~"opacity 0.3s ease-in 0.3s, transform 0.3s ease-in 0.3s");
+        }
+
+        @media @medium {
+            width:30%;
+            &.level-1 {padding-top:80px;}
+            //animate in when menu is opened
+            .translateX(-10%);
+            .menu-opened & {
+                .translateX(0);
+            }
         }
 
         //this forces the child panels to be under the parent panel when sliding out
@@ -557,66 +574,81 @@ body.menu-opened {
         display:block; position:absolute; z-index:1;
         width:100%; height:100%;
         top:0; left:0;
+        background-color:@black;
 
-        //for the header part
-        &:after, &:before {
-            position:absolute; z-index:0;
-            content:'';
-            height:100%; width:100%;
-            top:0; bottom:0;
+        //animations
+        .transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.2s ease-out 0.2s");
+        opacity:0; .translateX(-100%);
+        .menu-opened & {
+            opacity:1;
+            .translateX(0%);
+            .transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s");
         }
-        &:after {
-            right:50%;
-            background-color:lighten(@black, 10%);
-
-            //animate in when menu is opened
-            opacity:0; .translateX(~"calc(-240px + -20%)");
-            .transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.2s ease-out 0.2s, background-color 0.2s ease-out 0s");
-            .menu-opened & {
-                opacity:1; .translateX(-240px);
-                .transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s, background-color 0.2s ease-out 0s");
+        @media @medium {
+            background-color:transparent;
+            //for the header part
+            &:after, &:before {
+                position:absolute; z-index:0;
+                content:'';
+                height:100%; width:100%;
+                top:0; bottom:0;
             }
-        }
-        &:before {
-            left:50%;
-            //background-color:darken(@black, 10%);
-            background-color:@black;
-            //border-bottom:1px solid fade(@white, 40%);
+            &:after {
+                right:50%;
+                background-color:lighten(@black, 10%);
 
-            //animate in when menu is opened
-            opacity:0; .translateX(~"calc(-240px + 20%)");
-            .transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.3s ease-out 0.2s");
-            .menu-opened & {
-                opacity:1; .translateX(-240px);
-                .transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s");
+                //animate in when menu is opened
+                opacity:0; .translateX(~"calc("-@large-breakpoint / 5 ~" - 20%)");
+                @media @large {}
+                .transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.2s ease-out 0.2s, background-color 0.2s ease-out 0s");
+                .menu-opened & {
+                    opacity:1; .translateX(-@large-breakpoint / 5);
+                    .transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s, background-color 0.2s ease-out 0s");
+                }
+            }
+            &:before {
+                left:50%;
+                //background-color:darken(@black, 10%);
+                background-color:@black;
+                //border-bottom:1px solid fade(@white, 40%);
+
+                //animate in when menu is opened
+                opacity:0; .translateX(~"calc("-@large-breakpoint / 5 ~"+ 20%)");
+                .transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.3s ease-out 0.2s");
+                .menu-opened & {
+                    opacity:1; .translateX(-@large-breakpoint / 5);
+                    .transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s");
+                }
             }
         }
     }//end primary menu background
 
     //color-change stuff for background panels
-    &.red {
-        .node-panel.level-1:after {background-color:@red;}
-        .menu-footer .dropup .dropdown-menu {background-color:darken(@red, 20%);}
-        .primary-menu-background:after {background-color:@red;}
-    }
-    &.orange {
-        .node-panel.level-1:after {background-color:@orange;}
-        .menu-footer .dropup .dropdown-menu {background-color:darken(@orange, 20%);}
-        .primary-menu-background:after {background-color:@orange;}
-    }
-    &.green {
-        .node-panel.level-1:after {background-color:@green;}
-        .menu-footer .dropup .dropdown-menu {background-color:darken(@green, 10%);}
-        .primary-menu-background:after {background-color:@green;}
-    }
-    &.blue {
-        .node-panel.level-1:after {background-color:@blue;}
-        .menu-footer .dropup .dropdown-menu {background-color:darken(@blue, 20%);}
-        .primary-menu-background:after {background-color:@blue;}
-    }
-    &.navy-blue {
-        .node-panel.level-1:after {background-color:@navy-blue;}
-        .menu-footer .dropup .dropdown-menu {background-color:darken(@navy-blue, 10%);}
-        .primary-menu-background:after {background-color:@navy-blue;}
+    @media @medium {
+        &.red {
+            .node-panel.level-1:after {background-color:@red;}
+            .menu-footer .dropup .dropdown-menu {background-color:darken(@red, 20%);}
+            .primary-menu-background:after {background-color:@red;}
+        }
+        &.orange {
+            .node-panel.level-1:after {background-color:@orange;}
+            .menu-footer .dropup .dropdown-menu {background-color:darken(@orange, 20%);}
+            .primary-menu-background:after {background-color:@orange;}
+        }
+        &.green {
+            .node-panel.level-1:after {background-color:@green;}
+            .menu-footer .dropup .dropdown-menu {background-color:darken(@green, 10%);}
+            .primary-menu-background:after {background-color:@green;}
+        }
+        &.blue {
+            .node-panel.level-1:after {background-color:@blue;}
+            .menu-footer .dropup .dropdown-menu {background-color:darken(@blue, 20%);}
+            .primary-menu-background:after {background-color:@blue;}
+        }
+        &.navy-blue {
+            .node-panel.level-1:after {background-color:@navy-blue;}
+            .menu-footer .dropup .dropdown-menu {background-color:darken(@navy-blue, 10%);}
+            .primary-menu-background:after {background-color:@navy-blue;}
+        }
     }
 }

@@ -91,6 +91,20 @@
 #payment-options .payment-option.most-popular {
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 }
+#ecourseware #ecourseware-hero .flex-row {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 1200px) {
+  #ecourseware #ecourseware-hero .col-xl-5:first-child {
+    -webkit-flex: 0 0 56%;
+    flex: 0 0 56%;
+    max-width: 56%;
+  }
+}
+.mfp-iframe-scaler {
+  padding-top: 58.6%;
+}
 .course-title,
 .cert-title {
   font-weight: 400;

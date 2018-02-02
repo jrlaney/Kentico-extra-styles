@@ -303,35 +303,40 @@ section#symposium {
 .triangle-group.black:before {
   border-right-color: #333333;
 }
-#world2018-navbar {
-  border-bottom: 1px solid #ddd;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+.number-group {
+  position: relative;
+  padding: 15px 0 5px 30px;
 }
-#world2018-navbar .logo-lockup {
-  padding: 15px;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
-}
-#world2018-navbar .logo-lockup:hover {
-  background: #f2f2f2;
-}
-#world2018-navbar .logo-lockup .logo {
-  height: 50px;
-  padding-right: 15px;
-  margin-bottom: 0;
-}
-#world2018-navbar .logo-lockup .text {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #777777;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1em;
-}
-#world2018-navbar .logo-lockup .text .top-line {
+.number-group:before {
   display: block;
-  font-size: 85%;
-  margin-bottom: 5px;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 0px;
+  left: 0px;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 600;
+  color: #DDDDDD;
+}
+@media only screen and (min-width: 768px) {
+  .number-group {
+    padding-top: 30px;
+    padding-left: 50px;
+  }
+  .number-group:before {
+    font-size: 120px;
+    line-height: 120px;
+  }
+}
+.number-group.one:before {
+  content: '1.';
+}
+.number-group.two:before {
+  content: '2.';
+}
+.number-group.three:before {
+  content: '3.';
 }
 #faq .accordion {
   margin-bottom: 0.715rem;

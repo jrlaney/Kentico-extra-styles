@@ -3,6 +3,63 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.triangle-group {
+  position: relative;
+  padding: 5px 0 5px 20px;
+}
+.triangle-group:before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #D9232E;
+  border-top: 10px solid transparent;
+}
+@media only screen and (min-width: 768px) {
+  .triangle-group {
+    padding-left: 25px;
+  }
+  .triangle-group:before {
+    left: -15px;
+    border-left-width: 15px;
+    border-right-width: 15px;
+    border-top-width: 15px;
+  }
+}
+.triangle-group.red:before {
+  border-right-color: #D9232E;
+}
+.triangle-group.orange:before {
+  border-right-color: #FF9100;
+}
+.triangle-group.green:before {
+  border-right-color: #68AA00;
+}
+.triangle-group.blue:before {
+  border-right-color: #4789A3;
+}
+.triangle-group.navy-blue:before {
+  border-right-color: #11566F;
+}
+.triangle-group.white:before {
+  border-right-color: #FFFFFF;
+}
+.triangle-group.light-gray:before {
+  border-right-color: #f2f2f2;
+}
+.triangle-group.gray:before {
+  border-right-color: #CCCCCC;
+}
+.triangle-group.dark-gray:before {
+  border-right-color: #999999;
+}
+.triangle-group.black:before {
+  border-right-color: #333333;
+}
 .top-banner.overview {
   background-image: url(/Strategy/media/images/company/company_hero-bkg_overview.jpg);
 }
@@ -400,7 +457,7 @@
   content: '\e98a';
 }
 #values-slider .slick-dots > li .values-nav.cheerful:before {
-  content: '\e93a';
+  content: '\e9ab';
 }
 #values-slider .slick-dots > li.slick-active .values-nav {
   opacity: 1;
@@ -713,7 +770,73 @@
 .global-team {
   background-image: url(/Strategy/media/images/company/careers/careers_overview_global-team-bkg.jpg);
 }
-/*new job search*/
+#roles-slider .role-bio-photo {
+  padding: 20px 20px 20px 0;
+  margin: 0;
+}
+@media only screen and (max-width: 767px) {
+  #roles-slider .role-bio-photo {
+    width: 200px;
+  }
+}
+#roles-slider .slick-slide {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  min-height: 20px;
+}
+@media only screen and (max-width: 767px) {
+  #roles-slider .slick-slide .answers-col {
+    max-height: 600px;
+    overflow: auto;
+    background-color: #f2f2f2;
+  }
+}
+#roles-nav {
+  padding: 0 50px;
+}
+#roles-nav .grid-item {
+  padding: 7.5px;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}
+#roles-nav .grid-item .role-nav-card {
+  cursor: pointer;
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
+  border: 1px solid #FFFFFF;
+  opacity: 0.6;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+#roles-nav .grid-item .role-nav-card .role-bio-photo {
+  margin: 0 10px 0 0;
+}
+#roles-nav .grid-item .role-nav-card .text > p {
+  margin: 0;
+  padding: 0;
+}
+#roles-nav .grid-item .role-nav-card .text > p:first-child {
+  margin-bottom: 5px;
+}
+@media only screen and (max-width: 767px) {
+  #roles-nav .grid-item .role-nav-card {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+  #roles-nav .grid-item .role-nav-card .role-bio-photo {
+    margin: 0 0 10px 0;
+  }
+}
+#roles-nav .grid-item.slick-current .role-nav-card {
+  opacity: 0.99;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  background-color: #FFFFFF;
+  border-color: #DDDDDD;
+  cursor: default;
+}
 .smartWidget .srSearch {
   min-width: 200px;
   height: auto;
