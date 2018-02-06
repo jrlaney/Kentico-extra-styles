@@ -13,7 +13,7 @@ ol {
   margin-top: 0;
   padding-top: 0;
   padding-bottom: 0;
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 h1:last-child,
 .h1:last-child,
@@ -41,37 +41,37 @@ h6.line-break,
 p.line-break,
 ul.line-break,
 ol.line-break {
-  margin-top: -20px;
+  margin-top: -1.43rem;
 }
 ul li,
 ol li {
   padding-bottom: 0;
-  margin-bottom: 10px;
+  margin-bottom: 0.715rem;
 }
 ul li:last-child,
 ol li:last-child {
   margin-bottom: 0;
 }
 .line {
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 .line:last-child {
   margin-bottom: 0;
 }
 img {
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 img:last-child {
   margin-bottom: 0;
 }
 a > img:only-child {
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 .icon-cta {
   display: inline-block;
   text-align: center;
   vertical-align: top;
-  padding: 20px;
+  padding: 1.43rem;
   color: #333333;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
   -webkit-transition: all 0.2s ease-out 0s;
@@ -98,8 +98,8 @@ a > img:only-child {
 }
 @media only screen and (min-width: 768px) {
   .icon-cta {
-    padding: 20px 30px;
-    margin-right: 20px;
+    padding: 1.43rem 2.145rem;
+    margin-right: 1.43rem;
   }
   .icon-cta:last-child {
     margin-right: 0;
@@ -110,7 +110,7 @@ a > img:only-child {
 }
 @media only screen and (min-width: 980px) {
   .icon-cta {
-    padding: 20px 40px;
+    padding: 1.43rem 2.86rem;
   }
 }
 .icon-cta.white {

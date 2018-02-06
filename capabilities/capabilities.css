@@ -13,7 +13,7 @@ ol {
   margin-top: 0;
   padding-top: 0;
   padding-bottom: 0;
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 h1:last-child,
 .h1:last-child,
@@ -41,31 +41,31 @@ h6.line-break,
 p.line-break,
 ul.line-break,
 ol.line-break {
-  margin-top: -20px;
+  margin-top: -1.43rem;
 }
 ul li,
 ol li {
   padding-bottom: 0;
-  margin-bottom: 10px;
+  margin-bottom: 0.715rem;
 }
 ul li:last-child,
 ol li:last-child {
   margin-bottom: 0;
 }
 .line {
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 .line:last-child {
   margin-bottom: 0;
 }
 img {
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 img:last-child {
   margin-bottom: 0;
 }
 a > img:only-child {
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 .capabilities .page-title {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -185,7 +185,7 @@ a > img:only-child {
 }
 .capabilities.child.page #next-page .next-page-title {
   display: block;
-  margin-top: -10px;
+  margin-top: -0.715rem;
 }
 .offpage-image {
   width: 150%;
@@ -1217,7 +1217,7 @@ a > img:only-child {
   }
 }
 #mobile #mobile-slider .slide {
-  padding: 20px;
+  padding: 1.43rem;
   -webkit-flex-direction: column;
   flex-direction: column;
 }
@@ -1781,8 +1781,8 @@ a > img:only-child {
 #transactions #hero .img-col .iphone {
   position: absolute;
   width: 35%;
-  right: 20px;
-  bottom: 20px;
+  right: 1.43rem;
+  bottom: 1.43rem;
   z-index: 1;
 }
 #transactions #take-action .image-row {

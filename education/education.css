@@ -13,7 +13,7 @@ ol {
   margin-top: 0;
   padding-top: 0;
   padding-bottom: 0;
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 h1:last-child,
 .h1:last-child,
@@ -41,31 +41,31 @@ h6.line-break,
 p.line-break,
 ul.line-break,
 ol.line-break {
-  margin-top: -20px;
+  margin-top: -1.43rem;
 }
 ul li,
 ol li {
   padding-bottom: 0;
-  margin-bottom: 10px;
+  margin-bottom: 0.715rem;
 }
 ul li:last-child,
 ol li:last-child {
   margin-bottom: 0;
 }
 .line {
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 .line:last-child {
   margin-bottom: 0;
 }
 img {
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 img:last-child {
   margin-bottom: 0;
 }
 a > img:only-child {
-  margin-bottom: 20px;
+  margin-bottom: 1.43rem;
 }
 #section-navigation-sticky-wrapper {
   max-width: 1200px;
@@ -127,7 +127,7 @@ a > img:only-child {
   max-height: 100px;
 }
 #testimonials-slider .slick-dots {
-  margin-top: 20px;
+  margin-top: 1.43rem;
 }
 #delivery-options .macbook-air {
   width: 85%;
@@ -186,7 +186,7 @@ a > img:only-child {
   color: #333333;
 }
 .course-date {
-  margin-top: -15px;
+  margin-top: -1.0725rem;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   text-transform: uppercase;
@@ -261,7 +261,7 @@ a > img:only-child {
   }
 }
 .education.course.page .course-panel {
-  padding: 20px;
+  padding: 1.43rem;
   background-color: #f2f2f2;
   font-size: 15px;
   line-height: 1.4;
@@ -314,7 +314,7 @@ a > img:only-child {
   color: transparent;
 }
 .education.course.page .instructor-name {
-  margin-bottom: 5px;
+  margin-bottom: 0.3575rem;
   font-weight: 400;
 }
 .education.course.page .instructor-location {
@@ -371,7 +371,7 @@ a > img:only-child {
   color: transparent;
 }
 .instructor-popup .instructor-name {
-  margin-bottom: 5px;
+  margin-bottom: 0.3575rem;
   font-weight: 400;
 }
 .instructor-popup .instructor-location {
@@ -397,7 +397,7 @@ a > img:only-child {
   display: flex;
   -webkit-align-items: center;
   align-items: center;
-  padding: 10px;
+  padding: 0.715rem;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 600;
   text-transform: uppercase;
