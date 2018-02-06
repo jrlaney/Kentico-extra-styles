@@ -1,72 +1,3 @@
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol {
-  margin-top: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-}
-h1:last-child,
-.h1:last-child,
-h2:last-child,
-.h2:last-child,
-h3:last-child,
-.h3:last-child,
-h4:last-child,
-h5:last-child,
-h6:last-child,
-p:last-child,
-ul:last-child,
-ol:last-child {
-  margin-bottom: 0;
-}
-h1.line-break,
-.h1.line-break,
-h2.line-break,
-.h2.line-break,
-h3.line-break,
-.h3.line-break,
-h4.line-break,
-h5.line-break,
-h6.line-break,
-p.line-break,
-ul.line-break,
-ol.line-break {
-  margin-top: -20px;
-}
-ul li,
-ol li {
-  padding-bottom: 0;
-  margin-bottom: 10px;
-}
-ul li:last-child,
-ol li:last-child {
-  margin-bottom: 0;
-}
-.line {
-  margin-bottom: 20px;
-}
-.line:last-child {
-  margin-bottom: 0;
-}
-img {
-  margin-bottom: 20px;
-}
-img:last-child {
-  margin-bottom: 0;
-}
-a > img:only-child {
-  margin-bottom: 20px;
-}
 #section-navigation-sticky-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -476,13 +407,13 @@ a > img:only-child {
   -webkit-transition: all 1s ease 0s;
   transition: all 1s ease 0s;
 }
-.gated.resource #resource-information #resource-details .resource-button {
+.Resources.Gated.FormIncomplete #resource-information #resource-details .resource-button {
   opacity: 0;
   margin-top: 0px;
   -webkit-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
 }
-.gated.resource #resource-information #resource-details .resource-button.active {
+.Resources.Gated.FormIncomplete #resource-information #resource-details .resource-button.active {
   opacity: 1;
   margin-top: 20px;
 }
@@ -584,10 +515,10 @@ a > img:only-child {
   display: none;
 }
 /*video play animations*/
-.gated.resource #resource-media .media-wrapper {
+.Resources.Gated.FormIncomplete #resource-media .media-wrapper {
   padding-top: 0px;
 }
-.gated.resource #resource-media.video-ready .media-wrapper {
+.Resources.Gated.FormIncomplete #resource-media.video-ready .media-wrapper {
   padding-top: 200px;
 }
 #resource-media .media-wrapper {
@@ -897,7 +828,7 @@ a > img:only-child {
   }
   /*video play animations*/
   #resource-media .media-wrapper,
-  .gated.resource #resource-media.video-ready .media-wrapper {
+  .Resources.Gated.FormIncomplete #resource-media.video-ready .media-wrapper {
     padding-top: 300px;
   }
 }

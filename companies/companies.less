@@ -1,5 +1,4 @@
 @import '../settings.less';
-@import '../overrides.less';
 
 
 
@@ -74,9 +73,9 @@
 #companies-list {
 
     .company.card {
-        
+
         .Gecko & { display: block !important; }
-        
+
         .company-details {
             display: none;
         }
@@ -88,20 +87,20 @@
     }
 }
 
-.company.page {
-    
+.ClassCompanyStory.Page {
+
     h2.company-headline {
         margin-bottom: @base-spacing;
         font-weight: @normal;
         color: @red;
     }
-    
+
     #company-pitch {
         font-family: @myriad-pro;
         font-size: 18px;
         line-height: 1.4;
         font-weight: @light;
-        
+
         p {
             font-size: 18px;
             line-height: 1.4;
@@ -109,7 +108,7 @@
         }
     }
     .card.company-solution {
-        
+
         .company-solution-title {
             font-weight: @normal;
         }
@@ -128,17 +127,17 @@
 
 
 .gridder.cards {
-    
+
     .gridder-list {
         width: 100%;
-        
+
         .card {
             cursor: pointer;
         }
     }
     &.hasSelectedItem .gridder-list .card {
         opacity: .5;
-        
+
         &:hover { opacity: 1; }
     }
 }
@@ -162,20 +161,20 @@
 .gridder-navigation {
     .display(inline-flex);
     float: right;
-    
+
     a {
         .flex(1, 1, auto);
         display: block;
         position: relative;
         padding: @gridder-nav-size / 4;
         .transition;
-        
+
         &.gridder-close {
             .shape-x(@gridder-nav-size / 4, @dark-gray);
             .order(1);
         }
         &.gridder-nav {
-            
+
             &:before {
                 content: "\e901";
                 display: block;
@@ -205,7 +204,7 @@
 }
 .company-details {
     font-family: @myriad-pro;
-    
+
     .grid-item {
         .flex-direction(column);
     }
