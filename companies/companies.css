@@ -1,4 +1,4 @@
-.partner #hero.background-image {
+.Partners #hero.background-image {
   background-image: url('/getmedia/f7467b6a-e8f0-46bb-85cf-de71b8a35b7b/businesspeople-looking-at-mobile-device');
 }
 #become-a-partner.background-image {
@@ -312,12 +312,12 @@
     max-width: 300px;
   }
 }
-.oem.page #platform .accordion .toggler {
+.OEM.Page #platform .accordion .toggler {
   padding: 15px 20px;
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
 }
-.oem.page #platform .accordion .toggler:before {
+.OEM.Page #platform .accordion .toggler:before {
   display: inline-block;
   position: relative;
   content: '';
@@ -334,23 +334,23 @@
   left: auto;
   top: auto;
 }
-.oem.page #platform .accordion .toggler:after {
+.OEM.Page #platform .accordion .toggler:after {
   display: none;
 }
-.oem.page #platform .accordion .toggler.expanded {
+.OEM.Page #platform .accordion .toggler.expanded {
   background-color: #D9232E;
   color: #FFFFFF;
 }
-.oem.page #platform .accordion .toggler.expanded:before {
+.OEM.Page #platform .accordion .toggler.expanded:before {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
   border-top-color: #FFFFFF;
 }
-.oem.page #platform .accordion .element {
+.OEM.Page #platform .accordion .element {
   padding: 15px 20px;
 }
 @media only screen and (min-width: 768px) {
-  .oem.page #platform .panelstack.vertical-panelstack {
+  .OEM.Page #platform .panelstack.vertical-panelstack {
     display: -webkit-flex;
     display: flex;
     -webkit-flex: 0 1 auto;
@@ -367,8 +367,8 @@
     align-items: stretch;
     background-color: #f2f2f2;
   }
-  .oem.page #platform .panelstack.vertical-panelstack .panel-nav,
-  .oem.page #platform .panelstack.vertical-panelstack .panel-content {
+  .OEM.Page #platform .panelstack.vertical-panelstack .panel-nav,
+  .OEM.Page #platform .panelstack.vertical-panelstack .panel-content {
     -webkit-flex: 0 1 auto;
     flex: 0 1 auto;
     max-width: none;
@@ -382,28 +382,28 @@
     align-items: flex-start;
     float: none;
   }
-  .oem.page #platform .panelstack.vertical-panelstack .panel-nav {
+  .OEM.Page #platform .panelstack.vertical-panelstack .panel-nav {
     z-index: 1;
     padding-bottom: 0;
     width: 40%;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
     background-color: #333333;
   }
-  .oem.page #platform .panelstack.vertical-panelstack .panel-nav .panel-nav-elem {
+  .OEM.Page #platform .panelstack.vertical-panelstack .panel-nav .panel-nav-elem {
     width: 100%;
     border: none;
   }
-  .oem.page #platform .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a {
+  .OEM.Page #platform .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a {
     color: #FFFFFF;
     padding: 15px 40px 15px 20px;
     opacity: 0.5;
   }
-  .oem.page #platform .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a:hover {
+  .OEM.Page #platform .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a:hover {
     color: #FFFFFF;
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.1);
   }
-  .oem.page #platform .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a:before {
+  .OEM.Page #platform .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a:before {
     display: block;
     position: absolute;
     content: '';
@@ -420,15 +420,15 @@
     -webkit-transition: all 0.2s ease-out 0s;
     transition: all 0.2s ease-out 0s;
   }
-  .oem.page #platform .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a:after {
+  .OEM.Page #platform .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a:after {
     display: none;
   }
-  .oem.page #platform .panelstack.vertical-panelstack .panel-nav .panel-nav-elem.active-panel > a {
+  .OEM.Page #platform .panelstack.vertical-panelstack .panel-nav .panel-nav-elem.active-panel > a {
     opacity: 1;
     background-color: #D9232E;
     color: #FFFFFF;
   }
-  .oem.page #platform .panelstack.vertical-panelstack .panel-nav .panel-nav-elem.active-panel > a:before {
+  .OEM.Page #platform .panelstack.vertical-panelstack .panel-nav .panel-nav-elem.active-panel > a:before {
     opacity: 1;
     border-top-width: 10px;
     border-bottom-width: 10px;
@@ -437,7 +437,7 @@
     -webkit-transform: translate(25px, -50%);
     transform: translate(25px, -50%);
   }
-  .oem.page #platform .panelstack.vertical-panelstack .panel-content {
+  .OEM.Page #platform .panelstack.vertical-panelstack .panel-content {
     z-index: 0;
     width: 60%;
     border: none;
@@ -449,10 +449,10 @@
   }
 }
 @media only screen and (min-width: 980px) {
-  .oem.page #platform .panelstack.vertical-panelstack .panel-nav {
+  .OEM.Page #platform .panelstack.vertical-panelstack .panel-nav {
     width: 30%;
   }
-  .oem.page #platform .panelstack.vertical-panelstack .panel-content {
+  .OEM.Page #platform .panelstack.vertical-panelstack .panel-content {
     width: 70%;
     padding: 30px 50px;
   }
@@ -493,7 +493,7 @@
     transform: translateX(0);
   }
 }
-.company.page blockquote {
+.Company.Page blockquote {
   position: relative;
   margin: 0;
   padding-left: 2.5em;
@@ -502,7 +502,7 @@
   font-weight: 300;
   font-size: 16px;
 }
-.company.page blockquote:before {
+.Company.Page blockquote:before {
   content: '';
   display: block;
   position: absolute;
@@ -512,7 +512,7 @@
   border-top: 2.5em solid transparent;
   border-right: 2.5em solid #FFFFFF;
 }
-.company.page blockquote footer {
+.Company.Page blockquote footer {
   margin-top: 0.715rem;
   font-weight: 600;
   font-style: normal;
