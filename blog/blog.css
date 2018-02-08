@@ -1,6 +1,6 @@
 .Blog .author-photo {
-  width: cover;
-  height: cover;
+  width: 40px;
+  height: 40px;
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: 50%;
@@ -29,8 +29,8 @@
   font-weight: 400;
 }
 .Blog.Single .post section {
-  padding-top: 1.43rem;
-  padding-bottom: 1.43rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .Blog.Single .post h4,
 .Blog.Single .post h5,
@@ -62,25 +62,25 @@
   font-weight: 400;
 }
 .Blog.Single .post * + h4 {
-  margin-top: 2.86rem;
+  margin-top: 40px;
 }
 .Blog.Single .post .post-content img,
 .Blog.Single .post .post-content div,
 .Blog.Single .post .post-content figure,
 .Blog.Single .post .post-content iframe {
-  margin: 2.86rem 0;
+  margin: 40px 0;
 }
 .Blog.Single .post .post-content img {
   padding: 0 !important;
 }
 .Blog.Single .post .post-content img.float.right {
-  margin: 0 0 1.43rem 1.43rem;
+  margin: 0 0 20px 20px;
 }
 .Blog.Single .post .post-content img.float.left {
-  margin: 0 1.43rem 1.43rem 0;
+  margin: 0 20px 20px 0;
 }
 .Blog.Single .post .post-content figure img {
-  margin: 0.715rem 0;
+  margin: 10px 0;
 }
 .Blog.Single .post .post-content figure figcaption {
   font-size: 14px;
@@ -105,7 +105,7 @@
   display: block;
   width: 50px;
   height: 5px;
-  margin: 2.86rem auto 0 auto;
+  margin: 40px auto 0 auto;
   background-color: #D9232E;
 }
 .Blog.Single .post .post-cta:before {
@@ -113,7 +113,7 @@
   display: block;
   width: 50px;
   height: 5px;
-  margin: 0 auto 2.86rem auto;
+  margin: 0 auto 40px auto;
   background-color: #CCCCCC;
 }
 .Blog.Single .post .post-tags {
@@ -123,12 +123,12 @@
   color: #999999;
 }
 .Blog.Single .post .post-author .post-author-panel {
-  padding: 2.145rem;
+  padding: 30px;
   background-color: #f2f2f2;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 }
 .Blog.Single .post .post-author .author-title {
-  margin-bottom: 0.715rem;
+  margin-bottom: 10px;
   font-weight: 600;
 }
 .Blog.Single .post .post-author .author-photo {
@@ -141,27 +141,27 @@
   font-weight: 400;
   letter-spacing: 0.01em;
 }
-.Blog #hero {
+.Blog #page-hero {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.6;
 }
-.Blog #hero .post-author {
+.Blog #page-hero .post-author {
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
   align-items: center;
 }
 @media only screen and (min-width: 768px) {
-  .Blog #hero .post-author {
+  .Blog #page-hero .post-author {
     -webkit-justify-content: center;
     justify-content: center;
   }
 }
-.Blog #hero .post-author:hover .author-photo,
-.Blog #hero .post-author:hover .author-name {
+.Blog #page-hero .post-author:hover .author-photo,
+.Blog #page-hero .post-author:hover .author-name {
   border-color: #FFFFFF;
 }
-.Blog #hero .author-photo {
+.Blog #page-hero .author-photo {
   margin: 0;
   width: 40px;
   height: 40px;
@@ -169,7 +169,7 @@
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
 }
-.Blog #hero .author-name {
+.Blog #page-hero .author-name {
   display: inline-block;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -180,16 +180,16 @@
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
 }
-.Blog #hero .post-date {
+.Blog #page-hero .post-date {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #CCCCCC;
 }
-.Blog #hero #featured-posts:not(.slick-initialized) {
+.Blog #page-hero #featured-posts:not(.slick-initialized) {
   opacity: 0;
 }
-.Blog #hero .featured-post {
+.Blog #page-hero .featured-post {
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
@@ -198,13 +198,13 @@
   padding: 40px 20px 80px;
 }
 @media only screen and (min-width: 768px) {
-  .Blog #hero .featured-post {
+  .Blog #page-hero .featured-post {
     height: 500px;
     padding: 60px 0 80px;
   }
 }
 @media only screen and (min-width: 980px) {
-  .Blog #hero .featured-post {
+  .Blog #page-hero .featured-post {
     height: 600px;
     padding: 80px 0;
   }
@@ -213,11 +213,11 @@
   background-color: #f2f2f2;
 }
 #comments #CommentsList {
-  margin-bottom: 2.86rem;
+  margin-bottom: 40px;
 }
 #comments .Comment {
-  margin: 1.43rem 7.5px;
-  padding: 2.145rem;
+  margin: 20px 7.5px;
+  padding: 30px;
   background-color: #FFFFFF;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -233,7 +233,7 @@
 }
 #comments .NoComments {
   display: block;
-  margin-bottom: 1.43rem;
+  margin-bottom: 20px;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #999999;
 }
@@ -244,7 +244,7 @@
   justify-content: space-between;
   -webkit-align-items: center;
   align-items: center;
-  padding-bottom: 1.43rem;
+  padding-bottom: 20px;
   border-bottom: 1px solid #f2f2f2;
 }
 #comments .CommentUserName {
@@ -259,8 +259,8 @@
   color: #999999;
 }
 #comments .CommentBody {
-  padding-top: 1.43rem;
-  padding-bottom: 1.43rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 #comments .CommentActions {
   display: -webkit-flex;
@@ -281,7 +281,7 @@
   margin-bottom: 0;
 }
 #comments #CommentsForm .form-control-error {
-  margin-top: 0.3575rem;
+  margin-top: 5px;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: 400;
@@ -303,7 +303,7 @@
   color: #D9232E;
 }
 #comments .CaptchaLabel {
-  margin-bottom: 0.715rem;
+  margin-bottom: 10px;
 }
 #comments .CaptchaTextBox {
   margin-bottom: 0;
@@ -334,10 +334,10 @@
 }
 @media only screen and (max-width: 767px) {
   #section-navigation .section-title {
-    padding: 1.43rem 15px;
+    padding: 20px 15px;
   }
   .is-sticky #section-navigation .section-title {
-    padding: 1.43rem;
+    padding: 20px;
   }
 }
 #section-navigation .section-search {
@@ -382,10 +382,10 @@
     display: flex;
     -webkit-align-items: center;
     align-items: center;
-    padding: 0.715rem 15px;
+    padding: 10px 15px;
   }
   .is-sticky #section-navigation {
-    padding: 0.715rem 1.43rem;
+    padding: 10px 20px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -498,7 +498,7 @@
     opacity: 1;
     max-height: 100vh;
     z-index: 100;
-    padding: 1.43rem 15px;
+    padding: 20px 15px;
     border-top: 1px solid #CCCCCC;
   }
 }

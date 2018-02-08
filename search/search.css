@@ -1,5 +1,5 @@
 .results-item {
-  padding: 1.43rem;
+  padding: 20px;
   border-bottom: 1px solid #f2f2f2;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -16,7 +16,7 @@
   background-color: #f2f2f2;
 }
 .results-item-title {
-  margin-bottom: 0.715rem;
+  margin-bottom: 10px;
   font-weight: 600;
   color: #333333;
 }

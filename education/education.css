@@ -58,7 +58,7 @@
   max-height: 100px;
 }
 #testimonials-slider .slick-dots {
-  margin-top: 1.43rem;
+  margin-top: 20px;
 }
 #delivery-options .macbook-air {
   width: 85%;
@@ -119,7 +119,7 @@
   color: #333333;
 }
 .course-date {
-  margin-top: -1.0725rem;
+  margin-top: -15px;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   text-transform: uppercase;
@@ -186,7 +186,7 @@
 }
 .Education.Single.Page .course-panel,
 .Education.Single.Page .cert-panel {
-  padding: 1.43rem;
+  padding: 20px;
   background-color: #f2f2f2;
   font-size: 15px;
   line-height: 1.4;
@@ -228,8 +228,6 @@
   text-align: center;
 }
 .Education.Single.Page .instructor-photo {
-  width: cover;
-  height: cover;
   -o-object-fit: cover;
   object-fit: cover;
   width: 150px;
@@ -239,7 +237,7 @@
   color: transparent;
 }
 .Education.Single.Page .instructor-name {
-  margin-bottom: 0.3575rem;
+  margin-bottom: 5px;
   font-weight: 400;
 }
 .Education.Single.Page .instructor-location {
@@ -280,13 +278,15 @@
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+#ecourseware-hero > .flex-row {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
 .instructor-popup {
   max-width: 800px;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .instructor-popup .instructor-photo {
-  width: cover;
-  height: cover;
   -o-object-fit: cover;
   object-fit: cover;
   width: 150px;
@@ -296,7 +296,7 @@
   color: transparent;
 }
 .instructor-popup .instructor-name {
-  margin-bottom: 0.3575rem;
+  margin-bottom: 5px;
   font-weight: 400;
 }
 .instructor-popup .instructor-location {

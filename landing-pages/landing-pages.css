@@ -339,7 +339,7 @@ section#symposium {
   content: '3.';
 }
 #faq .accordion {
-  margin-bottom: 0.715rem;
+  margin-bottom: 10px;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 #faq .accordion:last-child {
@@ -434,7 +434,7 @@ section#symposium {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1.43rem;
+  margin-bottom: 20px;
 }
 .square:last-child {
   margin-bottom: 0;
@@ -473,7 +473,7 @@ section#symposium {
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1.43rem;
+  margin-bottom: 20px;
 }
 .circle:last-child {
   margin-bottom: 20px;

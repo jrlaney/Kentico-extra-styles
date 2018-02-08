@@ -2,7 +2,7 @@
   display: inline-block;
   text-align: center;
   vertical-align: top;
-  padding: 1.43rem;
+  padding: 20px;
   color: #333333;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
   -webkit-transition: all 0.2s ease-out 0s;
@@ -29,8 +29,8 @@
 }
 @media only screen and (min-width: 768px) {
   .icon-cta {
-    padding: 1.43rem 2.145rem;
-    margin-right: 1.43rem;
+    padding: 20px 30px;
+    margin-right: 20px;
   }
   .icon-cta:last-child {
     margin-right: 0;
@@ -41,7 +41,7 @@
 }
 @media only screen and (min-width: 980px) {
   .icon-cta {
-    padding: 1.43rem 2.86rem;
+    padding: 20px 40px;
   }
 }
 .icon-cta.white {
