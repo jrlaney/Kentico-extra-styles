@@ -127,6 +127,23 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
     }
 }
 
+// basic setup for an image going off the page on the left or right
+.offpage-image {
+    width:150%;
+    max-width:none;
+    &.left {float:right;}
+    &.right {float:left;}
+    @media @large {
+        width:215%;
+        &.left {&.pc-laptop, &.macbook-pro, &.macbook-air {margin-right:-10%;}}
+        &.right {&.pc-laptop, &.macbook-pro, &.macbook-air {margin-left:-10%;}}
+    }
+}
+.stacked-mockups {position:relative;}
+.z-1 {position:relative; z-index:1;}
+.z-2 {position:relative; z-index:2;}
+.z-3 {position:relative; z-index:3;}
+
 
 // SCROLLDOWN BUTTON + ICON
 .scrolldown {
@@ -659,6 +676,28 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
     .create-graph-percentage-classes(@i - 1);
 }
 .create-graph-percentage-classes(100);
+
+//APPLE COLLAB PAGES 2018
+#apple-collab-page {
+    #introduction {
+        .device-mockup {
+            &.ipad {
+                position:relative; z-index:0;
+                width:130%;
+                margin-left:40%;
+            }
+            &.iphone {
+                position:absolute; z-index:1;
+                width:30%;
+                left:10%; bottom:15px;
+            }
+            @media @medium {
+                &.ipad {width:110%; margin-left:40%;}
+                &.iphone {width:25%;}
+            }
+        }
+    }
+}
 
 
 //DASHBOARD SHOWCASE 2017

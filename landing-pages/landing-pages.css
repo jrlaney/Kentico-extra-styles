@@ -1,72 +1,3 @@
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol {
-  margin-top: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 1.43rem;
-}
-h1:last-child,
-.h1:last-child,
-h2:last-child,
-.h2:last-child,
-h3:last-child,
-.h3:last-child,
-h4:last-child,
-h5:last-child,
-h6:last-child,
-p:last-child,
-ul:last-child,
-ol:last-child {
-  margin-bottom: 0;
-}
-h1.line-break,
-.h1.line-break,
-h2.line-break,
-.h2.line-break,
-h3.line-break,
-.h3.line-break,
-h4.line-break,
-h5.line-break,
-h6.line-break,
-p.line-break,
-ul.line-break,
-ol.line-break {
-  margin-top: -1.43rem;
-}
-ul li,
-ol li {
-  padding-bottom: 0;
-  margin-bottom: 0.715rem;
-}
-ul li:last-child,
-ol li:last-child {
-  margin-bottom: 0;
-}
-.line {
-  margin-bottom: 1.43rem;
-}
-.line:last-child {
-  margin-bottom: 0;
-}
-img {
-  margin-bottom: 1.43rem;
-}
-img:last-child {
-  margin-bottom: 0;
-}
-a > img:only-child {
-  margin-bottom: 1.43rem;
-}
 .top-banner .secondary-fullwidth {
   display: none!important;
 }
@@ -247,6 +178,46 @@ section#symposium {
   position: relative;
   z-index: 1;
 }
+.offpage-image {
+  width: 150%;
+  max-width: none;
+}
+.offpage-image.left {
+  float: right;
+}
+.offpage-image.right {
+  float: left;
+}
+@media only screen and (min-width: 980px) {
+  .offpage-image {
+    width: 215%;
+  }
+  .offpage-image.left.pc-laptop,
+  .offpage-image.left.macbook-pro,
+  .offpage-image.left.macbook-air {
+    margin-right: -10%;
+  }
+  .offpage-image.right.pc-laptop,
+  .offpage-image.right.macbook-pro,
+  .offpage-image.right.macbook-air {
+    margin-left: -10%;
+  }
+}
+.stacked-mockups {
+  position: relative;
+}
+.z-1 {
+  position: relative;
+  z-index: 1;
+}
+.z-2 {
+  position: relative;
+  z-index: 2;
+}
+.z-3 {
+  position: relative;
+  z-index: 3;
+}
 .scrolldown {
   position: absolute!important;
   bottom: 0;
@@ -408,7 +379,7 @@ section#symposium {
   content: '3.';
 }
 #faq .accordion {
-  margin-bottom: 0.715rem;
+  margin-bottom: 10px;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 #faq .accordion:last-child {
@@ -503,7 +474,7 @@ section#symposium {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1.43rem;
+  margin-bottom: 20px;
 }
 .square:last-child {
   margin-bottom: 0;
@@ -542,7 +513,7 @@ section#symposium {
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1.43rem;
+  margin-bottom: 20px;
 }
 .circle:last-child {
   margin-bottom: 20px;
@@ -1766,6 +1737,28 @@ section#symposium {
 .graph-percentage.graph-bar.graph-radial[progress="1"] .circle .fill.fix {
   -webkit-transform: rotate(3.6deg);
   transform: rotate(3.6deg);
+}
+#apple-collab-page #introduction .device-mockup.ipad {
+  position: relative;
+  z-index: 0;
+  width: 130%;
+  margin-left: 40%;
+}
+#apple-collab-page #introduction .device-mockup.iphone {
+  position: absolute;
+  z-index: 1;
+  width: 30%;
+  left: 10%;
+  bottom: 15px;
+}
+@media only screen and (min-width: 768px) {
+  #apple-collab-page #introduction .device-mockup.ipad {
+    width: 110%;
+    margin-left: 40%;
+  }
+  #apple-collab-page #introduction .device-mockup.iphone {
+    width: 25%;
+  }
 }
 #dashboard-showcase-about {
   overflow: hidden;
