@@ -266,6 +266,8 @@ main.products.child {
     }
 }//end products overview styles
 
+
+
 //ANALYTICS PAGE
 #analytics-overview {
     #connect-prepare {
@@ -357,6 +359,29 @@ main.products.child {
         }
     }
 }//end analytics page
+
+//MOBILE PAGE
+#mobile-overview {
+    #introduction {
+        .device-mockup {
+            &.ipad {
+                position:relative; z-index:0;
+                width:130%;
+                margin-right:20%;
+                margin-bottom:20px;
+            }
+            &.iphone {
+                position:absolute; z-index:1;
+                width:30%;
+                right:10%; bottom:20px;
+            }
+            @media @medium {
+                &.ipad {width:150%;}
+                &.iphone {width:35%;}
+            }
+        }
+    }
+}
 
 
 

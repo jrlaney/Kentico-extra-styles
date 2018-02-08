@@ -5,60 +5,60 @@
   object-fit: cover;
   border-radius: 50%;
 }
-.no-objectfit .Blog .author-photo {
+.no-objectfit .blog .author-photo {
   color: transparent;
 }
-.Blog.List .query {
+.blog.archive .query {
   font-weight: 600;
   font-style: italic;
   color: #D9232E;
 }
-.Blog.List .post {
+.blog.archive .post {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.6;
 }
-.Blog.List .post .post-title {
+.blog.archive .post .post-title {
   font-weight: 400;
 }
-.Blog.List .post .post-author {
+.blog.archive .post .post-author {
   font-size: 16px;
   font-weight: 300;
   color: #999999;
 }
-.Blog.List .post .post-author .author-name {
+.blog.archive .post .post-author .author-name {
   font-weight: 400;
 }
 .Blog.Single .post section {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.Blog.Single .post h4,
-.Blog.Single .post h5,
-.Blog.Single .post p,
-.Blog.Single .post li,
-.Blog.Single .post figcaption {
+.blog.single .post h4,
+.blog.single .post h5,
+.blog.single .post p,
+.blog.single .post li,
+.blog.single .post figcaption {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.6;
 }
-.Blog.Single .post h4,
-.Blog.Single .post h5 {
+.blog.single .post h4,
+.blog.single .post h5 {
   font-weight: 600;
   letter-spacing: 0.01em;
 }
-.Blog.Single .post p,
-.Blog.Single .post li {
+.blog.single .post p,
+.blog.single .post li {
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 0.005em;
 }
-.Blog.Single .post h4 {
+.blog.single .post h4 {
   font-size: 24px;
 }
-.Blog.Single .post h5 {
+.blog.single .post h5 {
   font-size: 20px;
   color: #999999;
 }
-.Blog.Single .post a {
+.blog.single .post a {
   font-weight: 400;
 }
 .Blog.Single .post * + h4 {
@@ -70,7 +70,7 @@
 .Blog.Single .post .post-content iframe {
   margin: 40px 0;
 }
-.Blog.Single .post .post-content img {
+.blog.single .post .post-content img {
   padding: 0 !important;
 }
 .Blog.Single .post .post-content img.float.right {
@@ -82,25 +82,25 @@
 .Blog.Single .post .post-content figure img {
   margin: 10px 0;
 }
-.Blog.Single .post .post-content figure figcaption {
+.blog.single .post .post-content figure figcaption {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.005em;
 }
-.Blog.Single .post .post-content [class*="wistia"],
-.Blog.Single .post .post-content [class*="wistia"] div {
+.blog.single .post .post-content [class*="wistia"],
+.blog.single .post .post-content [class*="wistia"] div {
   margin: 0;
 }
-.Blog.Single .post .post-summary p,
-.Blog.Single .post .post-cta p {
+.blog.single .post .post-summary p,
+.blog.single .post .post-cta p {
   font-size: 20px;
   font-weight: 400;
 }
-.Blog.Single .post .post-summary a,
-.Blog.Single .post .post-cta a {
+.blog.single .post .post-summary a,
+.blog.single .post .post-cta a {
   font-weight: 600;
 }
-.Blog.Single .post .post-summary:after {
+.blog.single .post .post-summary:after {
   content: "";
   display: block;
   width: 50px;
@@ -108,7 +108,7 @@
   margin: 40px auto 0 auto;
   background-color: #D9232E;
 }
-.Blog.Single .post .post-cta:before {
+.blog.single .post .post-cta:before {
   content: "";
   display: block;
   width: 50px;
@@ -116,7 +116,7 @@
   margin: 0 auto 40px auto;
   background-color: #CCCCCC;
 }
-.Blog.Single .post .post-tags {
+.blog.single .post .post-tags {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -131,12 +131,12 @@
   margin-bottom: 10px;
   font-weight: 600;
 }
-.Blog.Single .post .post-author .author-photo {
+.blog.single .post .post-author .author-photo {
   width: 120px;
   height: 120px;
   border: 5px solid #CCCCCC;
 }
-.Blog.Single .post .post-author .author-bio {
+.blog.single .post .post-author .author-bio {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.01em;

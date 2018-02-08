@@ -178,6 +178,46 @@ section#symposium {
   position: relative;
   z-index: 1;
 }
+.offpage-image {
+  width: 150%;
+  max-width: none;
+}
+.offpage-image.left {
+  float: right;
+}
+.offpage-image.right {
+  float: left;
+}
+@media only screen and (min-width: 980px) {
+  .offpage-image {
+    width: 215%;
+  }
+  .offpage-image.left.pc-laptop,
+  .offpage-image.left.macbook-pro,
+  .offpage-image.left.macbook-air {
+    margin-right: -10%;
+  }
+  .offpage-image.right.pc-laptop,
+  .offpage-image.right.macbook-pro,
+  .offpage-image.right.macbook-air {
+    margin-left: -10%;
+  }
+}
+.stacked-mockups {
+  position: relative;
+}
+.z-1 {
+  position: relative;
+  z-index: 1;
+}
+.z-2 {
+  position: relative;
+  z-index: 2;
+}
+.z-3 {
+  position: relative;
+  z-index: 3;
+}
 .scrolldown {
   position: absolute!important;
   bottom: 0;
@@ -1697,6 +1737,28 @@ section#symposium {
 .graph-percentage.graph-bar.graph-radial[progress="1"] .circle .fill.fix {
   -webkit-transform: rotate(3.6deg);
   transform: rotate(3.6deg);
+}
+#apple-collab-page #introduction .device-mockup.ipad {
+  position: relative;
+  z-index: 0;
+  width: 130%;
+  margin-left: 40%;
+}
+#apple-collab-page #introduction .device-mockup.iphone {
+  position: absolute;
+  z-index: 1;
+  width: 30%;
+  left: 10%;
+  bottom: 15px;
+}
+@media only screen and (min-width: 768px) {
+  #apple-collab-page #introduction .device-mockup.ipad {
+    width: 110%;
+    margin-left: 40%;
+  }
+  #apple-collab-page #introduction .device-mockup.iphone {
+    width: 25%;
+  }
 }
 #dashboard-showcase-about {
   overflow: hidden;
