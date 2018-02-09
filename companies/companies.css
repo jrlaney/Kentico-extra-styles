@@ -102,26 +102,26 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.ClassCompanyStory.Page h2.company-headline {
+.CompanyStory.Page h2.company-headline {
   margin-bottom: 20px;
   font-weight: 400;
   color: #D9232E;
 }
-.ClassCompanyStory.Page #company-pitch {
+.CompanyStory.Page #company-pitch {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.4;
   font-weight: 300;
 }
-.ClassCompanyStory.Page #company-pitch p {
+.CompanyStory.Page #company-pitch p {
   font-size: 18px;
   line-height: 1.4;
   font-weight: 300;
 }
-.ClassCompanyStory.Page .card.company-solution .company-solution-title {
+.CompanyStory.Page .card.company-solution .company-solution-title {
   font-weight: 400;
 }
-.ClassCompanyStory.Page .card.company-solution .company-solution-description {
+.CompanyStory.Page .card.company-solution .company-solution-description {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.4;
