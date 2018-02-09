@@ -185,7 +185,7 @@ a > img:only-child {
 }
 .capabilities.child.page #next-page .next-page-title {
   display: block;
-  margin-top: -0.715rem;
+  margin-top: -10px;
 }
 .offpage-image {
   width: 150%;
@@ -1217,7 +1217,7 @@ a > img:only-child {
   }
 }
 #mobile #mobile-slider .slide {
-  padding: 1.43rem;
+  padding: 20px;
   -webkit-flex-direction: column;
   flex-direction: column;
 }
@@ -1781,8 +1781,8 @@ a > img:only-child {
 #transactions #hero .img-col .iphone {
   position: absolute;
   width: 35%;
-  right: 1.43rem;
-  bottom: 1.43rem;
+  right: 20px;
+  bottom: 20px;
   z-index: 1;
 }
 #transactions #take-action .image-row {

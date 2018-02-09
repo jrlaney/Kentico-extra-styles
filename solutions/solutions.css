@@ -15,7 +15,7 @@
   display: flex;
   -webkit-align-items: center;
   align-items: center;
-  padding: 0.715rem;
+  padding: 10px;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 600;
   text-transform: uppercase;
@@ -148,7 +148,7 @@
   font-weight: 300;
 }
 .gridder-expanded-content .solution-panel-header {
-  margin-top: 2.145rem;
+  margin-top: 30px;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -173,7 +173,7 @@
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  padding: 0.715rem;
+  padding: 10px;
   color: #CCCCCC;
 }
 .mfp-title a {

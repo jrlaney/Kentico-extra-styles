@@ -19,23 +19,23 @@ p {
   line-height: 1.5;
 }
 p + h3 {
-  margin-top: 2.86rem;
+  margin-top: 40px;
 }
 p.important {
-  padding: 1.43rem;
+  padding: 20px;
   background-color: #f2f2f2;
   border: 1px solid #CCCCCC;
   font-weight: 600;
 }
 figure {
-  margin: 2.86rem 0;
+  margin: 40px 0;
 }
 figcaption {
   font-style: italic;
 }
 pre {
   white-space: normal;
-  margin: 2.86rem 0;
+  margin: 40px 0;
 }
 code {
   display: inline-block;
@@ -44,7 +44,7 @@ code {
   font-size: 14px;
 }
 .code-type {
-  padding: 0.715rem 1.43rem;
+  padding: 10px 20px;
   background-color: #999999;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -60,7 +60,7 @@ code {
 .hljs {
   display: block;
   overflow-x: auto;
-  padding: 1.43rem;
+  padding: 20px;
   background: #f2f2f2;
 }
 .hljs,

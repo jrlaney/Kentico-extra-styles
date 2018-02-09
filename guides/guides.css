@@ -11,7 +11,7 @@ code {
 }
 code.block {
   display: block;
-  margin-bottom: 1.43rem;
+  margin-bottom: 20px;
   padding: 20px;
   background-color: #333333;
   color: #FFFFFF;
@@ -61,12 +61,12 @@ code.block .indent-10 {
 figure {
   background-color: #FFFFFF;
   border: 5px solid #CCCCCC;
-  margin-bottom: 1.43rem;
+  margin-bottom: 20px;
   padding: 20px;
 }
 figure:last-child {
   margin-bottom: 0;
 }
 figure + code.block {
-  margin-top: -1.43rem;
+  margin-top: -20px;
 }

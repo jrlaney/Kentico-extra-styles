@@ -81,6 +81,7 @@
 #featured-partners .partner-logo {
   max-width: 60%;
   max-height: 100px;
+  margin: 0 auto;
 }
 #partner-logos .partner-logo {
   max-width: 90%;
@@ -102,7 +103,7 @@
   transform: translate(-50%, -50%);
 }
 .ClassCompanyStory.Page h2.company-headline {
-  margin-bottom: 1.43rem;
+  margin-bottom: 20px;
   font-weight: 400;
   color: #D9232E;
 }
@@ -263,7 +264,7 @@
   letter-spacing: .01em;
 }
 .company-details .company-category-header {
-  margin-bottom: 0.715rem;
+  margin-bottom: 10px;
   font-size: 16px;
   line-height: 1.4;
   font-weight: 600;
@@ -300,11 +301,11 @@
 }
 .partnership-logos .company-logo {
   max-width: 250px;
-  margin: 0.715rem 0;
+  margin: 10px 0;
 }
 @media only screen and (min-width: 768px) {
   .partnership-logos .company-logo {
-    margin: 0 1.43rem;
+    margin: 0 20px;
   }
 }
 @media only screen and (min-width: 980px) {
@@ -513,7 +514,7 @@
   border-right: 2.5em solid #FFFFFF;
 }
 .Company.Page blockquote footer {
-  margin-top: 0.715rem;
+  margin-top: 10px;
   font-weight: 600;
   font-style: normal;
 }

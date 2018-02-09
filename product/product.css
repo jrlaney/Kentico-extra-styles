@@ -634,7 +634,7 @@ a > img:only-child {
   margin-bottom: 15px;
 }
 #whats-new #restful-api #restful-api-diagram .icon {
-  margin-bottom: 0.715rem;
+  margin-bottom: 10px;
 }
 #whats-new #restful-api #restful-api-diagram .block {
   position: relative;
@@ -680,7 +680,7 @@ a > img:only-child {
   padding: 7.5px;
 }
 #whats-new #restful-api #restful-api-diagram #data .icon {
-  margin-bottom: 0.3575rem;
+  margin-bottom: 5px;
 }
 #whats-new #restful-api #restful-api-diagram #data:before {
   content: '';
