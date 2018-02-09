@@ -87,7 +87,7 @@ ul.triangle-list li {
     margin-bottom: 0;
   }
 }
-.support-quotes .banner {
+#support-quotes .banner {
   -webkit-flex-direction: column;
   flex-direction: column;
 }
