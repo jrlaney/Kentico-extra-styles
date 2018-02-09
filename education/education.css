@@ -228,6 +228,8 @@
   text-align: center;
 }
 .Education.Single.Page .instructor-photo {
+  width: cover;
+  height: cover;
   -o-object-fit: cover;
   object-fit: cover;
   width: 150px;
@@ -287,6 +289,8 @@
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .instructor-popup .instructor-photo {
+  width: cover;
+  height: cover;
   -o-object-fit: cover;
   object-fit: cover;
   width: 150px;
