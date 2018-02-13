@@ -494,7 +494,7 @@
     transform: translateX(0);
   }
 }
-.Company.Page blockquote {
+.CompanyStory.Page blockquote {
   position: relative;
   margin: 0;
   padding-left: 2.5em;
@@ -503,7 +503,7 @@
   font-weight: 300;
   font-size: 16px;
 }
-.Company.Page blockquote:before {
+.CompanyStory.Page blockquote:before {
   content: '';
   display: block;
   position: absolute;
@@ -513,7 +513,7 @@
   border-top: 2.5em solid transparent;
   border-right: 2.5em solid #FFFFFF;
 }
-.Company.Page blockquote footer {
+.CompanyStory.Page blockquote footer {
   margin-top: 10px;
   font-weight: 600;
   font-style: normal;
