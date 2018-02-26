@@ -106,95 +106,118 @@
   padding-top: 58.6%;
 }
 .course-title,
-.cert-title {
+.cert-title,
+.instructor-name {
   font-weight: 400;
+  color: #333333;
 }
 .course-description,
-.cert-description {
+.cert-description,
+.instructor-biography {
   line-height: 1.5;
   color: #999999;
 }
-.course-title,
-.cert-title {
-  color: #333333;
-}
-.course-date {
-  margin-top: -15px;
-  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 16px;
+.instructor-title {
+  line-height: 1.5;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  color: #999999;
 }
-.Education.Single.Page {
+.Education.Single {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-.Education.Single.Page .course-header .course-title,
-.Education.Single.Page .cert-header .course-title,
-.Education.Single.Page .course-header .cert-title,
-.Education.Single.Page .cert-header .cert-title {
+.Education.Single [id$="-info"] .course-title,
+.Education.Single [id$="-info"] .cert-title,
+.Education.Single [id$="-info"] .instructor-name {
   font-size: 30px;
   line-height: 1.2;
   font-weight: 400;
 }
 @media only screen and (min-width: 768px) {
-  .Education.Single.Page .course-header .course-title,
-  .Education.Single.Page .cert-header .course-title,
-  .Education.Single.Page .course-header .cert-title,
-  .Education.Single.Page .cert-header .cert-title {
+  .Education.Single [id$="-info"] .course-title,
+  .Education.Single [id$="-info"] .cert-title,
+  .Education.Single [id$="-info"] .instructor-name {
     font-size: 32px;
   }
 }
 @media only screen and (min-width: 980px) {
-  .Education.Single.Page .course-header .course-title,
-  .Education.Single.Page .cert-header .course-title,
-  .Education.Single.Page .course-header .cert-title,
-  .Education.Single.Page .cert-header .cert-title {
+  .Education.Single [id$="-info"] .course-title,
+  .Education.Single [id$="-info"] .cert-title,
+  .Education.Single [id$="-info"] .instructor-name {
     font-size: 36px;
   }
 }
-.Education.Single.Page .course-header .course-description,
-.Education.Single.Page .cert-header .course-description {
+.Education.Single [id$="-info"] .course-description,
+.Education.Single [id$="-info"] .instructor-biography {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
 }
 @media only screen and (min-width: 980px) {
-  .Education.Single.Page .course-header .course-description,
-  .Education.Single.Page .cert-header .course-description {
+  .Education.Single [id$="-info"] .course-description,
+  .Education.Single [id$="-info"] .instructor-biography {
     font-size: 18px;
   }
 }
-.Education.Single.Page .cert-badge {
+.Education.Single .cert-badge {
   display: inline-block;
   width: 150px;
   height: 150px;
 }
 @media only screen and (min-width: 768px) {
-  .Education.Single.Page .cert-badge {
+  .Education.Single .cert-badge {
     margin: 0 30px 0 0;
   }
 }
-.Education.Single.Page .cert-description {
+.Education.Single .cert-description {
   font-size: 14px;
   line-height: 1.5;
   font-weight: 300;
 }
 @media only screen and (min-width: 980px) {
-  .Education.Single.Page .cert-description {
+  .Education.Single .cert-description {
     font-size: 18px;
   }
 }
-.Education.Single.Page .course-panel,
-.Education.Single.Page .cert-panel {
+.Education.Single .instructor-photo {
+  width: 175px;
+  height: 175px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-left: 0;
+}
+.no-objectfit .Education.Single .instructor-photo {
+  color: transparent;
+}
+.Education.Single .instructor-name {
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+.Education.Single .session .instructor {
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.Education.Single .session .instructor-photo {
+  width: 30px;
+  height: 30px;
+  margin: 0 1em 0 0;
+  border-radius: 50%;
+}
+.Education.Single .course-panel,
+.Education.Single .cert-panel {
   padding: 20px;
   background-color: #f2f2f2;
   font-size: 15px;
   line-height: 1.4;
 }
-.Education.Single.Page .course-panel .course-panel-title {
+.Education.Single [class$="-panel"] .course-panel-title {
   font-weight: 400;
 }
-.Education.Single.Page .course-panel .course-panel-subtitle {
+.Education.Single [class$="-panel"] .course-panel-subtitle {
+  margin-bottom: 0;
   font-size: 16px;
   line-height: 1.4;
   font-weight: 600;
@@ -202,115 +225,45 @@
   letter-spacing: 0.05em;
   color: #999999;
 }
-.Education.Single.Page .course-agenda a {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-.Education.Single.Page .course-detail .course-panel-subtitle {
-  margin-bottom: 0;
-}
-.Education.Single.Page .course-detail .course-detail-list {
+.Education.Single [class$="-panel"] .course-detail-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.Education.Single.Page .course-detail .course-detail-list > li {
+.Education.Single [class$="-panel"] .course-detail-list > li {
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
   align-items: center;
+  padding: 0;
   margin-bottom: 0;
 }
-.Education.Single.Page .course-detail .course-prerequisite {
+.Education.Single [class$="-panel"] .course-prerequisite {
   white-space: nowrap;
 }
-.Education.Single.Page #no-classes {
-  text-align: center;
-}
-.Education.Single.Page .instructor-photo {
-  width: cover;
-  height: cover;
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 150px;
-  height: 150px;
-}
-.no-objectfit .Education.Single.Page .instructor-photo {
-  color: transparent;
-}
-.Education.Single.Page .instructor-name {
-  margin-bottom: 5px;
-  font-weight: 400;
-}
-.Education.Single.Page .instructor-location {
-  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 400;
+.Education.Single .course-agenda a {
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #999999;
 }
-.Education.Single.Page .instructor-bio {
-  font-size: 16px;
-  font-weight: 300;
-}
-.Education.Single.Page #course-classes .instructor {
-  display: -webkit-inline-flex;
-  display: inline-flex;
-  -webkit-align-items: center;
-  align-items: center;
-}
-.Education.Single.Page #course-classes .instructor-photo {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 0;
-  border-radius: 50%;
-}
-.Education.Single.Page #instructors-slider .instructor {
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  padding: 15px;
+.Education.Single #no-classes {
   text-align: center;
 }
-.Education.Single.Page #instructors-slider .slick-track {
-  margin: 0 auto;
+.Education.List #instructors-list .instructor-photo {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
-.Education.Single.Page #instructors-slider .slick-arrow {
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+.no-objectfit .Education.List #instructors-list .instructor-photo {
+  color: transparent;
+}
+.Education.List #instructors-list .instructor-name {
+  margin-bottom: 5px;
+}
+.Education.List #instructors-list .instructor-title {
+  font-size: 12px;
 }
 #ecourseware-hero > .flex-row {
   -webkit-align-items: flex-start;
   align-items: flex-start;
-}
-.instructor-popup {
-  max-width: 800px;
-  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-.instructor-popup .instructor-photo {
-  width: cover;
-  height: cover;
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 150px;
-  height: 150px;
-}
-.no-objectfit .instructor-popup .instructor-photo {
-  color: transparent;
-}
-.instructor-popup .instructor-name {
-  margin-bottom: 5px;
-  font-weight: 400;
-}
-.instructor-popup .instructor-location {
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #999999;
-}
-.instructor-popup .instructor-bio {
-  font-size: 16px;
-  font-weight: 300;
 }
