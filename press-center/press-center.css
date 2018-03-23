@@ -29,3 +29,56 @@
 #press-center .publication-organization {
   font-weight: 400;
 }
+.Publication.Single #page-hero {
+  padding: 40px 0;
+}
+@media only screen and (min-width: 768px) {
+  .Publication.Single #page-hero {
+    padding: 50px 0;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .Publication.Single #page-hero {
+    padding: 60px 0;
+  }
+}
+.Publication.Single #page-hero .date {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #f2f2f2;
+}
+.Publication.Single article.publication section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.Publication.Single article.publication p,
+.Publication.Single article.publication li {
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+.Publication.Single article.publication a {
+  font-weight: 400;
+}
+.Publication.Single article.publication strong {
+  font-weight: 600;
+}
+.Publication.Single article.publication em {
+  font-weight: 300;
+}
+.Publication.Single article.publication .source {
+  font-weight: 600;
+}
+.Publication.Single article.publication .source a {
+  font-weight: 600;
+}
+.Publication.Single article.publication #bwbodyimg {
+  margin-bottom: 20px;
+}
+.Publication.Single article.publication #bwbodyimg p {
+  font-size: 14px;
+  font-weight: 400;
+}
