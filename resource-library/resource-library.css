@@ -806,6 +806,7 @@
   #resource-details .resource-title {
     font-size: 35px;
     line-height: 45px;
+    font-weight: 400;
   }
   #resource-details .resource-description,
   #resource-details .resource-description > * {
