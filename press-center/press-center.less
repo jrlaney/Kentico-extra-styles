@@ -33,3 +33,53 @@
         font-weight: @normal;
     }
 }
+
+.Publication.Single {
+
+  #page-hero {
+    padding: 40px 0;
+    @media @medium { padding: 50px 0; }
+    @media @large { padding: 60px 0; }
+
+    .date {
+      font-size: 14px;
+      .uppercase;
+      color: @light-gray;
+    }
+  }
+  article.publication {
+
+    section {
+      .padding-y(@base-spacing);
+    }
+    p, li {
+      font-family: @myriad-pro;
+      font-size: 18px;
+      line-height: 1.6;
+      font-weight: @light;
+      letter-spacing: 0.01em;
+    }
+    a {
+      font-weight: @normal;
+    }
+    strong {
+      font-weight: @bold;
+    }
+    em {
+      font-weight: @light;
+    }
+    .source {
+      font-weight: @bold;
+
+      a { font-weight: @bold; }
+    }
+    #bwbodyimg {
+      margin-bottom: @base-spacing;
+
+      p {
+        font-size: 14px;
+        font-weight: @normal;
+      }
+    }
+  }
+}

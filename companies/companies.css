@@ -1,3 +1,124 @@
+.gridder.cards {
+  display: block;
+}
+.gridder.cards .gridder-list {
+  width: 100%;
+}
+.gridder.cards .gridder-list .card {
+  cursor: pointer;
+}
+.gridder.cards.hasSelectedItem .gridder-list .card {
+  opacity: .5;
+}
+.gridder.cards.hasSelectedItem .gridder-list .card:hover {
+  opacity: 1;
+}
+.gridder .gridder-content {
+  display: none;
+}
+.gridder .gridder-show {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  float: left;
+  padding: 15px;
+}
+.gridder .gridder-padding {
+  position: relative;
+  padding: 15px;
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+}
+@media only screen and (min-width: 768px) {
+  .gridder .gridder-padding {
+    padding: 30px;
+  }
+}
+.gridder .gridder-navigation {
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  float: right;
+}
+.gridder .gridder-navigation a {
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  max-width: none;
+  display: block;
+  position: relative;
+  padding: 20px;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+.gridder .gridder-navigation a.gridder-close {
+  -webkit-order: 1;
+  order: 1;
+}
+.gridder .gridder-navigation a.gridder-close:before,
+.gridder .gridder-navigation a.gridder-close:after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-right: -10px;
+  background: #999999;
+}
+.gridder .gridder-navigation a.gridder-close:before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.gridder .gridder-navigation a.gridder-close:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.gridder .gridder-navigation a.gridder-close:hover:before,
+.gridder .gridder-navigation a.gridder-close:active:before,
+.gridder .gridder-navigation a.gridder-close:focus:before,
+.gridder .gridder-navigation a.gridder-close:hover:after,
+.gridder .gridder-navigation a.gridder-close:active:after,
+.gridder .gridder-navigation a.gridder-close:focus:after {
+  background: #cccccc;
+}
+.gridder .gridder-navigation a.gridder-nav:before {
+  content: "\e901";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: microstrategy;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1;
+  color: #999999;
+}
+.gridder .gridder-navigation a.gridder-nav.prev:before {
+  -webkit-transform: translate(-50%, -50%) rotate(180deg);
+  transform: translate(-50%, -50%) rotate(180deg);
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+.gridder .gridder-navigation a.gridder-nav.disabled {
+  opacity: .25;
+  cursor: default;
+}
+.gridder .gridder-navigation a.gridder-nav:not(.disabled):hover:before {
+  color: #333333;
+}
+.gridder .gridder-navigation a.gridder-close:hover:before,
+.gridder .gridder-navigation a.gridder-close:hover:after {
+  background-color: #333333;
+}
 .Partners #hero.background-image {
   background-image: url('/getmedia/f7467b6a-e8f0-46bb-85cf-de71b8a35b7b/businesspeople-looking-at-mobile-device');
 }
@@ -87,13 +208,13 @@
   max-width: 90%;
   max-height: 100px;
 }
-.Gecko #companies-list .company.card {
+.Gecko .CompanyList .company.card {
   display: block !important;
 }
-#companies-list .company.card .company-details {
+.CompanyList .company.card .company-details {
   display: none;
 }
-#companies-list .company.card .company-logo {
+.CompanyList .company.card .company-logo {
   max-width: 65%;
   max-height: 100px;
   position: absolute;
@@ -126,124 +247,6 @@
   font-size: 16px;
   line-height: 1.4;
   font-weight: 300;
-}
-.gridder.cards .gridder-list {
-  width: 100%;
-}
-.gridder.cards .gridder-list .card {
-  cursor: pointer;
-}
-.gridder.cards.hasSelectedItem .gridder-list .card {
-  opacity: .5;
-}
-.gridder.cards.hasSelectedItem .gridder-list .card:hover {
-  opacity: 1;
-}
-.gridder-content {
-  display: none;
-}
-.gridder-show {
-  width: 100%;
-  position: relative;
-  z-index: 1;
-  float: left;
-  padding: 15px;
-}
-.gridder-padding {
-  position: relative;
-  padding: 15px;
-  background-color: #FFFFFF;
-  border: 1px solid #CCCCCC;
-}
-@media only screen and (min-width: 768px) {
-  .gridder-padding {
-    padding: 30px;
-  }
-}
-.gridder-navigation {
-  display: -webkit-inline-flex;
-  display: inline-flex;
-  float: right;
-}
-.gridder-navigation a {
-  -webkit-flex: 1 1 auto;
-  flex: 1 1 auto;
-  max-width: none;
-  display: block;
-  position: relative;
-  padding: 20px;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
-}
-.gridder-navigation a.gridder-close {
-  -webkit-order: 1;
-  order: 1;
-}
-.gridder-navigation a.gridder-close:before,
-.gridder-navigation a.gridder-close:after {
-  content: '';
-  display: block;
-  width: 1px;
-  height: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -10px;
-  margin-right: -10px;
-  background: #999999;
-}
-.gridder-navigation a.gridder-close:before {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.gridder-navigation a.gridder-close:after {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-.gridder-navigation a.gridder-close:hover:before,
-.gridder-navigation a.gridder-close:active:before,
-.gridder-navigation a.gridder-close:focus:before,
-.gridder-navigation a.gridder-close:hover:after,
-.gridder-navigation a.gridder-close:active:after,
-.gridder-navigation a.gridder-close:focus:after {
-  background: #cccccc;
-}
-.gridder-navigation a.gridder-nav:before {
-  content: "\e901";
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-family: microstrategy;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-  line-height: 1;
-  color: #999999;
-}
-.gridder-navigation a.gridder-nav.prev:before {
-  -webkit-transform: translate(-50%, -50%) rotate(180deg);
-  transform: translate(-50%, -50%) rotate(180deg);
-  -webkit-transform-origin: center center;
-  transform-origin: center center;
-}
-.gridder-navigation a.gridder-nav.disabled {
-  opacity: .25;
-  cursor: default;
-}
-.gridder-navigation a.gridder-nav:not(.disabled):hover:before {
-  color: #333333;
-}
-.gridder-navigation a.gridder-close:hover:before,
-.gridder-navigation a.gridder-close:hover:after {
-  background-color: #333333;
 }
 .company-details {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
