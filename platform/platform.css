@@ -173,10 +173,10 @@
     border-left-color: #68AA00;
   }
   .panelstack.vertical-panelstack.gray .panel-nav .panel-nav-elem.active-panel > a {
-    background-color: #CCCCCC;
+    background-color: #999999;
   }
   .panelstack.vertical-panelstack.gray .panel-nav .panel-nav-elem.active-panel > a:before {
-    border-left-color: #CCCCCC;
+    border-left-color: #999999;
   }
   .panelstack.vertical-panelstack.light-gray .panel-nav .panel-nav-elem.active-panel > a {
     background-color: #f2f2f2;
@@ -185,10 +185,10 @@
     border-left-color: #f2f2f2;
   }
   .panelstack.vertical-panelstack.dark-gray .panel-nav .panel-nav-elem.active-panel > a {
-    background-color: #999999;
+    background-color: #555555;
   }
   .panelstack.vertical-panelstack.dark-gray .panel-nav .panel-nav-elem.active-panel > a:before {
-    border-left-color: #999999;
+    border-left-color: #555555;
   }
   .panelstack.vertical-panelstack.black .panel-nav .panel-nav-elem.active-panel > a {
     background-color: #333333;
@@ -1919,7 +1919,7 @@ h6.icon-header {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #CCCCCC;
+  color: #999999;
   text-align: center;
 }
 @media only screen and (max-width: 767px) {
@@ -1964,7 +1964,7 @@ h6.icon-header {
   transform: translateX(-50%);
   height: 1px;
   width: calc(100% - 40px);
-  background-color: #CCCCCC;
+  background-color: #999999;
 }
 #services-and-tools .icon-col .label .line:before,
 #services-and-tools .icon-col .label .line:after {
@@ -1974,7 +1974,7 @@ h6.icon-header {
   left: 0;
   height: 15px;
   width: 1px;
-  background-color: #CCCCCC;
+  background-color: #999999;
 }
 #services-and-tools .icon-col .label .line:after {
   left: auto;

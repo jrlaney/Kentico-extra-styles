@@ -1,72 +1,3 @@
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol {
-  margin-top: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 1.43rem;
-}
-h1:last-child,
-.h1:last-child,
-h2:last-child,
-.h2:last-child,
-h3:last-child,
-.h3:last-child,
-h4:last-child,
-h5:last-child,
-h6:last-child,
-p:last-child,
-ul:last-child,
-ol:last-child {
-  margin-bottom: 0;
-}
-h1.line-break,
-.h1.line-break,
-h2.line-break,
-.h2.line-break,
-h3.line-break,
-.h3.line-break,
-h4.line-break,
-h5.line-break,
-h6.line-break,
-p.line-break,
-ul.line-break,
-ol.line-break {
-  margin-top: -1.43rem;
-}
-ul li,
-ol li {
-  padding-bottom: 0;
-  margin-bottom: 0.715rem;
-}
-ul li:last-child,
-ol li:last-child {
-  margin-bottom: 0;
-}
-.line {
-  margin-bottom: 1.43rem;
-}
-.line:last-child {
-  margin-bottom: 0;
-}
-img {
-  margin-bottom: 1.43rem;
-}
-img:last-child {
-  margin-bottom: 0;
-}
-a > img:only-child {
-  margin-bottom: 1.43rem;
-}
 .capabilities .page-title {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 20px;
@@ -387,7 +318,7 @@ a > img:only-child {
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
-  color: #CCCCCC;
+  color: #999999;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -400,7 +331,7 @@ a > img:only-child {
   left: 20px;
   height: 10px;
   width: 2px;
-  background-color: #CCCCCC;
+  background-color: #999999;
 }
 .gridder .gridder-back:before {
   margin-top: -9px;
@@ -842,7 +773,7 @@ a > img:only-child {
     position: absolute;
     bottom: -30px;
     left: 50%;
-    background-color: #CCCCCC;
+    background-color: #999999;
   }
   #big-data #hadoop-diagram-platform {
     padding-top: 15px;
@@ -859,7 +790,7 @@ a > img:only-child {
     position: absolute;
     bottom: -30px;
     left: 50%;
-    background-color: #CCCCCC;
+    background-color: #999999;
   }
   #big-data #hadoop-diagram-sql {
     padding-top: 15px;
@@ -875,7 +806,7 @@ a > img:only-child {
     position: absolute;
     top: -15px;
     left: 50%;
-    background-color: #CCCCCC;
+    background-color: #999999;
   }
   #big-data #hadoop-diagram-sql .grid-item:after {
     content: '';
@@ -885,7 +816,7 @@ a > img:only-child {
     top: -15px;
     right: 0;
     left: 0;
-    background-color: #CCCCCC;
+    background-color: #999999;
   }
   #big-data #hadoop-diagram-sql .grid-item:first-child:after {
     left: 50%;
@@ -1142,7 +1073,7 @@ a > img:only-child {
   vertical-align: top;
   margin-left: -4px;
   padding: 0;
-  color: #999999;
+  color: #555555;
   cursor: pointer;
   -webkit-transition: color 0.2s ease-out 0s;
   transition: color 0.2s ease-out 0s;
@@ -1303,7 +1234,7 @@ a > img:only-child {
 @media only screen and (min-width: 768px) {
   #embedded-bi #embedded-bi-types .split-col:first-child {
     padding-right: 50px;
-    border-right: 1px solid #999999;
+    border-right: 1px solid #555555;
   }
   #embedded-bi #embedded-bi-types .split-col:last-child {
     padding-left: 50px;
@@ -1324,7 +1255,7 @@ a > img:only-child {
   top: 100%;
   left: 50%;
   margin-left: -1px;
-  background-color: #CCCCCC;
+  background-color: #999999;
 }
 @media only screen and (min-width: 768px) {
   #embedded-bi #embedded-bi-diagram-platform:before {
@@ -1356,7 +1287,7 @@ a > img:only-child {
   top: -7.5px;
   left: 50%;
   margin-left: -1px;
-  background-color: #CCCCCC;
+  background-color: #999999;
 }
 @media only screen and (min-width: 768px) {
   #embedded-bi #embedded-bi-diagram-components .grid-item:before {
@@ -1376,7 +1307,7 @@ a > img:only-child {
     top: -15px;
     right: 0;
     left: 0;
-    background-color: #CCCCCC;
+    background-color: #999999;
   }
   #embedded-bi #embedded-bi-diagram-components .grid-item:nth-child(n+5):after {
     display: none;
@@ -1450,7 +1381,7 @@ a > img:only-child {
 #embedded-bi #rest-api #rest-api-diagram .line-col:before {
   position: absolute;
   content: '';
-  background-color: #999999;
+  background-color: #555555;
   top: 0;
   left: 50%;
   margin-left: -1px;

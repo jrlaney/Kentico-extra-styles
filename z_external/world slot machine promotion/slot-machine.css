@@ -12,11 +12,11 @@
 }
 #slot-machine #actionbutton:hover,
 #slot-machine .actionbutton:hover {
-  background-color: #df3741;
+  background-color: #ea2b37;
 }
 #slot-machine #actionbutton:active,
 #slot-machine .actionbutton:active {
-  background-color: #c31f29;
+  background-color: #bd252e;
 }
 @media only screen and (min-width: 980px) {
   .form-col .form-box {
@@ -392,11 +392,11 @@
   background-color: #11566F;
 }
 .line-decoration.gray .line-group {
-  background-color: #CCCCCC;
+  background-color: #999999;
 }
 .line-decoration.gray .line-group:before,
 .line-decoration.gray .line-group:after {
-  background-color: #CCCCCC;
+  background-color: #999999;
 }
 .number .num-object {
   z-index: 1;
@@ -659,30 +659,30 @@
 @-moz-keyframes neon-blink-lose {
   0% {
     opacity: 0.2;
-    border-color: #CCCCCC;
+    border-color: #999999;
   }
   100% {
     opacity: 0.7;
-    border-color: #CCCCCC;
+    border-color: #999999;
   }
 }
 @-webkit-keyframes neon-blink-lose {
   0% {
     opacity: 0.2;
-    border-color: #CCCCCC;
+    border-color: #999999;
   }
   100% {
     opacity: 0.7;
-    border-color: #CCCCCC;
+    border-color: #999999;
   }
 }
 @keyframes neon-blink-lose {
   0% {
     opacity: 0.2;
-    border-color: #CCCCCC;
+    border-color: #999999;
   }
   100% {
     opacity: 0.7;
-    border-color: #CCCCCC;
+    border-color: #999999;
   }
 }

@@ -52,10 +52,10 @@
   border-right-color: #f2f2f2;
 }
 .triangle-group.gray:before {
-  border-right-color: #CCCCCC;
+  border-right-color: #999999;
 }
 .triangle-group.dark-gray:before {
-  border-right-color: #999999;
+  border-right-color: #555555;
 }
 .triangle-group.black:before {
   border-right-color: #333333;
@@ -243,7 +243,7 @@
   margin-top: -1px;
   height: 2px;
   width: 100%;
-  border-bottom: 3px solid #CCCCCC;
+  border-bottom: 3px solid #999999;
 }
 .scrollbar .handle {
   width: 100px;

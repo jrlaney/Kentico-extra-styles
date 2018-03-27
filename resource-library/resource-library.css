@@ -313,7 +313,7 @@
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.4;
-  color: #999999;
+  color: #555555;
 }
 /* INDIVIDUAL RESOURCE PAGE STYLES */
 #resource-details {
@@ -589,7 +589,7 @@
 }
 /* for the related resources row */
 #related-resources {
-  border-bottom: 1px solid #CCCCCC;
+  border-bottom: 1px solid #999999;
 }
 #related-resources .resource-title {
   font-size: 28px;

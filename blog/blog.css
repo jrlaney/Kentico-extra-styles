@@ -1,8 +1,6 @@
 .Blog .author-photo {
   width: 40px;
   height: 40px;
-  width: cover;
-  height: cover;
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: 50%;
@@ -25,7 +23,7 @@
 .Blog.List .post .post-author {
   font-size: 16px;
   font-weight: 300;
-  color: #999999;
+  color: #555555;
 }
 .Blog.List .post .post-author .author-name {
   font-weight: 400;
@@ -58,7 +56,7 @@
 }
 .Blog.Single .post h5 {
   font-size: 20px;
-  color: #999999;
+  color: #555555;
 }
 .Blog.Single .post a {
   font-weight: 400;
@@ -116,13 +114,13 @@
   width: 50px;
   height: 5px;
   margin: 0 auto 40px auto;
-  background-color: #CCCCCC;
+  background-color: #999999;
 }
 .Blog.Single .post .post-tags {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #999999;
+  color: #555555;
 }
 .Blog.Single .post .post-author .post-author-panel {
   padding: 30px;
@@ -136,7 +134,7 @@
 .Blog.Single .post .post-author .author-photo {
   width: 120px;
   height: 120px;
-  border: 5px solid #CCCCCC;
+  border: 5px solid #999999;
 }
 .Blog.Single .post .post-author .author-bio {
   font-size: 14px;
@@ -167,7 +165,7 @@
   margin: 0;
   width: 40px;
   height: 40px;
-  border: 2px solid #CCCCCC;
+  border: 2px solid #999999;
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
 }
@@ -186,7 +184,7 @@
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #CCCCCC;
+  color: #999999;
 }
 .Blog #page-hero #featured-posts:not(.slick-initialized) {
   opacity: 0;
@@ -237,7 +235,7 @@
   display: block;
   margin-bottom: 20px;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #999999;
+  color: #555555;
 }
 #comments .CommentHeader {
   display: -webkit-flex;
@@ -258,7 +256,7 @@
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #999999;
+  color: #555555;
 }
 #comments .CommentBody {
   padding-top: 20px;
@@ -327,7 +325,7 @@
   #section-navigation .section-title {
     margin: 0 1em 0 0;
     padding: 0 1em 0 0;
-    border-right: 1px solid #CCCCCC;
+    border-right: 1px solid #999999;
   }
 }
 #section-navigation .section-title:hover,
@@ -409,7 +407,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 16px;
-    color: #999999;
+    color: #555555;
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     text-align: center;
@@ -418,7 +416,7 @@
   #section-navigation:hover:after,
   #section-navigation:active:after,
   #section-navigation:focus:after {
-    color: #CCCCCC;
+    color: #999999;
   }
 }
 #section-navigation-menu {
@@ -477,7 +475,7 @@
 }
 @media only screen and (min-width: 980px) {
   #section-navigation-menu .menu-item a {
-    color: #999999;
+    color: #555555;
   }
 }
 #section-navigation-menu .menu-item a:hover,
@@ -501,14 +499,14 @@
     max-height: 100vh;
     z-index: 100;
     padding: 20px 15px;
-    border-top: 1px solid #CCCCCC;
+    border-top: 1px solid #999999;
   }
 }
 .is-sticky #section-navigation {
   left: 0;
   right: 0;
   background-color: #FFFFFF;
-  border-bottom: 1px solid #999999;
+  border-bottom: 1px solid #555555;
 }
 #section-navigation-sticky-wrapper {
   max-width: 1200px;

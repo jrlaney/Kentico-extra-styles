@@ -1,72 +1,3 @@
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol {
-  margin-top: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 1.43rem;
-}
-h1:last-child,
-.h1:last-child,
-h2:last-child,
-.h2:last-child,
-h3:last-child,
-.h3:last-child,
-h4:last-child,
-h5:last-child,
-h6:last-child,
-p:last-child,
-ul:last-child,
-ol:last-child {
-  margin-bottom: 0;
-}
-h1.line-break,
-.h1.line-break,
-h2.line-break,
-.h2.line-break,
-h3.line-break,
-.h3.line-break,
-h4.line-break,
-h5.line-break,
-h6.line-break,
-p.line-break,
-ul.line-break,
-ol.line-break {
-  margin-top: -1.43rem;
-}
-ul li,
-ol li {
-  padding-bottom: 0;
-  margin-bottom: 0.715rem;
-}
-ul li:last-child,
-ol li:last-child {
-  margin-bottom: 0;
-}
-.line {
-  margin-bottom: 1.43rem;
-}
-.line:last-child {
-  margin-bottom: 0;
-}
-img {
-  margin-bottom: 1.43rem;
-}
-img:last-child {
-  margin-bottom: 0;
-}
-a > img:only-child {
-  margin-bottom: 1.43rem;
-}
 .line.tiny {
   min-width: 50px;
 }
@@ -430,7 +361,7 @@ a > img:only-child {
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
   text-align: center;
-  background-color: #8c8c8c;
+  background-color: #484848;
   font-size: 12px;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #FFFFFF;
@@ -534,7 +465,7 @@ a > img:only-child {
   color: #11566F;
 }
 #whats-new #updates-10-9 > section {
-  border-bottom: 1px solid #CCCCCC;
+  border-bottom: 1px solid #999999;
 }
 #whats-new #updates-10-9 > section:first-child {
   border-bottom: 0;
@@ -640,7 +571,7 @@ a > img:only-child {
   position: relative;
   z-index: 1;
   background-color: #FFFFFF;
-  border: 1px solid #CCCCCC;
+  border: 1px solid #999999;
 }
 #whats-new #restful-api #restful-api-diagram #third-party-application .icon {
   display: block;
@@ -664,7 +595,7 @@ a > img:only-child {
   position: absolute;
   top: -15px;
   bottom: -15px;
-  background-color: #CCCCCC;
+  background-color: #999999;
 }
 #whats-new #restful-api #restful-api-diagram #restful-server:before {
   left: 43%;
@@ -674,7 +605,7 @@ a > img:only-child {
 }
 #whats-new #restful-api #restful-api-diagram #data {
   position: relative;
-  color: #999999;
+  color: #555555;
 }
 #whats-new #restful-api #restful-api-diagram #data .block {
   padding: 7.5px;
@@ -690,7 +621,7 @@ a > img:only-child {
   position: absolute;
   top: -15px;
   left: 50%;
-  background-color: #CCCCCC;
+  background-color: #999999;
 }
 #whats-new #extended-data-preparation #data-sources {
   display: -webkit-flex;
@@ -931,7 +862,7 @@ a > img:only-child {
   top: 50%;
   left: 0;
   margin-top: -4px;
-  background-color: #CCCCCC;
+  background-color: #999999;
 }
 #why-microstrategy .frame .timeline-list {
   position: relative;
@@ -1032,8 +963,8 @@ a > img:only-child {
   height: 24px;
   width: 24px;
   border-radius: 50%;
-  border: 2px solid #CCCCCC;
-  background-color: #CCCCCC;
+  border: 2px solid #999999;
+  background-color: #999999;
 }
 #why-microstrategy .frame .timeline-list .timeline-item.red:before,
 #why-microstrategy .frame .timeline-list .timeline-item.red .flag,
@@ -1078,7 +1009,7 @@ a > img:only-child {
   margin-top: -1px;
   height: 2px;
   width: 100%;
-  border-bottom: 3px solid #CCCCCC;
+  border-bottom: 3px solid #999999;
 }
 #why-microstrategy .scrollbar .handle {
   width: 100px;
@@ -1156,7 +1087,7 @@ a > img:only-child {
   background-color: transparent;
   outline: 0;
   opacity: 1;
-  color: #CCCCCC;
+  color: #999999;
   -webkit-transition: ease-out opacity 0.2s 0s;
   transition: ease-out opacity 0.2s 0s;
 }
@@ -1244,7 +1175,7 @@ a > img:only-child {
 }
 @media only screen and (min-width: 768px) {
   #why-microstrategy .grid-lines .grid-item {
-    border: 1px solid #CCCCCC;
+    border: 1px solid #999999;
     padding: 30px;
   }
   #why-microstrategy .grid-lines .grid-item:nth-child(1) {

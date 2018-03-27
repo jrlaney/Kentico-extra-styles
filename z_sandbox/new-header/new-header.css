@@ -179,7 +179,7 @@ body.menu-opened {
     transition: all 0.2s ease-out 0.3s;
   }
   .menu-opened #header .trial-button:hover {
-    background-color: #df3741;
+    background-color: #ea2b37;
   }
 }
 #header .primary-menu-button {
@@ -456,7 +456,7 @@ body.menu-opened {
   position: relative;
   overflow: hidden;
   padding: 30px 30px 15px 30px;
-  color: #CCCCCC;
+  color: #999999;
   line-height: 1em;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -471,7 +471,7 @@ body.menu-opened {
   height: 3px;
   width: 50px;
   margin-top: 15px;
-  background-color: #CCCCCC;
+  background-color: #999999;
 }
 #primary-menu .node-panel .red.parent-node .node-label:after {
   background-color: #D9232E;
@@ -629,7 +629,7 @@ body.menu-opened {
 }
 #primary-menu .node-panel .search-col .input-group .input-group-field > [type='search'] {
   margin-top: 0;
-  color: #CCCCCC;
+  color: #999999;
   background-color: transparent;
   background-image: url(/getmedia/bd1e9ace-a8ed-470d-923f-372d4ef057e3/magnifying-glass_MEDIUM);
   padding: 0;

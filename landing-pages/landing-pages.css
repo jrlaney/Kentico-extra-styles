@@ -160,13 +160,13 @@ section#symposium {
   fill: #68AA00;
 }
 .angles-canvas.gray .angle {
-  fill: #CCCCCC;
+  fill: #999999;
 }
 .angles-canvas.light-gray .angle {
   fill: #f2f2f2;
 }
 .angles-canvas.dark-gray .angle {
-  fill: #999999;
+  fill: #555555;
 }
 .angles-canvas.black .angle {
   fill: #333333;
@@ -335,10 +335,10 @@ section#symposium {
   border-right-color: #f2f2f2;
 }
 .triangle-group.gray:before {
-  border-right-color: #CCCCCC;
+  border-right-color: #999999;
 }
 .triangle-group.dark-gray:before {
-  border-right-color: #999999;
+  border-right-color: #555555;
 }
 .triangle-group.black:before {
   border-right-color: #333333;
@@ -396,7 +396,7 @@ section#symposium {
 #health-score-poor {
   width: 60px;
   height: 60px;
-  background: #CCCCCC;
+  background: #999999;
 }
 #health-score-poor .circle .mask,
 #health-score-poor .circle .fill {
@@ -408,7 +408,7 @@ section#symposium {
 }
 #health-score-poor .circle .mask .fill {
   clip: rect(0px, 30px, 60px, 0px);
-  background: #c31f29;
+  background: #bd252e;
 }
 #health-score-poor .inset {
   width: 40px;
@@ -420,7 +420,7 @@ section#symposium {
 #health-score-fair {
   width: 60px;
   height: 60px;
-  background: #CCCCCC;
+  background: #999999;
 }
 #health-score-fair .circle .mask,
 #health-score-fair .circle .fill {
@@ -444,7 +444,7 @@ section#symposium {
 #health-score-good {
   width: 60px;
   height: 60px;
-  background: #CCCCCC;
+  background: #999999;
 }
 #health-score-good .circle .mask,
 #health-score-good .circle .fill {
@@ -604,7 +604,7 @@ section#symposium {
   .landing-page section.lines-contain-top > .flex-row:before,
   .landing-page section.lines-contain-left > .flex-row:before,
   .landing-page section.lines-contain-right > .flex-row:before {
-    background-color: #CCCCCC;
+    background-color: #999999;
   }
   .landing-page section.lines-contain-top > .flex-row:after,
   .landing-page section.lines-contain-left > .flex-row:after,
@@ -613,8 +613,8 @@ section#symposium {
     left: 30px;
     right: 30px;
     bottom: -135px;
-    border-left: 1px solid #CCCCCC;
-    border-right: 1px solid #CCCCCC;
+    border-left: 1px solid #999999;
+    border-right: 1px solid #999999;
   }
   .landing-page section.lines-contain-left > .flex-row:before,
   .landing-page section.lines-contain-right > .flex-row:before {
@@ -627,7 +627,7 @@ section#symposium {
     height: 75px;
     bottom: -60px;
     left: 50%;
-    background-color: #CCCCCC;
+    background-color: #999999;
   }
   .landing-page section.lines-contain-top > .flex-row:before {
     width: 80px;
@@ -638,7 +638,7 @@ section#symposium {
     transform: translate(-50%, -50%);
   }
   .landing-page section.lines-contain-top > .flex-row:after {
-    border-top: 1px solid #CCCCCC;
+    border-top: 1px solid #999999;
   }
   .landing-page section.lines-contain-left > .flex-row:before {
     left: 30px;
@@ -673,7 +673,7 @@ section#symposium {
     width: 10px;
     height: 80px;
     z-index: 1;
-    background-color: #CCCCCC;
+    background-color: #999999;
   }
   .landing-page section.lines-path-begin > .flex-row:after,
   .landing-page section.lines-path-horizontal > .flex-row:after,
@@ -702,14 +702,14 @@ section#symposium {
   .landing-page section.lines-path-begin > .flex-row:after {
     width: 1000px;
     left: -1000px;
-    border-top: 1px solid #CCCCCC;
-    border-right: 1px solid #CCCCCC;
+    border-top: 1px solid #999999;
+    border-right: 1px solid #999999;
   }
   .landing-page section.lines-path-horizontal > .flex-row:before {
     content: none;
   }
   .landing-page section.lines-path-horizontal > .flex-row:after {
-    border-top: 1px solid #CCCCCC;
+    border-top: 1px solid #999999;
   }
   .landing-page section.lines-path-horizontal > .flex-row > [class*="col-"] {
     position: relative;
@@ -725,16 +725,16 @@ section#symposium {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 1;
-    background-color: #CCCCCC;
+    background-color: #999999;
   }
   .landing-page section.lines-path-horizontal-left > .flex-row:after {
-    border-left: 1px solid #CCCCCC;
+    border-left: 1px solid #999999;
   }
   .landing-page section.lines-path-horizontal-right > .flex-row:after {
-    border-right: 1px solid #CCCCCC;
+    border-right: 1px solid #999999;
   }
   .landing-page section.lines-path-left > .flex-row:after {
-    border-left: 1px solid #CCCCCC;
+    border-left: 1px solid #999999;
   }
   .landing-page section.lines-path-right .flex-row:before {
     right: 0;
@@ -742,7 +742,7 @@ section#symposium {
     transform: translate(50%, 0);
   }
   .landing-page section.lines-path-right .flex-row:after {
-    border-right: 1px solid #CCCCCC;
+    border-right: 1px solid #999999;
   }
   #retail.solutions.landing-page #headquarters > .flex-row:before {
     background-color: #D9232E;

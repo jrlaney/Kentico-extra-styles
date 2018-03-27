@@ -1,5 +1,5 @@
 section {
-  border-bottom: 1px solid #CCCCCC;
+  border-bottom: 1px solid #999999;
 }
 section#hero,
 section:last-child {
@@ -24,7 +24,7 @@ p + h3 {
 p.important {
   padding: 20px;
   background-color: #f2f2f2;
-  border: 1px solid #CCCCCC;
+  border: 1px solid #999999;
   font-weight: 600;
 }
 figure {
@@ -45,7 +45,7 @@ code {
 }
 .code-type {
   padding: 10px 20px;
-  background-color: #999999;
+  background-color: #555555;
   color: #FFFFFF;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -55,7 +55,7 @@ code {
   font-size: 32px;
 }
 .icon-prefix {
-  color: #999999;
+  color: #555555;
 }
 .hljs {
   display: block;
@@ -68,7 +68,7 @@ code {
   color: #333333;
 }
 .hljs-comment {
-  color: #999999;
+  color: #555555;
 }
 .hljs-keyword,
 .hljs-attribute,

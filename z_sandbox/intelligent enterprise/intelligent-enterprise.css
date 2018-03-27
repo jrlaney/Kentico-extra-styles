@@ -216,7 +216,7 @@
   justify-content: center;
   position: relative;
   margin: 20px 20px 0 20px;
-  background-color: #999999;
+  background-color: #555555;
   padding: 15px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -433,7 +433,7 @@
 }
 #intelligence-map.ext-forces .map-section:not(.ext-forces) {
   background-color: #777777;
-  color: #CCCCCC;
+  color: #999999;
   font-size: 90%;
   padding: 10px;
 }
@@ -510,7 +510,7 @@
 }
 #intelligence-map.ent-assets .map-section:not(.ent-assets) {
   background-color: #777777;
-  color: #CCCCCC;
+  color: #999999;
   font-size: 90%;
   padding: 10px;
 }
@@ -637,7 +637,7 @@
 }
 #intelligence-map.int-platform .map-section:not(.int-platform) {
   background-color: #777777;
-  color: #CCCCCC;
+  color: #999999;
   font-size: 90%;
   padding: 10px;
 }
@@ -768,7 +768,7 @@
 }
 #intelligence-map.int-program .map-section:not(.int-program) {
   background-color: #777777;
-  color: #CCCCCC;
+  color: #999999;
   font-size: 90%;
   padding: 10px;
   z-index: 0;
@@ -855,7 +855,7 @@
 }
 #intelligence-map.int-architecture .map-section:not(.int-architecture) {
   background-color: #777777;
-  color: #CCCCCC;
+  color: #999999;
   font-size: 90%;
   padding: 10px;
   z-index: 0;
@@ -924,7 +924,7 @@
 #intelligence-map.int-architecture .map-section.int-architecture .diagram-wrapper .diagram-item.uat:after {
   content: '';
   position: absolute;
-  background-color: #CCCCCC;
+  background-color: #999999;
   height: 20px;
   width: 2px;
   bottom: -10px;
@@ -938,14 +938,14 @@
   top: 0;
 }
 #intelligence-map.int-architecture .map-section.int-architecture .diagram-wrapper .diagram-line .icon {
-  color: #CCCCCC;
+  color: #999999;
   position: absolute;
 }
 #intelligence-map.int-architecture .map-section.int-architecture .diagram-wrapper .diagram-line:before,
 #intelligence-map.int-architecture .map-section.int-architecture .diagram-wrapper .diagram-line:after {
   content: '';
   position: absolute;
-  background-color: #CCCCCC;
+  background-color: #999999;
 }
 #intelligence-map.int-architecture .map-section.int-architecture .diagram-wrapper .diagram-line:before {
   width: 2px;
@@ -1037,7 +1037,7 @@
 }
 #intelligence-map.int-center .map-section:not(.int-center) {
   background-color: #777777;
-  color: #CCCCCC;
+  color: #999999;
   font-size: 90%;
   padding: 10px;
   z-index: 0;
@@ -1125,7 +1125,7 @@
 #intelligence-map.int-center .map-section.int-center .icon-list .icon-group.director:after {
   content: '';
   position: absolute;
-  background-color: #CCCCCC;
+  background-color: #999999;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -1164,7 +1164,7 @@
 #intelligence-map.int-center .map-section.int-center .icon-list .icon-group > li:after {
   content: '';
   position: absolute;
-  background-color: #CCCCCC;
+  background-color: #999999;
   height: 10px;
   width: 2px;
   left: 50%;
@@ -1202,7 +1202,7 @@
 }
 #intelligence-map.int-applications .map-section:not(.int-applications) {
   background-color: #777777;
-  color: #CCCCCC;
+  color: #999999;
   font-size: 90%;
   padding: 10px;
 }

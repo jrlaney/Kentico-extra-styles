@@ -19,7 +19,7 @@
 }
 #symposium .event .event-location,
 #symposium .event .event-date-time {
-  color: #999999;
+  color: #555555;
 }
 .event .event-location {
   font-weight: 400;
@@ -28,5 +28,5 @@
   font-weight: 600;
 }
 .event .event-description {
-  color: #999999;
+  color: #555555;
 }
