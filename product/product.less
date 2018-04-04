@@ -13,6 +13,7 @@
     max-width:none;
     &.left {float:right;}
     &.right {float:left;}
+    &.mac-thunderbolt {width:165%;}
     @media @large {
         &.left {&.pc-laptop, &.macbook-pro, &.macbook-air {margin-right:-10%;}}
         &.right {&.pc-laptop, &.macbook-pro, &.macbook-air {margin-left:-10%;}}
@@ -20,11 +21,60 @@
 }
 .stacked-mockups {position:relative;}
 
+//for a grid of links with colored icons and left border hover state
+.icon-link-grid {
+    .grid-item {
+        .display(flex);
+        .align-items(center);
+        position:relative; overflow:hidden;
+        padding-top:20px; padding-bottom:20px;
+
+        font-family:@myriad-pro;
+        font-size:14px; line-height:1.2em;
+        .uppercase;
+        font-weight:400;
+
+        .icon {margin-right:10px;}
+        &:before {
+            content:'';
+            display:block; position:absolute;
+            top:0; left:0;
+            width:3px; height:100%;
+            .translateX(-3px);
+            .transition;
+        }
+        &.red:before {background-color:@red;}
+        &.orange:before {background-color:@orange;}
+        &.green:before {background-color:@green;}
+        &.blue:before {background-color:@blue;}
+        &.navy-blue:before {background-color:@navy-blue;}
+        &:hover {
+            padding-left:20px; padding-right:10px;
+            &:before {.translateX(0);}
+            &.red .icon {color:@red;}
+            &.orange .icon {color:@orange;}
+            &.green .icon {color:@green;}
+            &.blue .icon {color:@blue;}
+            &.navy-blue .icon {color:@navy-blue;}
+        }
+    }
+    &.light .grid-item {
+        color:@black;
+        border:1px solid fade(@pure-black, 10%);
+        border-width:0 1px 1px 0;
+        &:hover {background-color:fade(@white, 50%);}
+    }
+    &.dark .grid-item {
+        color:@white;
+        border:1px solid fade(@white, 10%);
+        border-width:0 1px 1px 0;
+        &:hover {background-color:fade(@pure-black, 40%);}
+    }
+}
+
 
 // BANNER IMAGES
-
 .product #hero.background-image { background-image: url('/getmedia/2838b8b1-25b0-43f6-824f-142739031279/two-monitors-wood-desk'); }
-#whats-new #hero.background-image { background-image: url('/Strategy/media/images/common/banners/microstrategy-10.jpg'); }
 
 
 
@@ -259,16 +309,17 @@
 
 // WHAT'S NEW PAGE
 
-#whats-new {
-
-    //all the older pages still work
-    &:not(.v10-9) section.view {
-        padding: 0;
-        background-color: @black;
-        color: @white;
-    }
+.WhatsNew {
 
     section.view {
+        .display(flex);
+        .flex-direction(column);
+        .align-items(center);
+        .justify-content(center);
+        position:relative;
+        min-height:100vh;
+
+        > .flex-row {position:relative;}
         p {
             font-family: @myriad-pro;
             font-size: 18px;
@@ -280,59 +331,82 @@
         }
     }
 
-    .media-col {
-        overflow: hidden;
-        background-color: @light-gray;
-        .device-mockup {
+    .older-updates {
+        > section {border-bottom:1px solid @iron; &:first-child{border-bottom:0;}}
+    }
 
-            &.mac-thunderbolt { margin-bottom: -15%; }
+    //10.11 updates
+    #geospatial {
+        .stacked-mockups {margin-bottom:40px;}
+        .device-mockup {
+            &.macbook-pro {
+                position:relative; z-index:0;
+                margin-left:10%;
+                @media @medium {width:120%}
+            }
+            &.ipad {
+                position:absolute; z-index:1;
+                width:65%;
+                left:10%; bottom:-5px;
+            }
+            &.iphone {
+                position:absolute; z-index:2;
+                width:16%;
+                left:5%; bottom:-10px;
+            }
         }
     }
 
-    #hero {
-        .scroll-link {
-            position:relative; overflow:hidden;
-            padding-top:20px; padding-bottom:20px;
-            font-size:14px; line-height:1.2em;
-            color:@white;
-            .uppercase;
-            font-weight:400;
-            border:1px solid fade(@white, 10%);
-            border-width:0 1px 1px 0;
-            .icon {font-size:25px;}
-            &:before {
-                content:'';
-                display:block; position:absolute;
-                top:0; left:0;
-                width:3px; height:100%;
-                .translateX(-3px);
-                .transition;
-            }
-            &.red:before {background-color:@red;}
-            &.orange:before {background-color:@orange;}
-            &.green:before {background-color:@green;}
-            &.blue:before {background-color:@blue;}
-            &.navy-blue:before {background-color:@navy-blue;}
-            &:hover {
-                padding-left:20px; padding-right:10px;
-                background-color:fade(@pure-black, 40%);
-                &:before {.translateX(0);}
-                &.red .icon {color:@red;}
-                &.orange .icon {color:@orange;}
-                &.green .icon {color:@green;}
-                &.blue .icon {color:@blue;}
-                &.navy-blue .icon {color:@navy-blue;}
-            }
+    #native-mobile-app {
+        .device-mockup {
+            margin:0 auto -50% auto;
+            max-width:60%;
+            @media @medium-only {max-width:75%;}
+        }
+    }
+
+
+    //for 10.10 version, delete when all translated
+    #hero .scroll-link {
+        position:relative; overflow:hidden;
+        padding-top:20px; padding-bottom:20px;
+        font-size:14px; line-height:1.2em;
+        color:@white;
+        .uppercase;
+        font-weight:400;
+        border:1px solid fade(@white, 10%);
+        border-width:0 1px 1px 0;
+        .icon {font-size:25px;}
+        &:before {
+            content:'';
+            display:block; position:absolute;
+            top:0; left:0;
+            width:3px; height:100%;
+            .translateX(-3px);
+            .transition;
+        }
+        &.red:before {background-color:@red;}
+        &.orange:before {background-color:@orange;}
+        &.green:before {background-color:@green;}
+        &.blue:before {background-color:@blue;}
+        &.navy-blue:before {background-color:@navy-blue;}
+        &:hover {
+            padding-left:20px; padding-right:10px;
+            background-color:fade(@pure-black, 40%);
+            &:before {.translateX(0);}
+            &.red .icon {color:@red;}
+            &.orange .icon {color:@orange;}
+            &.green .icon {color:@green;}
+            &.blue .icon {color:@blue;}
+            &.navy-blue .icon {color:@navy-blue;}
         }
     }
 
     #updates-10-9 {
-        > section {border-bottom:1px solid @gray; &:first-child{border-bottom:0;}}
-    }
-
-    #dossier {
-        .icon-block.white {color:@red;}
-        .device-mockup {margin-bottom:-40%;}
+        > section {
+            border-bottom:1px solid @iron;
+            &:first-child{border-bottom:0;}
+        }
     }
 
     #collaboration {
@@ -369,147 +443,6 @@
         .ratio {.rounded(3px);}
     }
 
-    #hierarchy-reporting {
-        .report-image {
-            @media @medium {
-                margin-bottom:-30%;
-                width:90%;
-                margin-right:0; margin-left:0;
-            }
-        }
-    }
-
-    #aws {
-        .media-col .resource-thumbnail {
-            margin:0 auto -15% auto;
-            width:75%;
-            .box-shadow(5px 5px 10px fade(@pure-black, 40%));
-            @media @medium {width:50%;}
-            @media @large {width:60%;}
-            @media @xlarge {width:70%;}
-        }
-    }
-
-
-    #integrated-qr-scanner {
-
-        img {
-            display: block;
-            max-width: 250px;
-            margin: 0 auto;
-        }
-
-    }
-
-    #restful-api {
-        #restful-api-diagram {
-            text-align: center;
-            font-family: @myriad-pro;
-            font-weight: @light;
-            .uppercase;
-            color: @black;
-
-            > .flex-row {
-                margin-bottom: @column-gutter / 2;
-            }
-
-            .icon {
-                margin-bottom: @base-spacing / 2;
-            }
-            .block {
-                position: relative;
-                z-index: 1;
-                background-color: @white;
-                border: @thin-border @gray;
-            }
-
-            #third-party-application {
-
-                .icon {
-                    display: block;
-                }
-            }
-            #restful-server {
-                position: relative;
-                font-size: 18px;
-                line-height: @line-height;
-                font-weight: @bold;
-                color: @white;
-
-                .block {
-                    background-color: @red;
-                    border: 0;
-                }
-
-                &:before, &:after {
-                    content: '';
-                    display: block;
-                    width: @thin;
-                    .position(absolute, @column-gutter / -2, @bottom: @column-gutter / -2);
-                    background-color: @gray;
-                }
-                &:before { left: 43%; }
-                &:after { right: 43%; }
-            }
-            #data {
-                position: relative;
-                color: @dark-gray;
-
-                .block {
-                    padding: @column-gutter / 4;
-                }
-                .icon {
-                    margin-bottom: @base-spacing / 4;
-                }
-                &:before {
-                    content: '';
-                    display: block;
-                    .size(@thin, @column-gutter / 2);
-                    .position(absolute, @column-gutter / -2, 50%);
-                    background-color: @gray;
-                }
-            }
-        }//end restful api program
-    }//end rest-api
-
-
-    #extended-data-preparation {
-
-        #data-sources {
-
-            .display(flex);
-            .flex-wrap(wrap);
-
-            @media @medium {padding: extract(@section-padding, 1);}
-
-            > img {
-                .size(18%);
-                @media @medium { .size(10.5%); }
-                @media @large { .size(8%); }
-                @media @xlarge { .size(auto); }
-                margin: 1%;
-                @media @xlarge { margin: 5px; }
-                border-radius: 10%;
-                .drop-shadow(2px, 2px, 4px);
-                opacity: 0;
-            }//end img
-        }//end data sources
-
-        //animate the data sources in on view
-        &.passed-view #data-sources > img {
-            .animation(fade-slide-right 0.4s ease-out 0s normal forwards);
-
-            @data-sources-count: 30;
-            .loop-number(@i) when (@i > 0) {
-                .loop-number(@i - 1);
-
-                @delay: round(@i * .1, 2);
-
-                &:nth-child(@{i}) { .animation-delay(~'@{delay}s'); }
-            }
-            .loop-number(@data-sources-count);
-        }//end data prep animations
-    }//end extended data prep
 }//end whats-new page
 
 
