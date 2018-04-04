@@ -459,21 +459,6 @@
   opacity: 1;
   padding: 0 16px;
 }
-.WhatsNew section.view {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  position: relative;
-  min-height: 100vh;
-}
-.WhatsNew section.view > .flex-row {
-  position: relative;
-}
 .WhatsNew section.view p {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -498,33 +483,31 @@
   z-index: 0;
   margin-left: 10%;
 }
-@media only screen and (min-width: 768px) {
-  .WhatsNew #geospatial .device-mockup.macbook-pro {
-    width: 120%;
-  }
-}
 .WhatsNew #geospatial .device-mockup.ipad {
   position: absolute;
   z-index: 1;
-  width: 65%;
+  width: 80%;
   left: 10%;
   bottom: -5px;
 }
 .WhatsNew #geospatial .device-mockup.iphone {
   position: absolute;
   z-index: 2;
-  width: 16%;
+  width: 20%;
   left: 5%;
   bottom: -10px;
 }
 .WhatsNew #native-mobile-app .device-mockup {
-  margin: 0 auto -50% auto;
+  margin: 0 auto -30% auto;
   max-width: 60%;
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .WhatsNew #native-mobile-app .device-mockup {
     max-width: 75%;
   }
+}
+.WhatsNew #face-id .device-mockup {
+  max-width: 60%;
 }
 .WhatsNew #hero .scroll-link {
   position: relative;

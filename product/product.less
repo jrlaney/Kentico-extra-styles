@@ -312,14 +312,6 @@
 .WhatsNew {
 
     section.view {
-        .display(flex);
-        .flex-direction(column);
-        .align-items(center);
-        .justify-content(center);
-        position:relative;
-        min-height:100vh;
-
-        > .flex-row {position:relative;}
         p {
             font-family: @myriad-pro;
             font-size: 18px;
@@ -342,16 +334,15 @@
             &.macbook-pro {
                 position:relative; z-index:0;
                 margin-left:10%;
-                @media @medium {width:120%}
             }
             &.ipad {
                 position:absolute; z-index:1;
-                width:65%;
+                width:80%;
                 left:10%; bottom:-5px;
             }
             &.iphone {
                 position:absolute; z-index:2;
-                width:16%;
+                width:20%;
                 left:5%; bottom:-10px;
             }
         }
@@ -359,9 +350,15 @@
 
     #native-mobile-app {
         .device-mockup {
-            margin:0 auto -50% auto;
+            margin:0 auto -30% auto;
             max-width:60%;
             @media @medium-only {max-width:75%;}
+        }
+    }
+
+    #face-id {
+        .device-mockup {
+            max-width:60%;
         }
     }
 
