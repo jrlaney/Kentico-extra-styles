@@ -23,7 +23,7 @@
 .Blog.List .post .post-author {
   font-size: 16px;
   font-weight: 300;
-  color: #555555;
+  color: #777777;
 }
 .Blog.List .post .post-author .author-name {
   font-weight: 400;
@@ -56,7 +56,7 @@
 }
 .Blog.Single .post h5 {
   font-size: 20px;
-  color: #555555;
+  color: #777777;
 }
 .Blog.Single .post a {
   font-weight: 400;
@@ -120,7 +120,7 @@
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #555555;
+  color: #777777;
 }
 .Blog.Single .post .post-author .post-author-panel {
   padding: 30px;
@@ -235,7 +235,7 @@
   display: block;
   margin-bottom: 20px;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #555555;
+  color: #777777;
 }
 #comments .CommentHeader {
   display: -webkit-flex;
@@ -256,7 +256,7 @@
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #555555;
+  color: #777777;
 }
 #comments .CommentBody {
   padding-top: 20px;

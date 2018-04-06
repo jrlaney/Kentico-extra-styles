@@ -166,7 +166,7 @@ section#symposium {
   fill: #f2f2f2;
 }
 .angles-canvas.dark-gray .angle {
-  fill: #555555;
+  fill: #777777;
 }
 .angles-canvas.black .angle {
   fill: #333333;
@@ -338,7 +338,7 @@ section#symposium {
   border-right-color: #999999;
 }
 .triangle-group.dark-gray:before {
-  border-right-color: #555555;
+  border-right-color: #777777;
 }
 .triangle-group.black:before {
   border-right-color: #333333;

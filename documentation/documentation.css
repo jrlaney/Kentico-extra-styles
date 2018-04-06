@@ -45,7 +45,7 @@ code {
 }
 .code-type {
   padding: 10px 20px;
-  background-color: #555555;
+  background-color: #777777;
   color: #FFFFFF;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -55,7 +55,7 @@ code {
   font-size: 32px;
 }
 .icon-prefix {
-  color: #555555;
+  color: #777777;
 }
 .hljs {
   display: block;
@@ -68,7 +68,7 @@ code {
   color: #333333;
 }
 .hljs-comment {
-  color: #555555;
+  color: #777777;
 }
 .hljs-keyword,
 .hljs-attribute,

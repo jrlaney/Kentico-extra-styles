@@ -447,7 +447,7 @@
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
   text-align: center;
-  background-color: #484848;
+  background-color: #6a6a6a;
   font-size: 12px;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #FFFFFF;
@@ -508,6 +508,25 @@
 }
 .WhatsNew #face-id .device-mockup {
   max-width: 60%;
+}
+.WhatsNew #prompts-support .device-mockup.macbook-pro {
+  position: relative;
+  z-index: 0;
+  margin-right: 10%;
+}
+.WhatsNew #prompts-support .device-mockup.ipad {
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+  right: 10%;
+  bottom: -5px;
+}
+.WhatsNew #prompts-support .device-mockup.iphone-x {
+  position: absolute;
+  z-index: 2;
+  width: 20%;
+  right: 5%;
+  bottom: -10px;
 }
 .WhatsNew #hero .scroll-link {
   position: relative;

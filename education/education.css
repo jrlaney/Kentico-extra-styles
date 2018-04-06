@@ -115,14 +115,14 @@
 .cert-description,
 .instructor-biography {
   line-height: 1.5;
-  color: #555555;
+  color: #777777;
 }
 .instructor-title {
   line-height: 1.5;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #555555;
+  color: #777777;
 }
 .Education.Single {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -223,7 +223,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #555555;
+  color: #777777;
 }
 .Education.Single [class$="-panel"] .course-detail-list {
   list-style: none;

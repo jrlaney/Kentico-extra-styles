@@ -185,10 +185,10 @@
     border-left-color: #f2f2f2;
   }
   .panelstack.vertical-panelstack.dark-gray .panel-nav .panel-nav-elem.active-panel > a {
-    background-color: #555555;
+    background-color: #777777;
   }
   .panelstack.vertical-panelstack.dark-gray .panel-nav .panel-nav-elem.active-panel > a:before {
-    border-left-color: #555555;
+    border-left-color: #777777;
   }
   .panelstack.vertical-panelstack.black .panel-nav .panel-nav-elem.active-panel > a {
     background-color: #333333;

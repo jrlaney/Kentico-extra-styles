@@ -39,7 +39,7 @@ ul.triangle-list li {
   font-style: normal;
   font-size: 18px;
   line-height: 20px;
-  color: #555555;
+  color: #777777;
   text-align: left;
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
@@ -178,7 +178,7 @@ ul.triangle-list li {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 600;
-  color: #555555;
+  color: #777777;
   text-align: center;
 }
 .bi-maturity-curve .bi-maturity-curve-graph .label.y-axis {
@@ -346,7 +346,7 @@ ul.triangle-list li {
   margin-left: 20px;
   padding-left: 40px;
   padding-bottom: 40px;
-  border-left: 2px dashed #555555;
+  border-left: 2px dashed #777777;
 }
 #bi-journey .journey-graph-mobile .time-block .text-block {
   margin-bottom: 7.5px;
@@ -380,7 +380,7 @@ ul.triangle-list li {
   height: 0;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-top: 15px solid #555555;
+  border-top: 15px solid #777777;
 }
 #bi-journey .journey-graph {
   position: relative;
@@ -406,7 +406,7 @@ ul.triangle-list li {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 600;
-  color: #555555;
+  color: #777777;
 }
 #bi-journey .journey-graph .y-axis-bar {
   position: relative;
@@ -460,7 +460,7 @@ ul.triangle-list li {
 #bi-journey .journey-graph .x-axis-bar {
   position: relative;
   overflow: visible;
-  border-top: 2px dashed #555555;
+  border-top: 2px dashed #777777;
 }
 #bi-journey .journey-graph .x-axis-bar .grid-item {
   position: relative;
@@ -513,7 +513,7 @@ ul.triangle-list li {
   height: 0;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 15px solid #555555;
+  border-left: 15px solid #777777;
 }
 #bi-journey .journey-graph .line.thick {
   height: 30px;
