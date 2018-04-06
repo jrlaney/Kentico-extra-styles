@@ -1,0 +1,40 @@
+.List.Page .profile.card {
+  border: 0;
+}
+.Single.Page {
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.Single.Page .profile-name {
+  margin-bottom: 5px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #333333;
+}
+.Single.Page .profile-title {
+  line-height: 1.5;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #777777;
+}
+.Single.Page .profile-bio {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+@media only screen and (min-width: 980px) {
+  .Single.Page .profile-bio {
+    font-size: 18px;
+  }
+}
+.Single.Page .profile-photo {
+  width: 175px;
+  height: 175px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 0;
+}
+.no-objectfit .Single.Page .profile-photo {
+  color: transparent;
+}
