@@ -1,10 +1,6 @@
 @import '../../settings.less';
 
-.uppercase {
-    text-transform:uppercase;
-    letter-spacing:0.1em;
-}
-
+//NEW MIXINGS FOR GLOBAL
 .transition-open(@args) {
     -webkit-transition: @args;
     transition: @args;
@@ -15,84 +11,95 @@
     transition-delay: @delay;
 }
 
-//custom animation beziers
+
+
+//CUSTOM ANIMATION BEZIERS FOR FANCINESS
 @ease-bezier:     cubic-bezier(.86,.01,.23,1);
 @ease-out-bezier: cubic-bezier(.2,0,.03,1);
 @ease-in-bezier:  cubic-bezier(.98,0,.76,1);
 
-//JUST FOR THE SAMPLE
-//header, nav, .top-banner {display:none!important;}
 
-//ADD SPACERS TO THE TOP TO ACCOUNT FOR FIXED ELEMENTS IN PREVIEW MODE AND IN THE CMS
-@preview-mode-spacer:17px;
+
+
+
+//JUST FOR THE SANDOBX PAGE DELETE FOR GLOBAL
+header#page-header {display:none!important;}
+
+
+
+
+
+
+//ADD SPACERS TO THE TOP TO ACCOUNT FOR FIXED ELEMENTS IN PREVIEW MODE AND IN THE CMS EDITOR (SCRIPT ADDS THE RELEVANT CLASSES)
+@preview-mode-spacer:36px;
+@preview-mode-spacer-mobile:55px;
 @cms-viewer-spacer:110px;
 
-#container {background-color:@white;}
 body {position:relative;}
 .CMS-preview-mode #primary-menu,
-.CMS-preview-mode.menu-opened #header {
-    top:@preview-mode-spacer;
-    //@media @medium {top:@preview-mode-spacer - 18;}
+.CMS-preview-mode.primary-menu-opened #header {
+    top:@preview-mode-spacer-mobile;
+    @media @medium {top:@preview-mode-spacer;}
 }
 .CMS-preview-mode #primary-menu {
-    height: ~"calc(100% - @{preview-mode-spacer})";
-    //@media @medium {height: ~"calc(100% - @{preview-mode-spacer} + 18px)";}
+    height: ~"calc(100% - @{preview-mode-spacer-mobile})";
+    @media @medium {height: ~"calc(100% - @{preview-mode-spacer})";}
 }
 .cms-bootstrap .CMS-preview-mode #primary-menu,
-.cms-bootstrap .CMS-preview-mode.menu-opened #header {top:@cms-viewer-spacer;}
+.cms-bootstrap .CMS-preview-mode.primary-menu-opened #header {top:@cms-viewer-spacer;}
 .cms-bootstrap .CMS-preview-mode #primary-menu {height: ~"calc(100% - @{cms-viewer-spacer})";}
 
-//get rid of double scroll bar and add padding so the content doesnt pop up when the header goes fixed
-body.menu-opened {
-    overflow:hidden;
-    padding-top:60px;
-}
+
+
+//BASE STYLE UPDATES/CHANGES
+#page-content {background-color:@white;}
+
+
 
 
 
 
 //HEADER STYLES
+@header-height: 60px;
 @header-z-index: 900;
+@logo-width: 180px;
+@logo-width-desktop: 220px;
+
 #header {
     display:block; z-index:@header-z-index;
     overflow:hidden;
-    width:100%; height:60px;
+    width:100%; height:@header-height;
     background-color:@white;
 
     .prevent-highlight;
     font-family:@myriad-pro;
-    font-style:normal; font-weight:400;
+    font-style:normal; font-weight:@bold;
     font-size:14px; line-height:20px;
     .uppercase;
 
     //animation for menu opening
     position:relative;
-    .transition-open(~"all 0.2s ease-out 0.2s");
-    .menu-opened & {
+    .transition(0.2s, ease-out, all, 0.2s);
+    .primary-menu-opened & {
         position:fixed;
-        background-color:@red;
+        background-color:@black;
         top:0; left:0;
-        .transition-open(~"all 0.2s ease-out 0s");
+        .transition-delay(0s);
         @media @medium {background-color:transparent; border-bottom:none;}
     }
 
     //centered row with breakpoints
     .header-wrapper {
         .display(flex);
-        .flex(0, 1, auto);
+        .flex(0, 0, auto);
         .flex-direction(row);
         .flex-wrap(nowrap);
         .justify-content(flex-end);
         .align-items(center);
         margin-left:auto; margin-right:auto;
         padding:0 15px;
-        @media @medium {max-width:@small-breakpoint; padding-right:0;}
-        @media @large {max-width:@medium-breakpoint;}
         @media @xlarge {max-width:@large-breakpoint;}
     }
-    .trial-button,
-    .primary-menu-button,
-    .logo-col {.flex(0, 0, auto);}
     .logo-col {
         position:relative;
         margin-right:auto;
@@ -100,16 +107,16 @@ body.menu-opened {
             display:block; position:relative; z-index:2;
             .logo-img {
                 display:block;
-                width:180px;
+                width:@logo-width;
                 fill-rule:evenodd;
-                @media @large {width:220px;}
+                @media @large {width:@logo-width-desktop;}
 
                 //animations for menu opening
                 fill: @red;
-                .transition-open(all 0.2s ease-out 0.2s);
-                .menu-opened & {
+                .transition(0.2s, ease-out, all, 0.2s);
+                .primary-menu-opened & {
                     fill:@white;
-                    .transition-open(all 0.2s ease-out 0s);
+                    .transition-delay(0s);
                 }
             }
         }
@@ -126,10 +133,10 @@ body.menu-opened {
 
                 //animations for menu opening
                 color:@monsoon; opacity:1;
-                .transition-open(all 0.2s ease-out 0.2s);
-                .menu-opened & {
+                .transition(0.2s, ease-out, all, 0.2s);
+                .primary-menu-opened & {
                     opacity:0; .translateY(-100%);
-                    .transition-open(all 0.2s ease-out 0s);
+                    .transition-delay(0s);
                 }
             }
         }//end tagline
@@ -140,48 +147,46 @@ body.menu-opened {
             display:inline-block;
             margin:0px!important;
             border:none!important;
+            font-weight:@bold;
             .transition(.2s, ease-out, all, 0.2s);
-            .menu-opened & {
+            .primary-menu-opened & {
                 background-color:@red;
                 color:@white;
                 &:hover {background-color:@light-red;}
-                .transition(.2s, ease-out, all, 0.3s);
+                .transition-delay(0.3s);
             }
         }
     }
     .primary-menu-button {
         position:relative;
         cursor:pointer;
-        height:60px; width:45px;
+        width:100px;
+        height:@header-height;
         @media @medium {
-            width:100px;
             &:hover {
                 .text.closed {color:@red;}
                 .menu-toggle .line,
-                .menu-opened & .menu-toggle .line {background-color:@red;}
+                .primary-menu-opened & .menu-toggle .line {background-color:@red;}
             }
         }
         .text {
-            display:none;
-            @media @medium {
-                display:block; position:absolute;
-                top:20px; left:15px;
-                color:@monsoon;
-                &.closed {
-                    opacity:1; .translateY(0); color:@monsoon;
-                    .transition-open(~"opacity 0.2s ease-out 0.5s, transform 0.2s ease-out 0.5s, color 0.2s ease-out 0s");
-                    .menu-opened & {
-                        opacity:0; transform:translateY(-10px);
-                        .transition-open(all 0.2s ease-out 0s);
-                    }
+            display:block; position:absolute;
+            top:20px; left:15px;
+            color:@monsoon;
+            &.closed {
+                opacity:1; .translateY(0); color:@monsoon;
+                .transition-open(~"opacity 0.2s ease-out 0.5s, transform 0.2s ease-out 0.5s, color 0.2s ease-out 0s");
+                .primary-menu-opened & {
+                    opacity:0; transform:translateY(-10px);
+                    .transition;
                 }
-                &.opened {
-                    opacity:0; transform:translateY(10px); color:@white;
-                    .transition-open(all 0.2s ease-out 0s);
-                    .menu-opened & {
-                        opacity:1; transform:translateY(0);
-                        .transition-open(all 0.2s ease-out 0.7s);
-                    }
+            }
+            &.opened {
+                opacity:0; transform:translateY(10px); color:@white;
+                .transition;
+                .primary-menu-opened & {
+                    opacity:1; transform:translateY(0);
+                    .transition-delay(0.7s);
                 }
             }
         }//end text
@@ -205,7 +210,7 @@ body.menu-opened {
                     .transition-open(~"background 0.2s ease-out 0s, transform 0.4s ease-out 0.3s, opacity 0.4s ease-out 0.5s, margin 0.2s ease-out 0.5s");
                 }
                 //animation for the lines when the menu is opened
-                .menu-opened & {
+                .primary-menu-opened & {
                     background-color:@white;
                     &.one {.rotation(45deg); margin-top:-1px;}
                     &.two {opacity:0; .translateX(25px);}
@@ -215,10 +220,16 @@ body.menu-opened {
         }//end menu toggle
     }//end primary menu button
 }
-//when the menu is opened, make it so the site content cant scroll
-@media @medium {body.menu-opened {overflow:hidden;}}
+
+//when the menu is opened, make it so the site content cant scroll, and get rid of double scroll bar and add padding so the content doesnt pop up when the header goes fixed
+body.primary-menu-opened {
+    overflow:hidden;
+    padding-top:@header-height;
+}
 
 
+//PRIMARY NAV STYLES
+@mobile-tap-gutter: 50px;
 
 #primary-menu {
     display:block; position:fixed;
@@ -228,14 +239,13 @@ body.menu-opened {
 
     font-family:@myriad-pro;
     font-size:18px; line-height:24px;
-    font-style:normal; font-weight:300;
+    font-style:normal; font-weight:@normal;
     color:@white;
-    //padding-top:60px;
 
     //animation to stack the nav on top of the content when opened
     z-index:-2; opacity:0;
     .transition-open(~"z-index 0.5s step-end, opacity 0.5s step-end 0s");
-    .menu-opened & {
+    .primary-menu-opened & {
         z-index:@header-z-index - 1; opacity:1;
         .transition-open(~"z-index 0s step-start, opacity 0s step-start");
     }
@@ -247,187 +257,339 @@ body.menu-opened {
         .flex-wrap(nowrap);
     	.align-items(center);
     	.justify-content(center);
+        font-size:16px;
     }
 
+
+    //this is the wrapper for all the nav elements to keep them contained in the breakpoint bounds and flex stretched
     .node-navigation {
+        .display(flex);
+        .flex(1, 1, auto);
+        .align-items(stretch);
         width:100%; min-height:100%;
         overflow:hidden;
         overflow-y:auto;
         @media @medium {
-            .display(flex);
-            .flex(1, 1, auto);
-            .align-items(stretch);
 
             padding:0;
             margin-left:auto; margin-right:auto;
             position:relative; z-index:3;
-
-            max-width:@small-breakpoint;
+            max-width:100%;
 
         }//desktop size node panel
-        @media @large {max-width:@medium-breakpoint;}
         @media @xlarge {max-width:@large-breakpoint;}
-    }//end node-navigation
+    }//end node-navigation wrapper
 
+
+    //styles and animations for the slide-out panels for the nested nodes
     .node-panel {
-        .display(flex);
-        .flex(0, 1, auto);
-        .flex-direction(column);
-        .flex-wrap(nowrap);
-    	.align-items(flex-start);
         position:relative;
         width:100%; min-height:100%;
-        padding-top:60px;
-        &.level-1 {z-index:2; padding-top:80px;}
+        padding-top:@header-height;
 
-        //animate in when menu is opened
-        opacity:0; .translateX(-100%);
+        //animate nav in after menu is opened to prevent jumping
+        opacity:0; .translateX(10%);
         .transition-open(~"opacity 0.2s ease-in 0s, transform 0.3s ease-out 0s");
-        .menu-opened & {
+        .primary-menu-opened & {
             opacity:1; .translateX(0);
             .transition-open(~"opacity 0.3s ease-in 0.3s, transform 0.3s ease-in 0.3s");
         }
-
         @media @medium {
-            width:30%;
-            &.level-1 {padding-top:80px;}
-            //animate in when menu is opened
+            min-height:0;
+            //animate the nav in after menu is opened to prevent jumping
             .translateX(-10%);
-            .menu-opened & {
+            .primary-menu-opened & {
                 .translateX(0);
             }
+        }//end desktop styles for node movement and color
+
+
+
+        &.level-1 {
+            .display(flex);
+            .flex(0, 1, auto);
+            .flex-direction(column);
+            .flex-wrap(nowrap);
+        	.align-items(flex-start);
+            z-index:2;
+            padding-top:@header-height + 20px;
+            @media @medium {width:40%}
+            @media @large {width:35%;}
+            @media @xlarge {width:30%;}
         }
 
-        //this forces the child panels to be under the parent panel when sliding out
-        //also animate in the background after the overall menu animation plays
-        &:after {
-            display:block; position:absolute; z-index:-1;
-            content:'';
-            top:0; left:0;
-            height:100%; width:100%;
-            background-color:lighten(@black, 10%);
-            .box-shadow(1px 1px 10px fade(@pure-black, 40%));
-
-            opacity:0;
-            .transition-open(~"opacity 0s ease-in 0s, background-color 0.2s ease-out 0s");
-            .menu-opened & {
-                opacity:1;
-                .transition-open(~"opacity 0.2s ease-in 0.5s, background-color 0.2s ease-out 0s");
-            }
-        }
-        &.level-2 {z-index:-2; &:after{background-color:lighten(@black, 5%);}}
-        &.level-3 {z-index:-3; &:after{background-color:@black; .box-shadow(none);}}
-
-        //label for the list of links below, text copy of selected left item
-        .node-label {
-            position:relative; overflow:hidden;
-            padding:30px 30px 15px 30px;
-            color:@gray;
-            line-height:1em;
-            .uppercase;
-            font-weight:400;
-            white-space:nowrap;
-            &:after {
-                display:block; position:relative;
-                content:'';
-                height:3px; width:50px;
-                margin-top:15px;
-                background-color:@gray;
-            }
-        }
-        .red.parent-node .node-label:after {background-color:@red;}
-        .orange.parent-node .node-label:after {background-color:@orange;}
-        .green.parent-node .node-label:after {background-color:@green;}
-        .blue.parent-node .node-label:after {background-color:@blue;}
-        .navy-blue.parent-node .node-label:after {background-color:@navy-blue;}
-
-        //for all the sub links inside the node panels
-        .sub-link {
-            display:block; position:relative;
-            cursor:pointer;
-            color:@white;
-            padding:0.7vh 30px;
-            .prevent-highlight;
-
-            //animations
-            opacity:0.5;
-            .transition;
-            &:hover {opacity:1;}
-        }
-        //special styles for the first level panel
-        &.level-1 > .parent-node {
-            > .sub-link {
-                font-size:40px; line-height:1em;
-                padding:1.2vh 50px 1.2vh 15px;
-                .section-summary {
-                    display:block; overflow:hidden;
-                    font-size:14px; line-height:18px;
-                    .uppercase; letter-spacing:0.1em;
-                    font-weight:400;
-
-                    //animations
-                    max-height:0; opacity:0; padding-top:0;
-                    .transition;
-                }
-            }
-            &.active > .sub-link .section-summary {max-height:100%; opacity:1; padding-top:5px;}
-        }
-
-        //position the sub level panels to the right of the main stack
+        //position the sub level panels to the right of the main stack and control the sizes in desktop view
         &.level-2, &.level-3 {
             position:absolute;
             left:100%; top:0;
             height:100%;
-
-            //give sub links in level 2-3 a dark highlight on hover
-            .sub-link {
-                .transition;
-                &:hover {background-color:fade(@pure-black, 15%);}
+            width:~"calc(100% - @{mobile-tap-gutter})";
+            @media @medium {
+                height:auto;
+                //give sub links in level 2-3 a dark highlight on hover
+                .menu-item {
+                    .transition;
+                    &:hover {background-color:fade(@pure-black, 50%);}
+                }
             }
         }
         &.level-2 {
-            width:75%;
-            .parent-node.active > .sub-link {background-color:lighten(@black, 10%);}
-            .parent-node.active > .sub-link:after {border-left-color:lighten(@black, 10%);}
+            z-index:3;
+            @media @medium {
+                z-index:-2;
+                width:~"calc(75% + 20px)";
+                .parent-node.active > .menu-item {background-color:lighten(@black, 10%);}
+                .parent-node.active > .menu-item:after {border-left-color:lighten(@black, 10%);}
+            }
+            @media @xlarge {width:~"calc(85% + 20px)";}
         }
-        .red.parent-node .parent-node.active > .sub-link {
+        &.level-3 {
+            z-index:4;
+            @media @medium {
+                z-index:-3;
+                width:100%;
+                //compensate for the 20px no x-scroll buffer on lvl 2
+                left: ~"calc(100% - 20px)";
+            }
+        }
+        //end level-2 and level-3 node panel adjustments
+
+
+
+
+        //this forces the child panels to be under the parent panel when sliding out in
+        //also acts as the background color to the node to allow for proper stacking because of div layer nesting properties
+        &:after {
+            display:block; position:absolute; z-index:-1;
+            content:'';
+            top:0; right:0;
+            height:100%; width:100%;
+            background-color:lighten(@black, 10%);
+            box-shadow: -1px -1px 10px fade(@pure-black, 40%);
+
+            @media @medium {
+                box-shadow:1px 1px 10px fade(@pure-black, 40%);
+
+                opacity:0;
+                .transition-open(~"opacity 0s ease-in 0s, background-color 0.2s ease-out 0s");
+                .primary-menu-opened & {
+                    opacity:1;
+                    .transition-open(~"opacity 0.2s ease-in 0.5s, background-color 0.2s ease-out 0s");
+                }
+            }
+        }
+        @media @medium {
+            .level-2:after, .level-3:after {width:~"calc(100% - 20px)"; right:20px;}
+            &.level-2:after{z-index:-2; background-color:lighten(@black, 5%);}
+            &.level-3:after{z-index:-3; background-color:@black; .box-shadow(none);}
+        }
+
+        //change the level 2+ node background colors in mobile view
+        @media @small-only {
+            .red.parent-node .node-panel:after {background-color:@red;}
+            .orange.parent-node .node-panel:after {background-color:@orange;}
+            .green.parent-node .node-panel:after {background-color:@green;}
+            .blue.parent-node .node-panel:after {background-color:@blue;}
+            .navy-blue.parent-node .node-panel:after {background-color:@navy-blue;}
+
+        }
+
+
+        //this wrapper allows to the child panels to scroll if the list goes beyond the page height
+        .scroll-wrapper {
+            //height adjust to account for node-label and back button and first 2px border
+            height:~"calc(100% - @{header-height} - 38px)";
+            overflow-y:auto;
+            @media @medium {height:~"calc(100% - @{header-height} - 21px)";}
+        }
+
+
+
+
+
+
+
+        //label for the list of links in levels 2+
+        .node-label {
+            display:block;
+            position:relative;
+            overflow:hidden;
+            padding:20px;
+            width:100%;
+            max-height:@header-height;
+            white-space:nowrap;
+            text-overflow: ellipsis;
+
+            font-size:22px;
+            color:@white;
+            line-height:1em;
+            .uppercase;
+            letter-spacing:0.1em;
+
+            @media @medium {
+                padding:30px 30px 15px 30px;
+                max-height:none;
+
+                color:@light-gray;
+                font-weight:@bold;
+                font-size:18px;
+                &:after {
+                    display:block; position:relative;
+                    content:'';
+                    height:3px; width:50px;
+                    margin-top:15px;
+                    background-color:@gray;
+                }
+            }
+        }
+        //change the underline color based on the selected level-1 parent color theme
+        @media @medium {
+            .red.parent-node .node-label:after {background-color:@red;}
+            .orange.parent-node .node-label:after {background-color:@orange;}
+            .green.parent-node .node-label:after {background-color:@green;}
+            .blue.parent-node .node-label:after {background-color:@blue;}
+            .navy-blue.parent-node .node-label:after {background-color:@navy-blue;}
+        }
+
+
+
+
+        //styles for all the menu item links inside the node panels
+        .menu-item {
+            display:block; position:relative;
+            cursor:pointer;
+            color:@white;
+            padding:10px 20px;
+            width:100%;
+            border-top:2px solid fade(@pure-black, 10%);
+            .prevent-highlight;
+            &.current-page {
+                cursor:default;
+                opacity:0.5;
+                &:hover {opacity:0.5; background-color:transparent!important;}
+            }
+            &.back {
+                .uppercase;
+                font-weight:@bold;
+                padding:5px 20px 5px 50px;
+                background-color:fade(@pure-black, 20%);
+
+                //adds a click zone on the side of the whole panel to go back a stack
+                &:before {
+                    display:block; position:absolute; z-index:-2;
+                    content:'';
+                    top:-@header-height - 2px; right:100%;
+                    height:~"calc(100vh - @{header-height} * 2 + 4px)"; width:@mobile-tap-gutter;
+                    background-color:fade(@pure-black, 20%);
+                    .transition;
+                }
+
+                //for the reverse-facing triangle
+                &:after {
+                    display:block; position:absolute;
+                    content:'';
+                    top:50%; left:20px;
+                    width:0; height:0;
+                    border-top:7px solid transparent;
+                    border-bottom:7px solid transparent;
+                    border-right:7px solid @white;
+
+                    .translateY(-50%);
+                    .transition;
+                }
+            }
+            @media @medium {
+                width:~"calc(100% - 20px)";
+                padding:0.7vh 30px;
+                border-top:none;
+                //animations
+                opacity:0.6;
+                .transition;
+                &:hover {opacity:1;}
+
+                &.back {display:none;}
+                &.current-page {
+                    opacity:0.3;
+                    &:hover {opacity:0.3;}
+                }
+            }
+        }
+
+
+
+
+
+        //special styles for the first level panel menu item and summary
+        &.level-1 > .parent-node {
+            > .menu-item {
+                font-size:30px; line-height:1em;
+                font-weight:@light;
+                padding:1.5vh 50px 1.5vh 20px;
+                border-top:none;
+                .section-summary {display:none;}
+            }
+            @media @medium {
+                > .menu-item {
+                    font-size:40px; line-height:1em;
+                    padding:1.2vh 50px 1.2vh 15px;
+                    .section-summary {
+                        display:block; overflow:hidden;
+                        font-size:14px; line-height:18px;
+                        .uppercase; letter-spacing:0.1em;
+                        font-weight:400;
+
+                        //animations
+                        max-height:0; opacity:0; padding-top:0;
+                        .transition;
+                    }
+                }
+                &.active > .menu-item .section-summary {
+                    max-height:100%; opacity:1; padding-top:5px;
+                }
+            }
+        }
+
+        //make the sub level hover colors match the color theme of the parent
+        .red.parent-node .parent-node.active > .menu-item {
             background-color:@red;
             &:after {border-left-color:@red;}
         }
-        .orange.parent-node .parent-node.active > .sub-link {
+        .orange.parent-node .parent-node.active > .menu-item {
             background-color:@orange;
             &:after {border-left-color:@orange;}
         }
-        .green.parent-node .parent-node.active > .sub-link {
+        .green.parent-node .parent-node.active > .menu-item {
             background-color:@green;
             &:after {border-left-color:@green;}
         }
-        .blue.parent-node .parent-node.active > .sub-link {
+        .blue.parent-node .parent-node.active > .menu-item {
             background-color:@blue;
             &:after {border-left-color:@blue;}
         }
-        .navy-blue.parent-node .parent-node.active > .sub-link {
+        .navy-blue.parent-node .parent-node.active > .menu-item {
             background-color:@navy-blue;
             &:after {border-left-color:@navy-blue;}
         }
-        &.level-3 {width:100%;}
-        //end level-2 and level-3 node panel adjustments
+
+
+
+
+
 
         //special styles for search and contact cols
         .search-col .node-panel.level-2,
         .contact-col .node-panel.level-2 {
-            width:~"calc(@{large-breakpoint} - 100%)";
+            @media @medium {width:60vw;}
+            @media @large {width:65vw;}
+            @media @xlarge {width:~"calc(@{large-breakpoint} - 100%)";}
+
+            //reset the layer 2 color so it blends with the background
             &:after {background:@black; .box-shadow(none);}
         }
         .search-col {
             .search-info {
-                .display(flex);
-                .flex(0, 1, auto);
-                .flex-direction(column);
-                .flex-wrap(nowrap);
-            	.justify-content(center);
-                padding:0 30px;
-                height:~"calc(100% - 50vh)"
+                padding:5vh 20px;
+                @media @medium {padding:5vh 30px;}
             }
             .input-group {
                 .display(flex);
@@ -446,11 +608,10 @@ body.menu-opened {
             }
         }
         .contact-col .contact-info {
-            .display(flex);
-            .flex-direction(row);
-            .flex-wrap(wrap);
             padding:1vh 15px;
         }
+
+
 
         //animations for opening the level 2-3 panels in each node
         .parent-node {
@@ -461,23 +622,30 @@ body.menu-opened {
             > .node-panel {
                 overflow:hidden;
                 opacity:0;
-                .translateX(-50%);
-                max-height:0;
-                .transition-open(~"all 0.2s ease-out 0s, max-height 0.2s step-end");
+                .transition;
+                @media @medium {
+                    .translateX(-50%);
+                    height:0;
+                    .transition-open(~"all 0.2s ease-out 0s, height 0.2s step-end");
+                }
             }
             &.active > .node-panel {
-                display:table;
+                //display:table;
                 opacity:1;
                 overflow:visible;
-                .translateX(0);
-                max-height:100%;
-                .transition-open(~"all 0.2s ease-out 0.2s, max-height 0.2s step-start");
+                .translateX(-100%);
+                .transition-delay(0.2s);
+                @media @medium {
+                    .translateX(0);
+                    height:100%;
+                    .transition-open(~"all 0.2s ease-out 0.2s, height 0.2s step-start");
+                }
             }
 
-            &.active > .sub-link {opacity:1;}
+            @media @medium {&.active > .menu-item {opacity:1;}}
 
-            //for the triangle on the right
-            > .sub-link:after {
+            //animations for the triangle on the right
+            > .menu-item:after {
                 display:block; position:absolute;
                 content:'';
                 top:50%; right:15px;
@@ -490,8 +658,8 @@ body.menu-opened {
                 //opacity:0.5;
                 .transition;
             }
-            > .sub-link:hover:after {opacity:1;}
-            &.active > .sub-link:after {
+            > .menu-item:hover:after {opacity:1;}
+            &.active > .menu-item:after {
                 border-top-width:10px;
                 border-bottom-width:10px;
                 border-left-width:10px;
@@ -501,37 +669,37 @@ body.menu-opened {
 
         //make the level 1 triangle bigger
         &.level-1 > .parent-node {
-            > .sub-link:after {
+            > .menu-item:after {
                 border-top-width:10px;
                 border-bottom-width:10px;
                 border-left-width:10px;
             }
-            &.active > .sub-link:after {
+            &.active > .menu-item:after {
                 border-top-width:15px;
                 border-bottom-width:15px;
                 border-left-width:15px;
                 border-left-color:lighten(@black, 10%);
                 .translate(30px, -50%);
             }
-            &.red.active > .sub-link:after {border-left-color:@red;}
-            &.orange.active > .sub-link:after {border-left-color:@orange;}
-            &.green.active > .sub-link:after {border-left-color:@green;}
-            &.blue.active > .sub-link:after {border-left-color:@blue;}
-            &.navy-blue.active > .sub-link:after {border-left-color:@navy-blue;}
+            &.red.active > .menu-item:after {border-left-color:@red;}
+            &.orange.active > .menu-item:after {border-left-color:@orange;}
+            &.green.active > .menu-item:after {border-left-color:@green;}
+            &.blue.active > .menu-item:after {border-left-color:@blue;}
+            &.navy-blue.active > .menu-item:after {border-left-color:@navy-blue;}
         }
 
     }//end node-panel
 
     .menu-footer {
 		.flex(0, 1, auto);
-        position:relative; z-index:3;
+        position:relative; z-index:2;
         width:100%;
         padding:0 20px 20px 20px; margin-top:auto;
         text-align:left;
 
         .line {margin-bottom:0; opacity:0.7;}
         .quick-links {
-            display:block; margin-bottom:15px;
+            display:block; margin-bottom:5px;
             .footer-link {
                 display:inline-block; position:relative;
                 font-weight:400;
@@ -552,21 +720,21 @@ body.menu-opened {
                 }
             }
         }//end quick links
-        .social-links {
-            display:inline-block;
-            .icon {padding:10px 3px;}
+        .icon-block-group {
+            margin-bottom:10px;
+            .icon-block {background-color:fade(@pure-black, 25%);}
         }
         .dropup {
             text-align:left;
             width:100%;
-            background-color:fade(@pure-black, 20%);
+            background-color:fade(@pure-black, 25%);
             .transition;
-            &:hover {background-color:fade(@pure-black, 25%);}
+            &:hover {background-color:fade(@pure-black, 30%);}
             &.open {background-color:fade(@pure-black, 30%);}
             .dropdown-toggle {
                 color:@white; width:100%; background-color:transparent!important;
             }
-            .dropdown-menu {background-color:darken(@black, 5%);}
+            .dropdown-menu {background-color:darken(@black, 5%); max-width:none;}
         }
     }//end menu-footer
 
@@ -578,15 +746,18 @@ body.menu-opened {
 
         //animations
         .transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.2s ease-out 0.2s");
-        opacity:0; .translateX(-100%);
-        .menu-opened & {
+        opacity:0; .translateX(100%);
+        .primary-menu-opened & {
             opacity:1;
-            .translateX(0%);
+            .translateX(0);
             .transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s");
         }
         @media @medium {
             background-color:transparent;
-            //for the header part
+
+            //cancel base animation so before and after animate instead
+            .translateX(0);
+
             &:after, &:before {
                 position:absolute; z-index:0;
                 content:'';
@@ -594,30 +765,51 @@ body.menu-opened {
                 top:0; bottom:0;
             }
             &:after {
-                right:50%;
+                right:~"calc(60% + 7px)";
                 background-color:lighten(@black, 10%);
 
                 //animate in when menu is opened
-                opacity:0; .translateX(~"calc("-@large-breakpoint / 5 ~" - 20%)");
-                @media @large {}
+                opacity:0; .translateX(-20%);
                 .transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.2s ease-out 0.2s, background-color 0.2s ease-out 0s");
-                .menu-opened & {
-                    opacity:1; .translateX(-@large-breakpoint / 5);
+                .primary-menu-opened & {
+                    opacity:1; .translateX(0);
                     .transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s, background-color 0.2s ease-out 0s");
                 }
             }
             &:before {
-                left:50%;
-                //background-color:darken(@black, 10%);
+                left:~"calc(40% - 7px)";
                 background-color:@black;
-                //border-bottom:1px solid fade(@white, 40%);
 
                 //animate in when menu is opened
-                opacity:0; .translateX(~"calc("-@large-breakpoint / 5 ~"+ 20%)");
+                opacity:0; .translateX(20%);
                 .transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.3s ease-out 0.2s");
-                .menu-opened & {
-                    opacity:1; .translateX(-@large-breakpoint / 5);
+                .primary-menu-opened & {
+                    opacity:1; .translateX(0);
                     .transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s");
+                }
+            }
+        }
+        @media @large {
+            &:after {right:~"calc(65% + 7px)";}
+            &:before {left:~"calc(35% - 7px)";}
+        }
+        @media @xlarge {
+            &:after {
+                right:~"calc(50% + 7px)";
+
+                //animate in when menu is opened
+                .translateX(~"calc("-@large-breakpoint / 5 ~" - 20%)");
+                .primary-menu-opened & {
+                    .translateX(-@large-breakpoint / 5);
+                }
+            }
+            &:before {
+                left:~"calc(50% - 7px)";
+
+                //animate in when menu is opened
+                .translateX(~"calc("-@large-breakpoint / 10 * 3 ~"+ 20%)");
+                .primary-menu-opened & {
+                    .translateX(-@large-breakpoint / 10 * 3);
                 }
             }
         }

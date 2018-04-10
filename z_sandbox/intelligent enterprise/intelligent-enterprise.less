@@ -17,8 +17,7 @@
         top:0px; left:0px;
         font-size:60px; line-height:60px;
         font-weight:600;
-        color:@white;
-        opacity:0.3;
+        opacity:0.2;
     }
     @media @medium {
         padding-top:30px; padding-left:50px;
@@ -31,6 +30,12 @@
     &.three:before {content:'3.'}
     &.four:before  {content:'4.'}
     &.five:before  {content:'5.'}
+
+    &.small {
+        padding:10px 0 5px 20px;
+        &:before {font-size:40px; line-height:40px;}
+        @media @medium {&:before {font-size:60px; line-height:60px;}}
+    }
 }
 
 //for a grid of links with colored icons and left border hover state
@@ -87,27 +92,35 @@
 blockquote {
     display:inline-block; *zoom:1; *display:inline; position:relative;
     padding:0; margin:20px;
+    font-family:@myriad-pro;
+    font-weight:400;
     font-size:26px; line-height:35px;
 
     > span {
         display:block;
+        margin-top:15px;
         font-weight:600;
         font-size:18px; line-height:20px;
         .uppercase;
     }
 
 	&:before, &:after {
+        content:'“';
 	    display:block; position:absolute;
-	    content:'';
-	    top:-20px; left:-20px;
+	    top:0.2em; left:-50px;
 	    height:56px; width:68px;
-	    background-image:url(https://custom.cvent.com/83AD54AE0B7F4CBC94A9A945D0A278DA/pix/6466feb2819a44848228682e37f307a2.png);
-	    background-repeat:no-repeat;
-	    background-position:center;
-	    background-color:transparent;
-	    opacity:0.3;
+
+        font-family:@lucida-grande;
+        font-size:250px;
+        color:fade(@white, 50%);
 	}
-	&:after {top:auto; left:auto; bottom:-20px; right:-20px; transform: rotate(180deg);}
+	&:after {
+        content:'”';
+        top:auto;
+        left:auto;
+        bottom:-0.2em;
+        right:-50px;
+    }
 }
 
 
@@ -117,6 +130,84 @@ blockquote {
 
 //OVERVIEW PAGE STYLES
 
+.TheIntelligentEnterprise {
+    #vision {
+        .number-group {
+            margin:0;
+            padding:10px 20px 20px 50px;
+            border-top:3px solid @red;
+            &:before {left:15px;}
+        }
+    }
+    .media-wrapper {
+        position:relative;
+        padding-bottom:200px;
+        height:0;
+        margin-top:30px;
+        .transition(0.3s, ease-out, all, 0s);
+
+        .resource-thumbnail {
+            position:absolute; z-index:1;
+            height:100%; width:100%;
+            top:0; left:0;
+            cursor:pointer;
+            .transition(0.3s, ease-out, all, 0s);
+            &:before {margin-top:-15px;}
+            .cta {margin-top:50px; opacity:1;}
+            &:after {display:none;}
+        }
+        .video-wrapper {
+            position:absolute; z-index:0;
+            width:100%;
+            top:50%; left:50%;
+            .translate(-50%, -40%);
+            opacity:0;
+            .transition(0.3s, ease-out, all, 0.3s);
+        }
+
+        &.video-playing {
+            padding-bottom:56.25%;
+            .resource-thumbnail {opacity:0; .translateY(-50px);}
+            .video-wrapper {opacity:1; z-index:2; .translate(-50%, -50%);}
+        }
+    }
+
+    #map {
+
+        #intelligence-map {
+            > .flex-row > .map-section,
+            .middle-row {
+                width:100%;
+            }
+            .map-section {box-shadow: 1px 1px 3px rgba(0,0,0,.2);}
+            @media @medium {
+                &:before, &:after {display:none;}
+                .map-section {
+                    font-size:16px;
+                    margin:@mapGutter/2;
+                    padding:15px;
+                    &.ext-forces {
+                        .flex(0, 0, auto);
+                        width:48px;
+                        .map-section-title {position:absolute; top:50%; left:50%; white-space:nowrap; width:auto; .transform(translate(-50%) rotate(-90deg));}
+                        &:last-child .map-section-title {.transform(translate(-50%) rotate(90deg));}
+                    }
+                }
+                .middle-row {
+                    .flex(1, 1, 1px);
+                    .map-section {margin-top:@mapGutter/2;}
+                    > .map-section:first-child {margin-top:0;}
+                }
+                .int-techniques {
+                    width:100%;
+                    > .map-section {padding:15px 10px; margin:0; border-left:1px solid @white;}
+                    > .map-section:first-child {border:0;}
+                }
+            }
+        }
+
+    }
+}
 
 
 
