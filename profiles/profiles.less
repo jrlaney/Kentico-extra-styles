@@ -1,0 +1,37 @@
+@import '../settings.less';
+
+.List.Page {
+
+  .profile.card {
+    border: 0;
+  }
+}
+
+.Single.Page {
+  font-family: @myriad-pro;
+
+  .profile-name {
+    margin-bottom: @base-spacing / 4;
+    line-height: 1.2;
+    font-weight: @normal;
+    color: @black;
+  }
+  .profile-title {
+    line-height: 1.5;
+    font-weight: @normal;
+    .uppercase;
+    color: @dark-gray;
+  }
+  .profile-bio {
+    font-size: 16px;
+    @media @large { font-size: 18px; }
+    line-height: 1.5;
+    font-weight: @light;
+  }
+  .profile-photo {
+    .size(175px);
+    .object-fit;
+    .round;
+    margin-left: 0;
+  }
+}
