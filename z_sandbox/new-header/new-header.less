@@ -313,8 +313,7 @@ body.primary-menu-opened {
         	.align-items(flex-start);
             z-index:2;
             padding-top:@header-height + 20px;
-            @media @medium {width:40%}
-            @media @large {width:35%;}
+            @media @medium {width:35%}
             @media @xlarge {width:30%;}
         }
 
@@ -337,7 +336,7 @@ body.primary-menu-opened {
             z-index:3;
             @media @medium {
                 z-index:-2;
-                width:~"calc(75% + 20px)";
+                width:~"calc(90% + 20px)";
                 .parent-node.active > .menu-item {background-color:lighten(@black, 10%);}
                 .parent-node.active > .menu-item:after {border-left-color:lighten(@black, 10%);}
             }
@@ -374,7 +373,7 @@ body.primary-menu-opened {
                 .transition-open(~"opacity 0s ease-in 0s, background-color 0.2s ease-out 0s");
                 .primary-menu-opened & {
                     opacity:1;
-                    .transition-open(~"opacity 0.2s ease-in 0.5s, background-color 0.2s ease-out 0s");
+                    .transition-open(~"opacity 0.2s ease-in 0.55s, background-color 0.2s ease-out 0s");
                 }
             }
         }
@@ -530,6 +529,7 @@ body.primary-menu-opened {
             }
             @media @medium {
                 > .menu-item {
+                    width:100%;
                     font-size:40px; line-height:1em;
                     padding:1.2vh 50px 1.2vh 15px;
                     .section-summary {
@@ -621,34 +621,45 @@ body.primary-menu-opened {
             //for the panels sliding out
             > .node-panel {
                 overflow:hidden;
-                opacity:0;
                 .transition;
                 @media @medium {
                     .translateX(-50%);
                     height:0;
+                    opacity:0;
                     .transition-open(~"all 0.2s ease-out 0s, height 0.2s step-end");
                 }
             }
             &.active > .node-panel {
-                //display:table;
-                opacity:1;
                 overflow:visible;
                 .translateX(-100%);
                 .transition-delay(0.2s);
                 @media @medium {
                     .translateX(0);
                     height:100%;
+                    opacity:1;
                     .transition-open(~"all 0.2s ease-out 0.2s, height 0.2s step-start");
                 }
             }
 
             @media @medium {&.active > .menu-item {opacity:1;}}
 
+
+
+            //animations for fading in the back button side bar so it doesnt jump in
+            > .node-panel > .menu-item.back:before {
+                opacity:0;
+                .transition;
+            }
+            &.active > .node-panel > .menu-item.back:before {opacity:1; .transition-delay(0.3s);}
+
+
+
+
             //animations for the triangle on the right
             > .menu-item:after {
                 display:block; position:absolute;
                 content:'';
-                top:50%; right:15px;
+                top:50%; right:10px;
                 width:0; height:0;
                 border-top:7px solid transparent;
                 border-bottom:7px solid transparent;
@@ -660,32 +671,38 @@ body.primary-menu-opened {
             }
             > .menu-item:hover:after {opacity:1;}
             &.active > .menu-item:after {
-                border-top-width:10px;
-                border-bottom-width:10px;
-                border-left-width:10px;
-                opacity:1; .translate(25px, -50%);
+                opacity:1;
+                @media @medium {
+                    border-top-width:10px;
+                    border-bottom-width:10px;
+                    border-left-width:10px;
+                    .translate(20px, -50%);
+                }
             }
         }//end parent node animations and states
 
         //make the level 1 triangle bigger
         &.level-1 > .parent-node {
             > .menu-item:after {
+                right:15px;
                 border-top-width:10px;
                 border-bottom-width:10px;
                 border-left-width:10px;
             }
-            &.active > .menu-item:after {
-                border-top-width:15px;
-                border-bottom-width:15px;
-                border-left-width:15px;
-                border-left-color:lighten(@black, 10%);
-                .translate(30px, -50%);
+            @media @medium {
+                &.active > .menu-item:after {
+                    border-top-width:15px;
+                    border-bottom-width:15px;
+                    border-left-width:15px;
+                    border-left-color:lighten(@black, 10%);
+                    .translate(30px, -50%);
+                }
+                &.red.active > .menu-item:after {border-left-color:@red;}
+                &.orange.active > .menu-item:after {border-left-color:@orange;}
+                &.green.active > .menu-item:after {border-left-color:@green;}
+                &.blue.active > .menu-item:after {border-left-color:@blue;}
+                &.navy-blue.active > .menu-item:after {border-left-color:@navy-blue;}
             }
-            &.red.active > .menu-item:after {border-left-color:@red;}
-            &.orange.active > .menu-item:after {border-left-color:@orange;}
-            &.green.active > .menu-item:after {border-left-color:@green;}
-            &.blue.active > .menu-item:after {border-left-color:@blue;}
-            &.navy-blue.active > .menu-item:after {border-left-color:@navy-blue;}
         }
 
     }//end node-panel
@@ -765,7 +782,7 @@ body.primary-menu-opened {
                 top:0; bottom:0;
             }
             &:after {
-                right:~"calc(60% + 7px)";
+                right:65%;
                 background-color:lighten(@black, 10%);
 
                 //animate in when menu is opened
@@ -777,7 +794,7 @@ body.primary-menu-opened {
                 }
             }
             &:before {
-                left:~"calc(40% - 7px)";
+                left:35%;
                 background-color:@black;
 
                 //animate in when menu is opened
@@ -790,12 +807,12 @@ body.primary-menu-opened {
             }
         }
         @media @large {
-            &:after {right:~"calc(65% + 7px)";}
-            &:before {left:~"calc(35% - 7px)";}
+            &:after {right:65%;}
+            &:before {left:35%;}
         }
         @media @xlarge {
             &:after {
-                right:~"calc(50% + 7px)";
+                right:50%;
 
                 //animate in when menu is opened
                 .translateX(~"calc("-@large-breakpoint / 5 ~" - 20%)");
@@ -804,7 +821,7 @@ body.primary-menu-opened {
                 }
             }
             &:before {
-                left:~"calc(50% - 7px)";
+                left:50%;
 
                 //animate in when menu is opened
                 .translateX(~"calc("-@large-breakpoint / 10 * 3 ~"+ 20%)");
@@ -815,7 +832,7 @@ body.primary-menu-opened {
         }
     }//end primary menu background
 
-    //color-change stuff for background panels
+    //color-change stuff for background panels based on the parent color value
     @media @medium {
         &.red {
             .node-panel.level-1:after {background-color:@red;}
