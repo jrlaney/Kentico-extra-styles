@@ -98,7 +98,7 @@
 }
 .Blog.Single.Page .post h5 {
   font-size: 20px;
-  color: #777777;
+  color: #555555;
 }
 .Blog.Single.Page .post a {
   font-weight: 400;
@@ -162,7 +162,7 @@
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #777777;
+  color: #555555;
 }
 .Blog.Single.Page .post .post-author .post-author-panel {
   padding: 30px;
@@ -177,7 +177,7 @@
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #777777;
+  color: #555555;
 }
 .Blog.Single.Page .post .post-author .photo {
   width: 120px;
@@ -215,7 +215,7 @@
   display: block;
   margin-bottom: 20px;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #777777;
+  color: #555555;
 }
 #comments .CommentHeader {
   display: -webkit-flex;
@@ -236,7 +236,7 @@
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #777777;
+  color: #555555;
 }
 #comments .CommentBody {
   padding-top: 20px;

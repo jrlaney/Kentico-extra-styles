@@ -9,7 +9,7 @@
 .results-item:visited .results-item-title,
 .results-item:visited .results-item-url,
 .results-item:visited .search-query {
-  color: #777777;
+  color: #555555;
 }
 .results-item:hover,
 .results-item:active {
@@ -22,7 +22,7 @@
 }
 .results-item-url {
   font-size: 14px;
-  color: #777777;
+  color: #555555;
 }
 .search-query {
   font-weight: 600;

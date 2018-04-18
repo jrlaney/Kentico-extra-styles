@@ -101,7 +101,7 @@
 }
 .sequence:hover .sequence-pagination span.current {
   background: transparent;
-  border: 2px solid #CCCCCC;
+  border: 2px solid #999999;
 }
 .sequence .banner-arrow {
   display: block;
