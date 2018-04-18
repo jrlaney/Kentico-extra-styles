@@ -13,8 +13,7 @@
   font-size: 60px;
   line-height: 60px;
   font-weight: 600;
-  color: #FFFFFF;
-  opacity: 0.3;
+  opacity: 0.2;
 }
 @media only screen and (min-width: 768px) {
   .number-group {
@@ -40,6 +39,19 @@
 }
 .number-group.five:before {
   content: '5.';
+}
+.number-group.small {
+  padding: 10px 0 5px 20px;
+}
+.number-group.small:before {
+  font-size: 40px;
+  line-height: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .number-group.small:before {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 .icon-link-grid .grid-item {
   display: -webkit-flex;
@@ -134,11 +146,14 @@ blockquote {
   position: relative;
   padding: 0;
   margin: 20px;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
   font-size: 26px;
   line-height: 35px;
 }
 blockquote > span {
   display: block;
+  margin-top: 15px;
   font-weight: 600;
   font-size: 18px;
   line-height: 20px;
@@ -147,25 +162,145 @@ blockquote > span {
 }
 blockquote:before,
 blockquote:after {
+  content: '“';
   display: block;
   position: absolute;
-  content: '';
-  top: -20px;
-  left: -20px;
+  top: 0.2em;
+  left: -50px;
   height: 56px;
   width: 68px;
-  background-image: url(https://custom.cvent.com/83AD54AE0B7F4CBC94A9A945D0A278DA/pix/6466feb2819a44848228682e37f307a2.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent;
-  opacity: 0.3;
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 250px;
+  color: rgba(255, 255, 255, 0.5);
 }
 blockquote:after {
+  content: '”';
   top: auto;
   left: auto;
-  bottom: -20px;
-  right: -20px;
-  transform: rotate(180deg);
+  bottom: -0.2em;
+  right: -50px;
+}
+.TheIntelligentEnterprise #vision .number-group {
+  margin: 0;
+  padding: 10px 20px 20px 50px;
+  border-top: 3px solid #D9232E;
+}
+.TheIntelligentEnterprise #vision .number-group:before {
+  left: 15px;
+}
+.TheIntelligentEnterprise .media-wrapper {
+  position: relative;
+  padding-bottom: 200px;
+  height: 0;
+  margin-top: 30px;
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.TheIntelligentEnterprise .media-wrapper .resource-thumbnail {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.TheIntelligentEnterprise .media-wrapper .resource-thumbnail:before {
+  margin-top: -15px;
+}
+.TheIntelligentEnterprise .media-wrapper .resource-thumbnail .cta {
+  margin-top: 50px;
+  opacity: 1;
+}
+.TheIntelligentEnterprise .media-wrapper .resource-thumbnail:after {
+  display: none;
+}
+.TheIntelligentEnterprise .media-wrapper .video-wrapper {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -40%);
+  transform: translate(-50%, -40%);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out 0.3s;
+  transition: all 0.3s ease-out 0.3s;
+}
+.TheIntelligentEnterprise .media-wrapper.video-playing {
+  padding-bottom: 56.25%;
+}
+.TheIntelligentEnterprise .media-wrapper.video-playing .resource-thumbnail {
+  opacity: 0;
+  -webkit-transform: translateY(-50px);
+  transform: translateY(-50px);
+}
+.TheIntelligentEnterprise .media-wrapper.video-playing .video-wrapper {
+  opacity: 1;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.TheIntelligentEnterprise #map #intelligence-map > .flex-row > .map-section,
+.TheIntelligentEnterprise #map #intelligence-map .middle-row {
+  width: 100%;
+}
+.TheIntelligentEnterprise #map #intelligence-map .map-section {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+@media only screen and (min-width: 768px) {
+  .TheIntelligentEnterprise #map #intelligence-map:before,
+  .TheIntelligentEnterprise #map #intelligence-map:after {
+    display: none;
+  }
+  .TheIntelligentEnterprise #map #intelligence-map .map-section {
+    font-size: 16px;
+    margin: 10px;
+    padding: 15px;
+  }
+  .TheIntelligentEnterprise #map #intelligence-map .map-section.ext-forces {
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+    max-width: none;
+    width: 48px;
+  }
+  .TheIntelligentEnterprise #map #intelligence-map .map-section.ext-forces .map-section-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    white-space: nowrap;
+    width: auto;
+    -webkit-transform: translate(-50%) rotate(-90deg);
+    transform: translate(-50%) rotate(-90deg);
+  }
+  .TheIntelligentEnterprise #map #intelligence-map .map-section.ext-forces:last-child .map-section-title {
+    -webkit-transform: translate(-50%) rotate(90deg);
+    transform: translate(-50%) rotate(90deg);
+  }
+  .TheIntelligentEnterprise #map #intelligence-map .middle-row {
+    -webkit-flex: 1 1 1px;
+    flex: 1 1 1px;
+    max-width: none;
+  }
+  .TheIntelligentEnterprise #map #intelligence-map .middle-row .map-section {
+    margin-top: 10px;
+  }
+  .TheIntelligentEnterprise #map #intelligence-map .middle-row > .map-section:first-child {
+    margin-top: 0;
+  }
+  .TheIntelligentEnterprise #map #intelligence-map .int-techniques {
+    width: 100%;
+  }
+  .TheIntelligentEnterprise #map #intelligence-map .int-techniques > .map-section {
+    padding: 15px 10px;
+    margin: 0;
+    border-left: 1px solid #FFFFFF;
+  }
+  .TheIntelligentEnterprise #map #intelligence-map .int-techniques > .map-section:first-child {
+    border: 0;
+  }
 }
 .ExploreTheMap #hero {
   display: -webkit-flex;
