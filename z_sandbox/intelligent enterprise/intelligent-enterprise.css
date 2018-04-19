@@ -145,20 +145,31 @@ blockquote {
   *display: inline;
   position: relative;
   padding: 0;
-  margin: 20px;
+  margin: 20px 40px;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-size: 26px;
-  line-height: 35px;
+  font-size: 22px;
+  line-height: 26px;
+}
+@media only screen and (min-width: 768px) {
+  blockquote {
+    font-size: 26px;
+    line-height: 35px;
+  }
 }
 blockquote > span {
   display: block;
   margin-top: 15px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+@media only screen and (min-width: 768px) {
+  blockquote > span {
+    font-size: 18px;
+  }
 }
 blockquote:before,
 blockquote:after {
@@ -178,17 +189,17 @@ blockquote:after {
   top: auto;
   left: auto;
   bottom: -0.2em;
-  right: -50px;
+  right: -35px;
 }
-.TheIntelligentEnterprise #vision .number-group {
+.IntelligentEnterprise #vision .number-group {
   margin: 0;
   padding: 10px 20px 20px 50px;
   border-top: 3px solid #D9232E;
 }
-.TheIntelligentEnterprise #vision .number-group:before {
+.IntelligentEnterprise #vision .number-group:before {
   left: 15px;
 }
-.TheIntelligentEnterprise .media-wrapper {
+.IntelligentEnterprise .media-wrapper {
   position: relative;
   padding-bottom: 200px;
   height: 0;
@@ -196,7 +207,7 @@ blockquote:after {
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
-.TheIntelligentEnterprise .media-wrapper .resource-thumbnail {
+.IntelligentEnterprise .media-wrapper .resource-thumbnail {
   position: absolute;
   z-index: 1;
   height: 100%;
@@ -207,17 +218,17 @@ blockquote:after {
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
-.TheIntelligentEnterprise .media-wrapper .resource-thumbnail:before {
+.IntelligentEnterprise .media-wrapper .resource-thumbnail:before {
   margin-top: -15px;
 }
-.TheIntelligentEnterprise .media-wrapper .resource-thumbnail .cta {
+.IntelligentEnterprise .media-wrapper .resource-thumbnail .cta {
   margin-top: 50px;
   opacity: 1;
 }
-.TheIntelligentEnterprise .media-wrapper .resource-thumbnail:after {
+.IntelligentEnterprise .media-wrapper .resource-thumbnail:after {
   display: none;
 }
-.TheIntelligentEnterprise .media-wrapper .video-wrapper {
+.IntelligentEnterprise .media-wrapper .video-wrapper {
   position: absolute;
   z-index: 0;
   width: 100%;
@@ -229,44 +240,44 @@ blockquote:after {
   -webkit-transition: all 0.3s ease-out 0.3s;
   transition: all 0.3s ease-out 0.3s;
 }
-.TheIntelligentEnterprise .media-wrapper.video-playing {
+.IntelligentEnterprise .media-wrapper.video-playing {
   padding-bottom: 56.25%;
 }
-.TheIntelligentEnterprise .media-wrapper.video-playing .resource-thumbnail {
+.IntelligentEnterprise .media-wrapper.video-playing .resource-thumbnail {
   opacity: 0;
   -webkit-transform: translateY(-50px);
   transform: translateY(-50px);
 }
-.TheIntelligentEnterprise .media-wrapper.video-playing .video-wrapper {
+.IntelligentEnterprise .media-wrapper.video-playing .video-wrapper {
   opacity: 1;
   z-index: 2;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.TheIntelligentEnterprise #map #intelligence-map > .flex-row > .map-section,
-.TheIntelligentEnterprise #map #intelligence-map .middle-row {
+.IntelligentEnterprise #map #intelligence-map > .flex-row > .map-section,
+.IntelligentEnterprise #map #intelligence-map .middle-row {
   width: 100%;
 }
-.TheIntelligentEnterprise #map #intelligence-map .map-section {
+.IntelligentEnterprise #map #intelligence-map .map-section {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 @media only screen and (min-width: 768px) {
-  .TheIntelligentEnterprise #map #intelligence-map:before,
-  .TheIntelligentEnterprise #map #intelligence-map:after {
+  .IntelligentEnterprise #map #intelligence-map:before,
+  .IntelligentEnterprise #map #intelligence-map:after {
     display: none;
   }
-  .TheIntelligentEnterprise #map #intelligence-map .map-section {
+  .IntelligentEnterprise #map #intelligence-map .map-section {
     font-size: 16px;
     margin: 10px;
-    padding: 15px;
+    padding: 30px 15px;
   }
-  .TheIntelligentEnterprise #map #intelligence-map .map-section.ext-forces {
+  .IntelligentEnterprise #map #intelligence-map .map-section.ext-forces {
     -webkit-flex: 0 0 auto;
     flex: 0 0 auto;
     max-width: none;
     width: 48px;
   }
-  .TheIntelligentEnterprise #map #intelligence-map .map-section.ext-forces .map-section-title {
+  .IntelligentEnterprise #map #intelligence-map .map-section.ext-forces .map-section-title {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -275,30 +286,30 @@ blockquote:after {
     -webkit-transform: translate(-50%) rotate(-90deg);
     transform: translate(-50%) rotate(-90deg);
   }
-  .TheIntelligentEnterprise #map #intelligence-map .map-section.ext-forces:last-child .map-section-title {
+  .IntelligentEnterprise #map #intelligence-map .map-section.ext-forces:last-child .map-section-title {
     -webkit-transform: translate(-50%) rotate(90deg);
     transform: translate(-50%) rotate(90deg);
   }
-  .TheIntelligentEnterprise #map #intelligence-map .middle-row {
+  .IntelligentEnterprise #map #intelligence-map .middle-row {
     -webkit-flex: 1 1 1px;
     flex: 1 1 1px;
     max-width: none;
   }
-  .TheIntelligentEnterprise #map #intelligence-map .middle-row .map-section {
+  .IntelligentEnterprise #map #intelligence-map .middle-row .map-section {
     margin-top: 10px;
   }
-  .TheIntelligentEnterprise #map #intelligence-map .middle-row > .map-section:first-child {
+  .IntelligentEnterprise #map #intelligence-map .middle-row > .map-section:first-child {
     margin-top: 0;
   }
-  .TheIntelligentEnterprise #map #intelligence-map .int-techniques {
+  .IntelligentEnterprise #map #intelligence-map .int-techniques {
     width: 100%;
   }
-  .TheIntelligentEnterprise #map #intelligence-map .int-techniques > .map-section {
-    padding: 15px 10px;
+  .IntelligentEnterprise #map #intelligence-map .int-techniques > .map-section {
+    padding: 30px 10px;
     margin: 0;
     border-left: 1px solid #FFFFFF;
   }
-  .TheIntelligentEnterprise #map #intelligence-map .int-techniques > .map-section:first-child {
+  .IntelligentEnterprise #map #intelligence-map .int-techniques > .map-section:first-child {
     border: 0;
   }
 }
@@ -317,9 +328,99 @@ blockquote:after {
   height: 100vh;
   max-height: 900px;
 }
+.ExploreTheMap .scroll-details-row {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+  min-height: 100vh;
+}
+.ExploreTheMap .scroll-details-row > .flex-row {
+  position: relative;
+}
+.ExploreTheMap .scroll-details-row .triangle-list > li {
+  padding-top: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .ExploreTheMap .scroll-details-row .triangle-list > li {
+    padding-top: 0px;
+    padding-bottom: 100px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .ExploreTheMap .scroll-details-row .triangle-list > li {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.ExploreTheMap #enterprise-assets.scroll-details-row .triangle-list > li {
+  padding-top: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .ExploreTheMap #enterprise-assets.scroll-details-row .triangle-list > li {
+    padding-bottom: 0;
+  }
+}
+.ExploreTheMap .background-section-label {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 60px;
+  line-height: 1em;
+  font-weight: 600;
+  color: #FFFFFF;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 0.2;
+}
+@media only screen and (min-width: 768px) {
+  .ExploreTheMap .background-section-label {
+    font-size: 80px;
+    margin-left: -20px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .ExploreTheMap .background-section-label {
+    font-size: 120px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .ExploreTheMap #intelligence-applications #constituents,
+  .ExploreTheMap #intelligence-platform #security {
+    padding-bottom: 250px;
+  }
+}
+.ExploreTheMap #map-download {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  min-height: 500px;
+  height: 80vh;
+  max-height: 900px;
+}
+.ExploreTheMap #map-download .button.gray.outline:hover {
+  background-color: transparent;
+  color: #999999;
+  cursor: default;
+}
 #scroll-content {
   position: relative;
   z-index: 1;
+  overflow: hidden;
   color: #FFFFFF;
   background: #333333;
   background: -webkit-linear-gradient(45deg, #000000, #666666);
@@ -694,7 +795,7 @@ blockquote:after {
 }
 #intelligence-map.ext-forces .map-section:not(.ext-forces) {
   background-color: #777777;
-  color: #999999;
+  color: #CCCCCC;
   font-size: 90%;
   padding: 10px;
 }
@@ -771,7 +872,7 @@ blockquote:after {
 }
 #intelligence-map.ent-assets .map-section:not(.ent-assets) {
   background-color: #777777;
-  color: #999999;
+  color: #CCCCCC;
   font-size: 90%;
   padding: 10px;
 }
@@ -898,7 +999,7 @@ blockquote:after {
 }
 #intelligence-map.int-platform .map-section:not(.int-platform) {
   background-color: #777777;
-  color: #999999;
+  color: #CCCCCC;
   font-size: 90%;
   padding: 10px;
 }
@@ -1029,7 +1130,7 @@ blockquote:after {
 }
 #intelligence-map.int-program .map-section:not(.int-program) {
   background-color: #777777;
-  color: #999999;
+  color: #CCCCCC;
   font-size: 90%;
   padding: 10px;
   z-index: 0;
@@ -1116,7 +1217,7 @@ blockquote:after {
 }
 #intelligence-map.int-architecture .map-section:not(.int-architecture) {
   background-color: #777777;
-  color: #999999;
+  color: #CCCCCC;
   font-size: 90%;
   padding: 10px;
   z-index: 0;
@@ -1185,7 +1286,7 @@ blockquote:after {
 #intelligence-map.int-architecture .map-section.int-architecture .diagram-wrapper .diagram-item.uat:after {
   content: '';
   position: absolute;
-  background-color: #999999;
+  background-color: #CCCCCC;
   height: 20px;
   width: 2px;
   bottom: -10px;
@@ -1199,14 +1300,14 @@ blockquote:after {
   top: 0;
 }
 #intelligence-map.int-architecture .map-section.int-architecture .diagram-wrapper .diagram-line .icon {
-  color: #999999;
+  color: #CCCCCC;
   position: absolute;
 }
 #intelligence-map.int-architecture .map-section.int-architecture .diagram-wrapper .diagram-line:before,
 #intelligence-map.int-architecture .map-section.int-architecture .diagram-wrapper .diagram-line:after {
   content: '';
   position: absolute;
-  background-color: #999999;
+  background-color: #CCCCCC;
 }
 #intelligence-map.int-architecture .map-section.int-architecture .diagram-wrapper .diagram-line:before {
   width: 2px;
@@ -1298,7 +1399,7 @@ blockquote:after {
 }
 #intelligence-map.int-center .map-section:not(.int-center) {
   background-color: #777777;
-  color: #999999;
+  color: #CCCCCC;
   font-size: 90%;
   padding: 10px;
   z-index: 0;
@@ -1386,7 +1487,7 @@ blockquote:after {
 #intelligence-map.int-center .map-section.int-center .icon-list .icon-group.director:after {
   content: '';
   position: absolute;
-  background-color: #999999;
+  background-color: #CCCCCC;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -1425,7 +1526,7 @@ blockquote:after {
 #intelligence-map.int-center .map-section.int-center .icon-list .icon-group > li:after {
   content: '';
   position: absolute;
-  background-color: #999999;
+  background-color: #CCCCCC;
   height: 10px;
   width: 2px;
   left: 50%;
@@ -1463,7 +1564,7 @@ blockquote:after {
 }
 #intelligence-map.int-applications .map-section:not(.int-applications) {
   background-color: #777777;
-  color: #999999;
+  color: #CCCCCC;
   font-size: 90%;
   padding: 10px;
 }
@@ -1592,71 +1693,27 @@ blockquote:after {
 #intelligence-map.int-applications .int-techniques > .map-section {
   padding: 10px 0;
 }
-.scroll-details-row {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  position: relative;
-  z-index: 3;
-  min-height: 100vh;
-}
-.scroll-details-row > .flex-row {
-  position: relative;
-}
-.scroll-details-row .triangle-list > li {
-  padding-top: 30px;
+.GetStarted .desktop-card .card-content:last-child {
+  padding: 30px;
 }
 @media only screen and (min-width: 768px) {
-  .scroll-details-row .triangle-list > li {
-    padding-top: 0px;
-    padding-bottom: 100px;
+  .GetStarted .desktop-card {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex: 0 1 auto;
+    flex: 0 1 auto;
+    max-width: none;
+    -webkit-align-items: center;
+    align-items: center;
   }
-}
-@media only screen and (min-width: 980px) {
-  .scroll-details-row .triangle-list > li {
-    padding-top: 30px;
-    padding-bottom: 30px;
+  .GetStarted .desktop-card .background-image {
+    width: 50%;
+    -webkit-align-self: stretch;
+    align-self: stretch;
   }
-}
-.background-section-label {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 60px;
-  line-height: 1em;
-  font-weight: 600;
-  color: #FFFFFF;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  opacity: 0.2;
-}
-@media only screen and (min-width: 768px) {
-  .background-section-label {
-    font-size: 80px;
-    margin-left: -20px;
+  .GetStarted .desktop-card .card-content {
+    width: 50%;
   }
-}
-@media only screen and (min-width: 980px) {
-  .background-section-label {
-    font-size: 120px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  #intelligence-applications #constituents,
-  #intelligence-platform #security {
-    padding-bottom: 250px;
-  }
-}
-#customers {
-  position: relative;
-  z-index: 5;
-  background-color: #FFFFFF;
 }
 @media only screen and (min-width: 768px) {
   .passed-view .delay02 {

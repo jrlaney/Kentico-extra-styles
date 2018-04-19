@@ -91,17 +91,19 @@
 
 blockquote {
     display:inline-block; *zoom:1; *display:inline; position:relative;
-    padding:0; margin:20px;
+    padding:0; margin:20px 40px;
     font-family:@myriad-pro;
     font-weight:400;
-    font-size:26px; line-height:35px;
+    font-size:22px; line-height:26px;
+    @media @medium {font-size:26px; line-height:35px;}
 
     > span {
         display:block;
         margin-top:15px;
         font-weight:600;
-        font-size:18px; line-height:20px;
+        font-size:16px; line-height:20px;
         .uppercase;
+        @media @medium {font-size:18px;}
     }
 
 	&:before, &:after {
@@ -119,7 +121,7 @@ blockquote {
         top:auto;
         left:auto;
         bottom:-0.2em;
-        right:-50px;
+        right:-35px;
     }
 }
 
@@ -130,7 +132,7 @@ blockquote {
 
 //OVERVIEW PAGE STYLES
 
-.TheIntelligentEnterprise {
+.IntelligentEnterprise {
     #vision {
         .number-group {
             margin:0;
@@ -185,7 +187,7 @@ blockquote {
                 .map-section {
                     font-size:16px;
                     margin:@mapGutter/2;
-                    padding:15px;
+                    padding:30px 15px;
                     &.ext-forces {
                         .flex(0, 0, auto);
                         width:48px;
@@ -200,7 +202,7 @@ blockquote {
                 }
                 .int-techniques {
                     width:100%;
-                    > .map-section {padding:15px 10px; margin:0; border-left:1px solid @white;}
+                    > .map-section {padding:30px 10px; margin:0; border-left:1px solid @white;}
                     > .map-section:first-child {border:0;}
                 }
             }
@@ -224,17 +226,68 @@ blockquote {
 @intTechniquesColor:   @orange;
 @intApplicationsColor: @green;
 
-.ExploreTheMap #hero {
-    .display(flex);
-    .flex-direction(column);
-    .align-items(center);
-    .justify-content(center);
-    position:relative; z-index:0;
-    min-height:500px; height:100vh; max-height:900px;
+.ExploreTheMap {
+    #hero {
+        .display(flex);
+        .flex-direction(column);
+        .align-items(center);
+        .justify-content(center);
+        position:relative; z-index:0;
+        min-height:500px; height:100vh; max-height:900px;
+    }
+    .scroll-details-row {
+        .display(flex);
+        .flex-direction(column);
+        .align-items(center);
+        .justify-content(center);
+        position:relative; z-index:3;
+        min-height:100vh;
+
+        > .flex-row {position:relative;}
+
+        .triangle-list > li {
+            padding-top:40px;
+            @media @medium {padding-top:0px; padding-bottom:100px;}
+            @media @large {padding-top:40px; padding-bottom:40px;}
+        }
+    }
+    #enterprise-assets.scroll-details-row {
+        .triangle-list > li {
+            padding-top:20px;
+            @media @medium {padding-bottom:0;}
+        }
+    }
+    .background-section-label {
+        .uppercase;
+        font-size:60px; line-height:1em;
+        font-weight:600;
+        color:@white;
+        .prevent-highlight;
+        opacity:0.2;
+        @media @medium {font-size:80px; margin-left:-20px;}
+        @media @large  {font-size:120px;}
+    }
+
+    //give a lot of space to the scroll-open last children in the stacked view
+    #intelligence-applications #constituents,
+    #intelligence-platform #security {@media @medium-only {padding-bottom:250px}}
+
+    //make this div block the scroll portion just in case
+    #map-download {
+        .display(flex);
+        .flex-direction(column);
+        .align-items(center);
+        .justify-content(center);
+        position:relative; z-index:1;
+        min-height:500px; height:80vh; max-height:900px;
+
+        .button.gray.outline:hover {background-color:transparent; color:@gray; cursor:default;}
+    }
 }
 
 #scroll-content {
     position:relative; z-index:1;
+    overflow:hidden;
     color:@white;
     .angled-gradient(darken(@black, 20%), lighten(@black, 20%), @black);
     background-attachment:fixed;
@@ -471,7 +524,7 @@ blockquote {
     &.ext-forces {
         .map-section {
             &:not(.ext-forces) {
-                background-color:@monsoon; color:@gray; font-size:90%; padding:10px;
+                background-color:@monsoon; color:@iron; font-size:90%; padding:10px;
             }
             &.ext-forces {
                 .flex(3, 1, 0px);
@@ -514,7 +567,7 @@ blockquote {
     &.ent-assets {
         .map-section {
             &:not(.ent-assets) {
-                background-color:@monsoon; color:@gray; font-size:90%; padding:10px;
+                background-color:@monsoon; color:@iron; font-size:90%; padding:10px;
             }
             &.ext-forces {
                 .flex(0, 0, auto);
@@ -584,7 +637,7 @@ blockquote {
     &.int-platform {
         .map-section {
             &:not(.int-platform) {
-                background-color:@monsoon; color:@gray; font-size:90%; padding:10px;
+                background-color:@monsoon; color:@iron; font-size:90%; padding:10px;
             }
             &.ext-forces {
                 .flex(0, 0, auto);
@@ -658,7 +711,7 @@ blockquote {
     &.int-program {
         .map-section {
             &:not(.int-program) {
-                background-color:@monsoon; color:@gray; font-size:90%; padding:10px; z-index:0;
+                background-color:@monsoon; color:@iron; font-size:90%; padding:10px; z-index:0;
             }
             &.ext-forces {
                 .flex(0, 0, auto);
@@ -711,7 +764,7 @@ blockquote {
     &.int-architecture {
         .map-section {
             &:not(.int-architecture) {
-                background-color:@monsoon; color:@gray; font-size:90%; padding:10px; z-index:0;
+                background-color:@monsoon; color:@iron; font-size:90%; padding:10px; z-index:0;
             }
             &.ext-forces {
                 .flex(0, 0, auto);
@@ -752,7 +805,7 @@ blockquote {
                             &:after {
                                 content:'';
                                 position:absolute;
-                                background-color:@gray;
+                                background-color:@iron;
                                 height:20px; width:2px;
                                 bottom:-10px;
                                 left:50%; margin-left:-1px;
@@ -763,11 +816,11 @@ blockquote {
                         position:absolute;
                         width:25%; height:50%;
                         top:0;
-                        .icon {color:@gray; position:absolute;}
+                        .icon {color:@iron; position:absolute;}
                         &:before, &:after {
                             content:'';
                             position:absolute;
-                            background-color:@gray;
+                            background-color:@iron;
                         }
                         &:before {
                             width:2px; height:100%;
@@ -834,7 +887,7 @@ blockquote {
     &.int-center {
         .map-section {
             &:not(.int-center) {
-                background-color:@monsoon; color:@gray; font-size:90%; padding:10px; z-index:0;
+                background-color:@monsoon; color:@iron; font-size:90%; padding:10px; z-index:0;
             }
             &.ext-forces {
                 .flex(0, 0, auto);
@@ -877,7 +930,7 @@ blockquote {
                              &:before, &:after {
                                  content:'';
                                  position:absolute;
-                                 background-color:@gray;
+                                 background-color:@iron;
                                  left:50%; .translateX(-50%);
                                  bottom:0;
                              }
@@ -903,7 +956,7 @@ blockquote {
                              &:before, &:after {
                                  content:'';
                                  position:absolute;
-                                 background-color:@gray;
+                                 background-color:@iron;
                                  height:10px; width:2px;
                                  left:50%; margin-left:-1px;
                              }
@@ -933,7 +986,7 @@ blockquote {
     &.int-applications {
         .map-section {
             &:not(.int-applications) {
-                background-color:@monsoon; color:@gray; font-size:90%; padding:10px;
+                background-color:@monsoon; color:@iron; font-size:90%; padding:10px;
             }
             &.ext-forces {
                 .flex(0, 0, auto);
@@ -1001,41 +1054,28 @@ blockquote {
         }
         .int-techniques > .map-section {padding:10px 0;}
     }//end intelligence applications changes
-}
+}//end intelligence map styles
 
-.scroll-details-row {
-    .display(flex);
-    .flex-direction(column);
-    .align-items(center);
-    .justify-content(center);
-    position:relative; z-index:3;
-    min-height:100vh;
 
-    > .flex-row {position:relative;}
 
-    .triangle-list > li {
-        padding-top:30px;
-        @media @medium {padding-top:0px; padding-bottom:100px;}
-        @media @large {padding-top:30px; padding-bottom:30px;}
+
+
+
+
+//get started page
+.GetStarted {
+    .desktop-card {
+        .card-content:last-child {padding:30px;}
+        @media @medium {
+            .flex-direction(row);
+            .flex(0, 1, auto);
+            .align-items(center);
+
+            .background-image {width:50%; .align-self(stretch);}
+            .card-content {width:50%;}
+        }
     }
 }
-.background-section-label {
-    .uppercase;
-    font-size:60px; line-height:1em;
-    font-weight:600;
-    color:@white;
-    .prevent-highlight;
-    opacity:0.2;
-    @media @medium {font-size:80px; margin-left:-20px;}
-    @media @large  {font-size:120px;}
-}
-
-//give a lot of space to the scroll-open last children in the stacked view
-#intelligence-applications #constituents,
-#intelligence-platform #security {@media @medium-only {padding-bottom:250px}}
-
-//make this div block the scroll portion just in case
-#customers {position:relative; z-index:5; background-color:@white;}
 
 
 
