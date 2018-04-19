@@ -64,7 +64,7 @@
   left: 50%;
   margin-top: -10px;
   margin-right: -10px;
-  background: #777777;
+  background: #555555;
 }
 .gridder .gridder-navigation a.gridder-close:before {
   -webkit-transform: rotate(45deg);
@@ -80,7 +80,7 @@
 .gridder .gridder-navigation a.gridder-close:hover:after,
 .gridder .gridder-navigation a.gridder-close:active:after,
 .gridder .gridder-navigation a.gridder-close:focus:after {
-  background: #aaaaaa;
+  background: #888888;
 }
 .gridder .gridder-navigation a.gridder-nav:before {
   content: "\e901";
@@ -100,7 +100,7 @@
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   line-height: 1;
-  color: #777777;
+  color: #555555;
 }
 .gridder .gridder-navigation a.gridder-nav.prev:before {
   -webkit-transform: translate(-50%, -50%) rotate(180deg);
@@ -151,7 +151,7 @@
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #777777;
+  color: #555555;
 }
 .gridder-expanded-content .solution-resource .resource-thumbnail {
   width: 100%;

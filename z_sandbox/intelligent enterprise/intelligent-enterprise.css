@@ -578,7 +578,7 @@ blockquote:after {
   justify-content: center;
   position: relative;
   margin: 20px 20px 0 20px;
-  background-color: #777777;
+  background-color: #555555;
   padding: 15px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
