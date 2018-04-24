@@ -409,20 +409,20 @@ blockquote {
         &.ext-forces {
             background-color:@extForcesColor;
             &:hover {background-color:@extForcesColor!important;}
-            .icon-list-title {background-color:@extForcesColor;}
+            .feature-list-title {background-color:@extForcesColor;}
             .icon {color:@extForcesColor;}
             @media @small-only {&:last-of-type {display:none;}}
         }
         &.ent-assets {
             background-color:@entAssetsColor;
             &:hover {background-color:@entAssetsColor!important;}
-            .icon-list-title {background-color:@entAssetsColor;}
+            .feature-list-title {background-color:@entAssetsColor;}
             .icon {color:@entAssetsColor;}
         }
         &.int-platform {
             background-color:@intPlatformColor;
             &:hover {background-color:@intPlatformColor!important;}
-            .icon-list-title {background-color:@intPlatformColor;}
+            .feature-list-title {background-color:@intPlatformColor;}
             .icon {color:@intPlatformColor;}
         }
         &.int-center,
@@ -430,25 +430,25 @@ blockquote {
         &.int-program {
             background-color:@intTechniquesColor;
             &:hover {background-color:@intTechniquesColor!important;}
-            .icon-list-title {background-color:@intTechniquesColor;}
-            .icon {color:@intTechniquesColor;}
+            .feature-list-title {background-color:@intTechniquesColor;}
+            .icon {color:@intTechniquesColor;&.icon-block{color:@white;}&.black{color:@black;}}
         }
         &.int-applications {
             background-color:@intApplicationsColor;
             &:hover {background-color:@intApplicationsColor!important;}
-            .icon-list-title {background-color:@intApplicationsColor;}
+            .feature-list-title {background-color:@intApplicationsColor;}
             .icon {color:@intApplicationsColor;}
         }
     }//end map section
 
-    .icon-list {
-        .icon-list-title {
+    .feature-list {
+        .feature-list-title {
             display:block;
             padding:10px;
             background-color:@black;
             color:@white;
         }
-        .icon-group {
+        .feature-group {
             list-style:none;
             padding:15px;
             > li {
@@ -458,11 +458,11 @@ blockquote {
                 .flex-wrap(nowrap);
 
                 font-size:12px; line-height:12px;
-                font-weight:400;
+                font-weight:600;
                 text-align:left;
                 text-transform:none;
                 letter-spacing:normal;
-                > img {margin:0 10px 0 0;}
+                > img, > .icon {margin:0 10px 0 0;}
             }
         }
     }
@@ -537,7 +537,7 @@ blockquote {
                 .map-section-title {max-height:0; opacity:0; margin:0; padding:0;}
                 .revealed-content {max-height:100vh; opacity:1;}
 
-                .icon-list .icon-group {
+                .feature-list .feature-group {
                     @media @medium-only {
                         .display(flex);
                         .flex-direction(row);
@@ -595,7 +595,7 @@ blockquote {
                     .flex(0, 0, auto);
                 }
 
-                .icon-list {
+                .feature-list {
                     .display(flex);
                     .flex-direction(column);
                     .align-items(center);
@@ -603,10 +603,10 @@ blockquote {
                     .flex-wrap(wrap);
                     .flex(1, 1, 0);
 
-                    .icon-list-title {width:100%;}
+                    .feature-list-title {width:100%;}
                     &.data, &.services {width:100%;.flex(0, 0, auto);}
                     &.apps {border-right:1px solid @white;}
-                    .icon-group {
+                    .feature-group {
                         .display(flex);
                         .flex-direction(row);
                         .align-items(flex-start);
@@ -622,7 +622,7 @@ blockquote {
                             .flex(1, 0, 0px);
                             padding:5px;
                             text-align:center;
-                            > img {margin:0 0 10px 0;}
+                            > img, > .icon {margin:0 0 10px 0;}
                         }
                     }
                 }
@@ -658,7 +658,7 @@ blockquote {
                     max-height:200vh; opacity:1;
                 }
 
-                .icon-list {
+                .feature-list {
                     .display(flex);
                     .flex-direction(column);
                     .align-items(center);
@@ -668,8 +668,8 @@ blockquote {
                     border-bottom:1px solid @white;
 
                     &:last-child {border-bottom:none;}
-                    .icon-list-title {width:100%; color:fade(@white, 60%); .transition;}
-                    .icon-group {
+                    .feature-list-title {width:100%; color:fade(@white, 60%); .transition;}
+                    .feature-group {
                         .display(flex);
                         .flex-direction(row);
                         .flex(0, 1, auto);
@@ -692,12 +692,12 @@ blockquote {
                             .flex(1, 1, 16.66667%);
                             padding:5px;
                             text-align:center;
-                            > img {margin:0 0 10px 0;}
+                            > img, > .icon {margin:0 0 10px 0;}
                         }
                     }
                     &.active {
-                        .icon-list-title {color:@white;}
-                        .icon-group {max-height:100vh; opacity:1; padding:5px 0 0 0; .transition-delay(0.2s);}
+                        .feature-list-title {color:@white;}
+                        .feature-group {max-height:100vh; opacity:1; padding:5px 0 0 0; .transition-delay(0.2s);}
                     }
                 }
             }
@@ -737,10 +737,10 @@ blockquote {
                     .flex-wrap(nowrap);
 
                 }
-                 .icon-list {
+                 .feature-list {
                      .flex(0, 1, 33.333%);
                      border-right:1px solid @white;
-                     .icon-list-title {font-size:16px;}
+                     .feature-list-title {font-size:16px;}
 
                      &:last-child {border-right:none;}
                  }
@@ -795,7 +795,7 @@ blockquote {
                     font-size:14px;
                     line-height:14px;
                     font-weight:400;
-                    img {margin-bottom:5px;}
+                    img, > .icon {margin-bottom:5px;}
                     .diagram-item {
                         position:relative;
                         padding:15px 10px;
@@ -816,11 +816,11 @@ blockquote {
                         position:absolute;
                         width:25%; height:50%;
                         top:0;
-                        .icon {color:@iron; position:absolute;}
+                        .icon {color:@gray; position:absolute;}
                         &:before, &:after {
                             content:'';
                             position:absolute;
-                            background-color:@iron;
+                            background-color:@gray;
                         }
                         &:before {
                             width:2px; height:100%;
@@ -851,14 +851,14 @@ blockquote {
                     }
                 }
 
-                .icon-list {
+                .feature-list {
                     .display(flex);
                     .flex-direction(column);
                     .align-items(center);
                     .justify-content(flex-start);
                     .flex-wrap(wrap);
 
-                    .icon-group {
+                    .feature-group {
                         .display(flex);
                         .flex-direction(row);
                         .align-items(center);
@@ -905,7 +905,17 @@ blockquote {
 
                 .map-section-title {max-height:0; opacity:0; margin:0; padding:0;}
                 > .revealed-content {max-height:200vh; opacity:1;}
-                 .icon-list {
+                .stacked-icons {
+                    position:relative;
+                    padding-bottom:15px; padding-right:15px;
+                    margin-bottom:10px;
+                    .icon {position:relative; z-index:0;}
+                    .icon.icon-block {
+                        position:absolute; z-index:1;
+                        right:0; bottom:0;
+                    }
+                }
+                 .feature-list {
                      .display(flex);
                      .flex-direction(row);
                      .justify-content(center);
@@ -914,9 +924,9 @@ blockquote {
                      width:100%;
                      padding-bottom:20px;
 
-                     .icon-list-title {width:100%; font-size:16px;}
+                     .feature-list-title {width:100%; font-size:16px;}
 
-                     .icon-group {
+                     .feature-group {
                          .flex(0, 1, 25%);
                          border-right:1px solid @white;
                          padding:0; margin:0;
@@ -952,7 +962,7 @@ blockquote {
                              position:relative;
                              padding:15px 10px;
                              text-align:center;
-                             > img {margin:0 0 10px 0;}
+                             > img, > .icon {margin:0 0 10px 0;}
                              &:before, &:after {
                                  content:'';
                                  position:absolute;
@@ -1005,7 +1015,7 @@ blockquote {
                 .map-section-title {max-height:0; opacity:0; margin:0; padding:0;}
                 > .revealed-content {max-height:200vh; opacity:1;}
 
-                .icon-list {
+                .feature-list {
                     .display(flex);
                     .flex-direction(column);
                     .align-items(center);
@@ -1015,8 +1025,8 @@ blockquote {
                     border-bottom:1px solid @white;
 
                     &:last-child {border-bottom:none;}
-                    .icon-list-title {width:100%; color:fade(@white, 60%); .transition;}
-                    .icon-group {
+                    .feature-list-title {width:100%; color:fade(@white, 60%); .transition;}
+                    .feature-group {
                         .display(flex);
                         .flex-direction(row);
                         .flex(0, 1, auto);
@@ -1039,12 +1049,12 @@ blockquote {
                             .flex(1, 1, 16.66667%);
                             padding:5px;
                             text-align:center;
-                            > img {margin:0 0 10px 0;}
+                            > img, > .icon {margin:0 0 10px 0;}
                         }
                     }
                     &.active {
-                        .icon-list-title {color:@white;}
-                        .icon-group {max-height:100vh; opacity:1; padding:5px 0 0 0; .transition-delay(0.2s);}
+                        .feature-list-title {color:@white;}
+                        .feature-group {max-height:100vh; opacity:1; padding:5px 0 0 0; .transition-delay(0.2s);}
                     }
                 }
             }

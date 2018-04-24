@@ -69,32 +69,32 @@ jQuery(document).ready(function($) { // wait for document ready
                             .addTo(controller);
 
                     var intPlatformSecurityZone = new ScrollMagic.Scene({triggerElement: "#security", duration: intPlatformSecurityHeight})
-                                    .setClassToggle("#intelligence-map .icon-list.security", "active") // add class toggle
+                                    .setClassToggle("#intelligence-map .feature-list.security", "active") // add class toggle
                                     //.addIndicators({name: "security"}) // add indicators (requires plugin)
                                     .addTo(controller);
 
                     var intPlatformApplicationZone = new ScrollMagic.Scene({triggerElement: "#applications", duration: intPlatformAppsHeight})
-                                    .setClassToggle("#intelligence-map .icon-list.applications", "active") // add class toggle
+                                    .setClassToggle("#intelligence-map .feature-list.applications", "active") // add class toggle
                                     //.addIndicators({name: "applications"}) // add indicators (requires plugin)
                                     .addTo(controller);
 
                     var intPlatformDataZone = new ScrollMagic.Scene({triggerElement: "#data", duration: intPlatformDataHeight})
-                                    .setClassToggle("#intelligence-map .icon-list.data", "active") // add class toggle
+                                    .setClassToggle("#intelligence-map .feature-list.data", "active") // add class toggle
                                     //.addIndicators({name: "data"}) // add indicators (requires plugin)
                                     .addTo(controller);
 
                     var intPlatformSchemaZone = new ScrollMagic.Scene({triggerElement: "#schema", duration: intPlatformSchemaHeight})
-                                    .setClassToggle("#intelligence-map .icon-list.schema", "active") // add class toggle
+                                    .setClassToggle("#intelligence-map .feature-list.schema", "active") // add class toggle
                                     //.addIndicators({name: "schema"}) // add indicators (requires plugin)
                                     .addTo(controller);
 
                     var intPlatformAppServicesZone = new ScrollMagic.Scene({triggerElement: "#application-services", duration: intPlatformAppServicesHeight})
-                                    .setClassToggle("#intelligence-map .icon-list.application-services", "active") // add class toggle
+                                    .setClassToggle("#intelligence-map .feature-list.application-services", "active") // add class toggle
                                     //.addIndicators({name: "application-services"}) // add indicators (requires plugin)
                                     .addTo(controller);
 
                     var intPlatformPlatformServicesZone = new ScrollMagic.Scene({triggerElement: "#platform-services", duration: intPlatformPlatformServicesHeight})
-                                    .setClassToggle("#intelligence-map .icon-list.platform-services", "active") // add class toggle
+                                    .setClassToggle("#intelligence-map .feature-list.platform-services", "active") // add class toggle
                                     //.addIndicators({name: "platform-services"}) // add indicators (requires plugin)
                                     .addTo(controller);
 
@@ -119,22 +119,22 @@ jQuery(document).ready(function($) { // wait for document ready
                             .addTo(controller);
 
                     var intAppsDepartmentalZone = new ScrollMagic.Scene({triggerElement: "#departmental", duration: intAppsDepartmentalHeight})
-                                    .setClassToggle("#intelligence-map .icon-list.departmental", "active") // add class toggle
+                                    .setClassToggle("#intelligence-map .feature-list.departmental", "active") // add class toggle
                                     //.addIndicators({name: "platform-services"}) // add indicators (requires plugin)
                                     .addTo(controller);
 
                     var intAppsApplicationsZone = new ScrollMagic.Scene({triggerElement: "#apps-applications", duration: intAppsApplicationsHeight})
-                                    .setClassToggle("#intelligence-map .icon-list.apps-applications", "active") // add class toggle
+                                    .setClassToggle("#intelligence-map .feature-list.apps-applications", "active") // add class toggle
                                     //.addIndicators({name: "platform-services"}) // add indicators (requires plugin)
                                     .addTo(controller);
 
                     var intAppsDevicesZone = new ScrollMagic.Scene({triggerElement: "#devices", duration: intAppsDevicesHeight})
-                                    .setClassToggle("#intelligence-map .icon-list.devices", "active") // add class toggle
+                                    .setClassToggle("#intelligence-map .feature-list.devices", "active") // add class toggle
                                     //.addIndicators({name: "platform-services"}) // add indicators (requires plugin)
                                     .addTo(controller);
 
                     var intAppsConstituentsZone = new ScrollMagic.Scene({triggerElement: "#constituents", duration: intAppsConstituentsHeight})
-                                    .setClassToggle("#intelligence-map .icon-list.constituents", "active") // add class toggle
+                                    .setClassToggle("#intelligence-map .feature-list.constituents", "active") // add class toggle
                                     //.addIndicators({name: "platform-services"}) // add indicators (requires plugin)
                                     .addTo(controller);
         }, 2000);
