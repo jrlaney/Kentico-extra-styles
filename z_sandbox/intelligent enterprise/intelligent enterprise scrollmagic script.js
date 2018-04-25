@@ -3,28 +3,72 @@ jQuery(document).ready(function($) { // wait for document ready
     if($(window).width() >= 768){
 
         setTimeout(function(){
-            //variables for the scroll durations
-            var extForcesHeight = $("#external-forces").innerHeight()
-            var entAssetsHeight = $("#enterprise-assets").innerHeight()
-            var intPlatformHeight = $("#intelligence-platform").innerHeight()
-                var intPlatformSecurityHeight =         $("#intelligence-platform #security").innerHeight()
-                var intPlatformAppsHeight =             $("#intelligence-platform #applications").innerHeight()
-                var intPlatformDataHeight =             $("#intelligence-platform #data").innerHeight()
-                var intPlatformSchemaHeight =           $("#intelligence-platform #schema").innerHeight()
-                var intPlatformAppServicesHeight =      $("#intelligence-platform #application-services").innerHeight()
-                var intPlatformPlatformServicesHeight = $("#intelligence-platform #platform-services").innerHeight()
-            var intCenterHeight = $("#intelligence-center").innerHeight()
-            var intArchiHeight = $("#intelligence-architecture").innerHeight()
-            var intProgHeight = $("#intelligence-program").innerHeight()
-            var intAppsHeight = $("#intelligence-applications").innerHeight()
-                var intAppsDepartmentalHeight =         $("#intelligence-applications #departmental").innerHeight()
-                var intAppsApplicationsHeight =         $("#intelligence-applications #apps-applications").innerHeight()
-                var intAppsDevicesHeight =              $("#intelligence-applications #devices").innerHeight()
-                var intAppsConstituentsHeight =         $("#intelligence-applications #constituents").innerHeight()
 
-            var mapScrollHeight = $("#map-scroll-content").innerHeight()
-            var finalMapScroll = mapScrollHeight - (intAppsHeight / 2)
+            //variables for the scroll durations initial values
+            var extForcesVar =   $("#external-forces").innerHeight();
+            var entAssetsVar =   $("#enterprise-assets").innerHeight();
+            var intPlatformVar = $("#intelligence-platform").innerHeight();
+                var intPlatformSecurityVar =         $("#intelligence-platform #security").innerHeight();
+                var intPlatformAppsVar =             $("#intelligence-platform #applications").innerHeight();
+                var intPlatformDataVar =             $("#intelligence-platform #data").innerHeight();
+                var intPlatformSchemaVar =           $("#intelligence-platform #schema").innerHeight();
+                var intPlatformAppServicesVar =      $("#intelligence-platform #application-services").innerHeight();
+                var intPlatformPlatformServicesVar = $("#intelligence-platform #platform-services").innerHeight();
+            var intCenterVar =   $("#intelligence-center").innerHeight();
+            var intArchiVar =    $("#intelligence-architecture").innerHeight();
+            var intProgVar =     $("#intelligence-program").innerHeight();
+            var intAppsVar =     $("#intelligence-applications").innerHeight();
+                var intAppsDepartmentalVar =         $("#intelligence-applications #departmental").innerHeight();
+                var intAppsApplicationsVar =         $("#intelligence-applications #apps-applications").innerHeight();
+                var intAppsDevicesVar =              $("#intelligence-applications #devices").innerHeight();
+                var intAppsConstituentsVar =         $("#intelligence-applications #constituents").innerHeight();
+            var mapScrollVar = $("#map-scroll-content").innerHeight();
 
+            //functions to set all of the height dynamically
+            function extForcesHeight() {return (extForcesVar);}
+            function entAssetsHeight() {return (entAssetsVar);}
+            function intPlatformHeight() {return (intPlatformVar);}
+                function intPlatformSecurityHeight() {return (intPlatformSecurityVar);}
+                function intPlatformAppsHeight() {return (intPlatformAppsVar);}
+                function intPlatformDataHeight() {return (intPlatformDataVar);}
+                function intPlatformSchemaHeight() {return (intPlatformSchemaVar);}
+                function intPlatformAppServicesHeight() {return (intPlatformAppServicesVar);}
+                function intPlatformPlatformServicesHeight() {return (intPlatformPlatformServicesVar);}
+            function intCenterHeight() {return (intCenterVar);}
+            function intArchiHeight() {return (intArchiVar);}
+            function intProgHeight() {return (intProgVar);}
+            function intAppsHeight() {return (intAppsVar);}
+                function intAppsDepartmentalHeight() {return (intAppsDepartmentalVar);}
+                function intAppsApplicationsHeight() {return (intAppsApplicationsVar);}
+                function intAppsDevicesHeight() {return (intAppsDevicesVar);}
+                function intAppsConstituentsHeight() {return (intAppsConstituentsVar);}
+            function mapScrollHeight() {return (mapScrollVar);}
+
+            //determine all the heights for the scrolls
+            $( window ).resize(function() {
+                extForcesVar =   $("#external-forces").innerHeight();
+                entAssetsVar =   $("#enterprise-assets").innerHeight();
+                intPlatformVar = $("#intelligence-platform").innerHeight();
+                    intPlatformSecurityVar =         $("#intelligence-platform #security").innerHeight();
+                    intPlatformAppsVar =             $("#intelligence-platform #applications").innerHeight();
+                    intPlatformDataVar =             $("#intelligence-platform #data").innerHeight();
+                    intPlatformSchemaVar =           $("#intelligence-platform #schema").innerHeight();
+                    intPlatformAppServicesVar =      $("#intelligence-platform #application-services").innerHeight();
+                    intPlatformPlatformServicesVar = $("#intelligence-platform #platform-services").innerHeight();
+                intCenterVar =   $("#intelligence-center").innerHeight();
+                intArchiVar =    $("#intelligence-architecture").innerHeight();
+                intProgVar =     $("#intelligence-program").innerHeight();
+                intAppsVar =     $("#intelligence-applications").innerHeight();
+                    intAppsDepartmentalVar =         $("#intelligence-applications #departmental").innerHeight();
+                    intAppsApplicationsVar =         $("#intelligence-applications #apps-applications").innerHeight();
+                    intAppsDevicesVar =              $("#intelligence-applications #devices").innerHeight();
+                    intAppsConstituentsVar =         $("#intelligence-applications #constituents").innerHeight();
+                mapScrollVar = $("#map-scroll-content").innerHeight();
+            });
+
+
+
+            //build and play out all of the scroll scenes
             // init
             var controller = new ScrollMagic.Controller();
 
