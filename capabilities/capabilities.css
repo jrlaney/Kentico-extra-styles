@@ -1,3 +1,19 @@
+.demo-wrapper {
+  position: relative;
+  padding-top: calc(100vh - 80px);
+}
+@media only screen and (min-width: 768px) {
+  .demo-wrapper {
+    padding-top: 56.25%;
+  }
+}
+.demo-wrapper .demo-embed {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
 .capabilities .page-title {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 20px;
@@ -486,6 +502,39 @@
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+}
+#mapping #hero .stacked-mockups {
+  margin-bottom: 40px;
+}
+#mapping #hero .device-mockup.macbook-pro {
+  position: relative;
+  z-index: 0;
+  margin-left: 10%;
+}
+#mapping #hero .device-mockup.ipad {
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+  left: 10%;
+  bottom: -5px;
+}
+#mapping #hero .device-mockup.iphone {
+  position: absolute;
+  z-index: 2;
+  width: 20%;
+  left: 5%;
+  bottom: -10px;
+}
+#mapping #app-library .device-mockup.macbook-air {
+  position: relative;
+  z-index: 0;
+}
+#mapping #app-library .device-mockup.ipad {
+  position: absolute;
+  z-index: 1;
+  width: 50%;
+  left: 0;
+  bottom: 0;
 }
 #dossiers #hero .hero-screenshots {
   position: relative;
@@ -1073,7 +1122,7 @@
   vertical-align: top;
   margin-left: -4px;
   padding: 0;
-  color: #555555;
+  color: #777777;
   cursor: pointer;
   -webkit-transition: color 0.2s ease-out 0s;
   transition: color 0.2s ease-out 0s;
@@ -1234,7 +1283,7 @@
 @media only screen and (min-width: 768px) {
   #embedded-bi #embedded-bi-types .split-col:first-child {
     padding-right: 50px;
-    border-right: 1px solid #555555;
+    border-right: 1px solid #777777;
   }
   #embedded-bi #embedded-bi-types .split-col:last-child {
     padding-left: 50px;
@@ -1381,7 +1430,7 @@
 #embedded-bi #rest-api #rest-api-diagram .line-col:before {
   position: absolute;
   content: '';
-  background-color: #555555;
+  background-color: #777777;
   top: 0;
   left: 50%;
   margin-left: -1px;
