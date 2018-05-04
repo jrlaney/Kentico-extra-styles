@@ -1,50 +1,17 @@
 @import '../../settings.less';
-@import '../../overrides.less';
 
 //section styles
 
 section {overflow:hidden;}
 
-// light and dark versions of the background color classes
-.background {
-
-    .loop-colors(@i) when (@i > 0) {
-        .loop-colors(@i - 1);
-
-        @color-class: extract(@color-classes, @i);
-        @color: extract(@colors, @i);
-
-        &-@{color-class} {
-            &.lighten {background-color: lighten(saturate(@color, 5%), 5%); }
-            &.darken {background-color: darken(desaturate(@color, 5%), 5%); }
-        }
-    }
-    .loop-colors(length(@color-classes));
-}
-
-
-
-// device mockup groups
-.device-mockup-group {
-    position: relative;
-    overflow: hidden;
-
-    .device-mockup {
-        .max-size(100%);
-        position: absolute;
-    }
-}
-
 
 //basic setup for an image going off the page
-// basic setup for an image going off the page on the left or right
 .offpage-image {
     width:150%;
     max-width:none;
     &.left {float:right;}
     &.right {float:left;}
     @media @large {
-        width:215%;
         &.left {&.pc-laptop, &.macbook-pro, &.macbook-air {margin-right:-10%;}}
         &.right {&.pc-laptop, &.macbook-pro, &.macbook-air {margin-left:-10%;}}
     }
@@ -53,6 +20,43 @@ section {overflow:hidden;}
 .z-1 {position:relative; z-index:1;}
 .z-2 {position:relative; z-index:2;}
 .z-3 {position:relative; z-index:3;}
+
+
+
+//DIV WITH COLOR TRIANGLE NEXT TO IT
+.triangle-group {
+    position:relative;
+    padding:5px 0 5px 20px;
+    &:before {
+        display:block; position:absolute;
+        content:'';
+        top:5px; left:-10px;
+        width:0; height:0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid @red;
+        border-top: 10px solid transparent;
+    }
+    @media @medium {
+        padding-left:25px;
+        &:before {
+            left:-15px;
+            border-left-width: 15px;
+            border-right-width: 15px;
+            border-top-width: 15px;
+        }
+    }
+    &.red:before {border-right-color:@red;}
+    &.orange:before {border-right-color:@orange;}
+    &.green:before {border-right-color:@green;}
+    &.blue:before {border-right-color:@blue;}
+    &.navy-blue:before {border-right-color:@navy-blue;}
+
+    &.white:before {border-right-color:@white;}
+    &.light-gray:before {border-right-color:@light-gray;}
+    &.gray:before {border-right-color:@gray;}
+    &.dark-gray:before {border-right-color:@dark-gray;}
+    &.black:before {border-right-color:@black;}
+}
 
 
 
@@ -111,6 +115,7 @@ section {overflow:hidden;}
 
 //fancy angled banner for products child pages
 main.products.child {
+    overflow:hidden;
     #hero {
         overflow:hidden;
         color:@white;
@@ -127,30 +132,27 @@ main.products.child {
             display:block; position:absolute; z-index:0;
             height:100%; width:100%;
             top:0; left:0;
+            @media @xlarge {max-width:@large-breakpoint; left:50%; .translateX(-50%);}
             .angle {
                 position:absolute;
                 top:0;
                 &.left {
-                    z-index:2; right:-10%;
-                    width:110%;
-                    padding-bottom:110%;
+                    z-index:2; right:0;
+                    width:100vw; padding-bottom:100vw;
                     mix-blend-mode: multiply;
-                    @media @medium {right:50%; .translateX(@small-breakpoint / 2);}
-                    @media @large {.translateX(@medium-breakpoint / 2);}
-                    @media @xlarge {.translateX(@large-breakpoint / 2);}
+                    @media @medium {width:105vw; padding-bottom:105vw; right:-5vw;}
+                    @media @xlarge {width:100vw; padding-bottom:100vw; right:0;}
                 }
                 &.right {
                     z-index:1;
-                    width:75%;
-                    left:25%;
-                    padding-bottom:75%;
+                    width:75vw; padding-bottom:75vw;
+                    left:25vw;
                     background-repeat:no-repeat;
                     background-position:center;
                     background-size:cover;
                     @media @small-only {background-blend-mode:multiply;}
-                    @media @medium {width:50%; left:50%; padding-bottom:50%;}
-                    @media @large {width:60%; padding-bottom:60%; .translateX(-@medium-breakpoint / 100 * 4);}
-                    @media @xlarge {.translateX(-@large-breakpoint / 100 * 4);}
+                    @media @medium {width:60vw; padding-bottom:60vw; left:40vw;}
+                    @media @xlarge {width:50vw; padding-bottom:50vw; left:50%;}
                 }
             }
         }
@@ -270,6 +272,11 @@ main.products.child {
 
 //ANALYTICS PAGE
 #analytics-overview {
+    #introduction {
+        .device-mockup {
+            width:215%;
+        }
+    }
     #connect-prepare {
         .offpage-image {
             //margin-left:-30%;
@@ -381,261 +388,240 @@ main.products.child {
             }
         }
     }
-}
 
-
-
-
-// why microstrategy
-
-//TIMELINE COMPONENT STYLES
-.timeline-wrapper {position:relative;}
-.frame {
-    position:relative; z-index:2; overflow:hidden;
-    width:100%; height:420px;
-    padding:0;
-    cursor:pointer;
-    &:before {
-        position:absolute; z-index:1;
-        content:'';
-        height:8px; width:100%;
-        top:50%; left:0; margin-top:-4px;
-        background-color:@gray;
-    }
-    .timeline-list {
-        position:relative; z-index:2; margin:0; padding:0; height:100%; list-style:none;
-        .timeline-item {
-            position:relative; z-index:2;
-            float:left;
-            margin:0 20px 0 -110px; padding:0 0 20px 30px;
-            width:200px; height:50%;
-            text-align:left;
-            color:@light-gray;
-            transform: translateX(65px);
-
-            .IE10 & .text {max-width:185px;}
-            &:before {
-                display:block; position:absolute; z-index:2;
-                content:'';
-                top:50%; left:0; margin-top:-15px;
-                height:30px; width:15px;
-                background-color:@white;
+    #mobile-apps-deploy {
+        .device-mockup {
+            &.macbook-pro {
+                position:relative; z-index:0;
+                width:100%;
+                margin-right:55%;
+                margin-top:10%; margin-bottom:10%;
             }
-            .text {
-                opacity:0.6;
-                .transition(opacity, 0.2s, ease-out, 0s);
+            &.iphone {
+                position:absolute; z-index:1;
+                width:18%;
+                right:20%; top:20px;
             }
-            &.active .text {opacity:1;}
-            &:nth-child(even) {
-                margin-top:210px; padding:20px 0 0 30px;
-                .flag {bottom:50%; top:auto; &:before {top:auto; }}
+            &.ipad {
+                position:absolute; z-index:1;
+                width:40%;
+                right:20px; bottom:20px;
             }
-            .flag {
-                display:block; position:absolute; z-index:4;
-                width:3px; height:50%;
-                background-color:@white;
-                left:0; top:50%;
-                &:before {
-                    display:block; position:absolute; z-index:3;
-                    content:'';
-                    top:100%; left:0; margin-left:-10px; margin-top:-12px;
-                    height:24px; width:24px;
-                    border-radius:50%;
-                    border:2px solid @gray;
-                    background-color:@gray;
-                }
-            }//end flag
-        }//end timeline-item
-        &.red { &:before, .flag, .flag:before {background-color:@red;}}
-        &.orange { &:before, .flag, .flag:before {background-color:@orange;}}
-        &.green { &:before, .flag, .flag:before {background-color:@green;}}
-        &.blue { &:before, .flag, .flag:before {background-color:@blue;}}
-        &.navy { &:before, .flag, .flag:before {background-color:@navy-blue;}}
-    }//end timeline list
-}//end frame
-
-/* Timeline Scrollbar */
-.scrollbar {
-    position:relative; z-index:2;
-    margin:20px auto;
-    height:30px; width:~"calc(100% - 60px)";
-    line-height: 0;
-    &:before {
-        display:block; position:absolute; z-index:-2;
-        content:'';
-        left:0; top:50%; margin-top:-1px;
-        height:2px; width:100%;
-        border-bottom:3px solid @gray;
-    }
-    .handle {
-        width:100px; height:100%;
-        margin-top:-15px;
-        background-color:fade(@red, percentage(@semi-opaque));
-        cursor:pointer;
-        .mousearea {
-            position:absolute; z-index:3;
-            top:0; left:0;
-            width:100%; height:100%;
-            &:before {
-              display:block; position:absolute;
-              content:'';
-              bottom:100%; left:50%; margin-left:-14px;
-              width:0; height:0;
-              border-left:14px solid transparent;
-              border-right:14px solid transparent;
-
-              border-bottom:14px solid fade(@red, percentage(@semi-opaque));
+            @media @medium {
+                &.macbook-pro {width:90%; margin-right:45%; margin-top:5%; margin-bottom:5%;}
+                &.iphone {width:15%; right:23%;}
+                &.ipad {width:35%; }
             }
-        }//end mousearea
-    }//end handle
-}//end scrollbar
-.timeline-nav {
-    position:relative;
-    padding-left:30px; padding-right:30px;
-    .dot-wrapper {
-      position:absolute; z-index:-1;
-      top:0; left:0;
-      width:100%; height:30px;
-    }
-    .dot {
-        position:relative;
-        &:before {
-          display:block; position:absolute;
-          content:'';
-          top:50%; left:50%; margin-left:-5px; margin-top:-5px;
-          height:10px; width:10px;
-          border-radius:50%;
-          background-color:#bbbbbb;
+            @media @large {
+                &.macbook-pro {margin-top:0; margin-bottom:0;}
+                &.iphone {width:12%;}
+                &.ipad {width:33%;}
+            }
+            @media @xlarge {
+                &.macbook-pro {width:80%;}
+                &.iphone {width:10%;}
+                &.ipad {width:31%;}
+            }
         }
     }
-}//end timeline-nav
-
-//timeline controls
-.controls {
-    display:block; position:absolute; z-index:1;
-    top:20px; left:0;
-    width:100%; height:30px;
-    .btn {
-        display:block; position:absolute;
-        top:50%; margin-top:-15px;
-        width:30px; height:30px;
-        background-color:transparent;
-        outline:0;
-        opacity:1;
-        color:#cccccc;
-        .transition(opacity, 0.2s, ease-out, 0s);
-        &.disabled {opacity:0.2;}
-        &.prev {left:0px; transform:rotate(180deg);}
-        &.next {right:0px;}
-    }//end btn
-}//end controls
-
-//OFF-PAGE IMAGES FOR KEY BENEFITS SECTIONS
-.cutoff-img {display:block; margin:0 auto; max-width:400px;}
-.benefits-section {border-bottom:1px solid #cccccc;}
-#ease-of-use .cutoff-img {max-width:500px; .translateX(-20%);}
-
-
-
-@media only screen and (min-width: 768px) {
-    //TIMELINE COMPONENT STYLES
-    .hero-col {opacity:0px; .animation(opacity-reveal 0.5s ease-out 0.5s normal forwards);}
-    .timeline-wrapper {opacity:0px; .animation(opacity-reveal 1s ease-out 2s normal forwards);}
-    .ie9, .ie8 {
-        .hero-col, .timeline-wrapper {opacity:1;}
+    #emm {
+        .device-col {
+            overflow:hidden; margin-bottom:30px;
+            @media @large {overflow:visible; margin-bottom:none;}
+        }
+        .device-mockup.offpage-image {
+            margin-right:5%;
+            width:150%; margin-bottom:-40%;
+            @media @medium {width:115%;}
+            @media @large {width:150%; margin-bottom:0;}
+        }
+        .app-lock {
+            position:absolute;
+            width:4%;
+            right:26%; top:6%;
+            opacity:0;
+            .animation(app-lock-animation 7s 2s ease-out infinite);
+        }
     }
-    .timeline-wrapper:before, .timeline-wrapper:after {
-        display:none;
-        position:absolute; z-index:3;
-        content:'';
-        height:370px; width:70px;
-        top:0;
+    #transactions {
+        .device-mockup {
+            &.ipad {
+                position:relative; z-index:0;
+                margin-left:10%;
+                margin-bottom:20px;
+            }
+            &.iphone {
+                position:absolute; z-index:1;
+                width:20%;
+                left:20px; bottom:20px;
+            }
+        }
     }
-    .timeline-wrapper:before {
-        left:15px;
-        background: -moz-linear-gradient(left,  rgba(51,51,51,1) 0%, rgba(51,51,51,0) 100%);
-        background: -webkit-linear-gradient(left,  rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%);
-        background: linear-gradient(to right,  rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#00333333',GradientType=1 );
+}
+.keyframes(app-lock-animation;{
+    0% {opacity:0; .transform(scale(2) translateY(-10px));}
+    5% {opacity:1; .transform(scale(1) translateY(0));}
+    90% {opacity:1; .transform(scale(1) translateY(0));}
+    95% {opacity:0; .transform(translateY(10px));}
+    100% {opacity:0; .transform(translateY(10px));}
+});
+
+
+//EMBEDDED PAGE
+#embedded-analytics-overview {
+    #hero {
+        .angle-wrapper .angle.right {background-position:left center;}
     }
-    .timeline-wrapper:after {
-        right:15px;
-        background: -moz-linear-gradient(left,  rgba(51,51,51,0) 0%, rgba(51,51,51,1) 100%);
-        background: -webkit-linear-gradient(left,  rgba(51,51,51,0) 0%,rgba(51,51,51,1) 100%);
-        background: linear-gradient(to right,  rgba(51,51,51,0) 0%,rgba(51,51,51,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00333333', endColorstr='#333333',GradientType=1 );
+    #introduction {
+        .device-mockup {
+            width:200%;
+        }
     }
-    .frame {height:350px;}
-    .frame .timeline-list .timeline-item {
-        margin:0 80px 0 -200px; padding:0 0 20px 30px;
-        width:320px;
-        .translateX(140px);
+    #rest-api {
+        #rest-api-diagram {
+            .sdk-col {
+                .icon {font-size:24px;}
+            }
+            .line-col {
+                position:relative;
+                min-height:100px;
 
-        .IE10 & .text {max-width:305px;}
+                .arrow-block {
+                    position:absolute;
+                    top:0; left:50%;
+                    margin-top:43px; margin-left:-23px;
+                    width:100px;
+                    padding:5px 25px 15px 25px;
+                    color:@blue;
+                    .uppercase;
+                    font-weight:600;
+                    .icon {
+                        position:absolute;
+                        bottom:0; right:-4px;
+                    }
+                    &:before {
+                        position:absolute;
+                        content:'';
+                        background-color:@blue;
+                        bottom:6px; left:0;
+                        height:2px; width:100%;
+                    }
+                    .rotation(90deg);
+                    @media @large {
+                        top:50%; left:15px;
+                        margin-top:-43px; margin-left:0;
+                        width:~"calc(100% - 30px)";
+                        .rotation(0deg);
+                    }
+
+                    &.reverse {
+                        margin-left:-85px;
+                        padding:15px 25px 5px 25px;
+                        .icon {
+                            bottom:auto; right:auto; top:0; left:-4px;
+                        }
+                        &:before {bottom:auto; top:6px;}
+                        @media @large {
+                            margin-top:10px; margin-left:0;
+                        }
+                    }//end reversed arrow block
+                }//end arrow block
+            }//end line-col
+        }//end diagram
     }
-    .frame .timeline-list .timeline-item:nth-child(even) {margin-top:175px;}
-
-
-    //OFF-PAGE IMAGES FOR KEY BENEFITS SECTIONS
-    .cutoff-img {max-width:none; z-index:1;}
-    .benefits-section [class*="text-col"] {z-index:2;}
-    .benefits-section .report-col {z-index:1;}
-    .benefits-section {border-bottom:none;}
-    #low-cost .cutoff-img {.translateX(-35%);}
-    #ease-of-use .cutoff-img {position:absolute; max-width:100%; top:~"calc(50% + 40px)"; left:50%; .translate(-50%, -50%); opacity:0.90; .transition();}
-        //REPORT LINK MOVES ON HOVER
-        #ease-of-use .report-link {display:block;}
-        #ease-of-use .report-link:hover .cutoff-img {.translate(-50%, ~"calc(-50% - 10px)"); opacity:1;}
-    #mobile .cutoff-img {max-width:700px;}
-
-
-    //GARTNER REPORT IMAGE CENTERED FLOATING ROW
-    #ease-of-use .text-col-first {.order(1);}
-    #ease-of-use .report-col {.order(2); position:relative; height:300px;}
-    #ease-of-use .text-col-last {.order(3);}
-
-
-    //LINES IN A GRID
-    .grid-lines .grid-item {border:1px solid @gray; padding:30px;}
-    .grid-lines .grid-item:nth-child(1) {border-width:0 1px 1px 0;}
-    .grid-lines .grid-item:nth-child(2) {border-width:0 0 1px 0;}
-    .grid-lines .grid-item:nth-child(3) {border-width:0 1px 0 0;}
-    .grid-lines .grid-item:nth-child(4) {border-width:0;}
-
-
-
-    //CUSTOMER PANEL STYLES
-    .customer-panel {height:300px;}
-    .customer-panel .info {
-        position:absolute;
-        width:80%;
-        padding:0;
-        top:50%; left:50%;
-        .translate(-50%, -55%);
+    #push-api {
+        #push-api-graphic {
+            .logo-col [class*="flex-grid"].compact > .grid-item {
+                padding:2.5px;
+                @media @large-only {padding:7.5px;}
+            }
+            .cube-col {
+                .icon.medium {font-size:64px;}
+            }
+            .arrow-col {
+                position:relative;
+                min-height:60px;
+                .icon_common_arrow {
+                    position:absolute;
+                    font-size:24px;
+                    bottom:-6px; left:50%;
+                    margin-left:-12px;
+                    .rotation(90deg);
+                    @media @large {
+                        top:50%; bottom:auto; left:auto; right:-6px;
+                        margin-left:0; margin-top:-12px;
+                        .rotation(0deg);
+                    }
+                }
+                &:before {
+                    position:absolute;
+                    content:'';
+                    background-color:@red;
+                    top:0; left:50%;
+                    margin-left:-1px;
+                    width:2px; height:100%;
+                    @media @large {
+                        top:50%; left:0;
+                        margin-left:0; margin-top:-1px;
+                        width:100%; height:2px;
+                    }
+                }
+            }//end arrow-col
+        }//end push api graphic
     }
-    .customer-panel:hover .info {.translate(-50%, -50%);}
+    #visualization-sdk {
+        .device-mockup {
+            &.macbook-pro {
+                position:relative; z-index:0;
+                margin-left:10%;
+                margin-bottom:20px;
+            }
+            &.ipad {
+                position:absolute; z-index:1;
+                width:45%;
+                left:20px; bottom:20px;
+            }
+        }
+    }
 
+    #mobile-sdk {
+        .custom-mobile-animation {
+            .description-block {
+                display:none;
+                position:relative;
+                @media @medium {display:block;}
+            }
+            .animated-block {
+                position:relative;
+                padding:30px 0px;
+                & > p {display:block;}
 
+                @media @medium {
+                    padding:15px 30px;
+                    & > p {display:none;}
+                }
+            }
+            .mstr-icon, .customapp-icon {
+                display:block; margin:0 auto;
+                max-width:70px;
+                @media @medium {max-width:100%;}
+            }
+            .icon {
+                position:absolute;
+                top:100%; left:50%;
+                margin-left:-6px;
+                .transform(rotate(90deg) translate(-50% , 10px));
+                @media @medium {
+                    display:block;
+                    top:50%; left:100%;
+                    margin-left:0;
+                    .transform(rotate(0deg) translate(-15px, -50%));
+                }
+            }
+        }
+    }
 
 }
-
-
-@media only screen and (min-width: 980px) {
-
-    //OFF-PAGE IMAGES FOR KEY BENEFITS SECTIONS
-    #low-cost .cutoff-img {.translateX(-25%);}
-    #mobile .cutoff-img {max-width:none;}
-
-}
-
-
-@media only screen and (min-width: 1200px) {
-
-    //OFF-PAGE IMAGES FOR KEY BENEFITS SECTIONS
-    #low-cost .cutoff-img {.translateX(-15%);}
-
-}
-
 
 
 
@@ -662,10 +648,10 @@ main.products.child {
     .passed-view .slide-left {.animation(fade-slide-left 0.3s ease-out 0s normal forwards);}
     .passed-view .slide-right {.animation(fade-slide-right 0.3s ease-out 0s normal forwards);}
     .passed-view .slide-down {.animation(fade-slide-down 0.3s ease-out 0s normal forwards);}
-    .passed-view .fade-in {.animation(opacity-reveal 0.3s ease-out 0s normal forwards);}
+    .passed-view .fade-in {.animation(fade-in 0.3s ease-out 0s normal forwards);}
 }
 
-.keyframes(opacity-reveal;{
+.keyframes(fade-in;{
     0%{opacity:0;}
     100%{opacity:1;}
 });
@@ -684,29 +670,4 @@ main.products.child {
 .keyframes(fade-slide-right;{
     0%{opacity:0; .translateX(-10%);}
     100%{opacity:1; .translateX(0);}
-});
-.keyframes(fade-slide-diagonal-down, {
-    0%   { opacity: 0; .translate(-10px, -10px); }
-    100% { opacity: 1; .translate(0, 0); }
-});
-
-
-.keyframes(fade-scale-up, {
-    0%   { opacity: 0; .scale(.8); }
-    100% { opacity: 1; .scale(1); }
-});
-.keyframes(blink, {
-    0%   { background-color: @red; }
-    40%  { background-color: transparent; }
-    60%  { background-color: transparent; }
-    100% { background-color: @red; }
-});
-
-
-
-
-//KEYFRAMES FOR SPECIFIC THINGS
-.keyframes(timeline-reveal;{
-    0%{opacity:0; max-height:400px;}
-    100%{opacity:1; max-height:2000px;}
 });
