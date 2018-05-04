@@ -1,13 +1,15 @@
 .demo-wrapper {
   position: relative;
+  width: 100%!important;
+  height: 100%!important;
   padding-top: calc(100vh - 80px);
 }
 @media only screen and (min-width: 768px) {
   .demo-wrapper {
-    padding-top: 56.25%;
+    padding-top: 65%;
   }
 }
-.demo-wrapper .demo-embed {
+.demo-wrapper > iframe {
   position: absolute;
   width: 100%;
   height: 100%;
