@@ -262,6 +262,69 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
 
 
 
+//SPECIAL BLOCKQUOTE
+blockquote {
+    display:inline-block; *zoom:1; *display:inline; position:relative;
+    padding:0; margin:20px 40px;
+    font-family:@myriad-pro;
+    font-weight:400;
+    font-size:22px; line-height:26px;
+    @media @medium {font-size:26px; line-height:35px;}
+
+    > span {
+        display:block;
+        margin-top:15px;
+        font-weight:600;
+        font-size:16px; line-height:20px;
+        .uppercase;
+        @media @medium {font-size:18px;}
+    }
+
+	&:before, &:after {
+        content:'“';
+	    display:block; position:absolute;
+	    top:0.2em; left:-50px;
+	    height:56px; width:68px;
+
+        font-family:@lucida-grande;
+        font-size:250px;
+        color:fade(@white, 50%);
+	}
+	&:after {
+        content:'”';
+        top:auto;
+        left:auto;
+        bottom:-0.2em;
+        right:-35px;
+    }
+}
+
+
+
+
+//CARD BETWEEN ROWS
+.in-between-card.flex-row {
+    position:relative; z-index:5;
+    .card {
+        position:relative; z-index:5;
+        background-color:@white;
+        padding:10px;
+        .box-shadow(1px 1px 5px fade(@pure-black, 50%));
+        margin-bottom:30px;
+    }
+    @media @medium {
+		margin-top:-150px; margin-bottom:60px;
+        .card {padding:15px;}
+    }
+}
+section.above-card {
+    @media @medium {padding-bottom:150px; position:relative; z-index:4;}
+}
+section.below-card {overflow:visible!important;}
+
+
+
+
 // FAQ
 
 #faq {
@@ -372,8 +435,46 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
 
 
 
-// OTHER
+// OTHER / INDIVIDUAL PAGE STUFF
 
+
+//solutions for verizon page
+.SolutionsForVerizon {
+    .media-wrapper {
+        position:relative;
+        padding-bottom:200px;
+        height:0;
+        margin-top:30px;
+        .transition(0.3s, ease-out, all, 0s);
+
+        .resource-thumbnail {
+            position:absolute; z-index:1;
+            height:100%; width:100%;
+            top:0; left:0;
+            cursor:pointer;
+            .transition(0.3s, ease-out, all, 0s);
+            &:before {margin-top:-15px;}
+            .cta {margin-top:50px; opacity:1;}
+            &:after {display:none;}
+        }
+        .video-wrapper {
+            position:absolute; z-index:0;
+            width:100%;
+            top:50%; left:50%;
+            .translate(-50%, -40%);
+            opacity:0;
+            .transition(0.3s, ease-out, all, 0.3s);
+        }
+
+        &.video-playing {
+            padding-bottom:56.25%;
+            .resource-thumbnail {opacity:0; .translateY(-50px);}
+            .video-wrapper {opacity:1; z-index:2; .translate(-50%, -50%);}
+        }
+    }
+}
+
+//get started > desktop help page
 #desktop-help.microsite #dashboards-visualizations img {
     max-width: none;
     width: 180%;
