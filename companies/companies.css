@@ -64,7 +64,7 @@
   left: 50%;
   margin-top: -10px;
   margin-right: -10px;
-  background: #555555;
+  background: #777777;
 }
 .gridder .gridder-navigation a.gridder-close:before {
   -webkit-transform: rotate(45deg);
@@ -80,7 +80,7 @@
 .gridder .gridder-navigation a.gridder-close:hover:after,
 .gridder .gridder-navigation a.gridder-close:active:after,
 .gridder .gridder-navigation a.gridder-close:focus:after {
-  background: #888888;
+  background: #aaaaaa;
 }
 .gridder .gridder-navigation a.gridder-nav:before {
   content: "\e901";
@@ -100,7 +100,7 @@
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   line-height: 1;
-  color: #555555;
+  color: #777777;
 }
 .gridder .gridder-navigation a.gridder-nav.prev:before {
   -webkit-transform: translate(-50%, -50%) rotate(180deg);
@@ -273,7 +273,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #555555;
+  color: #777777;
 }
 .company-details .company-category-tags {
   list-style: none;
@@ -282,37 +282,13 @@
   line-height: 1;
   font-weight: 300;
   letter-spacing: .05em;
-  color: #555555;
+  color: #777777;
 }
-.partnership-logos {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  font-size: 24px;
-  color: #999999;
-}
-@media only screen and (min-width: 768px) {
-  .partnership-logos {
-    -webkit-flex-direction: row;
-    flex-direction: row;
-  }
-}
-.partnership-logos .company-logo {
+.company-logo {
   max-width: 250px;
-  margin: 10px 0;
-}
-@media only screen and (min-width: 768px) {
-  .partnership-logos .company-logo {
-    margin: 0 20px;
-  }
 }
 @media only screen and (min-width: 980px) {
-  .partnership-logos .company-logo {
+  .company-logo {
     max-width: 300px;
   }
 }
@@ -502,9 +478,9 @@
   margin: 0;
   padding-left: 2.5em;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 21px;
   line-height: 1.4;
   font-weight: 300;
-  font-size: 16px;
 }
 .CompanyStory.Page blockquote:before {
   content: '';
@@ -518,6 +494,7 @@
 }
 .CompanyStory.Page blockquote footer {
   margin-top: 10px;
+  font-size: 18px;
   font-weight: 600;
   font-style: normal;
 }
