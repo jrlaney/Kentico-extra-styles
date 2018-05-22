@@ -1,3 +1,21 @@
+.demo-wrapper {
+  position: relative;
+  width: 100%!important;
+  height: 100%!important;
+  padding-top: calc(100vh - 80px);
+}
+@media only screen and (min-width: 768px) {
+  .demo-wrapper {
+    padding-top: 65%;
+  }
+}
+.demo-wrapper > iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
 .capabilities .page-title {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 20px;
@@ -486,6 +504,39 @@
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+}
+#mapping #hero .stacked-mockups {
+  margin-bottom: 40px;
+}
+#mapping #hero .device-mockup.macbook-pro {
+  position: relative;
+  z-index: 0;
+  margin-left: 10%;
+}
+#mapping #hero .device-mockup.ipad {
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+  left: 10%;
+  bottom: -5px;
+}
+#mapping #hero .device-mockup.iphone {
+  position: absolute;
+  z-index: 2;
+  width: 20%;
+  left: 5%;
+  bottom: -10px;
+}
+#mapping #app-library .device-mockup.macbook-air {
+  position: relative;
+  z-index: 0;
+}
+#mapping #app-library .device-mockup.ipad {
+  position: absolute;
+  z-index: 1;
+  width: 50%;
+  left: 0;
+  bottom: 0;
 }
 #dossiers #hero .hero-screenshots {
   position: relative;
