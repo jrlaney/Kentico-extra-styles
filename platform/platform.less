@@ -1,5 +1,24 @@
 @import '../settings.less';
 
+section {overflow:hidden;}
+
+
+//basic setup for an image going off the page
+.offpage-image {
+    width:150%;
+    max-width:none;
+    &.left {float:right;}
+    &.right {float:left;}
+    @media @large {
+        &.left {&.pc-laptop, &.macbook-pro, &.macbook-air {margin-right:-10%;}}
+        &.right {&.pc-laptop, &.macbook-pro, &.macbook-air {margin-left:-10%;}}
+    }
+}
+.stacked-mockups {position:relative;}
+.z-1 {position:relative; z-index:1;}
+.z-2 {position:relative; z-index:2;}
+.z-3 {position:relative; z-index:3;}
+
 /*=======================================================================
 =      Main styles are for smallest screen size - larger sizes are specified in media queries          =
 ==========================================================================*/
@@ -1214,13 +1233,27 @@ padding-left:20px; padding-right:20px;
 
 
 /*-----------------cloud page------------*/
+#cloud-critical-capabilities {
+    .device-mockup {
+        &.ipad {
+            position:relative; z-index:0;
+            margin-left:27.33333333%;
+        }
+        &.iphone {
+            position:absolute; z-index:1;
+            width:20%;
+            left:0; bottom:0;
+        }
+    }
+}
+
 #services-and-tools {
     .icon-col {
         position:relative;
         @media @medium {padding-bottom:35px; margin-bottom:20px;}
 
         .grid-item {.display(inline-flex);}
-        .background-white {
+        .background-light-gray, .background-white {
             .flex(0, 1, auto);
             .display(flex);
             .flex-direction(row);

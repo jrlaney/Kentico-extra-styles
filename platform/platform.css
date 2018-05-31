@@ -1,3 +1,43 @@
+section {
+  overflow: hidden;
+}
+.offpage-image {
+  width: 150%;
+  max-width: none;
+}
+.offpage-image.left {
+  float: right;
+}
+.offpage-image.right {
+  float: left;
+}
+@media only screen and (min-width: 980px) {
+  .offpage-image.left.pc-laptop,
+  .offpage-image.left.macbook-pro,
+  .offpage-image.left.macbook-air {
+    margin-right: -10%;
+  }
+  .offpage-image.right.pc-laptop,
+  .offpage-image.right.macbook-pro,
+  .offpage-image.right.macbook-air {
+    margin-left: -10%;
+  }
+}
+.stacked-mockups {
+  position: relative;
+}
+.z-1 {
+  position: relative;
+  z-index: 1;
+}
+.z-2 {
+  position: relative;
+  z-index: 2;
+}
+.z-3 {
+  position: relative;
+  z-index: 3;
+}
 /*=======================================================================
 =      Main styles are for smallest screen size - larger sizes are specified in media queries          =
 ==========================================================================*/
@@ -185,10 +225,10 @@
     border-left-color: #f2f2f2;
   }
   .panelstack.vertical-panelstack.dark-gray .panel-nav .panel-nav-elem.active-panel > a {
-    background-color: #555555;
+    background-color: #777777;
   }
   .panelstack.vertical-panelstack.dark-gray .panel-nav .panel-nav-elem.active-panel > a:before {
-    border-left-color: #555555;
+    border-left-color: #777777;
   }
   .panelstack.vertical-panelstack.black .panel-nav .panel-nav-elem.active-panel > a {
     background-color: #333333;
@@ -1877,6 +1917,18 @@ h6.icon-header {
   max-width: 400px;
 }
 /*-----------------cloud page------------*/
+#cloud-critical-capabilities .device-mockup.ipad {
+  position: relative;
+  z-index: 0;
+  margin-left: 27.33333333%;
+}
+#cloud-critical-capabilities .device-mockup.iphone {
+  position: absolute;
+  z-index: 1;
+  width: 20%;
+  left: 0;
+  bottom: 0;
+}
 #services-and-tools .icon-col {
   position: relative;
 }
@@ -1890,6 +1942,7 @@ h6.icon-header {
   display: -webkit-inline-flex;
   display: inline-flex;
 }
+#services-and-tools .icon-col .background-light-gray,
 #services-and-tools .icon-col .background-white {
   -webkit-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -1905,6 +1958,7 @@ h6.icon-header {
   width: 100%;
   position: relative;
 }
+#services-and-tools .icon-col .background-light-gray > p,
 #services-and-tools .icon-col .background-white > p {
   width: 100%;
 }
