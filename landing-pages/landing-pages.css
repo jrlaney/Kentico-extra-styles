@@ -218,6 +218,61 @@ section#symposium {
   position: relative;
   z-index: 3;
 }
+.media-wrapper {
+  position: relative;
+  padding-bottom: 200px;
+  height: 0;
+  margin-top: 30px;
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.media-wrapper .resource-thumbnail {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.media-wrapper .resource-thumbnail:before {
+  margin-top: -15px;
+}
+.media-wrapper .resource-thumbnail .cta {
+  margin-top: 50px;
+  opacity: 1;
+}
+.media-wrapper .resource-thumbnail:after {
+  display: none;
+}
+.media-wrapper .video-wrapper {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -40%);
+  transform: translate(-50%, -40%);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out 0.3s;
+  transition: all 0.3s ease-out 0.3s;
+}
+.media-wrapper.video-playing {
+  padding-bottom: 56.25%;
+}
+.media-wrapper.video-playing .resource-thumbnail {
+  opacity: 0;
+  -webkit-transform: translateY(-50px);
+  transform: translateY(-50px);
+}
+.media-wrapper.video-playing .video-wrapper {
+  opacity: 1;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 .scrolldown {
   position: absolute!important;
   bottom: 0;
@@ -649,61 +704,6 @@ section.below-card {
   left: 0;
   width: 100%;
   height: 100%;
-}
-.SolutionsForVerizon .media-wrapper {
-  position: relative;
-  padding-bottom: 200px;
-  height: 0;
-  margin-top: 30px;
-  -webkit-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
-}
-.SolutionsForVerizon .media-wrapper .resource-thumbnail {
-  position: absolute;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
-}
-.SolutionsForVerizon .media-wrapper .resource-thumbnail:before {
-  margin-top: -15px;
-}
-.SolutionsForVerizon .media-wrapper .resource-thumbnail .cta {
-  margin-top: 50px;
-  opacity: 1;
-}
-.SolutionsForVerizon .media-wrapper .resource-thumbnail:after {
-  display: none;
-}
-.SolutionsForVerizon .media-wrapper .video-wrapper {
-  position: absolute;
-  z-index: 0;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -40%);
-  transform: translate(-50%, -40%);
-  opacity: 0;
-  -webkit-transition: all 0.3s ease-out 0.3s;
-  transition: all 0.3s ease-out 0.3s;
-}
-.SolutionsForVerizon .media-wrapper.video-playing {
-  padding-bottom: 56.25%;
-}
-.SolutionsForVerizon .media-wrapper.video-playing .resource-thumbnail {
-  opacity: 0;
-  -webkit-transform: translateY(-50px);
-  transform: translateY(-50px);
-}
-.SolutionsForVerizon .media-wrapper.video-playing .video-wrapper {
-  opacity: 1;
-  z-index: 2;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 #desktop-help.microsite #dashboards-visualizations img {
   max-width: none;
