@@ -181,6 +181,174 @@ section {
 .icon-link-grid.dark .grid-item:hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
+@media only screen and (min-width: 768px) {
+  .panelstack.vertical-panelstack {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 0 1 auto;
+    flex: 0 1 auto;
+    max-width: none;
+    width: 100%;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: start;
+    justify-content: start;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    background-color: #f2f2f2;
+  }
+  .panelstack.vertical-panelstack .panel-nav,
+  .panelstack.vertical-panelstack .panel-content {
+    -webkit-flex: 0 1 auto;
+    flex: 0 1 auto;
+    max-width: none;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    float: none;
+  }
+  .panelstack.vertical-panelstack .panel-nav {
+    z-index: 1;
+    padding-bottom: 0;
+    width: 40%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    background-color: #333333;
+  }
+  .panelstack.vertical-panelstack .panel-nav .panel-nav-elem {
+    width: 100%;
+    border: none;
+  }
+  .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a {
+    color: #FFFFFF;
+    padding: 15px 40px 15px 20px;
+    opacity: 0.5;
+  }
+  .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a:hover {
+    color: #FFFFFF;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a:before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid #FFFFFF;
+    margin: 0;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    -webkit-transition: all 0.2s ease-out 0s;
+    transition: all 0.2s ease-out 0s;
+  }
+  .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a:after {
+    display: none;
+  }
+  .panelstack.vertical-panelstack .panel-nav .panel-nav-elem.active-panel > a {
+    opacity: 1;
+    background-color: #D9232E;
+    color: #FFFFFF;
+  }
+  .panelstack.vertical-panelstack .panel-nav .panel-nav-elem.active-panel > a:before {
+    opacity: 1;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-left-color: #D9232E;
+    -webkit-transform: translate(25px, -50%);
+    transform: translate(25px, -50%);
+  }
+  .panelstack.vertical-panelstack .panel-content {
+    z-index: 0;
+    width: 60%;
+    border: none;
+    opacity: 0;
+    -webkit-animation: fade-slide-right 0.3s ease-out 0.2s normal forwards;
+    -moz-animation: fade-slide-right 0.3s ease-out 0.2s normal forwards;
+    animation: fade-slide-right 0.3s ease-out 0.2s normal forwards;
+    padding: 30px;
+  }
+  .panelstack.vertical-panelstack.red .panel-nav .panel-nav-elem.active-panel > a {
+    background-color: #D9232E;
+  }
+  .panelstack.vertical-panelstack.red .panel-nav .panel-nav-elem.active-panel > a:before {
+    border-left-color: #D9232E;
+  }
+  .panelstack.vertical-panelstack.blue .panel-nav .panel-nav-elem.active-panel > a {
+    background-color: #4789A3;
+  }
+  .panelstack.vertical-panelstack.blue .panel-nav .panel-nav-elem.active-panel > a:before {
+    border-left-color: #4789A3;
+  }
+  .panelstack.vertical-panelstack.navy-blue .panel-nav .panel-nav-elem.active-panel > a {
+    background-color: #11566F;
+  }
+  .panelstack.vertical-panelstack.navy-blue .panel-nav .panel-nav-elem.active-panel > a:before {
+    border-left-color: #11566F;
+  }
+  .panelstack.vertical-panelstack.orange .panel-nav .panel-nav-elem.active-panel > a {
+    background-color: #FF9100;
+  }
+  .panelstack.vertical-panelstack.orange .panel-nav .panel-nav-elem.active-panel > a:before {
+    border-left-color: #FF9100;
+  }
+  .panelstack.vertical-panelstack.green .panel-nav .panel-nav-elem.active-panel > a {
+    background-color: #68AA00;
+  }
+  .panelstack.vertical-panelstack.green .panel-nav .panel-nav-elem.active-panel > a:before {
+    border-left-color: #68AA00;
+  }
+  .panelstack.vertical-panelstack.gray .panel-nav .panel-nav-elem.active-panel > a {
+    background-color: #999999;
+  }
+  .panelstack.vertical-panelstack.gray .panel-nav .panel-nav-elem.active-panel > a:before {
+    border-left-color: #999999;
+  }
+  .panelstack.vertical-panelstack.light-gray .panel-nav .panel-nav-elem.active-panel > a {
+    background-color: #f2f2f2;
+  }
+  .panelstack.vertical-panelstack.light-gray .panel-nav .panel-nav-elem.active-panel > a:before {
+    border-left-color: #f2f2f2;
+  }
+  .panelstack.vertical-panelstack.dark-gray .panel-nav .panel-nav-elem.active-panel > a {
+    background-color: #777777;
+  }
+  .panelstack.vertical-panelstack.dark-gray .panel-nav .panel-nav-elem.active-panel > a:before {
+    border-left-color: #777777;
+  }
+  .panelstack.vertical-panelstack.black .panel-nav .panel-nav-elem.active-panel > a {
+    background-color: #333333;
+  }
+  .panelstack.vertical-panelstack.black .panel-nav .panel-nav-elem.active-panel > a:before {
+    border-left-color: #333333;
+  }
+  .panelstack.vertical-panelstack.white .panel-nav .panel-nav-elem.active-panel > a {
+    background-color: #FFFFFF;
+  }
+  .panelstack.vertical-panelstack.white .panel-nav .panel-nav-elem.active-panel > a:before {
+    border-left-color: #FFFFFF;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .panelstack.vertical-panelstack .panel-nav {
+    width: 30%;
+  }
+  .panelstack.vertical-panelstack .panel-content {
+    width: 70%;
+    padding: 30px 50px;
+  }
+}
 main.products.child {
   overflow: hidden;
 }
@@ -737,61 +905,45 @@ main.products.child #hero.white .angle.right {
 #mobile-overview #mobile-apps-deploy .device-mockup.macbook-pro {
   position: relative;
   z-index: 0;
-  width: 100%;
-  margin-right: 55%;
-  margin-top: 10%;
-  margin-bottom: 10%;
-}
-#mobile-overview #mobile-apps-deploy .device-mockup.iphone {
-  position: absolute;
-  z-index: 1;
-  width: 18%;
-  right: 20%;
-  top: 20px;
+  width: 120%;
+  margin-left: -10%;
+  float: none;
 }
 #mobile-overview #mobile-apps-deploy .device-mockup.ipad {
-  position: absolute;
+  position: relative;
   z-index: 1;
-  width: 40%;
-  right: 20px;
-  bottom: 20px;
+  width: 80%;
+  margin: -20% auto 0 auto;
 }
 @media only screen and (min-width: 768px) {
   #mobile-overview #mobile-apps-deploy .device-mockup.macbook-pro {
     width: 90%;
     margin-right: 45%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
-  #mobile-overview #mobile-apps-deploy .device-mockup.iphone {
-    width: 15%;
-    right: 23%;
+    float: right;
   }
   #mobile-overview #mobile-apps-deploy .device-mockup.ipad {
-    width: 35%;
+    position: absolute;
+    z-index: 1;
+    width: 45%;
+    right: 20px;
+    top: 50%;
+    margin-top: -20%;
   }
 }
 @media only screen and (min-width: 980px) {
   #mobile-overview #mobile-apps-deploy .device-mockup.macbook-pro {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  #mobile-overview #mobile-apps-deploy .device-mockup.iphone {
-    width: 12%;
+    width: 75%;
   }
   #mobile-overview #mobile-apps-deploy .device-mockup.ipad {
-    width: 33%;
+    margin-top: -17%;
   }
 }
 @media only screen and (min-width: 1200px) {
   #mobile-overview #mobile-apps-deploy .device-mockup.macbook-pro {
-    width: 80%;
-  }
-  #mobile-overview #mobile-apps-deploy .device-mockup.iphone {
-    width: 10%;
+    width: 75%;
   }
   #mobile-overview #mobile-apps-deploy .device-mockup.ipad {
-    width: 31%;
+    margin-top: -17%;
   }
 }
 #mobile-overview #emm .device-col {
@@ -1066,53 +1218,69 @@ main.products.child #hero.white .angle.right {
   left: 20px;
   bottom: 20px;
 }
-#embedded-analytics-overview #mobile-sdk .custom-mobile-animation .description-block {
-  display: none;
-  position: relative;
+#embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic > div {
+  display: -webkit-flex;
+  display: flex;
 }
-@media only screen and (min-width: 768px) {
-  #embedded-analytics-overview #mobile-sdk .custom-mobile-animation .description-block {
-    display: block;
-  }
-}
-#embedded-analytics-overview #mobile-sdk .custom-mobile-animation .animated-block {
+#embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic .graphic-block {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
   position: relative;
   padding: 30px 0px;
 }
-#embedded-analytics-overview #mobile-sdk .custom-mobile-animation .animated-block > p {
-  display: block;
+#embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic .graphic-block .graphic-label {
+  width: 100%;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  text-align: center;
 }
-@media only screen and (min-width: 768px) {
-  #embedded-analytics-overview #mobile-sdk .custom-mobile-animation .animated-block {
-    padding: 15px 30px;
-  }
-  #embedded-analytics-overview #mobile-sdk .custom-mobile-animation .animated-block > p {
-    display: none;
+@media only screen and (min-width: 980px) {
+  #embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic .graphic-block {
+    padding: 15px 10px;
   }
 }
-#embedded-analytics-overview #mobile-sdk .custom-mobile-animation .mstr-icon,
-#embedded-analytics-overview #mobile-sdk .custom-mobile-animation .customapp-icon {
+#embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic .mstr-icon,
+#embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic .customapp-icon {
   display: block;
   margin: 0 auto;
-  max-width: 70px;
+  width: 70px;
 }
 @media only screen and (min-width: 768px) {
-  #embedded-analytics-overview #mobile-sdk .custom-mobile-animation .mstr-icon,
-  #embedded-analytics-overview #mobile-sdk .custom-mobile-animation .customapp-icon {
-    max-width: 100%;
+  #embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic .mstr-icon,
+  #embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic .customapp-icon {
+    max-width: 80%;
+    width: 100px;
   }
 }
-#embedded-analytics-overview #mobile-sdk .custom-mobile-animation .icon {
+#embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic .icon {
+  display: block;
   position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-left: 0;
+  -webkit-transform: rotate(0deg) translate(-15px, -50%);
+  transform: rotate(0deg) translate(-15px, -50%);
+}
+#embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic > div:nth-child(2) .icon {
   top: 100%;
   left: 50%;
   margin-left: -6px;
   -webkit-transform: rotate(90deg) translate(-50%, 10px);
   transform: rotate(90deg) translate(-50%, 10px);
 }
-@media only screen and (min-width: 768px) {
-  #embedded-analytics-overview #mobile-sdk .custom-mobile-animation .icon {
-    display: block;
+@media only screen and (min-width: 980px) {
+  #embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic > div:nth-child(2) .icon {
     top: 50%;
     left: 100%;
     margin-left: 0;
@@ -1120,20 +1288,36 @@ main.products.child #hero.white .angle.right {
     transform: rotate(0deg) translate(-15px, -50%);
   }
 }
-#eiot-overview #hero .angle-wrapper .angle.right {
+#embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic .device-mockup {
+  margin: 0 auto;
+  width: calc(100% - 40px);
+}
+#embedded-analytics-overview #embedding-api .screen {
+  background-color: #FFFFFF;
+}
+#embedded-analytics-overview #embedding-api .screenshot {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-animation: scroll-page 7s cubic-bezier(0.21, -0.16, 0.8, 1.22) 0s infinite forwards;
+  -moz-animation: scroll-page 7s cubic-bezier(0.21, -0.16, 0.8, 1.22) 0s infinite forwards;
+  animation: scroll-page 7s cubic-bezier(0.21, -0.16, 0.8, 1.22) 0s infinite forwards;
+}
+#digital-id-mobile-telemetry-overview #hero .angle-wrapper .angle.right {
   background-position: left center;
 }
-#eiot-overview #introduction .device-mockup {
+#digital-id-mobile-telemetry-overview #introduction .device-mockup {
   width: 200%;
 }
-#eiot-overview #physical-logical-access .device-mockup.macbook-pro {
+#digital-id-mobile-telemetry-overview #physical-logical-access .device-mockup.macbook-pro {
   position: relative;
   z-index: 0;
   width: 130%;
   margin-left: 10%;
   margin-bottom: 20px;
 }
-#eiot-overview #physical-logical-access .device-mockup.iphone {
+#digital-id-mobile-telemetry-overview #physical-logical-access .device-mockup.iphone {
   position: absolute;
   z-index: 1;
   width: 25%;
@@ -1141,10 +1325,10 @@ main.products.child #hero.white .angle.right {
   bottom: 20px;
 }
 @media only screen and (min-width: 768px) {
-  #eiot-overview #physical-logical-access .device-mockup.macbook-pro {
+  #digital-id-mobile-telemetry-overview #physical-logical-access .device-mockup.macbook-pro {
     width: 150%;
   }
-  #eiot-overview #physical-logical-access .device-mockup.iphone {
+  #digital-id-mobile-telemetry-overview #physical-logical-access .device-mockup.iphone {
     width: 30%;
   }
 }
@@ -1153,6 +1337,189 @@ main.products.child #hero.white .angle.right {
 }
 #cloud-overview #introduction .device-mockup {
   width: 200%;
+}
+#cloud-overview #cloud-capabilities .device-mockup.ipad {
+  position: relative;
+  z-index: 0;
+  margin-left: 27.33333333%;
+}
+#cloud-overview #cloud-capabilities .device-mockup.iphone {
+  position: absolute;
+  z-index: 1;
+  width: 20%;
+  left: 0;
+  bottom: 0;
+}
+#cloud-overview #aws-cloud-deployment .services-and-tools-diagram .icon-col {
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  #cloud-overview #aws-cloud-deployment .services-and-tools-diagram .icon-col {
+    padding-bottom: 35px;
+    margin-bottom: 20px;
+  }
+}
+#cloud-overview #aws-cloud-deployment .services-and-tools-diagram .icon-col .grid-item {
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+#cloud-overview #aws-cloud-deployment .services-and-tools-diagram .icon-col .background-light-gray,
+#cloud-overview #aws-cloud-deployment .services-and-tools-diagram .icon-col .background-white {
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+  max-width: none;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+}
+#cloud-overview #aws-cloud-deployment .services-and-tools-diagram .icon-col .background-light-gray > p,
+#cloud-overview #aws-cloud-deployment .services-and-tools-diagram .icon-col .background-white > p {
+  width: 100%;
+}
+#cloud-overview #aws-cloud-deployment .services-and-tools-diagram .icon-col .label {
+  display: block;
+  position: relative;
+  padding: 25px 25px 30px 25px;
+  margin: 0;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #999999;
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  #cloud-overview #aws-cloud-deployment .services-and-tools-diagram .icon-col .label {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #cloud-overview #aws-cloud-deployment .services-and-tools-diagram .icon-col .label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    padding: 25px 0 0 0;
+  }
+  #cloud-overview #aws-cloud-deployment .services-and-tools-diagram .icon-col .label.full {
+    width: 100%;
+  }
+  #cloud-overview #aws-cloud-deployment .services-and-tools-diagram .icon-col .label.full .line {
+    width: calc(50% - 40px);
+  }
+  #cloud-overview #aws-cloud-deployment .services-and-tools-diagram .icon-col .label.two-third {
+    width: 66.66%;
+  }
+  #cloud-overview #aws-cloud-deployment .services-and-tools-diagram .icon-col .label.one-third {
+    width: 33.33%;
+  }
+  #cloud-overview #aws-cloud-deployment .services-and-tools-diagram .icon-col .label:last-of-type {
+    left: auto;
+    right: 0;
+  }
+}
+#cloud-overview #aws-cloud-deployment .services-and-tools-diagram .icon-col .label .line {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 1px;
+  width: calc(100% - 40px);
+  background-color: #999999;
+}
+#cloud-overview #aws-cloud-deployment .services-and-tools-diagram .icon-col .label .line:before,
+#cloud-overview #aws-cloud-deployment .services-and-tools-diagram .icon-col .label .line:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  height: 15px;
+  width: 1px;
+  background-color: #999999;
+}
+#cloud-overview #aws-cloud-deployment .services-and-tools-diagram .icon-col .label .line:after {
+  left: auto;
+  right: 0;
+}
+@-moz-keyframes scroll-page {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(-53%);
+    transform: translateY(-53%);
+  }
+  90% {
+    -webkit-transform: translateY(-53%);
+    transform: translateY(-53%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes scroll-page {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(-53%);
+    transform: translateY(-53%);
+  }
+  90% {
+    -webkit-transform: translateY(-53%);
+    transform: translateY(-53%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes scroll-page {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(-53%);
+    transform: translateY(-53%);
+  }
+  90% {
+    -webkit-transform: translateY(-53%);
+    transform: translateY(-53%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
 @media only screen and (min-width: 768px) {
   .passed-view .delay02 {

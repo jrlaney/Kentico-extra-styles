@@ -111,6 +111,105 @@ section {overflow:hidden;}
     }
 }
 
+//new vertical panelstack
+@media @medium {
+    .panelstack.vertical-panelstack {
+        .display(flex);
+        .flex(0, 1, auto);
+        width: 100%;
+        .flex-direction(row);
+        .flex-wrap(wrap);
+        .justify-content(start);
+        .align-items(stretch);
+        background-color:@light-gray;
+
+        .panel-nav, .panel-content {
+            .flex(0, 1, auto);
+            .display(flex);
+            .flex-direction(column);
+            .flex-wrap(wrap);
+            .align-items(flex-start);
+            float:none;
+        }
+        .panel-nav {
+            z-index:1;
+             padding-bottom:0;
+             width:40%;
+             .box-shadow(1px 1px 10px fade(@pure-black, 20%));
+             background-color:@black;
+             .panel-nav-elem {
+                 width:100%;
+                 border:none;
+                 > a {
+                     color:@white;
+                     padding:15px 40px 15px 20px;
+                     opacity:0.5;
+                     &:hover {
+                         color:@white;
+                         opacity:1;
+                         background-color: fade(@pure-black, 10%);
+                     }
+                     &:before {
+                         display:block; position:absolute;
+                         content:'';
+                         top:50%; right:15px;
+                         width:0; height:0;
+                         border-top:7px solid transparent;
+                         border-bottom:7px solid transparent;
+                         border-left:7px solid @white;
+                         margin:0;
+                         .translate(0, -50%);
+                         .transition;
+                     }
+                     &:after {display:none;}
+                 }//end > a
+                 &.active-panel > a {
+                     opacity:1;
+                     background-color:@red;
+                     color:@white;
+                     &:before {
+                         opacity:1;
+                         border-top-width:10px;
+                         border-bottom-width:10px;
+                         border-left-width:10px;
+                         border-left-color:@red;
+                         .translate(25px, -50%);
+                     }
+                 }//end active panel styles
+             }//end panel-nav-elem
+        }
+        .panel-content {
+            z-index:0;
+            width:60%;
+            border:none;
+            opacity:0;
+            .animation(fade-slide-right 0.3s ease-out 0.2s normal forwards);
+            padding:30px;
+        }//end panel content
+    }// end panelstack vertical
+
+    .panelstack.vertical-panelstack {
+        .loop-colors(@i) when (@i > 0) {
+            .loop-colors(@i - 1);
+
+            @color-class: extract(@color-classes, @i);
+            @color: extract(@colors, @i);
+
+            &.@{color-class} {
+                .panel-nav .panel-nav-elem.active-panel>a {background-color:@color}
+                .panel-nav .panel-nav-elem.active-panel>a:before {border-left-color:@color;}
+            }
+        }
+        .loop-colors(length(@color-classes));
+    }
+}//end medium media query
+@media @large {
+    .panelstack.vertical-panelstack {
+        .panel-nav {width:30%;}
+        .panel-content {width:70%; padding:30px 50px;}
+    }
+}//end large media query
+
 
 
 //fancy angled banner for products child pages
@@ -393,34 +492,34 @@ main.products.child {
         .device-mockup {
             &.macbook-pro {
                 position:relative; z-index:0;
-                width:100%;
-                margin-right:55%;
-                margin-top:10%; margin-bottom:10%;
-            }
-            &.iphone {
-                position:absolute; z-index:1;
-                width:18%;
-                right:20%; top:20px;
+                width:120%;
+                margin-left:-10%;
+                float:none;
             }
             &.ipad {
-                position:absolute; z-index:1;
-                width:40%;
-                right:20px; bottom:20px;
+                position:relative; z-index:1;
+                width:80%;
+                margin:-20% auto 0 auto;
             }
             @media @medium {
-                &.macbook-pro {width:90%; margin-right:45%; margin-top:5%; margin-bottom:5%;}
-                &.iphone {width:15%; right:23%;}
-                &.ipad {width:35%; }
+                &.macbook-pro {
+                    width:90%;
+                    margin-right:45%;
+                    float:right;
+                }
+                &.ipad {
+                    position:absolute; z-index:1;
+                    width:45%;
+                    right:20px; top:50%; margin-top:-20%;
+                }
             }
             @media @large {
-                &.macbook-pro {margin-top:0; margin-bottom:0;}
-                &.iphone {width:12%;}
-                &.ipad {width:33%;}
+                &.macbook-pro {width:75%}
+                &.ipad {margin-top:-17%}
             }
             @media @xlarge {
-                &.macbook-pro {width:80%;}
-                &.iphone {width:10%;}
-                &.ipad {width:31%;}
+                &.macbook-pro {width:75%}
+                &.ipad {margin-top:-17%}
             }
         }
     }
@@ -585,46 +684,71 @@ main.products.child {
     }
 
     #mobile-sdk {
-        .custom-mobile-animation {
-            .description-block {
-                display:none;
-                position:relative;
-                @media @medium {display:block;}
-            }
-            .animated-block {
+        .custom-mobile-sdk-graphic {
+            > div {.display(flex);}
+            .graphic-block {
+                .display(flex);
+                .flex-direction(column);
+                .flex-wrap(wrap);
+                .align-items(center);
+                .justify-content(center);
+                width:100%;
+
                 position:relative;
                 padding:30px 0px;
-                & > p {display:block;}
+                .graphic-label {
+                    width:100%;
+                    font-family:@myriad-pro;
+                    font-size:14px; line-height:14px;
+                    font-weight:600;
+                    text-align:center;
+                }
 
-                @media @medium {
-                    padding:15px 30px;
-                    & > p {display:none;}
+                @media @large {
+                    padding:15px 10px;
                 }
             }
             .mstr-icon, .customapp-icon {
                 display:block; margin:0 auto;
-                max-width:70px;
-                @media @medium {max-width:100%;}
+                width:70px;
+                @media @medium {max-width:80%; width:100px;}
             }
             .icon {
+                display:block;
                 position:absolute;
+                top:50%; left:100%;
+                margin-left:0;
+                .transform(rotate(0deg) translate(-15px, -50%));
+            }
+            > div:nth-child(2) .icon {
                 top:100%; left:50%;
                 margin-left:-6px;
                 .transform(rotate(90deg) translate(-50% , 10px));
-                @media @medium {
-                    display:block;
+                @media @large {
                     top:50%; left:100%;
                     margin-left:0;
                     .transform(rotate(0deg) translate(-15px, -50%));
                 }
             }
+            .device-mockup {
+                margin:0 auto;
+                width:~"calc(100% - 40px)";
+            }
         }
     }
-
+    #embedding-api {
+        .screen{background-color:@white;}
+        .screenshot {
+            position:absolute;
+            width:100%;
+            top:0; left:0;
+            .animation(scroll-page 7s @scroll-bounce-bezier 0s infinite forwards);
+        }
+    }
 }
 
-//EIOT PAGE
-#eiot-overview {
+//DIGITAL ID TELEMETRY PAGE
+#digital-id-mobile-telemetry-overview {
     #hero {
         .angle-wrapper .angle.right {background-position:left center;}
     }
@@ -665,6 +789,84 @@ main.products.child {
             width:200%;
         }
     }
+
+    #cloud-capabilities {
+        .device-mockup {
+            &.ipad {
+                position:relative; z-index:0;
+                margin-left:27.33333333%;
+            }
+            &.iphone {
+                position:absolute; z-index:1;
+                width:20%;
+                left:0; bottom:0;
+            }
+        }
+    }
+
+    #aws-cloud-deployment {
+        .services-and-tools-diagram {
+            .icon-col {
+                position:relative;
+                @media @medium {padding-bottom:35px; margin-bottom:20px;}
+
+                .grid-item {.display(inline-flex);}
+                .background-light-gray, .background-white {
+                    .flex(0, 1, auto);
+                    .display(flex);
+                    .flex-direction(row);
+                    .flex-wrap(wrap);
+                    .align-items(flex-start);
+                    width: 100%;
+                    position: relative;
+                    > p {width:100%;}
+                }
+                .label {
+                    @media @small-only {
+                        .display(flex);
+                        .flex(0, 0, 100%);
+                    }
+                    display:block; position:relative;
+                    padding:25px 25px 30px 25px; margin:0;
+                    font-family:@myriad-pro;
+                    font-size:14px; line-height:1em;
+                    font-weight:600;
+                    .uppercase;
+                    color:@gray;
+                    text-align:center;
+
+                    @media @medium {
+                        position:absolute;
+                        bottom:0; left:0;
+                        width:50%;
+                        padding:25px 0 0 0;
+                        &.full {
+                            width:100%;
+                            .line {width:~"calc(50% - 40px)";}
+                        }
+                        &.two-third {width:66.66%}
+                        &.one-third {width:33.33%}
+                        &:last-of-type {left:auto; right:0;}
+                    }
+                    .line {
+                        position:absolute;
+                        top:15px; left:50%;
+                        .translateX(-50%);
+                        height:1px; width:~"calc(100% - 40px)";
+                        background-color:@gray;
+                        &:before, &:after {
+                            position:absolute;
+                            content:'';
+                            bottom:0; left:0;
+                            height:15px; width:1px;
+                            background-color:@gray;
+                        }
+                        &:after {left:auto; right:0;}
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -673,6 +875,14 @@ main.products.child {
 
 
 //KEYFRAMES FOR EVERYTHING
+@scroll-bounce-bezier: cubic-bezier(.21,-0.16,.8,1.22);
+.keyframes(scroll-page;{
+    0%{.translateY(0);}
+    10%{.translateY(0);}
+    25%{.translateY(-53%);}
+    90%{.translateY(-53%);}
+    100%{.translateY(0);}
+});
 
 //ANIMATION LIBRARY
 @media @medium {
