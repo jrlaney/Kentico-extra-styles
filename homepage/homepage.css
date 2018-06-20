@@ -208,12 +208,14 @@
   animation-delay: 1.8s !important;
 }
 #hero.static-version .angle.top {
+  will-change: opacity;
   opacity: 0;
   -webkit-animation: fade-diagonal-down-left 0.3s ease-out 1.6s normal forwards;
   -moz-animation: fade-diagonal-down-left 0.3s ease-out 1.6s normal forwards;
   animation: fade-diagonal-down-left 0.3s ease-out 1.6s normal forwards;
 }
 #hero.static-version .angle.bottom {
+  will-change: opacity;
   opacity: 0;
   -webkit-animation: fade-diagonal-up-left 0.4s ease-out 1.8s normal forwards;
   -moz-animation: fade-diagonal-up-left 0.4s ease-out 1.8s normal forwards;

@@ -125,8 +125,8 @@
 		.device-mockup.ipad {.animation-delay(1.6s~"!important");}
 		.device-mockup.iphone {.animation-delay(1.8s~"!important");}
 
-		.angle.top    {opacity:0; .animation(fade-diagonal-down-left 0.3s ease-out 1.6s normal forwards);}
-		.angle.bottom {opacity:0; .animation(fade-diagonal-up-left 0.4s ease-out 1.8s normal forwards);}
+		.angle.top    {will-change:opacity; opacity:0; .animation(fade-diagonal-down-left 0.3s ease-out 1.6s normal forwards);}
+		.angle.bottom {will-change:opacity; opacity:0; .animation(fade-diagonal-up-left 0.4s ease-out 1.8s normal forwards);}
 
 		position:relative;
 		overflow:hidden;
