@@ -715,25 +715,29 @@ main.products.child #hero.white .angle.right {
     width: 35%;
   }
 }
-#products-overview #distribution .offpage-image {
-  position: relative;
-  z-index: 0;
-  margin-right: -30%;
-}
 @media only screen and (min-width: 768px) {
-  #products-overview #distribution .offpage-image {
-    width: 250%;
-    margin-right: -20%;
+  #products-overview #enterprise-platform .offpage-image {
+    width: 200%;
   }
 }
-#products-overview #enterprise-iot .device-mockup.ipad {
+@media only screen and (min-width: 980px) {
+  #products-overview #enterprise-platform .offpage-image {
+    width: 230%;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #products-overview #enterprise-platform .offpage-image {
+    width: 200%;
+  }
+}
+#products-overview #digital-id-mobile-telemetry .device-mockup.ipad {
   position: relative;
   z-index: 0;
   width: 130%;
   margin-left: 20%;
   margin-bottom: 20px;
 }
-#products-overview #enterprise-iot .device-mockup.iphone {
+#products-overview #digital-id-mobile-telemetry .device-mockup.iphone {
   position: absolute;
   z-index: 1;
   width: 30%;
@@ -741,10 +745,10 @@ main.products.child #hero.white .angle.right {
   bottom: 20px;
 }
 @media only screen and (min-width: 768px) {
-  #products-overview #enterprise-iot .device-mockup.ipad {
+  #products-overview #digital-id-mobile-telemetry .device-mockup.ipad {
     width: 150%;
   }
-  #products-overview #enterprise-iot .device-mockup.iphone {
+  #products-overview #digital-id-mobile-telemetry .device-mockup.iphone {
     width: 35%;
   }
 }
@@ -764,15 +768,13 @@ main.products.child #hero.white .angle.right {
 }
 @media only screen and (min-width: 768px) {
   #analytics-overview #connect-prepare .offpage-image {
-    width: 1200px;
-    margin-top: 25%;
-    margin-left: -15%;
+    width: 1000px;
+    margin-left: -20%;
   }
 }
 @media only screen and (min-width: 980px) {
   #analytics-overview #connect-prepare .offpage-image {
-    margin-top: 0;
-    margin-left: -10%;
+    margin-left: -22%;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -872,11 +874,11 @@ main.products.child #hero.white .angle.right {
     margin-right: 15%;
   }
   #analytics-overview #share-insights .device-mockup.ipad {
-    width: 120%;
+    width: 145%;
     right: -15%;
   }
   #analytics-overview #share-insights .device-mockup.iphone {
-    width: 35%;
+    width: 38%;
     right: -35%;
   }
 }
@@ -987,6 +989,12 @@ main.products.child #hero.white .angle.right {
   z-index: 0;
   margin-left: 10%;
   margin-bottom: 20px;
+  width: 140%;
+}
+@media only screen and (min-width: 980px) {
+  #mobile-overview #transactions .device-mockup.ipad {
+    width: 120%;
+  }
 }
 #mobile-overview #transactions .device-mockup.iphone {
   position: absolute;
@@ -994,6 +1002,12 @@ main.products.child #hero.white .angle.right {
   width: 20%;
   left: 20px;
   bottom: 20px;
+  width: 30%;
+}
+@media only screen and (min-width: 980px) {
+  #mobile-overview #transactions .device-mockup.iphone {
+    width: 25%;
+  }
 }
 @-moz-keyframes app-lock-animation {
   0% {
@@ -1307,8 +1321,27 @@ main.products.child #hero.white .angle.right {
 #digital-id-mobile-telemetry-overview #hero .angle-wrapper .angle.right {
   background-position: left center;
 }
-#digital-id-mobile-telemetry-overview #introduction .device-mockup {
-  width: 200%;
+#digital-id-mobile-telemetry-overview #introduction .device-mockup.ipad {
+  position: relative;
+  z-index: 0;
+  width: 130%;
+  margin-right: 20%;
+  margin-bottom: 20px;
+}
+#digital-id-mobile-telemetry-overview #introduction .device-mockup.iphone {
+  position: absolute;
+  z-index: 1;
+  width: 30%;
+  right: 10%;
+  bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+  #digital-id-mobile-telemetry-overview #introduction .device-mockup.ipad {
+    width: 150%;
+  }
+  #digital-id-mobile-telemetry-overview #introduction .device-mockup.iphone {
+    width: 35%;
+  }
 }
 #digital-id-mobile-telemetry-overview #physical-logical-access .device-mockup.macbook-pro {
   position: relative;

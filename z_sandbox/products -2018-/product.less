@@ -326,17 +326,14 @@ main.products.child {
             }
         }
     }
-    #distribution {
+    #enterprise-platform {
         .offpage-image {
-            position:relative; z-index:0;
-            margin-right:-30%;
-            @media @medium {
-                width:250%;
-                margin-right:-20%;
-            }
+            @media @medium {width:200%;}
+            @media @large {width:230%;}
+            @media @large {width:200%;}
         }
     }
-    #enterprise-iot {
+    #digital-id-mobile-telemetry {
         .device-mockup {
             &.ipad {
                 position:relative; z-index:0;
@@ -380,11 +377,11 @@ main.products.child {
         .offpage-image {
             //margin-left:-30%;
             @media @medium {
-                width:1200px;
-                margin-top:25%; margin-left:-15%;
+                width:1000px;
+                margin-left:-20%;
             }
             @media @large {
-                margin-top:0; margin-left:-10%;
+                margin-left:-22%;
             }
         }
     }
@@ -459,8 +456,8 @@ main.products.child {
             }
             @media @large {
                 &.mac-thunderbolt {width:230%; margin-right:15%;}
-                &.ipad {width:120%; right:-15%;}
-                &.iphone {width:35%; right:-35%;}
+                &.ipad {width:145%; right:-15%;}
+                &.iphone {width:38%; right:-35%;}
             }
         }
     }
@@ -548,11 +545,15 @@ main.products.child {
                 position:relative; z-index:0;
                 margin-left:10%;
                 margin-bottom:20px;
+                width:140%;
+                @media @large {width:120%;}
             }
             &.iphone {
                 position:absolute; z-index:1;
                 width:20%;
                 left:20px; bottom:20px;
+                width:30%;
+                @media @large {width:25%;}
             }
         }
     }
@@ -754,7 +755,21 @@ main.products.child {
     }
     #introduction {
         .device-mockup {
-            width:200%;
+            &.ipad {
+                position:relative; z-index:0;
+                width:130%;
+                margin-right:20%;
+                margin-bottom:20px;
+            }
+            &.iphone {
+                position:absolute; z-index:1;
+                width:30%;
+                right:10%; bottom:20px;
+            }
+            @media @medium {
+                &.ipad {width:150%;}
+                &.iphone {width:35%;}
+            }
         }
     }
     #physical-logical-access {
