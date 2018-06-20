@@ -611,6 +611,27 @@
     right: 50%;
   }
 }
+@media only screen and (min-width: 768px) {
+  .Collaboration #communication-and-collaboration > .flex-row > div:first-child {
+    padding-right: 5%;
+  }
+  .Collaboration #communication-and-collaboration > .flex-row > div:last-child {
+    padding-left: 5%;
+  }
+}
+.Collaboration #notifications .device-mockup.ipad:first-child {
+  position: relative;
+  z-index: 1;
+  width: 80%;
+  margin-bottom: 15%;
+}
+.Collaboration #notifications .device-mockup.ipad:last-child {
+  position: absolute;
+  z-index: 2;
+  width: 80%;
+  right: 15px;
+  bottom: 15px;
+}
 .DataConnectivity #hero {
   padding-bottom: 20px;
 }
