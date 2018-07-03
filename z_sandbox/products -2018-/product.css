@@ -682,15 +682,19 @@ main.products.child #hero.white .angle.right {
   margin: 0 auto;
   width: 60%;
 }
-#products-overview #analytics .offpage-image {
-  position: relative;
-  z-index: 0;
-  margin-left: -30%;
-}
 @media only screen and (min-width: 768px) {
   #products-overview #analytics .offpage-image {
-    width: 270%;
-    margin-left: -90%;
+    width: 200%;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #products-overview #analytics .offpage-image {
+    width: 230%;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #products-overview #analytics .offpage-image {
+    width: 200%;
   }
 }
 #products-overview #mobile .device-mockup.ipad {
@@ -730,6 +734,15 @@ main.products.child #hero.white .angle.right {
     width: 200%;
   }
 }
+#products-overview #embedded-analytics .offpage-image {
+  position: relative;
+  z-index: 0;
+}
+@media only screen and (min-width: 768px) {
+  #products-overview #embedded-analytics .offpage-image {
+    width: 200%;
+  }
+}
 #products-overview #digital-id-mobile-telemetry .device-mockup.ipad {
   position: relative;
   z-index: 0;
@@ -755,12 +768,10 @@ main.products.child #hero.white .angle.right {
 #products-overview #cloud .offpage-image {
   position: relative;
   z-index: 0;
-  margin-right: -30%;
 }
 @media only screen and (min-width: 768px) {
   #products-overview #cloud .offpage-image {
-    width: 250%;
-    margin-right: -20%;
+    width: 200%;
   }
 }
 #analytics-overview #introduction .device-mockup {
@@ -856,30 +867,30 @@ main.products.child #hero.white .angle.right {
 }
 @media only screen and (min-width: 768px) {
   #analytics-overview #share-insights .device-mockup.mac-thunderbolt {
-    width: 215%;
-    margin-right: 10%;
+    width: 70%;
   }
   #analytics-overview #share-insights .device-mockup.ipad {
-    width: 135%;
-    right: -3%;
+    width: 45%;
+    right: 25%;
   }
   #analytics-overview #share-insights .device-mockup.iphone {
-    width: 35%;
-    right: -12%;
+    width: 12%;
+    right: 20%;
   }
 }
 @media only screen and (min-width: 980px) {
   #analytics-overview #share-insights .device-mockup.mac-thunderbolt {
-    width: 230%;
-    margin-right: 15%;
+    width: 245%;
+    margin-right: 10%;
+    margin-bottom: 100px;
   }
   #analytics-overview #share-insights .device-mockup.ipad {
     width: 145%;
-    right: -15%;
+    right: -5%;
   }
   #analytics-overview #share-insights .device-mockup.iphone {
     width: 38%;
-    right: -35%;
+    right: -25%;
   }
 }
 #mobile-overview #introduction .device-mockup.ipad {
@@ -1232,11 +1243,11 @@ main.products.child #hero.white .angle.right {
   left: 20px;
   bottom: 20px;
 }
-#embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic > div {
+#embedded-analytics-overview #customized-apps .custom-mobile-sdk-graphic > div {
   display: -webkit-flex;
   display: flex;
 }
-#embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic .graphic-block {
+#embedded-analytics-overview #customized-apps .custom-mobile-sdk-graphic .graphic-block {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
@@ -1251,7 +1262,7 @@ main.products.child #hero.white .angle.right {
   position: relative;
   padding: 30px 0px;
 }
-#embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic .graphic-block .graphic-label {
+#embedded-analytics-overview #customized-apps .custom-mobile-sdk-graphic .graphic-block .graphic-label {
   width: 100%;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -1259,25 +1270,20 @@ main.products.child #hero.white .angle.right {
   font-weight: 600;
   text-align: center;
 }
-@media only screen and (min-width: 980px) {
-  #embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic .graphic-block {
-    padding: 15px 10px;
-  }
-}
-#embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic .mstr-icon,
-#embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic .customapp-icon {
+#embedded-analytics-overview #customized-apps .custom-mobile-sdk-graphic .mstr-icon,
+#embedded-analytics-overview #customized-apps .custom-mobile-sdk-graphic .customapp-icon {
   display: block;
   margin: 0 auto;
   width: 70px;
 }
 @media only screen and (min-width: 768px) {
-  #embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic .mstr-icon,
-  #embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic .customapp-icon {
+  #embedded-analytics-overview #customized-apps .custom-mobile-sdk-graphic .mstr-icon,
+  #embedded-analytics-overview #customized-apps .custom-mobile-sdk-graphic .customapp-icon {
     max-width: 80%;
     width: 100px;
   }
 }
-#embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic .icon {
+#embedded-analytics-overview #customized-apps .custom-mobile-sdk-graphic .icon {
   display: block;
   position: absolute;
   top: 50%;
@@ -1286,23 +1292,14 @@ main.products.child #hero.white .angle.right {
   -webkit-transform: rotate(0deg) translate(-15px, -50%);
   transform: rotate(0deg) translate(-15px, -50%);
 }
-#embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic > div:nth-child(2) .icon {
+#embedded-analytics-overview #customized-apps .custom-mobile-sdk-graphic > div:nth-child(2) .icon {
   top: 100%;
   left: 50%;
   margin-left: -6px;
   -webkit-transform: rotate(90deg) translate(-50%, 10px);
   transform: rotate(90deg) translate(-50%, 10px);
 }
-@media only screen and (min-width: 980px) {
-  #embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic > div:nth-child(2) .icon {
-    top: 50%;
-    left: 100%;
-    margin-left: 0;
-    -webkit-transform: rotate(0deg) translate(-15px, -50%);
-    transform: rotate(0deg) translate(-15px, -50%);
-  }
-}
-#embedded-analytics-overview #mobile-sdk .custom-mobile-sdk-graphic .device-mockup {
+#embedded-analytics-overview #customized-apps .custom-mobile-sdk-graphic .device-mockup {
   margin: 0 auto;
   width: calc(100% - 40px);
 }
