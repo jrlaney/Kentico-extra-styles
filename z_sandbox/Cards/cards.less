@@ -1,0 +1,111 @@
+@import '../../settings.less';
+
+section {overflow:hidden;}
+
+.cards .card {
+	font-family:@myriad-pro;
+
+	.card-header>*:not(.card-corner) {font-weight:600;}
+	.card-title {font-weight:400;}
+	.card-details {
+		font-size:14px; line-height:14px;
+		font-weight:400;
+		.uppercase;
+
+		> span {
+			display:block;
+			margin-top:5px;
+			&:first-child {font-weight:600; margin-top:0;}
+		}
+	}
+	.card-description {
+		font-size:16px; line-height:21px;
+		color:@dark-gray;
+		font-weight:400;
+	}
+}
+
+
+//featured card options
+.cards .card {
+	&.featured-1 {
+		&:before {
+			content:"Featured";
+			position:absolute; z-index:3;
+			display:inline-block;
+			top:10px; right:10px;
+			padding:5px 10px;
+			background-color:@black;
+			box-shadow:1px 1px 3px fade(@pure-black, 40%);
+
+			font-family:@myriad-pro;
+			font-size:12px; line-height:12px;
+			color:@white;
+			font-weight:600;
+			.uppercase;
+		}
+	}
+	&.featured-2 {
+		overflow:hidden;
+		&:before {
+			content:"Featured";
+			position:relative; z-index:3;
+			display:block;
+			width:100%;
+			padding:5px 10px;
+			background-color:@black;
+			box-shadow:1px 1px 5px fade(@pure-black, 40%);
+
+			font-family:@myriad-pro;
+			font-size:12px; line-height:12px;
+			color:@white;
+			font-weight:600;
+			.uppercase;
+			text-align:center;
+		}
+		.card-header.positioned {top:22px;}
+	}
+	&.featured-3 {
+		overflow:hidden;
+		&:before {
+			content:"Featured";
+			position:absolute; z-index:3;
+			display:block;
+			width:200px;
+			top:20px; right:-70px;
+			padding:5px 10px;
+			background-color:@black;
+			box-shadow:1px 1px 5px fade(@pure-black, 40%);
+			.rotation(45deg);
+
+			font-family:@myriad-pro;
+			font-size:12px; line-height:12px;
+			color:@white;
+			font-weight:600;
+			.uppercase;
+			text-align:center;
+		}
+	}
+	&.featured-4 {
+		overflow:visible;
+		&:before {
+			font-family: @icon-font-name;
+			.pretty-icon;
+			content:"\ea5e";
+			color:@white;
+			font-size:20px;
+
+			position:absolute; z-index:3;
+			display:inline-block;
+			top:-5px; right:10px;
+			padding:10px 7px;
+			background-color:@black;
+			box-shadow:1px 1px 5px fade(@pure-black, 40%);
+		}
+	}
+	&.component-red:before       {background-color:@red;}
+	&.component-orange:before    {background-color:@orange;}
+	&.component-green:before     {background-color:@green;}
+	&.component-blue:before      {background-color:@blue;}
+	&.component-navy-blue:before {background-color:@navy-blue;}
+}
