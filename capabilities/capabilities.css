@@ -611,12 +611,12 @@
     right: 50%;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 980px) {
   .Collaboration #communication-and-collaboration > .flex-row > div:first-child {
-    padding-right: 5%;
+    padding-right: 40px;
   }
   .Collaboration #communication-and-collaboration > .flex-row > div:last-child {
-    padding-left: 5%;
+    padding-left: 40px;
   }
 }
 .Collaboration #notifications .device-mockup.ipad:first-child {
