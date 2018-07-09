@@ -466,6 +466,9 @@ main.products.child {
     }
 }//end analytics page
 
+
+
+
 //MOBILE PAGE
 #mobile-overview {
     #introduction {
@@ -523,6 +526,50 @@ main.products.child {
             }
         }
     }
+
+    #transactions {
+        .device-mockup {
+            &.ipad {
+                position:relative; z-index:0;
+                margin-left:10%;
+                margin-bottom:20px;
+                width:140%;
+                @media @large {width:120%;}
+            }
+            &.iphone {
+                position:absolute; z-index:1;
+                width:20%;
+                left:20px; bottom:20px;
+                width:30%;
+                @media @large {width:25%;}
+            }
+        }
+    }
+
+    #mobile-external-apps-slider {
+        .slick-slide {
+            position:relative;
+            > span {
+                position:absolute;
+                left:0; bottom:20px;
+                width:100%;
+                padding:50px 15px 15px 15px;
+                background: fade(@pure-black, 60%);
+                background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 90%, rgba(0,0,0,0.6) 100%);
+                background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 90%,rgba(0,0,0,0.6) 100%);
+                background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 90%,rgba(0,0,0,0.6) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=0 );
+
+                font-family:@myriad-pro;
+                .uppercase;
+                font-weight:600;
+                font-size:16px; line-height:16px;
+                text-align:center;
+                color:@white;
+            }
+        }
+    }
+
     #emm {
         .device-col {
             overflow:hidden; margin-bottom:30px;
@@ -542,24 +589,6 @@ main.products.child {
             .animation(app-lock-animation 7s 2s ease-out infinite);
         }
     }
-    #transactions {
-        .device-mockup {
-            &.ipad {
-                position:relative; z-index:0;
-                margin-left:10%;
-                margin-bottom:20px;
-                width:140%;
-                @media @large {width:120%;}
-            }
-            &.iphone {
-                position:absolute; z-index:1;
-                width:20%;
-                left:20px; bottom:20px;
-                width:30%;
-                @media @large {width:25%;}
-            }
-        }
-    }
 }
 .keyframes(app-lock-animation;{
     0% {opacity:0; .transform(scale(2) translateY(-10px));}
@@ -568,6 +597,21 @@ main.products.child {
     95% {opacity:0; .transform(translateY(10px));}
     100% {opacity:0; .transform(translateY(10px));}
 });
+
+
+
+
+//PLATFORM PAGE
+#platform-overview {
+    #introduction {
+        .device-mockup {
+            width:215%;
+        }
+    }
+}
+
+
+
 
 
 //EMBEDDED PAGE
@@ -742,6 +786,9 @@ main.products.child {
     }
 }
 
+
+
+
 //DIGITAL ID TELEMETRY PAGE
 #digital-id-mobile-telemetry-overview {
     #hero {
@@ -788,11 +835,14 @@ main.products.child {
 }
 
 
+
+
 //CLOUD PAGE
 #cloud-overview {
     #hero {
         .angle-wrapper .angle.right {background-position:left center;}
     }
+
     #introduction {
         .device-mockup {
             width:200%;
