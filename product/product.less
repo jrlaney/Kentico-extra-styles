@@ -2,6 +2,8 @@
 
 main, section {overflow:hidden;}
 
+.button-group .button {max-width:100%;}
+
 //component styles
 
 // special typography for capabilities pages
@@ -705,25 +707,13 @@ main, section {overflow:hidden;}
                 &.iphone {width:12%; right:20%;}
             }
             @media @large {
-                &.mac-thunderbolt {width:245%; margin-right:10%; margin-bottom:100px;}
-                &.ipad {width:145%; right:0%;}
-                &.iphone {width:38%; right:-25%;}
+                &.mac-thunderbolt {width:210%; margin-right:10%; margin-bottom:60px;}
+                &.ipad {width:120%; right:0%;}
+                &.iphone {width:30%; right:-10%;}
             }
         }
     }
 }//end analytics overview page
-
-.AdvancedAnalytics {
-    #hero img {
-        @media @large {
-            max-width: none;
-            margin-left: -70%;
-        }
-        @media @xlarge {
-            margin-left: -40%;
-        }
-    }
-}//end advanced analytics
 
 .BigData {
     #hero {
@@ -1260,27 +1250,45 @@ main, section {overflow:hidden;}
                     position:absolute;
                     top:100%; left:50%;
                     .translateX(-50%);
-                    width:2px; height:20px;
+                    width:5px; height:20px;
                     background-color:@red;
                 }
 
-                &:last-child:after {background-color:@blue; height:40px;}
+                &:last-child:after {background-color:@blue;}
+
+                @media @medium {
+                    &:after {width:2px;}
+                    &:last-child:after {height:40px;}
+                }
             }
         }//end results row
 
         .sources-row {
             position:relative;
+
+            @media @small-only {
+                .in-memory-cubes, .other-sources {border:1px solid @iron;}
+            }
             //these are the horizontal lines
             &:before, &:after {
                 content:'';
                 position:absolute;
-                bottom:100%; left:50%;
-                height:2px;
+                bottom:~"calc(100% + 20px)";
+                width:~"calc(50% - 10px)"; height:5px;
             }
             //red one
-            &:before {width:66.9%; .translateX(-65.3%); background-color:@red; bottom:~"calc(100% + 20px)";}
+            &:before {left:0; background-color:@red;}
             //blue one
-            &:after {width:66%; .translateX(-33.8%); background-color:@blue;}
+            &:after {left:50%; background-color:@blue;}
+
+            @media @medium {
+                //these are the horizontal lines
+                &:before, &:after {height:2px;}
+                //red one
+                &:before {left:50%; width:66.9%; .translateX(-65.3%);}
+                //blue one
+                &:after {left:50%; width:66%; .translateX(-33.8%); bottom:100%;}
+            }
 
             .grid-item {
                 margin-top:@diagram-line-height;
@@ -1292,10 +1300,10 @@ main, section {overflow:hidden;}
                         position:absolute;
                         bottom:100%; left:50%;
                         .translateX(-50%);
-                        width:2px; height:@diagram-line-height + 55px;
+                        width:5px; height:@diagram-line-height;
                         background-color:@red;
                     }
-                    &.blue:after {background-color:@blue; height:@diagram-line-height + 35px;}
+                    &.blue:after {background-color:@blue;}
 
                     &.both {
                         &:before, &:after {
@@ -1303,11 +1311,10 @@ main, section {overflow:hidden;}
                             position:absolute;
                             bottom:100%; left:50%;
                             .translateX(-50%);
-                            width:2px; height:@diagram-line-height + 35px;
+                            width:5px; height:@diagram-line-height;
                         }
                         //red one
                         &:before {
-                            height:@diagram-line-height + 55px;
                             left:~"calc(50% - 10px)";
                             background-color:@red;
                         }
@@ -1317,8 +1324,19 @@ main, section {overflow:hidden;}
                             background-color:@blue;
                         }
                     }
-                }
-            }// top lines for all the selected items
+
+                    @media @medium {
+                        &:after {width:2px; height:@diagram-line-height + 55px;}
+                        &.blue:after {background-color:@blue; height:@diagram-line-height + 35px;}
+
+                        &.both {
+                            &:before, &:after {width:2px; height:@diagram-line-height + 35px;}
+                            //red one
+                            &:before {height:@diagram-line-height + 55px;}
+                        }
+                    }
+                }// end .selected state
+            }// end grid-item, top lines for all the selected items
             .database {
                 position:relative;
                 min-height:150px;
@@ -1484,6 +1502,7 @@ main, section {overflow:hidden;}
     }
     #customized-apps {
         .custom-mobile-sdk-graphic {
+            margin-top:64px;
             > div {.display(flex);}
             .graphic-block {
                 .display(flex);
@@ -1511,18 +1530,14 @@ main, section {overflow:hidden;}
             .icon {
                 display:block;
                 position:absolute;
-                top:50%; left:100%;
-                margin-left:0;
-                .transform(rotate(0deg) translate(-15px, -50%));
-            }
-            > div:nth-child(2) .icon {
                 top:100%; left:50%;
                 margin-left:-6px;
-                .transform(rotate(90deg) translate(-50% , 10px));
+                .transform(rotate(0deg) translate(-15px, -50%));
             }
             .device-mockup {
-                margin:0 auto;
-                width:~"calc(100% - 40px)";
+                float:right;
+                width:100%;
+                @media @medium {width:115%;}
             }
         }
     }

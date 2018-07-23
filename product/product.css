@@ -2,6 +2,9 @@ main,
 section {
   overflow: hidden;
 }
+.button-group .button {
+  max-width: 100%;
+}
 .Product.PageMenuItem .page-title {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 20px;
@@ -1259,28 +1262,17 @@ section {
 }
 @media only screen and (min-width: 980px) {
   .Analytics #share-insights .device-mockup.mac-thunderbolt {
-    width: 245%;
+    width: 210%;
     margin-right: 10%;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
   }
   .Analytics #share-insights .device-mockup.ipad {
-    width: 145%;
+    width: 120%;
     right: 0%;
   }
   .Analytics #share-insights .device-mockup.iphone {
-    width: 38%;
-    right: -25%;
-  }
-}
-@media only screen and (min-width: 980px) {
-  .AdvancedAnalytics #hero img {
-    max-width: none;
-    margin-left: -70%;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .AdvancedAnalytics #hero img {
-    margin-left: -40%;
+    width: 30%;
+    right: -10%;
   }
 }
 @media only screen and (min-width: 980px) {
@@ -1968,37 +1960,64 @@ section {
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  width: 2px;
+  width: 5px;
   height: 20px;
   background-color: #D9232E;
 }
 .EnterprisePlatform #federated-data-diagram .results-row > div:last-child:after {
   background-color: #4789A3;
-  height: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .EnterprisePlatform #federated-data-diagram .results-row > div:after {
+    width: 2px;
+  }
+  .EnterprisePlatform #federated-data-diagram .results-row > div:last-child:after {
+    height: 40px;
+  }
 }
 .EnterprisePlatform #federated-data-diagram .sources-row {
   position: relative;
+}
+@media only screen and (max-width: 767px) {
+  .EnterprisePlatform #federated-data-diagram .sources-row .in-memory-cubes,
+  .EnterprisePlatform #federated-data-diagram .sources-row .other-sources {
+    border: 1px solid #CCCCCC;
+  }
 }
 .EnterprisePlatform #federated-data-diagram .sources-row:before,
 .EnterprisePlatform #federated-data-diagram .sources-row:after {
   content: '';
   position: absolute;
-  bottom: 100%;
-  left: 50%;
-  height: 2px;
+  bottom: calc(100% + 20px);
+  width: calc(50% - 10px);
+  height: 5px;
 }
 .EnterprisePlatform #federated-data-diagram .sources-row:before {
-  width: 66.9%;
-  -webkit-transform: translateX(-65.3%);
-  transform: translateX(-65.3%);
+  left: 0;
   background-color: #D9232E;
-  bottom: calc(100% + 20px);
 }
 .EnterprisePlatform #federated-data-diagram .sources-row:after {
-  width: 66%;
-  -webkit-transform: translateX(-33.8%);
-  transform: translateX(-33.8%);
+  left: 50%;
   background-color: #4789A3;
+}
+@media only screen and (min-width: 768px) {
+  .EnterprisePlatform #federated-data-diagram .sources-row:before,
+  .EnterprisePlatform #federated-data-diagram .sources-row:after {
+    height: 2px;
+  }
+  .EnterprisePlatform #federated-data-diagram .sources-row:before {
+    left: 50%;
+    width: 66.9%;
+    -webkit-transform: translateX(-65.3%);
+    transform: translateX(-65.3%);
+  }
+  .EnterprisePlatform #federated-data-diagram .sources-row:after {
+    left: 50%;
+    width: 66%;
+    -webkit-transform: translateX(-33.8%);
+    transform: translateX(-33.8%);
+    bottom: 100%;
+  }
 }
 .EnterprisePlatform #federated-data-diagram .sources-row .grid-item {
   margin-top: 20px;
@@ -2013,13 +2032,12 @@ section {
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  width: 2px;
-  height: 75px;
+  width: 5px;
+  height: 20px;
   background-color: #D9232E;
 }
 .EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected.blue:after {
   background-color: #4789A3;
-  height: 55px;
 }
 .EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected.both:before,
 .EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected.both:after {
@@ -2029,17 +2047,34 @@ section {
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  width: 2px;
-  height: 55px;
+  width: 5px;
+  height: 20px;
 }
 .EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected.both:before {
-  height: 75px;
   left: calc(50% - 10px);
   background-color: #D9232E;
 }
 .EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected.both:after {
   left: calc(50% + 10px);
   background-color: #4789A3;
+}
+@media only screen and (min-width: 768px) {
+  .EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected:after {
+    width: 2px;
+    height: 75px;
+  }
+  .EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected.blue:after {
+    background-color: #4789A3;
+    height: 55px;
+  }
+  .EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected.both:before,
+  .EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected.both:after {
+    width: 2px;
+    height: 55px;
+  }
+  .EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected.both:before {
+    height: 75px;
+  }
 }
 .EnterprisePlatform #federated-data-diagram .sources-row .database {
   position: relative;
@@ -2261,6 +2296,9 @@ section {
 .EmbeddedAnalytics #introduction .device-mockup {
   width: 200%;
 }
+.EmbeddedAnalytics #customized-apps .custom-mobile-sdk-graphic {
+  margin-top: 64px;
+}
 .EmbeddedAnalytics #customized-apps .custom-mobile-sdk-graphic > div {
   display: -webkit-flex;
   display: flex;
@@ -2304,22 +2342,20 @@ section {
 .EmbeddedAnalytics #customized-apps .custom-mobile-sdk-graphic .icon {
   display: block;
   position: absolute;
-  top: 50%;
-  left: 100%;
-  margin-left: 0;
-  -webkit-transform: rotate(0deg) translate(-15px, -50%);
-  transform: rotate(0deg) translate(-15px, -50%);
-}
-.EmbeddedAnalytics #customized-apps .custom-mobile-sdk-graphic > div:nth-child(2) .icon {
   top: 100%;
   left: 50%;
   margin-left: -6px;
-  -webkit-transform: rotate(90deg) translate(-50%, 10px);
-  transform: rotate(90deg) translate(-50%, 10px);
+  -webkit-transform: rotate(0deg) translate(-15px, -50%);
+  transform: rotate(0deg) translate(-15px, -50%);
 }
 .EmbeddedAnalytics #customized-apps .custom-mobile-sdk-graphic .device-mockup {
-  margin: 0 auto;
-  width: calc(100% - 40px);
+  float: right;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .EmbeddedAnalytics #customized-apps .custom-mobile-sdk-graphic .device-mockup {
+    width: 115%;
+  }
 }
 .IdentityAndTelemetry #hero .angle-wrapper .angle.right {
   background-position: left center;
