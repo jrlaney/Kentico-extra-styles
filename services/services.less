@@ -1,5 +1,41 @@
 @import '../settings.less';
 
+blockquote {
+    display:inline-block; *zoom:1; *display:inline; position:relative;
+    padding:0; margin:20px 40px;
+    font-family:@myriad-pro;
+    font-weight:400;
+    font-size:22px; line-height:26px;
+    @media @medium {font-size:24px; line-height:33px;}
+
+    > footer {
+        display:block;
+        margin-top:30px;
+        font-weight:600;
+        font-size:16px; line-height:20px;
+        .uppercase;
+        @media @medium {font-size:18px;}
+    }
+
+	&:before, &:after {
+        content:'“';
+	    display:block; position:absolute;
+	    top:0.2em; left:-50px;
+	    height:56px; width:68px;
+
+        font-family:@lucida-grande;
+        font-size:250px;
+        color:fade(@white, 25%);
+	}
+	&:after {
+        content:'”';
+        top:auto;
+        left:auto;
+        bottom:-0.2em;
+        right:-35px;
+    }
+}
+
 
 ul li, ul.triangle-list li {padding:0;}
 

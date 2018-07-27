@@ -23,49 +23,26 @@ section {overflow:hidden;}
 		color:@dark-gray;
 		font-weight:400;
 	}
-}
 
+	//styles for a horizontal card
+	@media @medium {
+		&.horizontal {
+			.flex-direction(row);
+			.align-items(center);
 
-//featured card options
-.cards .card {
-	&.featured-1 {
-		&:before {
-			content:"Featured";
-			position:absolute; z-index:3;
-			display:inline-block;
-			top:10px; right:10px;
-			padding:5px 10px;
-			background-color:@black;
-			box-shadow:1px 1px 3px fade(@pure-black, 40%);
-
-			font-family:@myriad-pro;
-			font-size:12px; line-height:12px;
-			color:@white;
-			font-weight:600;
-			.uppercase;
+			> .card-content {
+				max-width:50%;
+				&:first-child {
+					.align-self(stretch);
+					.display(flex);
+					.background-image {width:100%;}
+				}
+			}
 		}
 	}
-	&.featured-2 {
-		overflow:hidden;
-		&:before {
-			content:"Featured";
-			position:relative; z-index:3;
-			display:block;
-			width:100%;
-			padding:5px 10px;
-			background-color:@black;
-			box-shadow:1px 1px 5px fade(@pure-black, 40%);
 
-			font-family:@myriad-pro;
-			font-size:12px; line-height:12px;
-			color:@white;
-			font-weight:600;
-			.uppercase;
-			text-align:center;
-		}
-		.card-header.positioned {top:22px;}
-	}
-	&.featured-3 {
+	//styles for featured card
+	&.featured {
 		overflow:hidden;
 		&:before {
 			content:"Featured";
@@ -85,27 +62,10 @@ section {overflow:hidden;}
 			.uppercase;
 			text-align:center;
 		}
+		&.component-red:before       {background-color:@red;}
+		&.component-orange:before    {background-color:@orange;}
+		&.component-green:before     {background-color:@green;}
+		&.component-blue:before      {background-color:@blue;}
+		&.component-navy-blue:before {background-color:@navy-blue;}
 	}
-	&.featured-4 {
-		overflow:visible;
-		&:before {
-			font-family: @icon-font-name;
-			.pretty-icon;
-			content:"\ea5e";
-			color:@white;
-			font-size:20px;
-
-			position:absolute; z-index:3;
-			display:inline-block;
-			top:-5px; right:10px;
-			padding:10px 7px;
-			background-color:@black;
-			box-shadow:1px 1px 5px fade(@pure-black, 40%);
-		}
-	}
-	&.component-red:before       {background-color:@red;}
-	&.component-orange:before    {background-color:@orange;}
-	&.component-green:before     {background-color:@green;}
-	&.component-blue:before      {background-color:@blue;}
-	&.component-navy-blue:before {background-color:@navy-blue;}
 }

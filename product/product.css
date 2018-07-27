@@ -1026,6 +1026,61 @@ section {
     background-color: #FFFFFF;
   }
 }
+.number-group {
+  position: relative;
+  z-index: 1;
+  padding: 15px 0 5px 30px;
+}
+.number-group:before {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 0px;
+  left: 0px;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 600;
+  opacity: 0.1;
+}
+@media only screen and (min-width: 768px) {
+  .number-group {
+    padding-top: 30px;
+    padding-left: 50px;
+  }
+  .number-group:before {
+    font-size: 120px;
+    line-height: 120px;
+  }
+}
+.number-group.one:before {
+  content: '1';
+}
+.number-group.two:before {
+  content: '2';
+}
+.number-group.three:before {
+  content: '3';
+}
+.number-group.four:before {
+  content: '4';
+}
+.number-group.five:before {
+  content: '5';
+}
+.number-group.small {
+  padding: 10px 0 5px 20px;
+}
+.number-group.small:before {
+  font-size: 40px;
+  line-height: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .number-group.small:before {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
 #products-overview .device-family {
   position: relative;
   padding-bottom: 5%;
@@ -2494,6 +2549,18 @@ section {
   width: 20%;
   left: 0;
   bottom: 0;
+}
+.Cloud #cloud-service-options.white-popup {
+  max-width: 1000px;
+}
+@media only screen and (min-width: 768px) {
+  .Cloud #cloud-service-options.white-popup {
+    padding: 0;
+  }
+}
+.Cloud #cloud-service-options.white-popup > h3 {
+  margin: 0;
+  padding: 20px;
 }
 .Cloud #services-and-tools-diagram .icon-col {
   position: relative;

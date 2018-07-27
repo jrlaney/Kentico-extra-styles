@@ -31,52 +31,30 @@ section {
   color: #777777;
   font-weight: 400;
 }
-.cards .card.featured-1:before {
-  content: "Featured";
-  position: absolute;
-  z-index: 3;
-  display: inline-block;
-  top: 10px;
-  right: 10px;
-  padding: 5px 10px;
-  background-color: #333333;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  line-height: 12px;
-  color: #FFFFFF;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+@media only screen and (min-width: 768px) {
+  .cards .card.horizontal {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .cards .card.horizontal > .card-content {
+    max-width: 50%;
+  }
+  .cards .card.horizontal > .card-content:first-child {
+    -webkit-align-self: stretch;
+    align-self: stretch;
+    display: -webkit-flex;
+    display: flex;
+  }
+  .cards .card.horizontal > .card-content:first-child .background-image {
+    width: 100%;
+  }
 }
-.cards .card.featured-2 {
+.cards .card.featured {
   overflow: hidden;
 }
-.cards .card.featured-2:before {
-  content: "Featured";
-  position: relative;
-  z-index: 3;
-  display: block;
-  width: 100%;
-  padding: 5px 10px;
-  background-color: #333333;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
-  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  line-height: 12px;
-  color: #FFFFFF;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-align: center;
-}
-.cards .card.featured-2 .card-header.positioned {
-  top: 22px;
-}
-.cards .card.featured-3 {
-  overflow: hidden;
-}
-.cards .card.featured-3:before {
+.cards .card.featured:before {
   content: "Featured";
   position: absolute;
   z-index: 3;
@@ -98,43 +76,18 @@ section {
   letter-spacing: 0.05em;
   text-align: center;
 }
-.cards .card.featured-4 {
-  overflow: visible;
-}
-.cards .card.featured-4:before {
-  font-family: microstrategy;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "\ea5e";
-  color: #FFFFFF;
-  font-size: 20px;
-  position: absolute;
-  z-index: 3;
-  display: inline-block;
-  top: -5px;
-  right: 10px;
-  padding: 10px 7px;
-  background-color: #333333;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
-}
-.cards .card.component-red:before {
+.cards .card.featured.component-red:before {
   background-color: #D9232E;
 }
-.cards .card.component-orange:before {
+.cards .card.featured.component-orange:before {
   background-color: #FF9100;
 }
-.cards .card.component-green:before {
+.cards .card.featured.component-green:before {
   background-color: #68AA00;
 }
-.cards .card.component-blue:before {
+.cards .card.featured.component-blue:before {
   background-color: #4789A3;
 }
-.cards .card.component-navy-blue:before {
+.cards .card.featured.component-navy-blue:before {
   background-color: #11566F;
 }

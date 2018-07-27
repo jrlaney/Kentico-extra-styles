@@ -6,7 +6,7 @@ main, section {overflow:hidden;}
 
 //component styles
 
-// special typography for capabilities pages
+// special typography for feature pages
 .Product.PageMenuItem .page-title {
     font-family:@myriad-pro;
     font-size:20px; line-height:22px;
@@ -29,7 +29,7 @@ main, section {overflow:hidden;}
     }
 }
 
-//feature-hero
+//feature hero white triangle bottom
 #hero.bottom-white-triangle {
     position:relative; overflow:hidden;
     padding-bottom:50px + 20px!important;
@@ -515,6 +515,37 @@ main, section {overflow:hidden;}
         }
     }
     .loop-colors(length(@color-classes));
+}
+
+//DIV WITH A NUMBER NEXT TO IT
+.number-group {
+    position:relative; z-index:1;
+    padding:15px 0 5px 30px;
+    &:before {
+        display:block; position:absolute; z-index:-1;
+        content:'';
+        top:0px; left:0px;
+        font-size:60px; line-height:60px;
+        font-weight:600;
+        opacity:0.1;
+    }
+    @media @medium {
+        padding-top:30px; padding-left:50px;
+        &:before {
+            font-size:120px; line-height:120px;
+        }
+    }
+    &.one:before   {content:'1'}
+    &.two:before   {content:'2'}
+    &.three:before {content:'3'}
+    &.four:before  {content:'4'}
+    &.five:before  {content:'5'}
+
+    &.small {
+        padding:10px 0 5px 20px;
+        &:before {font-size:40px; line-height:40px;}
+        @media @medium {&:before {font-size:60px; line-height:60px;}}
+    }
 }
 
 
@@ -1688,6 +1719,12 @@ main, section {overflow:hidden;}
                 left:0; bottom:0;
             }
         }
+    }
+
+    #cloud-service-options.white-popup {
+        max-width:1000px;
+        @media @medium {padding:0;}
+        > h3 {margin:0; padding:20px;}
     }
 
     #services-and-tools-diagram {
