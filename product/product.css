@@ -1341,14 +1341,10 @@ section {
     margin-left: -70%;
   }
 }
-.BigData #hero .device-mockup {
-  width: 150%;
-  float: right;
-}
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 980px) {
   .BigData #hero .device-mockup {
-    width: 200%;
-    margin-right: -30%;
+    width: 215%;
+    margin-right: -15%;
   }
 }
 .BigData #hero .device-mockup img {
@@ -1992,7 +1988,7 @@ section {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   font-size: 14px;
   line-height: 14px;
-  text-align: center;
+  text-align: left;
 }
 .EnterprisePlatform #federated-data-diagram .feature-group-row .feature-group > .grid-item {
   border: 1px solid #f2f2f2;
