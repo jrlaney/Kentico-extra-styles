@@ -200,6 +200,9 @@ ul.triangle-list li {
     hyphens: auto;
   }
 }
+.Consulting #methodology .background-light-gray {
+  height: 100%;
+}
 @media only screen and (max-width: 767px) {
   .bi-maturity-curve {
     padding: 0 20px;

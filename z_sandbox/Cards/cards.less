@@ -2,10 +2,16 @@
 
 section {overflow:hidden;}
 
+//FOR LOGOS INSIDE OF RATIO BOXES
+.ratio .logo.spacing-40 {max-height:~"calc(100% - 80px)"; max-width:~"calc(100% - 80px)";}
+
 .cards .card {
 	font-family:@myriad-pro;
+	font-size:16px;
+	p {font-size:16px;}
 
-	.card-header>*:not(.card-corner) {font-weight:600;}
+	.card-type {font-weight:600!important;}
+	.card-header .card-type {border:none; white-space:normal; padding:0px;}
 	.card-title {font-weight:400;}
 	.card-details {
 		font-size:14px; line-height:14px;
@@ -19,25 +25,41 @@ section {overflow:hidden;}
 		}
 	}
 	.card-description {
-		font-size:16px; line-height:21px;
+		font-size:16px;
 		color:@dark-gray;
 		font-weight:400;
 	}
 
+	.card-footer .button {
+		display:block;
+		width:100%;
+	}
+
+	&:hover {box-shadow: 3px 3px 5px fade(@pure-black, 20%);}
+
 	//styles for a horizontal card
-	@media @medium {
-		&.horizontal {
-			.flex-direction(row);
-			.align-items(center);
+	&.horizontal {
+		@media @medium {
+			//.flex-direction(row);
+			//.align-items(center);
+			padding-left:50%;
 
 			> .card-content {
-				max-width:50%;
+				//max-width:50%;
 				&:first-child {
-					.align-self(stretch);
-					.display(flex);
-					.background-image {width:100%;}
+					//.align-self(stretch);
+					//.display(flex);
+					position:absolute;
+					top:0; left:0;
+					width:50%; height:100%;
+					.background-image {height:100%;}
 				}
 			}
+			//> .card-footer {text-align:center}
+		}
+		@media @large {
+			padding-left:42%;
+			> .card-content:first-child {width:42%;}
 		}
 	}
 
@@ -62,10 +84,35 @@ section {overflow:hidden;}
 			.uppercase;
 			text-align:center;
 		}
-		&.component-red:before       {background-color:@red;}
-		&.component-orange:before    {background-color:@orange;}
-		&.component-green:before     {background-color:@green;}
-		&.component-blue:before      {background-color:@blue;}
-		&.component-navy-blue:before {background-color:@navy-blue;}
+	}
+	&.component-red {
+		.card-type {border-color:@red; color:@red;}
+		&.hover-container:hover .card-footer .button.light-gray,
+		.card-footer .button.light-gray:hover {background-color:@red; color:@white;}
+		&.featured:before{background-color:@red;}
+	}
+	&.component-orange {
+		.card-type {border-color:@orange; color:@orange;}
+		&.hover-container:hover .card-footer .button.light-gray,
+		.card-footer .button.light-gray:hover {background-color:@orange; color:@white;}
+		&.featured:before{background-color:@orange;}
+	}
+	&.component-green {
+		.card-type {border-color:@green; color:@green;}
+		&.hover-container:hover .card-footer .button.light-gray,
+		.card-footer .button.light-gray:hover {background-color:@green; color:@white;}
+		&.featured:before{background-color:@green;}
+	}
+	&.component-blue {
+		.card-type {border-color:@blue; color:@blue;}
+		&.hover-container:hover .card-footer .button.light-gray,
+		.card-footer .button.light-gray:hover {background-color:@blue; color:@white;}
+		&.featured:before{background-color:@blue;}
+	}
+	&.component-navy-blue {
+		.card-type {border-color:@navy-blue; color:@navy-blue;}
+		&.hover-container:hover .card-footer .button.light-gray,
+		.card-footer .button.light-gray:hover {background-color:@navy-blue; color:@white;}
+		&.featured:before{background-color:@navy-blue;}
 	}
 }

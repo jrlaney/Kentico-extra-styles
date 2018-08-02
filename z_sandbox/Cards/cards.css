@@ -1,11 +1,24 @@
 section {
   overflow: hidden;
 }
+.ratio .logo.spacing-40 {
+  max-height: calc(100% - 80px);
+  max-width: calc(100% - 80px);
+}
 .cards .card {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
 }
-.cards .card .card-header > *:not(.card-corner) {
-  font-weight: 600;
+.cards .card p {
+  font-size: 16px;
+}
+.cards .card .card-type {
+  font-weight: 600!important;
+}
+.cards .card .card-header .card-type {
+  border: none;
+  white-space: normal;
+  padding: 0px;
 }
 .cards .card .card-title {
   font-weight: 400;
@@ -27,28 +40,37 @@ section {
 }
 .cards .card .card-description {
   font-size: 16px;
-  line-height: 21px;
   color: #777777;
   font-weight: 400;
 }
+.cards .card .card-footer .button {
+  display: block;
+  width: 100%;
+}
+.cards .card:hover {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
 @media only screen and (min-width: 768px) {
   .cards .card.horizontal {
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    -webkit-align-items: center;
-    align-items: center;
-  }
-  .cards .card.horizontal > .card-content {
-    max-width: 50%;
+    padding-left: 50%;
   }
   .cards .card.horizontal > .card-content:first-child {
-    -webkit-align-self: stretch;
-    align-self: stretch;
-    display: -webkit-flex;
-    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
   }
   .cards .card.horizontal > .card-content:first-child .background-image {
-    width: 100%;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .cards .card.horizontal {
+    padding-left: 42%;
+  }
+  .cards .card.horizontal > .card-content:first-child {
+    width: 42%;
   }
 }
 .cards .card.featured {
@@ -76,18 +98,63 @@ section {
   letter-spacing: 0.05em;
   text-align: center;
 }
-.cards .card.featured.component-red:before {
+.cards .card.component-red .card-type {
+  border-color: #D9232E;
+  color: #D9232E;
+}
+.cards .card.component-red.hover-container:hover .card-footer .button.light-gray,
+.cards .card.component-red .card-footer .button.light-gray:hover {
+  background-color: #D9232E;
+  color: #FFFFFF;
+}
+.cards .card.component-red.featured:before {
   background-color: #D9232E;
 }
-.cards .card.featured.component-orange:before {
+.cards .card.component-orange .card-type {
+  border-color: #FF9100;
+  color: #FF9100;
+}
+.cards .card.component-orange.hover-container:hover .card-footer .button.light-gray,
+.cards .card.component-orange .card-footer .button.light-gray:hover {
+  background-color: #FF9100;
+  color: #FFFFFF;
+}
+.cards .card.component-orange.featured:before {
   background-color: #FF9100;
 }
-.cards .card.featured.component-green:before {
+.cards .card.component-green .card-type {
+  border-color: #68AA00;
+  color: #68AA00;
+}
+.cards .card.component-green.hover-container:hover .card-footer .button.light-gray,
+.cards .card.component-green .card-footer .button.light-gray:hover {
+  background-color: #68AA00;
+  color: #FFFFFF;
+}
+.cards .card.component-green.featured:before {
   background-color: #68AA00;
 }
-.cards .card.featured.component-blue:before {
+.cards .card.component-blue .card-type {
+  border-color: #4789A3;
+  color: #4789A3;
+}
+.cards .card.component-blue.hover-container:hover .card-footer .button.light-gray,
+.cards .card.component-blue .card-footer .button.light-gray:hover {
+  background-color: #4789A3;
+  color: #FFFFFF;
+}
+.cards .card.component-blue.featured:before {
   background-color: #4789A3;
 }
-.cards .card.featured.component-navy-blue:before {
+.cards .card.component-navy-blue .card-type {
+  border-color: #11566F;
+  color: #11566F;
+}
+.cards .card.component-navy-blue.hover-container:hover .card-footer .button.light-gray,
+.cards .card.component-navy-blue .card-footer .button.light-gray:hover {
+  background-color: #11566F;
+  color: #FFFFFF;
+}
+.cards .card.component-navy-blue.featured:before {
   background-color: #11566F;
 }
