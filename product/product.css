@@ -2676,7 +2676,7 @@ section {
 }
 @media only screen and (min-width: 768px) {
   #why-microstrategy .timeline-wrapper {
-    opacity: 0px;
+    opacity: 0;
     -webkit-animation: fade-in 1s ease-out 2s normal forwards;
     -moz-animation: fade-in 1s ease-out 2s normal forwards;
     animation: fade-in 1s ease-out 2s normal forwards;
@@ -2687,7 +2687,7 @@ section {
   z-index: 2;
   overflow: hidden;
   width: 100%;
-  height: 420px;
+  height: 450px;
   padding: 0;
   cursor: pointer;
 }
@@ -2705,7 +2705,7 @@ section {
   top: 50%;
   left: 0;
   margin-top: -4px;
-  background-color: #999999;
+  background-color: #f2f2f2;
 }
 #why-microstrategy .frame .timeline-list {
   position: relative;
@@ -2719,29 +2719,46 @@ section {
   position: relative;
   z-index: 2;
   float: left;
-  margin: 0 20px 0 -110px;
+  margin: 0 20px 0 -150px;
   padding: 0 0 20px 30px;
-  width: 200px;
+  width: 300px;
   height: 50%;
   text-align: left;
-  color: #f2f2f2;
-  -webkit-transform: translateX(65px);
-  transform: translateX(65px);
+  color: #FFFFFF;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
 }
 @media only screen and (min-width: 768px) {
   #why-microstrategy .frame .timeline-list .timeline-item {
     margin: 0 80px 0 -200px;
     padding: 0 0 20px 30px;
-    width: 320px;
-    -webkit-transform: translateX(140px);
-    transform: translateX(140px);
+    width: 400px;
+    -webkit-transform: translateX(40px);
+    transform: translateX(40px);
   }
 }
-.IE10 #why-microstrategy .frame .timeline-list .timeline-item .text {
+#why-microstrategy .frame .timeline-list .timeline-item:nth-child(even) {
+  margin-top: 225px;
+  padding: 20px 0 0 30px;
+}
+@media only screen and (min-width: 768px) {
+  #why-microstrategy .frame .timeline-list .timeline-item:nth-child(even) {
+    margin-top: 175px;
+  }
+}
+#why-microstrategy .frame .timeline-list .timeline-item:nth-child(even) .flag {
+  bottom: 50%;
+  top: auto;
+}
+#why-microstrategy .frame .timeline-list .timeline-item:nth-child(even) .flag:before,
+#why-microstrategy .frame .timeline-list .timeline-item:nth-child(even) .flag:after {
+  top: auto;
+}
+.InternetExplorer #why-microstrategy .frame .timeline-list .timeline-item .text {
   max-width: 185px;
 }
 @media only screen and (min-width: 768px) {
-  .IE10 #why-microstrategy .frame .timeline-list .timeline-item .text {
+  .InternetExplorer #why-microstrategy .frame .timeline-list .timeline-item .text {
     max-width: 305px;
   }
 }
@@ -2758,7 +2775,16 @@ section {
   background-color: #FFFFFF;
 }
 #why-microstrategy .frame .timeline-list .timeline-item .text {
-  opacity: 0.6;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+  max-width: none;
+  opacity: 0.7;
   -webkit-transition: ease-out opacity 0.2s 0s;
   transition: ease-out opacity 0.2s 0s;
 }
@@ -2767,22 +2793,6 @@ section {
 }
 #why-microstrategy .frame .timeline-list .timeline-item.active .text {
   opacity: 1;
-}
-#why-microstrategy .frame .timeline-list .timeline-item:nth-child(even) {
-  margin-top: 210px;
-  padding: 20px 0 0 30px;
-}
-@media only screen and (min-width: 768px) {
-  #why-microstrategy .frame .timeline-list .timeline-item:nth-child(even) {
-    margin-top: 175px;
-  }
-}
-#why-microstrategy .frame .timeline-list .timeline-item:nth-child(even) .flag {
-  bottom: 50%;
-  top: auto;
-}
-#why-microstrategy .frame .timeline-list .timeline-item:nth-child(even) .flag:before {
-  top: auto;
 }
 #why-microstrategy .frame .timeline-list .timeline-item .flag {
   display: block;
@@ -2797,17 +2807,17 @@ section {
 #why-microstrategy .frame .timeline-list .timeline-item .flag:before {
   display: block;
   position: absolute;
-  z-index: 3;
   content: '';
   top: 100%;
   left: 0;
-  margin-left: -10px;
-  margin-top: -12px;
-  height: 24px;
-  width: 24px;
+  background-color: #FFFFFF;
+  z-index: 3;
+  margin-left: -11px;
+  margin-top: -12.5px;
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
-  border: 2px solid #999999;
-  background-color: #999999;
+  border: 2px solid #f2f2f2;
 }
 #why-microstrategy .frame .timeline-list .timeline-item.red:before,
 #why-microstrategy .frame .timeline-list .timeline-item.red .flag,
@@ -2852,7 +2862,7 @@ section {
   margin-top: -1px;
   height: 2px;
   width: 100%;
-  border-bottom: 3px solid #999999;
+  border-bottom: 3px solid #f2f2f2;
 }
 #why-microstrategy .scrollbar .handle {
   width: 100px;
@@ -2930,7 +2940,7 @@ section {
   background-color: transparent;
   outline: 0;
   opacity: 1;
-  color: #999999;
+  color: #f2f2f2;
   -webkit-transition: ease-out opacity 0.2s 0s;
   transition: ease-out opacity 0.2s 0s;
 }
