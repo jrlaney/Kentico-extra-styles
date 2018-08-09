@@ -87,23 +87,14 @@
   max-width: 90%;
   max-height: 100px;
 }
-.Gecko .Company.List .company.card {
+.Gecko .List.Page .company.card {
   display: block !important;
 }
-.Company.List .company.card .card-content:first-child {
+.List.Page .company.card .card-content:first-child {
   border-bottom: 1px solid #CCCCCC;
 }
-.Company.List .company.card .company-details {
+.List.Page .company.card .company-details {
   display: none;
-}
-.Company.List .company.card .company-logo {
-  max-width: 65%;
-  max-height: 100px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 .CompanyStory.Page h2.company-headline {
   margin-bottom: 20px;
