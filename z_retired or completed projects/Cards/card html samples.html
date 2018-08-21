@@ -1,0 +1,2966 @@
+<section id="hero" class="background-gradient-red">
+	<div class="flex-row text-center">
+		<div class="col-md-10 col-lg-8">
+			<h1 class="text-large text-normal">Cards</h1>
+		</div> <!-- /col -->
+	</div> <!-- /flex-row -->
+</section>
+
+
+
+
+
+<div id="secondary-header">
+	<div class="flex-row collapse-y">
+		<div class="col-sm-12">
+
+			<div class="button-group black small expand collapse">
+				<a href="#anatomy" class="button">Anatomy of a&nbsp;Card</a>
+				<a href="#creation" class="button">Creating a Card&nbsp;Grid</a>
+				<a href="#options" class="button">Card Options</a>
+				<a href="#examples" class="button">Card Examples</a>
+				<a href="#faq" class="button">FAQ</a>
+			</div>
+
+		</div> <!-- /col -->
+	</div> <!-- /flex-row -->
+</div>
+
+
+
+
+
+<section id="overview">
+	<div class="flex-row start">
+		<div class="col-md-10 col-lg-8">
+			<h2 class="text-bold">Overview</h2>
+			<p>Cards are a layout and organizational tool for grid and list-based content on the website. They are generally used in two ways: to display related information that is ancillary to the main content of a page (such as homepage mini-banners, related resources, featured content, or contact lists), or on list-template pages to display a large filterable grid of sub content (such as the resource library, customers, events, or education courses pages.) More rarely, in some instances the filterable card grid can be used to organize a sub-section of content on a static content page (such as the data connector or consulting offers lists on their respective pages).</p>
+			<p>Cards have a standard look-and-feel on the website, created by unique HTML markup and a specialized set of classes. These standards make sure that the look of the cards is maintained across the many pages, contexts, and applications in which they are used. This guide details how to conceptualize, layout, and code the standard card object, and has example cards from across the website to serve as illustration or inspiration for how to layer content into a card appropriately.</p>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+<section id="anatomy" class="background-light-gray cards">
+	<div class="flex-row start">
+		<div class="col-md-10 col-lg-8">
+			<h2 class="text-bold">Anatomy of a Card</h2>
+			<p>A card is an article element usually made of 4 stacked sections: a header with a type and icon, 1-2 content sections for image and text, and a footer with a CTA link button. Whether each of the sections is used depends on the location, content, and purpose of the card.</p>
+		</div>
+	</div>
+
+	<div class="flex-row between margin-top-40">
+		<div class="col-md-6">
+			<h3 class="text-uppercase text-bold text-small">Card header</h3>
+			<p>The card header is an optional section that can go at the top of the card element. It can be used to display an icon or date (month/day format) in the upper left corner. In a text-only card, the type label can also be moved into the card header to save on vertical space. The card header should not be used over a resource-thumbnail image, and the type label should not be in the card header over any kind of image.</p>
+			<p><strong>Contents and options:</strong></p>
+			<ul>
+				<li><strong>Card corner:</strong> This element is mandatory when making a card header, and is used to create a square in the upper left of the header. It should denote the card type with an icon, or show a calendar date. Avoid placing plain text in the card corner.</li>
+				<li><strong>Type Label:</strong> The type label text is optional in the header, but can be displayed to the right of the card corner. If the card header is positioned over image content, the type label should not be used in the header and should instead appear with the text content above the card title.</li>
+			</ul>
+		</div>
+		<div class="col-md-6 col-lg-5 cards">
+			<p><strong>The card header element</strong></p>
+			<article class="card hover-container component-red sample-card">
+				<header class="card-header highlighted">
+					<div class="card-corner">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+					<div class="card-type text-block outline">Type label</div>
+				</header>
+				<section class="card-content">
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+	</div>
+
+	<div class="flex-row between margin-top-40">
+		<div class="col-md-6">
+			<h3 class="text-uppercase text-bold text-small">Card Content - Image</h3>
+			<p>The card content section(s) within each card are used to display text and image content. Image content is optional, and is usually displayed at a 16:9 ratio block in the first content section. The image is generally either a logo, a plain photographic image with a light overlay/hover effect, or a standard resource thumbnail element with icon and CTA. If the card has a CTA link in the footer, the image should also be linked to the same destination. If the cards are in a list or grid, they must all use the same image treatment for image content in this section, for instance, resource thumbnails and simple images should not be mixed in the same group of cards, you must choose one or the other depending on what is most appropriate for the group.</p>
+			<p><strong>Contents and options:</strong></p>
+			<ul>
+				<li><strong>Simple image:</strong> A simple photographic image is generally used when the card is being linked to a non-resource page or website section (for instance, linking to a 'call for speakers' page or to 'explore the intelligent enterprise' microsite), or when resources and other content cards are mixed in the same list.</li>
+				<li><strong>Resource Thumbnail:</strong> A resource thumbnail (image + icon + CTA) element is used when the card is linked to a specific resource library page, document, or video.</li>
+				<li><strong>Logo:</strong> When referencing a company, the company's logo can be used in the image section either in conjunction with a background image (in the case of linking to a customer case study page) or by itself on a white background.</li>
+			</ul>
+		</div>
+		<div class="col-md-5 cards">
+			<p><strong>The card content element for an image</strong></p>
+			<article class="card hover-container component-red sample-card">
+				<section class="card-content no-padding highlighted">
+					<a href="" class="resource-thumbnail video background-image" style="background-image:url('/getmedia/017b7705-0fae-4e53-b3be-d4dbd9af2804/3-monitors-on-desk');" role="img">
+						<span class="cta">Thumbnail CTA</span>
+						<div class="ratio sixteen-nine"></div>
+					</a>
+				</section>
+				<section class="card-content">
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam nisi, rhoncus sed cursus in, iaculis non nibh. Ut porta lacinia dui bibendum lacinia.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+	</div>
+
+
+	<div class="flex-row between">
+		<div class="col-md-6">
+			<h3 class="text-uppercase text-bold text-small">Card Content - Text</h3>
+			<p>The card content section(s) within each card are used to display text and image content. The text content is located below the image (if it exists) and has several display and sub-content options depending on the purpose of the card. Most cards will include the type label, title, and description, and the content can be expanded with extra details, tags, and additional CTA links.</p>
+			<p><strong>Contents and options:</strong></p>
+			<ul>
+				<li><strong>Card type:</strong> The type label element should appear above the card title when it is present, except in text-only cards where is can me moved into the card header.</li>
+				<li><strong>Card title:</strong> Generally, the minimum text content for a card is the card title, which is used to denote what resource title, page name, or section the card is associated with.</li>
+				<li><strong>Line:</strong> The line element should appear below the card title to separate it from the rest of the text content. The line should be removed if there is no additional content after the title.</li>
+				<li><strong>Extra Details:</strong> The extra details for a card might include: additional filter dropdown options beyond the main card type, duration, related company, byline, author, or other ancillary information about the card that is not a keyword tag. There is no hard limit for how many extra details can be included, but between 1-3 is ideal.</li>
+				<li><strong>Card description:</strong> A paragraph or two of text describing the content.</li>
+				<li><strong>Additional CTA links:</strong> Any extra CTA links beyond the main link in the footer should appear as text links below the description. Note that the links should be within a separate paragraph element and have a <code>&amp;raquo;</code> HTML character at the end, as is the standard for stand-alone text links on the website.</li>
+				<li><strong>Tags:</strong> The bottom of the text content section can include any number of tags. These usually correlate to keyword tags that have been entered for the content from a database, but can also be used to display extra information not appropriate for the extra details lines.</li>
+			</ul>
+		</div>
+		<div class="col-md-5 cards">
+			<p><strong>The card content element for text</strong></p>
+			<article class="card hover-container component-red sample-card">
+				<section class="card-content no-padding">
+					<a href="" class="resource-thumbnail video background-image" style="background-image:url('/getmedia/017b7705-0fae-4e53-b3be-d4dbd9af2804/3-monitors-on-desk');" role="img">
+						<span class="cta">Thumbnail CTA</span>
+						<div class="ratio sixteen-nine"></div>
+					</a>
+				</section>
+				<section class="card-content highlighted">
+					<div class="card-type text-block outline">Type label</div>
+					<h3 class="card-title">Card Title</h3>
+					<div class="line tiny"></div>
+					<p class="card-details">
+						<span>Extra details line 1</span>
+						<span>Extra details line 2</span>
+						<span>Extra details line 3</span>
+					</p>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam nisi, rhoncus sed cursus in, iaculis non nibh. Ut porta lacinia dui bibendum lacinia.</p>
+					<p>
+						<a href="">Extra CTA link&nbsp;&raquo;</a><br>
+						<a href="">Extra CTA link&nbsp;&raquo;</a>
+					</p>
+					<div class="tags text-block-group small">
+						<div class="text-block" role="button">Tag 1</div>
+						<div class="text-block" role="button">Tag 2</div>
+						<div class="text-block" role="button">Tag 3</div>
+						<div class="text-block" role="button">Tag 4</div>
+						<div class="text-block" role="button">Tag 5</div>
+						<div class="text-block" role="button">etc...</div>
+					</div>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+	</div>
+
+	<div class="flex-row between margin-top-40">
+		<div class="col-md-6">
+			<h3 class="text-uppercase text-bold text-small">Card Footer</h3>
+			<p>The card footer is the final section, and should contain the main CTA link for the card. The style and color of the button should always be an 'arrow' style button stretched across the entire width of the card in light gray, which changes to the card color when it is hovered or focused on. If the card has more than one CTA to link to (a landing page and a brochure link, for example), the additional CTA link(s) should be added under the card description in the text content section of the card.</p>
+			<p><strong>Contents and options:</strong></p>
+			<ul>
+				<li><strong>CTA button:</strong> This element should use the standard classes for a small, light-gray arrow button. The expanded size and hover color are controlled automatically by the card CSS. There should only ever be one main CTA button per card in the footer.</li>
+			</ul>
+		</div>
+		<div class="col-md-6 col-lg-5 cards">
+			<p><strong>The card footer element</strong></p>
+			<article class="card hover-container component-red sample-card">
+				<header class="card-header">
+					<div class="card-corner">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+					<div class="card-type text-block outline">Type label</div>
+				</header>
+				<section class="card-content">
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding highlighted">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+	</div>
+
+</section>
+
+
+
+
+
+
+
+<section id="creation" class="background-light-gray">
+	<div class="flex-row start">
+		<div class="col-md-10 col-lg-9">
+			<h2 class="text-bold">Creating a Card Grid</h2>
+			<p>Cards are most commonly displayed on the website in rows of 3 within a grid or carousel. This section will break down how to write the code for common types of cards and card containers.</p>
+		</div>
+	</div>
+
+	<div class="flex-row between margin-top-40">
+		<div class="col-md-10 col-lg-9">
+			<h3 class="text-uppercase text-bold text-small">Card Container</h3>
+			<p>To start building a card grid, the parent element must be created first. The container element will wrap around all of the cards and determine how they are laid out on the page. Any parent container for cards will need the <code>cards</code> class to apply proper styles to the cards within. For ease of visualizing the different part of the code, the actual card HTML is left out of these examples and will be shown at later sections.</p>
+		</div>
+	</div>
+	<div class="flex-row start">
+		<div class="col-md-10 col-lg-9">
+			<p><strong>Standard 3-up grid:</strong></p>
+			<p>This wrapper will display cards 3-per-row at the large browser width, 2-per-row at the medium width, and 1-per-row at the small (mobile) width. The <code>start</code> class makes the cards appear left-aligned if the last row has less than 3 cards. After the flex-grid wrapper is created, each card will need to be added and placed within inside of a <code>grid-item</code> class div to ensure proper spacing.</p>
+	        <pre>
+	            <div class="code-type">HTML - 3-up grid container</div>
+	            <code class="html">
+					&lt;div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 start cards"&gt;<br>
+						&nbsp; &lt;div class="grid-item"&gt;<br>
+							&nbsp; &nbsp; [single card HTML here...]<br>
+						&nbsp; &lt;/div&gt;<br>
+						&nbsp; &lt;div class="grid-item"&gt;<br>
+							&nbsp; &nbsp; [single card HTML here...]<br>
+						&nbsp; &lt;/div&gt;<br>
+						&nbsp; &lt;div class="grid-item"&gt;<br>
+							&nbsp; &nbsp; [single card HTML here...]<br>
+						&nbsp; &lt;/div&gt;<br>
+					&lt;/div&gt;<br>
+	            </code>
+	        </pre>
+		</div>
+	</div>
+	<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+		<div class="grid-item">
+			<article class="card hover-container component-red">
+				<header class="card-header">
+					<div class="card-corner">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+					<div class="card-type text-block outline">Type label</div>
+				</header>
+				<section class="card-content">
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+		<div class="grid-item">
+			<article class="card hover-container component-orange">
+				<header class="card-header">
+					<div class="card-corner">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+					<div class="card-type text-block outline">Type label</div>
+				</header>
+				<section class="card-content">
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+		<div class="grid-item">
+			<article class="card hover-container component-blue">
+				<header class="card-header">
+					<div class="card-corner">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+					<div class="card-type text-block outline">Type label</div>
+				</header>
+				<section class="card-content">
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+	</div>
+	<div class="flex-row start">
+		<div class="col-md-10 col-lg-9">
+			<p><strong>Card carousel slider</strong></p>
+			<p>This wrapper will display cards 3-per-row at the large browser width, 2-per-row at the medium width, and 1-per-row at the small (mobile) width. The <code>card-slider</code> class makes it so that when there are more than 3 cards in a row, the rest are converted into a carousel slider. When a card slider is needed, the slick <code>script</code> should be included at the bottom of the page so the javascript will work (only one instance of the script HTML is needed, even if there are multiple sliders on the page).</p>
+	        <pre>
+	            <div class="code-type">HTML - Carousel card slider</div>
+	            <code class="html">
+					&lt;div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards card-slider"&gt;<br>
+						&nbsp; &lt;div class="grid-item"&gt;<br>
+							&nbsp; &nbsp; [single card HTML here...]<br>
+						&nbsp; &lt;/div&gt;<br>
+						&nbsp; &lt;div class="grid-item"&gt;<br>
+							&nbsp; &nbsp; [single card HTML here...]<br>
+						&nbsp; &lt;/div&gt;<br>
+						&nbsp; &lt;div class="grid-item"&gt;<br>
+							&nbsp; &nbsp; [single card HTML here...]<br>
+						&nbsp; &lt;/div&gt;<br>
+					&lt;/div&gt;<br><br>
+					[remainder of page HTML so script can go at the bottom of the page...]<br><br>
+					&lt;script type="text/javascript" src="/cmstemplates/microstrategy/bower_components/slick-carousel/slick/slick.min.js"&gt;&lt;/script&gt;
+	            </code>
+	        </pre>
+		</div>
+	</div>
+	<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards card-slider">
+		<div class="grid-item">
+			<article class="card hover-container component-red">
+				<header class="card-header">
+					<div class="card-corner">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+					<div class="card-type text-block outline">Type label</div>
+				</header>
+				<section class="card-content">
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+		<div class="grid-item">
+			<article class="card hover-container component-orange">
+				<header class="card-header">
+					<div class="card-corner">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+					<div class="card-type text-block outline">Type label</div>
+				</header>
+				<section class="card-content">
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+		<div class="grid-item">
+			<article class="card hover-container component-blue">
+				<header class="card-header">
+					<div class="card-corner">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+					<div class="card-type text-block outline">Type label</div>
+				</header>
+				<section class="card-content">
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+		<div class="grid-item">
+			<article class="card hover-container component-green">
+				<header class="card-header">
+					<div class="card-corner">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+					<div class="card-type text-block outline">Type label</div>
+				</header>
+				<section class="card-content">
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+	</div>
+	<div class="flex-row start">
+		<div class="col-md-10 col-lg-9">
+			<p><strong>Flex-row custom column size</strong></p>
+			<p>In some situations, a card may need a custom sized container or to be contained in a single column in a larger layout. In these cases, the parent element to the individual card(s) needs the <code>cards</code> class added to allow for styling of the <code>card</code> article(s) within.</p>
+	        <pre>
+	            <div class="code-type">HTML - Card in a flex-row</div>
+	            <code class="html">
+					&lt;div class="flex-row"&gt;<br>
+						&nbsp; &lt;div class="col-md-6"&gt;<br>
+						    &nbsp; &nbsp; [Other row content...]<br>
+						&nbsp; &lt;/div&gt;<br>
+						&nbsp; &lt;div class="col-md-6 <strong>cards</strong>"&gt;<br>
+							&nbsp; &nbsp; &lt;article class="card hover-container component-red"&gt;<br>
+						    	&nbsp; &nbsp; &nbsp; [Card contents...]<br>
+						    &nbsp; &nbsp; &lt;/article&gt;<br>
+						&nbsp; &lt;/div&gt;<br>
+					&lt;/div&gt;<br>
+	            </code>
+	        </pre>
+		</div>
+	</div>
+	<div class="flex-row between middle">
+		<div class="col-md-6">
+			<h2 class="text-normal">Sample Page Content</h2>
+			<p class="h3 text-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vulputate, felis at tincidunt pulvinar, quam dui dictum arcu, blandit euismod elit nibh ac sapien. Aenean nec tincidunt metus. Nulla commodo pretium dui semper rhoncus. Donec ut convallis dolor. In ut dapibus metus, id molestie orci. Vivamus lobortis aliquet ipsum, ac tincidunt enim placerat et.</p>
+		</div>
+		<div class="col-md-6 col-lg-5 cards">
+			<article class="card hover-container component-red">
+				<header class="card-header">
+					<div class="card-corner">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+					<div class="card-type text-block outline">Type label</div>
+				</header>
+				<section class="card-content">
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+	</div>
+
+
+
+	<div class="flex-row between margin-top-40">
+		<div class="col-md-10 col-lg-9">
+			<h3 class="text-uppercase text-bold text-small">Cards</h3>
+			<p>Once the parent container has been created, it can be filled with any number of cards, usually contained within the <code>grid-item</code> element, or within the column container in custom layouts. Each card then has 3-4 sections of content within it (described in the 'anatomy of a card' section of this guide). The card creation guide will go through some common options for each section of content and give code examples for each section.</p>
+		</div>
+	</div>
+
+	<div class="flex-row start">
+		<div class="col-md-10 col-lg-9">
+			<p><strong>Card Article</strong></p>
+			<p>Each card is a <code>card</code> class &lt;article&gt; element, and should also have the <code>hover-container</code> class to allow for hover effects on images and a <code>component-color</code> class to determine color theme.</p>
+	        <pre>
+	            <div class="code-type">HTML - Card article</div>
+	            <code class="html">
+					&lt;article class="<strong>card</strong> hover-container component-red"&gt;<br>
+						&nbsp; [Card sections stacked inside...]<br>
+					&lt;/article&gt;<br>
+	            </code>
+	        </pre>
+		</div>
+	</div>
+
+	<div class="flex-row start">
+		<div class="col-md-10 col-lg-9">
+			<p><strong>Card Header</strong></p>
+			<p>The card header is a <code>card-header</code> class &lt;header&gt; element inside of the card article, and should only be added if a header is appropriate (i.e. it is not a resource thumbnail card). This element should always include a <code>card-corner</code> class div with an icon or date and may optionally have the <code>card-type</code> class &lt;div&gt; as well.</p>
+
+			<p><strong>Icon header with type label:</strong> The icon used in the card corner is determined in the <code>icon</code> class <code>i</code> element (refer to the <a href="/us/documentation/icons">icon documentation</a> for help finding the icon name class).</p>
+	        <pre>
+	            <div class="code-type">HTML - Icon header with type label</div>
+	            <code class="html">
+	                &lt;header class="card-header"&gt;<br>
+	                    &nbsp; &lt;div class="card-corner"&gt;<br>
+	                        &nbsp; &nbsp; &lt;i class="icon icon-star medium"&gt;&lt;/i&gt;<br>
+	                    &nbsp; &lt;/div&gt;<br>
+	                    &nbsp; &lt;div class="card-type text-block outline"&gt;Type Label&lt;/div&gt;<br>
+	               &lt;/header&gt;<br>
+	            </code>
+	        </pre>
+
+			<p><strong>Date header with type label:</strong> Add the <code>date</code> class to the <code>card-corner</code> &lt;div&gt; and use the <code>month</code> and <code>day</code> &lt;span&gt;s for the text.</p>
+	        <pre>
+	            <div class="code-type">HTML - Date header with type label</div>
+	            <code class="html">
+	                &lt;header class="card-header"&gt;<br>
+	                    &nbsp; &lt;div class="card-corner date"&gt;<br>
+	                        &nbsp; &nbsp; &lt;span class="month"&gt;Jan&lt;/span&gt;<br>
+	                        &nbsp; &nbsp; &lt;span class="day"&gt;01&lt;/span&gt;<br>
+	                    &nbsp; &lt;/div&gt;<br>
+	                    &nbsp; &lt;div class="card-type text-block outline"&gt;Type Label&lt;/div&gt;<br>
+	               &lt;/header&gt;<br>
+	            </code>
+	        </pre>
+
+			<p><strong>Icon header over an image:</strong> Add the <code>positioned</code> class to the header to layer it over a subsequent simple image content section.</p>
+	        <pre>
+	            <div class="code-type">HTML - Icon Header over image content</div>
+	            <code class="html">
+					&lt;header class="card-header positioned"&gt;<br>
+						&nbsp; &lt;div class="card-corner"&gt;<br>
+							&nbsp; &nbsp; &lt;i class="icon icon-star medium"&gt;&lt;/i&gt;<br>
+						&nbsp; &lt;/div&gt;<br>
+					&lt;/header&gt;<br>
+	            </code>
+	        </pre>
+		</div>
+	</div>
+	<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+		<div class="grid-item">
+			<article class="card hover-container component-red">
+				<header class="card-header">
+					<div class="card-corner date">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+					<div class="card-type text-block outline">Type label</div>
+				</header>
+				<section class="card-content">
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+		<div class="grid-item">
+			<article class="card hover-container component-red">
+				<header class="card-header">
+					<div class="card-corner date">
+						<span class="month">Jan</span>
+						<span class="day">01</span>
+					</div>
+					<div class="card-type text-block outline">Type label</div>
+				</header>
+				<section class="card-content">
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+		<div class="grid-item">
+			<article class="card hover-container component-red">
+				<header class="card-header positioned">
+					<div class="card-corner">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+				</header>
+				<section class="card-content no-padding">
+					<a href="" class="background-image ratio sixteen-nine overlay-light hover-no-overlay" style="background-image:url('/getmedia/017b7705-0fae-4e53-b3be-d4dbd9af2804/3-monitors-on-desk');" role="img"></a>
+				</section>
+				<section class="card-content">
+					<div class="card-type text-block outline">Type label</div>
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+	</div>
+
+	<div class="flex-row start">
+		<div class="col-md-10 col-lg-9">
+			<p><strong>Card Content</strong></p>
+			<p>Text and image content is added with 1-2 <code>card-content</code> class &lt;section&gt; elements in the body of the card. Image content is usually either a resource thumbnail, simple image, or logo; text content can be any combination of card type, card title, line, extra details, description, extra CTA links, and tags. The different image types are listed here along with all the possible text content additions.</p>
+
+			<p><strong>Simple image:</strong> The image is added to a <code>ratio</code> class element (either an &lt;a&gt; link or a &lt;div&gt;) using a series of classes and an inline <code>background-image</code> CSS style. These images should always have a light overlay hover effect to help set them apart from text content.</p>
+			<pre>
+			    <div class="code-type">HTML - Image content - Simple image</div>
+			    <code class="html">
+			        &lt;section class="card-content no-padding"&gt;<br>
+			            &nbsp; &lt;a href="linkURL" class="background-image overlay-light hover-no-overlay ratio sixteen-nine" style="background-image:url('imageURL');" role="img"&gt;&lt;/a&gt;<br>
+			        &lt;/section&gt;<br>
+			    </code>
+			</pre>
+
+			<p><strong>Resource thumbnail:</strong> A standard resource thumbnail can be used for image content and should always link to the resource it is describing. This example uses the <code>video</code> class, which determines the icon generated. Other options for resource thumbnail element are: presentation, document, image, report, ebook, brochure, analyst-review, webcast, success-story, tech-guide, white-paper, dashboard, blog, or webpage.</p>
+			<pre>
+			    <div class="code-type">HTML - Image content - Resource thumbnail</div>
+			    <code class="html">
+			        &lt;section class="card-content no-padding"&gt;<br>
+			            &nbsp; &lt;a href="linkURL" class="resource-thumbnail video background-image" style="background-image:url('imageURL');" role="img"&gt;<br>
+			                &nbsp; &nbsp; &lt;span class="cta"&gt;CTA text&lt;/span&gt;<br>
+			                &nbsp; &nbsp; &lt;div class="ratio sixteen-nine"&gt;&lt;/div&gt;<br>
+			            &nbsp; &lt;/a&gt;<br>
+			        &lt;/section&gt;
+			    </code>
+			</pre>
+
+			<p><strong>Logo:</strong> A logo can be added using the standard <code>ratio</code> class element and <code>logo</code> class &lt;img&gt; inside. The <code>spacing-40</code> class is used to give a 40-pixel spacing buffer around the edges of the logo container. A thin line is automatically added under the logo to help separate it from the text content.</p>
+			<pre>
+			    <div class="code-type">HTML - Image content - Logo</div>
+			    <code class="html">
+					&lt;a href="linkURL" class="ratio sixteen-nine"&gt;<br>
+						&nbsp; &lt;img class="logo spacing-40" src="logoURL"&gt;<br>
+					&lt;/a&gt;
+			    </code>
+			</pre>
+
+			<p><strong>Text content:</strong> This code sample includes all the possible text content additions in the order of how they should appear on the card. Note that the <code>line</code> and <code>text-block</code> elements do not need a color assignment, as this is determined by the component-color in the parent card article. For the <code>card-details</code> element, each line of details should be enclosed in a <code>span</code> element. Extra CTA text links should be enclosed in a &lt;p&gt; element to ensure proper spacing; if there are multiple extra CTA links, they should be separated with a &lt;br&gt; element within the same &lt;p&gt; element.</p>
+			<pre>
+			    <div class="code-type">HTML - Text content - All text sub-content options</div>
+			    <code class="html">
+			        &lt;section class="card-content"&gt;<br>
+			            &nbsp; &lt;div class="card-type text-block outline"&gt;Type label&lt;/div&gt;<br>
+			            &nbsp; &lt;h3 class="card-title"&gt;Card Title Text&lt;/h3&gt;<br>
+			            &nbsp; &lt;div class="line tiny"&gt;&lt;/div&gt;<br>
+			            &nbsp; &lt;p class="card-details"&gt;<br>
+			                &nbsp; &nbsp; &lt;span&gt;Extra details text line 1&lt;/span&gt;<br>
+			                &nbsp; &nbsp; &lt;span&gt;Extra details text line 2&lt;/span&gt;<br>
+			            &nbsp; &lt;/p&gt;<br>
+			            &nbsp; &lt;p class="card-description"&gt;Card description text.&lt;/p&gt;<br>
+			            &nbsp; &lt;p&gt;<br>
+							&nbsp; &nbsp; &lt;a href="linkURL"&gt;Extra CTA link text »&lt;/a&gt;&lt;br&gt;<br>
+							&nbsp; &nbsp; &lt;a href="linkURL"&gt;Extra CTA link text »&lt;/a&gt;<br>
+						&nbsp; &lt;/p&gt;<br>
+			            &nbsp; &lt;div class="tags text-block-group small"&gt;<br>
+			                &nbsp; &nbsp; &lt;div class="text-block" role="button"&gt;Card Tags 1&lt;/div&gt;<br>
+			                &nbsp; &nbsp; &lt;div class="text-block" role="button"&gt;Card Tags 2&lt;/div&gt;<br>
+			            &nbsp; &lt;/div&gt;<br>
+			        &lt;/section&gt;<br>
+			    </code>
+			</pre>
+		</div>
+	</div>
+	<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+		<div class="grid-item">
+			<article class="card hover-container component-red">
+				<section class="card-content no-padding">
+					<a href="" class="resource-thumbnail video background-image" style="background-image:url('/getmedia/017b7705-0fae-4e53-b3be-d4dbd9af2804/3-monitors-on-desk');" role="img">
+						<span class="cta">Watch the video</span>
+						<div class="ratio sixteen-nine"></div>
+					</a>
+				</section>
+				<section class="card-content">
+					<div class="card-type text-block outline">Type label</div>
+					<h3 class="card-title">Card Title</h3>
+					<div class="line tiny"></div>
+					<p class="card-details">
+						<span>Extra details line 1</span>
+						<span>Extra details line 2</span>
+						<span>Extra details line 3</span>
+					</p>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam nisi, rhoncus sed cursus in, iaculis non nibh. Ut porta lacinia dui bibendum lacinia.</p>
+					<p>
+						<a href="">Extra CTA link&nbsp;»</a><br>
+						<a href="">Extra CTA link&nbsp;»</a>
+					</p>
+					<div class="tags text-block-group small">
+						<div class="text-block" role="button">Tag 1</div>
+						<div class="text-block" role="button">Tag 2</div>
+						<div class="text-block" role="button">Tag 3</div>
+						<div class="text-block" role="button">Tag 4</div>
+						<div class="text-block" role="button">Tag 5</div>
+						<div class="text-block" role="button">etc...</div>
+					</div>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+
+		<div class="grid-item">
+			<article class="card hover-container component-red">
+				<header class="card-header positioned">
+					<div class="card-corner">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+				</header>
+				<section class="card-content no-padding">
+					<a href="" class="background-image ratio sixteen-nine overlay-light hover-no-overlay" style="background-image:url('/getmedia/017b7705-0fae-4e53-b3be-d4dbd9af2804/3-monitors-on-desk');" role="img"></a>
+				</section>
+				<section class="card-content">
+					<div class="card-type text-block outline">Type label</div>
+					<h3 class="card-title">Card Title</h3>
+					<div class="line tiny"></div>
+					<p class="card-details">
+						<span>Extra details line 1</span>
+						<span>Extra details line 2</span>
+						<span>Extra details line 3</span>
+					</p>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam nisi, rhoncus sed cursus in, iaculis non nibh. Ut porta lacinia dui bibendum lacinia.</p>
+					<p>
+						<a href="">Extra CTA link&nbsp;»</a><br>
+						<a href="">Extra CTA link&nbsp;»</a>
+					</p>
+					<div class="tags text-block-group small">
+						<div class="text-block" role="button">Tag 1</div>
+						<div class="text-block" role="button">Tag 2</div>
+						<div class="text-block" role="button">Tag 3</div>
+						<div class="text-block" role="button">Tag 4</div>
+						<div class="text-block" role="button">Tag 5</div>
+						<div class="text-block" role="button">etc...</div>
+					</div>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+
+		<div class="grid-item">
+			<article class="card hover-container component-red">
+				<section class="card-content no-padding">
+					<a href="" class="ratio sixteen-nine" role="img">
+						<img class="logo spacing-40" src="/getmedia/bf509375-7975-4159-8af6-d31bd2b6f3a4/coca-cola" alt="Coca Cola logo">
+					</a>
+				</section>
+				<section class="card-content">
+					<div class="card-type text-block outline">Type label</div>
+					<h3 class="card-title">Card Title</h3>
+					<div class="line tiny"></div>
+					<p class="card-details">
+						<span>Extra details line 1</span>
+						<span>Extra details line 2</span>
+						<span>Extra details line 3</span>
+					</p>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam nisi, rhoncus sed cursus in, iaculis non nibh. Ut porta lacinia dui bibendum lacinia.</p>
+					<p>
+						<a href="">Extra CTA link&nbsp;»</a><br>
+						<a href="">Extra CTA link&nbsp;»</a>
+					</p>
+					<div class="tags text-block-group small">
+						<div class="text-block" role="button">Tag 1</div>
+						<div class="text-block" role="button">Tag 2</div>
+						<div class="text-block" role="button">Tag 3</div>
+						<div class="text-block" role="button">Tag 4</div>
+						<div class="text-block" role="button">Tag 5</div>
+						<div class="text-block" role="button">etc...</div>
+					</div>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+	</div>
+
+	<div class="flex-row start">
+		<div class="col-md-10 col-lg-9">
+			<p><strong>Card Footer</strong></p>
+			<p>The card footer is a <code>card-footer</code> class &lt;footer&gt; element inside of the card article and should always be included in the card when it has a CTA link. The button inside should have the standard classes for a <code>light-gray</code>, <code>small</code>, <code>arrow</code> button. The hover color of the button when the card is hovered over is controlled by the <code>component-color</code> set in the card article.</p>
+			<pre>
+				<div class="code-type">HTML - Card footer</div>
+				<code class="html">
+					&lt;footer class="card-footer no-padding"&gt;<br>
+						&nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;Footer CTA link&lt;/a&gt;<br>
+					&lt;/footer&gt;
+				</code>
+			</pre>
+		</div>
+	</div>
+
+
+	<div class="flex-row start">
+		<div class="col-md-10 col-lg-9">
+			<p><strong>Full card grid sample</strong></p>
+			<p>Bringing all the individual elements together, below is a sample of three common card configurations in a standard grid. In a real on-page grid, all the cards in a single grid should have the same layout.</p>
+			<pre>
+				<div class="code-type">HTML - Grid with full sample card layouts</div>
+				<code class="html">
+					&lt;div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start"&gt;<br>
+						&nbsp; &lt;div class="grid-item"&gt;<br>
+							&nbsp; &nbsp; &lt;article class="card hover-container component-red"&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;section class="card-content no-padding"&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;a href="linkURL" class="resource-thumbnail video background-image" style="background-image:url('imageURL');" role="img"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class="cta"&gt;CTA text&lt;/span&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="ratio sixteen-nine"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;/a&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;/section&gt;&lt;!--/card-content--&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="card-type text-block outline"&gt;Type label&lt;/div&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3 class="card-title"&gt;Card Title&lt;/h3&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="line tiny"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class="card-details"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span&gt;Extra details line 1&lt;/span&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span&gt;Extra details line 2&lt;/span&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class="card-description"&gt;Card description.&lt;/p&gt;<br>
+						            &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;a href="linkURL"&gt;Extra CTA link text »&lt;/a&gt;&lt;br&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;a href="linkURL"&gt;Extra CTA link text »&lt;/a&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="tags text-block-group small"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="text-block" role="button"&gt;Tag 1&lt;/div&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="text-block" role="button"&gt;Tag 2&lt;/div&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="text-block" role="button"&gt;Tag 3&lt;/div&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;/section&gt;&lt;!--/card-content--&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;footer class="card-footer no-padding"&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;Footer CTA link&lt;/a&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;/footer&gt;&lt;!--/card-footer--&gt;<br>
+							&nbsp; &nbsp; &lt;/article&gt;&lt;!--/card--&gt;<br>
+						&nbsp; &lt;/div&gt;&lt;!--/grid-item--&gt;<br>
+						&nbsp; &lt;div class="grid-item"&gt;<br>
+							&nbsp; &nbsp; &lt;article class="card hover-container component-red"&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;header class="card-header positioned"&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="card-corner"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i class="icon icon-star medium"&gt;&lt;/i&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;/header&gt;&lt;!--/card-header--&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;section class="card-content no-padding"&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;a href="linkURL" class="background-image ratio sixteen-nine overlay-light hover-no-overlay" style="background-image:url('imageURL');" role="img"&gt;&lt;/a&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;/section&gt;&lt;!--/card-content--&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="card-type text-block outline"&gt;Type label&lt;/div&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3 class="card-title"&gt;Card Title&lt;/h3&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="line tiny"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class="card-details"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span&gt;Extra details line 1&lt;/span&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span&gt;Extra details line 2&lt;/span&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class="card-description"&gt;Card description.&lt;/p&gt;<br>
+						            &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;a href="linkURL"&gt;Extra CTA link text »&lt;/a&gt;&lt;br&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;a href="linkURL"&gt;Extra CTA link text »&lt;/a&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="tags text-block-group small"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="text-block" role="button"&gt;Tag 1&lt;/div&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="text-block" role="button"&gt;Tag 2&lt;/div&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="text-block" role="button"&gt;Tag 3&lt;/div&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;/section&gt;&lt;!--/card-content--&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;footer class="card-footer no-padding"&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;Footer CTA link&lt;/a&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;/footer&gt;&lt;!--/card-footer--&gt;<br>
+							&nbsp; &nbsp; &lt;/article&gt;&lt;!--/card--&gt;<br>
+						&nbsp; &lt;/div&gt;&lt;!--/grid-item--&gt;<br>
+						&nbsp; &lt;div class="grid-item"&gt;<br>
+							&nbsp; &nbsp; &lt;article class="card hover-container component-red"&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;header class="card-header"&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="card-corner"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i class="icon icon-star medium"&gt;&lt;/i&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="card-type text-block outline"&gt;Type label&lt;/div&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;/header&gt;&lt;!--/card-header--&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3 class="card-title"&gt;Card Title&lt;/h3&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="line tiny"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class="card-details"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span&gt;Extra details line 1&lt;/span&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span&gt;Extra details line 2&lt;/span&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class="card-description"&gt;Card description.&lt;/p&gt;<br>
+						            &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;a href="linkURL"&gt;Extra CTA link text »&lt;/a&gt;&lt;br&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;a href="linkURL"&gt;Extra CTA link text »&lt;/a&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="tags text-block-group small"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="text-block" role="button"&gt;Tag 1&lt;/div&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="text-block" role="button"&gt;Tag 2&lt;/div&gt;<br>
+										&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="text-block" role="button"&gt;Tag 3&lt;/div&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;/section&gt;&lt;!--/card-content--&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;footer class="card-footer no-padding"&gt;<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;Footer CTA link&lt;/a&gt;<br>
+								&nbsp; &nbsp; &nbsp; &lt;/footer&gt;&lt;!--/card-footer--&gt;<br>
+							&nbsp; &nbsp; &lt;/article&gt;&lt;!--/card--&gt;<br>
+						&nbsp; &lt;/div&gt;&lt;!--/grid-item--&gt;<br>
+					&lt;/div&gt;&lt;!--/card-grid--&gt;
+				</code>
+			</pre>
+		</div>
+	</div>
+	<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+		<div class="grid-item">
+			<article class="card hover-container component-red">
+				<section class="card-content no-padding">
+					<a href="" class="resource-thumbnail video background-image" style="background-image:url('/getmedia/017b7705-0fae-4e53-b3be-d4dbd9af2804/3-monitors-on-desk');" role="img">
+						<span class="cta">Watch the video</span>
+						<div class="ratio sixteen-nine"></div>
+					</a>
+				</section>
+				<section class="card-content">
+					<div class="card-type text-block outline">Type label</div>
+					<h3 class="card-title">Card using resource-thumbnail with icon (no card header allowed)</h3>
+					<div class="line tiny"></div>
+					<p class="card-details">
+						<span>Extra details line 1</span>
+						<span>Extra details line 2</span>
+						<span>Extra details line 3</span>
+					</p>
+					<p class="card-description">Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam nisi, rhoncus sed cursus in, iaculis non nibh. Ut porta lacinia dui bibendum lacinia.</p>
+					<p>
+						<a href="">Extra CTA link&nbsp;»</a><br>
+						<a href="">Extra CTA link&nbsp;»</a>
+					</p>
+					<div class="tags text-block-group small">
+						<div class="text-block" role="button">Tag 1</div>
+						<div class="text-block" role="button">Tag 2</div>
+						<div class="text-block" role="button">Tag 3</div>
+						<div class="text-block" role="button">Tag 4</div>
+						<div class="text-block" role="button">Tag 5</div>
+						<div class="text-block" role="button">etc...</div>
+					</div>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+		<div class="grid-item">
+			<article class="card hover-container component-orange">
+				<header class="card-header positioned">
+					<div class="card-corner">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+				</header>
+				<section class="card-content no-padding">
+					<a href="" class="background-image ratio sixteen-nine overlay-light hover-no-overlay" style="background-image:url('/getmedia/017b7705-0fae-4e53-b3be-d4dbd9af2804/3-monitors-on-desk');" role="img"></a>
+				</section>
+				<section class="card-content">
+					<div class="card-type text-block outline">Type label</div>
+					<h3 class="card-title">Card using image only (card header allowed w/ text, icon, or date)</h3>
+					<div class="line tiny"></div>
+					<p class="card-details">
+						<span>Extra details line 1</span>
+						<span>Extra details line 2</span>
+						<span>Extra details line 3</span>
+					</p>
+					<p class="card-description">Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam nisi, rhoncus sed cursus in, iaculis non nibh. Ut porta lacinia dui bibendum lacinia.</p>
+					<p>
+						<a href="">Extra CTA link&nbsp;»</a><br>
+						<a href="">Extra CTA link&nbsp;»</a>
+					</p>
+					<div class="tags text-block-group small">
+						<div class="text-block" role="button">Tag 1</div>
+						<div class="text-block" role="button">Tag 2</div>
+						<div class="text-block" role="button">Tag 3</div>
+						<div class="text-block" role="button">Tag 4</div>
+						<div class="text-block" role="button">Tag 5</div>
+						<div class="text-block" role="button">etc...</div>
+					</div>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+		<div class="grid-item">
+			<article class="card hover-container component-blue">
+				<header class="card-header">
+					<div class="card-corner">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+					<div class="card-type text-block outline">Type label</div>
+				</header>
+				<section class="card-content">
+					<h3 class="card-title">Card with no image (card header allowed w/ text, icon, or date, type label can move to header)</h3>
+					<div class="line tiny"></div>
+					<p class="card-details">
+						<span>Extra details line 1</span>
+						<span>Extra details line 2</span>
+						<span>Extra details line 3</span>
+					</p>
+					<p class="card-description">Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam nisi, rhoncus sed cursus in, iaculis non nibh. Ut porta lacinia dui bibendum lacinia.</p>
+					<p>
+						<a href="">Extra CTA link&nbsp;»</a><br>
+						<a href="">Extra CTA link&nbsp;»</a>
+					</p>
+					<div class="tags text-block-group small">
+						<div class="text-block" role="button">Tag 1</div>
+						<div class="text-block" role="button">Tag 2</div>
+						<div class="text-block" role="button">Tag 3</div>
+						<div class="text-block" role="button">Tag 4</div>
+						<div class="text-block" role="button">Tag 5</div>
+						<div class="text-block" role="button">etc...</div>
+					</div>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+	</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section id="options" class="background-light-gray">
+	<div class="flex-row start">
+		<div class="col-md-10 col-lg-9">
+			<h2 class="text-bold">Card options</h2>
+			<p>Once the card content has been determined, there are a few optional classes that can be set and/or added to change certain aspects of individual cards.</p>
+		</div>
+	</div>
+
+	<div class="flex-row start">
+		<div class="col-md-10 col-lg-9">
+			<p><strong>Color theme</strong></p>
+			<p>Every card should have a color theme assigned with the <code>component-color</code> class, added to the class list for the card &lt;article&gt; element. Component color has options for red, blue, navy-blue, orange, green, black, dark-gray, gray, light-gray, and white. The chosen color affects the card header, card type, line, and button elements. Once a color is assigned, the component color can be overridden by adding a different color class to the individual element (for example, adding the class <code>orange</code> to the <code>line</code> element would make the line orange regardless of the component-color assigned to the card).</p>
+			<pre>
+				<div class="code-type">HTML - Card color themes</div>
+				<code class="html">
+					&lt;div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start"&gt;<br>
+						&nbsp; &lt;div class="grid-item"&gt;<br>
+							&nbsp; &nbsp; &lt;article class="card hover-container <strong>component-red</strong>"&gt;<br>
+								&nbsp; &nbsp; &nbsp; [Card contents...]<br>
+							&nbsp; &nbsp; &lt;/article&gt;<br>
+						&nbsp; &lt;/div&gt;<br>
+						&nbsp; &lt;div class="grid-item"&gt;<br>
+							&nbsp; &nbsp; &lt;article class="card hover-container <strong>component-orange</strong>"&gt;<br>
+								&nbsp; &nbsp; &nbsp; [Card contents...]<br>
+							&nbsp; &nbsp; &lt;/article&gt;<br>
+						&nbsp; &lt;/div&gt;<br>
+						&nbsp; &lt;div class="grid-item"&gt;<br>
+							&nbsp; &nbsp; &lt;article class="card hover-container <strong>component-blue</strong>"&gt;<br>
+								&nbsp; &nbsp; &nbsp; [Card contents...]<br>
+							&nbsp; &nbsp; &lt;/article&gt;<br>
+						&nbsp; &lt;/div&gt;<br>
+					&lt;/div&gt;
+				</code>
+			</pre>
+		</div>
+	</div>
+	<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+		<div class="grid-item">
+			<article class="card hover-container component-red">
+				<header class="card-header">
+					<div class="card-corner">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+					<div class="card-type text-block outline">Type label</div>
+				</header>
+				<section class="card-content">
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+		<div class="grid-item">
+			<article class="card hover-container component-orange">
+				<header class="card-header">
+					<div class="card-corner">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+					<div class="card-type text-block outline">Type label</div>
+				</header>
+				<section class="card-content">
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+		<div class="grid-item">
+			<article class="card hover-container component-blue">
+				<header class="card-header">
+					<div class="card-corner">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+					<div class="card-type text-block outline">Type label</div>
+				</header>
+				<section class="card-content">
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+	</div>
+
+	<div class="flex-row start">
+		<div class="col-md-10 col-lg-9">
+			<p><strong>Featured flag</strong></p>
+			<p>Add the class <code>featured</code> to the card &lt;article&gt; element to get the diagonal featured label in the upper right corner. The color of the flag will align with the chosen component color of the card.</p>
+			<pre>
+				<div class="code-type">HTML - Featured card</div>
+				<code class="html">
+					&lt;div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start"&gt;<br>
+						&nbsp; &lt;div class="grid-item"&gt;<br>
+							&nbsp; &nbsp; &lt;article class="card hover-container component-red <strong>featured</strong>"&gt;<br>
+								&nbsp; &nbsp; &nbsp; [Card contents...]<br>
+							&nbsp; &nbsp; &lt;/article&gt;<br>
+						&nbsp; &lt;/div&gt;<br>
+					&lt;/div&gt;
+				</code>
+			</pre>
+		</div>
+	</div>
+	<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+		<div class="grid-item">
+			<article class="card hover-container component-red featured">
+				<section class="card-content no-padding">
+					<a href="" class="resource-thumbnail video background-image" style="background-image:url('/getmedia/017b7705-0fae-4e53-b3be-d4dbd9af2804/3-monitors-on-desk');" role="img">
+						<span class="cta">Watch the video</span>
+						<div class="ratio sixteen-nine"></div>
+					</a>
+				</section>
+				<section class="card-content">
+					<div class="card-type text-block outline">Type label</div>
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+		<div class="grid-item">
+			<article class="card hover-container component-orange featured">
+				<header class="card-header positioned">
+					<div class="card-corner">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+				</header>
+				<section class="card-content no-padding">
+					<a href="" class="background-image ratio sixteen-nine overlay-light hover-no-overlay" style="background-image:url('/getmedia/017b7705-0fae-4e53-b3be-d4dbd9af2804/3-monitors-on-desk');" role="img"></a>
+				</section>
+				<section class="card-content">
+					<div class="card-type text-block outline">Type label</div>
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+		<div class="grid-item">
+			<article class="card hover-container component-blue featured">
+				<header class="card-header">
+					<div class="card-corner">
+						<i class="icon icon-bar-graph medium"></i>
+					</div>
+					<div class="card-type text-block outline">Type label</div>
+				</header>
+				<section class="card-content">
+					<h3 class="card-title">Card title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<a href="" class="button small light-gray arrow">Footer CTA link</a>
+				</footer>
+			</article>
+		</div>
+	</div>
+
+
+	<div class="flex-row start">
+		<div class="col-md-10 col-lg-9">
+			<p><strong>Horizontal image card layout</strong></p>
+			<p>Add the class <code>horizontal</code> to a card &lt;article&gt; element that has both image and text sections to align the section content horizontally. This option is usually only used for single resource placements/call-outs on a page. A horizontal card should not use a card header.</p>
+			<pre>
+				<div class="code-type">HTML - Horizontal card</div>
+				<code class="html">
+					&lt;div class="flex-row"&gt;<br>
+						&nbsp; &lt;div class="col-md-6 col-lg-8 cards"&gt;<br>
+							&nbsp; &nbsp; &lt;article class="card hover-container component-red <strong>horizontal</strong>"&gt;<br>
+								&nbsp; &nbsp; &nbsp; [Card contents...]<br>
+							&nbsp; &nbsp; &lt;/article&gt;<br>
+						&nbsp; &lt;/div&gt;<br>
+					&lt;/div&gt;
+				</code>
+			</pre>
+		</div>
+	</div>
+	<div class="flex-row start">
+		<div class="col-md-10 col-lg-9 cards">
+			<article class="card horizontal hover-shadow hover-container component-red">
+				<section class="card-content no-padding">
+					<a href="" class="resource-thumbnail video background-image" style="background-image:url('/getmedia/017b7705-0fae-4e53-b3be-d4dbd9af2804/3-monitors-on-desk');" role="img">
+						<span class="cta">CTA text</span>
+						<div class="ratio sixteen-nine"></div>
+					</a>
+				</section>
+				<section class="card-content">
+					<div class="card-type text-block outline">Type label</div>
+					<h3 class="card-title">Card Title</h3>
+					<div class="line tiny"></div>
+					<p class="card-description">Card Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</section>
+				<footer class="card-footer no-padding">
+					<div class="button small light-gray arrow">Footer CTA link</div>
+				</footer>
+			</article>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+<section id="examples" class="background-light-gray accordion">
+	<div class="flex-row start">
+		<div class="col-md-10 col-lg-9">
+			<h2 class="text-bold">Card examples with real content</h2>
+			<p>Below are examples of cards with code samples from the website to give a sense of how content can be arranged in cards.</p>
+		</div>
+	</div>
+
+	<div class="flex-row start">
+		<div class="col-lg-12">
+			<h3 class="toggler">Blog Posts</h3>
+			<div class="element">
+
+				<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<header class="card-header positioned">
+								<div class="card-corner date">
+									<span class="month">Jun</span>
+									<span class="day">19</span>
+								</div>
+							</header>
+							<section class="card-content no-padding">
+								<a href="" class="background-image ratio sixteen-nine overlay-light hover-no-overlay" style="background-image:url('/getmedia/659a4612-25ed-4c7d-a1f8-5a6f9cff57b2/blogheader-GDPR-data-security?width=500');" role="img"></a>
+							</section>
+							<section class="card-content">
+								<div class="card-type text-block outline">BI Trends</div>
+								<h3 class="card-title">Why the GDPR Matters: Key Things to Consider When Selecting an Analytics Solution</h3>
+								<div class="line tiny"></div>
+								<p class="card-details">
+									<span>Tyler Convey</span>
+									<span>Tuesday, June 19, 2018</span>
+								</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Read more</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-blue">
+							<header class="card-header positioned">
+								<div class="card-corner date">
+									<span class="month">Jun</span>
+									<span class="day">07</span>
+								</div>
+							</header>
+							<section class="card-content no-padding">
+								<a href="" class="background-image ratio sixteen-nine overlay-light hover-no-overlay" style="background-image:url('/getmedia/214661fe-64d9-436a-b3e9-6d011b41f4a0/blogheader-microstrategy-building?width=500');" role="img"></a>
+							</section>
+							<section class="card-content">
+								<div class="card-type text-block outline">News and Events</div>
+								<h3 class="card-title">20 Years Since Going Public: A Look Back and Forward</h3>
+								<div class="line tiny"></div>
+								<p class="card-details">
+									<span>Mark Gambill</span>
+									<span>Thursday, June 7, 2018</span>
+								</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Read more</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-green">
+							<header class="card-header positioned">
+								<div class="card-corner date">
+									<span class="month">May</span>
+									<span class="day">22</span>
+								</div>
+							</header>
+							<section class="card-content no-padding">
+								<a href="" class="background-image ratio sixteen-nine overlay-light hover-no-overlay" style="background-image:url('/getmedia/884bc4ed-03ee-4862-8642-9e664ed0c7a1/blog-header-5ways-analytics-accelerates-government-IT-modernization?widh=500');" role="img"></a>
+							</section>
+							<section class="card-content">
+								<div class="card-type text-block outline">Stories</div>
+								<h3 class="card-title">5 Ways Analytics Accelerates Government IT Modernization</h3>
+								<div class="line tiny"></div>
+								<p class="card-details">
+									<span>Andrew Gordon</span>
+									<span>Tuesday, May 22, 2018</span>
+								</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Read more</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+				<p class="toggler2">View sample HTML</p>
+				<div class="element2">
+					<pre>
+						<div class="code-type">HTML - Blog card</div>
+						<code class="html">
+							&lt;article class="card hover-container component-red"&gt;<br>
+								&nbsp; &lt;header class="card-header positioned"&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-corner date"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span class="month"&gt;Jan&lt;/span&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span class="day"&gt;01&lt;/span&gt;<br>
+									&nbsp; &nbsp; &lt;/div&gt;<br>
+								&nbsp; &lt;/header&gt;<br>
+								&nbsp; &lt;section class="card-content no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="background-image ratio sixteen-nine overlay-light hover-no-overlay" style="background-image:url('imageURL');" role="img"&gt;&lt;/a&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-type text-block outline"&gt;Blog Category&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;h3 class="card-title"&gt;Post Title&lt;/h3&gt;<br>
+									&nbsp; &nbsp; &lt;div class="line tiny"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;p class="card-details"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span&gt;Author name&lt;/span&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span&gt;Post date&lt;/span&gt;<br>
+									&nbsp; &nbsp; &lt;/p&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;footer class="card-footer no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;Read more&lt;/a&gt;<br>
+								&nbsp; &lt;/footer&gt;<br>
+							&lt;/article&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="flex-row start">
+		<div class="col-lg-12">
+			<h3 class="toggler">Upcoming Events</h3>
+			<div class="element">
+				<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<header class="card-header">
+								<div class="card-corner date">
+									<span class="month">Aug</span>
+									<span class="day">15</span>
+								</div>
+								<div class="card-type text-block outline">Conference</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">MicroStrategy Symposium - Auckland</h3>
+								<div class="line tiny"></div>
+								<p class="card-details">
+									<span>Wednesday, August 15, 2018</span>
+									<span>Hilton Auckland</span>
+									<span>Auckland, New Zealand</span>
+								</p>
+								<p class="card-description">Your journey to the Intelligent Enterprise continues with the MicroStrategy Symposium Series. We bring innovative customers, product experts, and senior executives to major cities around the world...</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">View Event Details</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-green">
+							<header class="card-header">
+								<div class="card-corner date">
+									<span class="month">Aug</span>
+									<span class="day">20</span>
+								</div>
+								<div class="card-type text-block outline">Networking</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">Gartner Catalyst San Diego 2018</h3>
+								<div class="line tiny"></div>
+								<p class="card-details">
+									<span>Monday, August 20, 2018</span>
+									<span>San Diego, California</span>
+								</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">View Event Details</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-navy-blue">
+							<header class="card-header">
+								<div class="card-corner date">
+									<span class="month">Nov</span>
+									<span class="day">12</span>
+								</div>
+								<div class="card-type text-block outline">Tradeshow</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">IT Director Forum</h3>
+								<div class="line tiny"></div>
+								<p class="card-details">
+									<span>lunedì 12 novembre 2018</span>
+									<span>Rimini, Italy</span>
+								</p>
+								<p class="card-description">MicroStrategy vi aspetta a Rimini al Richmond IT Director Forum, da 8 anni evento di riferimento del mercato italiano dell’Information Technology. Due giorni dedicati a conferenze, incontri B2B e...</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">View Event Details</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+				<p class="toggler2">View sample HTML</p>
+				<div class="element2">
+					<pre>
+						<div class="code-type">HTML - Upcoming event card</div>
+						<code class="html">
+							&lt;article class="card hover-container component-red"&gt;<br>
+								&nbsp; &lt;header class="card-header"&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-corner date"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span class="month"&gt;Jan&lt;/span&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span class="day"&gt;01&lt;/span&gt;<br>
+									&nbsp; &nbsp; &lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-type text-block outline"&gt;Event type&lt;/div&gt;<br>
+								&nbsp; &lt;/header&gt;<br>
+								&nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &lt;h3 class="card-title"&gt;Event name&lt;/h3&gt;<br>
+									&nbsp; &nbsp; &lt;div class="line tiny"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;p class="card-details"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span&gt;Calendar Date&lt;/span&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span&gt;Venue&lt;/span&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span&gt;City, State/Country&lt;/span&gt;<br>
+									&nbsp; &nbsp; &lt;/p&gt;<br>
+									&nbsp; &nbsp; &lt;p class="card-description"&gt;Event description&lt;/p&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;footer class="card-footer no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;View Event Details&lt;/a&gt;<br>
+								&nbsp; &lt;/footer&gt;<br>
+							&lt;/article&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="flex-row start">
+		<div class="col-lg-12">
+			<h3 class="toggler">Symposium Events</h3>
+			<div class="element">
+				<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<header class="card-header positioned">
+								<div class="card-corner date">
+									<span class="month">Aug</span>
+									<span class="day">15</span>
+								</div>
+							</header>
+							<section class="card-content no-padding">
+								<a href="" class="background-image ratio sixteen-nine overlay hover-overlay-lighter" style="background-image:url('/getmedia/5d06fd1b-9dd0-49cc-adbd-83d6dd236b42/city-background_auckland?width=500');" role="img">
+									<div class="positioned center text-white text-center">
+										<h3 class="text-bold text-medium no-spacing">Auckland</h3>
+									</div>
+								</a>
+							</section>
+							<section class="card-content">
+								<h3 class="card-title">Auckland, New Zealand</h3>
+								<div class="line tiny"></div>
+								<p class="card-details">
+									<span>Wednesday, August 15, 2018</span>
+									<span>Hilton Auckland</span>
+								</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Learn more and register</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<header class="card-header positioned">
+								<div class="card-corner date">
+									<span class="month">Sep</span>
+									<span class="day">20</span>
+								</div>
+							</header>
+							<section class="card-content no-padding">
+								<a href="" class="background-image ratio sixteen-nine overlay hover-overlay-lighter" style="background-image:url('/getmedia/63832ffc-405e-4e0e-8cf2-ee00d92d5d77/city-background_la-los-angeles?width=500');" role="img">
+									<div class="positioned center text-white text-center">
+										<h3 class="text-bold text-medium no-spacing">Los Angeles</h3>
+									</div>
+								</a>
+							</section>
+							<section class="card-content">
+								<h3 class="card-title">Los Angeles, California</h3>
+								<div class="line tiny"></div>
+								<p class="card-details">
+									<span>Thursday, September 20, 2018</span>
+									<span>Sheraton Universal Hotel</span>
+								</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Learn more and register</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<header class="card-header positioned">
+								<div class="card-corner date">
+									<span class="month">Oct</span>
+									<span class="day">04</span>
+								</div>
+							</header>
+							<section class="card-content no-padding">
+								<a href="" class="background-image ratio sixteen-nine overlay hover-overlay-lighter" style="background-image:url('/getmedia/a51f1b46-7935-498c-944c-a5577fe1d024/city-background_vienna?width=500');" role="img">
+									<div class="positioned center text-white text-center">
+										<h3 class="text-bold text-medium no-spacing">Vienna</h3>
+									</div>
+								</a>
+							</section>
+							<section class="card-content">
+								<h3 class="card-title">Vienna, Austria</h3>
+								<div class="line tiny"></div>
+								<p class="card-details">
+									<span>Thursday, October 4, 2018</span>
+									<span>Vienna Marriott</span>
+								</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Learn more and register</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+				<p class="toggler2">View sample HTML</p>
+				<div class="element2">
+					<pre>
+						<div class="code-type">HTML - Symposia event card</div>
+						<code class="html">
+							&lt;article class="card hover-container component-red"&gt;<br>
+								&nbsp; &lt;header class="card-header positioned"&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-corner date"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span class="month"&gt;Jan&lt;/span&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span class="day"&gt;01&lt;/span&gt;<br>
+									&nbsp; &nbsp; &lt;/div&gt;<br>
+								&nbsp; &lt;/header&gt;<br>
+								&nbsp; &lt;section class="card-content no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="background-image ratio sixteen-nine overlay hover-overlay-lighter" style="background-image:url('imageURL');" role="img"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;div class="positioned center text-white text-center"&gt;<br>
+											&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3 class="text-bold text-medium no-spacing"&gt;City Name&lt;/h3&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;/a&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &lt;h3 class="card-title"&gt;City, Country/State&lt;/h3&gt;<br>
+									&nbsp; &nbsp; &lt;div class="line tiny"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;p class="card-details"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span&gt;Calendar Date&lt;/span&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span&gt;Venue&lt;/span&gt;<br>
+									&nbsp; &nbsp; &lt;/p&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;footer class="card-footer no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;Learn more and Register&lt;/a&gt;<br>
+								&nbsp; &lt;/footer&gt;<br>
+							&lt;/article&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="flex-row start">
+		<div class="col-lg-12">
+			<h3 class="toggler">Resource library</h3>
+			<div class="element">
+				<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+					<div class="grid-item">
+						<article class="card hover-container component-orange">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-broadcast-signal medium"></i>
+								</div>
+								<div class="card-type text-block outline">On-demand Webcast</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">Charts, Graphs, and Visualizations: Telling better data stories with your dossiers</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">Watch this webcast to learn how to build interactive analytical books that tell data-driven stories with your dossier.</p>
+								<div class="tags text-block-group small">
+									<div class="text-block" role="button">Enterprise Analytics</div>
+								</div>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Watch the Webcast</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-play medium"></i>
+								</div>
+								<div class="card-type text-block outline">Video</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">The University of Auckland uses analytics to improve its student experience</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">New Zealand’s leading academic institution, The University of Auckland, is using analytics to drive transformation and become more customer centric.</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Watch the Webcast</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-blue">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-brochure medium"></i>
+								</div>
+								<div class="card-type text-block outline">Brochure</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">Enterprise Mobility: Native Mobile Apps that Transforms Business Processes and Boost Productivity</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">Discover how easy it is to deploy mobile apps that will deliver insight and change your business. Learn more about MicroStrategy Mobile.</p>
+								<div class="tags text-block-group small">
+									<div class="text-block" role="button">Executives</div>
+									<div class="text-block" role="button">Field Service</div>
+									<div class="text-block" role="button">Sales</div>
+									<div class="text-block" role="button">Enterprise Mobility</div>
+								</div>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Read the Brochure</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+				<p class="toggler2">View sample HTML</p>
+				<div class="element2">
+					<pre>
+						<div class="code-type">HTML - Resource Library card</div>
+						<code class="html">
+							&lt;article class="card hover-container component-red"&gt;<br>
+								&nbsp; &lt;header class="card-header"&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-corner"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;i class="icon icon-star medium"&gt;&lt;/i&gt;<br>
+									&nbsp; &nbsp; &lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-type text-block outline"&gt;Resource Type&lt;/div&gt;<br>
+								&nbsp; &lt;/header&gt;<br>
+								&nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &lt;h3 class="card-title"&gt;Resource Name&lt;/h3&gt;<br>
+									&nbsp; &nbsp; &lt;div class="line tiny"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;p class="card-description"&gt;Resource Description&lt;/p&gt;<br>
+									&nbsp; &nbsp; &lt;div class="tags text-block-group small"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;div class="text-block" role="button"&gt;Tags&lt;/div&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;div class="text-block" role="button"&gt;Tags&lt;/div&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;div class="text-block" role="button"&gt;Tags&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;/div&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;footer class="card-footer no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;Resource type CTA&lt;/a&gt;<br>
+								&nbsp; &lt;/footer&gt;<br>
+							&lt;/article&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="flex-row start">
+		<div class="col-lg-12">
+			<h3 class="toggler">Customer success stories</h3>
+			<div class="element">
+				<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<section class="card-content no-padding">
+								<a href="" class="resource-thumbnail video background-image" style="background-image:url('/getmedia/593540b4-26c2-4d15-9468-f52c13f0141e/customer-success-video-coca-cola.jpg?width=500');" role="img">
+									<span class="cta">Watch the Success Story</span>
+									<div class="ratio sixteen-nine"></div>
+								</a>
+							</section>
+							<section class="card-content">
+								<div class="ratio long-rectangle margin-bottom-20">
+									<img class="logo spacing10" src="/getmedia/bf509375-7975-4159-8af6-d31bd2b6f3a4/coca-cola" alt="Coca Cola logo">
+								</div>
+								<h3 class="card-title">Coca-Cola Promotes Healthier Beverage Choices with MicroStrategy</h3>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Watch the Video</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<section class="card-content no-padding">
+								<a href="" class="resource-thumbnail video background-image" style="background-image:url('/getmedia/bb5e7977-c5b8-47c0-b0be-0d14ca16b76f/How-AIG-Delivers-Real-time-Insight-on-Catastrophic-Events.jpg?width=500');" role="img">
+									<span class="cta">Watch the Success Story</span>
+									<div class="ratio sixteen-nine"></div>
+								</a>
+							</section>
+							<section class="card-content">
+								<div class="ratio long-rectangle margin-bottom-20">
+									<img class="logo spacing10" src="/getmedia/a789d36b-d250-42c3-baf2-8e1a1aef0b62/aig" alt="AIG logo">
+								</div>
+								<h3 class="card-title">How AIG Delivers Real-time Insight on Catastrophic Events</h3>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Watch the Video</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<section class="card-content no-padding">
+								<a href="" class="resource-thumbnail video background-image" style="background-image:url('/getmedia/99c9e51f-928d-4742-954c-9b09c82c791a/domtar-customer-success_microstrategy-vi-helps-recapture-business.jpg?width=500');" role="img">
+									<span class="cta">Watch the Success Story</span>
+									<div class="ratio sixteen-nine"></div>
+								</a>
+							</section>
+							<section class="card-content">
+								<div class="ratio long-rectangle margin-bottom-20">
+									<img class="logo spacing10" src="/getmedia/340e24db-64f4-4942-9608-90debfa28ec3/domtar" alt="Domtar logo">
+								</div>
+								<h3 class="card-title">Domtar’s Finance Department Dramatically Increases Productivity with MicroStrategy</h3>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Watch the Video</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+				<p class="toggler2">View sample HTML</p>
+				<div class="element2">
+					<pre>
+						<div class="code-type">HTML - Customer success story card</div>
+						<code class="html">
+							&lt;article class="card hover-container component-red"&gt;<br>
+								&nbsp; &lt;section class="card-content no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="resource-thumbnail video background-image" style="background-image:url('imageURL');" role="img"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span class="cta"&gt;CTA text&lt;/span&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;div class="ratio sixteen-nine"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;/a&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &lt;div class="ratio long-rectangle margin-bottom-20"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;img class="logo spacing-10" src="logoURL" alt="logo name"&gt;<br>
+									&nbsp; &nbsp; &lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;h3 class="card-title"&gt;Customer Story Title&lt;/h3&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;footer class="card-footer no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;Watch the Video&lt;/a&gt;<br>
+								&nbsp; &lt;/footer&gt;<br>
+							&lt;/article&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="flex-row start">
+		<div class="col-lg-12">
+			<h3 class="toggler">Customer company profiles</h3>
+			<div class="element">
+				<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<section class="card-content no-padding">
+								<a href="" class="background-image overlay hover-overlay-lighter ratio sixteen-nine" style="background-image:url('/getmedia/f1fb4196-a99c-4bff-871e-ce937798a2d0/Retail-Analytics-with-Adidas-Group?width=500');">
+									<img class="logo spacing-40" src="/getmedia/3ac63b7e-dd1a-4754-87bb-32b687713550/adidas-group_reverse" />
+								</a>
+							</section>
+							<section class="card-content">
+								<h3 class="card-title">Adidas Group</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">The Adidas Group strives to inspire and enable people to harness the power of sport in their lives. Sport is their very purpose. Inspired by their heritage, they know that a profound understanding <span role="button" class="reveal-text text-block">...</span></p>
+								<div class="tags text-block-group small">
+									<div class="text-block" role="button">Retail</div>
+									<div class="text-block" role="button">Sales</div>
+								</div>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Learn more</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<section class="card-content no-padding">
+								<a href="" class="background-image overlay hover-overlay-lighter ratio sixteen-nine" style="background-image:url('/getmedia/df484643-49a3-4aca-aaed-fd0ca7ab89e8/coca-cola?width=500');">
+									<img class="logo spacing-40" src="/getmedia/00d1aaa0-ee46-411c-b694-75a1bc5eebc4/coca-cola_reverse" />
+								</a>
+							</section>
+							<section class="card-content">
+								<h3 class="card-title">Coca-Cola</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">The Coca-Cola Company is the world's largest beverage company, refreshing consumers with more than 500 sparkling and still brands. Together with our bottling partners, we rank among the world's top 10 <span role="button" class="reveal-text text-block">...</span></p>
+								<div class="tags text-block-group small">
+									<div class="text-block" role="button">Food and Beverage</div>
+									<div class="text-block" role="button">Sales</div>
+								</div>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Learn more</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<section class="card-content no-padding">
+								<a href="" class="background-image overlay hover-overlay-lighter ratio sixteen-nine" style="background-image:url('/getmedia/41e6bf9f-4886-4bd8-a57e-f2a9324ebdde/Commonwealth-Bank-of-Australia_welcome-to-daily-iq?width=500');">
+									<img class="logo spacing-40" src="/getmedia/3af6bd4f-4771-414b-a87c-1544aad87cc7/commonwealth-bank_reverse.svg" />
+								</a>
+							</section>
+							<section class="card-content">
+								<h3 class="card-title">Commonwealth Bank of Australia</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">Commonwealth Bank of Australia is the country's leading provider of integrated financial services and one of the most recognized brands in the Australian financial industry. Their financial <span role="button" class="reveal-text text-block">...</span></p>
+								<div class="tags text-block-group small">
+									<div class="text-block" role="button">Banking</div>
+									<div class="text-block" role="button">Finance</div>
+								</div>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Learn more</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+				<p class="toggler2">View sample HTML</p>
+				<div class="element2">
+					<pre>
+						<div class="code-type">HTML - Customer company profile card</div>
+						<code class="html">
+							&lt;article class="card hover-container component-red"&gt;<br>
+								&nbsp; &lt;section class="card-content no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="background-image overlay hover-overlay-lighter ratio sixteen-nine" style="background-image:url('imageURL');"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;img class="logo spacing-40" src="logoURL" alt="company name logo" /&gt;<br>
+									&nbsp; &nbsp; &lt;/a&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &lt;h3 class="card-title"&gt;Company Name&lt;/h3&gt;<br>
+									&nbsp; &nbsp; &lt;div class="line tiny"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;p class="card-description"&gt;Company description&lt;/p&gt;<br>
+									&nbsp; &nbsp; &lt;div class="tags text-block-group small"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;div class="text-block" role="button"&gt;Tags&lt;/div&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;div class="text-block" role="button"&gt;Tags&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;/div&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;footer class="card-footer no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;Learn more&lt;/a&gt;<br>
+								&nbsp; &lt;/footer&gt;<br>
+							&lt;/article&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="flex-row start">
+		<div class="col-lg-12">
+			<h3 class="toggler">Press Center</h3>
+			<div class="element">
+				<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+					<div class="grid-item">
+						<article class="card hover-container component-blue">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-newspaper medium"></i>
+								</div>
+								<div class="card-type text-block outline">News Article</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">MicroStrategy Introduces New Updates to Primary Platform that Simplifies Sharing Analytics</h3>
+								<div class="line tiny"></div>
+								<p class="card-details">
+									<span>Database</span>
+									<span>Tuesday, October 10, 2017</span>
+								</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Read the Article</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-podium medium"></i>
+								</div>
+								<div class="card-type text-block outline">Press Release</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">MicroStrategy Appoints Marge Breya as Chief Marketing Officer</h3>
+								<div class="line tiny"></div>
+								<p class="card-details">
+									<span>MicroStrategy</span>
+									<span>Wednesday, August 1, 2018</span>
+								</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Read the Press Release</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-orange">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-ribbon medium"></i>
+								</div>
+								<div class="card-type text-block outline">Award</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">MicroStrategy Customer Sumitomo Rubber North America Wins Ventana Research's 2017 Leadership Award for Digital Technology</h3>
+								<div class="line tiny"></div>
+								<p class="card-details">
+									<span>MicroStrategy</span>
+									<span>Monday, December 18, 2017</span>
+								</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">View the Award</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+				<p class="toggler2">View sample HTML</p>
+				<div class="element2">
+					<pre>
+						<div class="code-type">HTML - Press Center Card</div>
+						<code class="html">
+							&lt;article class="card hover-container component-red"&gt;<br>
+								&nbsp; &lt;header class="card-header"&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-corner"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;i class="icon icon-star medium"&gt;&lt;/i&gt;<br>
+									&nbsp; &nbsp; &lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-type text-block outline"&gt;Press type&lt;/div&gt;<br>
+								&nbsp; &lt;/header&gt;<br>
+								&nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &lt;h3 class="card-title"&gt;Press Title&lt;/h3&gt;<br>
+									&nbsp; &nbsp; &lt;div class="line tiny"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;p class="card-details"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span&gt;Publication author&lt;/span&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span&gt;Publication date&lt;/span&gt;<br>
+									&nbsp; &nbsp; &lt;/p&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;footer class="card-footer no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;Press type CTA&lt;/a&gt;<br>
+								&nbsp; &lt;/footer&gt;<br>
+							&lt;/article&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="flex-row start">
+		<div class="col-lg-12">
+			<h3 class="toggler">Consulting Offers</h3>
+			<div class="element">
+				<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+					<div class="grid-item">
+						<article class="card hover-container component-orange">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-distribution medium"></i>
+								</div>
+								<div class="card-type text-block outline">Deploy</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">Capacity Planning Advisory</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">Recommends Intelligence Architecture sizing strategy to deploy or scale Intelligence Platform implementation.</p>
+								<p>
+									<a href="">Read the brochure&nbsp;&raquo;</a><br>
+									<a href="">Read the blog post&nbsp;&raquo;</a>
+								</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Request more information</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-blue">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-tools medium"></i>
+								</div>
+								<div class="card-type text-block outline">Build</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">​Analytics Advisory</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">​Recommends Enterprise Schema and Dataset improvements to ensure a single version of truth.​</p>
+								<p><a href="">Read the brochure&nbsp;&raquo;</a></p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Request more information</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-green">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-cogs medium"></i>
+								</div>
+								<div class="card-type text-block outline">Operate</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">​Intelligence Operation Advisory</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">​Recommends change management strategy to improve Intelligence Center operations.</p>
+								<p><a href="">Read the brochure&nbsp;&raquo;</a></p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Request more information</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+				<p class="toggler2">View sample HTML</p>
+				<div class="element2">
+					<pre>
+						<div class="code-type">HTML - Consulting Offer Card</div>
+						<code class="html">
+							&lt;article class="card hover-container component-red"&gt;<br>
+								&nbsp; &lt;header class="card-header"&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-corner"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;i class="icon icon-star medium"&gt;&lt;/i&gt;<br>
+									&nbsp; &nbsp; &lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-type text-block outline"&gt;Offer type&lt;/div&gt;<br>
+								&nbsp; &lt;/header&gt;<br>
+								&nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &lt;h3 class="card-title"&gt;Offer Name&lt;/h3&gt;<br>
+									&nbsp; &nbsp; &lt;div class="line tiny"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;p class="card-description"&gt;Offer description.&lt;/p&gt;<br>
+									&nbsp; &nbsp; &lt;p&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;a href="linkURL"&gt;Extra CTA 1&nbsp;&raquo;&lt;/a&gt;&lt;br&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;a href="linkURL"&gt;Extra CTA 2&nbsp;&raquo;&lt;/a&gt;<br>
+									&nbsp; &nbsp; &lt;/p&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;footer class="card-footer no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;Request more information&lt;/a&gt;<br>
+								&nbsp; &lt;/footer&gt;<br>
+							&lt;/article&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="flex-row start">
+		<div class="col-lg-12">
+			<h3 class="toggler">PR Contacts</h3>
+			<div class="element">
+				<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+					<div class="grid-item">
+						<article class="card hover-container component-navy-blue">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-web medium"></i>
+								</div>
+								<div class="card-type text-block outline">Brazil</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">Denise Bertocci</h3>
+								<div class="line tiny"></div>
+								<ul class="card-description triangle-list">
+									<li>Phone: <a href="tel:+55 11 3075-8632">+55 11 3075-8632</a></li>
+									<li>Email: <a href="mailto:dbertocci@microstrategy.com">dbertocci@microstrategy.com</a></li>
+								</ul>
+							</section>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-navy-blue">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-web medium"></i>
+								</div>
+								<div class="card-type text-block outline">German, Austria and Switzerland</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">Judith Funk</h3>
+								<div class="line tiny"></div>
+								<ul class="card-description triangle-list">
+									<li>Phone: <a href="tel:49-2203-107-248">+49-2203-107-248</a></li>
+									<li>Email: <a href="mailto:jfunk@microstrategy.com">jfunk@microstrategy.com</a></li>
+								</ul>
+							</section>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-navy-blue">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-web medium"></i>
+								</div>
+								<div class="card-type text-block outline">The Netherlands and Nordics</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">Meta Zuiddam-Hoeboer</h3>
+								<div class="line tiny"></div>
+								<ul class="card-description triangle-list">
+									<li>Email: <a href="mailto:dbertocci@microstrategy.com">mzuiddam@microstrategy.com</a></li>
+								</ul>
+							</section>
+						</article>
+					</div>
+				</div>
+				<p class="toggler2">View sample HTML</p>
+				<div class="element2">
+					<pre>
+						<div class="code-type">HTML - PR Contact card</div>
+						<code class="html">
+							&lt;article class="card hover-container component-navy-blue"&gt;<br>
+								&nbsp; &lt;header class="card-header"&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-corner"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;i class="icon icon-web medium"&gt;&lt;/i&gt;<br>
+									&nbsp; &nbsp; &lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-type text-block outline"&gt;Country/Region&lt;/div&gt;<br>
+								&nbsp; &lt;/header&gt;<br>
+								&nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &lt;h3 class="card-title"&gt;Contact name&lt;/h3&gt;<br>
+									&nbsp; &nbsp; &lt;div class="line tiny"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;ul class="card-description triangle-list"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;li&gt;Phone: &lt;a href="tel:phone-number"&gt;phone number&lt;/a&gt;&lt;/li&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;li&gt;Email: &lt;a href="mailto:email address"&gt;email address&lt;/a&gt;&lt;/li&gt;<br>
+									&nbsp; &nbsp; &lt;/ul&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+							&lt;/article&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="flex-row start">
+		<div class="col-lg-12">
+			<h3 class="toggler">Education Courses</h3>
+			<div class="element">
+				<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-bar-graph medium"></i>
+								</div>
+								<div class="card-type text-block outline">Analytics</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">What's New in MicroStrategy 10</h3>
+								<div class="line tiny"></div>
+								<p class="card-details">
+									<span>Course 10.000</span>
+								</p>
+								<p class="card-description">Upgrade your knowledge from MicroStrategy 9 to version 10 through this two-day class focusing on new capabilities for the Analyst, Developer, and Administrator. Analysts and Developers will learn about enhanced reporting and visualization capabilitie...</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Learn more and Register</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-blue">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-lock medium"></i>
+								</div>
+								<div class="card-type text-block outline">Security</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">Analytics Architect Certification</h3>
+								<div class="line tiny"></div>
+								<p class="card-details">
+									<span>Course 10.032</span>
+								</p>
+								<p class="card-description">In this course, you revisit foundation project architecture and design topics from the Analytics Architect role in an Intelligent Enterprise. The course focuses on key competencies to help you succeed as an Analytics Architect and support your Intell...</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Learn more and Register</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-orange">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-mobile-devices medium"></i>
+								</div>
+								<div class="card-type text-block outline">Mobile</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">Overview of Enterprise Mobility</h3>
+								<div class="line tiny"></div>
+								<p class="card-details">
+									<span>Course 10.121</span>
+								</p>
+								<p class="card-description">Build basic enterprise mobile applications using MicroStrategy tools. This course will cover the fundamentals of enterprise mobile and build the knowledge base necessary to tackle the more advanced courses offered for analysts, developers, and admini...</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Learn more and Register</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+				<p class="toggler2">View sample HTML</p>
+				<div class="element2">
+					<pre>
+						<div class="code-type">HTML - Education Course card</div>
+						<code class="html">
+							&lt;article class="card hover-container component-red"&gt;<br>
+								&nbsp; &lt;header class="card-header"&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-corner"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;i class="icon icon-star medium"&gt;&lt;/i&gt;<br>
+									&nbsp; &nbsp; &lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-type text-block outline"&gt;Course main subject&lt;/div&gt;<br>
+								&nbsp; &lt;/header&gt;<br>
+								&nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &lt;h3 class="card-title"&gt;Course Name&lt;/h3&gt;<br>
+									&nbsp; &nbsp; &lt;div class="line tiny"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;p class="card-details"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span&gt;Course number&lt;/span&gt;<br>
+									&nbsp; &nbsp; &lt;/p&gt;<br>
+									&nbsp; &nbsp; &lt;p class="card-description"&gt;Course description...&lt;/p&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;footer class="card-footer no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;Learn more and Register&lt;/a&gt;<br>
+								&nbsp; &lt;/footer&gt;<br>
+							&lt;/article&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="flex-row start">
+		<div class="col-lg-12">
+			<h3 class="toggler">Education Certifications</h3>
+			<div class="element">
+				<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-analyst medium"></i>
+								</div>
+								<div class="card-type text-block outline">Analyst</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">MicroStrategy Certified Specialist Analyst (MCSA) Certification</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">Validate your core skills across MicroStrategy’s reporting products, to design and create reports, visual interactive dossiers, boardroom documents, and mobile apps. Demonstrate your knowledge of fundamental MicroStrategy reporting concepts.If you wa...</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">View Certification Details</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-blue">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-developer medium"></i>
+								</div>
+								<div class="card-type text-block outline">Developer</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">MicroStrategy Certified Specialist Developer (MCSD) Certification</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">Demonstrate your skills in fundamental customization scenarios, implementing common branding and logo changes using MicroStrategy’s SDK tools. Certify your ability to set up MicroStrategy reports within common portal technologies, and customize basic...</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">View Certification Details</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-green">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-administrator medium"></i>
+								</div>
+								<div class="card-type text-block outline">Administrator</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">MicroStrategy Certified Specialist Administrator (MCSAD) Certification</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">Certifies your knowledge in foundational administration management of a MicroStrategy environment, using the appropriate tools to manage typical BI and mobile deployments and user authentication, system and object maintenance, and basic Big Data setu...</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">View Certification Details</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+				<p class="toggler2">View sample HTML</p>
+				<div class="element2">
+					<pre>
+						<div class="code-type">HTML - Education Certification card</div>
+						<code class="html">
+							&lt;article class="card hover-container component-red"&gt;<br>
+								&nbsp; &lt;header class="card-header"&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-corner"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;i class="icon icon-star medium"&gt;&lt;/i&gt;<br>
+									&nbsp; &nbsp; &lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-type text-block outline"&gt;Certification main subject&lt;/div&gt;<br>
+								&nbsp; &lt;/header&gt;<br>
+								&nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &lt;h3 class="card-title"&gt;Certification Title&lt;/h3&gt;<br>
+									&nbsp; &nbsp; &lt;div class="line tiny"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;p class="card-description"&gt;Certification description&lt;/p&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;footer class="card-footer no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;View Certification Details&lt;/a&gt;<br>
+								&nbsp; &lt;/footer&gt;<br>
+							&lt;/article&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="flex-row start">
+		<div class="col-lg-12">
+			<h3 class="toggler">Instructors</h3>
+			<div class="element">
+				<div class="flex-grid-sm-1 flex-grid-md-3 flex-grid-lg-4 cards start">
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<section class="card-content no-padding">
+								<a href="" class="background-image ratio square" style="background-image:url('/getmedia/95d4ff8b-5f57-4264-8fbc-7e32ad2da7b2/anahi-serrano.jpg?width=300');" role="img"></a>
+							</section>
+							<section class="card-content">
+								<h3 class="card-title no-margin-bottom">Anahi Serrano</h3>
+								<p class="card-description">Senior Training Consultant</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Biography and Courses</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<section class="card-content no-padding">
+								<a href="" class="background-image ratio square" style="background-image:url('/getmedia/de2d28fa-cb46-4eaa-b523-91b068ac9e64/asmaa-chatibi.jpg?width=300');" role="img"></a>
+							</section>
+							<section class="card-content">
+								<h3 class="card-title no-margin-bottom">Asmaa Chatibi</h3>
+								<p class="card-description">Training Consultant</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Biography and Courses</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<section class="card-content no-padding">
+								<a href="" class="background-image ratio square" style="background-image:url('/getmedia/dd8abce8-ce8f-4d8a-8507-bd03234fa89c/bee-hua-goh.jpg?width=300');" role="img"></a>
+							</section>
+							<section class="card-content">
+								<h3 class="card-title no-margin-bottom">Bee Hua Goh</h3>
+								<p class="card-description">Training Consultant</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Biography and Courses</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<section class="card-content no-padding">
+								<a href="" class="background-image ratio square" style="background-image:url('/getmedia/fc438531-57d7-4d6c-90b3-536a0f75c692/chantal-moss.jpg?width=300');" role="img"></a>
+							</section>
+							<section class="card-content">
+								<h3 class="card-title no-margin-bottom">Chantal Rosanna Moss</h3>
+								<p class="card-description">Training Consultant</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Biography and Courses</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+				<p class="toggler2">View sample HTML</p>
+				<div class="element2">
+					<pre>
+						<div class="code-type">HTML - Instructor profile card</div>
+						<code class="html">
+							&lt;article class="card hover-container component-red"&gt;<br>
+								&nbsp; &lt;section class="card-content no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="background-image ratio square" style="background-image:url('imageURL');" role="img"&gt;&lt;/a&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &lt;h3 class="card-title no-margin-bottom"&gt;Name&lt;/h3&gt;<br>
+									&nbsp; &nbsp; &lt;p class="card-description"&gt;Title&lt;/p&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;footer class="card-footer no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;Biography and Courses&lt;/a&gt;<br>
+								&nbsp; &lt;/footer&gt;<br>
+							&lt;/article&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="flex-row start">
+		<div class="col-lg-12">
+			<h3 class="toggler">Featured items (below the hero banner)</h3>
+			<div class="element">
+				<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<section class="card-content no-padding">
+								<a href="" class="background-image overlay-light hover-no-overlay ratio sixteen-nine" style="background-image:url('/getmedia/dafcdfbf-9e7d-468f-ab31-a94c5d40a26d/world-2019?width=500');" role="img"></a>
+							</section>
+							<section class="card-content">
+								<h3 class="card-title">MicroStrategy World 2019</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">It's not too early to reserve your seat! We're heading to Phoenix next February and the Early Bird rate is live.</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Learn more</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<section class="card-content no-padding">
+								<a href="" class="background-image overlay-light hover-no-overlay ratio sixteen-nine" style="background-image:url('/getmedia/4f00c46c-4f8f-418a-b519-741ec38dedcf/gartner?width=500');" role="img"></a>
+							</section>
+							<section class="card-content">
+								<h3 class="card-title">2018 Gartner Critical Capabilities for Analytics and BI</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">Read this year’s complete report for more detail and to see how Gartner evaluates MicroStrategy and its competitors across each critical product capability.</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Learn more</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<section class="card-content no-padding">
+								<a href="" class="background-image overlay-light hover-no-overlay ratio sixteen-nine" style="background-image:url('/getmedia/8260fb80-552b-4ede-9755-771a1abe9946/role-of-data-in-digital-transformation-bannertn?width=500');" role="img"></a>
+							</section>
+							<section class="card-content">
+								<h3 class="card-title">The Role of Data in Digital Transformation</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">Ray Wang, analyst, author and influencer, shares his insights and advice on the role that data plays in digital transformation and the advantages an Intelligent Enterprise has moving forward.</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Learn more</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+				<p class="toggler2">View sample HTML</p>
+				<div class="element2">
+					<pre>
+						<div class="code-type">HTML - Featured items card</div>
+						<code class="html">
+							&lt;article class="card hover-container component-red"&gt;<br>
+								&nbsp; &lt;section class="card-content no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="background-image overlay-light hover-no-overlay ratio sixteen-nine" style="background-image:url('imageURL');" role="img"&gt;&lt;/a&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &lt;h3 class="card-title"&gt;Item Title&lt;/h3&gt;<br>
+									&nbsp; &nbsp; &lt;div class="line tiny"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;p class="card-description"&gt;Item Description&lt;/p&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;footer class="card-footer no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;Learn more&lt;/a&gt;<br>
+								&nbsp; &lt;/footer&gt;<br>
+							&lt;/article&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="flex-row start">
+		<div class="col-lg-12">
+			<h3 class="toggler">Mixed Resources w/ resource thumbnails</h3>
+			<div class="element">
+				<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<section class="card-content no-padding">
+								<a href="" class="resource-thumbnail video background-image" style="background-image:url('/getmedia/96d4168c-bd22-4690-9710-0295e02e4573/world-2018-keynote-day-1?width=500');" role="img">
+									<span class="cta">Watch the video</span>
+									<div class="ratio sixteen-nine"></div>
+								</a>
+							</section>
+							<section class="card-content">
+								<div class="card-type text-block outline">Video</div>
+								<h3 class="card-title">World 2018 Keynote</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">Watch CEO Michael Saylor's World 2018 Keynote to see the Intelligence Enterprise in action.</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Watch the Video</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-blue">
+							<section class="card-content no-padding">
+								<a href="" class="resource-thumbnail brochure background-image" style="background-image:url('/getmedia/e5881688-0386-4639-bc77-c4031c01699b/map-of-the-intelligent-enterprise-brochure?width=500');" role="img">
+									<span class="cta">Read the Brochure</span>
+									<div class="ratio sixteen-nine"></div>
+								</a>
+							</section>
+							<section class="card-content">
+								<div class="card-type text-block outline">Brochure</div>
+								<h3 class="card-title">Intelligent Enterprise Companion Brochure</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">This brochure unpacks and provides details about each component of the Map of the Intelligent Enterprise.</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Read the Brochure</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-orange">
+							<section class="card-content no-padding">
+								<a href="" class="resource-thumbnail blog background-image" style="background-image:url('/getmedia/c1c1f65a-d044-4770-bd5f-ebf345a0695e/blog-header-organizational-design-6?width=500');" role="img">
+									<span class="cta">Read the Blog Post</span>
+									<div class="ratio sixteen-nine"></div>
+								</a>
+							</section>
+							<section class="card-content">
+								<div class="card-type text-block outline">Blog Post</div>
+								<h3 class="card-title">Organizational Design for an Intelligent Enterprise</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">In-depth exploration of the Intelligence Center portion of the Intelligent Enterprise from a human resources perspective.</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Read the Blog Post</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+				<p class="toggler2">View sample HTML</p>
+				<div class="element2">
+					<pre>
+						<div class="code-type">HTML - Resource thumbnail card</div>
+						<code class="html">
+							&lt;article class="card hover-container component-red"&gt;<br>
+								&nbsp; &lt;section class="card-content no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="resource-thumbnail video background-image" style="background-image:url('imageURL');" role="img"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span class="cta"&gt;CTA text&lt;/span&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;div class="ratio sixteen-nine"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;/a&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-type text-block outline"&gt;Resource Type&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;h3 class="card-title"&gt;Resource title&lt;/h3&gt;<br>
+									&nbsp; &nbsp; &lt;div class="line tiny"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;p class="card-description"&gt;Resource Description&lt;/p&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;footer class="card-footer no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;CTA text&lt;/a&gt;<br>
+								&nbsp; &lt;/footer&gt;<br>
+							&lt;/article&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="flex-row start">
+		<div class="col-lg-12">
+			<h3 class="toggler">Products and Packaging cards</h3>
+			<div class="element">
+				<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+
+					<div class="grid-item">
+						<article class="card hover-container component-green">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-devices medium"></i>
+								</div>
+								<div class="card-type text-block outline">Clients</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">Reporter</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">A consumer license that allows end users to view, execute, and interact with dashboards, reports, and documents via MicroStrategy Web.</p>
+								<p><a href="">View Details&nbsp;&raquo;</a></p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Learn more</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-servers medium"></i>
+								</div>
+								<div class="card-type text-block outline">Servers</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">Intelligence Server</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">Provides the core analytical processing power and job management features for reporting, analysis, and monitoring applications.</p>
+								<p><a href="">View Details&nbsp;&raquo;</a></p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Learn more</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-blue">
+							<header class="card-header">
+								<div class="card-corner">
+									<i class="icon icon-grid-plus medium"></i>
+								</div>
+								<div class="card-type text-block outline">Divers, Gateways, and Applications</div>
+							</header>
+							<section class="card-content">
+								<h3 class="card-title">Big Data</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">MicroStrategy supports all major Hadoop distributions, including Cloudera, Hortonworks, MapR, and Amazon EMR. Once connected, data stored in Hadoop is treated just like any other source, allowing organizations to easily build big data applications.</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Learn more</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+				<p class="toggler2">View sample HTML</p>
+				<div class="element2">
+					<pre>
+						<div class="code-type">HTML - Product and packaging card</div>
+						<code class="html">
+							&lt;article class="card hover-container component-red"&gt;<br>
+								&nbsp; &lt;header class="card-header"&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-corner"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;i class="icon icon-star medium"&gt;&lt;/i&gt;<br>
+									&nbsp; &nbsp; &lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-type text-block outline"&gt;Product type&lt;/div&gt;<br>
+								&nbsp; &lt;/header&gt;<br>
+								&nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &lt;h3 class="card-title"&gt;Product name&lt;/h3&gt;<br>
+									&nbsp; &nbsp; &lt;div class="line tiny"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;p class="card-description"&gt;Product description&lt;/p&gt;<br>
+									&nbsp; &nbsp; &lt;p&gt;&lt;a href="#lightboxURL"&gt;View details&nbsp;&raquo;&lt;/a&gt;&lt;/p&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;footer class="card-footer no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;Learn more&lt;/a&gt;<br>
+								&nbsp; &lt;/footer&gt;<br>
+							&lt;/article&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="flex-row start">
+		<div class="col-lg-12">
+			<h3 class="toggler">Solutions Cards</h3>
+			<div class="element">
+				<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+					<div class="grid-item">
+						<article class="card hover-container component-orange">
+							<header class="card-header positioned">
+								<div class="card-corner">
+									<i class="icon icon-mobile-devices medium"></i>
+								</div>
+							</header>
+							<section class="card-content no-padding">
+								<a href="" class="background-image overlay-light hover-no-overlay ratio sixteen-nine" style="background-image:url('/getmedia/13a47c03-1015-4b76-be27-5fc1bc815ca1/solution_biotech-pharma_field-sales-enablement?width=500');" role="img"></a>
+							</section>
+							<section class="card-content">
+								<div class="card-type text-block outline">Mobility Solution</div>
+								<h3 class="card-title">Field Sales Enablement</h3>
+								<div class="line tiny"></div>
+								<p class="card-details">
+									<span>Commercial</span>
+								</p>
+								<p class="card-description">Deploy highly customized mobile apps to boost the efficiency and effectiveness of commercial teams.</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Learn more</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-blue">
+							<header class="card-header positioned">
+								<div class="card-corner">
+									<i class="icon icon-badge medium"></i>
+								</div>
+							</header>
+							<section class="card-content no-padding">
+								<a href="" class="background-image overlay-light hover-no-overlay ratio sixteen-nine" style="background-image:url('/getmedia/80238150-0ea0-4545-80c4-7994a51c7e57/solution_energy-utilities_digital-employee-badge?width=500');" role="img"></a>
+							</section>
+							<section class="card-content">
+								<div class="card-type text-block outline">Identity and Telemetry Solution</div>
+								<h3 class="card-title">Digital Employee Badge</h3>
+								<div class="line tiny"></div>
+								<p class="card-details">
+									<span>Energy and Utility Companies</span>
+								</p>
+								<p class="card-description">Empower employees with secure access to offices, systems, and sensitive information by leveraging smartphone-based multi-factor authentication.</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Learn more</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<header class="card-header positioned">
+								<div class="card-corner">
+									<i class="icon icon-bar-graph medium"></i>
+								</div>
+							</header>
+							<section class="card-content no-padding">
+								<a href="" class="background-image overlay-light hover-no-overlay ratio sixteen-nine" style="background-image:url('/getmedia/6e47c1b1-84a4-40ff-8238-9a880078e355/solution_biotech-pharma_marketing-performance?width=500');" role="img"></a>
+							</section>
+							<section class="card-content">
+								<div class="card-type text-block outline">Analytics Solution</div>
+								<h3 class="card-title">Field Sales Enablement</h3>
+								<div class="line tiny"></div>
+								<p class="card-details">
+									<span>Headquarters</span>
+								</p>
+								<p class="card-description">Analyze market trends for product purchases and prescription renewals to assess the impact of advertising campaigns.</p>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Learn more</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+				<p class="toggler2">View sample HTML</p>
+				<div class="element2">
+					<pre>
+						<div class="code-type">HTML - Solution Card</div>
+						<code class="html">
+							&lt;article class="card hover-container component-red"&gt;<br>
+								&nbsp; &lt;header class="card-header positioned"&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-corner"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;i class="icon icon-star medium"&gt;&lt;/i&gt;<br>
+									&nbsp; &nbsp; &lt;/div&gt;<br>
+								&nbsp; &lt;/header&gt;<br>
+								&nbsp; &lt;section class="card-content no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="background-image overlay-light hover-no-overlay ratio sixteen-nine" style="background-image:url('imageURL');" role="img"&gt;&lt;/a&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-type text-block outline"&gt;Solution Type&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;h3 class="card-title"&gt;Solution title&lt;/h3&gt;<br>
+									&nbsp; &nbsp; &lt;div class="line tiny"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;p class="card-details"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span&gt;Solution sub-type&lt;/span&gt;<br>
+									&nbsp; &nbsp; &lt;/p&gt;<br>
+									&nbsp; &nbsp; &lt;p class="card-description"&gt;Solution description&lt;/p&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;footer class="card-footer no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;Learn more&lt;/a&gt;<br>
+								&nbsp; &lt;/footer&gt;<br>
+							&lt;/article&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="flex-row start">
+		<div class="col-lg-12">
+			<h3 class="toggler">Video Gallery</h3>
+			<div class="element">
+				<div class="flex-grid-sm-1 flex-grid-md-2 flex-grid-lg-3 cards start">
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<section class="card-content no-padding">
+								<a href="" class="resource-thumbnail video background-image" style="background-image:url('/getmedia/197b8098-3aaa-414b-803b-8ca5ce8f717f/HealthTrust-Uncovers-Value-for-its-Clients-Using-a-Dynamic-Mobile-App?width=500');" role="img">
+									<span class="cta">Watch the video</span>
+									<div class="ratio sixteen-nine"></div>
+								</a>
+							</section>
+							<section class="card-content">
+								<div class="card-type text-block outline">Customery Story</div>
+								<h3 class="card-title">HealthTrust Uncovers Value for its Clients Using a Dynamic Mobile App</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">Discover how HealthTrust Purchasing Group empowered their hospitals with detailed, real-time intelligence into supply chain management.</p>
+								<div class="tags text-block-group small">
+									<div class="text-block" role="button">Healthcare</div>
+									<div class="text-block" role="button">Enterprise Mobility</div>
+								</div>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Watch the Video</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<section class="card-content no-padding">
+								<a href="" class="resource-thumbnail video background-image" style="background-image:url('/getmedia/0ae524bb-3328-4f2a-bf6a-46c335b89bb9/resource-library-video-thumbnail_mstr-banking-overview');" role="img">
+									<span class="cta">Watch the video</span>
+									<div class="ratio sixteen-nine"></div>
+								</a>
+							</section>
+							<section class="card-content">
+								<div class="card-type text-block outline">Product Demo</div>
+								<h3 class="card-title">How to Integrate MicroStrategy with R Predictive Analytics</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">In this video, learn how to build a Cox Regression Survival Model in R to calculate a customer’s probability to Churn leveraging R and MicroStrategy together.</p>
+								<div class="tags text-block-group small">
+									<div class="text-block" role="button">Embedded Analytics</div>
+									<div class="text-block" role="button">Enterprise Analytics</div>
+									<div class="text-block" role="button">Advanced analytics</div>
+								</div>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Watch the Video</a>
+							</footer>
+						</article>
+					</div>
+					<div class="grid-item">
+						<article class="card hover-container component-red">
+							<section class="card-content no-padding">
+								<a href="" class="resource-thumbnail video background-image" style="background-image:url('/getmedia/52cf9ce2-3453-42cd-b114-380197ab8a23/resource-library-video-thumbnail_mstr-retail-overview');" role="img">
+									<span class="cta">Watch the video</span>
+									<div class="ratio sixteen-nine"></div>
+								</a>
+							</section>
+							<section class="card-content">
+								<div class="card-type text-block outline">How-to Video</div>
+								<h3 class="card-title">MicroStrategy Retail Industry Overview</h3>
+								<div class="line tiny"></div>
+								<p class="card-description">See why leading retailers rely on MicroStrategy analytics every day.</p>
+								<div class="tags text-block-group small">
+									<div class="text-block" role="button">Retail</div>
+									<div class="text-block" role="button">Enterprise Analytics</div>
+								</div>
+							</section>
+							<footer class="card-footer no-padding">
+								<a href="" class="button small light-gray arrow">Watch the Video</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+				<p class="toggler2">View sample HTML</p>
+				<div class="element2">
+					<pre>
+						<div class="code-type">HTML - Video Gallery Card</div>
+						<code class="html">
+							&lt;article class="card hover-container component-red"&gt;<br>
+								&nbsp; &lt;section class="card-content no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="resource-thumbnail video background-image" style="background-image:url('imageURL');" role="img"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;span class="cta"&gt;Watch the video&lt;/span&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;div class="ratio sixteen-nine"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;/a&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;section class="card-content"&gt;<br>
+									&nbsp; &nbsp; &lt;div class="card-type text-block outline"&gt;Video type&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;h3 class="card-title"&gt;Video title&lt;/h3&gt;<br>
+									&nbsp; &nbsp; &lt;div class="line tiny"&gt;&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;p class="card-description"&gt;Video Description&lt;/p&gt;<br>
+									&nbsp; &nbsp; &lt;div class="tags text-block-group small"&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;div class="text-block" role="button"&gt;Tags&lt;/div&gt;<br>
+										&nbsp; &nbsp; &nbsp; &lt;div class="text-block" role="button"&gt;Tags&lt;/div&gt;<br>
+									&nbsp; &nbsp; &lt;/div&gt;<br>
+								&nbsp; &lt;/section&gt;<br>
+								&nbsp; &lt;footer class="card-footer no-padding"&gt;<br>
+									&nbsp; &nbsp; &lt;a href="linkURL" class="button small light-gray arrow"&gt;Watch the Video&lt;/a&gt;<br>
+								&nbsp; &lt;/footer&gt;<br>
+							&lt;/article&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>

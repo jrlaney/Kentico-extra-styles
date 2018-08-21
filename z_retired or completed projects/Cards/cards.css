@@ -1,9 +1,140 @@
 section {
   overflow: hidden;
 }
+figure {
+  margin: 40px 0;
+}
+figcaption {
+  font-style: italic;
+}
+pre {
+  white-space: normal;
+  margin: 10px 0 40px 0;
+}
+code {
+  display: inline-block;
+  background-color: #f2f2f2;
+  color: #D9232E;
+  font-size: 14px;
+}
+.background-light-gray code {
+  background-color: #FFFFFF;
+}
+.code-type {
+  padding: 10px 20px;
+  background-color: #777777;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 20px;
+  background: #333333;
+  color: #FFFFFF;
+}
+.hljs,
+.hljs-subst {
+  color: #FFFFFF;
+}
+.hljs-comment {
+  color: #999999;
+}
+.hljs-tag {
+  color: #90c5d9;
+}
+.hljs-type,
+.hljs-string,
+.hljs-number,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-quote,
+.hljs-template-tag,
+.hljs-deletion {
+  color: #acff2a;
+}
+.hljs-title,
+.hljs-section {
+  color: #D9232E;
+  font-weight: bold;
+}
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #BC6060;
+}
+.hljs-literal {
+  color: #78A960;
+}
+.hljs-built_in,
+.hljs-bullet,
+.hljs-code,
+.hljs-addition {
+  color: #397300;
+}
+.hljs-meta {
+  color: #1f7199;
+}
+.hljs-meta-string {
+  color: #4d99bf;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-strong {
+  font-weight: bold;
+}
 .ratio .logo.spacing-40 {
   max-height: calc(100% - 80px);
   max-width: calc(100% - 80px);
+}
+#examples .flex-row .toggler {
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #777777;
+  margin-bottom: 0;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+#examples .flex-row .toggler.expanded {
+  color: #D9232E;
+}
+#examples .flex-row .toggler.expanded:before,
+#examples .flex-row .toggler.expanded:after {
+  background-color: #D9232E;
+}
+#examples .flex-row .toggler2 {
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+  color: #68AA00;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+#examples .flex-row .toggler2:before,
+#examples .flex-row .toggler2:after {
+  background-color: #68AA00;
+}
+#examples .flex-row .toggler2.expanded {
+  color: #78c300;
+}
+#examples .flex-row .toggler2.expanded:before,
+#examples .flex-row .toggler2.expanded:after {
+  background-color: #78c300;
+}
+#examples .flex-row > .col-lg-12 {
+  border-bottom: 1px solid #CCCCCC;
 }
 .cards .card {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -11,6 +142,9 @@ section {
 }
 .cards .card p {
   font-size: 16px;
+}
+.cards .card .card-content.no-padding .ratio:not(.background-image) {
+  border-bottom: 1px solid #CCCCCC;
 }
 .cards .card .card-type {
   font-weight: 600!important;
@@ -97,6 +231,24 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   text-align: center;
+}
+.cards .card.sample-card {
+  margin-bottom: 15px;
+}
+.cards .card.sample-card > header,
+.cards .card.sample-card > section,
+.cards .card.sample-card > footer {
+  opacity: 0.3;
+}
+.cards .card.sample-card > header.highlighted,
+.cards .card.sample-card > section.highlighted,
+.cards .card.sample-card > footer.highlighted {
+  opacity: 1;
+  -webkit-transform: translate(-15px, -15px);
+  transform: translate(-15px, -15px);
+  box-shadow: 15px 15px 0px #333333;
+  background-color: #FFFFFF;
+  border: 2px solid #333333;
 }
 .cards .card.component-red .card-type {
   border-color: #D9232E;

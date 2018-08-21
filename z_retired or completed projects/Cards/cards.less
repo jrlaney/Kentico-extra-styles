@@ -2,13 +2,144 @@
 
 section {overflow:hidden;}
 
+figure {
+  margin: (@base-spacing * 2) 0;
+}
+figcaption {
+  font-style: italic;
+}
+pre {
+  white-space: normal;
+  margin: (@base-spacing / 2) 0 (@base-spacing * 2) 0;
+}
+code {
+  display: inline-block;
+  background-color: @light-gray;
+  color: @red;
+  font-size: 14px;
+
+  .background-light-gray & {background-color: @white;}
+}
+.code-type {
+  padding: (@base-spacing / 2) @base-spacing;
+  background-color: @dark-gray;
+  color: @white;
+  .uppercase;
+}
+
+// highlight.js
+
+code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: @base-spacing;
+  background: @black;
+  color:@white;
+}
+.hljs,
+.hljs-subst {
+  color: @white;
+}
+.hljs-comment {
+  color: @gray;
+}
+.hljs-tag {color:lighten(@light-blue, 20%);}
+
+// .hljs-keyword,
+// .hljs-selector-tag,
+// .hljs-attribute,
+// .hljs-meta-keyword,
+// .hljs-doctag,
+// .hljs-name {
+//   font-weight: bold;
+// }
+.hljs-type,
+.hljs-string,
+.hljs-number,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-quote,
+.hljs-template-tag,
+.hljs-deletion {
+  color: lighten(@light-green, 20%);
+}
+.hljs-title,
+.hljs-section {
+  color: @red;
+  font-weight: bold;
+}
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #BC6060;
+}
+.hljs-literal {
+  color: #78A960;
+}
+.hljs-built_in,
+.hljs-bullet,
+.hljs-code,
+.hljs-addition {
+  color: #397300;
+}
+.hljs-meta {
+  color: #1f7199;
+}
+.hljs-meta-string {
+  color: #4d99bf;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-strong {
+  font-weight: bold;
+}
+
+
 //FOR LOGOS INSIDE OF RATIO BOXES
 .ratio .logo.spacing-40 {max-height:~"calc(100% - 80px)"; max-width:~"calc(100% - 80px)";}
+
+#examples .flex-row {
+    .toggler {
+    	font-family:@myriad-pro;
+    	font-size:22px;
+        font-weight:400;
+        color:@dark-gray;
+        margin-bottom:0;
+        .transition;
+        &.expanded {
+            color:@red;
+            &:before, &:after {background-color:@red;}
+        }
+    }
+    .toggler2 {
+    	font-family:@myriad-pro;
+    	font-size:16px;
+        .uppercase;
+        font-weight:600;
+        padding-top:15px; padding-bottom:15px;
+        margin-bottom:0;
+        color:@green;
+        .transition;
+        &:before, &:after {background-color:@green;}
+        &.expanded {
+            color:@light-green;
+            &:before, &:after {background-color:@light-green;}
+        }
+    }
+    > .col-lg-12 {border-bottom:1px solid @iron;}
+}
 
 .cards .card {
 	font-family:@myriad-pro;
 	font-size:16px;
 	p {font-size:16px;}
+
+    .card-content.no-padding .ratio:not(.background-image) {border-bottom:1px solid @iron;}
 
 	.card-type {font-weight:600!important;}
 	.card-header .card-type {border:none; white-space:normal; padding:0px;}
@@ -84,6 +215,20 @@ section {overflow:hidden;}
 			.uppercase;
 			text-align:center;
 		}
+	}
+
+	&.sample-card {
+        margin-bottom:15px;
+		> header, > section, > footer {
+            opacity:0.3;
+            &.highlighted {
+                opacity:1;
+                .transform(translate(-15px, -15px));
+                box-shadow:15px 15px 0px @black;
+                background-color:@white;
+                border:2px solid @black;
+            }
+        }
 	}
 	&.component-red {
 		.card-type {border-color:@red; color:@red;}
