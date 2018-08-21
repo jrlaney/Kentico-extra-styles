@@ -60,9 +60,6 @@
 .triangle-group.black:before {
   border-right-color: #333333;
 }
-.top-banner.overview {
-  background-image: url(/Strategy/media/images/company/company_hero-bkg_overview.jpg);
-}
 .text-uppercase {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: 0.1em;
@@ -481,7 +478,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0 auto 20px auto;
-  font-size: 70px;
+  font-size: 64px;
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
 }
@@ -504,19 +501,19 @@
   opacity: .75;
 }
 #values-slider .slick-dots > li .values-nav.engaged:before {
-  content: '\e95b';
+  content: '\e95c';
 }
 #values-slider .slick-dots > li .values-nav.precise:before {
-  content: '\ea2c';
+  content: '\ea2d';
 }
 #values-slider .slick-dots > li .values-nav.agile:before {
-  content: '\e97e';
+  content: '\e97f';
 }
 #values-slider .slick-dots > li .values-nav.transparent:before {
-  content: '\e98a';
+  content: '\e98b';
 }
 #values-slider .slick-dots > li .values-nav.cheerful:before {
-  content: '\e9ab';
+  content: '\e9ac';
 }
 #values-slider .slick-dots > li.slick-active .values-nav {
   opacity: 1;
@@ -600,21 +597,18 @@
   left: 100%;
 }
 #careers .infinite-gallery.one .gallery-img {
-  background-image: url(/Strategy/media/images/company/company_overview_careers-1.jpg);
   -webkit-animation: careers-slideshow 70s linear infinite;
   -moz-animation: careers-slideshow 70s linear infinite;
   -o-animation: careers-slideshow 70s linear infinite;
   animation: careers-slideshow 70s linear infinite;
 }
 #careers .infinite-gallery.two .gallery-img {
-  background-image: url(/Strategy/media/images/company/company_overview_careers-2.jpg);
   -webkit-animation: careers-slideshow 75s linear infinite reverse;
   -moz-animation: careers-slideshow 75s linear infinite reverse;
   -o-animation: careers-slideshow 75s linear infinite reverse;
   animation: careers-slideshow 75s linear infinite reverse;
 }
 #careers .infinite-gallery.three .gallery-img {
-  background-image: url(/Strategy/media/images/company/company_overview_careers-3.jpg);
   -webkit-animation: careers-slideshow 65s linear infinite;
   -moz-animation: careers-slideshow 65s linear infinite;
   -o-animation: careers-slideshow 65s linear infinite;
@@ -759,9 +753,6 @@
 #contact-us #hero .form-col .button.red:active {
   background-color: #1a1a1a;
 }
-.top-banner.press-kit {
-  background-image: url(/Strategy/media/images/company/company_hero-bkg_press-kit.jpg);
-}
 #press-contact .background-trans-black {
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -816,18 +807,6 @@
 }
 .image-section .background-trans-white {
   background-color: rgba(255, 255, 255, 0.9);
-}
-.image-section.diverse-people {
-  background-image: url(/Strategy/media/images/company/careers/careers_overview_diverse-ppl-bkg.jpg);
-}
-.image-section.work-life {
-  background-image: url(/Strategy/media/images/company/careers/careers_overview_work-life-bkg.jpg);
-}
-.image-section.at-the-table {
-  background-image: url(/getmedia/d2a0bf7e-2893-4ab7-8c35-903a2b7b9edb/at-the-table);
-}
-.global-team {
-  background-image: url(/Strategy/media/images/company/careers/careers_overview_global-team-bkg.jpg);
 }
 #roles-slider .role-bio-photo {
   padding: 20px 20px 20px 0;
