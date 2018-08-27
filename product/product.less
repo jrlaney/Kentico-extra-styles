@@ -6,6 +6,68 @@ main, section {overflow:hidden;}
 
 //component styles
 
+//TEMPORARY CARD STYLES ADD UNTIL GLOBAL CARD DEPLOYMENT
+.cards .card {
+	font-family:@myriad-pro;
+	font-size:16px;
+	p {font-size:16px;}
+
+    .card-content.no-padding .ratio:not(.background-image) {border-bottom:1px solid @iron;}
+
+	.card-type {font-weight:600!important;}
+	.card-header .card-type {border:none; white-space:normal; padding:0px;}
+	.card-title {font-weight:400;}
+	.card-details {
+		font-size:14px; line-height:14px;
+		font-weight:400;
+		.uppercase;
+
+		> span {
+			display:block;
+			margin-top:5px;
+			&:first-child {font-weight:600; margin-top:0;}
+		}
+	}
+	.card-description {
+		font-size:16px;
+		color:@dark-gray;
+		font-weight:400;
+	}
+
+	.card-footer .button {
+		display:block;
+		width:100%;
+	}
+
+	&:hover {box-shadow: 3px 3px 5px fade(@pure-black, 20%);}
+
+	&.component-red {
+		.card-type {border-color:@red; color:@red;}
+		&.hover-container:hover .card-footer .button.light-gray,
+		.card-footer .button.light-gray:hover {background-color:@red; color:@white;}
+	}
+	&.component-orange {
+		.card-type {border-color:@orange; color:@orange;}
+		&.hover-container:hover .card-footer .button.light-gray,
+		.card-footer .button.light-gray:hover {background-color:@orange; color:@white;}
+	}
+	&.component-green {
+		.card-type {border-color:@green; color:@green;}
+		&.hover-container:hover .card-footer .button.light-gray,
+		.card-footer .button.light-gray:hover {background-color:@green; color:@white;}
+	}
+	&.component-blue {
+		.card-type {border-color:@blue; color:@blue;}
+		&.hover-container:hover .card-footer .button.light-gray,
+		.card-footer .button.light-gray:hover {background-color:@blue; color:@white;}
+	}
+	&.component-navy-blue {
+		.card-type {border-color:@navy-blue; color:@navy-blue;}
+		&.hover-container:hover .card-footer .button.light-gray,
+		.card-footer .button.light-gray:hover {background-color:@navy-blue; color:@white;}
+	}
+}
+
 // special typography for feature pages
 .Product.PageMenuItem .page-title {
     font-family:@myriad-pro;

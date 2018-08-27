@@ -5,6 +5,99 @@ section {
 .button-group .button {
   max-width: 100%;
 }
+.cards .card {
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+.cards .card p {
+  font-size: 16px;
+}
+.cards .card .card-content.no-padding .ratio:not(.background-image) {
+  border-bottom: 1px solid #CCCCCC;
+}
+.cards .card .card-type {
+  font-weight: 600!important;
+}
+.cards .card .card-header .card-type {
+  border: none;
+  white-space: normal;
+  padding: 0px;
+}
+.cards .card .card-title {
+  font-weight: 400;
+}
+.cards .card .card-details {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.cards .card .card-details > span {
+  display: block;
+  margin-top: 5px;
+}
+.cards .card .card-details > span:first-child {
+  font-weight: 600;
+  margin-top: 0;
+}
+.cards .card .card-description {
+  font-size: 16px;
+  color: #777777;
+  font-weight: 400;
+}
+.cards .card .card-footer .button {
+  display: block;
+  width: 100%;
+}
+.cards .card:hover {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+.cards .card.component-red .card-type {
+  border-color: #D9232E;
+  color: #D9232E;
+}
+.cards .card.component-red.hover-container:hover .card-footer .button.light-gray,
+.cards .card.component-red .card-footer .button.light-gray:hover {
+  background-color: #D9232E;
+  color: #FFFFFF;
+}
+.cards .card.component-orange .card-type {
+  border-color: #FF9100;
+  color: #FF9100;
+}
+.cards .card.component-orange.hover-container:hover .card-footer .button.light-gray,
+.cards .card.component-orange .card-footer .button.light-gray:hover {
+  background-color: #FF9100;
+  color: #FFFFFF;
+}
+.cards .card.component-green .card-type {
+  border-color: #68AA00;
+  color: #68AA00;
+}
+.cards .card.component-green.hover-container:hover .card-footer .button.light-gray,
+.cards .card.component-green .card-footer .button.light-gray:hover {
+  background-color: #68AA00;
+  color: #FFFFFF;
+}
+.cards .card.component-blue .card-type {
+  border-color: #4789A3;
+  color: #4789A3;
+}
+.cards .card.component-blue.hover-container:hover .card-footer .button.light-gray,
+.cards .card.component-blue .card-footer .button.light-gray:hover {
+  background-color: #4789A3;
+  color: #FFFFFF;
+}
+.cards .card.component-navy-blue .card-type {
+  border-color: #11566F;
+  color: #11566F;
+}
+.cards .card.component-navy-blue.hover-container:hover .card-footer .button.light-gray,
+.cards .card.component-navy-blue .card-footer .button.light-gray:hover {
+  background-color: #11566F;
+  color: #FFFFFF;
+}
 .Product.PageMenuItem .page-title {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 20px;
