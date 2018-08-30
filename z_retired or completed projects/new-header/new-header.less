@@ -1,11 +1,11 @@
 @import '../../settings.less';
 
 //NEW MIXINGS FOR GLOBAL
-.transition-open(@args) {
+.single-transition-open(@args) {
     -webkit-transition: @args;
     transition: @args;
 }
-.transition-delay(@delay: 0.2s) {
+.single-transition-delay(@delay: 0.2s) {
     -moz-transition-delay: @delay;
     -webkit-transition-delay: @delay;
     transition-delay: @delay;
@@ -79,12 +79,12 @@ body {position:relative;}
 
     //animation for menu opening
     position:relative;
-    .transition(0.2s, ease-out, all, 0.2s);
+    .single-transition(0.2s, ease-out, all, 0.2s);
     .primary-menu-opened & {
         position:fixed;
         background-color:@black;
         top:0; left:0;
-        .transition-delay(0s);
+        .single-transition-delay(0s);
         @media @medium {background-color:transparent; border-bottom:none;}
     }
 
@@ -113,10 +113,10 @@ body {position:relative;}
 
                 //animations for menu opening
                 fill: @red;
-                .transition(0.2s, ease-out, all, 0.2s);
+                .single-transition(0.2s, ease-out, all, 0.2s);
                 .primary-menu-opened & {
                     fill:@white;
-                    .transition-delay(0s);
+                    .single-transition-delay(0s);
                 }
             }
         }
@@ -133,10 +133,10 @@ body {position:relative;}
 
                 //animations for menu opening
                 color:@monsoon; opacity:1;
-                .transition(0.2s, ease-out, all, 0.2s);
+                .single-transition(0.2s, ease-out, all, 0.2s);
                 .primary-menu-opened & {
                     opacity:0; .translateY(-100%);
-                    .transition-delay(0s);
+                    .single-transition-delay(0s);
                 }
             }
         }//end tagline
@@ -148,12 +148,12 @@ body {position:relative;}
             margin:0px!important;
             border:none!important;
             font-weight:@bold;
-            .transition(.2s, ease-out, all, 0.2s);
+            .single-transition(.2s, ease-out, all, 0.2s);
             .primary-menu-opened & {
                 background-color:@red;
                 color:@white;
                 &:hover {background-color:@light-red;}
-                .transition-delay(0.3s);
+                .single-transition-delay(0.3s);
             }
         }
     }
@@ -175,18 +175,18 @@ body {position:relative;}
             color:@monsoon;
             &.closed {
                 opacity:1; .translateY(0); color:@monsoon;
-                .transition-open(~"opacity 0.2s ease-out 0.5s, transform 0.2s ease-out 0.5s, color 0.2s ease-out 0s");
+                .single-transition-open(~"opacity 0.2s ease-out 0.5s, transform 0.2s ease-out 0.5s, color 0.2s ease-out 0s");
                 .primary-menu-opened & {
                     opacity:0; transform:translateY(-10px);
-                    .transition;
+                    .single-transition;
                 }
             }
             &.opened {
                 opacity:0; transform:translateY(10px); color:@white;
-                .transition;
+                .single-transition;
                 .primary-menu-opened & {
                     opacity:1; transform:translateY(0);
-                    .transition-delay(0.7s);
+                    .single-transition-delay(0.7s);
                 }
             }
         }//end text
@@ -205,9 +205,9 @@ body {position:relative;}
 
                 //animations for menu opening
                 background-color:@charcoal;
-                .transition-open(~"background 0.2s ease-out 0s, transform 0.4s ease-out 0.5s, opacity 0.4s ease-out 0.5s, margin 0.2s ease-out 0.5s");
+                .single-transition-open(~"background 0.2s ease-out 0s, transform 0.4s ease-out 0.5s, opacity 0.4s ease-out 0.5s, margin 0.2s ease-out 0.5s");
                 &.two {
-                    .transition-open(~"background 0.2s ease-out 0s, transform 0.4s ease-out 0.3s, opacity 0.4s ease-out 0.5s, margin 0.2s ease-out 0.5s");
+                    .single-transition-open(~"background 0.2s ease-out 0s, transform 0.4s ease-out 0.3s, opacity 0.4s ease-out 0.5s, margin 0.2s ease-out 0.5s");
                 }
                 //animation for the lines when the menu is opened
                 .primary-menu-opened & {
@@ -244,10 +244,10 @@ body.primary-menu-opened {
 
     //animation to stack the nav on top of the content when opened
     z-index:-2; opacity:0;
-    .transition-open(~"z-index 0.5s step-end, opacity 0.5s step-end 0s");
+    .single-transition-open(~"z-index 0.5s step-end, opacity 0.5s step-end 0s");
     .primary-menu-opened & {
         z-index:@header-z-index - 1; opacity:1;
-        .transition-open(~"z-index 0s step-start, opacity 0s step-start");
+        .single-transition-open(~"z-index 0s step-start, opacity 0s step-start");
     }
 
     @media @medium {
@@ -289,10 +289,10 @@ body.primary-menu-opened {
 
         //animate nav in after menu is opened to prevent jumping
         opacity:0; .translateX(10%);
-        .transition-open(~"opacity 0.2s ease-in 0s, transform 0.3s ease-out 0s");
+        .single-transition-open(~"opacity 0.2s ease-in 0s, transform 0.3s ease-out 0s");
         .primary-menu-opened & {
             opacity:1; .translateX(0);
-            .transition-open(~"opacity 0.3s ease-in 0.3s, transform 0.3s ease-in 0.3s");
+            .single-transition-open(~"opacity 0.3s ease-in 0.3s, transform 0.3s ease-in 0.3s");
         }
         @media @medium {
             min-height:0;
@@ -327,7 +327,7 @@ body.primary-menu-opened {
                 height:auto;
                 //give sub links in level 2-3 a dark highlight on hover
                 .menu-item {
-                    .transition;
+                    .single-transition;
                     &:hover {background-color:fade(@pure-black, 50%);}
                 }
             }
@@ -370,10 +370,10 @@ body.primary-menu-opened {
                 box-shadow:1px 1px 10px fade(@pure-black, 40%);
 
                 opacity:0;
-                .transition-open(~"opacity 0s ease-in 0s, background-color 0.2s ease-out 0s");
+                .single-transition-open(~"opacity 0s ease-in 0s, background-color 0.2s ease-out 0s");
                 .primary-menu-opened & {
                     opacity:1;
-                    .transition-open(~"opacity 0.2s ease-in 0.55s, background-color 0.2s ease-out 0s");
+                    .single-transition-open(~"opacity 0.2s ease-in 0.55s, background-color 0.2s ease-out 0s");
                 }
             }
         }
@@ -480,7 +480,7 @@ body.primary-menu-opened {
                     top:-@header-height - 2px; right:100%;
                     height:~"calc(100vh - @{header-height} * 2 + 4px)"; width:@mobile-tap-gutter;
                     background-color:fade(@pure-black, 20%);
-                    .transition;
+                    .single-transition;
                 }
 
                 //for the reverse-facing triangle
@@ -494,7 +494,7 @@ body.primary-menu-opened {
                     border-right:7px solid @white;
 
                     .translateY(-50%);
-                    .transition;
+                    .single-transition;
                 }
             }
             @media @medium {
@@ -503,7 +503,7 @@ body.primary-menu-opened {
                 border-top:none;
                 //animations
                 opacity:0.6;
-                .transition;
+                .single-transition;
                 &:hover {opacity:1;}
 
                 &.back {display:none;}
@@ -540,7 +540,7 @@ body.primary-menu-opened {
 
                         //animations
                         max-height:0; opacity:0; padding-top:0;
-                        .transition;
+                        .single-transition;
                     }
                 }
                 &.active > .menu-item .section-summary {
@@ -621,23 +621,23 @@ body.primary-menu-opened {
             //for the panels sliding out
             > .node-panel {
                 overflow:hidden;
-                .transition;
+                .single-transition;
                 @media @medium {
                     .translateX(-50%);
                     height:0;
                     opacity:0;
-                    .transition-open(~"all 0.2s ease-out 0s, height 0.2s step-end");
+                    .single-transition-open(~"all 0.2s ease-out 0s, height 0.2s step-end");
                 }
             }
             &.active > .node-panel {
                 overflow:visible;
                 .translateX(-100%);
-                .transition-delay(0.2s);
+                .single-transition-delay(0.2s);
                 @media @medium {
                     .translateX(0);
                     height:100%;
                     opacity:1;
-                    .transition-open(~"all 0.2s ease-out 0.2s, height 0.2s step-start");
+                    .single-transition-open(~"all 0.2s ease-out 0.2s, height 0.2s step-start");
                 }
             }
 
@@ -648,9 +648,9 @@ body.primary-menu-opened {
             //animations for fading in the back button side bar so it doesnt jump in
             > .node-panel > .menu-item.back:before {
                 opacity:0;
-                .transition;
+                .single-transition;
             }
-            &.active > .node-panel > .menu-item.back:before {opacity:1; .transition-delay(0.3s);}
+            &.active > .node-panel > .menu-item.back:before {opacity:1; .single-transition-delay(0.3s);}
 
 
 
@@ -667,7 +667,7 @@ body.primary-menu-opened {
 
                 .translate(0, -50%);
                 //opacity:0.5;
-                .transition;
+                .single-transition;
             }
             > .menu-item:hover:after {opacity:1;}
             &.active > .menu-item:after {
@@ -745,7 +745,7 @@ body.primary-menu-opened {
             text-align:left;
             width:100%;
             background-color:fade(@pure-black, 25%);
-            .transition;
+            .single-transition;
             &:hover {background-color:fade(@pure-black, 30%);}
             &.open {background-color:fade(@pure-black, 30%);}
             .dropdown-toggle {
@@ -762,12 +762,12 @@ body.primary-menu-opened {
         background-color:@black;
 
         //animations
-        .transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.2s ease-out 0.2s");
+        .single-transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.2s ease-out 0.2s");
         opacity:0; .translateX(100%);
         .primary-menu-opened & {
             opacity:1;
             .translateX(0);
-            .transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s");
+            .single-transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s");
         }
         @media @medium {
             background-color:transparent;
@@ -787,10 +787,10 @@ body.primary-menu-opened {
 
                 //animate in when menu is opened
                 opacity:0; .translateX(-20%);
-                .transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.2s ease-out 0.2s, background-color 0.2s ease-out 0s");
+                .single-transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.2s ease-out 0.2s, background-color 0.2s ease-out 0s");
                 .primary-menu-opened & {
                     opacity:1; .translateX(0);
-                    .transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s, background-color 0.2s ease-out 0s");
+                    .single-transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s, background-color 0.2s ease-out 0s");
                 }
             }
             &:before {
@@ -799,10 +799,10 @@ body.primary-menu-opened {
 
                 //animate in when menu is opened
                 opacity:0; .translateX(20%);
-                .transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.3s ease-out 0.2s");
+                .single-transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.3s ease-out 0.2s");
                 .primary-menu-opened & {
                     opacity:1; .translateX(0);
-                    .transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s");
+                    .single-transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s");
                 }
             }
         }

@@ -31,7 +31,7 @@
 			padding:0;
 			margin:0;
 			opacity:0;
-			.transition-duration(1s);
+			.single-transition-duration(1s);
 		}
 	}
 	.hp-banner {
@@ -41,7 +41,7 @@
 			margin:0 auto;
 			height:100%;
 			opacity:0;
-			.transition-duration(1s);
+			.single-transition-duration(1s);
 
 			img {max-width:none;}
 			&:before,
@@ -52,7 +52,7 @@
 		&.animate-out {
 			opacity:0!important;
 			.hp-banner-inner {.opacity(0)!important;}
-			.hp-banner-inner * {.transition(all 0.2s ease-in 0.1s)!important;} /*makes all child elements of banners animate out quickly*/}
+			.hp-banner-inner * {.single-transition(all 0.2s ease-in 0.1s)!important;} /*makes all child elements of banners animate out quickly*/}
 	}
 }
 /*pager dots and arrows for banners*/
@@ -65,7 +65,7 @@
 	height:30px;
 	width:100%;
 	background:transparent;
-	.transition-duration(0.2s);
+	.single-transition-duration(0.2s);
 
 	span {
 		display: inline-block;
@@ -79,7 +79,7 @@
 		position: relative;
 		cursor:pointer;
 		.opacity(0);
-		.transition-duration(0.2s);
+		.single-transition-duration(0.2s);
 	}
 }
 .sequence:hover .sequence-pagination span {
@@ -101,7 +101,7 @@
 	background-color:rgba(0,0,0, 0.00);
 	background-position:center center;
 	cursor:pointer;
-	.transition-duration(0.2s);
+	.single-transition-duration(0.2s);
 
 	&:hover {background-color:@black; background-color:rgba(0,0,0, 0.30);}
 	&.sequence-next {

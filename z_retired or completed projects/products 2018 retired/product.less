@@ -41,7 +41,7 @@
             top:0; left:0;
             width:3px; height:100%;
             .translateX(-3px);
-            .transition;
+            .single-transition;
         }
         &.red:before {background-color:@red;}
         &.orange:before {background-color:@orange;}
@@ -273,7 +273,7 @@
         @media @medium { bottom: @column-gutter; right: @column-gutter; }
         @media @large { bottom: @column-gutter + @column-gutter / 2; right: @column-gutter + @column-gutter / 2; }
         z-index: 1;
-        .transition(.4s);
+        .single-transition(.4s);
 
         &.hidden {
             opacity: 0;
@@ -286,7 +286,7 @@
             height: extract(@icon-sizes, 3) * 2;
             .position(absolute, @right: (extract(@icon-sizes, 3) * 2));
             opacity: 0;
-            .transition;
+            .single-transition;
             text-align: center;
             background-color: darken(@dark-gray, @darken);
             font-size: 12px;
@@ -399,7 +399,7 @@
             top:0; left:0;
             width:3px; height:100%;
             .translateX(-3px);
-            .transition;
+            .single-transition;
         }
         &.red:before {background-color:@red;}
         &.orange:before {background-color:@orange;}
@@ -521,7 +521,7 @@
                 .text {
                     opacity:0.6;
                     h3 {margin-bottom:5px;}
-                    .transition(opacity, 0.2s, ease-out, 0s);
+                    .single-transition(opacity, 0.2s, ease-out, 0s);
                 }
                 &.active .text {opacity:1;}
                 &:nth-child(even) {
@@ -646,7 +646,7 @@
             outline:0;
             opacity:1;
             color:@gray;
-            .transition(opacity, 0.2s, ease-out, 0s);
+            .single-transition(opacity, 0.2s, ease-out, 0s);
             &.disabled {opacity:0.2;}
             &.prev {left:0px; .rotation(180deg);}
             &.next {right:0px;}
@@ -678,7 +678,7 @@
                     top:~"calc(50% + 40px)"; left:50%;
                     .translate(-50%, -50%);
                     opacity:0.9;
-                    .transition;
+                    .single-transition;
                 }
                 &:hover .report-image {
                     .translate(-50%, ~"calc(-50% - 10px)"); opacity:1;

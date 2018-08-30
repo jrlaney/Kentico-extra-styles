@@ -463,8 +463,8 @@
   letter-spacing: 0.05em;
   font-weight: 400;
   opacity: 0.4;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 #values-slider .slick-dots > li .values-nav:before {
   display: block;
@@ -479,8 +479,8 @@
   -moz-osx-font-smoothing: grayscale;
   margin: 0 auto 20px auto;
   font-size: 64px;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 #values-slider .slick-dots > li .values-nav:after {
   display: block;
@@ -494,8 +494,8 @@
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
   border-top: 10px solid transparent;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 #values-slider .slick-dots > li .values-nav:hover {
   opacity: .75;
@@ -760,8 +760,8 @@
   color: #11566F;
 }
 #press-kit-screenshots .grid-item .overlay-black:after {
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   background-color: rgba(0, 0, 0, 0.3);
 }
 #press-kit-screenshots .grid-item:hover .overlay-black:after {
@@ -845,8 +845,8 @@
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
   border: 1px solid #FFFFFF;
   opacity: 0.6;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 #roles-nav .grid-item .role-nav-card .role-bio-photo {
   margin: 0 10px 0 0;

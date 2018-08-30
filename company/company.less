@@ -127,7 +127,7 @@
 
                 opacity:0.6;
                 h3 {margin-bottom:5px;}
-                .transition(opacity, 0.2s, ease-out, 0s);
+                .single-transition(opacity, 0.2s, ease-out, 0s);
             }
             &.active .text {opacity:1;}
             .flag {
@@ -253,7 +253,7 @@
         outline:0;
         opacity:1;
         color:@gray;
-        .transition(opacity, 0.2s, ease-out, 0s);
+        .single-transition(opacity, 0.2s, ease-out, 0s);
         &.disabled {opacity:0.2;}
         &.prev {left:0px; .rotation(180deg);}
         &.next {right:0px;}
@@ -320,7 +320,7 @@
                 .uppercase;
                 font-weight:400;
                 opacity:0.4;
-                .transition;
+                .single-transition;
 
                 &:before {
                     display:block;
@@ -328,7 +328,7 @@
                     .pretty-icon;
                     margin:0 auto 20px auto;
                     font-size:64px;
-                    .transition;
+                    .single-transition;
                 }
                 &:after {
                     display:block; position:absolute;
@@ -339,7 +339,7 @@
                     border-left: 9px solid transparent;
                     border-right: 9px solid transparent;
                     border-top: 10px solid transparent;
-                    .transition;
+                    .single-transition;
                 }
                 &:hover {opacity:.75;}
 
@@ -512,7 +512,7 @@
     .background-trans-black {background-color: rgba(0,0,0,0.2);}
     .card.component-white .card-header .card-corner {color:@navy-blue;}
 }
-#press-kit-screenshots .grid-item .overlay-black:after {.transition(); background-color: rgba(0,0,0,0.3);}
+#press-kit-screenshots .grid-item .overlay-black:after {.single-transition(); background-color: rgba(0,0,0,0.3);}
 #press-kit-screenshots .grid-item:hover .overlay-black:after {background-color: rgba(0,0,0,0.0);}
 
 
@@ -582,7 +582,7 @@
             box-shadow:1px 1px 5px fade(@pure-black, 0%);
             border:1px solid @white;
             opacity:0.6;
-            .transition;
+            .single-transition;
             .role-bio-photo {margin:0 10px 0 0;}
             .text > p {
                 margin:0; padding:0;
