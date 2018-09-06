@@ -473,7 +473,7 @@ section.static-links {padding:20px;}
         .line {background-color:@white;}
         // FOR THE HOVER ANIMATION
         min-height:50px;
-        .transition(.2s, ease-in, all, 0.2s);
+        .single-transition(.2s, ease-in, all, 0.2s);
         .overlay-content {
             display:block; position:relative;
             overflow:hidden;
@@ -484,7 +484,7 @@ section.static-links {padding:20px;}
     }
     &:hover .img .img-content {
         min-height:100%;
-        .transition(.2s, ease-out, all, 0s);
+        .single-transition(.2s, ease-out, all, 0s);
         .overlay-content {
             max-height:900px; opacity:1;
               -webkit-transition:max-height 0.4s ease-out 0.1s, opacity 0.4s ease-out 0.2s;

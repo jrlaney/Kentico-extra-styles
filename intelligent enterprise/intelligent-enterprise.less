@@ -2,7 +2,7 @@
 
 //COMMON ELEMENTS
 //mixin for delay only
-.transition-delay(@duration:.2s) {
+.single-transition-delay(@duration:.2s) {
     -webkit-transition-delay: @duration;
     transition-delay: @duration;
 }
@@ -58,7 +58,7 @@
             top:0; left:0;
             width:3px; height:100%;
             .translateX(-3px);
-            .transition;
+            .single-transition;
         }
         &.red:before {background-color:@red;}
         &.orange:before {background-color:@orange;}
@@ -146,14 +146,14 @@ blockquote {
         padding-bottom:200px;
         height:0;
         margin-top:30px;
-        .transition(0.3s, ease-out, all, 0s);
+        .single-transition(0.3s, ease-out, all, 0s);
 
         .resource-thumbnail {
             position:absolute; z-index:1;
             height:100%; width:100%;
             top:0; left:0;
             cursor:pointer;
-            .transition(0.3s, ease-out, all, 0s);
+            .single-transition(0.3s, ease-out, all, 0s);
             &:before {margin-top:-15px;}
             .cta {margin-top:50px; opacity:1;}
             &:after {display:none;}
@@ -164,7 +164,7 @@ blockquote {
             top:50%; left:50%;
             .translate(-50%, -40%);
             opacity:0;
-            .transition(0.3s, ease-out, all, 0.3s);
+            .single-transition(0.3s, ease-out, all, 0.3s);
         }
 
         &.video-playing {
@@ -306,7 +306,7 @@ blockquote {
         background-color:@pure-black;
 
         opacity:0;
-        .transition;
+        .single-transition;
     }
     &:before {
         content:'';
@@ -319,7 +319,7 @@ blockquote {
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
 
         opacity:0;
-        .transition;
+        .single-transition;
     }
 
     > .flex-row {
@@ -327,7 +327,7 @@ blockquote {
     }
 
     //center the sticky div in the viewport when over the content
-    //&.sticky-mode {.transition;}
+    //&.sticky-mode {.single-transition;}
     &.ext-forces,
     &.ent-assets,
     &.int-platform,
@@ -398,11 +398,11 @@ blockquote {
             padding:20px;
             width:100%;
             margin:@mapGutter;
-            .transition-open(~"0.5s all ease-out 0s, 0.2s background-color ease-out 0s");
+            .single-transition-open(~"0.5s all ease-out 0s, 0.2s background-color ease-out 0s");
         }
         @media @large {font-size:18px;}
 
-        .map-section-title {display:block; width:100%; max-height:100vh; opacity:1; .transition;}
+        .map-section-title {display:block; width:100%; max-height:100vh; opacity:1; .single-transition;}
         &:hover .map-section-title {color:@white;}
         .revealed-content {display:block; overflow:hidden; width:100%; max-height:0; opacity:0;}
 
@@ -669,7 +669,7 @@ blockquote {
                     border-bottom:1px solid @white;
 
                     &:last-child {border-bottom:none;}
-                    .feature-list-title {width:100%; color:fade(@white, 60%); .transition;}
+                    .feature-list-title {width:100%; color:fade(@white, 60%); .single-transition;}
                     .feature-group {
                         .display(flex);
                         .flex-direction(row);
@@ -683,7 +683,7 @@ blockquote {
                         padding:0;
                         max-height:0;
                         opacity:0;
-                        .transition;
+                        .single-transition;
                         > li {
                             .display(flex);
                             .flex-direction(column);
@@ -698,7 +698,7 @@ blockquote {
                     }
                     &.active {
                         .feature-list-title {color:@white;}
-                        .feature-group {max-height:100vh; opacity:1; padding:5px 0 0 0; .transition-delay(0.2s);}
+                        .feature-group {max-height:100vh; opacity:1; padding:5px 0 0 0; .single-transition-delay(0.2s);}
                     }
                 }
             }
@@ -1029,7 +1029,7 @@ blockquote {
                     border-bottom:1px solid @white;
 
                     &:last-child {border-bottom:none;}
-                    .feature-list-title {width:100%; color:fade(@white, 60%); .transition;}
+                    .feature-list-title {width:100%; color:fade(@white, 60%); .single-transition;}
                     .feature-group {
                         .display(flex);
                         .flex-direction(row);
@@ -1043,7 +1043,7 @@ blockquote {
                         padding:0;
                         max-height:0;
                         opacity:0;
-                        .transition;
+                        .single-transition;
                         > li {
                             .display(flex);
                             .flex-direction(column);
@@ -1058,7 +1058,7 @@ blockquote {
                     }
                     &.active {
                         .feature-list-title {color:@white;}
-                        .feature-group {max-height:100vh; opacity:1; padding:5px 0 0 0; .transition-delay(0.2s);}
+                        .feature-group {max-height:100vh; opacity:1; padding:5px 0 0 0; .single-transition-delay(0.2s);}
                     }
                 }
             }

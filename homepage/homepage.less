@@ -8,7 +8,7 @@
 	padding:@base-spacing;
 	color:@black;
 	.box-shadow(1px 1px 5px fade(@pure-black, 0%));
-	.transition;
+	.single-transition;
 	.icon {
 		color:@red;
 		font-size:50px;
@@ -70,7 +70,7 @@
 		top:0; left:0;
 		height:100%; width:100%;
 
-		opacity:0; .transition(0.5s, ease-out, all, 0.5s);
+		opacity:0; .single-transition(0.5s, ease-out, all, 0.5s);
 	}
 
 	.device-row {
@@ -80,7 +80,7 @@
 			position:absolute; z-index:3;
 			top:0; left:50%;
 			opacity:0; .translate(-50% , 20px);
-			.transition(0.3s, ease-out, all, 0s);
+			.single-transition(0.3s, ease-out, all, 0s);
 		}
 		.macbook-pro {width:85%; }
 		.ipad {width:70%;}
@@ -91,31 +91,31 @@
 	&.first {
 		.banner-background.first {
 			opacity:1; z-index:1;
-			.transition(0.5s, ease-out, opacity, 0s);
+			.single-transition(0.5s, ease-out, opacity, 0s);
 		}
 		.device-row .device-mockup.first {
 			opacity:1; z-index:1; .translate(-50%, 0);
-			.transition-open(~"opacity 0.3s ease-out 0.3s, transform 0.3s @{custom-bez} 0.3s");
+			.single-transition-open(~"opacity 0.3s ease-out 0.3s, transform 0.3s @{custom-bez} 0.3s");
 		}
 	}
 	&.second {
 		.banner-background.second {
 			opacity:1; z-index:1;
-			.transition(0.5s, ease-out, opacity, 0s);
+			.single-transition(0.5s, ease-out, opacity, 0s);
 		}
 		.device-row .device-mockup.second {
 			opacity:1; z-index:1; .translate(-50%, 0);
-			.transition-open(~"opacity 0.3s ease-out 0.3s, transform 0.3s @{custom-bez} 0.3s");
+			.single-transition-open(~"opacity 0.3s ease-out 0.3s, transform 0.3s @{custom-bez} 0.3s");
 		}
 	}
 	&.third {
 		.banner-background.third {
 			opacity:1; z-index:1;
-			.transition(0.5s, ease-out, opacity, 0s);
+			.single-transition(0.5s, ease-out, opacity, 0s);
 		}
 		.device-row .device-mockup.third {
 			opacity:1; z-index:1; .translate(-50%, 0);
-			.transition-open(~"opacity 0.3s ease-out 0.3s, transform 0.3s @{custom-bez} 0.3s");
+			.single-transition-open(~"opacity 0.3s ease-out 0.3s, transform 0.3s @{custom-bez} 0.3s");
 		}
 	}
 
@@ -245,7 +245,7 @@
 	}
 	@media @medium {
 		.overlay-black {
-			&:after {background-color:fade(@pure-black, 60%); .transition;}
+			&:after {background-color:fade(@pure-black, 60%); .single-transition;}
 			&:hover:after {background-color:fade(@pure-black, 50%);}
 		}
 	}
