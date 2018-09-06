@@ -4,6 +4,8 @@ main, section {overflow:hidden;}
 
 .button-group .button {max-width:100%;}
 
+.InternetExplorer .slick-slide > img {flex-shrink:0;}
+
 //component styles
 
 //TEMPORARY CARD STYLES ADD UNTIL GLOBAL CARD DEPLOYMENT
@@ -563,6 +565,17 @@ main, section {overflow:hidden;}
         }
     }
 
+	.InternetExplorer & {
+		.angle-wrapper {display:none;}
+		&:after {
+			content:'';
+			position:absolute;
+			height:50vw; width:100vw;
+			bottom:-10vw;left:0;
+			.transform(skew(0, -10deg));
+		}
+	}
+
     //changes angle color based on the defined hero row color
     .loop-colors(@i) when (@i > 0) {
         .loop-colors(@i - 1);
@@ -574,6 +587,10 @@ main, section {overflow:hidden;}
             background-color:@color;
             .angle {background-color:darken(desaturate(@color, 5%), 5%); @media @medium {background-color:@color;}}
             .angle.right {background-color:lighten(saturate(@color, 5%), 20%); @media @medium {background-color:@color;}}
+			.InternetExplorer & {
+				background-color:@color!important;
+				&:after {background-color:@color!important;}
+			}
         }
     }
     .loop-colors(length(@color-classes));

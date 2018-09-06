@@ -5,6 +5,9 @@ section {
 .button-group .button {
   max-width: 100%;
 }
+.InternetExplorer .slick-slide > img {
+  flex-shrink: 0;
+}
 .cards .card {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -929,6 +932,19 @@ section {
     left: 50%;
   }
 }
+.InternetExplorer #hero.angled-banner .angle-wrapper {
+  display: none;
+}
+.InternetExplorer #hero.angled-banner:after {
+  content: '';
+  position: absolute;
+  height: 50vw;
+  width: 100vw;
+  bottom: -10vw;
+  left: 0;
+  -webkit-transform: skew(0, -10deg);
+  transform: skew(0, -10deg);
+}
 #hero.angled-banner.red {
   background-color: #D9232E;
 }
@@ -947,6 +963,12 @@ section {
   #hero.angled-banner.red .angle.right {
     background-color: #D9232E;
   }
+}
+.InternetExplorer #hero.angled-banner.red {
+  background-color: #D9232E !important;
+}
+.InternetExplorer #hero.angled-banner.red:after {
+  background-color: #D9232E !important;
 }
 #hero.angled-banner.blue {
   background-color: #4789A3;
@@ -967,6 +989,12 @@ section {
     background-color: #4789A3;
   }
 }
+.InternetExplorer #hero.angled-banner.blue {
+  background-color: #4789A3 !important;
+}
+.InternetExplorer #hero.angled-banner.blue:after {
+  background-color: #4789A3 !important;
+}
 #hero.angled-banner.navy-blue {
   background-color: #11566F;
 }
@@ -985,6 +1013,12 @@ section {
   #hero.angled-banner.navy-blue .angle.right {
     background-color: #11566F;
   }
+}
+.InternetExplorer #hero.angled-banner.navy-blue {
+  background-color: #11566F !important;
+}
+.InternetExplorer #hero.angled-banner.navy-blue:after {
+  background-color: #11566F !important;
 }
 #hero.angled-banner.orange {
   background-color: #FF9100;
@@ -1005,6 +1039,12 @@ section {
     background-color: #FF9100;
   }
 }
+.InternetExplorer #hero.angled-banner.orange {
+  background-color: #FF9100 !important;
+}
+.InternetExplorer #hero.angled-banner.orange:after {
+  background-color: #FF9100 !important;
+}
 #hero.angled-banner.green {
   background-color: #68AA00;
 }
@@ -1023,6 +1063,12 @@ section {
   #hero.angled-banner.green .angle.right {
     background-color: #68AA00;
   }
+}
+.InternetExplorer #hero.angled-banner.green {
+  background-color: #68AA00 !important;
+}
+.InternetExplorer #hero.angled-banner.green:after {
+  background-color: #68AA00 !important;
 }
 #hero.angled-banner.gray {
   background-color: #999999;
@@ -1043,6 +1089,12 @@ section {
     background-color: #999999;
   }
 }
+.InternetExplorer #hero.angled-banner.gray {
+  background-color: #999999 !important;
+}
+.InternetExplorer #hero.angled-banner.gray:after {
+  background-color: #999999 !important;
+}
 #hero.angled-banner.light-gray {
   background-color: #f2f2f2;
 }
@@ -1061,6 +1113,12 @@ section {
   #hero.angled-banner.light-gray .angle.right {
     background-color: #f2f2f2;
   }
+}
+.InternetExplorer #hero.angled-banner.light-gray {
+  background-color: #f2f2f2 !important;
+}
+.InternetExplorer #hero.angled-banner.light-gray:after {
+  background-color: #f2f2f2 !important;
 }
 #hero.angled-banner.dark-gray {
   background-color: #777777;
@@ -1081,6 +1139,12 @@ section {
     background-color: #777777;
   }
 }
+.InternetExplorer #hero.angled-banner.dark-gray {
+  background-color: #777777 !important;
+}
+.InternetExplorer #hero.angled-banner.dark-gray:after {
+  background-color: #777777 !important;
+}
 #hero.angled-banner.black {
   background-color: #333333;
 }
@@ -1100,6 +1164,12 @@ section {
     background-color: #333333;
   }
 }
+.InternetExplorer #hero.angled-banner.black {
+  background-color: #333333 !important;
+}
+.InternetExplorer #hero.angled-banner.black:after {
+  background-color: #333333 !important;
+}
 #hero.angled-banner.white {
   background-color: #FFFFFF;
 }
@@ -1118,6 +1188,12 @@ section {
   #hero.angled-banner.white .angle.right {
     background-color: #FFFFFF;
   }
+}
+.InternetExplorer #hero.angled-banner.white {
+  background-color: #FFFFFF !important;
+}
+.InternetExplorer #hero.angled-banner.white:after {
+  background-color: #FFFFFF !important;
 }
 .number-group {
   position: relative;
