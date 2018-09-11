@@ -2152,6 +2152,47 @@ section.below-card {
     width: 25%;
   }
 }
+.MicrostrategyAtDreamforce2018 #sessions .flex-row.around > div {
+  display: -webkit-flex;
+  display: flex;
+}
+.MicrostrategyAtDreamforce2018 #sessions .flex-row.around > div > div {
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+  max-width: none;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.MicrostrategyAtDreamforce2018 #sessions .flex-row.around > div > div .background-trans-black {
+  margin-top: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+.MicrostrategyAtDreamforce2018 #sessions .flex-row.around > div > div .flex {
+  display: block;
+  max-width: 100%;
+}
+.MicrostrategyAtDreamforce2018 #sessions .flex-row.around > div > div .flex .margin-left-20 {
+  margin-left: 0!important;
+  margin-top: 20px;
+}
+@media only screen and (min-width: 980px) {
+  .MicrostrategyAtDreamforce2018 #sessions .flex-row.around > div > div .flex {
+    display: -webkit-flex;
+    display: flex;
+  }
+  .MicrostrategyAtDreamforce2018 #sessions .flex-row.around > div > div .flex .margin-left-20 {
+    margin-top: 0;
+    margin-left: 20px!important;
+  }
+}
 #dashboard-showcase-about {
   overflow: hidden;
 }
