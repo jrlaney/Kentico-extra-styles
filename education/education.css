@@ -1,3 +1,120 @@
+blockquote {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+  padding: 0;
+  margin: 20px 40px;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+}
+@media only screen and (min-width: 768px) {
+  blockquote {
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
+blockquote > footer {
+  display: block;
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+@media only screen and (min-width: 768px) {
+  blockquote > footer {
+    font-size: 18px;
+  }
+}
+blockquote:before,
+blockquote:after {
+  content: '“';
+  display: block;
+  position: absolute;
+  top: 0.2em;
+  left: -50px;
+  height: 56px;
+  width: 68px;
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 250px;
+  opacity: .2;
+}
+blockquote:after {
+  content: '”';
+  top: auto;
+  left: auto;
+  bottom: -0.2em;
+  right: -35px;
+}
+.offpage-image {
+  width: 150%;
+  max-width: none;
+}
+.offpage-image.left {
+  float: right;
+}
+.offpage-image.right {
+  float: left;
+}
+@media only screen and (min-width: 980px) {
+  .offpage-image.left {
+    margin-right: 5%;
+  }
+  .offpage-image.left.pc-laptop,
+  .offpage-image.left.macbook-pro,
+  .offpage-image.left.macbook-air {
+    margin-right: -10%;
+  }
+  .offpage-image.right {
+    margin-left: 5%;
+  }
+  .offpage-image.right.pc-laptop,
+  .offpage-image.right.macbook-pro,
+  .offpage-image.right.macbook-air {
+    margin-left: -10%;
+  }
+}
+.stacked-mockups {
+  position: relative;
+}
+.z-1 {
+  position: relative;
+  z-index: 1;
+}
+.z-2 {
+  position: relative;
+  z-index: 2;
+}
+.z-3 {
+  position: relative;
+  z-index: 3;
+}
+.stacked-icons {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+}
+.stacked-icons .icon {
+  position: relative;
+  z-index: 0;
+}
+.stacked-icons .icon.icon-block {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  padding: 8px;
+}
+.stacked-icons.small {
+  padding-bottom: 10px;
+  padding-right: 15px;
+}
 #section-navigation-sticky-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -44,6 +161,9 @@
   .education.overview #hero .hero-block {
     padding: 50px;
   }
+}
+#delivery-options .positioned.center {
+  width: calc(100% - 60px);
 }
 #testimonials-slider .testimonial {
   -webkit-flex-direction: column;
@@ -266,4 +386,72 @@
 #ecourseware-hero > .flex-row {
   -webkit-align-items: flex-start;
   align-items: flex-start;
+}
+#certifications-options .directory-graphic .grid-item {
+  position: relative;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #777777;
+  font-weight: 400;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#certifications-options .directory-graphic .grid-item:before {
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  background-color: #CCCCCC;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: calc(100% - 10px);
+}
+#certifications-options .directory-graphic .grid-item.director {
+  padding-bottom: 40px;
+  -webkit-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+#certifications-options .directory-graphic .grid-item.director:before {
+  width: calc(75% + 2px);
+  height: 2px;
+  bottom: 10px;
+}
+#certifications-options .directory-graphic .grid-item.director:after {
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  background-color: #CCCCCC;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 10px;
+}
+#certifications-options .certification-box {
+  position: relative;
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+}
+#certifications-options .certification-box:before {
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  background-color: #CCCCCC;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: calc(100% + 10px);
+}
+#pricing-packaging .pricing-box {
+  padding: 30px;
+  border-bottom: 1px solid #CCCCCC;
+}
+#pricing-packaging .pricing-box table td,
+#pricing-packaging .pricing-box table th {
+  padding: 10px 15px;
+  border: 1px solid #CCCCCC;
 }
