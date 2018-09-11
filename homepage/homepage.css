@@ -1,79 +1,5 @@
-.icon-cta {
-  display: inline-block;
-  text-align: center;
-  vertical-align: top;
-  padding: 20px;
-  color: #333333;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
-}
-.icon-cta .icon {
-  color: #D9232E;
-  font-size: 50px;
-}
-@media only screen and (min-width: 980px) {
-  .icon-cta .icon {
-    font-size: 75px;
-  }
-}
-.icon-cta .cta-text {
-  display: block;
-  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1em;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-top: 15px;
-}
-@media only screen and (min-width: 768px) {
-  .icon-cta {
-    padding: 20px 30px;
-    margin-right: 20px;
-  }
-  .icon-cta:last-child {
-    margin-right: 0;
-  }
-  .icon-cta:hover {
-    color: #D9232E;
-  }
-}
-@media only screen and (min-width: 980px) {
-  .icon-cta {
-    padding: 20px 40px;
-  }
-}
-.icon-cta.white {
-  color: #FFFFFF;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
-}
-.icon-cta.white .icon {
-  color: #FFFFFF;
-}
-.icon-cta.white:hover {
-  color: #FFFFFF;
-  background-color: rgba(217, 35, 46, 0.5);
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-}
-.background-fixed {
-  background-attachment: fixed;
-}
-.ipad .background-fixed,
-.iphone .background-fixed,
-.android .background-fixed {
-  background-attachment: scroll;
-}
 #hero {
   overflow: hidden;
-}
-#hero.background-image {
-  background-image: url(/getmedia/2838b8b1-25b0-43f6-824f-142739031279/two-monitors-wood-desk);
-}
-@media only screen and (min-width: 768px) {
-  #hero .icon-cta {
-    max-width: calc(33.3% - 24px);
-  }
 }
 #hero .title {
   opacity: 0;
@@ -492,23 +418,6 @@
   }
   100% {
     opacity: 1;
-  }
-}
-#whats-new .slick-arrow {
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-#whats-new .slick-slide {
-  -webkit-align-items: stretch;
-  align-items: stretch;
-}
-#whats-new .cards .card {
-  border: none;
-}
-@media only screen and (min-width: 980px) {
-  #whats-new .cards .card:hover {
-    border: none;
   }
 }
 #explore-product .link-block {
