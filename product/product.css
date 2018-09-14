@@ -2624,12 +2624,101 @@ section {
     width: 30%;
   }
 }
-.DigitalCredentials #logical-access img {
+.DigitalCredentials #logical-access > div > div > img {
   max-width: 175%;
   margin-left: -75%;
 }
-.DigitalCredentials #physical-access img {
+.DigitalCredentials #logical-access .device-mockup.macbook-pro {
+  position: relative;
+  z-index: 0;
+  width: 170%;
+  margin-right: 10%;
+  margin-bottom: 20px;
+}
+.DigitalCredentials #logical-access .device-mockup.iphone {
+  position: absolute;
+  z-index: 1;
+  width: 35%;
+  right: 10%;
+  bottom: 20px;
+}
+@media only screen and (min-width: 980px) {
+  .DigitalCredentials #logical-access .device-mockup.macbook-pro {
+    width: 150%;
+  }
+  .DigitalCredentials #logical-access .device-mockup.iphone {
+    width: 30%;
+  }
+}
+.DigitalCredentials #physical-access > div > div > img {
   max-width: 150%;
+}
+.DigitalCredentials #physical-access .device-mockup.ipad {
+  position: relative;
+  z-index: 0;
+  width: 150%;
+  margin-left: 20%;
+  margin-bottom: 20px;
+}
+.DigitalCredentials #physical-access .device-mockup.iphone {
+  position: absolute;
+  z-index: 1;
+  width: 35%;
+  left: 10%;
+  bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .DigitalCredentials #physical-access .device-mockup.ipad {
+    width: 130%;
+  }
+  .DigitalCredentials #physical-access .device-mockup.iphone {
+    width: 30%;
+  }
+}
+.DigitalCredentials #logical-access .img-col {
+  position: relative;
+}
+.DigitalCredentials #logical-access .img-col .macbook-air {
+  z-index: 0;
+  width: 200%;
+  float: right;
+  margin-right: 10%;
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 980px) {
+  .DigitalCredentials #logical-access .img-col .macbook-air {
+    margin-bottom: 40px;
+  }
+}
+.DigitalCredentials #logical-access .img-col .iphone {
+  position: absolute;
+  z-index: 1;
+  width: 35%;
+  right: 10%;
+  bottom: 15px;
+}
+.DigitalCredentials #customize-credentials .stacked-mockups {
+  margin-bottom: 40px;
+}
+.DigitalCredentials #customize-credentials .device-mockup.iphone-x.front {
+  position: relative;
+  z-index: 1;
+  width: 40%;
+  margin: 0 auto;
+}
+.DigitalCredentials #customize-credentials .device-mockup.iphone-x.left,
+.DigitalCredentials #customize-credentials .device-mockup.iphone-x.right {
+  position: absolute;
+  z-index: 0;
+  width: 35%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-left: -25%;
+}
+.DigitalCredentials #customize-credentials .device-mockup.iphone-x.right {
+  margin-left: 25%;
 }
 .SecureGateways #hero .img-col {
   position: relative;
