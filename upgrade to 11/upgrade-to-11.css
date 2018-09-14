@@ -429,6 +429,52 @@ section {
     line-height: 60px;
   }
 }
+.phase-counter {
+  display: block;
+  position: relative;
+  padding: 25px 0 10px 0;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #777777;
+  font-size: 15px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+.phase-counter .counter-bar {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 75px;
+  height: 10px;
+  width: 75px;
+  background-color: #f2f2f2;
+}
+.phase-counter .counter-bar:before,
+.phase-counter .counter-bar:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 10px;
+  width: 75px;
+  background-color: #f2f2f2;
+}
+.phase-counter .counter-bar:before {
+  right: 100%;
+}
+.phase-counter .counter-bar:after {
+  left: 100%;
+}
+.phase-counter.one .counter-bar:before {
+  background-color: #333333;
+}
+.phase-counter.two .counter-bar {
+  background-color: #333333;
+}
+.phase-counter.three .counter-bar:after {
+  background-color: #333333;
+}
 .UpgradeToMicrostrategy11 #version-comparison-table {
   border-color: #CCCCCC;
 }
@@ -483,6 +529,9 @@ section {
   animation: fade-slide-up 0.3s ease-out 0.2s normal forwards;
   max-height: 5000px;
   padding: 60px 0;
+}
+.HowToUpgrade .upgrade-path-panel .element {
+  padding: 10px 0 20px 25px;
 }
 .HowToUpgrade .upgrade-path-box {
   -webkit-flex: 0 1 auto;
@@ -584,45 +633,8 @@ section {
 .HowToUpgrade .upgrade-path-box.current.orange footer .button:before {
   border-top-color: #FF9100;
 }
-.HowToUpgrade #self-service-upgrade .element {
-  padding: 10px 0 20px 25px;
-}
 .HowToUpgrade #self-service-upgrade .phase-counter {
-  display: block;
-  position: relative;
-  padding: 25px 0 10px 0;
-  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #FF9100;
-  font-size: 15px;
-  line-height: 1;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 600;
-}
-.HowToUpgrade #self-service-upgrade .phase-counter .counter-bar {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 75px;
-  height: 10px;
-  width: 75px;
-  background-color: #f2f2f2;
-}
-.HowToUpgrade #self-service-upgrade .phase-counter .counter-bar:before,
-.HowToUpgrade #self-service-upgrade .phase-counter .counter-bar:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  height: 10px;
-  width: 75px;
-  background-color: #f2f2f2;
-}
-.HowToUpgrade #self-service-upgrade .phase-counter .counter-bar:before {
-  right: 100%;
-}
-.HowToUpgrade #self-service-upgrade .phase-counter .counter-bar:after {
-  left: 100%;
 }
 .HowToUpgrade #self-service-upgrade .phase-counter.one .counter-bar:before {
   background-color: #FF9100;
@@ -632,6 +644,18 @@ section {
 }
 .HowToUpgrade #self-service-upgrade .phase-counter.three .counter-bar:after {
   background-color: #FF9100;
+}
+.HowToUpgrade #upgrade-advisory .phase-counter {
+  color: #4789A3;
+}
+.HowToUpgrade #upgrade-advisory .phase-counter.one .counter-bar:before {
+  background-color: #4789A3;
+}
+.HowToUpgrade #upgrade-advisory .phase-counter.two .counter-bar {
+  background-color: #4789A3;
+}
+.HowToUpgrade #upgrade-advisory .phase-counter.three .counter-bar:after {
+  background-color: #4789A3;
 }
 .HowToUpgrade #upgrade-advisory-form > .flex-row {
   -webkit-justify-content: space-between;

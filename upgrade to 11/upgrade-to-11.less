@@ -256,6 +256,38 @@ main, section {overflow:hidden;}
 }
 
 
+.phase-counter {
+    display:block; position:relative;
+    padding:25px 0 10px 0;
+
+    font-family:@myriad-pro;
+    color:@dark-gray;
+    font-size:15px; line-height:1;
+    .uppercase;
+    font-weight:600;
+
+    .counter-bar {
+        position:absolute;
+        display:block;
+        top:0; left:75px;
+        height:10px; width:75px;
+        background-color:@light-gray;
+        &:before, &:after {
+            content:'';
+            display:block; position:absolute;
+            top:0;
+            height:10px; width:75px;
+            background-color:@light-gray;
+        }
+        &:before {right:100%;}
+        &:after {left:100%;}
+    }
+    &.one .counter-bar:before{background-color:@black;}
+    &.two .counter-bar{background-color:@black;}
+    &.three .counter-bar:after{background-color:@black;}
+}
+
+
 
 
 
@@ -302,7 +334,8 @@ main, section {overflow:hidden;}
         opacity:0;
         .animation(fade-slide-down 0.3s ease-out 0.2s normal forwards);
         .transition;
-        &.current {.animation(fade-slide-up 0.3s ease-out 0.2s normal forwards);max-height:5000px; padding:60px 0;}
+        &.current {.animation(fade-slide-up 0.3s ease-out 0.2s normal forwards); max-height:5000px; padding:60px 0;}
+        .element {padding:10px 0 20px 25px;}
     }
     .upgrade-path-box {
         position:relative;
@@ -379,36 +412,19 @@ main, section {overflow:hidden;}
         }
     }
     #self-service-upgrade {
-        .element {padding:10px 0 20px 25px;}
         .phase-counter {
-            display:block; position:relative;
-            padding:25px 0 10px 0;
-
-            font-family:@myriad-pro;
             color:@orange;
-            font-size:15px; line-height:1;
-            .uppercase;
-            font-weight:600;
-
-            .counter-bar {
-                position:absolute;
-                display:block;
-                top:0; left:75px;
-                height:10px; width:75px;
-                background-color:@light-gray;
-                &:before, &:after {
-                    content:'';
-                    display:block; position:absolute;
-                    top:0;
-                    height:10px; width:75px;
-                    background-color:@light-gray;
-                }
-                &:before {right:100%;}
-                &:after {left:100%;}
-            }
             &.one .counter-bar:before{background-color:@orange;}
             &.two .counter-bar{background-color:@orange;}
             &.three .counter-bar:after{background-color:@orange;}
+        }
+    }
+    #upgrade-advisory {
+        .phase-counter {
+            color:@blue;
+            &.one .counter-bar:before{background-color:@blue;}
+            &.two .counter-bar{background-color:@blue;}
+            &.three .counter-bar:after{background-color:@blue;}
         }
     }
     #upgrade-advisory-form {
