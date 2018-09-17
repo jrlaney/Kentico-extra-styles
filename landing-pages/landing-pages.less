@@ -443,6 +443,8 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
     &.one:before   {content:'1.'}
     &.two:before   {content:'2.'}
     &.three:before {content:'3.'}
+    &.four:before  {content:'4.'}
+    &.five:before  {content:'5.'}
 }
 
 
@@ -622,6 +624,20 @@ section.below-card {overflow:visible!important;}
 
 
 // OTHER / INDIVIDUAL PAGE STUFF
+
+.Academics.Students {
+    #step1 {
+        background-color:transparent;
+        @media @medium-only {
+            .form-col {.flex(0,0,auto);}
+        }
+        @media @xlarge {
+            .text-col {
+                .flex(0, 0, 58.33333333%);
+            }
+        }
+    }
+}
 
 //get started > desktop help page
 #desktop-help.microsite #dashboards-visualizations img {
