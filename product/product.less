@@ -546,21 +546,21 @@ main, section {overflow:hidden;}
             top:0;
             &.left {
                 z-index:2; right:0;
-                width:100vw; padding-bottom:100vw;
+                width:100vw; height:100vw;
                 mix-blend-mode: multiply;
-                @media @medium {width:105vw; padding-bottom:105vw; right:-5vw;}
-                @media @xlarge {width:100vw; padding-bottom:100vw; right:0;}
+                @media @medium {width:105vw; height:105vw; right:-5vw;}
+                @media @xlarge {width:100vw; height:100vw; right:0;}
             }
             &.right {
                 z-index:1;
-                width:75vw; padding-bottom:75vw;
+                width:75vw; height:75vw;
                 left:25vw;
                 background-repeat:no-repeat;
                 background-position:center;
                 background-size:cover;
                 @media @small-only {background-blend-mode:multiply;}
-                @media @medium {width:60vw; padding-bottom:60vw; left:40vw;}
-                @media @xlarge {width:50vw; padding-bottom:50vw; left:50%;}
+                @media @medium {width:60vw; height:60vw; left:40vw;}
+                @media @xlarge {width:50vw; height:50vw; left:50%;}
             }
         }
     }
@@ -1950,7 +1950,7 @@ main, section {overflow:hidden;}
 
 
 // WHY MICROSTRATEGY PAGE
-#why-microstrategy {
+.WhyMicrostrategy {
 
     // TIMELINE COMPONENT STYLES
     @media @medium {.hero-col {opacity:0px; .animation(fade-in 0.5s ease-out 0.5s normal forwards);}}

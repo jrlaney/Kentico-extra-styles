@@ -887,27 +887,27 @@ section {
   z-index: 2;
   right: 0;
   width: 100vw;
-  padding-bottom: 100vw;
+  height: 100vw;
   mix-blend-mode: multiply;
 }
 @media only screen and (min-width: 768px) {
   #hero.angled-banner .angle-wrapper .angle.left {
     width: 105vw;
-    padding-bottom: 105vw;
+    height: 105vw;
     right: -5vw;
   }
 }
 @media only screen and (min-width: 1200px) {
   #hero.angled-banner .angle-wrapper .angle.left {
     width: 100vw;
-    padding-bottom: 100vw;
+    height: 100vw;
     right: 0;
   }
 }
 #hero.angled-banner .angle-wrapper .angle.right {
   z-index: 1;
   width: 75vw;
-  padding-bottom: 75vw;
+  height: 75vw;
   left: 25vw;
   background-repeat: no-repeat;
   background-position: center;
@@ -921,14 +921,14 @@ section {
 @media only screen and (min-width: 768px) {
   #hero.angled-banner .angle-wrapper .angle.right {
     width: 60vw;
-    padding-bottom: 60vw;
+    height: 60vw;
     left: 40vw;
   }
 }
 @media only screen and (min-width: 1200px) {
   #hero.angled-banner .angle-wrapper .angle.right {
     width: 50vw;
-    padding-bottom: 50vw;
+    height: 50vw;
     left: 50%;
   }
 }
@@ -2922,25 +2922,25 @@ section {
   right: 0;
 }
 @media only screen and (min-width: 768px) {
-  #why-microstrategy .hero-col {
+  .WhyMicrostrategy .hero-col {
     opacity: 0px;
     -webkit-animation: fade-in 0.5s ease-out 0.5s normal forwards;
     -moz-animation: fade-in 0.5s ease-out 0.5s normal forwards;
     animation: fade-in 0.5s ease-out 0.5s normal forwards;
   }
 }
-#why-microstrategy .timeline-wrapper {
+.WhyMicrostrategy .timeline-wrapper {
   position: relative;
 }
 @media only screen and (min-width: 768px) {
-  #why-microstrategy .timeline-wrapper {
+  .WhyMicrostrategy .timeline-wrapper {
     opacity: 0;
     -webkit-animation: fade-in 1s ease-out 2s normal forwards;
     -moz-animation: fade-in 1s ease-out 2s normal forwards;
     animation: fade-in 1s ease-out 2s normal forwards;
   }
 }
-#why-microstrategy .frame {
+.WhyMicrostrategy .frame {
   position: relative;
   z-index: 2;
   overflow: hidden;
@@ -2950,11 +2950,11 @@ section {
   cursor: pointer;
 }
 @media only screen and (min-width: 768px) {
-  #why-microstrategy .frame {
+  .WhyMicrostrategy .frame {
     height: 350px;
   }
 }
-#why-microstrategy .frame:before {
+.WhyMicrostrategy .frame:before {
   position: absolute;
   z-index: 1;
   content: '';
@@ -2965,7 +2965,7 @@ section {
   margin-top: -4px;
   background-color: #f2f2f2;
 }
-#why-microstrategy .frame .timeline-list {
+.WhyMicrostrategy .frame .timeline-list {
   position: relative;
   z-index: 2;
   margin: 0;
@@ -2973,7 +2973,7 @@ section {
   height: 100%;
   list-style: none;
 }
-#why-microstrategy .frame .timeline-list .timeline-item {
+.WhyMicrostrategy .frame .timeline-list .timeline-item {
   position: relative;
   z-index: 2;
   float: left;
@@ -2987,7 +2987,7 @@ section {
   transform: translateX(90px);
 }
 @media only screen and (min-width: 768px) {
-  #why-microstrategy .frame .timeline-list .timeline-item {
+  .WhyMicrostrategy .frame .timeline-list .timeline-item {
     margin: 0 80px 0 -200px;
     padding: 0 0 20px 30px;
     width: 400px;
@@ -2995,32 +2995,32 @@ section {
     transform: translateX(40px);
   }
 }
-#why-microstrategy .frame .timeline-list .timeline-item:nth-child(even) {
+.WhyMicrostrategy .frame .timeline-list .timeline-item:nth-child(even) {
   margin-top: 225px;
   padding: 20px 0 0 30px;
 }
 @media only screen and (min-width: 768px) {
-  #why-microstrategy .frame .timeline-list .timeline-item:nth-child(even) {
+  .WhyMicrostrategy .frame .timeline-list .timeline-item:nth-child(even) {
     margin-top: 175px;
   }
 }
-#why-microstrategy .frame .timeline-list .timeline-item:nth-child(even) .flag {
+.WhyMicrostrategy .frame .timeline-list .timeline-item:nth-child(even) .flag {
   bottom: 50%;
   top: auto;
 }
-#why-microstrategy .frame .timeline-list .timeline-item:nth-child(even) .flag:before,
-#why-microstrategy .frame .timeline-list .timeline-item:nth-child(even) .flag:after {
+.WhyMicrostrategy .frame .timeline-list .timeline-item:nth-child(even) .flag:before,
+.WhyMicrostrategy .frame .timeline-list .timeline-item:nth-child(even) .flag:after {
   top: auto;
 }
-.InternetExplorer #why-microstrategy .frame .timeline-list .timeline-item .text {
+.InternetExplorer .WhyMicrostrategy .frame .timeline-list .timeline-item .text {
   max-width: 185px;
 }
 @media only screen and (min-width: 768px) {
-  .InternetExplorer #why-microstrategy .frame .timeline-list .timeline-item .text {
+  .InternetExplorer .WhyMicrostrategy .frame .timeline-list .timeline-item .text {
     max-width: 305px;
   }
 }
-#why-microstrategy .frame .timeline-list .timeline-item:before {
+.WhyMicrostrategy .frame .timeline-list .timeline-item:before {
   display: block;
   position: absolute;
   z-index: 2;
@@ -3032,7 +3032,7 @@ section {
   width: 15px;
   background-color: #FFFFFF;
 }
-#why-microstrategy .frame .timeline-list .timeline-item .text {
+.WhyMicrostrategy .frame .timeline-list .timeline-item .text {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
@@ -3046,13 +3046,13 @@ section {
   -webkit-transition: ease-out opacity 0.2s 0s;
   transition: ease-out opacity 0.2s 0s;
 }
-#why-microstrategy .frame .timeline-list .timeline-item .text h3 {
+.WhyMicrostrategy .frame .timeline-list .timeline-item .text h3 {
   margin-bottom: 5px;
 }
-#why-microstrategy .frame .timeline-list .timeline-item.active .text {
+.WhyMicrostrategy .frame .timeline-list .timeline-item.active .text {
   opacity: 1;
 }
-#why-microstrategy .frame .timeline-list .timeline-item .flag {
+.WhyMicrostrategy .frame .timeline-list .timeline-item .flag {
   display: block;
   position: absolute;
   z-index: 4;
@@ -3062,7 +3062,7 @@ section {
   left: 0;
   top: 50%;
 }
-#why-microstrategy .frame .timeline-list .timeline-item .flag:before {
+.WhyMicrostrategy .frame .timeline-list .timeline-item .flag:before {
   display: block;
   position: absolute;
   content: '';
@@ -3077,32 +3077,32 @@ section {
   border-radius: 50%;
   border: 2px solid #f2f2f2;
 }
-#why-microstrategy .frame .timeline-list .timeline-item.red:before,
-#why-microstrategy .frame .timeline-list .timeline-item.red .flag,
-#why-microstrategy .frame .timeline-list .timeline-item.red .flag:before {
+.WhyMicrostrategy .frame .timeline-list .timeline-item.red:before,
+.WhyMicrostrategy .frame .timeline-list .timeline-item.red .flag,
+.WhyMicrostrategy .frame .timeline-list .timeline-item.red .flag:before {
   background-color: #D9232E;
 }
-#why-microstrategy .frame .timeline-list .timeline-item.orange:before,
-#why-microstrategy .frame .timeline-list .timeline-item.orange .flag,
-#why-microstrategy .frame .timeline-list .timeline-item.orange .flag:before {
+.WhyMicrostrategy .frame .timeline-list .timeline-item.orange:before,
+.WhyMicrostrategy .frame .timeline-list .timeline-item.orange .flag,
+.WhyMicrostrategy .frame .timeline-list .timeline-item.orange .flag:before {
   background-color: #FF9100;
 }
-#why-microstrategy .frame .timeline-list .timeline-item.green:before,
-#why-microstrategy .frame .timeline-list .timeline-item.green .flag,
-#why-microstrategy .frame .timeline-list .timeline-item.green .flag:before {
+.WhyMicrostrategy .frame .timeline-list .timeline-item.green:before,
+.WhyMicrostrategy .frame .timeline-list .timeline-item.green .flag,
+.WhyMicrostrategy .frame .timeline-list .timeline-item.green .flag:before {
   background-color: #68AA00;
 }
-#why-microstrategy .frame .timeline-list .timeline-item.blue:before,
-#why-microstrategy .frame .timeline-list .timeline-item.blue .flag,
-#why-microstrategy .frame .timeline-list .timeline-item.blue .flag:before {
+.WhyMicrostrategy .frame .timeline-list .timeline-item.blue:before,
+.WhyMicrostrategy .frame .timeline-list .timeline-item.blue .flag,
+.WhyMicrostrategy .frame .timeline-list .timeline-item.blue .flag:before {
   background-color: #4789A3;
 }
-#why-microstrategy .frame .timeline-list .timeline-item.navy-blue:before,
-#why-microstrategy .frame .timeline-list .timeline-item.navy-blue .flag,
-#why-microstrategy .frame .timeline-list .timeline-item.navy-blue .flag:before {
+.WhyMicrostrategy .frame .timeline-list .timeline-item.navy-blue:before,
+.WhyMicrostrategy .frame .timeline-list .timeline-item.navy-blue .flag,
+.WhyMicrostrategy .frame .timeline-list .timeline-item.navy-blue .flag:before {
   background-color: #11566F;
 }
-#why-microstrategy .scrollbar {
+.WhyMicrostrategy .scrollbar {
   position: relative;
   z-index: 2;
   margin: 20px auto;
@@ -3110,7 +3110,7 @@ section {
   width: calc(100% - 60px);
   line-height: 0;
 }
-#why-microstrategy .scrollbar:before {
+.WhyMicrostrategy .scrollbar:before {
   display: block;
   position: absolute;
   z-index: -2;
@@ -3122,14 +3122,14 @@ section {
   width: 100%;
   border-bottom: 3px solid #f2f2f2;
 }
-#why-microstrategy .scrollbar .handle {
+.WhyMicrostrategy .scrollbar .handle {
   width: 100px;
   height: 100%;
   margin-top: -15px;
   background-color: rgba(217, 35, 46, 0.7);
   cursor: pointer;
 }
-#why-microstrategy .scrollbar .handle .mousearea {
+.WhyMicrostrategy .scrollbar .handle .mousearea {
   position: absolute;
   z-index: 3;
   top: 0;
@@ -3137,7 +3137,7 @@ section {
   width: 100%;
   height: 100%;
 }
-#why-microstrategy .scrollbar .handle .mousearea:before {
+.WhyMicrostrategy .scrollbar .handle .mousearea:before {
   display: block;
   position: absolute;
   content: '';
@@ -3150,12 +3150,12 @@ section {
   border-right: 14px solid transparent;
   border-bottom: 14px solid rgba(217, 35, 46, 0.7);
 }
-#why-microstrategy .timeline-nav {
+.WhyMicrostrategy .timeline-nav {
   position: relative;
   padding-left: 30px;
   padding-right: 30px;
 }
-#why-microstrategy .timeline-nav .dot-wrapper {
+.WhyMicrostrategy .timeline-nav .dot-wrapper {
   position: absolute;
   z-index: -1;
   top: 0;
@@ -3163,10 +3163,10 @@ section {
   width: 100%;
   height: 30px;
 }
-#why-microstrategy .timeline-nav .dot {
+.WhyMicrostrategy .timeline-nav .dot {
   position: relative;
 }
-#why-microstrategy .timeline-nav .dot:before {
+.WhyMicrostrategy .timeline-nav .dot:before {
   display: block;
   position: absolute;
   content: '';
@@ -3179,7 +3179,7 @@ section {
   border-radius: 50%;
   background-color: #bbbbbb;
 }
-#why-microstrategy .controls {
+.WhyMicrostrategy .controls {
   display: block;
   position: absolute;
   z-index: 1;
@@ -3188,7 +3188,7 @@ section {
   width: 100%;
   height: 30px;
 }
-#why-microstrategy .controls .btn {
+.WhyMicrostrategy .controls .btn {
   display: block;
   position: absolute;
   top: 50%;
@@ -3202,53 +3202,53 @@ section {
   -webkit-transition: ease-out opacity 0.2s 0s;
   transition: ease-out opacity 0.2s 0s;
 }
-#why-microstrategy .controls .btn.disabled {
+.WhyMicrostrategy .controls .btn.disabled {
   opacity: 0.2;
 }
-#why-microstrategy .controls .btn.prev {
+.WhyMicrostrategy .controls .btn.prev {
   left: 0px;
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-#why-microstrategy .controls .btn.next {
+.WhyMicrostrategy .controls .btn.next {
   right: 0px;
 }
 @media only screen and (max-width: 767px) {
-  #why-microstrategy #low-cost,
-  #why-microstrategy #ease-of-use,
-  #why-microstrategy #mobile {
+  .WhyMicrostrategy #low-cost,
+  .WhyMicrostrategy #ease-of-use,
+  .WhyMicrostrategy #mobile {
     border-bottom: 1px solid #DDDDDD;
   }
 }
-#why-microstrategy #low-cost .offpage-image {
+.WhyMicrostrategy #low-cost .offpage-image {
   width: auto;
   max-width: 500px;
   -webkit-transform: translateX(25%);
   transform: translateX(25%);
 }
 @media only screen and (min-width: 768px) {
-  #why-microstrategy #low-cost .offpage-image {
+  .WhyMicrostrategy #low-cost .offpage-image {
     max-width: none;
     -webkit-transform: translateX(35%);
     transform: translateX(35%);
   }
 }
 @media only screen and (min-width: 1200px) {
-  #why-microstrategy #low-cost .offpage-image {
+  .WhyMicrostrategy #low-cost .offpage-image {
     -webkit-transform: translateX(30%);
     transform: translateX(30%);
   }
 }
-#why-microstrategy #ease-of-use .report-link {
+.WhyMicrostrategy #ease-of-use .report-link {
   position: relative;
   display: block;
   z-index: 0;
 }
 @media only screen and (min-width: 768px) {
-  #why-microstrategy #ease-of-use .report-link {
+  .WhyMicrostrategy #ease-of-use .report-link {
     min-height: 300px;
   }
-  #why-microstrategy #ease-of-use .report-link .report-image {
+  .WhyMicrostrategy #ease-of-use .report-link .report-image {
     position: absolute;
     max-width: 100%;
     top: calc(50% + 40px);
@@ -3259,57 +3259,57 @@ section {
     -webkit-transition: all 0.2s ease-out 0s;
     transition: all 0.2s ease-out 0s;
   }
-  #why-microstrategy #ease-of-use .report-link:hover .report-image {
+  .WhyMicrostrategy #ease-of-use .report-link:hover .report-image {
     -webkit-transform: translate(-50%, calc(-50% - 10px));
     transform: translate(-50%, calc(-50% - 10px));
     opacity: 1;
   }
 }
-#why-microstrategy #ease-of-use .flex-row > div:nth-child(n+2) {
+.WhyMicrostrategy #ease-of-use .flex-row > div:nth-child(n+2) {
   position: relative;
   z-index: 1;
 }
-#why-microstrategy #mobile .offpage-image {
+.WhyMicrostrategy #mobile .offpage-image {
   max-width: 500px;
 }
 @media only screen and (min-width: 768px) {
-  #why-microstrategy #mobile .offpage-image {
+  .WhyMicrostrategy #mobile .offpage-image {
     max-width: 700px;
     margin-left: 50px;
   }
 }
 @media only screen and (min-width: 980px) {
-  #why-microstrategy #mobile .offpage-image {
+  .WhyMicrostrategy #mobile .offpage-image {
     max-width: none;
     width: auto;
   }
 }
 @media only screen and (min-width: 768px) {
-  #why-microstrategy .grid-lines .grid-item {
+  .WhyMicrostrategy .grid-lines .grid-item {
     border: 1px solid #999999;
     padding: 30px;
   }
-  #why-microstrategy .grid-lines .grid-item:nth-child(1) {
+  .WhyMicrostrategy .grid-lines .grid-item:nth-child(1) {
     border-width: 0 1px 1px 0;
   }
-  #why-microstrategy .grid-lines .grid-item:nth-child(2) {
+  .WhyMicrostrategy .grid-lines .grid-item:nth-child(2) {
     border-width: 0 0 1px 0;
   }
-  #why-microstrategy .grid-lines .grid-item:nth-child(3) {
+  .WhyMicrostrategy .grid-lines .grid-item:nth-child(3) {
     border-width: 0 1px 0 0;
   }
-  #why-microstrategy .grid-lines .grid-item:nth-child(4) {
+  .WhyMicrostrategy .grid-lines .grid-item:nth-child(4) {
     border-width: 0;
   }
 }
 @media only screen and (max-width: 767px) {
-  #why-microstrategy #customers .ratio .logo {
+  .WhyMicrostrategy #customers .ratio .logo {
     max-height: 100%;
     max-width: 100%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
-  #why-microstrategy #customers .ratio .logo {
+  .WhyMicrostrategy #customers .ratio .logo {
     max-height: calc(80%);
     max-width: calc(80%);
   }

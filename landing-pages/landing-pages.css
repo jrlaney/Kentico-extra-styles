@@ -694,9 +694,7 @@ section#symposium {
   content: '5.';
 }
 blockquote {
-  display: inline-block;
-  *zoom: 1;
-  *display: inline;
+  display: block;
   position: relative;
   padding: 0;
   margin: 20px 40px;
@@ -707,13 +705,14 @@ blockquote {
 }
 @media only screen and (min-width: 768px) {
   blockquote {
-    font-size: 26px;
-    line-height: 35px;
+    font-size: 24px;
+    line-height: 33px;
   }
 }
+blockquote > footer,
 blockquote > span {
   display: block;
-  margin-top: 15px;
+  margin-top: 30px;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
@@ -721,6 +720,7 @@ blockquote > span {
   letter-spacing: 0.05em;
 }
 @media only screen and (min-width: 768px) {
+  blockquote > footer,
   blockquote > span {
     font-size: 18px;
   }
@@ -736,7 +736,7 @@ blockquote:after {
   width: 68px;
   font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 250px;
-  color: rgba(255, 255, 255, 0.5);
+  opacity: .2;
 }
 blockquote:after {
   content: '”';

@@ -452,16 +452,16 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
 
 //SPECIAL BLOCKQUOTE
 blockquote {
-    display:inline-block; *zoom:1; *display:inline; position:relative;
+    display:block; position:relative;
     padding:0; margin:20px 40px;
     font-family:@myriad-pro;
     font-weight:400;
     font-size:22px; line-height:26px;
-    @media @medium {font-size:26px; line-height:35px;}
+    @media @medium {font-size:24px; line-height:33px;}
 
-    > span {
+    > footer, > span {
         display:block;
-        margin-top:15px;
+        margin-top:30px;
         font-weight:600;
         font-size:16px; line-height:20px;
         .uppercase;
@@ -476,7 +476,7 @@ blockquote {
 
         font-family:@lucida-grande;
         font-size:250px;
-        color:fade(@white, 50%);
+        opacity:.2;
 	}
 	&:after {
         content:'”';

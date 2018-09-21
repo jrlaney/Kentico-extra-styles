@@ -1,7 +1,5 @@
 blockquote {
-  display: inline-block;
-  *zoom: 1;
-  *display: inline;
+  display: block;
   position: relative;
   padding: 0;
   margin: 20px 40px;
@@ -96,24 +94,37 @@ blockquote:after {
 .stacked-icons {
   display: inline-block;
   position: relative;
-  padding-bottom: 10px;
-  padding-right: 20px;
   margin-bottom: 10px;
 }
-.stacked-icons .icon {
+.stacked-icons .icon:not(.icon-block) {
   position: relative;
   z-index: 0;
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+.stacked-icons .icon:not(.icon-block).medium {
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+.stacked-icons .icon:not(.icon-block).large {
+  padding-bottom: 15px;
+  padding-right: 15px;
 }
 .stacked-icons .icon.icon-block {
   position: absolute;
   z-index: 1;
   right: 0;
   bottom: 0;
-  padding: 8px;
+  height: 30px;
+  width: 30px;
 }
-.stacked-icons.small {
-  padding-bottom: 10px;
-  padding-right: 15px;
+.stacked-icons .icon.icon-block.medium {
+  height: 50px;
+  width: 50px;
+}
+.stacked-icons .icon.icon-block.large {
+  height: 80px;
+  width: 80px;
 }
 #section-navigation-sticky-wrapper {
   max-width: 1200px;
