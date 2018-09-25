@@ -99,7 +99,7 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
             top:0; left:0;
             width:3px; height:100%;
             .translateX(-3px);
-            .transition;
+            .single-transition;
         }
         &.red:before {background-color:@red;}
         &.orange:before {background-color:@orange;}
@@ -178,7 +178,7 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
                          border-left:7px solid @white;
                          margin:0;
                          .translate(0, -50%);
-                         .transition;
+                         .single-transition;
                      }
                      &:after {display:none;}
                  }//end > a
@@ -302,14 +302,14 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
     padding-bottom:200px;
     height:0;
     margin-top:30px;
-    .transition(0.3s, ease-out, all, 0s);
+    .single-transition(0.3s, ease-out, all, 0s);
 
     .resource-thumbnail {
         position:absolute; z-index:1;
         height:100%; width:100%;
         top:0; left:0;
         cursor:pointer;
-        .transition(0.3s, ease-out, all, 0s);
+        .single-transition(0.3s, ease-out, all, 0s);
         &:before {margin-top:-15px;}
         .cta {margin-top:50px; opacity:1;}
         &:after {display:none;}
@@ -320,7 +320,7 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
         top:50%; left:50%;
         .translate(-50%, -40%);
         opacity:0;
-        .transition(0.3s, ease-out, all, 0.3s);
+        .single-transition(0.3s, ease-out, all, 0.3s);
     }
 
     &.video-playing {
@@ -484,6 +484,31 @@ blockquote {
         left:auto;
         bottom:-0.2em;
         right:-35px;
+    }
+}
+
+//stretch columns
+.flex-row.stretch-column-content > div {
+    .display(flex);
+    > div {
+        .flex(0, 1, auto);
+        .display(flex);
+        .flex-direction(column);
+        .flex-wrap(wrap);
+        .align-items(flex-start);
+        width: 100%;
+        .background-trans-black {
+            margin-top:auto;
+            background-color:fade(@pure-black, 50%);
+            width:100%;
+
+        }
+        .flex {
+            display:block;
+            max-width:100%;
+            .margin-left-20 {margin-left:0!important; margin-top:20px;}
+            @media @large {.display(flex); .margin-left-20 {margin-top:0; margin-left:20px!important;}}
+        }
     }
 }
 
@@ -912,7 +937,7 @@ section.below-card {overflow:visible!important;}
             position: absolute;
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
-            .transition;
+            .single-transition;
         }
     }
     .inset {
@@ -943,6 +968,28 @@ section.below-card {overflow:visible!important;}
 }
 .create-graph-percentage-classes(100);
 
+//MOBILE START UP
+.MobileStartUp {
+    .stacked-mockups {
+        padding-bottom:20px;
+        .device-mockup {
+            &.ipad {
+                position:relative; z-index:0;
+                margin-right:10%;
+                margin-bottom:20px;
+            }
+            &.iphone {
+                position:absolute; z-index:1;
+                width:20%;
+                right:0; bottom:20px;
+            }
+            @media @medium {
+                &.iphone {width:25%;}
+            }
+        }
+    }
+}
+
 //APPLE COLLAB PAGES 2018
 #apple-collab-page {
     #introduction {
@@ -960,33 +1007,6 @@ section.below-card {overflow:visible!important;}
             @media @medium {
                 &.ipad {width:110%; margin-left:40%;}
                 &.iphone {width:25%;}
-            }
-        }
-    }
-}
-
-//DREAMFORCE 2018
-.MicrostrategyAtDreamforce2018 {
-    #sessions .flex-row.around > div {
-        .display(flex);
-        > div {
-            .flex(0, 1, auto);
-            .display(flex);
-            .flex-direction(column);
-            .flex-wrap(wrap);
-            .align-items(flex-start);
-            width: 100%;
-            .background-trans-black {
-                margin-top:auto;
-                background-color:fade(@pure-black, 50%);
-                width:100%;
-
-            }
-            .flex {
-                display:block;
-                max-width:100%;
-                .margin-left-20 {margin-left:0!important; margin-top:20px;}
-                @media @large {.display(flex); .margin-left-20 {margin-top:0; margin-left:20px!important;}}
             }
         }
     }
@@ -1037,7 +1057,7 @@ section {overflow:hidden;}
         display:block;
         width: 150%;
         margin-left: -50px;
-        .screenshot {opacity:0.99; .transition; -webkit-backface-visibility: hidden;}
+        .screenshot {opacity:0.99; .single-transition; -webkit-backface-visibility: hidden;}
         &:hover .screenshot {opacity:0.8;}
     }
     .button {

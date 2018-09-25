@@ -51,8 +51,8 @@
 #partner-resources {
   max-height: 0px;
   padding: 0;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
 }
 #partner-resources.expanded {
   max-height: 1500px;
@@ -149,13 +149,17 @@
   color: #777777;
 }
 .company-details .company-category-tags {
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
   line-height: 1;
   font-weight: 300;
   letter-spacing: .05em;
   color: #777777;
+}
+.company-details .company-category-tags > li {
+  margin: 0;
+  padding: 0;
 }
 .company-logo {
   max-width: 250px;
@@ -167,8 +171,8 @@
 }
 .OEM.Page #platform .accordion .toggler {
   padding: 15px 20px;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
 }
 .OEM.Page #platform .accordion .toggler:before {
   display: inline-block;
@@ -180,8 +184,8 @@
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 10px solid #D9232E;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
   background-color: transparent;
   margin-top: 0;
   left: auto;
@@ -270,8 +274,8 @@
     margin: 0;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
-    -webkit-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+    transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
   }
   .OEM.Page #platform .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a:after {
     display: none;
@@ -296,7 +300,6 @@
     border: none;
     opacity: 0;
     -webkit-animation: fade-slide-right 0.3s ease-out 0.2s normal forwards;
-    -moz-animation: fade-slide-right 0.3s ease-out 0.2s normal forwards;
     animation: fade-slide-right 0.3s ease-out 0.2s normal forwards;
     padding: 30px;
   }
@@ -308,18 +311,6 @@
   .OEM.Page #platform .panelstack.vertical-panelstack .panel-content {
     width: 70%;
     padding: 30px 50px;
-  }
-}
-@-moz-keyframes fade-slide-right {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-10%);
-    transform: translateX(-10%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
   }
 }
 @-webkit-keyframes fade-slide-right {

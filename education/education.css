@@ -357,7 +357,11 @@ blockquote:after {
   color: #777777;
 }
 .Education.Single [class$="-panel"] .course-detail-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+.Education.Single [class$="-panel"] .course-detail-list > li {
   margin: 0;
   padding: 0;
 }

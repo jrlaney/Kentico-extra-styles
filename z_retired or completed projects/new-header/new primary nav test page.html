@@ -1,4 +1,4 @@
-<div id="header">
+<div id="header-design">
     <div class="header-wrapper">
         <div class="logo-col">
             <a class="logo-link" href="/">
@@ -22,18 +22,18 @@
 
 
 
-<div id="primary-menu">
+<div id="primary-menu-design">
 	<div class="node-navigation">
 
 		<nav class="node-panel level-1" role="navigation">
 			<div class="parent-node red active">
 				<span class="menu-item current">
-					Products
+					Product
 					<div class="section-summary">Features and capabilities of our platform</div>
 				</span>
 
 				<div class="node-panel level-2">
-					<div class="node-label">Products</div>
+					<div class="node-label">Product</div>
 					<span class="menu-item back">Back</span>
                     <div class="scroll-wrapper">
     					<a class="menu-item" href="#">Overview</a>
@@ -44,9 +44,9 @@
     							<span class="menu-item back">Back</span>
                                 <div class="scroll-wrapper">
         							<a class="menu-item" href="#">Overview</a>
-        							<a class="menu-item" href="#">Data Connectivity</a>
+        							<a class="menu-item current-page" href="#">Data Connectivity</a>
         							<a class="menu-item" href="#">Big Data</a>
-        							<a class="menu-item current-page" href="#">Advanced Analytics</a>
+        							<a class="menu-item" href="#">Advanced Analytics</a>
         							<a class="menu-item" href="#">Dossiers and Dashboards</a>
         							<a class="menu-item" href="#">Data Discovery</a>
         							<a class="menu-item" href="#">Enterprise Reporting</a>
@@ -67,7 +67,7 @@
                                 </div>
     						</div>
     					</div>
-    					<a class="menu-item" href="#">Embedded Analytics</a>
+    					<a class="menu-item " href="#">Embedded Analytics</a>
     					<a class="menu-item" href="#">Administration</a>
     					<div class="parent-node">
     						<span class="menu-item current">Enterprise Internet of Things</span>
@@ -76,7 +76,7 @@
     							<span class="menu-item back">Back</span>
                                 <div class="scroll-wrapper">
         							<a class="menu-item" href="#">Overview</a>
-        							<a class="menu-item" href="#">Digital Credentials</a>
+        							<a class="menu-item " href="#">Digital Credentials</a>
         							<a class="menu-item" href="#">Real-Time Telemetry</a>
                                 </div>
     						</div>
@@ -91,7 +91,7 @@
 			<div class="parent-node green">
 				<span class="menu-item">
 					Solutions
-					<div class="section-summary">Real-world solutions using MicroStrategy</div>
+					<div class="section-summary">Solve your most complex business problems</div>
 				</span>
 
 				<div class="node-panel level-2">
@@ -107,7 +107,7 @@
                                 <div class="scroll-wrapper">
         							<a class="menu-item" href="#">Retail</a>
         							<a class="menu-item" href="#">Banking</a>
-        							<a class="menu-item" href="#">Insurance</a>
+        							<a class="menu-item " href="#">Insurance</a>
         							<a class="menu-item" href="#">Healthcare</a>
         							<a class="menu-item" href="#">CPG and Manufacturing</a>
         							<a class="menu-item" href="#">Telecommunications</a>
@@ -144,7 +144,7 @@
 			<div class="parent-node orange">
 				<span class="menu-item">
 					Resources
-					<div class="section-summary">Something about the resources</div>
+					<div class="section-summary">Learn more about Business Intelligence and MicroStrategy</div>
 				</span>
 
 				<div class="node-panel level-2">
@@ -163,7 +163,7 @@
 			<div class="parent-node blue">
 				<span class="menu-item">
 					Services
-					<div class="section-summary">Something about the services</div>
+					<div class="section-summary">Find your path to success</div>
 				</span>
 
 				<div class="node-panel level-2">
@@ -205,7 +205,7 @@
 			<div class="parent-node navy-blue">
 				<span class="menu-item">
 					Company
-					<div class="section-summary">Something about the company</div>
+					<div class="section-summary">Get to know MicroStrategy</div>
 				</span>
 
 				<div class="node-panel level-2">
@@ -312,23 +312,22 @@
                     <a href="https://linkedin.com/company/microstrategy" target="_blank" class="icon icon-block icon-linkedin"></a>
                     <a href="https://youtube.com/user/MicroStrategyBI" target="_blank" class="icon icon-block icon-youtube"></a>
                 </div>
-                <div class="dropup dropup-countries">
-                    <a class="dropdown-toggle" data-toggle="dropdown">
-	                    <span class="lang">English</span>
-                    </a>
-                    <div class="dropdown-menu">
-	                    <ul class="ww_list">
-    	                    <li><a href="http://stage.microstrategy.com/us/Sandbox">English</a></li>
-    	                    <li><a href="http://stage.microstrategy.com/de/Sandbox">Deutsch</a></li>
-    	                    <li><a href="http://stage.microstrategy.com/es/Sandbox">Español</a></li>
-    	                    <li><a href="http://stage.microstrategy.com/fr/Sandbox">Français</a></li>
-    	                    <li><a href="http://stage.microstrategy.com/it/Sandbox">Italiano</a></li>
-    	                    <li><a href="http://stage.microstrategy.com/br/Sandbox">Português</a></li>
-    	                    <li><a href="http://stage.microstrategy.cn/cn/Sandbox">简体中文</a></li>
-    	                    <li><a href="http://stage.microstrategy.com/jp/Sandbox">日本語</a></li>
-    	                    <li><a href="http://stage.microstrategy.com/kr/Sandbox">한국어</a></li>
-                        </ul>
-                    </div>
+                <div id="language-selector" class="has-dropdown" data-position="up" data-align="right" data-interaction="click">
+                    <button type="button" class="dropdown-toggle button small dark-gray">
+	                    <span id="site-language">English</span>
+                    </button>
+                    <ul class="dropdown menu vertical compact two-up" style="bottom: 49px;">
+    	                <li class="menu-item"><a href="http://review.microstrategy.com/us/product/analytics">English</a></li>
+    	                <li class="menu-item"><a href="http://review.microstrategy.com/de/product/analytics">Deutsch</a></li>
+    	                <li class="menu-item"><a href="http://review.microstrategy.com/es/product/analytics">Español</a></li>
+    	                <li class="menu-item"><a href="http://review.microstrategy.com/fr/product/analytics">Français</a></li>
+    	                <li class="menu-item"><a href="http://review.microstrategy.com/it/product/analytics">Italiano</a></li>
+    	                <li class="menu-item"><a href="http://review.microstrategy.com/pl/product/analytics">Polski</a></li>
+    	                <li class="menu-item"><a href="http://review.microstrategy.com/br/product/analytics">Português</a></li>
+    	                <li class="menu-item"><a href="http://review.microstrategy.cn/cn/product/analytics">简体中文</a></li>
+    	                <li class="menu-item"><a href="http://review.microstrategy.com/jp/product/analytics">日本語</a></li>
+    	                <li class="menu-item"><a href="http://review.microstrategy.com/kr/product/analytics">한국어</a></li>
+                    </ul> <!-- /dropdown -->
                 </div>
 			</div><!--end menu-footer row-->
 
@@ -342,39 +341,39 @@
 
 
 
-<div id="secondary-header" class="">
-    <div class="flex-row start middle collapse-y">
+<div id="secondary-header">
+		<div class="flex-row start middle collapse-y">
 
-        <div id="secondary-header-title" class="col-sm shrink collapse">
-            <a href="/"><img src="/getmedia/41e57ae1-69ed-437a-95a4-bcc6346633f5/icon" alt="MicroStrategy"></a>
-        </div> <!-- /secondary-header-title -->
+		<div id="secondary-header-title" class="col-sm shrink collapse">
+			<a href="/"><img src="/getmedia/41e57ae1-69ed-437a-95a4-bcc6346633f5/icon" alt="MicroStrategy"></a>
+		</div> <!-- /secondary-header-title -->
 
-        <div id="secondary-header-menu" class="col-sm collapse">
-            <nav id="secondary-nav" aria-label="You are here:" role="navigation">
-                <ul id="secondary-nav-menu" class="breadcrumbs">
-                    <li class="menu-item section-title"><a href="/us/products">Products</a></li><li class="menu-item "><a href="/us/products/capabilities">Capabilities</a></li><li class="menu-item current-page has-dropdown"><a href="#">Advanced Analytics</a><ul class="dropdown"><li class="menu-item"><a href="/us/products/capabilities">Overview</a></li><li class="menu-item current-page"><a href="#">Advanced Analytics</a></li><li class="menu-item"><a href="/us/products/capabilities/big-data">Big Data</a></li><li class="menu-item"><a href="/us/products/capabilities/data-connectivity">Data Connectivity</a></li><li class="menu-item"><a href="/us/products/capabilities/data-discovery">Data Discovery</a></li><li class="menu-item"><a href="/us/products/capabilities/digital-credentials">Digital Credentials</a></li><li class="menu-item"><a href="/us/products/capabilities/distribution">Distribution</a></li><li class="menu-item"><a href="/us/products/capabilities/dossiers-and-dashboards">Dossiers and Dashboards</a></li><li class="menu-item"><a href="/us/products/capabilities/embedded-analytics">Embedded Analytics</a></li><li class="menu-item"><a href="/us/products/capabilities/emm">Enterprise Mobility Management</a></li><li class="menu-item"><a href="/us/products/capabilities/enterprise-reporting">Enterprise Reporting</a></li><li class="menu-item"><a href="/us/products/capabilities/mobile">Mobile</a></li><li class="menu-item"><a href="/us/products/capabilities/real-time-telemetry">Real-Time Telemetry</a></li><li class="menu-item"><a href="/us/products/capabilities/transactions">Transactions</a></li></ul></li>
-                </ul><!-- /breadcrumbs -->
-            </nav> <!-- /secondary-nav -->
-        </div> <!-- /secondary-header-menu -->
+		<div id="secondary-header-navigation" class="col-sm collapse">
+			<nav id="secondary-navigation" aria-label="You are here:" role="navigation" class="component-red">
+				<ul id="secondary-menu" class="menu horizontal breadcrumbs">
+					<li class="menu-item menu-label"><a href="/us/product">Product</a></li><li class="menu-item "><a href="/us/product/analytics">Analytics</a></li><li class="menu-item has-dropdown" data-interaction="hover"><span class="dropdown-toggle">Overview</span><ul class="dropdown menu vertical expand"><li class="menu-item"><a href="#">Overview</a></li><li class="menu-item"><a href="/us/product/analytics/advanced-analytics">Advanced Analytics</a></li><li class="menu-item"><a href="/us/product/analytics/big-data">Big Data</a></li><li class="menu-item"><a href="/us/product/analytics/collaboration">Collaboration</a></li><li class="menu-item"><a href="/us/product/analytics/data-connectivity">Data Connectivity</a></li><li class="menu-item"><a href="/us/product/analytics/data-discovery">Data Discovery</a></li><li class="menu-item"><a href="/us/product/analytics/distribution">Distribution</a></li><li class="menu-item"><a href="/us/product/analytics/dossiers-and-dashboards">Dossiers and Dashboards</a></li><li class="menu-item"><a href="/us/product/analytics/enterprise-reporting">Enterprise Reporting</a></li><li class="menu-item"><a href="/us/product/analytics/geospatial-intelligence">Mapping</a></li></ul></li>
+				</ul> <!-- /secondary-menu -->
+			</nav> <!-- /secondary-navigation -->
+		</div> <!-- /secondary-header-navigation -->
 
-        <div id="secondary-header-search" class="col-sm shrink collapse">
-            <div id="section-search-form" class="input-group small">
-                <div class="input-group-field">
-                    <input id="sectionSearchInput" name="sectionSearchInput" type="text" placeholder="Search Products">
-                </div> <!-- /input-group-field -->
-                <div class="input-group-button">
-                    <button id="sectionSearchTrigger" type="button" title="Search Products" class="icon icon-magnifying-glass button hover-gray no-margin"></button>
-                    <button id="sectionSearchSubmit" name="sectionSearchSubmit" type="submit" title="Search Products" class="icon icon-magnifying-glass button black" style="display:none"></button>
-                </div> <!-- /input-group-button -->
-            </div> <!-- /section-search-form -->
-        </div> <!-- /secondary-header-search -->
+		<div id="secondary-header-search" class="col-sm shrink collapse">
+			<div id="section-search-form" class="input-group small">
+				<div class="input-group-field">
+					<input id="sectionSearchInput" name="sectionSearchInput" type="text" placeholder="Search Product">
+				</div> <!-- /input-group-field -->
+				<div class="input-group-button">
+					<button id="sectionSearchTrigger" type="button" title="Search Product" class="icon icon-magnifying-glass button hover-gray no-margin"></button>
+					<button id="sectionSearchSubmit" name="sectionSearchSubmit" type="submit" title="Search Product" class="icon icon-magnifying-glass button black" style="display:none"></button>
+				</div> <!-- /input-group-button -->
+			</div> <!-- /section-search-form -->
+		</div> <!-- /secondary-header-search -->
 
-        <div id="secondary-header-cta" class="col-sm shrink collapse show-md">
-            <a id="primary-cta" href="/us/get-started" class="button small red">Get Started</a>
-        </div> <!-- /secondary-header-cta -->
+		<div id="secondary-header-cta" class="col-sm shrink collapse show-md">
+			<a id="primary-cta" href="/en/get-started" class="button small red">Get Started</a>
+		</div> <!-- /secondary-header-cta -->
 
-    </div> <!-- /flex-row -->
-</div>
+		</div> <!-- /flex-row -->
+    </div>
 
 
 

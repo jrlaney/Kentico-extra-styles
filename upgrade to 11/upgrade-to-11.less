@@ -30,7 +30,7 @@ main, section {overflow:hidden;}
     .icon.icon-block {
         position:absolute; z-index:1;
         right:0; bottom:0;
-        padding:8px;
+        height:48px; width:48px;
     }
 }
 
@@ -321,6 +321,21 @@ main, section {overflow:hidden;}
         @media @large {
             .panel-nav {width:20%;}
             .panel-content {width:80%;}
+        }
+    }
+    ul.split-lg {
+        @media @large {
+            .display(flex);
+            .flex-direction(row);
+            .flex-wrap(wrap);
+            .justify-content(space-between);
+            padding:0;
+            > li {
+                .flex(0,0,50%);
+                max-width:~"calc(50% - 15px)";
+                padding:5px 0 5px 20px;
+                &:before {left:0;}
+            }
         }
     }
 }

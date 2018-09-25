@@ -46,8 +46,8 @@
   display: block;
   position: relative;
   padding: 20px;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
 }
 .gridder .gridder-navigation a.gridder-close {
   -webkit-order: 1;
@@ -180,8 +180,8 @@
   padding: 2px 0;
   border-bottom: 1px solid transparent;
   color: #FFFFFF;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
 }
 .mfp-title a:hover,
 .mfp-title a:active {
@@ -230,8 +230,8 @@
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     opacity: 0;
-    -webkit-transition: all 0.2s ease-out 0s;
-    transition: all 0.2s ease-out 0s;
+    -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+    transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
   }
   #solutions-filters .option-group .option.checked {
     background-color: #11566F;

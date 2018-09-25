@@ -1,11 +1,11 @@
 @import '../../settings.less';
 
 //NEW MIXINGS FOR GLOBAL
-.single-transition-open(@args) {
+.transition-open(@args) {
     -webkit-transition: @args;
     transition: @args;
 }
-.single-transition-delay(@delay: 0.2s) {
+.transition-delay(@delay: 0.2s) {
     -moz-transition-delay: @delay;
     -webkit-transition-delay: @delay;
     transition-delay: @delay;
@@ -36,18 +36,18 @@ header#page-header {display:none!important;}
 @cms-viewer-spacer:110px;
 
 body {position:relative;}
-.CMS-preview-mode #primary-menu,
-.CMS-preview-mode.primary-menu-opened #header {
+.CMS-preview-mode #primary-menu-design,
+.CMS-preview-mode.primary-menu-opened #header-design {
     top:@preview-mode-spacer-mobile;
     @media @medium {top:@preview-mode-spacer;}
 }
-.CMS-preview-mode #primary-menu {
+.CMS-preview-mode #primary-menu-design {
     height: ~"calc(100% - @{preview-mode-spacer-mobile})";
     @media @medium {height: ~"calc(100% - @{preview-mode-spacer})";}
 }
-.cms-bootstrap .CMS-preview-mode #primary-menu,
-.cms-bootstrap .CMS-preview-mode.primary-menu-opened #header {top:@cms-viewer-spacer;}
-.cms-bootstrap .CMS-preview-mode #primary-menu {height: ~"calc(100% - @{cms-viewer-spacer})";}
+.cms-bootstrap .CMS-preview-mode #primary-menu-design,
+.cms-bootstrap .CMS-preview-mode.primary-menu-opened #header-design {top:@cms-viewer-spacer;}
+.cms-bootstrap .CMS-preview-mode #primary-menu-design {height: ~"calc(100% - @{cms-viewer-spacer})";}
 
 
 
@@ -65,7 +65,7 @@ body {position:relative;}
 @logo-width: 180px;
 @logo-width-desktop: 220px;
 
-#header {
+#header-design {
     display:block; z-index:@header-z-index;
     overflow:hidden;
     width:100%; height:@header-height;
@@ -79,12 +79,12 @@ body {position:relative;}
 
     //animation for menu opening
     position:relative;
-    .single-transition(0.2s, ease-out, all, 0.2s);
+    .transition(0.2s, ease-out, all, 0.2s);
     .primary-menu-opened & {
         position:fixed;
         background-color:@black;
         top:0; left:0;
-        .single-transition-delay(0s);
+        .transition-delay(0s);
         @media @medium {background-color:transparent; border-bottom:none;}
     }
 
@@ -113,10 +113,10 @@ body {position:relative;}
 
                 //animations for menu opening
                 fill: @red;
-                .single-transition(0.2s, ease-out, all, 0.2s);
+                .transition(0.2s, ease-out, all, 0.2s);
                 .primary-menu-opened & {
                     fill:@white;
-                    .single-transition-delay(0s);
+                    .transition-delay(0s);
                 }
             }
         }
@@ -133,10 +133,10 @@ body {position:relative;}
 
                 //animations for menu opening
                 color:@monsoon; opacity:1;
-                .single-transition(0.2s, ease-out, all, 0.2s);
+                .transition(0.2s, ease-out, all, 0.2s);
                 .primary-menu-opened & {
                     opacity:0; .translateY(-100%);
-                    .single-transition-delay(0s);
+                    .transition-delay(0s);
                 }
             }
         }//end tagline
@@ -148,12 +148,12 @@ body {position:relative;}
             margin:0px!important;
             border:none!important;
             font-weight:@bold;
-            .single-transition(.2s, ease-out, all, 0.2s);
+            .transition(.2s, ease-out, all, 0.2s);
             .primary-menu-opened & {
                 background-color:@red;
                 color:@white;
                 &:hover {background-color:@light-red;}
-                .single-transition-delay(0.3s);
+                .transition-delay(0.3s);
             }
         }
     }
@@ -175,18 +175,18 @@ body {position:relative;}
             color:@monsoon;
             &.closed {
                 opacity:1; .translateY(0); color:@monsoon;
-                .single-transition-open(~"opacity 0.2s ease-out 0.5s, transform 0.2s ease-out 0.5s, color 0.2s ease-out 0s");
+                .transition-open(~"opacity 0.2s ease-out 0.5s, transform 0.2s ease-out 0.5s, color 0.2s ease-out 0s");
                 .primary-menu-opened & {
                     opacity:0; transform:translateY(-10px);
-                    .single-transition;
+                    .transition;
                 }
             }
             &.opened {
                 opacity:0; transform:translateY(10px); color:@white;
-                .single-transition;
+                .transition;
                 .primary-menu-opened & {
                     opacity:1; transform:translateY(0);
-                    .single-transition-delay(0.7s);
+                    .transition-delay(0.7s);
                 }
             }
         }//end text
@@ -205,9 +205,9 @@ body {position:relative;}
 
                 //animations for menu opening
                 background-color:@charcoal;
-                .single-transition-open(~"background 0.2s ease-out 0s, transform 0.4s ease-out 0.5s, opacity 0.4s ease-out 0.5s, margin 0.2s ease-out 0.5s");
+                .transition-open(~"background 0.2s ease-out 0s, transform 0.4s ease-out 0.5s, opacity 0.4s ease-out 0.5s, margin 0.2s ease-out 0.5s");
                 &.two {
-                    .single-transition-open(~"background 0.2s ease-out 0s, transform 0.4s ease-out 0.3s, opacity 0.4s ease-out 0.5s, margin 0.2s ease-out 0.5s");
+                    .transition-open(~"background 0.2s ease-out 0s, transform 0.4s ease-out 0.3s, opacity 0.4s ease-out 0.5s, margin 0.2s ease-out 0.5s");
                 }
                 //animation for the lines when the menu is opened
                 .primary-menu-opened & {
@@ -231,7 +231,7 @@ body.primary-menu-opened {
 //PRIMARY NAV STYLES
 @mobile-tap-gutter: 50px;
 
-#primary-menu {
+#primary-menu-design {
     display:block; position:fixed;
     overflow:hidden;
     width:100%; height:100%;
@@ -244,10 +244,10 @@ body.primary-menu-opened {
 
     //animation to stack the nav on top of the content when opened
     z-index:-2; opacity:0;
-    .single-transition-open(~"z-index 0.5s step-end, opacity 0.5s step-end 0s");
+    .transition-open(~"z-index 0.5s step-end, opacity 0.5s step-end 0s");
     .primary-menu-opened & {
         z-index:@header-z-index - 1; opacity:1;
-        .single-transition-open(~"z-index 0s step-start, opacity 0s step-start");
+        .transition-open(~"z-index 0s step-start, opacity 0s step-start");
     }
 
     @media @medium {
@@ -289,10 +289,10 @@ body.primary-menu-opened {
 
         //animate nav in after menu is opened to prevent jumping
         opacity:0; .translateX(10%);
-        .single-transition-open(~"opacity 0.2s ease-in 0s, transform 0.3s ease-out 0s");
+        .transition-open(~"opacity 0.2s ease-in 0s, transform 0.3s ease-out 0s");
         .primary-menu-opened & {
             opacity:1; .translateX(0);
-            .single-transition-open(~"opacity 0.3s ease-in 0.3s, transform 0.3s ease-in 0.3s");
+            .transition-open(~"opacity 0.3s ease-in 0.3s, transform 0.3s ease-in 0.3s");
         }
         @media @medium {
             min-height:0;
@@ -327,7 +327,7 @@ body.primary-menu-opened {
                 height:auto;
                 //give sub links in level 2-3 a dark highlight on hover
                 .menu-item {
-                    .single-transition;
+                    .transition;
                     &:hover {background-color:fade(@pure-black, 50%);}
                 }
             }
@@ -370,10 +370,10 @@ body.primary-menu-opened {
                 box-shadow:1px 1px 10px fade(@pure-black, 40%);
 
                 opacity:0;
-                .single-transition-open(~"opacity 0s ease-in 0s, background-color 0.2s ease-out 0s");
+                .transition-open(~"opacity 0s ease-in 0s, background-color 0.2s ease-out 0s");
                 .primary-menu-opened & {
                     opacity:1;
-                    .single-transition-open(~"opacity 0.2s ease-in 0.55s, background-color 0.2s ease-out 0s");
+                    .transition-open(~"opacity 0.2s ease-in 0.55s, background-color 0.2s ease-out 0s");
                 }
             }
         }
@@ -480,7 +480,7 @@ body.primary-menu-opened {
                     top:-@header-height - 2px; right:100%;
                     height:~"calc(100vh - @{header-height} * 2 + 4px)"; width:@mobile-tap-gutter;
                     background-color:fade(@pure-black, 20%);
-                    .single-transition;
+                    .transition;
                 }
 
                 //for the reverse-facing triangle
@@ -494,7 +494,7 @@ body.primary-menu-opened {
                     border-right:7px solid @white;
 
                     .translateY(-50%);
-                    .single-transition;
+                    .transition;
                 }
             }
             @media @medium {
@@ -502,15 +502,15 @@ body.primary-menu-opened {
                 padding:0.7vh 30px;
                 border-top:none;
                 //animations
-                opacity:0.6;
-                .single-transition;
+                opacity:0.75;
+                .transition;
                 &:hover {opacity:1;}
 
                 &.back {display:none;}
-                &.current-page {
-                    opacity:0.3;
-                    &:hover {opacity:0.3;}
-                }
+                // &.current-page {
+                //     opacity:0.3;
+                //     &:hover {opacity:0.3;}
+                // }
             }
         }
 
@@ -540,7 +540,7 @@ body.primary-menu-opened {
 
                         //animations
                         max-height:0; opacity:0; padding-top:0;
-                        .single-transition;
+                        .transition;
                     }
                 }
                 &.active > .menu-item .section-summary {
@@ -621,23 +621,23 @@ body.primary-menu-opened {
             //for the panels sliding out
             > .node-panel {
                 overflow:hidden;
-                .single-transition;
+                .transition;
                 @media @medium {
                     .translateX(-50%);
                     height:0;
                     opacity:0;
-                    .single-transition-open(~"all 0.2s ease-out 0s, height 0.2s step-end");
+                    .transition-open(~"all 0.2s ease-out 0s, height 0.2s step-end");
                 }
             }
             &.active > .node-panel {
                 overflow:visible;
                 .translateX(-100%);
-                .single-transition-delay(0.2s);
+                .transition-delay(0.2s);
                 @media @medium {
                     .translateX(0);
                     height:100%;
                     opacity:1;
-                    .single-transition-open(~"all 0.2s ease-out 0.2s, height 0.2s step-start");
+                    .transition-open(~"all 0.2s ease-out 0.2s, height 0.2s step-start");
                 }
             }
 
@@ -648,9 +648,9 @@ body.primary-menu-opened {
             //animations for fading in the back button side bar so it doesnt jump in
             > .node-panel > .menu-item.back:before {
                 opacity:0;
-                .single-transition;
+                .transition;
             }
-            &.active > .node-panel > .menu-item.back:before {opacity:1; .single-transition-delay(0.3s);}
+            &.active > .node-panel > .menu-item.back:before {opacity:1; .transition-delay(0.3s);}
 
 
 
@@ -667,7 +667,7 @@ body.primary-menu-opened {
 
                 .translate(0, -50%);
                 //opacity:0.5;
-                .single-transition;
+                .transition;
             }
             > .menu-item:hover:after {opacity:1;}
             &.active > .menu-item:after {
@@ -741,17 +741,18 @@ body.primary-menu-opened {
             margin-bottom:10px;
             .icon-block {background-color:fade(@pure-black, 25%);}
         }
-        .dropup {
+        #language-selector {
             text-align:left;
             width:100%;
             background-color:fade(@pure-black, 25%);
-            .single-transition;
+            .transition;
             &:hover {background-color:fade(@pure-black, 30%);}
-            &.open {background-color:fade(@pure-black, 30%);}
+            &.dropdown-open {background-color:fade(@pure-black, 30%);}
             .dropdown-toggle {
                 color:@white; width:100%; background-color:transparent!important;
             }
-            .dropdown-menu {background-color:darken(@black, 5%); max-width:none;}
+            .dropdown {background-color:darken(@black, 5%); max-width:none;}
+            .menu-item > a {color:@white;}
         }
     }//end menu-footer
 
@@ -762,12 +763,12 @@ body.primary-menu-opened {
         background-color:@black;
 
         //animations
-        .single-transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.2s ease-out 0.2s");
+        .transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.2s ease-out 0.2s");
         opacity:0; .translateX(100%);
         .primary-menu-opened & {
             opacity:1;
             .translateX(0);
-            .single-transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s");
+            .transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s");
         }
         @media @medium {
             background-color:transparent;
@@ -787,10 +788,10 @@ body.primary-menu-opened {
 
                 //animate in when menu is opened
                 opacity:0; .translateX(-20%);
-                .single-transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.2s ease-out 0.2s, background-color 0.2s ease-out 0s");
+                .transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.2s ease-out 0.2s, background-color 0.2s ease-out 0s");
                 .primary-menu-opened & {
                     opacity:1; .translateX(0);
-                    .single-transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s, background-color 0.2s ease-out 0s");
+                    .transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s, background-color 0.2s ease-out 0s");
                 }
             }
             &:before {
@@ -799,10 +800,10 @@ body.primary-menu-opened {
 
                 //animate in when menu is opened
                 opacity:0; .translateX(20%);
-                .single-transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.3s ease-out 0.2s");
+                .transition-open(~"opacity 0.2s ease-in 0.2s, transform 0.3s ease-out 0.2s");
                 .primary-menu-opened & {
                     opacity:1; .translateX(0);
-                    .single-transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s");
+                    .transition-open(~"opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s");
                 }
             }
         }
@@ -836,27 +837,27 @@ body.primary-menu-opened {
     @media @medium {
         &.red {
             .node-panel.level-1:after {background-color:@red;}
-            .menu-footer .dropup .dropdown-menu {background-color:darken(@red, 20%);}
+            .menu-footer #language-selector .dropdown {background-color:darken(@red, 20%);}
             .primary-menu-background:after {background-color:@red;}
         }
         &.orange {
             .node-panel.level-1:after {background-color:@orange;}
-            .menu-footer .dropup .dropdown-menu {background-color:darken(@orange, 20%);}
+            .menu-footer #language-selector .dropdown {background-color:darken(@orange, 20%);}
             .primary-menu-background:after {background-color:@orange;}
         }
         &.green {
             .node-panel.level-1:after {background-color:@green;}
-            .menu-footer .dropup .dropdown-menu {background-color:darken(@green, 10%);}
+            .menu-footer #language-selector .dropdown {background-color:darken(@green, 10%);}
             .primary-menu-background:after {background-color:@green;}
         }
         &.blue {
             .node-panel.level-1:after {background-color:@blue;}
-            .menu-footer .dropup .dropdown-menu {background-color:darken(@blue, 20%);}
+            .menu-footer #language-selector .dropdown {background-color:darken(@blue, 20%);}
             .primary-menu-background:after {background-color:@blue;}
         }
         &.navy-blue {
             .node-panel.level-1:after {background-color:@navy-blue;}
-            .menu-footer .dropup .dropdown-menu {background-color:darken(@navy-blue, 10%);}
+            .menu-footer #language-selector .dropdown {background-color:darken(@navy-blue, 10%);}
             .primary-menu-background:after {background-color:@navy-blue;}
         }
     }

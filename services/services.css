@@ -93,8 +93,8 @@ ul.triangle-list li {
   line-height: 20px;
   color: #777777;
   text-align: left;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
 }
 .mix-filters .filter:hover {
   color: #333333;
@@ -121,8 +121,8 @@ ul.triangle-list li {
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
     border-top: 10px solid #333333;
-    -webkit-transition: all 0.2s ease-out 0s;
-    transition: all 0.2s ease-out 0s;
+    -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+    transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
   }
 }
 #customer-support #support-packages thead th {
@@ -522,8 +522,8 @@ ul.triangle-list li {
   overflow: visible;
   text-align: center;
   color: #333333;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
 }
 #bi-journey .journey-graph .x-axis-bar .grid-item:after {
   content: '';

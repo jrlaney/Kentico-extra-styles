@@ -324,8 +324,8 @@
   height: 25px;
   padding: 4px;
   margin: 10px 5px 10px -4px;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .social-icon-new img {
   margin: 0;
@@ -385,8 +385,8 @@ a.card {
   padding-right: 15px;
   background-size: 100% 100%;
   text-align: center;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
 }
 .full-width-button .inner {
   display: inline-block;
@@ -394,8 +394,8 @@ a.card {
   position: relative;
   padding-right: 80px;
   text-align: left;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
 }
 .full-width-button .inner:before {
   content: "\e901";
@@ -415,8 +415,8 @@ a.card {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   opacity: .5;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
 }
 .full-width-button:hover {
   background-size: 150% 400%;
