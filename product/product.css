@@ -210,8 +210,8 @@ section {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 40px;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
 }
 .gridder:after {
   display: block;
@@ -277,7 +277,6 @@ section {
   position: relative;
   padding: 70px 20px 40px 20px;
   -webkit-animation: fade-slide-down 0.5s 0s ease-out both;
-  -moz-animation: fade-slide-down 0.5s 0s ease-out both;
   animation: fade-slide-down 0.5s 0s ease-out both;
 }
 .gridder .gridder-close {
@@ -289,8 +288,8 @@ section {
   width: 50px;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0);
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
 }
 .gridder .gridder-close:before,
 .gridder .gridder-close:after {
@@ -326,8 +325,8 @@ section {
   width: 50px;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0);
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
 }
 .gridder .gridder-nav:hover {
   background-color: rgba(0, 0, 0, 0.4);
@@ -460,8 +459,8 @@ section {
   }
   .gridder .gridder-back {
     background-color: rgba(0, 0, 0, 0);
-    -webkit-transition: all 0.2s ease-out 0s;
-    transition: all 0.2s ease-out 0s;
+    -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+    transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
   }
   .gridder .gridder-back:hover {
     background-color: rgba(0, 0, 0, 0.4);
@@ -605,8 +604,8 @@ section {
   height: 100%;
   -webkit-transform: translateX(-3px);
   transform: translateX(-3px);
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
 }
 .icon-link-grid .grid-item.red:before {
   background-color: #D9232E;
@@ -730,8 +729,8 @@ section {
     margin: 0;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
-    -webkit-transition: all 0.2s ease-out 0s;
-    transition: all 0.2s ease-out 0s;
+    -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+    transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
   }
   .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a:after {
     display: none;
@@ -756,7 +755,6 @@ section {
     border: none;
     opacity: 0;
     -webkit-animation: fade-slide-right 0.3s ease-out 0.2s normal forwards;
-    -moz-animation: fade-slide-right 0.3s ease-out 0.2s normal forwards;
     animation: fade-slide-right 0.3s ease-out 0.2s normal forwards;
     padding: 30px;
   }
@@ -832,6 +830,8 @@ section {
 }
 #hero.angled-banner {
   overflow: hidden;
+  position: relative;
+  backface-visibility: visible;
   color: #FFFFFF;
 }
 @media only screen and (min-width: 768px) {
@@ -870,6 +870,7 @@ section {
   width: 100%;
   top: 0;
   left: 0;
+  backface-visibility: visible;
 }
 @media only screen and (min-width: 1200px) {
   #hero.angled-banner .angle-wrapper {
@@ -881,9 +882,12 @@ section {
 }
 #hero.angled-banner .angle-wrapper .angle {
   position: absolute;
+  backface-visibility: visible;
   top: 0;
 }
 #hero.angled-banner .angle-wrapper .angle.left {
+  -webkit-clip-path: polygon(0 100%, 100% 0, 0 0) !important;
+  clip-path: polygon(0 100%, 100% 0, 0 0) !important;
   z-index: 2;
   right: 0;
   width: 100vw;
@@ -905,6 +909,8 @@ section {
   }
 }
 #hero.angled-banner .angle-wrapper .angle.right {
+  -webkit-clip-path: polygon(100% 100%, 100% 0, 0 0) !important;
+  clip-path: polygon(100% 100%, 100% 0, 0 0) !important;
   z-index: 1;
   width: 75vw;
   height: 75vw;
@@ -1961,7 +1967,6 @@ section {
   top: 6%;
   opacity: 0;
   -webkit-animation: app-lock-animation 7s 2s ease-out infinite;
-  -moz-animation: app-lock-animation 7s 2s ease-out infinite;
   animation: app-lock-animation 7s 2s ease-out infinite;
 }
 .Emm #hero .ipad {
@@ -1982,7 +1987,6 @@ section {
   top: 6%;
   opacity: 0;
   -webkit-animation: app-lock-animation 7s 2s ease-out infinite;
-  -moz-animation: app-lock-animation 7s 2s ease-out infinite;
   animation: app-lock-animation 7s 2s ease-out infinite;
 }
 .Emm #emm-vendors .logo {
@@ -2035,33 +2039,6 @@ section {
   z-index: 1;
   bottom: 5%;
   left: 35%;
-}
-@-moz-keyframes app-lock-animation {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(2) translateY(-10px);
-    transform: scale(2) translateY(-10px);
-  }
-  5% {
-    opacity: 1;
-    -webkit-transform: scale(1) translateY(0);
-    transform: scale(1) translateY(0);
-  }
-  90% {
-    opacity: 1;
-    -webkit-transform: scale(1) translateY(0);
-    transform: scale(1) translateY(0);
-  }
-  95% {
-    opacity: 0;
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px);
-  }
 }
 @-webkit-keyframes app-lock-animation {
   0% {
@@ -2925,7 +2902,6 @@ section {
   .WhyMicrostrategy .hero-col {
     opacity: 0px;
     -webkit-animation: fade-in 0.5s ease-out 0.5s normal forwards;
-    -moz-animation: fade-in 0.5s ease-out 0.5s normal forwards;
     animation: fade-in 0.5s ease-out 0.5s normal forwards;
   }
 }
@@ -2936,7 +2912,6 @@ section {
   .WhyMicrostrategy .timeline-wrapper {
     opacity: 0;
     -webkit-animation: fade-in 1s ease-out 2s normal forwards;
-    -moz-animation: fade-in 1s ease-out 2s normal forwards;
     animation: fade-in 1s ease-out 2s normal forwards;
   }
 }
@@ -3256,8 +3231,8 @@ section {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     opacity: 0.9;
-    -webkit-transition: all 0.2s ease-out 0s;
-    transition: all 0.2s ease-out 0s;
+    -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+    transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
   }
   .WhyMicrostrategy #ease-of-use .report-link:hover .report-image {
     -webkit-transform: translate(-50%, calc(-50% - 10px));
@@ -3410,8 +3385,8 @@ section {
   height: 100%;
   -webkit-transform: translateX(-3px);
   transform: translateX(-3px);
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
 }
 .WhatsNew #hero .scroll-link.red:before {
   background-color: #D9232E;
@@ -3527,8 +3502,8 @@ section {
   bottom: 15px;
   right: 15px;
   z-index: 1;
-  -webkit-transition: all 0.4s ease-out 0s;
-  transition: all 0.4s ease-out 0s;
+  -webkit-transition: all 0.4s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.4s cubic-bezier(0.2, 0, 0.03, 1);
 }
 @media only screen and (min-width: 768px) {
   #product-packaging #to-top {
@@ -3555,8 +3530,8 @@ section {
   position: absolute;
   right: 64px;
   opacity: 0;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
   text-align: center;
   background-color: #6a6a6a;
   font-size: 12px;
@@ -3569,28 +3544,6 @@ section {
 #product-packaging #to-top:active .label {
   opacity: 1;
   padding: 0 16px;
-}
-@-moz-keyframes scroll-page {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  10% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  25% {
-    -webkit-transform: translateY(-53%);
-    transform: translateY(-53%);
-  }
-  90% {
-    -webkit-transform: translateY(-53%);
-    transform: translateY(-53%);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
 }
 @-webkit-keyframes scroll-page {
   0% {
@@ -3639,52 +3592,42 @@ section {
 @media only screen and (min-width: 768px) {
   .passed-view .delay02 {
     -webkit-animation-delay: 0.2s !important;
-    -moz-animation-delay: 0.2s !important;
     animation-delay: 0.2s !important;
   }
   .passed-view .delay04 {
     -webkit-animation-delay: 0.4s !important;
-    -moz-animation-delay: 0.4s !important;
     animation-delay: 0.4s !important;
   }
   .passed-view .delay06 {
     -webkit-animation-delay: 0.6s !important;
-    -moz-animation-delay: 0.6s !important;
     animation-delay: 0.6s !important;
   }
   .passed-view .delay08 {
     -webkit-animation-delay: 0.8s !important;
-    -moz-animation-delay: 0.8s !important;
     animation-delay: 0.8s !important;
   }
   .passed-view .delay10 {
     -webkit-animation-delay: 1s !important;
-    -moz-animation-delay: 1s !important;
     animation-delay: 1s !important;
   }
   .passed-view .delay12 {
     -webkit-animation-delay: 1.2s !important;
-    -moz-animation-delay: 1.2s !important;
     animation-delay: 1.2s !important;
   }
   .passed-view .delay14 {
     -webkit-animation-delay: 1.4s !important;
-    -moz-animation-delay: 1.4s !important;
     animation-delay: 1.4s !important;
   }
   .passed-view .delay16 {
     -webkit-animation-delay: 1.6s !important;
-    -moz-animation-delay: 1.6s !important;
     animation-delay: 1.6s !important;
   }
   .passed-view .delay18 {
     -webkit-animation-delay: 1.8s !important;
-    -moz-animation-delay: 1.8s !important;
     animation-delay: 1.8s !important;
   }
   .passed-view .delay20 {
     -webkit-animation-delay: 2s !important;
-    -moz-animation-delay: 2s !important;
     animation-delay: 2s !important;
   }
   .slide-up,
@@ -3696,36 +3639,23 @@ section {
   }
   .passed-view .slide-up {
     -webkit-animation: fade-slide-up 0.3s ease-out 0s normal forwards;
-    -moz-animation: fade-slide-up 0.3s ease-out 0s normal forwards;
     animation: fade-slide-up 0.3s ease-out 0s normal forwards;
   }
   .passed-view .slide-left {
     -webkit-animation: fade-slide-left 0.3s ease-out 0s normal forwards;
-    -moz-animation: fade-slide-left 0.3s ease-out 0s normal forwards;
     animation: fade-slide-left 0.3s ease-out 0s normal forwards;
   }
   .passed-view .slide-right {
     -webkit-animation: fade-slide-right 0.3s ease-out 0s normal forwards;
-    -moz-animation: fade-slide-right 0.3s ease-out 0s normal forwards;
     animation: fade-slide-right 0.3s ease-out 0s normal forwards;
   }
   .passed-view .slide-down {
     -webkit-animation: fade-slide-down 0.3s ease-out 0s normal forwards;
-    -moz-animation: fade-slide-down 0.3s ease-out 0s normal forwards;
     animation: fade-slide-down 0.3s ease-out 0s normal forwards;
   }
   .passed-view .fade-in {
     -webkit-animation: fade-in 0.3s ease-out 0s normal forwards;
-    -moz-animation: fade-in 0.3s ease-out 0s normal forwards;
     animation: fade-in 0.3s ease-out 0s normal forwards;
-  }
-}
-@-moz-keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 @-webkit-keyframes fade-in {
@@ -3742,18 +3672,6 @@ section {
   }
   100% {
     opacity: 1;
-  }
-}
-@-moz-keyframes fade-slide-up {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(10%);
-    transform: translateY(10%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
   }
 }
 @-webkit-keyframes fade-slide-up {
@@ -3773,18 +3691,6 @@ section {
     opacity: 0;
     -webkit-transform: translateY(10%);
     transform: translateY(10%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-@-moz-keyframes fade-slide-down {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-10%);
-    transform: translateY(-10%);
   }
   100% {
     opacity: 1;
@@ -3816,18 +3722,6 @@ section {
     transform: translateY(0);
   }
 }
-@-moz-keyframes fade-slide-left {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(10%);
-    transform: translateX(10%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
 @-webkit-keyframes fade-slide-left {
   0% {
     opacity: 0;
@@ -3845,18 +3739,6 @@ section {
     opacity: 0;
     -webkit-transform: translateX(10%);
     transform: translateX(10%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-@-moz-keyframes fade-slide-right {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-10%);
-    transform: translateX(-10%);
   }
   100% {
     opacity: 1;

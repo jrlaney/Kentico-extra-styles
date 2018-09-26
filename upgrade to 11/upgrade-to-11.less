@@ -93,7 +93,7 @@ main, section {overflow:hidden;}
             top:0; left:0;
             width:3px; height:100%;
             .translateX(-3px);
-            .transition;
+            .single-transition;
         }
         &.red:before {background-color:@red;}
         &.orange:before {background-color:@orange;}
@@ -172,7 +172,7 @@ main, section {overflow:hidden;}
                          border-left:7px solid @white;
                          margin:0;
                          .translate(0, -50%);
-                         .transition;
+                         .single-transition;
                      }
                      &:after {display:none;}
                  }//end > a
@@ -314,9 +314,8 @@ main, section {overflow:hidden;}
 .ChangesAndImprovements {
     .panelstack.vertical-panelstack {
         @media @medium {
-            .panel-content {padding:30px;}
             .panel-nav {width:30%;}
-            .panel-content {width:70%;}
+            .panel-content {padding:30px; width:70%;}
         }
         @media @large {
             .panel-nav {width:20%;}
@@ -338,6 +337,16 @@ main, section {overflow:hidden;}
             }
         }
     }
+    #features {
+        .panelstack.vertical-panelstack {
+            @media @medium {
+                .panel-content {
+                    padding:0;
+                    > .flex-row {padding:30px;}
+                }
+            }
+        }
+    }
 }
 
 .HowToUpgrade {
@@ -348,7 +357,7 @@ main, section {overflow:hidden;}
         padding:0;
         opacity:0;
         .animation(fade-slide-down 0.3s ease-out 0.2s normal forwards);
-        .transition;
+        .single-transition;
         &.current {.animation(fade-slide-up 0.3s ease-out 0.2s normal forwards); max-height:5000px; padding:60px 0;}
         .element {padding:10px 0 20px 25px;}
     }
@@ -364,7 +373,7 @@ main, section {overflow:hidden;}
         position: relative;
         background-color: fade(@pure-black, 20%);
         border: 3px solid transparent;
-        .transition;
+        .single-transition;
 
     	font-family:@myriad-pro;
     	font-size:16px;
@@ -395,10 +404,10 @@ main, section {overflow:hidden;}
                     border-right: 20px solid transparent;
                     border-top: 20px solid @white;
                     .translate(-50%, -30px);
-                    .transition;
+                    .single-transition;
                 }
             }
-            .transition;
+            .single-transition;
         }
 
         &:hover {

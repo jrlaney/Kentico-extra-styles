@@ -150,8 +150,8 @@ section {
   height: 100%;
   -webkit-transform: translateX(-3px);
   transform: translateX(-3px);
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
 }
 .icon-link-grid .grid-item.red:before {
   background-color: #D9232E;
@@ -275,8 +275,8 @@ section {
     margin: 0;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
-    -webkit-transition: all 0.2s ease-out 0s;
-    transition: all 0.2s ease-out 0s;
+    -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+    transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
   }
   .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a:after {
     display: none;
@@ -301,7 +301,6 @@ section {
     border: none;
     opacity: 0;
     -webkit-animation: fade-slide-right 0.3s ease-out 0.2s normal forwards;
-    -moz-animation: fade-slide-right 0.3s ease-out 0.2s normal forwards;
     animation: fade-slide-right 0.3s ease-out 0.2s normal forwards;
     padding: 30px;
   }
@@ -495,13 +494,11 @@ section {
   border-width: 0 1px;
 }
 @media only screen and (min-width: 768px) {
-  .ChangesAndImprovements .panelstack.vertical-panelstack .panel-content {
-    padding: 30px;
-  }
   .ChangesAndImprovements .panelstack.vertical-panelstack .panel-nav {
     width: 30%;
   }
   .ChangesAndImprovements .panelstack.vertical-panelstack .panel-content {
+    padding: 30px;
     width: 70%;
   }
 }
@@ -536,20 +533,26 @@ section {
     left: 0;
   }
 }
+@media only screen and (min-width: 768px) {
+  .ChangesAndImprovements #features .panelstack.vertical-panelstack .panel-content {
+    padding: 0;
+  }
+  .ChangesAndImprovements #features .panelstack.vertical-panelstack .panel-content > .flex-row {
+    padding: 30px;
+  }
+}
 .HowToUpgrade .upgrade-path-panel {
   overflow: hidden;
   max-height: 0;
   padding: 0;
   opacity: 0;
   -webkit-animation: fade-slide-down 0.3s ease-out 0.2s normal forwards;
-  -moz-animation: fade-slide-down 0.3s ease-out 0.2s normal forwards;
   animation: fade-slide-down 0.3s ease-out 0.2s normal forwards;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
 }
 .HowToUpgrade .upgrade-path-panel.current {
   -webkit-animation: fade-slide-up 0.3s ease-out 0.2s normal forwards;
-  -moz-animation: fade-slide-up 0.3s ease-out 0.2s normal forwards;
   animation: fade-slide-up 0.3s ease-out 0.2s normal forwards;
   max-height: 5000px;
   padding: 60px 0;
@@ -573,8 +576,8 @@ section {
   position: relative;
   background-color: rgba(0, 0, 0, 0.2);
   border: 3px solid transparent;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
@@ -595,8 +598,8 @@ section {
 }
 .HowToUpgrade .upgrade-path-box footer {
   margin-top: auto;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
 }
 .HowToUpgrade .upgrade-path-box footer .button {
   width: 100%;
@@ -614,8 +617,8 @@ section {
   border-top: 20px solid #FFFFFF;
   -webkit-transform: translate(-50%, -30px);
   transform: translate(-50%, -30px);
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
 }
 .HowToUpgrade .upgrade-path-box:hover {
   cursor: pointer;
@@ -699,52 +702,42 @@ section {
 @media only screen and (min-width: 768px) {
   .passed-view .delay02 {
     -webkit-animation-delay: 0.2s !important;
-    -moz-animation-delay: 0.2s !important;
     animation-delay: 0.2s !important;
   }
   .passed-view .delay04 {
     -webkit-animation-delay: 0.4s !important;
-    -moz-animation-delay: 0.4s !important;
     animation-delay: 0.4s !important;
   }
   .passed-view .delay06 {
     -webkit-animation-delay: 0.6s !important;
-    -moz-animation-delay: 0.6s !important;
     animation-delay: 0.6s !important;
   }
   .passed-view .delay08 {
     -webkit-animation-delay: 0.8s !important;
-    -moz-animation-delay: 0.8s !important;
     animation-delay: 0.8s !important;
   }
   .passed-view .delay10 {
     -webkit-animation-delay: 1s !important;
-    -moz-animation-delay: 1s !important;
     animation-delay: 1s !important;
   }
   .passed-view .delay12 {
     -webkit-animation-delay: 1.2s !important;
-    -moz-animation-delay: 1.2s !important;
     animation-delay: 1.2s !important;
   }
   .passed-view .delay14 {
     -webkit-animation-delay: 1.4s !important;
-    -moz-animation-delay: 1.4s !important;
     animation-delay: 1.4s !important;
   }
   .passed-view .delay16 {
     -webkit-animation-delay: 1.6s !important;
-    -moz-animation-delay: 1.6s !important;
     animation-delay: 1.6s !important;
   }
   .passed-view .delay18 {
     -webkit-animation-delay: 1.8s !important;
-    -moz-animation-delay: 1.8s !important;
     animation-delay: 1.8s !important;
   }
   .passed-view .delay20 {
     -webkit-animation-delay: 2s !important;
-    -moz-animation-delay: 2s !important;
     animation-delay: 2s !important;
   }
   .slide-up,
@@ -756,36 +749,23 @@ section {
   }
   .passed-view .slide-up {
     -webkit-animation: fade-slide-up 0.3s ease-out 0s normal forwards;
-    -moz-animation: fade-slide-up 0.3s ease-out 0s normal forwards;
     animation: fade-slide-up 0.3s ease-out 0s normal forwards;
   }
   .passed-view .slide-left {
     -webkit-animation: fade-slide-left 0.3s ease-out 0s normal forwards;
-    -moz-animation: fade-slide-left 0.3s ease-out 0s normal forwards;
     animation: fade-slide-left 0.3s ease-out 0s normal forwards;
   }
   .passed-view .slide-right {
     -webkit-animation: fade-slide-right 0.3s ease-out 0s normal forwards;
-    -moz-animation: fade-slide-right 0.3s ease-out 0s normal forwards;
     animation: fade-slide-right 0.3s ease-out 0s normal forwards;
   }
   .passed-view .slide-down {
     -webkit-animation: fade-slide-down 0.3s ease-out 0s normal forwards;
-    -moz-animation: fade-slide-down 0.3s ease-out 0s normal forwards;
     animation: fade-slide-down 0.3s ease-out 0s normal forwards;
   }
   .passed-view .fade-in {
     -webkit-animation: fade-in 0.3s ease-out 0s normal forwards;
-    -moz-animation: fade-in 0.3s ease-out 0s normal forwards;
     animation: fade-in 0.3s ease-out 0s normal forwards;
-  }
-}
-@-moz-keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 @-webkit-keyframes fade-in {
@@ -802,18 +782,6 @@ section {
   }
   100% {
     opacity: 1;
-  }
-}
-@-moz-keyframes fade-slide-up {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(10%);
-    transform: translateY(10%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
   }
 }
 @-webkit-keyframes fade-slide-up {
@@ -833,18 +801,6 @@ section {
     opacity: 0;
     -webkit-transform: translateY(10%);
     transform: translateY(10%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-@-moz-keyframes fade-slide-down {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-10%);
-    transform: translateY(-10%);
   }
   100% {
     opacity: 1;
@@ -876,18 +832,6 @@ section {
     transform: translateY(0);
   }
 }
-@-moz-keyframes fade-slide-left {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(10%);
-    transform: translateX(10%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
 @-webkit-keyframes fade-slide-left {
   0% {
     opacity: 0;
@@ -905,18 +849,6 @@ section {
     opacity: 0;
     -webkit-transform: translateX(10%);
     transform: translateX(10%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-@-moz-keyframes fade-slide-right {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-10%);
-    transform: translateX(-10%);
   }
   100% {
     opacity: 1;
