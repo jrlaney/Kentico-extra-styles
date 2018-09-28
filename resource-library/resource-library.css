@@ -575,8 +575,8 @@
   background-color: rgba(71, 137, 163, 0.7);
   opacity: 0;
   cursor: pointer;
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .video-playing #resource-dashboard-size-trigger {
   opacity: 1;

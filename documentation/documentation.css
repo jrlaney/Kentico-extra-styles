@@ -102,8 +102,8 @@ code.hljs {
   font-weight: 400;
   color: #777777;
   margin-bottom: 0;
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .Cards #examples .flex-row .toggler.expanded {
   color: #D9232E;
@@ -122,8 +122,8 @@ code.hljs {
   padding-bottom: 15px;
   margin-bottom: 0;
   color: #68AA00;
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .Cards #examples .flex-row .toggler2:before,
 .Cards #examples .flex-row .toggler2:after {

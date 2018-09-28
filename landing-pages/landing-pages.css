@@ -128,8 +128,8 @@ section#symposium {
   height: 100%;
   -webkit-transform: translateX(-3px);
   transform: translateX(-3px);
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .icon-link-grid .grid-item.red:before {
   background-color: #D9232E;
@@ -253,8 +253,8 @@ section#symposium {
     margin: 0;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
-    -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-    transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
   }
   .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a:after {
     display: none;
@@ -1278,8 +1278,8 @@ section.below-card {
   position: absolute;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .graph-percentage.graph-bar.graph-radial .inset {
   border-radius: 50%;
@@ -2313,8 +2313,8 @@ section {
 }
 #fastfood-dashboard .device-mockup .screenshot {
   opacity: 0.99;
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   -webkit-backface-visibility: hidden;
 }
 #fastfood-dashboard .device-mockup:hover .screenshot {

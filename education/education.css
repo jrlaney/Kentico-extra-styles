@@ -126,13 +126,6 @@ blockquote:after {
   height: 80px;
   width: 80px;
 }
-#section-navigation-sticky-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-#get-started .flex.column .button {
-  margin-top: auto;
-}
 .most-popular {
   position: relative;
   overflow: hidden;
@@ -461,12 +454,8 @@ blockquote:after {
   transform: translateX(-50%);
   bottom: calc(100% + 10px);
 }
-#pricing-packaging .pricing-box {
-  padding: 30px;
-  border-bottom: 1px solid #CCCCCC;
-}
-#pricing-packaging .pricing-box table td,
-#pricing-packaging .pricing-box table th {
-  padding: 10px 15px;
+#pricing-packaging table td,
+#pricing-packaging table th {
+  padding: 5px 10px;
   border: 1px solid #CCCCCC;
 }

@@ -46,15 +46,15 @@
   display: block;
   position: relative;
   padding: 20px;
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .gridder .gridder-navigation a.gridder-close {
   -webkit-order: 1;
   order: 1;
 }
-.gridder .gridder-navigation a.gridder-close:before,
-.gridder .gridder-navigation a.gridder-close:after {
+.gridder .gridder-navigation a.gridder-close::before,
+.gridder .gridder-navigation a.gridder-close::after {
   content: '';
   display: block;
   width: 1px;
@@ -65,22 +65,23 @@
   margin-top: -10px;
   margin-right: -10px;
   background: #777777;
+  opacity: 0.7;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
-.gridder .gridder-navigation a.gridder-close:before {
+.gridder .gridder-navigation a.gridder-close::before {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.gridder .gridder-navigation a.gridder-close:after {
+.gridder .gridder-navigation a.gridder-close::after {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 .gridder .gridder-navigation a.gridder-close:hover:before,
-.gridder .gridder-navigation a.gridder-close:active:before,
 .gridder .gridder-navigation a.gridder-close:focus:before,
 .gridder .gridder-navigation a.gridder-close:hover:after,
-.gridder .gridder-navigation a.gridder-close:active:after,
 .gridder .gridder-navigation a.gridder-close:focus:after {
-  background: #aaaaaa;
+  opacity: 1;
 }
 .gridder .gridder-navigation a.gridder-nav:before {
   content: "\e901";
@@ -180,8 +181,8 @@
   padding: 2px 0;
   border-bottom: 1px solid transparent;
   color: #FFFFFF;
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .mfp-title a:hover,
 .mfp-title a:active {
@@ -230,8 +231,8 @@
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     opacity: 0;
-    -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-    transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
   }
   #solutions-filters .option-group .option.checked {
     background-color: #11566F;

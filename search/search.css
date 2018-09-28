@@ -28,8 +28,8 @@
   font-weight: 600;
   font-style: italic;
   color: #D9232E;
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .total-results-number {
   font-weight: 600;

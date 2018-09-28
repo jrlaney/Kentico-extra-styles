@@ -150,8 +150,8 @@ section {
   height: 100%;
   -webkit-transform: translateX(-3px);
   transform: translateX(-3px);
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .icon-link-grid .grid-item.red:before {
   background-color: #D9232E;
@@ -275,8 +275,8 @@ section {
     margin: 0;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
-    -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-    transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
   }
   .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a:after {
     display: none;
@@ -548,8 +548,8 @@ section {
   opacity: 0;
   -webkit-animation: fade-slide-down 0.3s ease-out 0.2s normal forwards;
   animation: fade-slide-down 0.3s ease-out 0.2s normal forwards;
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .HowToUpgrade .upgrade-path-panel.current {
   -webkit-animation: fade-slide-up 0.3s ease-out 0.2s normal forwards;
@@ -576,8 +576,8 @@ section {
   position: relative;
   background-color: rgba(0, 0, 0, 0.2);
   border: 3px solid transparent;
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
@@ -598,8 +598,8 @@ section {
 }
 .HowToUpgrade .upgrade-path-box footer {
   margin-top: auto;
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .HowToUpgrade .upgrade-path-box footer .button {
   width: 100%;
@@ -617,8 +617,8 @@ section {
   border-top: 20px solid #FFFFFF;
   -webkit-transform: translate(-50%, -30px);
   transform: translate(-50%, -30px);
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .HowToUpgrade .upgrade-path-box:hover {
   cursor: pointer;

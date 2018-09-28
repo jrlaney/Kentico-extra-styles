@@ -15,8 +15,8 @@
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #f2f2f2;
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .no-objectfit .Blog #page-hero .author .photo {
   color: transparent;
@@ -26,8 +26,8 @@
   font-size: 18px;
   font-weight: 400;
   color: #f2f2f2;
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .Blog #page-hero .author:hover .photo {
   border-color: #FFFFFF;

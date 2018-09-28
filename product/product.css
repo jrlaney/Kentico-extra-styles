@@ -210,8 +210,8 @@ section {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 40px;
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .gridder:after {
   display: block;
@@ -288,8 +288,8 @@ section {
   width: 50px;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0);
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .gridder .gridder-close:before,
 .gridder .gridder-close:after {
@@ -325,8 +325,8 @@ section {
   width: 50px;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0);
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .gridder .gridder-nav:hover {
   background-color: rgba(0, 0, 0, 0.4);
@@ -459,8 +459,8 @@ section {
   }
   .gridder .gridder-back {
     background-color: rgba(0, 0, 0, 0);
-    -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-    transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
   }
   .gridder .gridder-back:hover {
     background-color: rgba(0, 0, 0, 0.4);
@@ -604,8 +604,8 @@ section {
   height: 100%;
   -webkit-transform: translateX(-3px);
   transform: translateX(-3px);
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .icon-link-grid .grid-item.red:before {
   background-color: #D9232E;
@@ -729,8 +729,8 @@ section {
     margin: 0;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
-    -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-    transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
   }
   .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a:after {
     display: none;
@@ -3231,8 +3231,8 @@ section {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     opacity: 0.9;
-    -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-    transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
   }
   .WhyMicrostrategy #ease-of-use .report-link:hover .report-image {
     -webkit-transform: translate(-50%, calc(-50% - 10px));
@@ -3385,8 +3385,8 @@ section {
   height: 100%;
   -webkit-transform: translateX(-3px);
   transform: translateX(-3px);
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .WhatsNew #hero .scroll-link.red:before {
   background-color: #D9232E;
@@ -3502,8 +3502,8 @@ section {
   bottom: 15px;
   right: 15px;
   z-index: 1;
-  -webkit-transition: all 0.4s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.4s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 @media only screen and (min-width: 768px) {
   #product-packaging #to-top {
@@ -3530,8 +3530,8 @@ section {
   position: absolute;
   right: 64px;
   opacity: 0;
-  -webkit-transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.2s cubic-bezier(0.2, 0, 0.03, 1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   text-align: center;
   background-color: #6a6a6a;
   font-size: 12px;
