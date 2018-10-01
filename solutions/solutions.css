@@ -57,7 +57,7 @@
 .gridder .gridder-navigation a.gridder-close::after {
   content: '';
   display: block;
-  width: 1px;
+  width: 2px;
   height: 20px;
   position: absolute;
   top: 50%;
