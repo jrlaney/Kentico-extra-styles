@@ -90,9 +90,6 @@
 .Gecko .List.Page .company.card {
   display: block !important;
 }
-.List.Page .company.card .card-content:first-child {
-  border-bottom: 1px solid #CCCCCC;
-}
 .List.Page .company.card .company-details {
   display: none;
 }
