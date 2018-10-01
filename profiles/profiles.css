@@ -1,6 +1,3 @@
-.List.Page .profile.card {
-  border: 0;
-}
 .Single.Page {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -15,7 +12,7 @@
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #555555;
+  color: #777777;
 }
 .Single.Page .profile-bio {
   font-size: 16px;
