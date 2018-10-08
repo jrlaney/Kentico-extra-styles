@@ -1,4 +1,11 @@
 @import '../settings.less';
+table {
+    border-color:@iron;
+    tbody tr {border-top-color:@iron;border-bottom-color:@iron;}
+}
+table.compare-columns thead th:empty {
+    border-bottom-color: @iron;
+}
 
 blockquote {
     display:inline-block; *zoom:1; *display:inline; position:relative;

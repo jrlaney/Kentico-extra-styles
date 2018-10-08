@@ -1,3 +1,13 @@
+table {
+  border-color: #CCCCCC;
+}
+table tbody tr {
+  border-top-color: #CCCCCC;
+  border-bottom-color: #CCCCCC;
+}
+table.compare-columns thead th:empty {
+  border-bottom-color: #CCCCCC;
+}
 blockquote {
   display: inline-block;
   *zoom: 1;
