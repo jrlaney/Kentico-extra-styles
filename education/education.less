@@ -74,6 +74,57 @@ blockquote {
     }
 }
 
+//for a grid of links with colored icons and left border hover state
+.icon-link-grid {
+    .grid-item {
+        .display(flex);
+        .align-items(center);
+        position:relative; overflow:hidden;
+        padding-top:20px; padding-bottom:20px;
+
+        font-family:@myriad-pro;
+        font-size:14px; line-height:1.2em;
+        .uppercase;
+        font-weight:400;
+
+        .icon {margin-right:10px;}
+        &:before {
+            content:'';
+            display:block; position:absolute;
+            top:0; left:0;
+            width:3px; height:100%;
+            .translateX(-3px);
+            .single-transition;
+        }
+        &.red:before {background-color:@red;}
+        &.orange:before {background-color:@orange;}
+        &.green:before {background-color:@green;}
+        &.blue:before {background-color:@blue;}
+        &.navy-blue:before {background-color:@navy-blue;}
+        &:hover {
+            padding-left:20px; padding-right:10px;
+            &:before {.translateX(0);}
+            &.red .icon {color:@red;}
+            &.orange .icon {color:@orange;}
+            &.green .icon {color:@green;}
+            &.blue .icon {color:@blue;}
+            &.navy-blue .icon {color:@navy-blue;}
+        }
+    }
+    &.light .grid-item {
+        color:@black;
+        border:1px solid fade(@pure-black, 10%);
+        border-width:0 1px 1px 0;
+        &:hover {background-color:fade(@white, 50%);}
+    }
+    &.dark .grid-item {
+        color:@white;
+        border:1px solid fade(@white, 10%);
+        border-width:0 1px 1px 0;
+        &:hover {background-color:fade(@pure-black, 40%);}
+    }
+}
+
 
 
 
