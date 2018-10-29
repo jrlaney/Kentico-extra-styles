@@ -7,62 +7,80 @@ jQuery(document).ready(function($) { // wait for document ready
             //variables for the scroll durations initial values
             var extForcesVar =   $("#external-forces").innerHeight();
             var entAssetsVar =   $("#enterprise-assets").innerHeight();
-            var intPlatformVar = $("#intelligence-platform").innerHeight();
-                var intPlatformSecurityVar =         $("#intelligence-platform #security").innerHeight();
-                var intPlatformAppsVar =             $("#intelligence-platform #applications").innerHeight();
-                var intPlatformDataVar =             $("#intelligence-platform #data").innerHeight();
-                var intPlatformSchemaVar =           $("#intelligence-platform #schema").innerHeight();
-                var intPlatformAppServicesVar =      $("#intelligence-platform #application-services").innerHeight();
-                var intPlatformPlatformServicesVar = $("#intelligence-platform #platform-services").innerHeight();
+            var intMetadataVar = $("#intelligence-metadata").innerHeight();
+                var intMetadataClientProductsVar =   $("#intelligence-metadata #client-products").innerHeight();
+                var intMetadataSecurityVar =         $("#intelligence-metadata #security").innerHeight();
+                var intMetadataAppsVar =             $("#intelligence-metadata #applications").innerHeight();
+                var intMetadataDataVar =             $("#intelligence-metadata #data").innerHeight();
+                var intMetadataSchemaVar =           $("#intelligence-metadata #schema").innerHeight();
+            var intServicesVar = $("#intelligence-services").innerHeight();
+                var intServicesAppServicesVar =      $("#intelligence-services #application-services").innerHeight();
+                var intServicesPlatformServicesVar = $("#intelligence-services #platform-services").innerHeight();
+                var intServicesDriversGatewaysVar =  $("#intelligence-services #drivers-gateways").innerHeight();
             var intCenterVar =   $("#intelligence-center").innerHeight();
-            var intArchiVar =    $("#intelligence-architecture").innerHeight();
-            var intProgVar =     $("#intelligence-program").innerHeight();
+                var intCenterProgramsVar =           $("#intelligence-center #programs").innerHeight();
+                var intCenterArchitectureVar =       $("#intelligence-center #architecture").innerHeight();
+                var intCenterDeploymentVar =         $("#intelligence-center #deployment").innerHeight();
+                var intCenterPersonasVar =           $("#intelligence-center #personas").innerHeight();
             var intAppsVar =     $("#intelligence-applications").innerHeight();
-                var intAppsDepartmentalVar =         $("#intelligence-applications #departmental").innerHeight();
+                var intAppsRolesVar =                $("#intelligence-applications #roles").innerHeight();
                 var intAppsApplicationsVar =         $("#intelligence-applications #apps-applications").innerHeight();
                 var intAppsDevicesVar =              $("#intelligence-applications #devices").innerHeight();
-                var intAppsConstituentsVar =         $("#intelligence-applications #constituents").innerHeight();
+                var intAppsFunctionsVar =            $("#intelligence-applications #functions").innerHeight();
+                var intAppsUsersVar =                $("#intelligence-applications #users").innerHeight();
             var mapScrollVar = $("#map-scroll-content").innerHeight();
 
             //functions to set all of the height dynamically
             function extForcesHeight() {return (extForcesVar);}
             function entAssetsHeight() {return (entAssetsVar);}
-            function intPlatformHeight() {return (intPlatformVar);}
-                function intPlatformSecurityHeight() {return (intPlatformSecurityVar);}
-                function intPlatformAppsHeight() {return (intPlatformAppsVar);}
-                function intPlatformDataHeight() {return (intPlatformDataVar);}
-                function intPlatformSchemaHeight() {return (intPlatformSchemaVar);}
-                function intPlatformAppServicesHeight() {return (intPlatformAppServicesVar);}
-                function intPlatformPlatformServicesHeight() {return (intPlatformPlatformServicesVar);}
+            function intMetadataHeight() {return (intMetadataVar);}
+                function intMetadataClientProductsHeight() {return (intMetadataClientProductsVar);}
+                function intMetadataSecurityHeight() {return (intMetadataSecurityVar);}
+                function intMetadataAppsHeight() {return (intMetadataAppsVar);}
+                function intMetadataDataHeight() {return (intMetadataDataVar);}
+                function intMetadataSchemaHeight() {return (intMetadataSchemaVar);}
+            function intServicesHeight() {return (intServicesVar);}
+                function intServicesAppServicesHeight() {return (intServicesAppServicesVar);}
+                function intServicesPlatformServicesHeight() {return (intServicesPlatformServicesVar);}
+                function intServicesDriversGatewaysHeight() {return (intServicesDriversGatewaysVar);}
             function intCenterHeight() {return (intCenterVar);}
-            function intArchiHeight() {return (intArchiVar);}
-            function intProgHeight() {return (intProgVar);}
+                function intCenterProgramsHeight() {return (intCenterProgramsVar);}
+                function intCenterArchitectureHeight() {return (intCenterArchitectureVar);}
+                function intCenterDeploymentHeight() {return (intCenterDeploymentVar);}
+                function intCenterPersonasHeight() {return (intCenterPersonasVar);}
             function intAppsHeight() {return (intAppsVar);}
-                function intAppsDepartmentalHeight() {return (intAppsDepartmentalVar);}
+                function intAppsRolesHeight() {return (intAppsRolesVar);}
                 function intAppsApplicationsHeight() {return (intAppsApplicationsVar);}
                 function intAppsDevicesHeight() {return (intAppsDevicesVar);}
-                function intAppsConstituentsHeight() {return (intAppsConstituentsVar);}
+                function intAppsFunctionsHeight() {return (intAppsFunctionsVar);}
+                function intAppsUsersHeight() {return (intAppsUsersVar);}
             function mapScrollHeight() {return (mapScrollVar);}
 
             //determine all the heights for the scrolls
             $( window ).resize(function() {
                 extForcesVar =   $("#external-forces").innerHeight();
                 entAssetsVar =   $("#enterprise-assets").innerHeight();
-                intPlatformVar = $("#intelligence-platform").innerHeight();
-                    intPlatformSecurityVar =         $("#intelligence-platform #security").innerHeight();
-                    intPlatformAppsVar =             $("#intelligence-platform #applications").innerHeight();
-                    intPlatformDataVar =             $("#intelligence-platform #data").innerHeight();
-                    intPlatformSchemaVar =           $("#intelligence-platform #schema").innerHeight();
-                    intPlatformAppServicesVar =      $("#intelligence-platform #application-services").innerHeight();
-                    intPlatformPlatformServicesVar = $("#intelligence-platform #platform-services").innerHeight();
+                intMetadataVar = $("#intelligence-metadata").innerHeight();
+                    intMetadataClientProductsVar =   $("#intelligence-metadata #client-products").innerHeight();
+                    intMetadataSecurityVar =         $("#intelligence-metadata #security").innerHeight();
+                    intMetadataAppsVar =             $("#intelligence-metadata #applications").innerHeight();
+                    intMetadataDataVar =             $("#intelligence-metadata #data").innerHeight();
+                    intMetadataSchemaVar =           $("#intelligence-metadata #schema").innerHeight();
+                intServicesVar = $("#intelligence-services").innerHeight();
+                    intServicesAppServicesVar =      $("#intelligence-services #application-services").innerHeight();
+                    intServicesPlatformServicesVar = $("#intelligence-services #platform-services").innerHeight();
+                    intServicesDriversGatewaysVar =  $("#intelligence-services #drivers-gateways").innerHeight();
                 intCenterVar =   $("#intelligence-center").innerHeight();
-                intArchiVar =    $("#intelligence-architecture").innerHeight();
-                intProgVar =     $("#intelligence-program").innerHeight();
+                    intCenterProgramsVar =           $("#intelligence-center #programs").innerHeight();
+                    intCenterArchitectureVar =       $("#intelligence-center #architecture").innerHeight();
+                    intCenterDeploymentVar =         $("#intelligence-center #deployment").innerHeight();
+                    intCenterPersonasVar =           $("#intelligence-center #personas").innerHeight();
                 intAppsVar =     $("#intelligence-applications").innerHeight();
-                    intAppsDepartmentalVar =         $("#intelligence-applications #departmental").innerHeight();
+                    intAppsRolesVar =                $("#intelligence-applications #roles").innerHeight();
                     intAppsApplicationsVar =         $("#intelligence-applications #apps-applications").innerHeight();
                     intAppsDevicesVar =              $("#intelligence-applications #devices").innerHeight();
-                    intAppsConstituentsVar =         $("#intelligence-applications #constituents").innerHeight();
+                    intAppsFunctionsVar =            $("#intelligence-applications #functions").innerHeight();
+                    intAppsUsersVar =                $("#intelligence-applications #users").innerHeight();
                 mapScrollVar = $("#map-scroll-content").innerHeight();
             });
 
@@ -107,38 +125,53 @@ jQuery(document).ready(function($) { // wait for document ready
                             //.addIndicators({name: "ent assets"}) // add indicators (requires plugin)
                             .addTo(controller);
 
-            var intPlatformZone = new ScrollMagic.Scene({triggerElement: "#intelligence-platform", duration: intPlatformHeight})
-                            .setClassToggle("#intelligence-map", "int-platform") // add class toggle
+            var intMetadataZone = new ScrollMagic.Scene({triggerElement: "#intelligence-metadata", duration: intMetadataHeight})
+                            .setClassToggle("#intelligence-map", "int-metadata") // add class toggle
                             //.addIndicators({name: "int platform"}) // add indicators (requires plugin)
                             .addTo(controller);
 
-                    var intPlatformSecurityZone = new ScrollMagic.Scene({triggerElement: "#security", duration: intPlatformSecurityHeight})
+                    var intMetadataClientProductsZone = new ScrollMagic.Scene({triggerElement: "#client-products", duration: intMetadataClientProductsHeight})
+                                    .setClassToggle("#intelligence-map .feature-list.client-products", "active") // add class toggle
+                                    //.addIndicators({name: "security"}) // add indicators (requires plugin)
+                                    .addTo(controller);
+
+                    var intMetadataSecurityZone = new ScrollMagic.Scene({triggerElement: "#security", duration: intMetadataSecurityHeight})
                                     .setClassToggle("#intelligence-map .feature-list.security", "active") // add class toggle
                                     //.addIndicators({name: "security"}) // add indicators (requires plugin)
                                     .addTo(controller);
 
-                    var intPlatformApplicationZone = new ScrollMagic.Scene({triggerElement: "#applications", duration: intPlatformAppsHeight})
+                    var intMetadataApplicationZone = new ScrollMagic.Scene({triggerElement: "#applications", duration: intMetadataAppsHeight})
                                     .setClassToggle("#intelligence-map .feature-list.applications", "active") // add class toggle
                                     //.addIndicators({name: "applications"}) // add indicators (requires plugin)
                                     .addTo(controller);
 
-                    var intPlatformDataZone = new ScrollMagic.Scene({triggerElement: "#data", duration: intPlatformDataHeight})
+                    var intMetadataDataZone = new ScrollMagic.Scene({triggerElement: "#data", duration: intMetadataDataHeight})
                                     .setClassToggle("#intelligence-map .feature-list.data", "active") // add class toggle
                                     //.addIndicators({name: "data"}) // add indicators (requires plugin)
                                     .addTo(controller);
 
-                    var intPlatformSchemaZone = new ScrollMagic.Scene({triggerElement: "#schema", duration: intPlatformSchemaHeight})
+                    var intMetadataSchemaZone = new ScrollMagic.Scene({triggerElement: "#schema", duration: intMetadataSchemaHeight})
                                     .setClassToggle("#intelligence-map .feature-list.schema", "active") // add class toggle
                                     //.addIndicators({name: "schema"}) // add indicators (requires plugin)
                                     .addTo(controller);
 
-                    var intPlatformAppServicesZone = new ScrollMagic.Scene({triggerElement: "#application-services", duration: intPlatformAppServicesHeight})
+            var intServicesZone = new ScrollMagic.Scene({triggerElement: "#intelligence-services", duration: intServicesHeight})
+                            .setClassToggle("#intelligence-map", "int-services") // add class toggle
+                            //.addIndicators({name: "int platform"}) // add indicators (requires plugin)
+                            .addTo(controller);
+
+                    var intServicesAppServicesZone = new ScrollMagic.Scene({triggerElement: "#application-services", duration: intServicesAppServicesHeight})
                                     .setClassToggle("#intelligence-map .feature-list.application-services", "active") // add class toggle
                                     //.addIndicators({name: "application-services"}) // add indicators (requires plugin)
                                     .addTo(controller);
 
-                    var intPlatformPlatformServicesZone = new ScrollMagic.Scene({triggerElement: "#platform-services", duration: intPlatformPlatformServicesHeight})
+                    var intServicesPlatformServicesZone = new ScrollMagic.Scene({triggerElement: "#platform-services", duration: intServicesPlatformServicesHeight})
                                     .setClassToggle("#intelligence-map .feature-list.platform-services", "active") // add class toggle
+                                    //.addIndicators({name: "platform-services"}) // add indicators (requires plugin)
+                                    .addTo(controller);
+
+                    var intServicesDriversGatewaysZone = new ScrollMagic.Scene({triggerElement: "#drivers-gateways", duration: intServicesDriversGatewaysHeight})
+                                    .setClassToggle("#intelligence-map .feature-list.drivers-gateways", "active") // add class toggle
                                     //.addIndicators({name: "platform-services"}) // add indicators (requires plugin)
                                     .addTo(controller);
 
@@ -147,23 +180,33 @@ jQuery(document).ready(function($) { // wait for document ready
                             //.addIndicators({name: "int center"}) // add indicators (requires plugin)
                             .addTo(controller);
 
-            var intArchiZone = new ScrollMagic.Scene({triggerElement: "#intelligence-architecture", duration: intArchiHeight})
-                            .setClassToggle("#intelligence-map", "int-architecture") // add class toggle
-                            //.addIndicators({name: "int architecture"}) // add indicators (requires plugin)
-                            .addTo(controller);
+                    var intCenterProgramsZone = new ScrollMagic.Scene({triggerElement: "#programs", duration: intCenterProgramsHeight})
+                                    .setClassToggle("#intelligence-map .feature-list.programs", "active") // add class toggle
+                                    //.addIndicators({name: "platform-services"}) // add indicators (requires plugin)
+                                    .addTo(controller);
 
-            var intProgZone = new ScrollMagic.Scene({triggerElement: "#intelligence-program", duration: intProgHeight})
-                            .setClassToggle("#intelligence-map", "int-program") // add class toggle
-                            //.addIndicators({name: "int program"}) // add indicators (requires plugin)
-                            .addTo(controller);
+                    var intCenterArchitectureZone = new ScrollMagic.Scene({triggerElement: "#architecture", duration: intCenterArchitectureHeight})
+                                    .setClassToggle("#intelligence-map .feature-list.architecture", "active") // add class toggle
+                                    //.addIndicators({name: "platform-services"}) // add indicators (requires plugin)
+                                    .addTo(controller);
+
+                    var intCenterDeploymentZone = new ScrollMagic.Scene({triggerElement: "#deployment", duration: intCenterDeploymentHeight})
+                                    .setClassToggle("#intelligence-map .feature-list.deployment", "active") // add class toggle
+                                    //.addIndicators({name: "platform-services"}) // add indicators (requires plugin)
+                                    .addTo(controller);
+
+                    var intCenterPersonasZone = new ScrollMagic.Scene({triggerElement: "#personas", duration: intCenterPersonasHeight})
+                                    .setClassToggle("#intelligence-map .feature-list.personas", "active") // add class toggle
+                                    //.addIndicators({name: "platform-services"}) // add indicators (requires plugin)
+                                    .addTo(controller);
 
             var intAppsZone = new ScrollMagic.Scene({triggerElement: "#intelligence-applications"})
                             .setClassToggle("#intelligence-map", "int-applications") // add class toggle
                             //.addIndicators({name: "int applications"}) // add indicators (requires plugin)
                             .addTo(controller);
 
-                    var intAppsDepartmentalZone = new ScrollMagic.Scene({triggerElement: "#departmental", duration: intAppsDepartmentalHeight})
-                                    .setClassToggle("#intelligence-map .feature-list.departmental", "active") // add class toggle
+                    var intAppsRolesZone = new ScrollMagic.Scene({triggerElement: "#roles", duration: intAppsRolesHeight})
+                                    .setClassToggle("#intelligence-map .feature-list.roles", "active") // add class toggle
                                     //.addIndicators({name: "platform-services"}) // add indicators (requires plugin)
                                     .addTo(controller);
 
@@ -177,8 +220,13 @@ jQuery(document).ready(function($) { // wait for document ready
                                     //.addIndicators({name: "platform-services"}) // add indicators (requires plugin)
                                     .addTo(controller);
 
-                    var intAppsConstituentsZone = new ScrollMagic.Scene({triggerElement: "#constituents", duration: intAppsConstituentsHeight})
-                                    .setClassToggle("#intelligence-map .feature-list.constituents", "active") // add class toggle
+                    var intAppsFunctionsZone = new ScrollMagic.Scene({triggerElement: "#functions", duration: intAppsFunctionsHeight})
+                                    .setClassToggle("#intelligence-map .feature-list.functions", "active") // add class toggle
+                                    //.addIndicators({name: "platform-services"}) // add indicators (requires plugin)
+                                    .addTo(controller);
+
+                    var intAppsUsersZone = new ScrollMagic.Scene({triggerElement: "#users", duration: intAppsUsersHeight})
+                                    .setClassToggle("#intelligence-map .feature-list.users", "active") // add class toggle
                                     //.addIndicators({name: "platform-services"}) // add indicators (requires plugin)
                                     .addTo(controller);
         }, 2000);

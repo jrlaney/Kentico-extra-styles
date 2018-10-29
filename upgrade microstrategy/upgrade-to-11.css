@@ -475,43 +475,25 @@ section {
 .phase-counter.three .counter-bar:after {
   background-color: #333333;
 }
-.UpgradeToMicrostrategy11 #version-comparison-table {
-  border-color: #CCCCCC;
-}
-.UpgradeToMicrostrategy11 #version-comparison-table tr,
-.UpgradeToMicrostrategy11 #version-comparison-table tfoot td:empty,
-.UpgradeToMicrostrategy11 #version-comparison-table thead th:empty {
-  border-color: #CCCCCC;
-}
-.UpgradeToMicrostrategy11 #version-comparison-table th.white {
-  border-bottom: 1px solid #CCCCCC;
-}
-.UpgradeToMicrostrategy11 #version-comparison-table tbody tr:hover {
-  background-color: #f2f2f2;
-}
-.UpgradeToMicrostrategy11 #version-comparison-table tbody td {
-  border: 1px solid #CCCCCC;
-  border-width: 0 1px;
-}
 @media only screen and (min-width: 768px) {
-  .ChangesAndImprovements .panelstack.vertical-panelstack .panel-nav {
+  .FeaturesAndChanges .panelstack.vertical-panelstack .panel-nav {
     width: 30%;
   }
-  .ChangesAndImprovements .panelstack.vertical-panelstack .panel-content {
+  .FeaturesAndChanges .panelstack.vertical-panelstack .panel-content {
     padding: 30px;
     width: 70%;
   }
 }
 @media only screen and (min-width: 980px) {
-  .ChangesAndImprovements .panelstack.vertical-panelstack .panel-nav {
+  .FeaturesAndChanges .panelstack.vertical-panelstack .panel-nav {
     width: 20%;
   }
-  .ChangesAndImprovements .panelstack.vertical-panelstack .panel-content {
+  .FeaturesAndChanges .panelstack.vertical-panelstack .panel-content {
     width: 80%;
   }
 }
 @media only screen and (min-width: 980px) {
-  .ChangesAndImprovements ul.split-lg {
+  .FeaturesAndChanges ul.split-lg {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: row;
@@ -522,22 +504,22 @@ section {
     justify-content: space-between;
     padding: 0;
   }
-  .ChangesAndImprovements ul.split-lg > li {
+  .FeaturesAndChanges ul.split-lg > li {
     -webkit-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
     max-width: calc(50% - 15px);
     padding: 5px 0 5px 20px;
   }
-  .ChangesAndImprovements ul.split-lg > li:before {
+  .FeaturesAndChanges ul.split-lg > li:before {
     left: 0;
   }
 }
 @media only screen and (min-width: 768px) {
-  .ChangesAndImprovements #features .panelstack.vertical-panelstack .panel-content {
+  .FeaturesAndChanges #features .panelstack.vertical-panelstack .panel-content {
     padding: 0;
   }
-  .ChangesAndImprovements #features .panelstack.vertical-panelstack .panel-content > .flex-row {
+  .FeaturesAndChanges #features .panelstack.vertical-panelstack .panel-content > .flex-row {
     padding: 30px;
   }
 }
