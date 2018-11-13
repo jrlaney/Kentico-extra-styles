@@ -1,0 +1,98 @@
+@import '../../settings.less';
+
+//ACCORDION
+
+
+
+
+
+
+
+
+//ANCHOR LINK GRID
+.icon-link-grid {
+    //reset the background color so it can be applied to the grid items instead
+    background-color:transparent!important;
+
+    .grid-item {
+        .display(flex);
+        .align-items(center);
+        position:relative; overflow:hidden;
+        padding-top:20px; padding-bottom:20px;
+        box-shadow: 1px 1px 3px fade(@pure-black, 20%);
+
+        font-family:@myriad-pro;
+        font-size:14px; line-height:1.2em;
+        .uppercase;
+        font-weight:400;
+
+        //reset z-index of all inner items
+        > .icon, > span {z-index:1;}
+
+        .icon {margin-right:10px;}
+
+        //colored left hand bar that appears on hover. use pseudo instead of a border for smoother transition in
+        &:before {
+            content:'';
+            display:block; position:absolute;
+            z-index:1;
+            top:0; left:0;
+            width:3px; height:100%;
+            .translateX(-3px);
+            .single-transition;
+        }
+
+        //darken or lighten affect on the button on hover
+        &:after {
+            content:'';
+            display:block; position:absolute;
+            z-index:0;
+            top:0; left:0;
+            width:100%; height:100%;
+            .single-transition;
+            background-color:transparent;
+        }
+        &.red:before {background-color:@red;}
+        &.orange:before {background-color:@orange;}
+        &.green:before {background-color:@green;}
+        &.blue:before {background-color:@blue;}
+        &.navy-blue:before {background-color:@navy-blue;}
+        &:hover {
+            padding-left:20px; padding-right:10px;
+            &:before {.translateX(0);}
+            &.red .icon {color:@red;}
+            &.orange .icon {color:@orange;}
+            &.green .icon {color:@green;}
+            &.blue .icon {color:@blue;}
+            &.navy-blue .icon {color:@navy-blue;}
+        }
+    }
+    &.light .grid-item {
+        color:@black;
+        border:1px solid fade(@pure-black, 20%);
+        border-width:0 1px 1px 0;
+        &:hover:after {background-color:fade(@white, 50%);}
+    }
+    &.dark .grid-item {
+        color:@white;
+        border:1px solid fade(@white, 20%);
+        border-width:0 1px 1px 0;
+        &:hover:after {background-color:fade(@pure-black, 40%);}
+    }
+    &.background {
+        &-white > .grid-item {background-color:@white;}
+        &-light-gray > .grid-item {background-color:@light-gray;}
+        &-gray > .grid-item {background-color:@gray;}
+        &-dark-gray > .grid-item {background-color:@dark-gray;}
+        &-black > .grid-item {background-color:@black;}
+
+        &-red > .grid-item {background-color:@red;}
+        &-orange > .grid-item {background-color:@orange;}
+        &-green > .grid-item {background-color:@green;}
+        &-blue > .grid-item {background-color:@blue;}
+        &-navy-blue > .grid-item {background-color:@navy-blue;}
+
+        &-trans-black > .grid-item {background-color:fade(@pure-black, 70%);}
+        &-trans-white > .grid-item {background-color:fade(@white, 70%);}
+    }
+}
