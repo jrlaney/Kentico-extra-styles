@@ -1,30 +1,33 @@
 @import '../settings.less';
 
 .Single.Page {
-  font-family: @myriad-pro;
+    font-family: @myriad-pro;
 
-  .profile-name {
-    margin-bottom: @base-spacing / 4;
-    line-height: 1.2;
-    font-weight: @normal;
-    color: @black;
-  }
-  .profile-title {
-    line-height: 1.5;
-    font-weight: @normal;
-    .uppercase;
-    color: @dark-gray;
-  }
-  .profile-bio {
-    font-size: 16px;
-    @media @large { font-size: 18px; }
-    line-height: 1.5;
-    font-weight: @light;
-  }
-  .profile-photo {
-    .size(175px);
-    .object-fit;
-    .round;
-    margin-left: 0;
-  }
+    .profile-name {
+        margin-bottom: @base-spacing / 4;
+        line-height: 1.2;
+        font-weight: @normal;
+        color: @black;
+    }
+    .profile-title {
+        font-size:14px;
+        line-height: 1.5;
+        font-weight: @bold;
+        .uppercase;
+        //color: @dark-gray;
+    }
+    .profile-bio {
+        font-size: 16px;
+        @media @large { font-size: 18px; }
+        line-height: 1.5;
+        font-weight: @light;
+    }
+    .profile-photo {
+        .size(175px);
+        .object-fit;
+        //.round;
+        margin-left: 0;
+        border:1px solid @iron;
+        box-shadow:1px 1px 3px fade(@pure-black, 30%);
+    }
 }

@@ -8,11 +8,11 @@
   color: #333333;
 }
 .Single.Page .profile-title {
+  font-size: 14px;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #777777;
 }
 .Single.Page .profile-bio {
   font-size: 16px;
@@ -29,8 +29,9 @@
   height: 175px;
   -o-object-fit: cover;
   object-fit: cover;
-  border-radius: 50%;
   margin-left: 0;
+  border: 1px solid #CCCCCC;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 .no-objectfit .Single.Page .profile-photo {
   color: transparent;

@@ -1,358 +1,366 @@
 @import '../settings.less';
 
 .Blog {
-  font-family: @myriad-pro;
+    font-family: @myriad-pro;
 
-  #page-hero {
-
-    .author {
-      .display(inline-flex);
-      .align-items(center);
-
-      .photo {
-        .size(40px);
-        margin: 0;
-        .object-fit(cover);
-        .round;
-        border: @medium-border @light-gray;
-        .single-transition;
-      }
-
-      .name {
-        display: inline-block;
-        font-size: 18px;
-        font-weight: @normal;
-        color: @light-gray;
-        .single-transition;
-      }
-
-      &:hover {
-
-        .photo {
-          border-color: @white;
-        }
-
-        .name {
-          color: @white;
-        }
-      } // :hover
-
-    } // .author
-
-    .date {
-      display: inline-block;
-      margin-top: @base-spacing;
-      font-size: 14px;
-      .uppercase;
-      color: @gray;
-    }
-
-    #featured-posts:not(.slick-initialized) {
-      opacity: 0;
-    }
-
-    .featured-post {
-      .display(flex);
-      .align-items(center);
-      height: 400px;
-      padding: 40px 20px 80px;
-
-      @media @medium {
-        height: 500px;
-        padding: 60px 0 80px;
-      }
-
-      @media @large {
-        height: 600px;
-        padding: 80px 0;
-      }
-
-    } // .featured-post
-
-  } // #page-hero
-
-  &.List.Page {
-
-    .query {
-      font-weight: @bold;
-      font-style: italic;
-      color: @red;
-    }
-
-  } // .List.Page
-
-  &.Single.Page {
-
-    .post {
-
-      section {
-        .padding-y(@base-spacing);
-      }
-
-      h4, h5, p, li, figcaption {
-        line-height: 1.6;
-      }
-
-      h4, h5 {
-        font-weight: @bold;
-        letter-spacing: 0.01em;
-      }
-
-      p, li {
-        font-size: 18px;
-        font-weight: @light;
-        letter-spacing: 0.005em;
-      }
-
-      h4 {
-        font-size: 24px;
-      }
-
-      h5 {
-        font-size: 20px;
-        color: @dark-gray;
-      }
-
-      a {
-        font-weight: @normal;
-      }
-
-      * + h4 {
-        margin-top: @base-spacing * 2;
-      }
-
-      .post-content {
-
-        img, div, figure, iframe {
-          margin: (@base-spacing * 2) 0;
-        }
-
-        img {
-          padding: 0 !important;
-
-          &.float.right { margin: 0 0 @base-spacing @base-spacing; }
-          &.float.left { margin: 0 @base-spacing @base-spacing 0; }
-
-        }
-
-        figure {
-
-          img {
-            margin: (@base-spacing / 2) 0;
-          }
-
-          figcaption {
-            font-size: 14px;
-            font-weight: @normal;
-            letter-spacing: 0.005em;
-          }
-
-        }
-
-        [class*="wistia"],
-        [class*="wistia"] div {
-          margin: 0;
-        }
-
-      } // .post-content
-
-      .post-summary, .post-cta {
-
-        p {
-          font-size: 20px;
-          font-weight: @normal;
-        }
-
-        a {
-          font-weight: @bold;
-        }
-
-      }
-
-      .post-summary {
-
-        &:after {
-          content: "";
-          display: block;
-          .size(50px, @thick);
-          margin: (@base-spacing * 2) auto 0 auto;
-          background-color: @red;
-        }
-
-      }
-
-      .post-cta {
-
-        &:before {
-          content: "";
-          display: block;
-          .size(50px, @thick);
-          margin: 0 auto (@base-spacing * 2) auto;
-          background-color: @gray;
-        }
-
-      }
-
-      .post-tags {
-        font-size: 12px;
-        .uppercase;
-        color: @dark-gray;
-      }
-
-      .post-author {
-
-        .post-author-panel {
-          padding: @base-spacing / 2 * 3;
-          background-color: @light-gray;
-          .drop-shadow;
-        }
-
-        .name {
-          margin-bottom: 0;
-        }
-
+    #page-hero {
         .title {
-          font-size: 14px;
-          font-weight: @normal;
-          .uppercase;
-          color: @dark-gray;
+            font-weight:400;
+            @media @large {
+                font-size:40px;
+            }
+        }
+        .author {
+            .display(inline-flex);
+            .align-items(center);
+
+            .photo {
+                .size(40px);
+                margin: 0;
+                .object-fit(cover);
+                //.round;
+                box-shadow:1px 1px 3px fade(@pure-black, 50%);
+                border: @medium-border @light-gray;
+                .single-transition;
+            }
+
+            .name {
+                display: inline-block;
+                font-size: 18px;
+                font-weight: @normal;
+                color: @light-gray;
+                .single-transition;
+            }
+
+            &:hover {
+
+                .photo {
+                    border-color: @white;
+                }
+
+                .name {
+                    color: @white;
+                }
+            } // :hover
+
+        } // .author
+
+        .date {
+            display: inline-block;
+            margin-top: @base-spacing;
+            font-size: 16px;
+            .uppercase;
+            font-weight: @normal;
+            color: @light-gray;
         }
 
-        .photo {
-          .size(120px);
-          .round;
+        #featured-posts:not(.slick-initialized) {
+            opacity: 0;
         }
 
-        .biography {
-          font-size: 16px;
-          font-weight: @normal;
-          letter-spacing: 0.01em;
+        .featured-post {
+            .display(flex);
+            .align-items(center);
+            height: 400px;
+            padding: 40px 20px 80px;
+
+            @media @medium {
+                height: 500px;
+                padding: 60px 0 80px;
+            }
+
+            @media @large {
+                height: 600px;
+                padding: 80px 0;
+            }
+
+        } // .featured-post
+
+    } // #page-hero
+
+    &.List.Page {
+
+        .query {
+            font-weight: @bold;
+            font-style: italic;
+            color: @red;
         }
 
-      } // .post-author
+    } // .List.Page
 
-    } // .post
+    &.Single.Page {
 
-  } // .Single.Page
+        .post {
+
+            section {
+                .padding-y(@base-spacing);
+            }
+
+            h4, h5, p, li, figcaption {
+                line-height: 1.6;
+            }
+
+            h2, h3, h4, h5 {
+                font-weight: @normal;
+            }
+
+            p, li {
+                font-size: 18px;
+                font-weight: @light;
+            }
+
+            h2, h3, h4 {
+                font-size: 26px;
+            }
+
+            h5 {
+                font-size: 22px;
+                color: @dark-gray;
+            }
+
+            a {
+                font-weight: @normal;
+            }
+
+            * + h2,
+            * + h3,
+            * + h4 {
+                margin-top: @base-spacing * 2;
+            }
+
+            .post-content {
+
+                img, div, figure, iframe {
+                    margin: (@base-spacing * 2) 0;
+                }
+
+                img {
+                    padding: 0 !important;
+
+                    &.float.right { margin: 0 0 @base-spacing @base-spacing; }
+                    &.float.left { margin: 0 @base-spacing @base-spacing 0; }
+
+                }
+
+                figure {
+
+                    img {
+                        margin: (@base-spacing / 2) 0;
+                    }
+
+                    figcaption {
+                        font-size: 14px;
+                        font-weight: @normal;
+                        letter-spacing: 0.005em;
+                    }
+
+                }
+
+                [class*="wistia"],
+                [class*="wistia"] div {
+                    margin: 0;
+                }
+
+            } // .post-content
+
+            .post-summary, .post-cta {
+
+                p {
+                    font-size: 20px;
+                    font-weight: @normal;
+                }
+
+                a {
+                    font-weight: @bold;
+                }
+
+            }
+
+            .post-summary {
+
+                &:after {
+                    content: "";
+                    display: block;
+                    .size(50px, @thick);
+                    margin: (@base-spacing * 2) auto 0 auto;
+                    background-color: @red;
+                }
+
+            }
+
+            .post-cta {
+
+                &:before {
+                    content: "";
+                    display: block;
+                    .size(50px, @thick);
+                    margin: 0 auto (@base-spacing * 2) auto;
+                    background-color: @gray;
+                }
+
+            }
+
+            .post-tags {
+                font-size: 12px;
+                .uppercase;
+                color: @dark-gray;
+            }
+
+            .post-author {
+
+                .post-author-panel {
+                    padding: @base-spacing / 2 * 3;
+                    background-color: @light-gray;
+                    .drop-shadow;
+                }
+
+                .name {
+                    margin-bottom: 0;
+                }
+
+                .title {
+                    font-size: 14px;
+                    font-weight: @normal;
+                    .uppercase;
+                    color: @dark-gray;
+                }
+
+                .photo {
+                    .size(120px);
+                    //.round;
+                    box-shadow:1px 1px 3px fade(@pure-black, 30%);
+                }
+
+                .biography {
+                    font-size: 16px;
+                    font-weight: @normal;
+                    letter-spacing: 0.01em;
+                }
+
+            } // .post-author
+
+        } // .post
+
+    } // .Single.Page
 
 } // .Blog
 
 #comments {
-  background-color: @light-gray;
+    background-color: @light-gray;
 
-  #CommentsList {
-    margin-bottom: @base-spacing * 2;
-  }
-
-  .Comment {
-    margin: @base-spacing (@column-gutter / 4);
-    padding: @base-spacing / 2 * 3;
-    background-color: @white;
-    .drop-shadow;
-    font-family: @myriad-pro;
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  .CommentsTitle {
-    font-family: @myriad-pro;
-    font-size: 21px;
-    font-weight: @bold;
-    .uppercase;
-  }
-
-  .NoComments {
-    display: block;
-    margin-bottom: @base-spacing;
-    font-family: @myriad-pro;
-    color: @dark-gray;
-  }
-
-  .CommentHeader {
-    .display(flex);
-    .justify-content(space-between);
-    .align-items(center);
-    padding-bottom: @base-spacing;
-    border-bottom: @thin-border @light-gray;
-  }
-
-  .CommentUserName {
-    font-size: 18px;
-    font-weight: @bold;
-  }
-
-  .CommentDate {
-    font-size: 15px;
-    font-weight: @normal;
-    .uppercase;
-    color: @dark-gray;
-  }
-
-  .CommentBody {
-    .padding-y(@base-spacing);
-  }
-
-  .CommentActions {
-    .display(flex);
-    .justify-content(flex-end);
-    margin: 0 -5px;
-  }
-
-  .CommentAction,
-  .InlineAbuseLink {
-    margin: 5px;
-    font-size: 12px;
-    .uppercase;
-    color: @red;
-  }
-
-  #CommentsForm {
-
-    .form-control {
-      margin-bottom: 0;
+    #CommentsList {
+        margin-bottom: @base-spacing * 2;
     }
 
-    .form-control-error {
-      margin-top: @base-spacing / 4;
-      font-family: @myriad-pro;
-      font-size: 12px;
-      font-weight: @normal;
-      text-transform: none;
-      letter-spacing: normal;
-      color: @red;
-
-      &[style*="inline"] {
-        display: block !important;
-      }
-
+    .Comment {
+        margin: @base-spacing (@column-gutter / 4);
+        padding: @base-spacing / 2 * 3;
+        background-color: @white;
+        .drop-shadow;
+        font-family: @myriad-pro;
+        font-size: 16px;
+        line-height: 1.6;
     }
 
-    .message {
-      display: block;
-      margin-top: 0;
-      font-family: @myriad-pro;
-      font-size: 16px;
-      color: @green;
+    .CommentsTitle {
+        font-family: @myriad-pro;
+        font-size: 21px;
+        font-weight: @bold;
+        .uppercase;
+    }
 
-      &.error {
+    .NoComments {
+        display: block;
+        margin-bottom: @base-spacing;
+        font-family: @myriad-pro;
+        color: @dark-gray;
+    }
+
+    .CommentHeader {
+        .display(flex);
+        .justify-content(space-between);
+        .align-items(center);
+        padding-bottom: @base-spacing;
+        border-bottom: @thin-border @light-gray;
+    }
+
+    .CommentUserName {
+        font-size: 18px;
+        font-weight: @bold;
+    }
+
+    .CommentDate {
+        font-size: 15px;
+        font-weight: @normal;
+        .uppercase;
+        color: @dark-gray;
+    }
+
+    .CommentBody {
+        .padding-y(@base-spacing);
+    }
+
+    .CommentActions {
+        .display(flex);
+        .justify-content(flex-end);
+        margin: 0 -5px;
+    }
+
+    .CommentAction,
+    .InlineAbuseLink {
+        margin: 5px;
+        font-size: 12px;
+        .uppercase;
         color: @red;
-      }
-
     }
 
-  } // #CommentsForm
+    #CommentsForm {
 
-  .CaptchaLabel {
-    margin-bottom: @base-spacing / 2;
-  }
+        .form-control {
+            margin-bottom: 0;
+        }
 
-  .CaptchaTextBox {
-    margin-bottom: 0;
-  }
+        .form-control-error {
+            margin-top: @base-spacing / 4;
+            font-family: @myriad-pro;
+            font-size: 12px;
+            font-weight: @normal;
+            text-transform: none;
+            letter-spacing: normal;
+            color: @red;
 
-  .CaptchaTable {
-    .display(flex);
-    .align-items(center);
-  }
+            &[style*="inline"] {
+                display: block !important;
+            }
 
-} // #comments
+        }
+
+        .message {
+            display: block;
+            margin-top: 0;
+            font-family: @myriad-pro;
+            font-size: 16px;
+            color: @green;
+
+            &.error {
+                color: @red;
+            }
+
+        }
+
+        } // #CommentsForm
+
+        .CaptchaLabel {
+            margin-bottom: @base-spacing / 2;
+        }
+
+        .CaptchaTextBox {
+            margin-bottom: 0;
+        }
+
+        .CaptchaTable {
+            .display(flex);
+            .align-items(center);
+        }
+
+        } // #comments
