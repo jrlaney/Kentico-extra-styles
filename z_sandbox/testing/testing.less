@@ -1,0 +1,179 @@
+@import '../../settings.less';
+
+//for the world 2019 global ad
+﻿﻿.message-bar {
+	max-height: 400px;
+	border-bottom:1px solid @iron;
+
+	>.flex-row {
+		padding-left:@column-gutter / 4;
+		padding-right:@column-gutter / 4;
+	}
+
+	&.message-bar-closing {
+		max-height: 0;
+		.translateY( -100% );
+		overflow: hidden;
+		.single-transition( .4s );
+	}
+
+	&-content {
+		font-family: @myriad-pro;
+		font-size: 16px;
+		font-weight: @normal;
+        color:@black;
+	}
+
+	&-close {
+		.shape-x( 20px, @black );
+        background-color:transparent!important;
+	}
+
+	.text-link {
+		padding:15px 20px 15px 0;
+		color:@link;
+		&:hover {color:@hover;}
+		//add in a raquo character at the end of the text link
+		&:after {content:'\00BB'}
+	}
+
+	@media @medium-down {
+
+		.button,
+		.button-group .button {
+			font-size: 10px;
+		}
+	}
+
+	@media @large {
+
+		&-content {
+			font-size: 18px;
+		}
+
+		>.flex-row {
+			padding-right:@column-gutter / 2;
+		}
+
+		.text-link {
+			padding:10px 20px 10px 0;
+		}
+	}
+    .pattern-row {
+    	.display(flex);
+    	.flex-direction(row);
+    	.flex-wrap(nowrap);
+    	.justify-content(flex-start);
+    	width: 100%;
+
+    	.background-pattern {
+    		.display(flex);
+        	.flex(1, 1, 0px);
+            border:2px solid @light-gray;
+            border-width:0px 2px;
+            height:15px;
+    	}
+        &:last-child {.justify-content(flex-end);}
+    }
+    .background-pattern {
+    	background-repeat:repeat;
+        background-color:@black;
+
+        //red background options
+        &.pattern-squiggles {
+            background-color:@red;
+            background-image:url(/getmedia/576254af-94c1-4544-b705-15a3f3e18c33/pattern-tile_large__squiggles);
+            background-size:176px * .1;
+        }
+        &.pattern-vertical-bars {
+            background-color:@red;
+            background-image:url(/getmedia/dbfa9cbf-6866-44ca-82eb-4abd55f94666/pattern-tile_large__vertical-bars);
+            background-size:168px * .1;
+        }
+        &.pattern-round-dots {
+            background-color:@red;
+            background-image:url(/getmedia/ddaa27eb-6441-486f-ba42-9ae0ea41191b/pattern-tile_large__round-dots);
+            background-size:1195px * .1;
+        }
+        &.pattern-square-dots {
+            background-color:@red;
+            background-image:url(/getmedia/fb3df29f-a8c2-4b98-ad37-920965b1a5f1/pattern-tile_large__square-dots);
+            background-size:1680px * .1;
+        }
+
+
+        //orange background options
+        &.pattern-ribbon {
+            background-color:@orange;
+            background-image:url(/getmedia/48f6f91d-e4b5-4629-8b08-93e499ee1553/pattern-tile_large__ribbon);
+            background-size:540px * .1;
+        }
+        &.pattern-stacked-bars {
+            background-color:@orange;
+            background-image:url(/getmedia/e474dbc5-fb6d-4161-814e-9077a244ab62/pattern-tile_large__stacked-bars);
+            background-size:848px * .1;
+        }
+        &.pattern-dot-grid {
+            background-color:@orange;
+            background-image:url(/getmedia/aa03e2f9-cae5-4213-9cb7-bdb0e970fdee/pattern-tile_large__dot-grid);
+            background-size:886px * .1;
+        }
+
+
+    	//green background options
+        &.pattern-waves {
+            background-color:@green;
+            background-image:url(/getmedia/6e42b686-8acb-40e7-b49e-c5d96ff3b4b2/pattern-tile_large__waves);
+            background-size:475px * .1;
+        }
+        &.pattern-confetti {
+            background-color:@green;
+            background-image:url(/getmedia/3a96715f-9688-4439-9781-1ffb6e384631/pattern-tile_large_confetti);
+            background-size:769px * .1;
+        }
+
+
+        //blue background options
+        &.pattern-split-circles {
+            background-color:@blue;
+            background-image:url(/getmedia/c22050fe-85fd-4627-8a54-ee26d8210c21/pattern-tile_large__split-circles);
+            background-size:515px * .1;
+        }
+        &.pattern-sparse-triangles {
+            background-color:@blue;
+            background-image:url(/getmedia/e8fe299d-f19b-4669-a81e-7e111f22bbc3/pattern-tile_large_sparse-diagonal-triangles);
+            background-size:935px * .1;
+        }
+        &.pattern-triangles {
+            background-color:@blue;
+            background-image:url(/getmedia/5af24cc5-53d6-4cf5-9206-e6f6bce8d2f3/pattern-tile_large_diagonal-triangles);
+            background-size:309px * .1;
+        }
+        &.pattern-quilt {
+            background-color:@blue;
+            background-image:url(/getmedia/7e091976-d00f-4c99-b635-073a95645817/pattern-tile_large__quilt);
+            background-size:555px * .1;
+        }
+
+
+    	//navy background options
+        &.pattern-hooks {
+            background-color:@navy-blue;
+            background-image:url(/getmedia/f000dea7-1f67-4fc9-a932-583af2a17c3e/pattern-tile_large__hooks);
+            background-size:519px * .1;
+        }
+        &.pattern-patchy-squiggles {
+            background-color:@navy-blue;
+            background-image:url(/getmedia/7f3c85ae-5d11-4da6-82ed-59553df93a6f/pattern-tile_large__patchy-squiggles);
+            background-size:788px * .1;
+        }
+
+
+        //white background options
+        &.pattern-tartan {
+            background-color:@white;
+            background-image:url(/getmedia/077a23f7-53f8-423a-ac03-28ad1432b852/pattern-tile_large__tartan);
+            background-size:1623px * .1;
+        }
+    }
+}
