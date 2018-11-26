@@ -279,8 +279,8 @@
   transform: translateX(-25%);
 }
 #hero.world-2019 .pattern-graphic-col .pattern-frame.left-side .background-pattern:nth-child(5) {
-  -webkit-transform: translateX(-60%);
-  transform: translateX(-60%);
+  -webkit-transform: translateX(-40%);
+  transform: translateX(-40%);
 }
 #hero.world-2019 .pattern-graphic-col .pattern-frame.left-side .background-pattern:nth-child(6) {
   width: 160%;
@@ -466,37 +466,37 @@
   top: 0;
   left: 0;
   font-weight: 600;
-  -webkit-animation: revolving-text 14s cubic-bezier(0.2, 0, 0.03, 1) 0s normal infinite;
-  animation: revolving-text 14s cubic-bezier(0.2, 0, 0.03, 1) 0s normal infinite;
+  -webkit-animation: revolving-text 14s ease-out 0s normal infinite;
+  animation: revolving-text 14s ease-out 0s normal infinite;
 }
 .text-revolver .rev-block.longest-word {
   position: relative;
   top: auto;
   left: auto;
 }
-.text-revolver .rev-block:nth-child(2) {
-  -webkit-animation-delay: 2s !important;
-  animation-delay: 2s !important;
-}
-.text-revolver .rev-block:nth-child(3) {
-  -webkit-animation-delay: 4s !important;
-  animation-delay: 4s !important;
-}
-.text-revolver .rev-block:nth-child(4) {
-  -webkit-animation-delay: 6s !important;
-  animation-delay: 6s !important;
-}
-.text-revolver .rev-block:nth-child(5) {
-  -webkit-animation-delay: 8s !important;
-  animation-delay: 8s !important;
+.text-revolver .rev-block:nth-child(7) {
+  -webkit-animation-delay: -2s !important;
+  animation-delay: -2s !important;
 }
 .text-revolver .rev-block:nth-child(6) {
-  -webkit-animation-delay: 10s !important;
-  animation-delay: 10s !important;
+  -webkit-animation-delay: -4s !important;
+  animation-delay: -4s !important;
 }
-.text-revolver .rev-block:nth-child(7) {
-  -webkit-animation-delay: 12s !important;
-  animation-delay: 12s !important;
+.text-revolver .rev-block:nth-child(5) {
+  -webkit-animation-delay: -6s !important;
+  animation-delay: -6s !important;
+}
+.text-revolver .rev-block:nth-child(4) {
+  -webkit-animation-delay: -8s !important;
+  animation-delay: -8s !important;
+}
+.text-revolver .rev-block:nth-child(3) {
+  -webkit-animation-delay: -10s !important;
+  animation-delay: -10s !important;
+}
+.text-revolver .rev-block:nth-child(2) {
+  -webkit-animation-delay: -12s !important;
+  animation-delay: -12s !important;
 }
 @-webkit-keyframes revolving-text {
   0% {
