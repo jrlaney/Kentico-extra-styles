@@ -1,6 +1,6 @@
 @import '../settings.less';
 
-
+p:empty {margin-bottom:0!important;}
 
 // OVERRIDES
 
@@ -74,6 +74,17 @@
 
     // custom hero banner images for competitor landing pages
 
+}
+
+//red filter over abstract banner
+.background-image.overlay.filter-red {
+    background-color: @red;
+    -webkit-background-blend-mode: multiply;
+    background-blend-mode: multiply;
+    filter:grayscale;
+    &:after {
+        background-color:fade(@pure-black, 40%);
+    }
 }
 
 // default background image for symposium sections

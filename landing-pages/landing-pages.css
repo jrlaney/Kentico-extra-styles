@@ -1,3 +1,6 @@
+p:empty {
+  margin-bottom: 0!important;
+}
 .top-banner .secondary-fullwidth {
   display: none!important;
 }
@@ -95,6 +98,15 @@
 }
 #the-container-store #hero.background-image {
   background-image: url('/getmedia/584f0faf-301a-48a4-81aa-ea07eaee1066/the-container-store');
+}
+.background-image.overlay.filter-red {
+  background-color: #D9232E;
+  -webkit-background-blend-mode: multiply;
+  background-blend-mode: multiply;
+  filter: grayscale;
+}
+.background-image.overlay.filter-red:after {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 section#symposium {
   background-image: url('/getmedia/b03015fc-cbe0-4634-b210-68011851ad81/symposia');
