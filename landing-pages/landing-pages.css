@@ -108,6 +108,19 @@ p:empty {
 .background-image.overlay.filter-red:after {
   background-color: rgba(0, 0, 0, 0.4);
 }
+.InternetExplorer.background-image.overlay.filter-red:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(217, 35, 46, 0.7);
+}
+.InternetExplorer.background-image.overlay.filter-red:after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 section#symposium {
   background-image: url('/getmedia/b03015fc-cbe0-4634-b210-68011851ad81/symposia');
 }

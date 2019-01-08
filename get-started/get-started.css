@@ -30,6 +30,11 @@
   left: 9.71%;
   right: 9.71%;
 }
+.hypercard-img {
+  border-radius: 6% 6% 2% 2%;
+  border: 1px solid #CCCCCC;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
 #hero.background-image .line:first-child,
 #hero.background-video .line:first-child {
   display: none;
@@ -84,6 +89,19 @@
 }
 .Microstrategy2019 #page-hero:after {
   background-color: rgba(0, 0, 0, 0.4);
+}
+.InternetExplorer.Microstrategy2019 #page-hero:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(217, 35, 46, 0.7);
+}
+.InternetExplorer.Microstrategy2019 #page-hero:after {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .Microstrategy2019 #page-hero .number-group {
   position: relative;
@@ -267,8 +285,6 @@
   opacity: 0;
   position: absolute;
   width: 30%;
-  border-radius: 6% 6% 2% 2%;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
 }
 .Microstrategy2019 #offer-image-slider .hypercard-slide .screen.website .hypercard-img {
   top: 22%;

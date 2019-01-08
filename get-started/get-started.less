@@ -17,6 +17,13 @@
 	}
 }
 
+
+.hypercard-img {
+    border-radius:6% 6% 2% 2%;
+    border:1px solid @iron;
+    box-shadow:1px 1px 10px fade(@pure-black, 30%);
+}
+
 // overrides
 
 #hero.background-image, #hero.background-video {
@@ -71,6 +78,19 @@
         filter:grayscale;
         &:after {
             background-color:fade(@pure-black, 40%);
+        }
+
+        .InternetExplorer& {
+            &:before {
+                content:'';
+                position:absolute; z-index:0;
+                width:100%; height:100%;
+                top:0; left:0;
+                background-color:fade(@red, 70%);
+            }
+            &:after {
+                background-color:fade(@pure-black, 50%);
+            }
         }
         .number-group {
             position:relative; z-index:1;
@@ -202,8 +222,6 @@
                     opacity:0;
                     position:absolute;
                     width:30%;
-                    border-radius:6% 6% 2% 2%;
-                    box-shadow:1px 1px 10px fade(@pure-black, 30%);
                 }
                 &.website {
                     .hypercard-img {top:22%; left:25%;}

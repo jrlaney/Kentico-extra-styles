@@ -85,6 +85,18 @@ p:empty {margin-bottom:0!important;}
     &:after {
         background-color:fade(@pure-black, 40%);
     }
+    .InternetExplorer& {
+        &:before {
+            content:'';
+            position:absolute; z-index:0;
+            width:100%; height:100%;
+            top:0; left:0;
+            background-color:fade(@red, 70%);
+        }
+        &:after {
+            background-color:fade(@pure-black, 50%);
+        }
+    }
 }
 
 // default background image for symposium sections

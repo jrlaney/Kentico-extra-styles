@@ -55,6 +55,7 @@ section {
 blockquote {
   display: block;
   position: relative;
+  max-width: 100%;
   margin: 0;
   padding: 20px 40px;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -3472,6 +3473,19 @@ blockquote:after {
 .WhatsNew #hero.background-image.overlay:after {
   background-color: rgba(0, 0, 0, 0.4);
 }
+.InternetExplorer.WhatsNew #hero.background-image.overlay:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(217, 35, 46, 0.7);
+}
+.InternetExplorer.WhatsNew #hero.background-image.overlay:after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 .WhatsNew .related-items {
   background-color: #FFFFFF;
 }
@@ -4024,7 +4038,7 @@ blockquote:after {
   display: block;
   margin-top: 40px;
 }
-.WhatsNew.GoMobile #build-apps {
+.WhatsNew.TransformationalMobility #build-apps {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
@@ -4039,20 +4053,20 @@ blockquote:after {
   min-height: 75vh;
 }
 @media only screen and (min-width: 768px) {
-  .WhatsNew.GoMobile #build-apps {
+  .WhatsNew.TransformationalMobility #build-apps {
     padding: 200px 0;
   }
 }
 @media only screen and (min-width: 980px) {
-  .WhatsNew.GoMobile #build-apps {
+  .WhatsNew.TransformationalMobility #build-apps {
     padding: 300px 0;
   }
 }
-.WhatsNew.GoMobile #build-apps > .flex-row {
+.WhatsNew.TransformationalMobility #build-apps > .flex-row {
   position: relative;
   z-index: 2;
 }
-.WhatsNew.GoMobile #build-apps .device-background {
+.WhatsNew.TransformationalMobility #build-apps .device-background {
   position: absolute;
   z-index: 1;
   overflow: visible;
@@ -4064,7 +4078,7 @@ blockquote:after {
   -webkit-transform: translateX(-50%) rotate(-5deg);
   transform: translateX(-50%) rotate(-5deg);
 }
-.WhatsNew.GoMobile #build-apps .device-background .device-mockup {
+.WhatsNew.TransformationalMobility #build-apps .device-background .device-mockup {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4073,136 +4087,196 @@ blockquote:after {
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
   background-color: rgba(0, 0, 0, 0.1);
 }
-.WhatsNew.GoMobile #build-apps .device-background .iphone-x {
+.WhatsNew.TransformationalMobility #build-apps .device-background .iphone-x {
   width: 30%;
   border-radius: 17%/7%;
 }
-.WhatsNew.GoMobile #build-apps .device-background .iphone-x.bottom-left {
+.WhatsNew.TransformationalMobility #build-apps .device-background .iphone-x.bottom-left {
   margin-left: -50%;
   margin-top: 80%;
 }
-.WhatsNew.GoMobile #build-apps .device-background .iphone-x.top-right {
+.WhatsNew.TransformationalMobility #build-apps .device-background .iphone-x.top-right {
   margin-left: 35%;
   margin-top: -75%;
 }
 @media only screen and (min-width: 768px) {
-  .WhatsNew.GoMobile #build-apps .device-background .iphone-x {
+  .WhatsNew.TransformationalMobility #build-apps .device-background .iphone-x {
     width: 18%;
   }
-  .WhatsNew.GoMobile #build-apps .device-background .iphone-x.bottom-left {
+  .WhatsNew.TransformationalMobility #build-apps .device-background .iphone-x.bottom-left {
     margin-left: -47%;
     margin-top: 18%;
   }
-  .WhatsNew.GoMobile #build-apps .device-background .iphone-x.top-right {
+  .WhatsNew.TransformationalMobility #build-apps .device-background .iphone-x.top-right {
     margin-left: 27%;
     margin-top: -25%;
   }
 }
-.WhatsNew.GoMobile #build-apps .device-background .ipad {
+.WhatsNew.TransformationalMobility #build-apps .device-background .ipad {
   width: 80%;
   border-radius: 4%/5%;
 }
-.WhatsNew.GoMobile #build-apps .device-background .ipad.top-left {
+.WhatsNew.TransformationalMobility #build-apps .device-background .ipad.top-left {
   display: none;
 }
-.WhatsNew.GoMobile #build-apps .device-background .ipad.top-middle {
+.WhatsNew.TransformationalMobility #build-apps .device-background .ipad.top-middle {
   margin-left: -40%;
   margin-top: -95%;
 }
 @media only screen and (min-width: 768px) {
-  .WhatsNew.GoMobile #build-apps .device-background .ipad {
+  .WhatsNew.TransformationalMobility #build-apps .device-background .ipad {
     width: 55%;
   }
-  .WhatsNew.GoMobile #build-apps .device-background .ipad.top-left {
+  .WhatsNew.TransformationalMobility #build-apps .device-background .ipad.top-left {
     display: block;
     margin-left: -81%;
     margin-top: -25%;
   }
-  .WhatsNew.GoMobile #build-apps .device-background .ipad.top-middle {
+  .WhatsNew.TransformationalMobility #build-apps .device-background .ipad.top-middle {
     margin-left: -18%;
     margin-top: -40%;
   }
 }
-.WhatsNew.GoMobile #build-apps .device-background .ipad-portrait {
+.WhatsNew.TransformationalMobility #build-apps .device-background .ipad-portrait {
   width: 40%;
   border-radius: 5%/4%;
 }
-.WhatsNew.GoMobile #build-apps .device-background .ipad-portrait.top-right {
+.WhatsNew.TransformationalMobility #build-apps .device-background .ipad-portrait.top-right {
   display: none;
 }
 @media only screen and (min-width: 768px) {
-  .WhatsNew.GoMobile #build-apps .device-background .ipad-portrait {
+  .WhatsNew.TransformationalMobility #build-apps .device-background .ipad-portrait {
     width: 40%;
   }
-  .WhatsNew.GoMobile #build-apps .device-background .ipad-portrait.top-right {
+  .WhatsNew.TransformationalMobility #build-apps .device-background .ipad-portrait.top-right {
     display: block;
     margin-left: 75%;
     margin-top: -45%;
   }
 }
-.WhatsNew.GoMobile #build-apps .device-background .android-tablet {
+.WhatsNew.TransformationalMobility #build-apps .device-background .android-tablet {
   width: 80%;
   border-radius: 4%/5%;
 }
-.WhatsNew.GoMobile #build-apps .device-background .android-tablet.bottom-middle {
+.WhatsNew.TransformationalMobility #build-apps .device-background .android-tablet.bottom-middle {
   margin-left: 20%;
   margin-top: 95%;
 }
-.WhatsNew.GoMobile #build-apps .device-background .android-tablet.middle-right {
+.WhatsNew.TransformationalMobility #build-apps .device-background .android-tablet.middle-right {
   display: none;
 }
 @media only screen and (min-width: 768px) {
-  .WhatsNew.GoMobile #build-apps .device-background .android-tablet {
+  .WhatsNew.TransformationalMobility #build-apps .device-background .android-tablet {
     width: 55%;
   }
-  .WhatsNew.GoMobile #build-apps .device-background .android-tablet.bottom-middle {
+  .WhatsNew.TransformationalMobility #build-apps .device-background .android-tablet.bottom-middle {
     margin-left: 6%;
     margin-top: 38%;
   }
-  .WhatsNew.GoMobile #build-apps .device-background .android-tablet.middle-right {
+  .WhatsNew.TransformationalMobility #build-apps .device-background .android-tablet.middle-right {
     display: block;
     margin-left: 75%;
     margin-top: 12%;
   }
 }
-.WhatsNew.GoMobile #mobile-dossier .slick-arrow {
+.WhatsNew.TransformationalMobility #mobile-dossier .slick-arrow {
   z-index: 3;
   left: -23.5%;
   top: 140%;
 }
 @media only screen and (min-width: 768px) {
-  .WhatsNew.GoMobile #mobile-dossier .slick-arrow {
+  .WhatsNew.TransformationalMobility #mobile-dossier .slick-arrow {
     top: 50%;
   }
 }
-.WhatsNew.GoMobile #mobile-dossier .slick-arrow.slick-next {
+.WhatsNew.TransformationalMobility #mobile-dossier .slick-arrow.slick-next {
   left: auto;
   right: -37%;
 }
-.WhatsNew.GoMobile #mobile-dossier .slick-arrow .icon-block {
+.WhatsNew.TransformationalMobility #mobile-dossier .slick-arrow .icon-block {
   height: 50px;
   width: 50px;
 }
-.WhatsNew.GoMobile #mobile-dossier .slick-dots {
+.WhatsNew.TransformationalMobility #mobile-dossier .slick-dots {
   position: absolute;
   width: 136%;
   top: 107%;
   left: -11.5%;
 }
-.WhatsNew.GoMobile #mobile-dossier .device-mockup.ipad {
+.WhatsNew.TransformationalMobility #mobile-dossier .device-mockup.ipad {
   position: relative;
   z-index: 0;
   margin-right: 10%;
 }
-.WhatsNew.GoMobile #mobile-dossier .device-mockup.ipad .screen {
+.WhatsNew.TransformationalMobility #mobile-dossier .device-mockup.ipad .screen {
   overflow: visible;
 }
-.WhatsNew.GoMobile #mobile-dossier .device-mockup.iphone-x {
+.WhatsNew.TransformationalMobility #mobile-dossier .device-mockup.iphone-x {
   position: absolute;
   z-index: 1;
   width: 23%;
   right: 0;
   bottom: -3px;
+}
+.WhatsNew.TransformationalMobility .custom-mobile-sdk-graphic {
+  margin-top: 64px;
+}
+.WhatsNew.TransformationalMobility .custom-mobile-sdk-graphic > div {
+  display: -webkit-flex;
+  display: flex;
+}
+.WhatsNew.TransformationalMobility .custom-mobile-sdk-graphic .graphic-block {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  padding: 30px 0px;
+}
+.WhatsNew.TransformationalMobility .custom-mobile-sdk-graphic .graphic-block .graphic-label {
+  width: 100%;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+.WhatsNew.TransformationalMobility .custom-mobile-sdk-graphic .mstr-icon,
+.WhatsNew.TransformationalMobility .custom-mobile-sdk-graphic .customapp-icon {
+  display: block;
+  margin: 0 auto;
+  width: 70px;
+}
+@media only screen and (min-width: 768px) {
+  .WhatsNew.TransformationalMobility .custom-mobile-sdk-graphic .mstr-icon,
+  .WhatsNew.TransformationalMobility .custom-mobile-sdk-graphic .customapp-icon {
+    max-width: 80%;
+    width: 100px;
+  }
+}
+.WhatsNew.TransformationalMobility .custom-mobile-sdk-graphic .icon {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  -webkit-transform: rotate(0deg) translate(-15px, -50%);
+  transform: rotate(0deg) translate(-15px, -50%);
+}
+.WhatsNew.TransformationalMobility .custom-mobile-sdk-graphic .device-mockup {
+  width: 80%;
+}
+@media only screen and (min-width: 980px) {
+  .WhatsNew.TransformationalMobility .custom-mobile-sdk-graphic .device-mockup {
+    width: 75%;
+  }
 }
 @media only screen and (max-width: 767px) {
   .WhatsNew.FederatedAnalytics #federated-diagram .tool-row.lower-row .grid-item {
