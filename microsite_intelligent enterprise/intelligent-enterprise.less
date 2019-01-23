@@ -16,7 +16,7 @@
         &:after {
             background-color:fade(@pure-black, 40%);
         }
-        .InternetExplorer& {
+        .InternetExplorer & {
             &:before {
                 content:'';
                 position:absolute; z-index:0;
@@ -36,7 +36,7 @@
         &:after {
             background-color:fade(@pure-black, 40%);
         }
-        .InternetExplorer& {
+        .InternetExplorer & {
             &:before {
                 content:'';
                 position:absolute; z-index:0;
@@ -56,7 +56,7 @@
         &:after {
             background-color:fade(@pure-black, 40%);
         }
-        .InternetExplorer& {
+        .InternetExplorer & {
             &:before {
                 content:'';
                 position:absolute; z-index:0;
@@ -76,7 +76,7 @@
         &:after {
             background-color:fade(@pure-black, 40%);
         }
-        .InternetExplorer& {
+        .InternetExplorer & {
             &:before {
                 content:'';
                 position:absolute; z-index:0;
@@ -96,7 +96,7 @@
         &:after {
             background-color:fade(@pure-black, 40%);
         }
-        .InternetExplorer& {
+        .InternetExplorer & {
             &:before {
                 content:'';
                 position:absolute; z-index:0;
@@ -1761,10 +1761,6 @@ blockquote {
 
 
 //CUSTOM MAP PAGE
-#custom-ie-map-wrapper {
-    @media @medium {padding-left:20px; padding-right:20px;}
-    @media @large {padding-left:40px; padding-right:40px;}
-}
 .BecomeAnIntelligentEnterprise {
     //showing and hiding panels
     .content-panel {
@@ -1782,7 +1778,8 @@ blockquote {
     #customized-intelligence-map .map-section.int-center,
     #customized-intelligence-map .map-section.int-applications .map-req,
     #print-instructions,
-    .side-panel {display:none;}
+    .side-map,
+    #map-key {display:none;}
 
     .final-map {
         #customized-intelligence-map .row-title .instructions,
@@ -1797,10 +1794,36 @@ blockquote {
         .copy-map-completed {display:block;}
 
         #customized-intelligence-map .map-section.int-applications .map-req,
-        .side-panel,
-        #print-instructions {.display(flex);}
+        .side-map,
+        #print-instructions,
+        #map-key {.display(flex);}
 
         #customized-intelligence-map .block-name {cursor:default;}
+    }
+
+    #custom-ie-map-wrapper {
+        padding-left:20px; padding-right:20px;
+        @media @medium-only {padding-left:0px; padding-right:0px;}
+    }
+    .middle-map {
+        .flex(1, 1, 0px);
+        padding:0 10px;
+        @media @medium {padding: 0 15px;}
+    }
+    .final-map {
+        .side-map {
+            .flex(0,0,100%);
+            padding: 0 10px;
+            @media @medium {
+                .flex(0,0,20%);
+                padding:0 15px;
+                min-width:200px;
+                &.last-md {.order(1);}
+            }
+            @media @large {
+                .flex(0,0,15%);
+            }
+        }
     }
 
     .key-box {
@@ -1847,18 +1870,18 @@ blockquote {
             font-weight:400;
             font-size:14px; line-height:16px;
 
-            &:first-child {margin-top:0px;}
-
-            &.ext-forces {
-                .display(flex);
-                .flex-direction(column);
-                height:100%;
-                .section-row {
-                    .flex(1, 0, auto);
-                }
-                .block {
-                    .flex(0,0,auto);
-                    width:100%;
+            @media @medium {
+                &.ext-forces {
+                    .display(flex);
+                    .flex-direction(column);
+                    .flex(0,0,100%);
+                    .section-row {
+                        .flex(1, 0, auto);
+                    }
+                    .block {
+                        .flex(0,0,auto);
+                        width:100%;
+                    }
                 }
             }
         }
@@ -2050,6 +2073,7 @@ blockquote {
             }
 
             .select-toggler {
+                display: -ms-inline-flexbox;
                 .display(inline-flex);
                 .align-items(center);
                 position:relative; z-index:1;
@@ -2058,7 +2082,7 @@ blockquote {
                 color:@white;
                 margin:0;
                 height:auto; width:auto;
-                text-indent:unset;
+                text-indent:0;
 
                 .indicator {
                     position:relative;
