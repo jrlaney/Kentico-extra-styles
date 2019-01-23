@@ -2,6 +2,134 @@ main,
 section {
   overflow: hidden;
 }
+.resource-thumbnail.transparent:after {
+  background-color: transparent;
+}
+.background-image.overlay.filter-red {
+  background-color: #D9232E;
+  -webkit-background-blend-mode: multiply;
+  background-blend-mode: multiply;
+  filter: grayscale;
+}
+.background-image.overlay.filter-red:after {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.InternetExplorer.background-image.overlay.filter-red:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(217, 35, 46, 0.7);
+}
+.InternetExplorer.background-image.overlay.filter-red:after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.background-image.overlay.filter-orange {
+  background-color: #FF9100;
+  -webkit-background-blend-mode: multiply;
+  background-blend-mode: multiply;
+  filter: grayscale;
+}
+.background-image.overlay.filter-orange:after {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.InternetExplorer.background-image.overlay.filter-orange:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 145, 0, 0.7);
+}
+.InternetExplorer.background-image.overlay.filter-orange:after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.background-image.overlay.filter-green {
+  background-color: #68AA00;
+  -webkit-background-blend-mode: multiply;
+  background-blend-mode: multiply;
+  filter: grayscale;
+}
+.background-image.overlay.filter-green:after {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.InternetExplorer.background-image.overlay.filter-green:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(104, 170, 0, 0.7);
+}
+.InternetExplorer.background-image.overlay.filter-green:after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.background-image.overlay.filter-blue {
+  background-color: #4789A3;
+  -webkit-background-blend-mode: multiply;
+  background-blend-mode: multiply;
+  filter: grayscale;
+}
+.background-image.overlay.filter-blue:after {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.InternetExplorer.background-image.overlay.filter-blue:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(71, 137, 163, 0.7);
+}
+.InternetExplorer.background-image.overlay.filter-blue:after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.background-image.overlay.filter-navy-blue {
+  background-color: #11566F;
+  -webkit-background-blend-mode: multiply;
+  background-blend-mode: multiply;
+  filter: grayscale;
+}
+.background-image.overlay.filter-navy-blue:after {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.InternetExplorer.background-image.overlay.filter-navy-blue:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 86, 111, 0.7);
+}
+.InternetExplorer.background-image.overlay.filter-navy-blue:after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.component-red .text-block {
+  background-color: #D9232E;
+}
+.component-orange .text-block {
+  background-color: #FF9100;
+}
+.component-green .text-block {
+  background-color: #68AA00;
+}
+.component-blue .text-block {
+  background-color: #4789A3;
+}
+.component-navy-blue .text-block {
+  background-color: #11566F;
+}
 .offpage-image {
   width: 150%;
   max-width: none;
@@ -523,7 +651,26 @@ section {
     padding: 30px;
   }
 }
-.HowToUpgrade .upgrade-path-panel {
+.HowToUpgrade #hero {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.HowToUpgrade #hero[data-selected="red"] {
+  background-color: #D9232E;
+}
+.HowToUpgrade #hero[data-selected="orange"] {
+  background-color: #FF9100;
+}
+.HowToUpgrade #hero[data-selected="blue"] {
+  background-color: #4789A3;
+}
+.HowToUpgrade #hero[data-selected="green"] {
+  background-color: #68AA00;
+}
+.HowToUpgrade #hero[data-selected="navy-blue"] {
+  background-color: #11566F;
+}
+.HowToUpgrade .path-panel {
   overflow: hidden;
   max-height: 0;
   padding: 0;
@@ -533,16 +680,16 @@ section {
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-.HowToUpgrade .upgrade-path-panel.current {
+.HowToUpgrade .path-panel.current {
   -webkit-animation: fade-slide-up 0.3s ease-out 0.2s normal forwards;
   animation: fade-slide-up 0.3s ease-out 0.2s normal forwards;
   max-height: 5000px;
   padding: 60px 0;
 }
-.HowToUpgrade .upgrade-path-panel .element {
+.HowToUpgrade .path-panel .element {
   padding: 10px 0 20px 25px;
 }
-.HowToUpgrade .upgrade-path-box {
+.HowToUpgrade .path-box {
   -webkit-flex: 0 1 auto;
   flex: 0 1 auto;
   max-width: none;
@@ -556,91 +703,108 @@ section {
   align-items: flex-start;
   width: 100%;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   border: 3px solid transparent;
+  margin-left: 50px;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
+  text-align: center;
 }
-.HowToUpgrade .upgrade-path-box .text-block {
+@media only screen and (min-width: 768px) {
+  .HowToUpgrade .path-box {
+    margin-left: 0;
+  }
+}
+.HowToUpgrade .path-box .text-block {
   color: #FFFFFF;
 }
-.HowToUpgrade .upgrade-path-box header,
-.HowToUpgrade .upgrade-path-box section,
-.HowToUpgrade .upgrade-path-box footer {
+.HowToUpgrade .path-box .description {
+  font-size: 16px;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+.HowToUpgrade .path-box ul {
+  padding-left: 0;
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.2em;
+}
+.HowToUpgrade .path-box section,
+.HowToUpgrade .path-box footer {
   -webkit-flex: 0 1 auto;
   flex: 0 1 auto;
   max-width: none;
   width: 100%;
   padding: 20px;
 }
-.HowToUpgrade .upgrade-path-box header {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-.HowToUpgrade .upgrade-path-box footer {
+.HowToUpgrade .path-box footer {
   margin-top: auto;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-.HowToUpgrade .upgrade-path-box footer .button {
-  width: 100%;
+.HowToUpgrade .path-box footer .button {
+  width: 80%;
 }
-.HowToUpgrade .upgrade-path-box footer .button:before {
+.HowToUpgrade .path-box:after {
   content: '';
   position: absolute;
-  opacity: 0;
-  top: 100%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid #FFFFFF;
-  -webkit-transform: translate(-50%, -30px);
-  transform: translate(-50%, -30px);
+  height: 0px;
+  width: 0px;
+  left: -100px;
+  top: 50%;
+  margin-top: -50px;
+  border: 50px solid transparent;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-.HowToUpgrade .upgrade-path-box:hover {
+@media only screen and (min-width: 768px) {
+  .HowToUpgrade .path-box:after {
+    left: 50%;
+    top: calc(100% + 30px);
+    margin-left: -50px;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .HowToUpgrade .path-box:after {
+    top: calc(100% + 70px);
+  }
+}
+.HowToUpgrade .path-box:hover {
   cursor: pointer;
 }
-.HowToUpgrade .upgrade-path-box.current {
-  background-color: rgba(0, 0, 0, 0.8);
+.HowToUpgrade .path-box.current {
+  background-color: rgba(0, 0, 0, 0.7);
 }
-.HowToUpgrade .upgrade-path-box.current footer {
-  padding: 0;
+.HowToUpgrade .path-box.current:after {
+  border-left-color: #FFFFFF;
+  left: -70px;
 }
-.HowToUpgrade .upgrade-path-box.current footer .button {
-  -webkit-justify-content: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1em 1.25em;
+@media only screen and (min-width: 768px) {
+  .HowToUpgrade .path-box.current:after {
+    left: 50%;
+    top: calc(100% + 2px);
+    border-left-color: transparent;
+    border-bottom-color: #FFFFFF;
+  }
 }
-.HowToUpgrade .upgrade-path-box.current footer .button:before {
-  opacity: 1;
-  -webkit-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
+@media only screen and (min-width: 980px) {
+  .HowToUpgrade .path-box.current:after {
+    top: calc(100% + 40px);
+  }
 }
-.HowToUpgrade .upgrade-path-box.current.blue {
+.HowToUpgrade .path-box.current.component-red {
+  border: 3px solid #D9232E;
+}
+.HowToUpgrade .path-box.current.component-blue {
   border: 3px solid #4789A3;
 }
-.HowToUpgrade .upgrade-path-box.current.blue footer .button {
-  background-color: #4789A3;
-  color: #FFFFFF;
-}
-.HowToUpgrade .upgrade-path-box.current.blue footer .button:before {
-  border-top-color: #4789A3;
-}
-.HowToUpgrade .upgrade-path-box.current.orange {
+.HowToUpgrade .path-box.current.component-orange {
   border: 3px solid #FF9100;
-}
-.HowToUpgrade .upgrade-path-box.current.orange footer .button {
-  background-color: #FF9100;
-  color: #FFFFFF;
-}
-.HowToUpgrade .upgrade-path-box.current.orange footer .button:before {
-  border-top-color: #FF9100;
 }
 .HowToUpgrade #self-service-upgrade .phase-counter {
   color: #FF9100;
@@ -680,6 +844,9 @@ section {
     flex: 0 0 50%;
     max-width: 50%;
   }
+}
+.HowToUpgrade #upgrade-advisory-form #lead-gen-form {
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
 }
 @media only screen and (min-width: 768px) {
   .passed-view .delay02 {

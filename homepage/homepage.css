@@ -292,23 +292,23 @@
 }
 #hero.hyperintelligence .title {
   opacity: 0;
-  -webkit-animation: fade-slide-down 0.5s ease-out 3s normal forwards;
-  animation: fade-slide-down 0.5s ease-out 3s normal forwards;
+  -webkit-animation: fade-slide-down 0.5s ease-out 1s normal forwards;
+  animation: fade-slide-down 0.5s ease-out 1s normal forwards;
 }
 #hero.hyperintelligence .subtitle {
   opacity: 0;
-  -webkit-animation: fade-slide-down 0.5s ease-out 3.4s normal forwards;
-  animation: fade-slide-down 0.5s ease-out 3.4s normal forwards;
+  -webkit-animation: fade-slide-down 0.5s ease-out 1.4s normal forwards;
+  animation: fade-slide-down 0.5s ease-out 1.4s normal forwards;
 }
 #hero.hyperintelligence .button {
   opacity: 0;
-  -webkit-animation: fade-slide-down 0.5s ease-out 3.8s normal forwards;
-  animation: fade-slide-down 0.5s ease-out 3.8s normal forwards;
+  -webkit-animation: fade-slide-down 0.5s ease-out 1.8s normal forwards;
+  animation: fade-slide-down 0.5s ease-out 1.8s normal forwards;
 }
 #hero.hyperintelligence .revolving-panels {
   opacity: 0;
-  -webkit-animation: revolving-panel-intro 3s ease-out 3.4s normal forwards;
-  animation: revolving-panel-intro 3s ease-out 3.4s normal forwards;
+  -webkit-animation: revolving-panel-intro 3s ease-out 2s normal forwards;
+  animation: revolving-panel-intro 3s ease-out 2s normal forwards;
 }
 #hero.hyperintelligence:after {
   content: '';
@@ -432,67 +432,7 @@
   width: 30%;
 }
 .animated-intro-text {
-  -webkit-animation: ai-fade-in 2s ease-out 1s normal forwards;
-  animation: ai-fade-in 2s ease-out 1s normal forwards;
-}
-.ai-title {
-  opacity: 0;
-  -webkit-animation: ai-title 2s ease-out 1s normal forwards;
-  animation: ai-title 2s ease-out 1s normal forwards;
-}
-.ai-subtitle {
-  opacity: 0;
-  -webkit-animation: ai-subtitle 2s ease-out 1s normal forwards;
-  animation: ai-subtitle 2s ease-out 1s normal forwards;
-}
-.animated-intro-text {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  position: fixed;
-  z-index: 700;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  text-align: center;
-  background-color: #333333;
-}
-.animated-intro-text .ai-title {
-  color: #D9232E;
-  font-weight: 400;
-  font-size: 3rem;
-  line-height: 1.2em;
-}
-.animated-intro-text .ai-title > span {
-  display: block;
-  margin-bottom: 5px;
-  font-size: .5em;
-  line-height: 1;
-  color: #FFFFFF;
-}
-@media only screen and (min-width: 768px) {
-  .animated-intro-text .ai-title {
-    font-size: 4rem;
-  }
-}
-@media only screen and (min-width: 980px) {
-  .animated-intro-text .ai-title {
-    font-size: 3.5rem;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .animated-intro-text .ai-title {
-    font-size: 4.7rem;
-  }
-}
-.animated-intro-text .ai-subtitle {
-  color: #FFFFFF;
+  display: none;
 }
 #explore-product .link-block {
   display: -webkit-flex;
@@ -864,168 +804,6 @@
     opacity: 0;
     -webkit-transform: translateY(-10%);
     transform: translateY(-10%);
-  }
-}
-@-webkit-keyframes ai-fade-in {
-  0% {
-    opacity: 1;
-    z-index: 700;
-  }
-  90% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0;
-    z-index: 700;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-@keyframes ai-fade-in {
-  0% {
-    opacity: 1;
-    z-index: 700;
-  }
-  90% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0;
-    z-index: 700;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-@-webkit-keyframes ai-title {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(55px);
-    transform: translateY(55px);
-  }
-  15% {
-    opacity: 1;
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
-  }
-  25% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  80% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  90% {
-    opacity: 0;
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px);
-  }
-}
-@keyframes ai-title {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(55px);
-    transform: translateY(55px);
-  }
-  15% {
-    opacity: 1;
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
-  }
-  25% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  80% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  90% {
-    opacity: 0;
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px);
-  }
-}
-@-webkit-keyframes ai-subtitle {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(30px);
-    transform: translateY(30px);
-  }
-  18% {
-    opacity: 0;
-    -webkit-transform: translateY(30px);
-    transform: translateY(30px);
-  }
-  28% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  80% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  90% {
-    opacity: 0;
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px);
-  }
-}
-@keyframes ai-subtitle {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(30px);
-    transform: translateY(30px);
-  }
-  18% {
-    opacity: 0;
-    -webkit-transform: translateY(30px);
-    transform: translateY(30px);
-  }
-  28% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  80% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  90% {
-    opacity: 0;
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px);
   }
 }
 @-webkit-keyframes revolving-panel-intro {
