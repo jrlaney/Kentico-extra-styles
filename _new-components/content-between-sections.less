@@ -1,0 +1,19 @@
+//CARD BETWEEN ROWS
+.in-between-card.flex-row {
+    position:relative; z-index:5;
+    .card {
+        position:relative; z-index:5;
+        background-color:@white;
+        padding:10px;
+        .box-shadow(1px 1px 5px fade(@pure-black, 50%));
+        margin-bottom:30px;
+    }
+    @media @medium {
+		margin-top:-150px; margin-bottom:60px;
+        .card {padding:15px;}
+    }
+}
+section.above-card {
+    @media @medium {padding-bottom:150px; position:relative; z-index:4;}
+}
+section.below-card {overflow:visible!important;}

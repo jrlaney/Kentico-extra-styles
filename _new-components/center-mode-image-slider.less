@@ -1,0 +1,61 @@
+.center-mode-slider {
+    @media @medium {
+        position:relative;
+        &:before, &:after {
+            position:absolute; z-index:2;
+            content:'';
+            height:100%; width:20px;
+            top:0;
+        }
+        &:before {
+            left:0;
+            background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+            background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+            background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+        }
+        &:after {
+            right:0;
+            background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+            background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+        }
+    }
+
+    .slick-slide {
+        .flex-direction(column);
+        .justify-content(flex-start);
+        z-index:0;
+        padding:15px;
+        opacity:0.5;
+        .single-transition;
+        .screenshot {
+            margin:15% auto;
+            @media @medium {margin:28.333% auto;}
+            border:1px solid @iron;
+            box-shadow: 1px 1px 10px fade(@pure-black, 50%);
+            .single-transition;
+        }
+        .copy {
+            margin-top:0px;
+            padding-top:40px;
+            opacity:0;
+            width:150%;
+            @media @medium {width:200%;}
+            .single-transition;
+        }
+        &.slick-center {
+            z-index:1;
+            opacity:.99;
+            .screenshot {
+                .scale(1.5);
+                @media @medium {.scale(2);}
+                .single-transition(.2s, ease-out, all, 0s);
+            }
+            .copy {
+                opacity:.99;
+            }
+        }
+    }
+}//end center mode slider

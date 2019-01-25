@@ -1,0 +1,79 @@
+//fancy angled banner for products child pages
+#hero.angled-banner {
+    overflow:hidden; position:relative;
+	backface-visibility: visible;
+    color:@white;
+    @media @medium {background-color:@white!important; overflow:visible; padding-bottom:0;}
+    .flex-row {position:relative; z-index:1;}
+    .logo-lockup {
+        .h2.text-uppercase {letter-spacing:0.2em; @media @small-only {font-size:18px; line-height:24px;}}
+        .icon {
+            margin-right:10px;
+            @media @medium {margin-right:20px;}
+        }
+    }
+    .angle-wrapper {
+        display:block; position:absolute; z-index:0;
+        height:100%; width:100%;
+        top:0; left:0;
+		backface-visibility: visible;
+        @media @xlarge {max-width:@large-breakpoint; left:50%; .translateX(-50%);}
+        .angle {
+            position:absolute;
+			backface-visibility: visible;
+            top:0;
+            &.left {
+				-webkit-clip-path: polygon(0 100%, 100% 0, 0 0)!important;
+				clip-path: polygon(0 100%, 100% 0, 0 0)!important;
+                z-index:2; right:0;
+                width:100vw; height:100vw;
+                mix-blend-mode: multiply;
+                @media @medium {width:105vw; height:105vw; right:-5vw;}
+                @media @xlarge {width:100vw; height:100vw; right:0;}
+            }
+            &.right {
+				-webkit-clip-path: polygon(100% 100%, 100% 0, 0 0)!important;
+				clip-path: polygon(100% 100%, 100% 0, 0 0)!important;
+                z-index:1;
+                width:75vw; height:75vw;
+                left:25vw;
+                background-repeat:no-repeat;
+                background-position:center;
+                background-size:cover;
+                @media @small-only {background-blend-mode:multiply;}
+                @media @medium {width:60vw; height:60vw; left:40vw;}
+                @media @xlarge {width:50vw; height:50vw; left:50%;}
+            }
+        }
+    }
+
+	.InternetExplorer & {
+		.angle-wrapper {display:none;}
+		&:after {
+			content:'';
+			position:absolute;
+			height:50vw; width:100vw;
+			bottom:-10vw;left:0;
+			.transform(skew(0, -10deg));
+		}
+	}
+
+    //changes angle color based on the defined hero row color
+    .loop-colors(@i) when (@i > 0) {
+        .loop-colors(@i - 1);
+
+        @color-class: extract(@color-classes, @i);
+        @color: extract(@colors, @i);
+
+        &.@{color-class} {
+            background-color:@color;
+            .angle {background-color:darken(desaturate(@color, 5%), 5%); @media @medium {background-color:@color;}}
+            .angle.right {background-color:lighten(saturate(@color, 5%), 20%); @media @medium {background-color:@color;}}
+			.InternetExplorer & {
+				background-color:@color!important;
+				&:after {background-color:@color!important;}
+			}
+        }
+    }
+    .loop-colors(length(@color-classes));
+}

@@ -1,0 +1,184 @@
+//standard styles for gridder usage
+.gridder {
+    position:relative; overflow:hidden;
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom:40px;
+    .single-transition;
+    &:after { //the dark background that shows up when the grid is opened
+        display:block; position:absolute; z-index:1;
+        content:"";
+        width:100%; height:100%;
+        top:0; left:0; right:0; bottom:0;
+        .angled-gradient(#222222, #444444);
+
+        //animated properties
+        opacity:0;
+        .single-transition(0.3s, ease-out, opacity, 0.5s);
+    }
+    .grid-item {
+        position:relative;
+        padding:5px; z-index:2;
+        .order(-1);
+    }
+    .card {
+        cursor:pointer;
+        border-top-color:@gainsboro;
+        .card-content:first-child {
+            border-bottom:1px solid @gainsboro;
+        }
+        .card-content .logo {
+            .position(absolute, 50%, 50%, null, null);
+            max-height: ~"calc(100% - 40px)";
+            max-width: ~"calc(100% - 40px)";
+            .translate(-50%, -50%);
+        }
+        //animated properties
+        opacity:1;
+        .translateY(0);
+        -webkit-transition:opacity 0.3s ease-in 0.5s, transform 0.3s ease-in 0.5s, box-shadow 0.2s ease-out 0s;
+        transition:opacity 0.3s ease-in 0.5s, transform 0.3s ease-in 0.5s, box-shadow 0.2s ease-out 0s;
+    }
+    .gridder-show {
+        position:absolute; z-index:3;
+        padding:0;
+        width:100%; top:0px; left:10px;
+        margin-left:-10px; margin-right:-10px;
+        overflow:hidden;
+        color:#ffffff; text-align:left;
+    }
+    .gridder-padding {
+        display:block; position:relative;
+        padding:70px 20px 40px 20px;
+
+        //animation for when the content block appears
+        .animation(fade-slide-down 0.5s 0s ease-out both);
+    }
+    .gridder-close {
+        position:absolute; z-index:3;
+        top:35px; right:0;
+        height:50px; width:50px;
+        cursor:pointer;
+        &:before,
+        &:after {
+            position:absolute; display:block;
+            content:"";
+            top:50%; left:50%;
+            margin-top:-15px; margin-right:-15px;
+            height:30px; width:2px;
+            background-color:#dddddd;
+        }
+        &:before {.rotate(45deg);}
+        &:after {.rotate(-45deg);}
+        //ANIMATED PROPERTIES
+        background-color:rgba(0,0,0,0.0);
+        .single-transition;
+        &:hover {background-color:rgba(0,0,0,0.4); color:@white;}
+    }
+    .gridder-nav {
+        position:absolute; z-index:3;
+        top:35px; left:0;
+        height:50px; width:50px;
+        cursor:pointer;
+        //ANIMATED PROPERTIES
+        background-color:rgba(0,0,0,0.0);
+        .single-transition;
+        &:hover {background-color:rgba(0,0,0,0.4); color:@white;}
+        &.next {
+            left:50px;
+            .rotate(180deg);
+        }
+        &.disabled,
+        &.disabled:hover {
+            opacity:0.2;
+            cursor:default;
+            background-color:rgba(0,0,0,0.0);
+        }
+        &:before,
+        &:after {
+            position:absolute; display:block;
+            content:"";
+            top:50%; left:50%; margin-left:-4px;
+            height:18px; width:2px;
+            background-color:#dddddd;
+        }
+        &:before {
+            margin-top:-15px;
+            .rotate(45deg);
+        }
+        &:after {
+            margin-top:-3px;
+            .rotate(-45deg);
+        }
+    }
+    .gridder-back {
+        position:absolute; z-index:3;
+        top:0; left:0; right:0;
+        padding:10px 20px 10px 40px;
+        height:35px;
+        background-color:rgba(0,0,0,0.4);
+        font-family:@myriad-pro;
+        font-weight:300;
+        font-size:14px; line-height:16px;
+        color:@gray; .uppercase;
+        &:before,
+        &:after {
+            position:absolute; display:block;
+            content:"";
+            top:50%; left:20px;
+            height:10px; width:2px;
+            background-color:@gray;
+        }
+        &:before {
+            margin-top:-9px;
+            .rotate(45deg);
+        }
+        &:after {
+            margin-top:-2px;
+            .rotate(-45deg);
+        }
+    }
+
+    //ANIMATION END STATES
+    &.hasSelectedItem {
+        .card {
+            /*opening timing on the cards*/
+            opacity:0;
+            .translateY(10px);
+            -webkit-transition:opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s, box-shadow 0.2s ease-out 0s;
+            transition:opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s, box-shadow 0.2s ease-out 0s;
+        }
+        &:after {
+          opacity:1;
+          .single-transition(0.5s, ease-out, opacity, 0.3s);
+        }
+    }
+
+    @media @medium {
+        margin-left:0; margin-right:0;
+        padding-left:0; padding-right:0; padding-bottom:60px;
+        .grid-item {padding:10px;}
+        .gridder-show {position:relative; top:auto; left:auto;}
+        .gridder-padding {padding:70px 50px 0 50px;}
+        .gridder-close {top:0;}
+        .gridder-nav {
+            top:50%;
+            height:100px;
+            margin-top:-30px;
+            &.next {right:0; left:auto;}
+        }
+        .gridder-back {
+            right:auto;
+            height:auto;
+            font-size:18px; line-height:20px;
+        }
+        .card .title {font-size:26px; line-height:32px;}
+        .gridder-back {
+            background-color:rgba(0,0,0,0.0);
+            .single-transition;
+        }
+        .gridder-back:hover {background-color:rgba(0,0,0,0.4); color:#ffffff;}
+    }
+    @media @large {padding-bottom:80px;}
+}
+.gridder-content {display:none;}

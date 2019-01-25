@@ -1,12 +1,14 @@
 blockquote {
-  display: block;
+  display: inline-block;
   position: relative;
-  margin: 0;
   padding: 20px 40px;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
+}
+blockquote:last-child {
+  margin-bottom: 0;
 }
 @media only screen and (min-width: 768px) {
   blockquote {
@@ -14,7 +16,8 @@ blockquote {
     line-height: 33px;
   }
 }
-blockquote > footer {
+blockquote > footer,
+blockquote > span {
   display: block;
   margin-top: 30px;
   font-weight: 600;
@@ -24,7 +27,8 @@ blockquote > footer {
   letter-spacing: 0.05em;
 }
 @media only screen and (min-width: 768px) {
-  blockquote > footer {
+  blockquote > footer,
+  blockquote > span {
     font-size: 18px;
   }
 }

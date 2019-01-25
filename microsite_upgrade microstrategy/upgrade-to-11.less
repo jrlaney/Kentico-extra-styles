@@ -3,205 +3,12 @@
 main, section {overflow:hidden;}
 
 //component styles
-
-//add the ability to have a no-background image resource thumbnail (used in hero banners)
-.resource-thumbnail.transparent:after {background-color:transparent;}
-
-//red filter over abstract banner
-.background-image.overlay.filter {
-    &-red {
-        background-color: @red;
-        -webkit-background-blend-mode: multiply;
-        background-blend-mode: multiply;
-        filter:grayscale;
-        &:after {
-            background-color:fade(@pure-black, 40%);
-        }
-        .InternetExplorer& {
-            &:before {
-                content:'';
-                position:absolute; z-index:0;
-                width:100%; height:100%;
-                top:0; left:0;
-                background-color:fade(@red, 70%);
-            }
-            &:after {
-                background-color:fade(@pure-black, 50%);
-            }
-        }
-    }
-    &-orange {
-        background-color: @orange;
-        -webkit-background-blend-mode: multiply;
-        background-blend-mode: multiply;
-        filter:grayscale;
-        &:after {
-            background-color:fade(@pure-black, 40%);
-        }
-        .InternetExplorer& {
-            &:before {
-                content:'';
-                position:absolute; z-index:0;
-                width:100%; height:100%;
-                top:0; left:0;
-                background-color:fade(@orange, 70%);
-            }
-            &:after {
-                background-color:fade(@pure-black, 50%);
-            }
-        }
-    }
-    &-green {
-        background-color: @green;
-        -webkit-background-blend-mode: multiply;
-        background-blend-mode: multiply;
-        filter:grayscale;
-        &:after {
-            background-color:fade(@pure-black, 40%);
-        }
-        .InternetExplorer& {
-            &:before {
-                content:'';
-                position:absolute; z-index:0;
-                width:100%; height:100%;
-                top:0; left:0;
-                background-color:fade(@green, 70%);
-            }
-            &:after {
-                background-color:fade(@pure-black, 50%);
-            }
-        }
-    }
-    &-blue {
-        background-color: @blue;
-        -webkit-background-blend-mode: multiply;
-        background-blend-mode: multiply;
-        filter:grayscale;
-        &:after {
-            background-color:fade(@pure-black, 40%);
-        }
-        .InternetExplorer& {
-            &:before {
-                content:'';
-                position:absolute; z-index:0;
-                width:100%; height:100%;
-                top:0; left:0;
-                background-color:fade(@blue, 70%);
-            }
-            &:after {
-                background-color:fade(@pure-black, 50%);
-            }
-        }
-    }
-    &-navy-blue {
-        background-color: @navy-blue;
-        -webkit-background-blend-mode: multiply;
-        background-blend-mode: multiply;
-        filter:grayscale;
-        &:after {
-            background-color:fade(@pure-black, 40%);
-        }
-        .InternetExplorer& {
-            &:before {
-                content:'';
-                position:absolute; z-index:0;
-                width:100%; height:100%;
-                top:0; left:0;
-                background-color:fade(@navy-blue, 70%);
-            }
-            &:after {
-                background-color:fade(@pure-black, 50%);
-            }
-        }
-    }
-}
-
-.component {
-    &-red {
-        .text-block {background-color:@red;}
-    }
-    &-orange {
-        .text-block {background-color:@orange;}
-    }
-    &-green {
-        .text-block {background-color:@green;}
-    }
-    &-blue {
-        .text-block {background-color:@blue;}
-    }
-    &-navy-blue {
-        .text-block {background-color:@navy-blue;}
-    }
-}
-
-//basic setup for an image going off the page
-.offpage-image {
-    width:150%;
-    max-width:none;
-    &.left {float:right;}
-    &.right {float:left;}
-    @media @large {
-        &.left {margin-right:5%; &.pc-laptop, &.macbook-pro, &.macbook-air {margin-right:-10%;}}
-        &.right {margin-left:5%; &.pc-laptop, &.macbook-pro, &.macbook-air {margin-left:-10%;}}
-    }
-}
-.stacked-mockups {position:relative;}
-.z-1 {position:relative; z-index:1;}
-.z-2 {position:relative; z-index:2;}
-.z-3 {position:relative; z-index:3;}
-
-//stack a small icon on top of a large one
-.stacked-icons {
-    display:inline-block;
-    position:relative;
-    padding-bottom:10px; padding-right:20px;
-    margin-bottom:10px;
-    .icon {position:relative; z-index:0;}
-    .icon.icon-block {
-        position:absolute; z-index:1;
-        right:0; bottom:0;
-        height:48px; width:48px;
-    }
-}
-
-
-
-//DIV WITH COLOR TRIANGLE NEXT TO IT
-.triangle-group {
-    position:relative;
-    padding:5px 0 5px 20px;
-    &:before {
-        display:block; position:absolute;
-        content:'';
-        top:5px; left:-10px;
-        width:0; height:0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid @red;
-        border-top: 10px solid transparent;
-    }
-    @media @medium {
-        padding-left:25px;
-        &:before {
-            left:-15px;
-            border-left-width: 15px;
-            border-right-width: 15px;
-            border-top-width: 15px;
-        }
-    }
-    &.red:before {border-right-color:@red;}
-    &.orange:before {border-right-color:@orange;}
-    &.green:before {border-right-color:@green;}
-    &.blue:before {border-right-color:@blue;}
-    &.navy-blue:before {border-right-color:@navy-blue;}
-
-    &.white:before {border-right-color:@white;}
-    &.light-gray:before {border-right-color:@light-gray;}
-    &.gray:before {border-right-color:@gray;}
-    &.dark-gray:before {border-right-color:@dark-gray;}
-    &.black:before {border-right-color:@black;}
-}
-
-
+@import '../_new-components/background-color-filters.less';
+@import '../_new-components/offpage-image.less';
+@import '../_new-components/stacked-icons.less';
+@import '../_new-components/triangle-group.less';
+@import '../_new-components/vertical-panelstack.less';
+@import '../_new-components/number-group.less';
 
 //for a grid of links with colored icons and left border hover state
 .icon-link-grid {
@@ -254,134 +61,24 @@ main, section {overflow:hidden;}
     }
 }
 
-//new vertical panelstack
-@media @medium {
-    .panelstack.vertical-panelstack {
-        .display(flex);
-        .flex(0, 1, auto);
-        width: 100%;
-        .flex-direction(row);
-        .flex-wrap(wrap);
-        .justify-content(start);
-        .align-items(stretch);
-        background-color:@light-gray;
+//add the ability to have a no-background image resource thumbnail (used in hero banners)
+.resource-thumbnail.transparent:after {background-color:transparent;}
 
-        .panel-nav, .panel-content {
-            .flex(0, 1, auto);
-            .display(flex);
-            .flex-direction(column);
-            .flex-wrap(wrap);
-            .align-items(flex-start);
-            float:none;
-        }
-        .panel-nav {
-            z-index:1;
-             padding-bottom:0;
-             width:40%;
-             .box-shadow(1px 1px 10px fade(@pure-black, 20%));
-             background-color:@black;
-             .panel-nav-elem {
-                 width:100%;
-                 border:none;
-                 > a {
-                     color:@white;
-                     padding:15px 40px 15px 20px;
-                     opacity:0.5;
-                     &:hover {
-                         color:@white;
-                         opacity:1;
-                         background-color: fade(@pure-black, 10%);
-                     }
-                     &:before {
-                         display:block; position:absolute;
-                         content:'';
-                         top:50%; right:15px;
-                         width:0; height:0;
-                         border-top:7px solid transparent;
-                         border-bottom:7px solid transparent;
-                         border-left:7px solid @white;
-                         margin:0;
-                         .translate(0, -50%);
-                         .single-transition;
-                     }
-                     &:after {display:none;}
-                 }//end > a
-                 &.active-panel > a {
-                     opacity:1;
-                     background-color:@red;
-                     color:@white;
-                     &:before {
-                         opacity:1;
-                         border-top-width:10px;
-                         border-bottom-width:10px;
-                         border-left-width:10px;
-                         border-left-color:@red;
-                         .translate(25px, -50%);
-                     }
-                 }//end active panel styles
-             }//end panel-nav-elem
-        }
-        .panel-content {
-            z-index:0;
-            width:60%;
-            border:none;
-            opacity:0;
-            .animation(fade-slide-right 0.3s ease-out 0.2s normal forwards);
-            padding:30px;
-        }//end panel content
-    }// end panelstack vertical
-
-    .panelstack.vertical-panelstack {
-        .loop-colors(@i) when (@i > 0) {
-            .loop-colors(@i - 1);
-
-            @color-class: extract(@color-classes, @i);
-            @color: extract(@colors, @i);
-
-            &.@{color-class} {
-                .panel-nav .panel-nav-elem.active-panel>a {background-color:@color}
-                .panel-nav .panel-nav-elem.active-panel>a:before {border-left-color:@color;}
-            }
-        }
-        .loop-colors(length(@color-classes));
+.component {
+    &-red {
+        .text-block {background-color:@red;}
     }
-}//end medium media query
-@media @large {
-    .panelstack.vertical-panelstack {
-        .panel-nav {width:30%;}
-        .panel-content {width:70%; padding:30px 50px;}
+    &-orange {
+        .text-block {background-color:@orange;}
     }
-}//end large media query
-
-
-//DIV WITH A NUMBER NEXT TO IT
-.number-group {
-    position:relative; z-index:1;
-    padding:15px 0 5px 30px;
-    &:before {
-        display:block; position:absolute; z-index:-1;
-        content:'';
-        top:0px; left:0px;
-        font-size:60px; line-height:60px;
-        font-weight:600;
-        opacity:0.1;
+    &-green {
+        .text-block {background-color:@green;}
     }
-    @media @medium {
-        padding-top:30px; padding-left:50px;
-        &:before {
-            font-size:120px; line-height:120px;
-        }
+    &-blue {
+        .text-block {background-color:@blue;}
     }
-    &.one:before   {content:'1'}
-    &.two:before   {content:'2'}
-    &.three:before {content:'3'}
-    &.four:before  {content:'4'}
-    &.five:before  {content:'5'}
-
-    &.small {
-        padding:10px 0 5px 20px;
-        &:before {font-size:40px; line-height:40px;}
-        @media @medium {&:before {font-size:60px; line-height:60px;}}
+    &-navy-blue {
+        .text-block {background-color:@navy-blue;}
     }
 }
 
@@ -604,45 +301,4 @@ main, section {overflow:hidden;}
 
 
 //KEYFRAMES FOR EVERYTHING
-
-//ANIMATION LIBRARY
-@media @medium {
-    .passed-view .delay02 {.animation-delay(0.2s~"!important");}
-    .passed-view .delay04 {.animation-delay(0.4s~"!important");}
-    .passed-view .delay06 {.animation-delay(0.6s~"!important");}
-    .passed-view .delay08 {.animation-delay(0.8s~"!important");}
-    .passed-view .delay10 {.animation-delay(1.0s~"!important");}
-    .passed-view .delay12 {.animation-delay(1.2s~"!important");}
-    .passed-view .delay14 {.animation-delay(1.4s~"!important");}
-    .passed-view .delay16 {.animation-delay(1.6s~"!important");}
-    .passed-view .delay18 {.animation-delay(1.8s~"!important");}
-    .passed-view .delay20 {.animation-delay(2.0s~"!important");}
-
-    .slide-up, .slide-left, .slide-right, .slide-down, .fade-in {opacity:0;}
-    .passed-view .slide-up {.animation(fade-slide-up 0.3s ease-out 0s normal forwards);}
-    .passed-view .slide-left {.animation(fade-slide-left 0.3s ease-out 0s normal forwards);}
-    .passed-view .slide-right {.animation(fade-slide-right 0.3s ease-out 0s normal forwards);}
-    .passed-view .slide-down {.animation(fade-slide-down 0.3s ease-out 0s normal forwards);}
-    .passed-view .fade-in {.animation(fade-in 0.3s ease-out 0s normal forwards);}
-}
-
-.keyframes(fade-in;{
-    0%{opacity:0;}
-    100%{opacity:1;}
-});
-.keyframes(fade-slide-up;{
-    0%{opacity:0; .translateY(10%);}
-    100%{opacity:1; .translateY(0);}
-});
-.keyframes(fade-slide-down;{
-    0%{opacity:0; .translateY(-10%);}
-    100%{opacity:1; .translateY(0);}
-});
-.keyframes(fade-slide-left;{
-    0%{opacity:0; .translateX(10%);}
-    100%{opacity:1; .translateX(0);}
-});
-.keyframes(fade-slide-right;{
-    0%{opacity:0; .translateX(-10%);}
-    100%{opacity:1; .translateX(0);}
-});
+@import '../_new-components/basic-animate-on-scroll-keyframes.less';

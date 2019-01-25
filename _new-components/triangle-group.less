@@ -1,0 +1,34 @@
+//DIV WITH COLOR TRIANGLE NEXT TO IT
+.triangle-group {
+    position:relative;
+    padding:5px 0 5px 20px;
+    &:before {
+        display:block; position:absolute;
+        content:'';
+        top:5px; left:-10px;
+        width:0; height:0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid @red;
+        border-top: 10px solid transparent;
+    }
+    @media @medium {
+        padding-left:25px;
+        &:before {
+            left:-15px;
+            border-left-width: 15px;
+            border-right-width: 15px;
+            border-top-width: 15px;
+        }
+    }
+    &.red:before {border-right-color:@red;}
+    &.orange:before {border-right-color:@orange;}
+    &.green:before {border-right-color:@green;}
+    &.blue:before {border-right-color:@blue;}
+    &.navy-blue:before {border-right-color:@navy-blue;}
+
+    &.white:before {border-right-color:@white;}
+    &.light-gray:before {border-right-color:@light-gray;}
+    &.gray:before {border-right-color:@gray;}
+    &.dark-gray:before {border-right-color:@dark-gray;}
+    &.black:before {border-right-color:@black;}
+}

@@ -1,0 +1,33 @@
+//REVEAL EMBEDDED VIDEO AFTER CLICK COMPONENT
+.media-wrapper {
+    position:relative;
+    padding-bottom:200px;
+    height:0;
+    margin-top:30px;
+    .single-transition(0.3s, ease-out, all, 0s);
+
+    .resource-thumbnail {
+        position:absolute; z-index:1;
+        height:100%; width:100%;
+        top:0; left:0;
+        cursor:pointer;
+        .single-transition(0.3s, ease-out, all, 0s);
+        &:before {margin-top:-15px;}
+        .cta {margin-top:50px; opacity:1;}
+        &:after {display:none;}
+    }
+    .video-wrapper {
+        position:absolute; z-index:0;
+        width:100%;
+        top:50%; left:50%;
+        .translate(-50%, -40%);
+        opacity:0;
+        .single-transition(0.3s, ease-out, all, 0.3s);
+    }
+
+    &.video-playing {
+        padding-bottom:56.25%;
+        .resource-thumbnail {opacity:0; .translateY(-50px);}
+        .video-wrapper {opacity:1; z-index:2; .translate(-50%, -50%);}
+    }
+}

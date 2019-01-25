@@ -1,0 +1,42 @@
+#mix-wrapper {
+    overflow:hidden;
+    .grid-item {display:none; position:relative; z-index:1;}
+}
+.mix-filters {
+    position:relative;
+    .filter {
+        .display(flex);
+        .align-items(center);
+
+        position:relative;
+        cursor:pointer;
+        background-color:@white-smoke;
+        padding:10px;
+        min-height:100%;
+
+        font-family:@myriad-pro;
+        .uppercase;
+        font-style:normal;
+        font-size:18px; line-height:20px;
+        color:@dark-gray;
+        text-align:left;
+
+        .single-transition;
+        &:hover {color:@black;}
+        &.active {color:@white; background-color:@black;}
+        @media @medium {
+            .justify-content(center);
+            text-align:center;
+            &.active:before {
+                position:absolute; display:block;
+                content:"";
+                bottom:-10px; left:50%; margin-left:-5px;
+                width:0; height:0;
+                border-left:9px solid transparent;
+                border-right:9px solid transparent;
+                border-top:10px solid @black;
+                .single-transition;
+            }
+        }
+    }
+}

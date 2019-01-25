@@ -2,19 +2,15 @@ main,
 section {
   overflow: hidden;
 }
-.resource-thumbnail.transparent:after {
-  background-color: transparent;
-}
 .background-image.overlay.filter-red {
   background-color: #D9232E;
   -webkit-background-blend-mode: multiply;
   background-blend-mode: multiply;
-  filter: grayscale;
 }
 .background-image.overlay.filter-red:after {
   background-color: rgba(0, 0, 0, 0.4);
 }
-.InternetExplorer.background-image.overlay.filter-red:before {
+.InternetExplorer .background-image.overlay.filter-red:before {
   content: '';
   position: absolute;
   z-index: 0;
@@ -24,19 +20,18 @@ section {
   left: 0;
   background-color: rgba(217, 35, 46, 0.7);
 }
-.InternetExplorer.background-image.overlay.filter-red:after {
+.InternetExplorer .background-image.overlay.filter-red:after {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .background-image.overlay.filter-orange {
   background-color: #FF9100;
   -webkit-background-blend-mode: multiply;
   background-blend-mode: multiply;
-  filter: grayscale;
 }
 .background-image.overlay.filter-orange:after {
   background-color: rgba(0, 0, 0, 0.4);
 }
-.InternetExplorer.background-image.overlay.filter-orange:before {
+.InternetExplorer .background-image.overlay.filter-orange:before {
   content: '';
   position: absolute;
   z-index: 0;
@@ -46,19 +41,18 @@ section {
   left: 0;
   background-color: rgba(255, 145, 0, 0.7);
 }
-.InternetExplorer.background-image.overlay.filter-orange:after {
+.InternetExplorer .background-image.overlay.filter-orange:after {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .background-image.overlay.filter-green {
   background-color: #68AA00;
   -webkit-background-blend-mode: multiply;
   background-blend-mode: multiply;
-  filter: grayscale;
 }
 .background-image.overlay.filter-green:after {
   background-color: rgba(0, 0, 0, 0.4);
 }
-.InternetExplorer.background-image.overlay.filter-green:before {
+.InternetExplorer .background-image.overlay.filter-green:before {
   content: '';
   position: absolute;
   z-index: 0;
@@ -68,19 +62,18 @@ section {
   left: 0;
   background-color: rgba(104, 170, 0, 0.7);
 }
-.InternetExplorer.background-image.overlay.filter-green:after {
+.InternetExplorer .background-image.overlay.filter-green:after {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .background-image.overlay.filter-blue {
   background-color: #4789A3;
   -webkit-background-blend-mode: multiply;
   background-blend-mode: multiply;
-  filter: grayscale;
 }
 .background-image.overlay.filter-blue:after {
   background-color: rgba(0, 0, 0, 0.4);
 }
-.InternetExplorer.background-image.overlay.filter-blue:before {
+.InternetExplorer .background-image.overlay.filter-blue:before {
   content: '';
   position: absolute;
   z-index: 0;
@@ -90,19 +83,18 @@ section {
   left: 0;
   background-color: rgba(71, 137, 163, 0.7);
 }
-.InternetExplorer.background-image.overlay.filter-blue:after {
+.InternetExplorer .background-image.overlay.filter-blue:after {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .background-image.overlay.filter-navy-blue {
   background-color: #11566F;
   -webkit-background-blend-mode: multiply;
   background-blend-mode: multiply;
-  filter: grayscale;
 }
 .background-image.overlay.filter-navy-blue:after {
   background-color: rgba(0, 0, 0, 0.4);
 }
-.InternetExplorer.background-image.overlay.filter-navy-blue:before {
+.InternetExplorer .background-image.overlay.filter-navy-blue:before {
   content: '';
   position: absolute;
   z-index: 0;
@@ -112,23 +104,8 @@ section {
   left: 0;
   background-color: rgba(17, 86, 111, 0.7);
 }
-.InternetExplorer.background-image.overlay.filter-navy-blue:after {
+.InternetExplorer .background-image.overlay.filter-navy-blue:after {
   background-color: rgba(0, 0, 0, 0.5);
-}
-.component-red .text-block {
-  background-color: #D9232E;
-}
-.component-orange .text-block {
-  background-color: #FF9100;
-}
-.component-green .text-block {
-  background-color: #68AA00;
-}
-.component-blue .text-block {
-  background-color: #4789A3;
-}
-.component-navy-blue .text-block {
-  background-color: #11566F;
 }
 .offpage-image {
   width: 150%;
@@ -176,21 +153,37 @@ section {
 .stacked-icons {
   display: inline-block;
   position: relative;
-  padding-bottom: 10px;
-  padding-right: 20px;
   margin-bottom: 10px;
 }
-.stacked-icons .icon {
+.stacked-icons .icon:not(.icon-block) {
   position: relative;
   z-index: 0;
+  padding-bottom: 7px;
+  padding-right: 7px;
+}
+.stacked-icons .icon:not(.icon-block).medium {
+  padding-bottom: 12px;
+  padding-right: 12px;
+}
+.stacked-icons .icon:not(.icon-block).large {
+  padding-bottom: 17px;
+  padding-right: 17px;
 }
 .stacked-icons .icon.icon-block {
   position: absolute;
   z-index: 1;
   right: 0;
   bottom: 0;
-  height: 48px;
-  width: 48px;
+  height: 27px;
+  width: 27px;
+}
+.stacked-icons .icon.icon-block.medium {
+  height: 50px;
+  width: 50px;
+}
+.stacked-icons .icon.icon-block.large {
+  height: 80px;
+  width: 80px;
 }
 .triangle-group {
   position: relative;
@@ -248,92 +241,6 @@ section {
 }
 .triangle-group.black:before {
   border-right-color: #333333;
-}
-.icon-link-grid .grid-item {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.2em;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 400;
-}
-.icon-link-grid .grid-item .icon {
-  margin-right: 10px;
-}
-.icon-link-grid .grid-item:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  -webkit-transform: translateX(-3px);
-  transform: translateX(-3px);
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-.icon-link-grid .grid-item.red:before {
-  background-color: #D9232E;
-}
-.icon-link-grid .grid-item.orange:before {
-  background-color: #FF9100;
-}
-.icon-link-grid .grid-item.green:before {
-  background-color: #68AA00;
-}
-.icon-link-grid .grid-item.blue:before {
-  background-color: #4789A3;
-}
-.icon-link-grid .grid-item.navy-blue:before {
-  background-color: #11566F;
-}
-.icon-link-grid .grid-item:hover {
-  padding-left: 20px;
-  padding-right: 10px;
-}
-.icon-link-grid .grid-item:hover:before {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-}
-.icon-link-grid .grid-item:hover.red .icon {
-  color: #D9232E;
-}
-.icon-link-grid .grid-item:hover.orange .icon {
-  color: #FF9100;
-}
-.icon-link-grid .grid-item:hover.green .icon {
-  color: #68AA00;
-}
-.icon-link-grid .grid-item:hover.blue .icon {
-  color: #4789A3;
-}
-.icon-link-grid .grid-item:hover.navy-blue .icon {
-  color: #11566F;
-}
-.icon-link-grid.light .grid-item {
-  color: #333333;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-width: 0 1px 1px 0;
-}
-.icon-link-grid.light .grid-item:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.icon-link-grid.dark .grid-item {
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-width: 0 1px 1px 0;
-}
-.icon-link-grid.dark .grid-item:hover {
-  background-color: rgba(0, 0, 0, 0.4);
 }
 @media only screen and (min-width: 768px) {
   .panelstack.vertical-panelstack {
@@ -517,7 +424,7 @@ section {
   font-size: 60px;
   line-height: 60px;
   font-weight: 600;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 @media only screen and (min-width: 768px) {
   .number-group {
@@ -530,19 +437,19 @@ section {
   }
 }
 .number-group.one:before {
-  content: '1';
+  content: '1.';
 }
 .number-group.two:before {
-  content: '2';
+  content: '2.';
 }
 .number-group.three:before {
-  content: '3';
+  content: '3.';
 }
 .number-group.four:before {
-  content: '4';
+  content: '4.';
 }
 .number-group.five:before {
-  content: '5';
+  content: '5.';
 }
 .number-group.small {
   padding: 10px 0 5px 20px;
@@ -556,6 +463,110 @@ section {
     font-size: 60px;
     line-height: 60px;
   }
+}
+.icon-link-grid .grid-item {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+.icon-link-grid .grid-item .icon {
+  margin-right: 10px;
+}
+.icon-link-grid .grid-item:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.icon-link-grid .grid-item.red:before {
+  background-color: #D9232E;
+}
+.icon-link-grid .grid-item.orange:before {
+  background-color: #FF9100;
+}
+.icon-link-grid .grid-item.green:before {
+  background-color: #68AA00;
+}
+.icon-link-grid .grid-item.blue:before {
+  background-color: #4789A3;
+}
+.icon-link-grid .grid-item.navy-blue:before {
+  background-color: #11566F;
+}
+.icon-link-grid .grid-item:hover {
+  padding-left: 20px;
+  padding-right: 10px;
+}
+.icon-link-grid .grid-item:hover:before {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.icon-link-grid .grid-item:hover.red .icon {
+  color: #D9232E;
+}
+.icon-link-grid .grid-item:hover.orange .icon {
+  color: #FF9100;
+}
+.icon-link-grid .grid-item:hover.green .icon {
+  color: #68AA00;
+}
+.icon-link-grid .grid-item:hover.blue .icon {
+  color: #4789A3;
+}
+.icon-link-grid .grid-item:hover.navy-blue .icon {
+  color: #11566F;
+}
+.icon-link-grid.light .grid-item {
+  color: #333333;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-width: 0 1px 1px 0;
+}
+.icon-link-grid.light .grid-item:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.icon-link-grid.dark .grid-item {
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-width: 0 1px 1px 0;
+}
+.icon-link-grid.dark .grid-item:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.resource-thumbnail.transparent:after {
+  background-color: transparent;
+}
+.component-red .text-block {
+  background-color: #D9232E;
+}
+.component-orange .text-block {
+  background-color: #FF9100;
+}
+.component-green .text-block {
+  background-color: #68AA00;
+}
+.component-blue .text-block {
+  background-color: #4789A3;
+}
+.component-navy-blue .text-block {
+  background-color: #11566F;
 }
 .phase-counter {
   display: block;
