@@ -6,57 +6,8 @@
 @import '../_new-components/number-group.less';
 @import '../_new-components/blockquote.less';
 @import '../_new-components/stacked-icons.less';
+@import '../_new-components/anchor-link-grid.less';
 
-//for a grid of links with colored icons and left border hover state
-.icon-link-grid {
-    .grid-item {
-        .display(flex);
-        .align-items(center);
-        position:relative; overflow:hidden;
-        padding-top:20px; padding-bottom:20px;
-
-        font-family:@myriad-pro;
-        font-size:14px; line-height:1.2em;
-        .uppercase;
-        font-weight:400;
-
-        .icon {margin-right:10px;}
-        &:before {
-            content:'';
-            display:block; position:absolute;
-            top:0; left:0;
-            width:3px; height:100%;
-            .translateX(-3px);
-            .single-transition;
-        }
-        &.red:before {background-color:@red;}
-        &.orange:before {background-color:@orange;}
-        &.green:before {background-color:@green;}
-        &.blue:before {background-color:@blue;}
-        &.navy-blue:before {background-color:@navy-blue;}
-        &:hover {
-            padding-left:20px; padding-right:10px;
-            &:before {.translateX(0);}
-            &.red .icon {color:@red;}
-            &.orange .icon {color:@orange;}
-            &.green .icon {color:@green;}
-            &.blue .icon {color:@blue;}
-            &.navy-blue .icon {color:@navy-blue;}
-        }
-    }
-    &.light .grid-item {
-        color:@black;
-        border:1px solid fade(@pure-black, 10%);
-        border-width:0 1px 1px 0;
-        &:hover {background-color:fade(@white, 50%);}
-    }
-    &.dark .grid-item {
-        color:@white;
-        border:1px solid fade(@white, 10%);
-        border-width:0 1px 1px 0;
-        &:hover {background-color:fade(@pure-black, 40%);}
-    }
-}
 
 //OVERVIEW PAGE STYLES
 
@@ -1602,6 +1553,10 @@
         #map-key {.display(flex);}
 
         #customized-intelligence-map .block-name {cursor:default;}
+
+        // &.pre-made-map {
+        //     .share-url-col {display:none;}
+        // }
     }
 
     #custom-ie-map-wrapper {
@@ -1744,7 +1699,8 @@
             .flex-wrap(wrap);
             .flex(1,1,0px);
             position:relative;
-            min-width:100px;
+            min-width:100%;
+            @media @medium {min-width:100px;}
             position:relative;
             padding:10px;
             border:1px solid @iron;
@@ -1775,6 +1731,17 @@
                     background-color:@green;
                 }
             }
+
+            @media @medium {
+                &:first-of-type .block-details {
+                    left:0; .translateX(0);
+                    &:after {left:40px; margin-left:0;}
+                }
+                &:last-of-type .block-details {
+                    left:auto; right:0; .translateX(0);
+                    &:after {left:auto; right:40px; margin-left:0;}
+                }
+            }
         }
         .select-toggler {
             position:absolute; z-index:3;
@@ -1782,7 +1749,8 @@
             overflow:hidden;
             color:@white;
             margin:0;
-            height:30px; width:30px;
+            height:50px; width:50px;
+            @media @medium {height:35px; width:35px;}
             text-indent: -99999px;
 
             font-family:@myriad-pro;
@@ -1793,7 +1761,8 @@
             .indicator {
                 position:absolute;
                 top:3px; right:3px;
-                height:25px; width:25px;
+                height:45px; width:45px;
+                @media @medium {height:30px; width:30px;}
                 background-color:@charcoal;
                 border-radius:50%;
                 box-shadow:1px 1px 5px fade(@pure-black, 50%);
@@ -1829,6 +1798,7 @@
         .block-details {
             position:absolute;
             bottom:~"calc(100% + 10px)"; left:50%;
+            .translateX(-50%);
             width:100%;
             @media @medium {width:400px;}
             @media @large {width:500px;}
@@ -1867,7 +1837,7 @@
             display:none;
             z-index:-1;
             opacity:0;
-            .translate(-50%, 20px);
+            margin-top:20px;
             .single-transition;
             &.show {
                 display:block;
@@ -1982,6 +1952,153 @@
             .row-title {background-color:@dark-blue;}
         }
     }
+    @media print {
+        * {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        #page-header,
+        #secondary-header,
+        section,
+        footer,
+        .line,
+        #print-instructions,
+        #globalAd {display:none!important;}
+
+        a[href]:after {
+            content: none !important;
+        }
+
+
+        #map-key {
+            max-width:none;
+            background-color:@light-gray!important;
+            > div {
+                .flex(0, 0, auto);
+                width:auto;
+                padding:5px;
+            }
+            .h3 {font-size:8pt;}
+        }
+
+        .key-box {
+            &.gray {
+                background-color:@gray!important;
+            }
+
+            &.solid-fill .inner-box {
+                background-color:@red!important;
+                &:nth-child(2) {background-color:@orange!important;}
+                &:nth-child(3) {background-color:@green!important;}
+                &:nth-child(4) {background-color:@blue!important;}
+            }
+        }
+
+        section#custom-ie-map-wrapper {
+            padding:0;
+            display:block!important;
+            opacity:1!important;
+            //.animation(none);
+
+            > div:first-child {display:none;}
+            .side-map {
+                .flex(0,0,15%);
+                padding:0 15px;
+                min-width:100px;
+                &.last-md {.order(1);}
+            }
+
+            //font size adjustments
+            h2.text-large {font-size:22pt; line-height:1.2em;}
+            .block {font-size:6pt; line-height:1.2em;}
+            .block .icon {font-size:18pt;}
+            .section-title {font-size:9pt;}
+            .row-title {font-size:6pt; color:@white!important;}
+
+            .map-section{
+                margin-top:10px;
+                &.ext-forces {
+                    .display(flex);
+                    .flex-direction(column);
+                    .flex(0,0,100%);
+                    .section-row {
+                        .flex(1, 0, auto);
+                    }
+                    .block {
+                        .flex(0,0,auto);
+                        width:100%;
+                    }
+                }
+            }
+            .block {
+                background-color:@gray!important;
+                min-width:20px;
+                padding:7px;
+                .block-name, .icon {color:@white!important;}
+                &.selected {
+                    background-color:@white!important;
+                    .block-name {color:@black!important;}
+                }
+            }
+
+            //set all the color coded differences based on map section
+            .ext-forces {
+                .block.selected {
+                    border-color:@navy-blue!important;
+                    .icon {color:@navy-blue!important;}
+                    .select-toggler .indicator {background-color:@navy-blue!important;}
+                }
+                .block-details .header .icon {color:@navy-blue!important;}
+                .section-title:before,
+                .map-req .block {background-color:@navy-blue!important;}
+                .row-title {background-color:@dark-navy-blue!important;}
+            }
+            .int-applications {
+                .block.selected {
+                    border-color:@green!important;
+                    .icon {color:@green!important;}
+                    .select-toggler .indicator {background-color:@green!important;}
+                }
+                .block-details .header .icon {color:@green!important;}
+                .section-title:before,
+                .map-req .block {background-color:@green!important;}
+                .row-title {background-color:@dark-green!important;}
+            }
+            .int-center {
+                .block.selected {
+                    border-color:@orange!important;
+                    .icon {color:@orange!important;}
+                    .select-toggler .indicator {background-color:@orange!important;}
+                }
+                .block-details .header .icon {color:@orange!important;}
+                .section-title:before,
+                .map-req .block {background-color:@orange!important;}
+                .row-title {background-color:@dark-orange!important;}
+            }
+            .int-platform {
+                .block.selected {
+                    border-color:@red!important;
+                    .icon {color:@red!important;}
+                    .select-toggler .indicator {background-color:@red!important;}
+                }
+                .block-details .header .icon {color:@red!important;}
+                .section-title:before,
+                .map-req .block {background-color:@red!important;}
+                .row-title {background-color:@dark-red!important;}
+            }
+            .ent-assets {
+                .block.selected {
+                    border-color:@blue!important;
+                    .icon {color:@blue!important;}
+                    .select-toggler .indicator {background-color:@blue!important;}
+                }
+                .block-details .header .icon {color:@blue!important;}
+                .section-title:before,
+                .map-req .block {background-color:@blue!important;}
+                .row-title {background-color:@dark-blue!important;}
+            }
+        }
+    }
 }
 
 
@@ -2012,9 +2129,9 @@
 @import '../_new-components/basic-animate-on-scroll-keyframes.less';
 
 .keyframes(details-appear;{
-    0%{display:none; opacity:0; .translate(-50%, 20px); height:0;}
-    1%{display:block; opacity:0; .translate(-50%, 20px); height:auto;}
-    100%{display:block; opacity:1; .translate(-50%, 0); height:auto;}
+    0%{display:none; opacity:0; margin-bottom:-20px; height:0;}
+    1%{display:block; opacity:0; margin-bottom:-20px; height:auto;}
+    100%{display:block; opacity:1; margin-bottom:0px; height:auto;}
 });
 
 
