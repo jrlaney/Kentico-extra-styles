@@ -1,46 +1,51 @@
 @import '../settings.less';
 
-.parallax-bkg {
-  .background-cover;
-}
+//COMPONENTS
+@import '../_new-components/triangle-group.less';
+@import '../_new-components/offpage-image.less';
+@import '../_new-components/vertical-panelstack.less';
 
-//DIV WITH COLOR TRIANGLE NEXT TO IT
-.triangle-group {
-    position:relative;
-    padding:5px 0 5px 20px;
-    &:before {
-        display:block; position:absolute;
-        content:'';
-        top:5px; left:-10px;
-        width:0; height:0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid @red;
-        border-top: 10px solid transparent;
-    }
-    @media @medium {
-        padding-left:25px;
-        &:before {
-            left:-15px;
-            border-left-width: 15px;
-            border-right-width: 15px;
-            border-top-width: 15px;
-        }
-    }
-    &.red:before {border-right-color:@red;}
-    &.orange:before {border-right-color:@orange;}
-    &.green:before {border-right-color:@green;}
-    &.blue:before {border-right-color:@blue;}
-    &.navy-blue:before {border-right-color:@navy-blue;}
-
-    &.white:before {border-right-color:@white;}
-    &.light-gray:before {border-right-color:@light-gray;}
-    &.gray:before {border-right-color:@gray;}
-    &.dark-gray:before {border-right-color:@dark-gray;}
-    &.black:before {border-right-color:@black;}
-}
-
-//.top-banner.overview {background-image: url(/Strategy/media/images/company/company_hero-bkg_overview.jpg);}
-.text-uppercase {font-family:@myriad-pro; letter-spacing:0.1em; font-weight:400}
+// .parallax-bkg {
+//   .background-cover;
+// }
+//
+// //DIV WITH COLOR TRIANGLE NEXT TO IT
+// .triangle-group {
+//     position:relative;
+//     padding:5px 0 5px 20px;
+//     &:before {
+//         display:block; position:absolute;
+//         content:'';
+//         top:5px; left:-10px;
+//         width:0; height:0;
+//         border-left: 10px solid transparent;
+//         border-right: 10px solid @red;
+//         border-top: 10px solid transparent;
+//     }
+//     @media @medium {
+//         padding-left:25px;
+//         &:before {
+//             left:-15px;
+//             border-left-width: 15px;
+//             border-right-width: 15px;
+//             border-top-width: 15px;
+//         }
+//     }
+//     &.red:before {border-right-color:@red;}
+//     &.orange:before {border-right-color:@orange;}
+//     &.green:before {border-right-color:@green;}
+//     &.blue:before {border-right-color:@blue;}
+//     &.navy-blue:before {border-right-color:@navy-blue;}
+//
+//     &.white:before {border-right-color:@white;}
+//     &.light-gray:before {border-right-color:@light-gray;}
+//     &.gray:before {border-right-color:@gray;}
+//     &.dark-gray:before {border-right-color:@dark-gray;}
+//     &.black:before {border-right-color:@black;}
+// }
+//
+// //.top-banner.overview {background-image: url(/Strategy/media/images/company/company_hero-bkg_overview.jpg);}
+// .text-uppercase {font-family:@myriad-pro; letter-spacing:0.1em; font-weight:400}
 
 
 
@@ -672,6 +677,28 @@
     .smartWidget input[type=text].srSearchInput {width:75%; max-width:none; margin-bottom:0px; padding:6px 10px;}
     .smartWidget .srSearchButton {width:~"calc(25% - 10px)"; margin-left:10px;}
     .smartWidget .srSearchOption {width:~"calc(20% - 10px)"; margin-left:10px; margin-top:0; vertical-align:middle;}
+}
+
+
+
+
+//PARTNERS PAGES
+.Partners {
+    #partnership-opportunities {
+        overflow:hidden;
+        .device-mockup {
+            &.macbook-air {
+                position:relative; z-index:0;
+                margin-left:10%;
+                width:170%;
+            }
+            &.ipad {
+                position:absolute; z-index:1;
+                width:80%;
+                left:10%; bottom:0px;
+            }
+        }
+    }
 }
 
 
