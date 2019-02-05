@@ -113,6 +113,39 @@
 				@media @xlarge {font-size:4.7rem;}
 			}
 		}
+        .countdown-block {
+            .display(flex);
+            .flex-direction(column);
+            min-width:50%;
+            @media @medium {min-width:120px;}
+            @media @large {min-width:145px;}
+            border:2px solid @white;
+
+            text-align:center;
+            font-family:@myriad-pro;
+            font-size:40px; line-height:40px;
+            @media @medium {font-size:45px; line-height:45px;}
+            @media @xlarge {font-size:60px; line-height:60px;}
+            font-weight:400;
+
+            > span {
+                width:100%;
+                padding:20px 20px 0 20px;
+            }
+            > p {
+                width:100%;
+                margin:0;
+                padding:10px 20px 20px 20px;
+
+                font-size:14px; line-height:14px;
+                font-weight:600;
+                .uppercase;
+            }
+            .pattern-row {
+                .flex(0,0,auto);
+                .background-pattern {border:none;}
+            }
+        }
 		.pattern-graphic-col {
 			@media @small-only {display:none;}
 			position:absolute;
@@ -360,7 +393,7 @@
     // &-large {min-height:200px;}
     // &-medium {min-height:100px;}
     &-small {min-height:50px;}
-    // &-x-small {min-height:25px;}
+    &-x-small {min-height:25px;}
     // &-tiny {min-height:12.5px; line-height:0;}
     // &-x-tiny {min-height:8px; line-height:0;}
 }

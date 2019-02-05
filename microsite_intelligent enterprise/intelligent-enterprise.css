@@ -2753,6 +2753,9 @@ blockquote:after {
 .BecomeAnIntelligentEnterprise .final-map #customized-intelligence-map .block-name {
   cursor: default;
 }
+.BecomeAnIntelligentEnterprise .final-map.pre-made-map .share-url-col {
+  display: none;
+}
 .BecomeAnIntelligentEnterprise #custom-ie-map-wrapper {
   padding-left: 20px;
   padding-right: 20px;

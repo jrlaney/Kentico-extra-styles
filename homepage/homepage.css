@@ -179,6 +179,63 @@
     font-size: 4.7rem;
   }
 }
+#hero.world-2019 .countdown-block {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  min-width: 50%;
+  border: 2px solid #FFFFFF;
+  text-align: center;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
+}
+@media only screen and (min-width: 768px) {
+  #hero.world-2019 .countdown-block {
+    min-width: 120px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #hero.world-2019 .countdown-block {
+    min-width: 145px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #hero.world-2019 .countdown-block {
+    font-size: 45px;
+    line-height: 45px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #hero.world-2019 .countdown-block {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+#hero.world-2019 .countdown-block > span {
+  width: 100%;
+  padding: 20px 20px 0 20px;
+}
+#hero.world-2019 .countdown-block > p {
+  width: 100%;
+  margin: 0;
+  padding: 10px 20px 20px 20px;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+#hero.world-2019 .countdown-block .pattern-row {
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: none;
+}
+#hero.world-2019 .countdown-block .pattern-row .background-pattern {
+  border: none;
+}
 #hero.world-2019 .pattern-graphic-col {
   position: absolute;
   top: 0;
@@ -521,6 +578,9 @@
 }
 .height-small {
   min-height: 50px;
+}
+.height-x-small {
+  min-height: 25px;
 }
 .pattern-row {
   display: -webkit-flex;
