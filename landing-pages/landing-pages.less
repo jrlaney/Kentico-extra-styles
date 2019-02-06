@@ -461,18 +461,21 @@ section.below-card {overflow:visible!important;}
     }
     .slick-dots {
         margin-top:20px;
-        li button {
-            border-radius:0;
-            width:25px; height:auto;
-            padding:15px 0;
-            background-color:transparent;
-            &:after {
-                content:'';
-                display:block;
-                margin:0 auto;
-                background-color:@iron;
-                width:20px; height:20px;
-                .single-transition;
+        li {
+            padding:0;
+            button {
+                border-radius:0;
+                width:auto; height:auto;
+                padding:5px;
+                background-color:transparent;
+                &:after {
+                    content:'';
+                    display:block;
+                    margin:0 auto;
+                    background-color:@iron;
+                    width:10px; height:10px;
+                    .single-transition;
+                }
             }
         }
         li.slick-active button:after {background-color:@red;}

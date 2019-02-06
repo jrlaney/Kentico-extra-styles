@@ -1183,11 +1183,14 @@ section.below-card {
 #photo-slider .slick-dots {
   margin-top: 20px;
 }
+#photo-slider .slick-dots li {
+  padding: 0;
+}
 #photo-slider .slick-dots li button {
   border-radius: 0;
-  width: 25px;
+  width: auto;
   height: auto;
-  padding: 15px 0;
+  padding: 5px;
   background-color: transparent;
 }
 #photo-slider .slick-dots li button:after {
@@ -1195,8 +1198,8 @@ section.below-card {
   display: block;
   margin: 0 auto;
   background-color: #CCCCCC;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
