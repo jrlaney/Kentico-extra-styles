@@ -614,7 +614,7 @@ blockquote:after {
   justify-content: center;
   position: relative;
   z-index: 1;
-  min-height: 500px;
+  min-height: 700px;
   height: 80vh;
   max-height: 900px;
 }
@@ -2727,7 +2727,8 @@ blockquote:after {
 .BecomeAnIntelligentEnterprise #customized-intelligence-map .map-section.int-applications .map-req,
 .BecomeAnIntelligentEnterprise #print-instructions,
 .BecomeAnIntelligentEnterprise .side-map,
-.BecomeAnIntelligentEnterprise #map-key {
+.BecomeAnIntelligentEnterprise #map-key,
+.BecomeAnIntelligentEnterprise #map-resources {
   display: none;
 }
 .BecomeAnIntelligentEnterprise .final-map #customized-intelligence-map .row-title .instructions,
@@ -2746,7 +2747,8 @@ blockquote:after {
 .BecomeAnIntelligentEnterprise .final-map #customized-intelligence-map .map-section.int-applications .map-req,
 .BecomeAnIntelligentEnterprise .final-map .side-map,
 .BecomeAnIntelligentEnterprise .final-map #print-instructions,
-.BecomeAnIntelligentEnterprise .final-map #map-key {
+.BecomeAnIntelligentEnterprise .final-map #map-key,
+.BecomeAnIntelligentEnterprise .final-map #map-resources {
   display: -webkit-flex;
   display: flex;
 }
