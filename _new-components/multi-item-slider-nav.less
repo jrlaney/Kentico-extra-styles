@@ -19,11 +19,35 @@
             .single-transition;
         }
         &:hover:before {.translateY(-5px)!important;}
-        &.slick-current:before {
-            border-bottom-color:@red;
-            .translateY(-5px)!important;
+        &.slick-current{
+            .icon {color:@red;}
+            &:before {
+                border-bottom-color:@red;
+                .translateY(-5px)!important;
+            }
         }
         > * {width:100%;}
+
+        &.component-orange.slick-current,
+        &.component-orange:hover {
+            .icon {color:@orange;}
+            &:before {border-bottom-color:@orange;}
+        }
+        &.component-green.slick-current,
+        &.component-green:hover {
+            .icon {color:@green;}
+            &:before {border-bottom-color:@green;}
+        }
+        &.component-blue.slick-current,
+        &.component-blue:hover {
+            .icon {color:@blue;}
+            &:before {border-bottom-color:@blue;}
+        }
+        &.component-navy-blue.slick-current,
+        &.component-navy-blue:hover {
+            .icon {color:@navy-blue;}
+            &:before {border-bottom-color:@navy-blue;}
+        }
     }
     &.nav-above .grid-item {
         padding:20px 15px 35px 15px;
@@ -36,6 +60,23 @@
         &.slick-current:before {
             .translateY(5px)!important;
             border-top-color:@red;
+        }
+
+        &.component-orange.slick-current:before,
+        &.component-orange:hover:before {
+            border-top-color:@orange;
+        }
+        &.component-green.slick-current:before,
+        &.component-green:hover:before {
+            border-top-color:@green;
+        }
+        &.component-blue.slick-current:before,
+        &.component-blue:hover:before {
+            border-top-color:@blue;
+        }
+        &.component-navy-blue.slick-current:before,
+        &.component-navy-blue:hover:before {
+            border-top-color:@navy-blue;
         }
     }
 }
