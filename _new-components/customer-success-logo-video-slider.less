@@ -1,0 +1,107 @@
+#customer-story-slider {
+    background-color:@white;
+    margin:0 30px;
+    box-shadow:1px 1px 5px fade(@pure-black, 30%);
+    width:~"calc(100% - 60px)";
+    @media @xlarge {
+        margin:0 auto;
+        max-width:@large-breakpoint - 60px;
+    }
+    .slick-arrow.slick-prev {left:-15px;}
+    .slick-arrow.slick-next {right:-15px;}
+}
+.customer-quote-slide {
+    .display(flex);
+    .flex-direction(column);
+
+    .resource-thumbnail {
+        width:100%;
+        height:200px;
+        @media @medium {height:300px;}
+    }
+    .logo-quote {
+        .ratio {
+            max-width:250px;
+            margin:0 auto;
+        }
+    }
+    @media @large {
+        .flex-direction(row);
+        .align-items(stretch);
+        background-color:@white;
+
+        .resource-thumbnail {height:auto; width:55%;}
+        .logo-quote {
+            .display(flex);
+            .flex-direction(column);
+            .align-items(center);
+            width:45%; height:100%;
+            padding:30px;
+            text-align:center;
+        }
+    }
+    .quote-attribution {
+        display:block;
+        font-family:@myriad-pro;
+        font-size:22px;
+        font-weight:400;
+        padding:20px;
+        @media @large {padding:0;}
+
+        span {
+            display:block;
+            margin-top:5px;
+            font-size:12px;
+            font-weight:600;
+            .uppercase;
+        }
+    }
+}//end quote slide
+
+#customer-story-nav {
+    .grid-item {
+        .display(flex);
+        .flex-direction(column);
+        .align-items(center);
+        position:relative;
+        padding-top:25px;
+        cursor:pointer;
+        opacity:0.5;
+        -webkit-filter:grayscale(1);
+        filter:grayscale(1);
+        .single-transition;
+
+        p {
+            display:block;
+            margin-top:5px;
+            font-family:@myriad-pro;
+            font-size:12px;
+            font-weight:600;
+            .uppercase;
+        }
+        &:before {
+            content:'';
+            position:absolute;
+            display:block;
+            top:5px; left:50%;
+            margin-left:-15px;
+            width:0px; height:0px;
+            border-left:15px solid transparent;
+            border-right:15px solid transparent;
+            border-bottom:15px solid @gray;
+            .single-transition;
+        }
+        &:hover:before {
+            .translateY(-5px);
+        }
+        &.slick-current{
+            opacity:0.99;
+            -webkit-filter:grayscale(0);
+            filter:grayscale(0);
+            &:before {
+                .translateY(-5px);
+                border-bottom-color:@red;
+            }
+        }
+    }
+}
