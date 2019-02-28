@@ -3,6 +3,10 @@
   border: 1px solid #CCCCCC;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
 }
+.ai-title,
+.ai-subtitle {
+  display: none;
+}
 #hero {
   overflow: hidden;
 }
@@ -133,7 +137,7 @@
   animation-delay: -6s !important;
 }
 #hero.hyperintelligence .revolving-panels .rev-panel.productivity-apps .hypercard-img {
-  top: 22%;
+  top: 20%;
   left: 9%;
   -webkit-animation-delay: -12s !important;
   animation-delay: -12s !important;
@@ -599,11 +603,11 @@
     left: 50%;
   }
   4% {
-    top: 47%;
+    top: 63%;
     left: 5%;
   }
   50% {
-    top: 47%;
+    top: 63%;
     left: 5%;
   }
   55% {
@@ -621,11 +625,11 @@
     left: 50%;
   }
   4% {
-    top: 47%;
+    top: 63%;
     left: 5%;
   }
   50% {
-    top: 47%;
+    top: 63%;
     left: 5%;
   }
   55% {

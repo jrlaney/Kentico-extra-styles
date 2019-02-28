@@ -1044,7 +1044,7 @@ blockquote:after {
   left: 48%;
 }
 .hypercard-slider .example-slide.productivity-apps .hypercard-img {
-  top: 12%;
+  top: 17%;
   left: 9%;
 }
 .hypercard-slider .example-slide.productivity-apps.slick-current .hypercard-img {
@@ -1052,7 +1052,7 @@ blockquote:after {
   animation: fade-slide-right 0.2s ease-out 0.8s normal forwards;
 }
 .hypercard-slider .example-slide.productivity-apps.slick-current .cursor {
-  top: 47%;
+  top: 63%;
   left: 5%;
 }
 .hypercard-slider .example-slide.enterprise-systems .hypercard-img {

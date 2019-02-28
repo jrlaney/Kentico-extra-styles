@@ -9,7 +9,9 @@
 @snappy-ease-out: cubic-bezier(.2,0,.03,1);
 @snappy-ease-in: cubic-bezier(.98,0,.76,1);
 
-@pattern-height: 100% / 6;
+
+//temporarily disable intro titles for intl pages 
+.ai-title, .ai-subtitle {display:none;}
 
 //HERO BANNER STYLES
 #hero {
@@ -167,7 +169,7 @@
 				&.productivity-apps {
 					.animation-delay(-6s~"!important");
 					.hypercard-img {
-						top:22%; left:9%;
+						top:20%; left:9%;
 						.animation-delay(-12s~"!important");
 					}
 					.cursor {.animation(hero-cursor-productivity-apps 12s linear -12s normal infinite);}
@@ -288,8 +290,8 @@
 });
 .keyframes(hero-cursor-productivity-apps;{
     0%   {top:50%; left:50%;}
-    4%  {top:47%; left:5%;}
-    50%  {top:47%; left:5%;}
+    4%  {top:63%; left:5%;}
+    50%  {top:63%; left:5%;}
     55% {top:50%; left:50%;}
     100% {top:50%; left:50%;}
 });
