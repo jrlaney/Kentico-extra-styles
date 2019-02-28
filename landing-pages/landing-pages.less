@@ -323,7 +323,8 @@ blockquote {
 
 
 //CARD BETWEEN ROWS
-.in-between-card.flex-row {
+.in-between-card.flex-row,
+[class*="flex-grid"].in-between-card {
     position:relative; z-index:5;
     .card {
         position:relative; z-index:5;
@@ -490,6 +491,29 @@ section.below-card {overflow:visible!important;}
 
 
 // OTHER / INDIVIDUAL PAGE STUFF
+@hero-over-card-overlap:250px;
+.AlwaysOnCampaign {
+    #page-hero {
+        padding-bottom:@hero-over-card-overlap + 60px;
+        > .flex-row {
+            .justify-content(space-between);
+            > div:first-child {
+                h1.text-large {font-weight:400;}
+                @media @xlarge-only {.flex(0, 0, 55%);}
+            }
+        }
+        #lead-gen-form {
+            box-shadow: 3px 3px 7px fade(@pure-black, 50%);
+        }
+    }
+    #featured-resources {
+        padding-top:0;
+        margin-top:-@hero-over-card-overlap;
+        .card {box-shadow:1px 1px 5px fade(@pure-black, 30%);}
+    }
+}
+
+
 .WorldLive {
     #form-success-content #page-hero {display:none;}
 }

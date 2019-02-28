@@ -1,15 +1,12 @@
 p:empty {
   margin-bottom: 0!important;
 }
-.background-image.overlay.filter-red {
+.filter-red {
   background-color: #D9232E;
   -webkit-background-blend-mode: multiply;
   background-blend-mode: multiply;
 }
-.background-image.overlay.filter-red:after {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.InternetExplorer .background-image.overlay.filter-red:before {
+.InternetExplorer .filter-red:before {
   content: '';
   position: absolute;
   z-index: 0;
@@ -19,18 +16,12 @@ p:empty {
   left: 0;
   background-color: rgba(217, 35, 46, 0.7);
 }
-.InternetExplorer .background-image.overlay.filter-red:after {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.background-image.overlay.filter-orange {
+.filter-orange {
   background-color: #FF9100;
   -webkit-background-blend-mode: multiply;
   background-blend-mode: multiply;
 }
-.background-image.overlay.filter-orange:after {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.InternetExplorer .background-image.overlay.filter-orange:before {
+.InternetExplorer .filter-orange:before {
   content: '';
   position: absolute;
   z-index: 0;
@@ -40,18 +31,12 @@ p:empty {
   left: 0;
   background-color: rgba(255, 145, 0, 0.7);
 }
-.InternetExplorer .background-image.overlay.filter-orange:after {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.background-image.overlay.filter-green {
+.filter-green {
   background-color: #68AA00;
   -webkit-background-blend-mode: multiply;
   background-blend-mode: multiply;
 }
-.background-image.overlay.filter-green:after {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.InternetExplorer .background-image.overlay.filter-green:before {
+.InternetExplorer .filter-green:before {
   content: '';
   position: absolute;
   z-index: 0;
@@ -61,18 +46,12 @@ p:empty {
   left: 0;
   background-color: rgba(104, 170, 0, 0.7);
 }
-.InternetExplorer .background-image.overlay.filter-green:after {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.background-image.overlay.filter-blue {
+.filter-blue {
   background-color: #4789A3;
   -webkit-background-blend-mode: multiply;
   background-blend-mode: multiply;
 }
-.background-image.overlay.filter-blue:after {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.InternetExplorer .background-image.overlay.filter-blue:before {
+.InternetExplorer .filter-blue:before {
   content: '';
   position: absolute;
   z-index: 0;
@@ -82,18 +61,12 @@ p:empty {
   left: 0;
   background-color: rgba(71, 137, 163, 0.7);
 }
-.InternetExplorer .background-image.overlay.filter-blue:after {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.background-image.overlay.filter-navy-blue {
+.filter-navy-blue {
   background-color: #11566F;
   -webkit-background-blend-mode: multiply;
   background-blend-mode: multiply;
 }
-.background-image.overlay.filter-navy-blue:after {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.InternetExplorer .background-image.overlay.filter-navy-blue:before {
+.InternetExplorer .filter-navy-blue:before {
   content: '';
   position: absolute;
   z-index: 0;
@@ -102,9 +75,6 @@ p:empty {
   top: 0;
   left: 0;
   background-color: rgba(17, 86, 111, 0.7);
-}
-.InternetExplorer .background-image.overlay.filter-navy-blue:after {
-  background-color: rgba(0, 0, 0, 0.5);
 }
 .icon-link-grid {
   background-color: transparent!important;
@@ -594,7 +564,7 @@ p:empty {
 .customer-quote-slide .quote-attribution span {
   display: block;
   margin-top: 5px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -619,7 +589,7 @@ p:empty {
   display: block;
   margin-top: 5px;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -1093,11 +1063,13 @@ blockquote:after {
     margin-left: 20px!important;
   }
 }
-.in-between-card.flex-row {
+.in-between-card.flex-row,
+[class*="flex-grid"].in-between-card {
   position: relative;
   z-index: 5;
 }
-.in-between-card.flex-row .card {
+.in-between-card.flex-row .card,
+[class*="flex-grid"].in-between-card .card {
   position: relative;
   z-index: 5;
   background-color: #FFFFFF;
@@ -1106,11 +1078,13 @@ blockquote:after {
   margin-bottom: 30px;
 }
 @media only screen and (min-width: 768px) {
-  .in-between-card.flex-row {
+  .in-between-card.flex-row,
+  [class*="flex-grid"].in-between-card {
     margin-top: -150px;
     margin-bottom: 60px;
   }
-  .in-between-card.flex-row .card {
+  .in-between-card.flex-row .card,
+  [class*="flex-grid"].in-between-card .card {
     padding: 15px;
   }
 }
@@ -1344,6 +1318,33 @@ section.below-card {
 }
 #photo-slider .slick-dots li.slick-active button:after {
   background-color: #D9232E;
+}
+.AlwaysOnCampaign #page-hero {
+  padding-bottom: 310px;
+}
+.AlwaysOnCampaign #page-hero > .flex-row {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.AlwaysOnCampaign #page-hero > .flex-row > div:first-child h1.text-large {
+  font-weight: 400;
+}
+@media only screen and (min-width: 1200px) {
+  .AlwaysOnCampaign #page-hero > .flex-row > div:first-child {
+    -webkit-flex: 0 0 55%;
+    flex: 0 0 55%;
+    max-width: 55%;
+  }
+}
+.AlwaysOnCampaign #page-hero #lead-gen-form {
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
+}
+.AlwaysOnCampaign #featured-resources {
+  padding-top: 0;
+  margin-top: -250px;
+}
+.AlwaysOnCampaign #featured-resources .card {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 .WorldLive #form-success-content #page-hero {
   display: none;

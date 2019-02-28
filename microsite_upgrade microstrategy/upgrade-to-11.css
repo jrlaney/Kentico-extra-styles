@@ -2,15 +2,12 @@ main,
 section {
   overflow: hidden;
 }
-.background-image.overlay.filter-red {
+.filter-red {
   background-color: #D9232E;
   -webkit-background-blend-mode: multiply;
   background-blend-mode: multiply;
 }
-.background-image.overlay.filter-red:after {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.InternetExplorer .background-image.overlay.filter-red:before {
+.InternetExplorer .filter-red:before {
   content: '';
   position: absolute;
   z-index: 0;
@@ -20,18 +17,12 @@ section {
   left: 0;
   background-color: rgba(217, 35, 46, 0.7);
 }
-.InternetExplorer .background-image.overlay.filter-red:after {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.background-image.overlay.filter-orange {
+.filter-orange {
   background-color: #FF9100;
   -webkit-background-blend-mode: multiply;
   background-blend-mode: multiply;
 }
-.background-image.overlay.filter-orange:after {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.InternetExplorer .background-image.overlay.filter-orange:before {
+.InternetExplorer .filter-orange:before {
   content: '';
   position: absolute;
   z-index: 0;
@@ -41,18 +32,12 @@ section {
   left: 0;
   background-color: rgba(255, 145, 0, 0.7);
 }
-.InternetExplorer .background-image.overlay.filter-orange:after {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.background-image.overlay.filter-green {
+.filter-green {
   background-color: #68AA00;
   -webkit-background-blend-mode: multiply;
   background-blend-mode: multiply;
 }
-.background-image.overlay.filter-green:after {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.InternetExplorer .background-image.overlay.filter-green:before {
+.InternetExplorer .filter-green:before {
   content: '';
   position: absolute;
   z-index: 0;
@@ -62,18 +47,12 @@ section {
   left: 0;
   background-color: rgba(104, 170, 0, 0.7);
 }
-.InternetExplorer .background-image.overlay.filter-green:after {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.background-image.overlay.filter-blue {
+.filter-blue {
   background-color: #4789A3;
   -webkit-background-blend-mode: multiply;
   background-blend-mode: multiply;
 }
-.background-image.overlay.filter-blue:after {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.InternetExplorer .background-image.overlay.filter-blue:before {
+.InternetExplorer .filter-blue:before {
   content: '';
   position: absolute;
   z-index: 0;
@@ -83,18 +62,12 @@ section {
   left: 0;
   background-color: rgba(71, 137, 163, 0.7);
 }
-.InternetExplorer .background-image.overlay.filter-blue:after {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.background-image.overlay.filter-navy-blue {
+.filter-navy-blue {
   background-color: #11566F;
   -webkit-background-blend-mode: multiply;
   background-blend-mode: multiply;
 }
-.background-image.overlay.filter-navy-blue:after {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.InternetExplorer .background-image.overlay.filter-navy-blue:before {
+.InternetExplorer .filter-navy-blue:before {
   content: '';
   position: absolute;
   z-index: 0;
@@ -103,9 +76,6 @@ section {
   top: 0;
   left: 0;
   background-color: rgba(17, 86, 111, 0.7);
-}
-.InternetExplorer .background-image.overlay.filter-navy-blue:after {
-  background-color: rgba(0, 0, 0, 0.5);
 }
 .offpage-image {
   width: 150%;

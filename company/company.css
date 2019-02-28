@@ -479,6 +479,24 @@
   margin: 0 auto;
   width: 60%;
 }
+.white-popup.leadership-popup {
+  max-width: 800px;
+}
+.white-popup.popup-width-jumbo {
+  max-width: 1200px;
+}
+.white-popup.popup-width-large {
+  max-width: 1000px;
+}
+.white-popup.popup-width-medium {
+  max-width: 800px;
+}
+.white-popup.popup-width-small {
+  max-width: 800px;
+}
+.white-popup.popup-width-tiny {
+  max-width: 400px;
+}
 .angle-background {
   position: relative;
   overflow: hidden;
@@ -535,6 +553,9 @@
   .angle-background .angle-wrapper .angle.bottom {
     width: 50%;
   }
+}
+.InternetExplorer .angle-background {
+  display: none;
 }
 #roles-slider .role-bio-photo {
   padding: 20px 20px 20px 0;
@@ -906,24 +927,6 @@
 .controls .btn.next {
   right: 0px;
 }
-.white-popup.leadership-popup {
-  max-width: 800px;
-}
-.white-popup.popup-width-jumbo {
-  max-width: 1200px;
-}
-.white-popup.popup-width-large {
-  max-width: 1000px;
-}
-.white-popup.popup-width-medium {
-  max-width: 800px;
-}
-.white-popup.popup-width-small {
-  max-width: 800px;
-}
-.white-popup.popup-width-tiny {
-  max-width: 400px;
-}
 #values-slider {
   padding-left: 30px;
   padding-right: 30px;
@@ -1174,16 +1177,17 @@
   }
 }
 .Careers #page-hero .image-revolver .revolver-img.vr {
-  top: 55%;
+  top: auto;
+  bottom: -15%;
   left: 25%;
   -webkit-animation: career-hero-graphic-rtl 12s ease -3s normal infinite;
   animation: career-hero-graphic-rtl 12s ease -3s normal infinite;
 }
 @media only screen and (min-width: 768px) {
   .Careers #page-hero .image-revolver .revolver-img.vr {
-    top: 5%;
+    bottom: 5%;
     width: 35%;
-    left: 65%;
+    left: 67%;
   }
 }
 .Careers #page-hero .image-revolver .revolver-img.sparks {
@@ -1196,14 +1200,15 @@
   }
 }
 .Careers #page-hero .image-revolver .revolver-img.chess {
-  top: 55%;
+  top: auto;
+  bottom: -15%;
   left: 25%;
   -webkit-animation: career-hero-graphic-btt 12s ease -9s normal infinite;
   animation: career-hero-graphic-btt 12s ease -9s normal infinite;
 }
 @media only screen and (min-width: 768px) {
   .Careers #page-hero .image-revolver .revolver-img.chess {
-    top: 5%;
+    bottom: 5%;
     left: 63%;
   }
 }
@@ -1240,26 +1245,30 @@
   max-width: none;
   width: auto;
   padding-top: 40px;
+  padding: 10px;
+  border-bottom: 2px solid #D9232E;
 }
 .Careers .social-bar .hashtag {
-  -webkit-flex: 0 0 100%;
-  flex: 0 0 100%;
-  max-width: 100%;
+  width: 100%;
   margin-bottom: 20px;
   text-align: left;
-  padding: 10px;
-  border-bottom: 1px solid #D9232E;
+  color: #333333;
 }
 @media only screen and (min-width: 768px) {
   .Careers .social-bar .hashtag {
-    -webkit-flex: 1 1 1px;
-    flex: 1 1 1px;
-    max-width: none;
+    width: auto;
     margin-bottom: 0;
+    padding-right: 20px;
   }
+}
+.Careers .social-bar .hashtag:hover {
+  color: #D9232E;
 }
 .Careers .social-bar .icon {
   margin-left: 10px;
+}
+.Careers .social-bar .icon:hover {
+  background-color: #D9232E;
 }
 .Careers #profiles.background-decoration-wrapper .background-decoration {
   -webkit-transform: rotate(90deg);
@@ -1478,6 +1487,10 @@
     width: 110%;
     height: auto;
   }
+}
+.Careers #disclaimer {
+  padding: 30px 0;
+  border-bottom: 1px solid #999999;
 }
 .Careers .careers-banner {
   display: block;

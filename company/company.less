@@ -66,6 +66,17 @@
     }
 }
 
+//LEADERSHIP ROW popup
+.white-popup {
+    &.leadership-popup   {max-width:800px;}
+
+    &.popup-width-jumbo  {max-width:1200px;}
+    &.popup-width-large  {max-width:1000px;}
+    &.popup-width-medium {max-width:800px;}
+    &.popup-width-small  {max-width:800px;}
+    &.popup-width-tiny   {max-width:400px;}
+}
+
 //angles in a banner
 .angle-background {
     position:relative;
@@ -106,6 +117,7 @@
             }
         }
     }
+    .InternetExplorer & {display:none;}
 }
 
 //PERSON PROFILE CAROUSEL (old)
@@ -378,19 +390,9 @@
 
 
 
-//LEADERSHIP ROW popup
 
-.white-popup {
-    &.leadership-popup   {max-width:800px;}
 
-    &.popup-width-jumbo  {max-width:1200px;}
-    &.popup-width-large  {max-width:1000px;}
-    &.popup-width-medium {max-width:800px;}
-    &.popup-width-small  {max-width:800px;}
-    &.popup-width-tiny   {max-width:400px;}
-}
-
-//VALUES CUSTOM SLICK SLIDER
+//VALUES CUSTOM SLICK SLIDER (retiring)
 #values-slider {
     padding-left:30px; padding-right:30px;
     @media @medium { padding-left:104px; padding-right:104px; }
@@ -558,12 +560,13 @@
                     .animation(career-hero-graphic-ltr 12s ease 0s normal infinite);
                 }
                 &.vr {
-                    top:55%;
+                    top:auto;
+                    bottom:-15%;
                     left:25%;
                     @media @medium {
-                        top:5%;
+                        bottom:5%;
                         width:35%;
-                        left:65%;
+                        left:67%;
                     }
                     .animation(career-hero-graphic-rtl 12s ease -3s normal infinite);
                 }
@@ -574,10 +577,11 @@
                     .animation(career-hero-graphic-ltr 12s ease -6s normal infinite);
                 }
                 &.chess {
-                    top:55%;
+                    top:auto;
+                    bottom:-15%;
                     left:25%;
                     @media @medium {
-                        top:5%;
+                        bottom:5%;
                         left:63%;
                     }
                     .animation(career-hero-graphic-btt 12s ease -9s normal infinite);
@@ -601,15 +605,20 @@
         .flex(0, 0, auto);
         width: auto;
         padding-top:40px;
+        padding:10px;
+        border-bottom:2px solid @red;
         .hashtag {
-            .flex(0,0,100%);
+            width:100%;
             margin-bottom:20px;
-            @media @medium {.flex(1, 1, 0px); margin-bottom:0;}
+            @media @medium {width:auto; margin-bottom:0; padding-right:20px;}
             text-align:left;
-            padding:10px;
-            border-bottom:1px solid @red;
+            color:@black;
+            &:hover {color:@red;}
         }
-        .icon {margin-left:10px;}
+        .icon {
+            margin-left:10px;
+            &:hover {background-color:@red;}
+        }
     }
     #profiles {
         &.background-decoration-wrapper .background-decoration {
@@ -778,6 +787,12 @@
             opacity:0.1;
         }
     }
+    #disclaimer {
+        padding:30px 0;
+        border-bottom:1px solid @gray;
+    }
+
+
 
     //older styles
     .careers-banner {
