@@ -4,61 +4,130 @@
 @import '../_new-components/background-color-filters.less';
 @import '../_new-components/blockquote.less';
 @import '../_new-components/customer-success-logo-video-slider.less';
-@import '../_new-components/custom-height-section.less';
 @import '../_new-components/hypercard-graphic.less';
 @import '../_new-components/new-device-mockups.less';
 @import '../_new-components/number-group.less';
 @import '../_new-components/offpage-image.less';
-@import '../_new-components/panel-card-banner.less';
 @import '../_new-components/triangle-group.less';
 
 //fix for lead gen form generating an empty p
 p:empty {margin-bottom:0!important;}
 
-//temp fix for white gradient
-.background-gradient-white {
-    background: @white;
-    background: -webkit-linear-gradient(180deg, @white, @light-gray);
-    background: linear-gradient(180deg, @white, @light-gray);
-}
-
 
 
 
 //INDIVIDUAL PAGE STYLES
-
 .GetStarted.get-started-overview {
+    #hero {
+        .single-transition();
+        &[data-hover="red"] {
+            background-color:@red;
+            .cards .card.component-red {border-color:@red;}
+        }
+        &[data-hover="orange"] {
+            background-color:@orange;
+            .cards .card.component-orange {border-color:@orange;}
+        }
+        &[data-hover="blue"] {
+            background-color:@blue;
+            .cards .card.component-blue {border-color:@blue;}
+        }
+        &[data-hover="green"] {
+            background-color:@green;
+            .cards .card.component-green {border-color:@green;}
+        }
+        &[data-hover="navy-blue"] {
+            background-color:@navy-blue;
+            .cards .card.component-navy-blue {border-color:@navy-blue;}
+        }
+
+        @media @medium-only {
+            padding:80px 20px;
+            .grid-item{padding:0;}
+            .card .card-content {padding:20px;}
+        }
+        .cards .card {
+            text-align:center;
+            border:3px solid transparent;
+            background-color:fade(@pure-black, 50%);
+
+            &:hover {background-color:fade(@pure-black, 70%);}
+            ul {
+                padding-left:0;
+                list-style:none;
+                font-size:18px; line-height:1.2em;
+                > li {padding-bottom:10px;}
+            }
+            .text-block {color:@white; white-space:normal;}
+            .card-description {
+                color:@white;
+                .uppercase;
+                font-weight:600;
+            }
+            &.component-red {
+                .text-block {background-color:@red;}
+            }
+            &.component-orange {
+                .text-block {background-color:@orange;}
+            }
+            &.component-green {
+                .text-block {background-color:@green;}
+            }
+            &.component-blue {
+                .text-block {background-color:@blue;}
+            }
+            &.component-navy-blue {
+                .text-block {background-color:@navy-blue;}
+            }
+        }
+    }
     //override some form stuff
-    #request-demo #page-hero {
+    #page-hero {
+        &:after {background-color:fade(@pure-black, 60%);}
         > .flex-row {
             .justify-content(space-between);
-            .align-items(flex-start);
             > div:first-child {
                 h1.text-large {display:none}
-                .line {display:none;}
+                .line:first-of-type {display:none;}
                 @media @xlarge-only {.flex(0, 0, 50%);}
             }
         }
         #lead-gen-form {
-            box-shadow: 3px 3px 5px fade(@pure-black, 20%);
-             #form-content-div h2 {display:none;}
+            box-shadow: 1px 1px 7px fade(@pure-black, 60%);
+            //#form-content-div h2 {display:none;}
         }
     }
-    #microstrategy-2019-promo-ad {
-        .cursor {
-            position:absolute; z-index:2;
-            width:10px;
-            @media @medium {width:15px;}
-            top:50%; left:50%;
-            .animation(hero-cursor-website 7.5s linear 0s normal infinite);
+}
+
+
+
+// cloud trial page
+.CloudTrial {
+    #page-hero {
+        overflow:visible;
+        padding-bottom:0px;
+        > .flex-row {
+            .justify-content(space-between);
+
+            .col-md-6.col-xl-5:first-child {
+                h1.text-large {font-weight:400;}
+                @media @medium {
+                    .flex(0,0,50%);
+                    padding-bottom:120px;
+                }
+            }
         }
-        .hypercard-img {
-            position:absolute;
-            top:22%; left:22%;
-            width:25%;
-            opacity:0;
-            .animation(hero-card-appear 7.5s linear 0s normal infinite);
+        #lead-gen-form {
+            width:~"calc(100% - 40px)";
+            margin-left:auto; margin-right:auto;
+            padding:20px 15px;
+            @media @medium {width:100%; margin-bottom:-200px;}
+            box-shadow: 1px 1px 5px fade(@pure-black, 50%);
         }
+    }
+
+    #offers {
+        @media @medium {padding-top:120px; padding-bottom:120px;}
     }
 }
 
@@ -67,20 +136,29 @@ p:empty {margin-bottom:0!important;}
 // desktop page
 .Desktop {
     #page-hero {
+        overflow:visible;
+        padding-bottom:0px;
         > .flex-row {
             .justify-content(space-between);
-            > div:first-child {
+
+            .col-md-6.col-xl-5:first-child {
                 h1.text-large {font-weight:400;}
-                @media @xlarge-only {.flex(0, 0, 50%);}
+                @media @medium {
+                    .flex(0,0,50%);
+                    padding-bottom:120px;
+                }
             }
         }
         #lead-gen-form {
-            box-shadow: 3px 3px 7px fade(@pure-black, 50%);
+            width:~"calc(100% - 40px)";
+            margin-left:auto; margin-right:auto;
+            padding:20px 15px;
+            @media @medium {width:100%; margin-bottom:-200px;}
+            box-shadow: 1px 1px 5px fade(@pure-black, 50%);
         }
-
     }
-
-    #introduction {
+    #offers {
+        @media @medium {padding-top:120px;}
         .device-mockup.pc-laptop {
             z-index:1;
             &.back-row {
@@ -171,6 +249,7 @@ p:empty {margin-bottom:0!important;}
             .justify-content(space-between);
 
             .col-md-6.col-xl-5:first-child {
+                h1.text-large {font-weight:400;}
                 @media @medium {
                     .flex(0,0,50%);
                     padding-bottom:120px;
@@ -181,11 +260,10 @@ p:empty {margin-bottom:0!important;}
             width:~"calc(100% - 40px)";
             margin-left:auto; margin-right:auto;
             padding:20px 15px;
-            @media @medium {width:100%; margin-bottom:-250px;}
+            @media @medium {width:100%; margin-bottom:-200px;}
             box-shadow: 1px 1px 5px fade(@pure-black, 50%);
         }
     }
-
     #offers {
         @media @medium {padding-top:120px;}
     }
@@ -291,7 +369,7 @@ p:empty {margin-bottom:0!important;}
                     .hypercard-img {.animation(fade-slide-down 0.2s ease-out 0.8s normal forwards);}
                     .cursor {top:16%; left:27%; .transition(all 0.6s ease 0s);}
                 }
-                .email { 
+                .email {
                     .hypercard-img {.animation(fade-slide-left 0.2s ease-out 1s normal forwards);}
                     .cursor {top:46%; left:48%; .transition(all 0.6s ease 0.2s);}
                 }

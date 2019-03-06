@@ -2464,6 +2464,28 @@ blockquote:after {
   right: auto!important;
   top: 100%!important;
 }
+.Hypercards #page-hero .device-mockup .highlight-zone.company-2 {
+  top: 36%;
+  left: 25%;
+}
+.Hypercards #page-hero .device-mockup .highlight-zone.company-2 .hypercard-img {
+  right: auto;
+  left: calc(100% - 20px);
+}
+.Hypercards #page-hero .device-mockup .highlight-zone.company-2:hover .hypercard-img {
+  right: auto!important;
+  left: 100%!important;
+}
+.Hypercards #page-hero .device-mockup .highlight-zone.company-3 {
+  top: 61%;
+  left: 50%;
+}
+.Hypercards #page-hero .device-mockup .highlight-zone.company-3 .hypercard-img {
+  bottom: -100%;
+  top: auto;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
 .Hypercards #page-hero .device-mockup .highlight-zone.person {
   top: 41%;
   left: 56%;
@@ -3069,7 +3091,8 @@ blockquote:after {
   margin-right: 20%;
   margin-bottom: 20px;
 }
-.IdentityAndTelemetry #introduction .device-mockup.iphone {
+.IdentityAndTelemetry #introduction .device-mockup.iphone,
+.IdentityAndTelemetry #introduction .device-mockup.iphone-x {
   position: absolute;
   z-index: 1;
   width: 30%;
@@ -3080,7 +3103,8 @@ blockquote:after {
   .IdentityAndTelemetry #introduction .device-mockup.ipad {
     width: 150%;
   }
-  .IdentityAndTelemetry #introduction .device-mockup.iphone {
+  .IdentityAndTelemetry #introduction .device-mockup.iphone,
+  .IdentityAndTelemetry #introduction .device-mockup.iphone-x {
     width: 35%;
   }
 }
@@ -3091,7 +3115,8 @@ blockquote:after {
   margin-left: 10%;
   margin-bottom: 20px;
 }
-.IdentityAndTelemetry #physical-logical-access .device-mockup.iphone {
+.IdentityAndTelemetry #physical-logical-access .device-mockup.iphone,
+.IdentityAndTelemetry #physical-logical-access .device-mockup.iphone-x {
   position: absolute;
   z-index: 1;
   width: 25%;
@@ -3102,7 +3127,8 @@ blockquote:after {
   .IdentityAndTelemetry #physical-logical-access .device-mockup.macbook-pro {
     width: 150%;
   }
-  .IdentityAndTelemetry #physical-logical-access .device-mockup.iphone {
+  .IdentityAndTelemetry #physical-logical-access .device-mockup.iphone,
+  .IdentityAndTelemetry #physical-logical-access .device-mockup.iphone-x {
     width: 30%;
   }
 }
@@ -3117,7 +3143,8 @@ blockquote:after {
   margin-right: 10%;
   margin-bottom: 20px;
 }
-.DigitalCredentials #logical-access .device-mockup.iphone {
+.DigitalCredentials #logical-access .device-mockup.iphone,
+.DigitalCredentials #logical-access .device-mockup.iphone-x {
   position: absolute;
   z-index: 1;
   width: 35%;
@@ -3128,7 +3155,8 @@ blockquote:after {
   .DigitalCredentials #logical-access .device-mockup.macbook-pro {
     width: 150%;
   }
-  .DigitalCredentials #logical-access .device-mockup.iphone {
+  .DigitalCredentials #logical-access .device-mockup.iphone,
+  .DigitalCredentials #logical-access .device-mockup.iphone-x {
     width: 30%;
   }
 }
@@ -3142,7 +3170,8 @@ blockquote:after {
   margin-left: 20%;
   margin-bottom: 20px;
 }
-.DigitalCredentials #physical-access .device-mockup.iphone {
+.DigitalCredentials #physical-access .device-mockup.iphone,
+.DigitalCredentials #physical-access .device-mockup.iphone-x {
   position: absolute;
   z-index: 1;
   width: 35%;
@@ -3153,7 +3182,8 @@ blockquote:after {
   .DigitalCredentials #physical-access .device-mockup.ipad {
     width: 130%;
   }
-  .DigitalCredentials #physical-access .device-mockup.iphone {
+  .DigitalCredentials #physical-access .device-mockup.iphone,
+  .DigitalCredentials #physical-access .device-mockup.iphone-x {
     width: 30%;
   }
 }
@@ -3172,7 +3202,8 @@ blockquote:after {
     margin-bottom: 40px;
   }
 }
-.DigitalCredentials #logical-access .img-col .iphone {
+.DigitalCredentials #logical-access .img-col .iphone,
+.DigitalCredentials #logical-access .img-col .iphone-x {
   position: absolute;
   z-index: 1;
   width: 35%;
@@ -3217,7 +3248,8 @@ blockquote:after {
   left: 7%;
   bottom: 7%;
 }
-.SecureGateways #hero .img-col .iphone {
+.SecureGateways #hero .img-col .iphone,
+.SecureGateways #hero .img-col .iphone-x {
   position: absolute;
   z-index: 2;
   width: 15%;
@@ -3239,7 +3271,8 @@ blockquote:after {
     margin-bottom: 40px;
   }
 }
-.SecureGateways #physical-infrastructure .img-col .iphone {
+.SecureGateways #physical-infrastructure .img-col .iphone,
+.SecureGateways #physical-infrastructure .img-col .iphone-x {
   position: absolute;
   z-index: 1;
   width: 35%;
@@ -3261,7 +3294,8 @@ blockquote:after {
     margin-bottom: 40px;
   }
 }
-.SecureGateways #logical-access .img-col .iphone {
+.SecureGateways #logical-access .img-col .iphone,
+.SecureGateways #logical-access .img-col .iphone-x {
   position: absolute;
   z-index: 1;
   width: 35%;

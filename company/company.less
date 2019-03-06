@@ -116,6 +116,22 @@
                 @media @medium {width:50%;}
             }
         }
+        &.left-side .angle {
+            &.top {
+                -webkit-clip-path: polygon(0 0,0 100%,100% 0)!important;
+                clip-path: polygon(0 0,0 100%,100% 0)!important;
+                right:auto;
+                left:0;
+            }
+            &.bottom {
+                -webkit-clip-path: polygon(0 0,100% 100%,0 100%)!important;
+                clip-path: polygon(0 0,100% 100%,0 100%)!important;
+                right:auto;
+                left:0;
+                width:125%;
+                @media @medium {width:50%;}
+            }
+        }
     }
     .InternetExplorer & {display:none;}
 }
@@ -597,8 +613,8 @@
             opacity:0.2;
             width:50%;
             @media @medium {width:25%;}
-            &.top-right {top:0; right:0; margin-top:-7%; margin-right:-7%;}
-            &.bottom-left {bottom:0; left:0; margin-bottom:-5%; margin-left:-10%;}
+            &.top-right {top:0; right:0; margin-right:-7%;}
+            &.bottom-left {bottom:0; left:0; margin-left:-7%;}
         }
     }
     .social-bar {
@@ -620,10 +636,19 @@
             &:hover {background-color:@red;}
         }
     }
+    #introduction {
+        .background-decoration.top-right {margin-top:-5%;}
+    }
+    #job-openings {
+        @media @medium {
+            .angle.top {width:20%;}
+            .angle.bottom {width:35%;}
+        }
+    }
     #profiles {
         &.background-decoration-wrapper .background-decoration {
             .rotate(90deg);
-            &.top-right {margin-top:7%; margin-right:-7%;}
+            &.top-right {margin-top:-3%; margin-right:-7%;}
             &.bottom-left {margin-bottom:5%; margin-left:-5%;}
         }
         .grid-item {padding:40px; text-align:center;}
