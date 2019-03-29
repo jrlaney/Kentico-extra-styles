@@ -12,6 +12,7 @@
 
 //fix for lead gen form generating an empty p
 p:empty {margin-bottom:0!important;}
+[class*="col-"].shrink {max-width:100%;}
 
 
 
@@ -135,37 +136,39 @@ p:empty {margin-bottom:0!important;}
 
 // desktop page
 .Desktop {
-    #page-hero {
-        overflow:visible;
-        padding-bottom:0px;
-        > .flex-row {
-            .justify-content(space-between);
+    &.overlapping-form {
+        #page-hero {
+            overflow:visible;
+            padding-bottom:0px;
+            > .flex-row {
+                .justify-content(space-between);
 
-            .col-md-6.col-xl-5:first-child {
-                h1.text-large {font-weight:400;}
-                @media @medium {
-                    .flex(0,0,50%);
-                    padding-bottom:120px;
+                .col-md-6.col-xl-5:first-child {
+                    h1.text-large {font-weight:400;}
+                    @media @medium {
+                        .flex(0,0,50%);
+                        padding-bottom:120px;
+                    }
                 }
             }
+            #lead-gen-form {
+                width:~"calc(100% - 40px)";
+                margin-left:auto; margin-right:auto;
+                padding:20px 15px;
+                @media @medium {width:100%; margin-bottom:-200px;}
+                box-shadow: 1px 1px 5px fade(@pure-black, 50%);
+            }
         }
-        #lead-gen-form {
-            width:~"calc(100% - 40px)";
-            margin-left:auto; margin-right:auto;
-            padding:20px 15px;
-            @media @medium {width:100%; margin-bottom:-200px;}
-            box-shadow: 1px 1px 5px fade(@pure-black, 50%);
-        }
-    }
-    #offers {
-        @media @medium {padding-top:120px;}
-        .device-mockup.pc-laptop {
-            z-index:1;
-            &.back-row {
-                position:absolute; z-index:0;
-                width:65%;
-                top:15%; right:70%;
-                &.right-side {right:auto; left:70%;}
+        #offers {
+            @media @medium {padding-top:120px;}
+            .device-mockup.pc-laptop {
+                z-index:1;
+                &.back-row {
+                    position:absolute; z-index:0;
+                    width:65%;
+                    top:15%; right:70%;
+                    &.right-side {right:auto; left:70%;}
+                }
             }
         }
     }

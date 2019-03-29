@@ -87,6 +87,9 @@ section {
 .offpage-image.right {
   float: left;
 }
+.offpage-image.centered {
+  margin-left: -25%;
+}
 @media only screen and (min-width: 980px) {
   .offpage-image.left {
     margin-right: 5%;

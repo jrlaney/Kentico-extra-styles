@@ -376,6 +376,9 @@ blockquote:after {
 .offpage-image.right {
   float: left;
 }
+.offpage-image.centered {
+  margin-left: -25%;
+}
 @media only screen and (min-width: 980px) {
   .offpage-image.left {
     margin-right: 5%;
@@ -468,6 +471,9 @@ blockquote:after {
 }
 p:empty {
   margin-bottom: 0!important;
+}
+[class*="col-"].shrink {
+  max-width: 100%;
 }
 .GetStarted.get-started-overview #hero {
   -webkit-transition: all 0.2s ease-out;
@@ -617,26 +623,26 @@ p:empty {
     padding-bottom: 120px;
   }
 }
-.Desktop #page-hero {
+.Desktop.overlapping-form #page-hero {
   overflow: visible;
   padding-bottom: 0px;
 }
-.Desktop #page-hero > .flex-row {
+.Desktop.overlapping-form #page-hero > .flex-row {
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
-.Desktop #page-hero > .flex-row .col-md-6.col-xl-5:first-child h1.text-large {
+.Desktop.overlapping-form #page-hero > .flex-row .col-md-6.col-xl-5:first-child h1.text-large {
   font-weight: 400;
 }
 @media only screen and (min-width: 768px) {
-  .Desktop #page-hero > .flex-row .col-md-6.col-xl-5:first-child {
+  .Desktop.overlapping-form #page-hero > .flex-row .col-md-6.col-xl-5:first-child {
     -webkit-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
     padding-bottom: 120px;
   }
 }
-.Desktop #page-hero #lead-gen-form {
+.Desktop.overlapping-form #page-hero #lead-gen-form {
   width: calc(100% - 40px);
   margin-left: auto;
   margin-right: auto;
@@ -644,27 +650,27 @@ p:empty {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 @media only screen and (min-width: 768px) {
-  .Desktop #page-hero #lead-gen-form {
+  .Desktop.overlapping-form #page-hero #lead-gen-form {
     width: 100%;
     margin-bottom: -200px;
   }
 }
 @media only screen and (min-width: 768px) {
-  .Desktop #offers {
+  .Desktop.overlapping-form #offers {
     padding-top: 120px;
   }
 }
-.Desktop #offers .device-mockup.pc-laptop {
+.Desktop.overlapping-form #offers .device-mockup.pc-laptop {
   z-index: 1;
 }
-.Desktop #offers .device-mockup.pc-laptop.back-row {
+.Desktop.overlapping-form #offers .device-mockup.pc-laptop.back-row {
   position: absolute;
   z-index: 0;
   width: 65%;
   top: 15%;
   right: 70%;
 }
-.Desktop #offers .device-mockup.pc-laptop.back-row.right-side {
+.Desktop.overlapping-form #offers .device-mockup.pc-laptop.back-row.right-side {
   right: auto;
   left: 70%;
 }

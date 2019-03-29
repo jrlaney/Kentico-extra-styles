@@ -3306,7 +3306,8 @@ blockquote:after {
   .BecomeAnIntelligentEnterprise footer,
   .BecomeAnIntelligentEnterprise .line,
   .BecomeAnIntelligentEnterprise #print-instructions,
-  .BecomeAnIntelligentEnterprise #globalAd {
+  .BecomeAnIntelligentEnterprise #globalAd,
+  .BecomeAnIntelligentEnterprise #map-resources {
     display: none!important;
   }
   .BecomeAnIntelligentEnterprise a[href]:after {

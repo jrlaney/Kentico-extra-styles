@@ -7,6 +7,9 @@
 @import '../_new-components/multi-item-slider-nav.less';
 @import '../_new-components/related-items-reset.less';
 
+//temp add these icons till prod push is done
+.icon-instagram::before{content:"\eaf1"}
+.icon-wechat::before{content:"\eaf2"}
 
 //infinite scrolling gallery background image (old)
 #careers {
@@ -133,7 +136,7 @@
             }
         }
     }
-    .InternetExplorer & {display:none;}
+    .InternetExplorer & .angle-wrapper {display:none;}
 }
 
 //PERSON PROFILE CAROUSEL (old)
@@ -540,8 +543,9 @@
 
 
 //CAREERS PAGE STYLES
-/*new banner*/
-.Careers {
+
+//overview page
+.Careers.careers-overview-page {
     #page-hero {
         .display(flex);
         .flex-direction(column);
@@ -614,6 +618,7 @@
             width:50%;
             @media @medium {width:25%;}
             &.top-right {top:0; right:0; margin-right:-7%;}
+            &.bottom-right {bottom:0; right:0; margin-right:-7%;}
             &.bottom-left {bottom:0; left:0; margin-left:-7%;}
         }
     }
@@ -645,150 +650,167 @@
             .angle.bottom {width:35%;}
         }
     }
+    #perks {
+        #photo-slider {
+            padding:0 20px;
+            .grid-item {padding:15px 2px}
+        }
+    }
     #profiles {
         &.background-decoration-wrapper .background-decoration {
             .rotate(90deg);
             &.top-right {margin-top:-3%; margin-right:-7%;}
             &.bottom-left {margin-bottom:5%; margin-left:-5%;}
+            &.bottom-right {z-index:0 width:75%; margin-bottom:5%; margin-left:-5%;}
         }
         .grid-item {padding:40px; text-align:center;}
-        .headshot-wrapper {
-            position:relative;
-            padding:20px;
-            margin:0 20px;
-            max-width:300px;
-            .headshot {
-                position:relative; z-index:1;
-                box-shadow:1px 1px 5px fade(@pure-black, 30%);
-                margin:0;
-            }
-            .decoration {
-                position:absolute; z-index:2;
-                height:30px; width:30px;
+    }
+    .headshot-wrapper {
+        display:block;
+        position:relative;
+        padding:20px;
+        margin:0 20px;
+        max-width:300px;
+        .headshot {
+            position:relative; z-index:1;
+            box-shadow:1px 1px 5px fade(@pure-black, 30%);
+            margin:0;
+        }
+        .decoration {
+            position:absolute; z-index:2;
+            height:30px; width:30px;
+            border-radius:50%;
+            background-color:@gray;
+            box-shadow:1px 1px 3px fade(@pure-black, 30%);
+            &:before {
+                content:'';
+                position:absolute;
+                height:15px; width:15px;
                 border-radius:50%;
                 background-color:@gray;
                 box-shadow:1px 1px 3px fade(@pure-black, 30%);
-                &:before {
-                    content:'';
-                    position:absolute;
-                    height:15px; width:15px;
-                    border-radius:50%;
-                    background-color:@gray;
-                    box-shadow:1px 1px 3px fade(@pure-black, 30%);
-                }
+            }
+            &.top-left {
+                top:3%; left:1%;
+                &:before {top:60%; left:130%;}
+            }
+            &.top-right {
+                top:15%; right:0;
+                &:before {top:-105%; left:-50%;}
+            }
+            &.bottom-left {
+                height:15px; width:15px;
+                bottom:15%; left:-5%;
+                &:before{display:none}
+            }
+            &.bottom-right {
+                bottom:5%; right:15%;
+                &:before {top:80%; left:-100%;}
+            }
+        }
+        &.red {
+            .decoration {
                 &.top-left {
-                    top:3%; left:1%;
-                    &:before {top:60%; left:130%;}
+                    background-color:@red;
+                    &:before {background-color:@orange;}
                 }
                 &.top-right {
-                    top:15%; right:0;
-                    &:before {top:-105%; left:-50%;}
+                    background-color:@blue;
+                    &:before {background-color:@red;}
                 }
                 &.bottom-left {
-                    height:15px; width:15px;
-                    bottom:15%; left:-5%;
-                    &:before{display:none}
+                    background-color:@blue;
                 }
                 &.bottom-right {
-                    bottom:5%; right:15%;
-                    &:before {top:80%; left:-100%;}
+                    background-color:@green;
+                    &:before {background-color:@orange;}
                 }
             }
-            &.red {
-                .decoration {
-                    &.top-left {
-                        background-color:@red;
-                        &:before {background-color:@orange;}
-                    }
-                    &.top-right {
-                        background-color:@blue;
-                        &:before {background-color:@red;}
-                    }
-                    &.bottom-left {
-                        background-color:@blue;
-                    }
-                    &.bottom-right {
-                        background-color:@green;
-                        &:before {background-color:@orange;}
-                    }
+        }
+        &.orange {
+            .decoration {
+                &.top-left {
+                    background-color:@orange;
+                    &:before {background-color:@blue;}
+                }
+                &.top-right {
+                    background-color:@red;
+                    &:before {background-color:@green;}
+                }
+                &.bottom-left {
+                    background-color:@green;
+                }
+                &.bottom-right {
+                    background-color:@orange;
+                    &:before {background-color:@red;}
                 }
             }
-            &.orange {
-                .decoration {
-                    &.top-left {
-                        background-color:@orange;
-                        &:before {background-color:@blue;}
-                    }
-                    &.top-right {
-                        background-color:@red;
-                        &:before {background-color:@green;}
-                    }
-                    &.bottom-left {
-                        background-color:@green;
-                    }
-                    &.bottom-right {
-                        background-color:@orange;
-                        &:before {background-color:@red;}
-                    }
+        }
+        &.green {
+            .decoration {
+                &.top-left {
+                    background-color:@green;
+                    &:before {background-color:@red;}
+                }
+                &.top-right {
+                    background-color:@orange;
+                    &:before {background-color:@red;}
+                }
+                &.bottom-left {
+                    background-color:@blue;
+                }
+                &.bottom-right {
+                    background-color:@orange;
+                    &:before {background-color:@blue;}
                 }
             }
-            &.green {
-                .decoration {
-                    &.top-left {
-                        background-color:@green;
-                        &:before {background-color:@red;}
-                    }
-                    &.top-right {
-                        background-color:@orange;
-                        &:before {background-color:@red;}
-                    }
-                    &.bottom-left {
-                        background-color:@blue;
-                    }
-                    &.bottom-right {
-                        background-color:@orange;
-                        &:before {background-color:@blue;}
-                    }
+        }
+        &.blue {
+            .decoration {
+                &.top-left {
+                    background-color:@blue;
+                    &:before {background-color:@red;}
+                }
+                &.top-right {
+                    background-color:@orange;
+                    &:before {background-color:@red;}
+                }
+                &.bottom-left {
+                    background-color:@red;
+                }
+                &.bottom-right {
+                    background-color:@green;
+                    &:before {background-color:@blue;}
                 }
             }
-            &.blue {
-                .decoration {
-                    &.top-left {
-                        background-color:@blue;
-                        &:before {background-color:@red;}
-                    }
-                    &.top-right {
-                        background-color:@orange;
-                        &:before {background-color:@red;}
-                    }
-                    &.bottom-left {
-                        background-color:@red;
-                    }
-                    &.bottom-right {
-                        background-color:@green;
-                        &:before {background-color:@blue;}
-                    }
+        }
+        &.navy-blue {
+            .decoration {
+                &.top-left {
+                    background-color:@navy-blue;
+                    &:before {background-color:@green;}
+                }
+                &.top-right {
+                    background-color:@orange;
+                    &:before {background-color:@green;}
+                }
+                &.bottom-left {
+                    background-color:@orange;
+                }
+                &.bottom-right {
+                    background-color:@red;
+                    &:before {background-color:@blue;}
                 }
             }
-            &.navy-blue {
-                .decoration {
-                    &.top-left {
-                        background-color:@navy-blue;
-                        &:before {background-color:@green;}
-                    }
-                    &.top-right {
-                        background-color:@orange;
-                        &:before {background-color:@green;}
-                    }
-                    &.bottom-left {
-                        background-color:@orange;
-                    }
-                    &.bottom-right {
-                        background-color:@red;
-                        &:before {background-color:@blue;}
-                    }
-                }
-            }
+        }
+    }
+    .white-popup {
+        > .flex-row {position:relative; z-index:1;}
+        &.background-decoration-wrapper .background-decoration {
+            z-index:0;
+            .rotate(60deg);
+            width:35%;
+            margin-bottom:5%; margin-left:-5%;
         }
     }
     #global-reach {
@@ -816,101 +838,119 @@
         padding:30px 0;
         border-bottom:1px solid @gray;
     }
-
-
-
-    //older styles
-    .careers-banner {
-        display:block; position:relative;
-        overflow:hidden;
-        background-color:@black;
-
-    }
-    .careers-banner .banner-content {position:relative; z-index:2;}
-    .careers-banner .image-container {
-        position:absolute; z-index:1;
-        height:100%; width:100%;
-        top:0; left:0;
-
-        * {
-            height: 100%;
+    #page-cta {
+        @media @medium {
+            .angle.top {width:20%;}
+            .angle.bottom {width:35%;}
         }
     }
-    .careers-banner .image-container .fade-slider {position:relative; overflow:hidden; height:100%;}
-    .careers-banner .image-container .fade-slider .banner {
-        height:100%; width:100%;
-        background-repeat:no-repeat;
-        background-position:center center;
-        background-size:cover;
+}
+.JobOpenings {
+    #page-hero {
+        .image-background {
+            position:absolute; z-index:1;
+            top:70%; left:35%;
+            .translate(-50%, -50%);
+            height:100%;
+            @media @medium {width:110%; height:auto;}
+            max-width:800px;
+            opacity:0.45;
+        }
     }
+}
 
-    /*fullwidth image banners*/
-    .image-section {
-        > .flex-row {min-height:65vh;}
-        .background-trans-white {background-color:fade(@white, 90%);}
+
+//older styles
+.careers-banner {
+    display:block; position:relative;
+    overflow:hidden;
+    background-color:@black;
+
+}
+.careers-banner .banner-content {position:relative; z-index:2;}
+.careers-banner .image-container {
+    position:absolute; z-index:1;
+    height:100%; width:100%;
+    top:0; left:0;
+
+    * {
+        height: 100%;
     }
-    //JOB SEACH PAGE
-    .smartWidget {
-        .srSearch {min-width:200px; height:auto; padding:10px;}
-        .srSearchForm {width:100%; min-width:200px; height:auto; margin-right:0;}
-        input[type=text].srSearchInput {
-            display:inline-block;
-            padding:5px 10px; float:none;
-            height:auto; width:100%;
-        }
-        .srSearchButton {
-            width:100%; height:auto;
-            border:none; padding:7px;
-            -webkit-border-radius:0;
-            -moz-border-radius:0;
-            border-radius:0;
-            &:hover {border:none;}
-        }
-        .srSearchOption {
-            width:50%;
-            margin-top:10px;
-            padding-right:10px;
-            .srSearchOptionText {
-                display:block;
-                width:100%;
-                padding:5px 20px 5px 10px;
-                &:before {
-                    content:'';
-                    position:absolute;
-                    top:0; left:0;
-                    margin:0;
-                    border-left:none;
-                    width:1px; height:100%;
-                    background-color:#cccccc;
-                }
-                &:after {right:5px;}
-            }
-            &:after {
+}
+.careers-banner .image-container .fade-slider {position:relative; overflow:hidden; height:100%;}
+.careers-banner .image-container .fade-slider .banner {
+    height:100%; width:100%;
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:cover;
+}
+
+/*fullwidth image banners*/
+.image-section {
+    > .flex-row {min-height:65vh;}
+    .background-trans-white {background-color:fade(@white, 90%);}
+}
+//JOB SEACH PAGE
+.smartWidget {
+    .srSearch {min-width:200px; height:auto; padding:10px;}
+    .srSearchForm {width:100%; min-width:200px; height:auto; margin-right:0;}
+    input[type=text].srSearchInput {
+        display:inline-block;
+        padding:5px 10px; float:none;
+        height:auto; width:100%;
+    }
+    .srSearchButton {
+        width:100%; height:auto;
+        border:none; padding:7px;
+        -webkit-border-radius:0;
+        -moz-border-radius:0;
+        border-radius:0;
+        &:hover {border:none;}
+    }
+    .srSearchOption {
+        width:50%;
+        margin-top:10px;
+        padding-right:10px;
+        .srSearchOptionText {
+            display:block;
+            width:100%;
+            padding:5px 20px 5px 10px;
+            &:before {
                 content:'';
                 position:absolute;
-                top:0; right:5px;
+                top:0; left:0;
                 margin:0;
-                border-right:none;
+                border-left:none;
                 width:1px; height:100%;
                 background-color:#cccccc;
             }
+            &:after {right:5px;}
         }
-        .srSearchForm,
-        .srSearchOption,
-        .srSearchForm,
-        .srSearchButton {
-            display:inline-block; vertical-align:top;
-            float:none;
-        }
-        @media @medium {
-            .srSearchForm {width:60%; vertical-align:middle;}
-            input[type=text].srSearchInput {width:75%; max-width:none; margin-bottom:0px; padding:6px 10px;}
-            .srSearchButton {width:~"calc(25% - 10px)"; margin-left:10px;}
-            .srSearchOption {width:~"calc(20% - 10px)"; margin-left:10px; margin-top:0; vertical-align:middle;}
+        &:after {
+            content:'';
+            position:absolute;
+            top:0; right:5px;
+            margin:0;
+            border-right:none;
+            width:1px; height:100%;
+            background-color:#cccccc;
         }
     }
-    .sr-plugins--active {z-index:5000;}
+    .srSearchForm,
+    .srSearchOption,
+    .srSearchForm,
+    .srSearchButton {
+        display:inline-block; vertical-align:top;
+        float:none;
+    }
+    @media @medium {
+        .srSearchForm {width:60%; vertical-align:middle;}
+        input[type=text].srSearchInput {width:75%; max-width:none; margin-bottom:0px; padding:6px 10px;}
+        .srSearchButton {width:~"calc(25% - 10px)"; margin-left:10px;}
+        .srSearchOption {width:~"calc(20% - 10px)"; margin-left:10px; margin-top:0; vertical-align:middle;}
+    }
 }
+.sr-plugins--active {z-index:5000;}
 
 
 

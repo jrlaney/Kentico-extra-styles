@@ -65,6 +65,9 @@
 .offpage-image.right {
   float: left;
 }
+.offpage-image.centered {
+  margin-left: -25%;
+}
 @media only screen and (min-width: 980px) {
   .offpage-image.left {
     margin-right: 5%;
@@ -382,6 +385,12 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+.icon-instagram::before {
+  content: "\eaf1";
+}
+.icon-wechat::before {
+  content: "\eaf2";
+}
 #careers {
   position: relative;
   min-height: 600px;
@@ -572,7 +581,7 @@
     width: 50%;
   }
 }
-.InternetExplorer .angle-background {
+.InternetExplorer .angle-background .angle-wrapper {
   display: none;
 }
 #roles-slider .role-bio-photo {
@@ -1137,11 +1146,7 @@
     margin-bottom: 30px;
   }
 }
-/*new banner*/
-.Careers {
-  /*fullwidth image banners*/
-}
-.Careers #page-hero {
+.Careers.careers-overview-page #page-hero {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
@@ -1154,11 +1159,11 @@
   overflow: hidden;
   min-height: 80vh;
 }
-.Careers #page-hero > .flex-row {
+.Careers.careers-overview-page #page-hero > .flex-row {
   position: relative;
   z-index: 2;
 }
-.Careers #page-hero .image-revolver {
+.Careers.careers-overview-page #page-hero .image-revolver {
   position: absolute;
   z-index: 1;
   height: 100%;
@@ -1167,34 +1172,34 @@
   left: 0;
 }
 @media only screen and (max-width: 767px) {
-  .Careers #page-hero .image-revolver {
+  .Careers.careers-overview-page #page-hero .image-revolver {
     opacity: 0.5;
   }
 }
-.Careers #page-hero .image-revolver .revolver-img {
+.Careers.careers-overview-page #page-hero .image-revolver .revolver-img {
   position: absolute;
   opacity: 0;
   height: 75%;
   top: -5%;
 }
 @media only screen and (min-width: 768px) {
-  .Careers #page-hero .image-revolver .revolver-img {
+  .Careers.careers-overview-page #page-hero .image-revolver .revolver-img {
     height: auto;
     width: 40%;
   }
 }
-.Careers #page-hero .image-revolver .revolver-img.running {
+.Careers.careers-overview-page #page-hero .image-revolver .revolver-img.running {
   -webkit-animation: career-hero-graphic-ltr 12s ease 0s normal infinite;
   animation: career-hero-graphic-ltr 12s ease 0s normal infinite;
 }
 @media only screen and (min-width: 768px) {
-  .Careers #page-hero .image-revolver .revolver-img.running {
+  .Careers.careers-overview-page #page-hero .image-revolver .revolver-img.running {
     width: 55%;
     top: -10%;
     right: 65%;
   }
 }
-.Careers #page-hero .image-revolver .revolver-img.vr {
+.Careers.careers-overview-page #page-hero .image-revolver .revolver-img.vr {
   top: auto;
   bottom: -15%;
   left: 25%;
@@ -1202,22 +1207,22 @@
   animation: career-hero-graphic-rtl 12s ease -3s normal infinite;
 }
 @media only screen and (min-width: 768px) {
-  .Careers #page-hero .image-revolver .revolver-img.vr {
+  .Careers.careers-overview-page #page-hero .image-revolver .revolver-img.vr {
     bottom: 5%;
     width: 35%;
     left: 67%;
   }
 }
-.Careers #page-hero .image-revolver .revolver-img.sparks {
+.Careers.careers-overview-page #page-hero .image-revolver .revolver-img.sparks {
   -webkit-animation: career-hero-graphic-ltr 12s ease -6s normal infinite;
   animation: career-hero-graphic-ltr 12s ease -6s normal infinite;
 }
 @media only screen and (min-width: 768px) {
-  .Careers #page-hero .image-revolver .revolver-img.sparks {
+  .Careers.careers-overview-page #page-hero .image-revolver .revolver-img.sparks {
     right: 63%;
   }
 }
-.Careers #page-hero .image-revolver .revolver-img.chess {
+.Careers.careers-overview-page #page-hero .image-revolver .revolver-img.chess {
   top: auto;
   bottom: -15%;
   left: 25%;
@@ -1225,37 +1230,42 @@
   animation: career-hero-graphic-btt 12s ease -9s normal infinite;
 }
 @media only screen and (min-width: 768px) {
-  .Careers #page-hero .image-revolver .revolver-img.chess {
+  .Careers.careers-overview-page #page-hero .image-revolver .revolver-img.chess {
     bottom: 5%;
     left: 63%;
   }
 }
-.Careers .background-decoration-wrapper {
+.Careers.careers-overview-page .background-decoration-wrapper {
   position: relative;
   overflow: hidden;
 }
-.Careers .background-decoration-wrapper .background-decoration {
+.Careers.careers-overview-page .background-decoration-wrapper .background-decoration {
   position: absolute;
   z-index: -1;
   opacity: 0.2;
   width: 50%;
 }
 @media only screen and (min-width: 768px) {
-  .Careers .background-decoration-wrapper .background-decoration {
+  .Careers.careers-overview-page .background-decoration-wrapper .background-decoration {
     width: 25%;
   }
 }
-.Careers .background-decoration-wrapper .background-decoration.top-right {
+.Careers.careers-overview-page .background-decoration-wrapper .background-decoration.top-right {
   top: 0;
   right: 0;
   margin-right: -7%;
 }
-.Careers .background-decoration-wrapper .background-decoration.bottom-left {
+.Careers.careers-overview-page .background-decoration-wrapper .background-decoration.bottom-right {
+  bottom: 0;
+  right: 0;
+  margin-right: -7%;
+}
+.Careers.careers-overview-page .background-decoration-wrapper .background-decoration.bottom-left {
   bottom: 0;
   left: 0;
   margin-left: -7%;
 }
-.Careers .social-bar {
+.Careers.careers-overview-page .social-bar {
   -webkit-flex: 0 0 auto;
   flex: 0 0 auto;
   max-width: none;
@@ -1264,68 +1274,80 @@
   padding: 10px;
   border-bottom: 2px solid #D9232E;
 }
-.Careers .social-bar .hashtag {
+.Careers.careers-overview-page .social-bar .hashtag {
   width: 100%;
   margin-bottom: 20px;
   text-align: left;
   color: #333333;
 }
 @media only screen and (min-width: 768px) {
-  .Careers .social-bar .hashtag {
+  .Careers.careers-overview-page .social-bar .hashtag {
     width: auto;
     margin-bottom: 0;
     padding-right: 20px;
   }
 }
-.Careers .social-bar .hashtag:hover {
+.Careers.careers-overview-page .social-bar .hashtag:hover {
   color: #D9232E;
 }
-.Careers .social-bar .icon {
+.Careers.careers-overview-page .social-bar .icon {
   margin-left: 10px;
 }
-.Careers .social-bar .icon:hover {
+.Careers.careers-overview-page .social-bar .icon:hover {
   background-color: #D9232E;
 }
-.Careers #introduction .background-decoration.top-right {
+.Careers.careers-overview-page #introduction .background-decoration.top-right {
   margin-top: -5%;
 }
 @media only screen and (min-width: 768px) {
-  .Careers #job-openings .angle.top {
+  .Careers.careers-overview-page #job-openings .angle.top {
     width: 20%;
   }
-  .Careers #job-openings .angle.bottom {
+  .Careers.careers-overview-page #job-openings .angle.bottom {
     width: 35%;
   }
 }
-.Careers #profiles.background-decoration-wrapper .background-decoration {
+.Careers.careers-overview-page #perks #photo-slider {
+  padding: 0 20px;
+}
+.Careers.careers-overview-page #perks #photo-slider .grid-item {
+  padding: 15px 2px;
+}
+.Careers.careers-overview-page #profiles.background-decoration-wrapper .background-decoration {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-.Careers #profiles.background-decoration-wrapper .background-decoration.top-right {
+.Careers.careers-overview-page #profiles.background-decoration-wrapper .background-decoration.top-right {
   margin-top: -3%;
   margin-right: -7%;
 }
-.Careers #profiles.background-decoration-wrapper .background-decoration.bottom-left {
+.Careers.careers-overview-page #profiles.background-decoration-wrapper .background-decoration.bottom-left {
   margin-bottom: 5%;
   margin-left: -5%;
 }
-.Careers #profiles .grid-item {
+.Careers.careers-overview-page #profiles.background-decoration-wrapper .background-decoration.bottom-right {
+  z-index: 0 width:75%;
+  margin-bottom: 5%;
+  margin-left: -5%;
+}
+.Careers.careers-overview-page #profiles .grid-item {
   padding: 40px;
   text-align: center;
 }
-.Careers #profiles .headshot-wrapper {
+.Careers.careers-overview-page .headshot-wrapper {
+  display: block;
   position: relative;
   padding: 20px;
   margin: 0 20px;
   max-width: 300px;
 }
-.Careers #profiles .headshot-wrapper .headshot {
+.Careers.careers-overview-page .headshot-wrapper .headshot {
   position: relative;
   z-index: 1;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   margin: 0;
 }
-.Careers #profiles .headshot-wrapper .decoration {
+.Careers.careers-overview-page .headshot-wrapper .decoration {
   position: absolute;
   z-index: 2;
   height: 30px;
@@ -1334,7 +1356,7 @@
   background-color: #999999;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
-.Careers #profiles .headshot-wrapper .decoration:before {
+.Careers.careers-overview-page .headshot-wrapper .decoration:before {
   content: '';
   position: absolute;
   height: 15px;
@@ -1343,145 +1365,157 @@
   background-color: #999999;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
-.Careers #profiles .headshot-wrapper .decoration.top-left {
+.Careers.careers-overview-page .headshot-wrapper .decoration.top-left {
   top: 3%;
   left: 1%;
 }
-.Careers #profiles .headshot-wrapper .decoration.top-left:before {
+.Careers.careers-overview-page .headshot-wrapper .decoration.top-left:before {
   top: 60%;
   left: 130%;
 }
-.Careers #profiles .headshot-wrapper .decoration.top-right {
+.Careers.careers-overview-page .headshot-wrapper .decoration.top-right {
   top: 15%;
   right: 0;
 }
-.Careers #profiles .headshot-wrapper .decoration.top-right:before {
+.Careers.careers-overview-page .headshot-wrapper .decoration.top-right:before {
   top: -105%;
   left: -50%;
 }
-.Careers #profiles .headshot-wrapper .decoration.bottom-left {
+.Careers.careers-overview-page .headshot-wrapper .decoration.bottom-left {
   height: 15px;
   width: 15px;
   bottom: 15%;
   left: -5%;
 }
-.Careers #profiles .headshot-wrapper .decoration.bottom-left:before {
+.Careers.careers-overview-page .headshot-wrapper .decoration.bottom-left:before {
   display: none;
 }
-.Careers #profiles .headshot-wrapper .decoration.bottom-right {
+.Careers.careers-overview-page .headshot-wrapper .decoration.bottom-right {
   bottom: 5%;
   right: 15%;
 }
-.Careers #profiles .headshot-wrapper .decoration.bottom-right:before {
+.Careers.careers-overview-page .headshot-wrapper .decoration.bottom-right:before {
   top: 80%;
   left: -100%;
 }
-.Careers #profiles .headshot-wrapper.red .decoration.top-left {
+.Careers.careers-overview-page .headshot-wrapper.red .decoration.top-left {
   background-color: #D9232E;
 }
-.Careers #profiles .headshot-wrapper.red .decoration.top-left:before {
+.Careers.careers-overview-page .headshot-wrapper.red .decoration.top-left:before {
   background-color: #FF9100;
 }
-.Careers #profiles .headshot-wrapper.red .decoration.top-right {
+.Careers.careers-overview-page .headshot-wrapper.red .decoration.top-right {
   background-color: #4789A3;
 }
-.Careers #profiles .headshot-wrapper.red .decoration.top-right:before {
+.Careers.careers-overview-page .headshot-wrapper.red .decoration.top-right:before {
   background-color: #D9232E;
 }
-.Careers #profiles .headshot-wrapper.red .decoration.bottom-left {
+.Careers.careers-overview-page .headshot-wrapper.red .decoration.bottom-left {
   background-color: #4789A3;
 }
-.Careers #profiles .headshot-wrapper.red .decoration.bottom-right {
+.Careers.careers-overview-page .headshot-wrapper.red .decoration.bottom-right {
   background-color: #68AA00;
 }
-.Careers #profiles .headshot-wrapper.red .decoration.bottom-right:before {
+.Careers.careers-overview-page .headshot-wrapper.red .decoration.bottom-right:before {
   background-color: #FF9100;
 }
-.Careers #profiles .headshot-wrapper.orange .decoration.top-left {
+.Careers.careers-overview-page .headshot-wrapper.orange .decoration.top-left {
   background-color: #FF9100;
 }
-.Careers #profiles .headshot-wrapper.orange .decoration.top-left:before {
+.Careers.careers-overview-page .headshot-wrapper.orange .decoration.top-left:before {
   background-color: #4789A3;
 }
-.Careers #profiles .headshot-wrapper.orange .decoration.top-right {
+.Careers.careers-overview-page .headshot-wrapper.orange .decoration.top-right {
   background-color: #D9232E;
 }
-.Careers #profiles .headshot-wrapper.orange .decoration.top-right:before {
+.Careers.careers-overview-page .headshot-wrapper.orange .decoration.top-right:before {
   background-color: #68AA00;
 }
-.Careers #profiles .headshot-wrapper.orange .decoration.bottom-left {
+.Careers.careers-overview-page .headshot-wrapper.orange .decoration.bottom-left {
   background-color: #68AA00;
 }
-.Careers #profiles .headshot-wrapper.orange .decoration.bottom-right {
+.Careers.careers-overview-page .headshot-wrapper.orange .decoration.bottom-right {
   background-color: #FF9100;
 }
-.Careers #profiles .headshot-wrapper.orange .decoration.bottom-right:before {
+.Careers.careers-overview-page .headshot-wrapper.orange .decoration.bottom-right:before {
   background-color: #D9232E;
 }
-.Careers #profiles .headshot-wrapper.green .decoration.top-left {
+.Careers.careers-overview-page .headshot-wrapper.green .decoration.top-left {
   background-color: #68AA00;
 }
-.Careers #profiles .headshot-wrapper.green .decoration.top-left:before {
+.Careers.careers-overview-page .headshot-wrapper.green .decoration.top-left:before {
   background-color: #D9232E;
 }
-.Careers #profiles .headshot-wrapper.green .decoration.top-right {
+.Careers.careers-overview-page .headshot-wrapper.green .decoration.top-right {
   background-color: #FF9100;
 }
-.Careers #profiles .headshot-wrapper.green .decoration.top-right:before {
+.Careers.careers-overview-page .headshot-wrapper.green .decoration.top-right:before {
   background-color: #D9232E;
 }
-.Careers #profiles .headshot-wrapper.green .decoration.bottom-left {
+.Careers.careers-overview-page .headshot-wrapper.green .decoration.bottom-left {
   background-color: #4789A3;
 }
-.Careers #profiles .headshot-wrapper.green .decoration.bottom-right {
+.Careers.careers-overview-page .headshot-wrapper.green .decoration.bottom-right {
   background-color: #FF9100;
 }
-.Careers #profiles .headshot-wrapper.green .decoration.bottom-right:before {
+.Careers.careers-overview-page .headshot-wrapper.green .decoration.bottom-right:before {
   background-color: #4789A3;
 }
-.Careers #profiles .headshot-wrapper.blue .decoration.top-left {
+.Careers.careers-overview-page .headshot-wrapper.blue .decoration.top-left {
   background-color: #4789A3;
 }
-.Careers #profiles .headshot-wrapper.blue .decoration.top-left:before {
+.Careers.careers-overview-page .headshot-wrapper.blue .decoration.top-left:before {
   background-color: #D9232E;
 }
-.Careers #profiles .headshot-wrapper.blue .decoration.top-right {
+.Careers.careers-overview-page .headshot-wrapper.blue .decoration.top-right {
   background-color: #FF9100;
 }
-.Careers #profiles .headshot-wrapper.blue .decoration.top-right:before {
+.Careers.careers-overview-page .headshot-wrapper.blue .decoration.top-right:before {
   background-color: #D9232E;
 }
-.Careers #profiles .headshot-wrapper.blue .decoration.bottom-left {
+.Careers.careers-overview-page .headshot-wrapper.blue .decoration.bottom-left {
   background-color: #D9232E;
 }
-.Careers #profiles .headshot-wrapper.blue .decoration.bottom-right {
+.Careers.careers-overview-page .headshot-wrapper.blue .decoration.bottom-right {
   background-color: #68AA00;
 }
-.Careers #profiles .headshot-wrapper.blue .decoration.bottom-right:before {
+.Careers.careers-overview-page .headshot-wrapper.blue .decoration.bottom-right:before {
   background-color: #4789A3;
 }
-.Careers #profiles .headshot-wrapper.navy-blue .decoration.top-left {
+.Careers.careers-overview-page .headshot-wrapper.navy-blue .decoration.top-left {
   background-color: #11566F;
 }
-.Careers #profiles .headshot-wrapper.navy-blue .decoration.top-left:before {
+.Careers.careers-overview-page .headshot-wrapper.navy-blue .decoration.top-left:before {
   background-color: #68AA00;
 }
-.Careers #profiles .headshot-wrapper.navy-blue .decoration.top-right {
+.Careers.careers-overview-page .headshot-wrapper.navy-blue .decoration.top-right {
   background-color: #FF9100;
 }
-.Careers #profiles .headshot-wrapper.navy-blue .decoration.top-right:before {
+.Careers.careers-overview-page .headshot-wrapper.navy-blue .decoration.top-right:before {
   background-color: #68AA00;
 }
-.Careers #profiles .headshot-wrapper.navy-blue .decoration.bottom-left {
+.Careers.careers-overview-page .headshot-wrapper.navy-blue .decoration.bottom-left {
   background-color: #FF9100;
 }
-.Careers #profiles .headshot-wrapper.navy-blue .decoration.bottom-right {
+.Careers.careers-overview-page .headshot-wrapper.navy-blue .decoration.bottom-right {
   background-color: #D9232E;
 }
-.Careers #profiles .headshot-wrapper.navy-blue .decoration.bottom-right:before {
+.Careers.careers-overview-page .headshot-wrapper.navy-blue .decoration.bottom-right:before {
   background-color: #4789A3;
 }
-.Careers #global-reach {
+.Careers.careers-overview-page .white-popup > .flex-row {
+  position: relative;
+  z-index: 1;
+}
+.Careers.careers-overview-page .white-popup.background-decoration-wrapper .background-decoration {
+  z-index: 0;
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg);
+  width: 35%;
+  margin-bottom: 5%;
+  margin-left: -5%;
+}
+.Careers.careers-overview-page #global-reach {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
@@ -1494,11 +1528,11 @@
   overflow: hidden;
   min-height: 80vh;
 }
-.Careers #global-reach > .flex-row {
+.Careers.careers-overview-page #global-reach > .flex-row {
   position: relative;
   z-index: 2;
 }
-.Careers #global-reach .map-background {
+.Careers.careers-overview-page #global-reach .map-background {
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -1510,26 +1544,51 @@
   opacity: 0.1;
 }
 @media only screen and (min-width: 768px) {
-  .Careers #global-reach .map-background {
+  .Careers.careers-overview-page #global-reach .map-background {
     width: 110%;
     height: auto;
   }
 }
-.Careers #disclaimer {
+.Careers.careers-overview-page #disclaimer {
   padding: 30px 0;
   border-bottom: 1px solid #999999;
 }
-.Careers .careers-banner {
+@media only screen and (min-width: 768px) {
+  .Careers.careers-overview-page #page-cta .angle.top {
+    width: 20%;
+  }
+  .Careers.careers-overview-page #page-cta .angle.bottom {
+    width: 35%;
+  }
+}
+.JobOpenings #page-hero .image-background {
+  position: absolute;
+  z-index: 1;
+  top: 70%;
+  left: 35%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 100%;
+  max-width: 800px;
+  opacity: 0.45;
+}
+@media only screen and (min-width: 768px) {
+  .JobOpenings #page-hero .image-background {
+    width: 110%;
+    height: auto;
+  }
+}
+.careers-banner {
   display: block;
   position: relative;
   overflow: hidden;
   background-color: #333333;
 }
-.Careers .careers-banner .banner-content {
+.careers-banner .banner-content {
   position: relative;
   z-index: 2;
 }
-.Careers .careers-banner .image-container {
+.careers-banner .image-container {
   position: absolute;
   z-index: 1;
   height: 100%;
@@ -1537,46 +1596,47 @@
   top: 0;
   left: 0;
 }
-.Careers .careers-banner .image-container * {
+.careers-banner .image-container * {
   height: 100%;
 }
-.Careers .careers-banner .image-container .fade-slider {
+.careers-banner .image-container .fade-slider {
   position: relative;
   overflow: hidden;
   height: 100%;
 }
-.Careers .careers-banner .image-container .fade-slider .banner {
+.careers-banner .image-container .fade-slider .banner {
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
-.Careers .image-section > .flex-row {
+/*fullwidth image banners*/
+.image-section > .flex-row {
   min-height: 65vh;
 }
-.Careers .image-section .background-trans-white {
+.image-section .background-trans-white {
   background-color: rgba(255, 255, 255, 0.9);
 }
-.Careers .smartWidget .srSearch {
+.smartWidget .srSearch {
   min-width: 200px;
   height: auto;
   padding: 10px;
 }
-.Careers .smartWidget .srSearchForm {
+.smartWidget .srSearchForm {
   width: 100%;
   min-width: 200px;
   height: auto;
   margin-right: 0;
 }
-.Careers .smartWidget input[type=text].srSearchInput {
+.smartWidget input[type=text].srSearchInput {
   display: inline-block;
   padding: 5px 10px;
   float: none;
   height: auto;
   width: 100%;
 }
-.Careers .smartWidget .srSearchButton {
+.smartWidget .srSearchButton {
   width: 100%;
   height: auto;
   border: none;
@@ -1585,20 +1645,20 @@
   -moz-border-radius: 0;
   border-radius: 0;
 }
-.Careers .smartWidget .srSearchButton:hover {
+.smartWidget .srSearchButton:hover {
   border: none;
 }
-.Careers .smartWidget .srSearchOption {
+.smartWidget .srSearchOption {
   width: 50%;
   margin-top: 10px;
   padding-right: 10px;
 }
-.Careers .smartWidget .srSearchOption .srSearchOptionText {
+.smartWidget .srSearchOption .srSearchOptionText {
   display: block;
   width: 100%;
   padding: 5px 20px 5px 10px;
 }
-.Careers .smartWidget .srSearchOption .srSearchOptionText:before {
+.smartWidget .srSearchOption .srSearchOptionText:before {
   content: '';
   position: absolute;
   top: 0;
@@ -1609,10 +1669,10 @@
   height: 100%;
   background-color: #cccccc;
 }
-.Careers .smartWidget .srSearchOption .srSearchOptionText:after {
+.smartWidget .srSearchOption .srSearchOptionText:after {
   right: 5px;
 }
-.Careers .smartWidget .srSearchOption:after {
+.smartWidget .srSearchOption:after {
   content: '';
   position: absolute;
   top: 0;
@@ -1623,37 +1683,37 @@
   height: 100%;
   background-color: #cccccc;
 }
-.Careers .smartWidget .srSearchForm,
-.Careers .smartWidget .srSearchOption,
-.Careers .smartWidget .srSearchForm,
-.Careers .smartWidget .srSearchButton {
+.smartWidget .srSearchForm,
+.smartWidget .srSearchOption,
+.smartWidget .srSearchForm,
+.smartWidget .srSearchButton {
   display: inline-block;
   vertical-align: top;
   float: none;
 }
 @media only screen and (min-width: 768px) {
-  .Careers .smartWidget .srSearchForm {
+  .smartWidget .srSearchForm {
     width: 60%;
     vertical-align: middle;
   }
-  .Careers .smartWidget input[type=text].srSearchInput {
+  .smartWidget input[type=text].srSearchInput {
     width: 75%;
     max-width: none;
     margin-bottom: 0px;
     padding: 6px 10px;
   }
-  .Careers .smartWidget .srSearchButton {
+  .smartWidget .srSearchButton {
     width: calc(25% - 10px);
     margin-left: 10px;
   }
-  .Careers .smartWidget .srSearchOption {
+  .smartWidget .srSearchOption {
     width: calc(20% - 10px);
     margin-left: 10px;
     margin-top: 0;
     vertical-align: middle;
   }
 }
-.Careers .sr-plugins--active {
+.sr-plugins--active {
   z-index: 5000;
 }
 .Contact #contact-us > .flex-row {

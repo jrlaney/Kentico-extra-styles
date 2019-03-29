@@ -11,6 +11,38 @@ section {
 .text-block {
   font-weight: 600;
 }
+.video-wrapper.ratio-tablet-portrait {
+  padding-top: 136.88%;
+}
+.video-wrapper.ratio-four-three {
+  padding-top: 75%;
+}
+[class*="col-"].shrink {
+  max-width: 100%;
+}
+.slick-dots {
+  margin-top: 20px;
+}
+.slick-dots li button {
+  border-radius: 0;
+  width: 50px;
+  height: auto;
+  padding: 15px 0;
+  background-color: transparent!important;
+}
+.slick-dots li button:after {
+  content: '';
+  display: block;
+  background-color: #CCCCCC;
+  width: 100%;
+  height: 5px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.slick-dots li.slick-active button:after {
+  background-color: #D9232E;
+  height: 10px;
+}
 .icon-link-grid {
   background-color: transparent!important;
 }
@@ -514,6 +546,37 @@ blockquote:after {
   transform: translateY(-5px);
   border-bottom-color: #D9232E;
 }
+.in-between-card.flex-row {
+  position: relative;
+  z-index: 5;
+}
+.in-between-card.flex-row .card {
+  position: relative;
+  z-index: 5;
+  background-color: #FFFFFF;
+  padding: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 768px) {
+  .in-between-card.flex-row {
+    margin-top: -150px;
+    margin-bottom: 60px;
+  }
+  .in-between-card.flex-row .card {
+    padding: 15px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section.above-card {
+    padding-bottom: 150px!important;
+    position: relative;
+    z-index: 4;
+  }
+}
+section.below-card {
+  overflow: visible!important;
+}
 .hypercard-img {
   border-radius: 10%/6%;
   border: 1px solid #CCCCCC;
@@ -717,6 +780,9 @@ blockquote:after {
 .offpage-image.right {
   float: left;
 }
+.offpage-image.centered {
+  margin-left: -25%;
+}
 @media only screen and (min-width: 980px) {
   .offpage-image.left {
     margin-right: 5%;
@@ -749,6 +815,41 @@ blockquote:after {
 .z-3 {
   position: relative;
   z-index: 3;
+}
+.white-popup.popup-width-jumbo {
+  max-width: 1200px;
+}
+.white-popup.popup-width-large {
+  max-width: 1000px;
+}
+.white-popup.popup-width-medium {
+  max-width: 800px;
+}
+.white-popup.popup-width-small {
+  max-width: 600px;
+}
+.white-popup.popup-width-tiny {
+  max-width: 400px;
+}
+.white-popup.y-scroll {
+  max-height: 80vh;
+  overflow: auto;
+}
+.related-items {
+  background-color: #FFFFFF;
+}
+.related-items .flex-row.start {
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.related-items h2.text-normal.text-dark-gray {
+  font-size: 1.57rem;
+  line-height: 1.4;
+  text-align: center;
+  color: #333333;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 .triangle-group {
   position: relative;
@@ -1169,6 +1270,78 @@ blockquote:after {
     height: 130px;
   }
 }
+.single-angle-cross-hero {
+  position: relative;
+  padding: 60px 0 20px!important;
+  overflow: visible!important;
+}
+@media only screen and (min-width: 768px) {
+  .single-angle-cross-hero {
+    padding: 80px 0 40px!important;
+  }
+}
+.single-angle-cross-hero > .flex-row {
+  position: relative;
+  z-index: 1;
+  color: #FFFFFF;
+}
+.single-angle-cross-hero .inline-flex {
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.single-angle-cross-hero .text-uppercase {
+  letter-spacing: 0.2em;
+}
+.single-angle-cross-hero:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  -webkit-clip-path: polygon(0 100%, 300% 0, 0 0) !important;
+  clip-path: polygon(0 100%, 300% 0, 0 0) !important;
+}
+@media only screen and (min-width: 768px) {
+  .single-angle-cross-hero:before {
+    height: 105%;
+    -webkit-clip-path: polygon(0 100%, 170% 0, 0 0) !important;
+    clip-path: polygon(0 100%, 170% 0, 0 0) !important;
+  }
+}
+.InternetExplorer .single-angle-cross-hero:before {
+  height: 75%;
+  -webkit-transform: skew(0, -10deg);
+  transform: skew(0, -10deg);
+}
+.page-red .single-angle-cross-hero:before {
+  background: #D9232E;
+  background: -webkit-linear-gradient(45deg, #ea2b37, #bd252e);
+  background: linear-gradient(45deg, #ea2b37, #bd252e);
+}
+.page-orange .single-angle-cross-hero:before {
+  background: #FF9100;
+  background: -webkit-linear-gradient(45deg, #ff9c1a, #e08206);
+  background: linear-gradient(45deg, #ff9c1a, #e08206);
+}
+.page-green .single-angle-cross-hero:before {
+  background: #68AA00;
+  background: -webkit-linear-gradient(45deg, #78c300, #588d04);
+  background: linear-gradient(45deg, #78c300, #588d04);
+}
+.page-blue .single-angle-cross-hero:before {
+  background: #4789A3;
+  background: -webkit-linear-gradient(45deg, #449dc0, #44788c);
+  background: linear-gradient(45deg, #449dc0, #44788c);
+}
+.page-navy-blue .single-angle-cross-hero:before {
+  background: #11566F;
+  background: -webkit-linear-gradient(45deg, #0d6b8d, #104456);
+  background: linear-gradient(45deg, #0d6b8d, #104456);
+}
 .gridder {
   position: relative;
   overflow: hidden;
@@ -1573,255 +1746,392 @@ blockquote:after {
   -webkit-transform: skew(0, -10deg);
   transform: skew(0, -10deg);
 }
-#hero.angled-banner.red {
+.page-red #hero.angled-banner {
   background-color: #D9232E;
 }
-#hero.angled-banner.red .angle {
+.page-red #hero.angled-banner .angle {
   background-color: #bd252e;
 }
 @media only screen and (min-width: 768px) {
-  #hero.angled-banner.red .angle {
+  .page-red #hero.angled-banner .angle {
     background-color: #D9232E;
   }
 }
-#hero.angled-banner.red .angle.right {
+.page-red #hero.angled-banner .angle.right {
   background-color: #ed757c;
 }
 @media only screen and (min-width: 768px) {
-  #hero.angled-banner.red .angle.right {
+  .page-red #hero.angled-banner .angle.right {
     background-color: #D9232E;
   }
 }
-.InternetExplorer #hero.angled-banner.red {
+.InternetExplorer .page-red #hero.angled-banner {
   background-color: #D9232E !important;
 }
-.InternetExplorer #hero.angled-banner.red:after {
+.InternetExplorer .page-red #hero.angled-banner:after {
   background-color: #D9232E !important;
 }
-#hero.angled-banner.blue {
-  background-color: #4789A3;
-}
-#hero.angled-banner.blue .angle {
-  background-color: #44788c;
-}
-@media only screen and (min-width: 768px) {
-  #hero.angled-banner.blue .angle {
-    background-color: #4789A3;
-  }
-}
-#hero.angled-banner.blue .angle.right {
-  background-color: #81b9cf;
-}
-@media only screen and (min-width: 768px) {
-  #hero.angled-banner.blue .angle.right {
-    background-color: #4789A3;
-  }
-}
-.InternetExplorer #hero.angled-banner.blue {
-  background-color: #4789A3 !important;
-}
-.InternetExplorer #hero.angled-banner.blue:after {
-  background-color: #4789A3 !important;
-}
-#hero.angled-banner.navy-blue {
-  background-color: #11566F;
-}
-#hero.angled-banner.navy-blue .angle {
-  background-color: #104456;
-}
-@media only screen and (min-width: 768px) {
-  #hero.angled-banner.navy-blue .angle {
-    background-color: #11566F;
-  }
-}
-#hero.angled-banner.navy-blue .angle.right {
-  background-color: #199dcd;
-}
-@media only screen and (min-width: 768px) {
-  #hero.angled-banner.navy-blue .angle.right {
-    background-color: #11566F;
-  }
-}
-.InternetExplorer #hero.angled-banner.navy-blue {
-  background-color: #11566F !important;
-}
-.InternetExplorer #hero.angled-banner.navy-blue:after {
-  background-color: #11566F !important;
-}
-#hero.angled-banner.orange {
+.page-orange #hero.angled-banner {
   background-color: #FF9100;
 }
-#hero.angled-banner.orange .angle {
+.page-orange #hero.angled-banner .angle {
   background-color: #e08206;
 }
 @media only screen and (min-width: 768px) {
-  #hero.angled-banner.orange .angle {
+  .page-orange #hero.angled-banner .angle {
     background-color: #FF9100;
   }
 }
-#hero.angled-banner.orange .angle.right {
+.page-orange #hero.angled-banner .angle.right {
   background-color: #ffbd66;
 }
 @media only screen and (min-width: 768px) {
-  #hero.angled-banner.orange .angle.right {
+  .page-orange #hero.angled-banner .angle.right {
     background-color: #FF9100;
   }
 }
-.InternetExplorer #hero.angled-banner.orange {
+.InternetExplorer .page-orange #hero.angled-banner {
   background-color: #FF9100 !important;
 }
-.InternetExplorer #hero.angled-banner.orange:after {
+.InternetExplorer .page-orange #hero.angled-banner:after {
   background-color: #FF9100 !important;
 }
-#hero.angled-banner.green {
+.page-green #hero.angled-banner {
   background-color: #68AA00;
 }
-#hero.angled-banner.green .angle {
+.page-green #hero.angled-banner .angle {
   background-color: #588d04;
 }
 @media only screen and (min-width: 768px) {
-  #hero.angled-banner.green .angle {
+  .page-green #hero.angled-banner .angle {
     background-color: #68AA00;
   }
 }
-#hero.angled-banner.green .angle.right {
+.page-green #hero.angled-banner .angle.right {
   background-color: #a3ff11;
 }
 @media only screen and (min-width: 768px) {
-  #hero.angled-banner.green .angle.right {
+  .page-green #hero.angled-banner .angle.right {
     background-color: #68AA00;
   }
 }
-.InternetExplorer #hero.angled-banner.green {
+.InternetExplorer .page-green #hero.angled-banner {
   background-color: #68AA00 !important;
 }
-.InternetExplorer #hero.angled-banner.green:after {
+.InternetExplorer .page-green #hero.angled-banner:after {
   background-color: #68AA00 !important;
 }
-#hero.angled-banner.gray {
-  background-color: #999999;
+.page-blue #hero.angled-banner {
+  background-color: #4789A3;
 }
-#hero.angled-banner.gray .angle {
-  background-color: #8c8c8c;
-}
-@media only screen and (min-width: 768px) {
-  #hero.angled-banner.gray .angle {
-    background-color: #999999;
-  }
-}
-#hero.angled-banner.gray .angle.right {
-  background-color: #cfc9c9;
+.page-blue #hero.angled-banner .angle {
+  background-color: #44788c;
 }
 @media only screen and (min-width: 768px) {
-  #hero.angled-banner.gray .angle.right {
-    background-color: #999999;
+  .page-blue #hero.angled-banner .angle {
+    background-color: #4789A3;
   }
 }
-.InternetExplorer #hero.angled-banner.gray {
-  background-color: #999999 !important;
+.page-blue #hero.angled-banner .angle.right {
+  background-color: #81b9cf;
 }
-.InternetExplorer #hero.angled-banner.gray:after {
-  background-color: #999999 !important;
+@media only screen and (min-width: 768px) {
+  .page-blue #hero.angled-banner .angle.right {
+    background-color: #4789A3;
+  }
 }
-#hero.angled-banner.light-gray {
-  background-color: #f2f2f2;
+.InternetExplorer .page-blue #hero.angled-banner {
+  background-color: #4789A3 !important;
 }
-#hero.angled-banner.light-gray .angle {
+.InternetExplorer .page-blue #hero.angled-banner:after {
+  background-color: #4789A3 !important;
+}
+.page-navy-blue #hero.angled-banner {
+  background-color: #11566F;
+}
+.page-navy-blue #hero.angled-banner .angle {
+  background-color: #104456;
+}
+@media only screen and (min-width: 768px) {
+  .page-navy-blue #hero.angled-banner .angle {
+    background-color: #11566F;
+  }
+}
+.page-navy-blue #hero.angled-banner .angle.right {
+  background-color: #199dcd;
+}
+@media only screen and (min-width: 768px) {
+  .page-navy-blue #hero.angled-banner .angle.right {
+    background-color: #11566F;
+  }
+}
+.InternetExplorer .page-navy-blue #hero.angled-banner {
+  background-color: #11566F !important;
+}
+.InternetExplorer .page-navy-blue #hero.angled-banner:after {
+  background-color: #11566F !important;
+}
+@media only screen and (min-width: 768px) {
+  #visualization-slider {
+    position: relative;
+  }
+  #visualization-slider:before,
+  #visualization-slider:after {
+    position: absolute;
+    z-index: 2;
+    content: '';
+    height: 100%;
+    width: 20px;
+    top: 0;
+  }
+  #visualization-slider:before {
+    left: 0;
+    background: -moz-linear-gradient(left, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(left, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=1);
+  }
+  #visualization-slider:after {
+    right: 0;
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=1);
+  }
+}
+#visualization-slider .slick-track {
+  padding: 5% 0;
+}
+#visualization-slider .slick-slide {
+  z-index: 0;
+  padding: 15px;
+  opacity: 0.5;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+#visualization-slider .slick-slide .screenshot {
+  border: 1px solid #999999;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+#visualization-slider .slick-slide.slick-center {
+  z-index: 1;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  opacity: .99;
+  -webkit-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+@media only screen and (min-width: 768px) {
+  #visualization-slider .slick-slide.slick-center {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+#alexa-animation .speech {
+  display: block;
+  margin-top: 40px;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+}
+@media only screen and (min-width: 768px) {
+  #alexa-animation .speech {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+#alexa-animation .speech > span {
+  display: inline-block;
+  position: relative;
+  border-radius: 10px;
+  padding: .75em 2em;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+}
+#alexa-animation .speech > span:before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 50%;
+  margin-left: -14px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-top: 15px solid #4789A3;
+  border-right: 15px solid transparent;
+}
+#alexa-animation .speech.question {
+  padding-left: 10%;
+}
+#alexa-animation .speech.question > span {
   background-color: #e5e5e5;
+  color: #777777;
+  -webkit-animation: alexa-question-animation 10s linear 0s normal infinite;
+  animation: alexa-question-animation 10s linear 0s normal infinite;
 }
-@media only screen and (min-width: 768px) {
-  #hero.angled-banner.light-gray .angle {
-    background-color: #f2f2f2;
-  }
+#alexa-animation .speech.question > span:before {
+  border-bottom-color: #e5e5e5;
+  left: 15%;
+  border-left: 0 solid transparent;
+  border-top: 25px solid #e5e5e5;
+  border-right: 25px solid transparent;
 }
-#hero.angled-banner.light-gray .angle.right {
-  background-color: #ffffff;
+#alexa-animation .speech.answer {
+  text-align: center;
 }
-@media only screen and (min-width: 768px) {
-  #hero.angled-banner.light-gray .angle.right {
-    background-color: #f2f2f2;
-  }
+#alexa-animation .speech.answer > span {
+  background-color: #4789A3;
+  color: #FFFFFF;
+  -webkit-animation: alexa-answer-animation 10s linear 0s normal infinite;
+  animation: alexa-answer-animation 10s linear 0s normal infinite;
 }
-.InternetExplorer #hero.angled-banner.light-gray {
-  background-color: #f2f2f2 !important;
+#alexa-animation .speech.answer > span:before {
+  border-bottom-color: #4789A3;
 }
-.InternetExplorer #hero.angled-banner.light-gray:after {
-  background-color: #f2f2f2 !important;
+#alexa-animation .device {
+  display: block;
+  margin-top: 40px;
 }
-#hero.angled-banner.dark-gray {
-  background-color: #777777;
+.vertical-diagram {
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #777777;
 }
-#hero.angled-banner.dark-gray .angle {
-  background-color: #6a6a6a;
+.vertical-diagram .item-row {
+  position: relative;
 }
-@media only screen and (min-width: 768px) {
-  #hero.angled-banner.dark-gray .angle {
-    background-color: #777777;
-  }
+.vertical-diagram .item-row:before {
+  content: '';
+  position: absolute;
+  height: 40px;
+  width: 1px;
+  left: 50%;
+  margin-left: -2px;
+  border-left: 5px dashed #CCCCCC;
 }
-#hero.angled-banner.dark-gray .angle.right {
-  background-color: #aea6a6;
+.vertical-diagram .item-row .grid-item {
+  position: relative;
 }
-@media only screen and (min-width: 768px) {
-  #hero.angled-banner.dark-gray .angle.right {
-    background-color: #777777;
-  }
+.vertical-diagram .item-row .grid-item:before,
+.vertical-diagram .item-row .grid-item:after {
+  content: '';
+  position: absolute;
 }
-.InternetExplorer #hero.angled-banner.dark-gray {
-  background-color: #777777 !important;
+.vertical-diagram .item-row .grid-item:before {
+  height: 40px;
+  width: 1px;
+  left: 50%;
+  margin-left: -2px;
+  border-left: 5px dashed #CCCCCC;
 }
-.InternetExplorer #hero.angled-banner.dark-gray:after {
-  background-color: #777777 !important;
+.vertical-diagram .item-row .grid-item:after {
+  height: 1px;
+  width: 100%;
+  left: 0;
+  border-top: 5px dashed #CCCCCC;
 }
-#hero.angled-banner.black {
-  background-color: #333333;
+.vertical-diagram .item-row .grid-item:first-child:after {
+  left: 50%;
+  width: 50%;
 }
-#hero.angled-banner.black .angle {
-  background-color: #262626;
+.vertical-diagram .item-row .grid-item:last-child:after {
+  width: 50%;
 }
-@media only screen and (min-width: 768px) {
-  #hero.angled-banner.black .angle {
-    background-color: #333333;
-  }
+.vertical-diagram .item-row.row-above {
+  padding-bottom: 40px;
 }
-#hero.angled-banner.black .angle.right {
-  background-color: #6b6161;
+.vertical-diagram .item-row.row-above:before {
+  bottom: 0;
 }
-@media only screen and (min-width: 768px) {
-  #hero.angled-banner.black .angle.right {
-    background-color: #333333;
-  }
+.vertical-diagram .item-row.row-above .grid-item {
+  padding-bottom: 40px;
 }
-.InternetExplorer #hero.angled-banner.black {
-  background-color: #333333 !important;
+.vertical-diagram .item-row.row-above .grid-item:before,
+.vertical-diagram .item-row.row-above .grid-item:after {
+  bottom: 0;
 }
-.InternetExplorer #hero.angled-banner.black:after {
-  background-color: #333333 !important;
+.vertical-diagram .item-row.row-below {
+  padding-top: 40px;
 }
-#hero.angled-banner.white {
-  background-color: #FFFFFF;
+.vertical-diagram .item-row.row-below:before {
+  top: 0;
 }
-#hero.angled-banner.white .angle {
-  background-color: #f2f2f2;
+.vertical-diagram .item-row.row-below .grid-item {
+  padding-top: 40px;
 }
-@media only screen and (min-width: 768px) {
-  #hero.angled-banner.white .angle {
-    background-color: #FFFFFF;
-  }
+.vertical-diagram .item-row.row-below .grid-item:before,
+.vertical-diagram .item-row.row-below .grid-item:after {
+  top: 0;
 }
-#hero.angled-banner.white .angle.right {
-  background-color: #ffffff;
+.vertical-diagram .top-point-up {
+  position: relative;
+  margin-top: 15px;
 }
-@media only screen and (min-width: 768px) {
-  #hero.angled-banner.white .angle.right {
-    background-color: #FFFFFF;
-  }
+.vertical-diagram .top-point-up:before {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -14px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid #D9232E;
+  border-right: 15px solid transparent;
 }
-.InternetExplorer #hero.angled-banner.white {
-  background-color: #FFFFFF !important;
+.vertical-diagram .top-point-down {
+  position: relative;
+  margin-top: 15px;
 }
-.InternetExplorer #hero.angled-banner.white:after {
-  background-color: #FFFFFF !important;
+.vertical-diagram .top-point-down:after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -14px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-top: 15px solid #D9232E;
+  border-right: 15px solid transparent;
+}
+.vertical-diagram .bottom-point-up {
+  position: relative;
+  margin-bottom: 15px;
+}
+.vertical-diagram .bottom-point-up:before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 50%;
+  margin-left: -14px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid #D9232E;
+  border-right: 15px solid transparent;
+}
+.vertical-diagram .bottom-point-down {
+  position: relative;
+  margin-bottom: 15px;
+}
+.vertical-diagram .bottom-point-down:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 50%;
+  margin-left: -14px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-top: 15px solid #D9232E;
+  border-right: 15px solid transparent;
 }
 #products-overview .device-family {
   position: relative;
@@ -1898,6 +2208,32 @@ blockquote:after {
     width: 35%;
   }
 }
+#products-overview #hyperintelligence .device-mockup {
+  width: 190%;
+}
+#products-overview #hyperintelligence .device-mockup .cursor {
+  position: absolute;
+  z-index: 2;
+  width: 10px;
+  top: 50%;
+  left: 50%;
+  -webkit-animation: hero-cursor-website 7.5s linear 0s normal infinite;
+  animation: hero-cursor-website 7.5s linear 0s normal infinite;
+}
+@media only screen and (min-width: 768px) {
+  #products-overview #hyperintelligence .device-mockup .cursor {
+    width: 15px;
+  }
+}
+#products-overview #hyperintelligence .device-mockup .hypercard-img {
+  position: absolute;
+  top: 22%;
+  left: 22%;
+  width: 25%;
+  opacity: 0;
+  -webkit-animation: hero-card-appear 7.5s linear 0s normal infinite;
+  animation: hero-card-appear 7.5s linear 0s normal infinite;
+}
 @media only screen and (min-width: 768px) {
   #products-overview #enterprise-platform .offpage-image {
     width: 200%;
@@ -1967,62 +2303,6 @@ blockquote:after {
     margin-left: -22%;
   }
 }
-@media only screen and (min-width: 768px) {
-  .Analytics #visualization-slider {
-    position: relative;
-  }
-  .Analytics #visualization-slider:before,
-  .Analytics #visualization-slider:after {
-    position: absolute;
-    z-index: 2;
-    content: '';
-    height: 100%;
-    width: 20px;
-    top: 0;
-  }
-  .Analytics #visualization-slider:before {
-    left: 0;
-    background: -moz-linear-gradient(left, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-    background: -webkit-linear-gradient(left, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-    background: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=1);
-  }
-  .Analytics #visualization-slider:after {
-    right: 0;
-    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
-    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=1);
-  }
-}
-.Analytics #visualization-slider .slick-track {
-  padding: 5% 0;
-}
-.Analytics #visualization-slider .slick-slide {
-  z-index: 0;
-  padding: 15px;
-  opacity: 0.5;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
-}
-.Analytics #visualization-slider .slick-slide .screenshot {
-  border: 1px solid #999999;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-}
-.Analytics #visualization-slider .slick-slide.slick-center {
-  z-index: 1;
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  opacity: .99;
-  -webkit-transition: all 0.4s ease-out 0s;
-  transition: all 0.4s ease-out 0s;
-}
-@media only screen and (min-width: 768px) {
-  .Analytics #visualization-slider .slick-slide.slick-center {
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
-  }
-}
 .Analytics #share-insights .device-mockup.mac-thunderbolt {
   position: relative;
   z-index: 0;
@@ -2073,35 +2353,16 @@ blockquote:after {
   }
 }
 @media only screen and (min-width: 980px) {
-  .BigData #hero .device-mockup {
+  .BigData #hero.bottom-white-triangle .device-mockup {
     width: 215%;
     margin-right: -15%;
   }
 }
-.BigData #hero .device-mockup img {
+.BigData #hero.bottom-white-triangle .device-mockup img {
   max-width: 100%!important;
   margin-left: 0!important;
 }
-.BigData #data-discovery img {
-  width: 175%;
-  max-width: none;
-  margin-right: 0;
-  margin-left: -37.5%;
-}
 @media only screen and (min-width: 768px) {
-  .BigData #hadoop-diagram-apps .grid-item {
-    position: relative;
-  }
-  .BigData #hadoop-diagram-apps .grid-item:after {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 30px;
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    background-color: #999999;
-  }
   .BigData #hadoop-diagram-platform {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -2152,21 +2413,24 @@ blockquote:after {
     right: 50%;
   }
 }
-@media only screen and (min-width: 980px) {
-  .Collaboration #communication-and-collaboration > .flex-row > div:first-child {
-    padding-right: 40px;
-  }
-  .Collaboration #communication-and-collaboration > .flex-row > div:last-child {
-    padding-left: 40px;
-  }
+.PersonalizationCollaboration #communication-and-collaboration .stacked-mockups .device-mockup.ipad:first-child {
+  position: absolute;
+  z-index: 2;
+  width: 120%;
+  right: 45%;
+  top: 20%;
 }
-.Collaboration #notifications .device-mockup.ipad:first-child {
+.PersonalizationCollaboration #communication-and-collaboration .stacked-mockups .device-mockup.ipad:last-child {
+  width: 130%;
+  margin-bottom: 20%;
+}
+.PersonalizationCollaboration #notifications .device-mockup.ipad:first-child {
   position: relative;
   z-index: 1;
   width: 80%;
   margin-bottom: 15%;
 }
-.Collaboration #notifications .device-mockup.ipad:last-child {
+.PersonalizationCollaboration #notifications .device-mockup.ipad:last-child {
   position: absolute;
   z-index: 2;
   width: 80%;
@@ -2199,86 +2463,85 @@ blockquote:after {
 .DataConnectivity #connector-list .card .card-content:first-child {
   border-bottom: 1px solid #ddd;
 }
-@media only screen and (min-width: 980px) {
-  .DataDiscovery #hero img {
-    max-width: none;
-    margin-left: -120%;
+.DataVisualization #hero.bottom-white-triangle .flex-row > div:first-child {
+  z-index: 1;
+}
+.DataVisualization #hero.bottom-white-triangle .offpage-image {
+  position: relative;
+  z-index: 0;
+  margin-left: -30%;
+}
+@media only screen and (min-width: 768px) {
+  .DataVisualization #hero.bottom-white-triangle .offpage-image {
+    width: 300%;
+    margin-left: -125%;
+    margin-top: -5%;
   }
 }
-@media only screen and (min-width: 1200px) {
-  .DataDiscovery #hero img {
+@media only screen and (min-width: 980px) {
+  .DataVisualization #hero.bottom-white-triangle .offpage-image {
+    width: auto;
     margin-left: -100%;
   }
 }
-.DataDiscovery #hero img.offpage-image {
-  position: relative;
-  z-index: -1;
-  width: auto;
-  max-width: 100%;
-}
-@media only screen and (min-width: 980px) {
-  .DataDiscovery #hero img.offpage-image {
-    max-width: none;
-  }
-}
 @media only screen and (min-width: 768px) {
-  .DataDiscovery #dashboard-design img {
+  .DataVisualization #dashboard-design img {
     max-width: none;
     margin-left: -110%;
   }
 }
 @media only screen and (min-width: 980px) {
-  .DataDiscovery #dashboard-design img {
+  .DataVisualization #dashboard-design img {
     margin-left: -50%;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .DataDiscovery #dashboard-design img {
+  .DataVisualization #dashboard-design img {
     margin-left: -25%;
   }
 }
-.DataDiscovery #dashboard-design .offpage-image img {
+.DataVisualization #dashboard-design .offpage-image img {
   margin-left: 0;
   max-width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  .DataDiscovery #dashboard-sharing img {
+  .DataVisualization #dashboard-sharing img {
     max-width: 600px;
     margin-left: -75%;
   }
 }
 @media only screen and (min-width: 980px) {
-  .DataDiscovery #dashboard-sharing img {
+  .DataVisualization #dashboard-sharing img {
     max-width: 900px;
     margin-left: -90%;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .DataDiscovery #dashboard-sharing img {
+  .DataVisualization #dashboard-sharing img {
     max-width: 1200px;
     margin-left: -110%;
   }
 }
-.DataDiscovery #dashboard-sharing .device-mockup.macbook-pro {
+.DataVisualization #dashboard-sharing .device-mockup.macbook-pro {
   position: relative;
   z-index: 0;
   margin-right: 15%;
 }
-.DataDiscovery #dashboard-sharing .device-mockup.ipad {
+.DataVisualization #dashboard-sharing .device-mockup.ipad {
   position: absolute;
   z-index: 1;
   width: 80%;
   right: 15%;
   bottom: -10px;
 }
-.DataDiscovery #dashboard-sharing .device-mockup.iphone {
+.DataVisualization #dashboard-sharing .device-mockup.iphone {
   position: absolute;
   z-index: 2;
   width: 20%;
   right: 5%;
   bottom: -20px;
 }
-.DataDiscovery #dashboard-sharing .device-mockup img {
+.DataVisualization #dashboard-sharing .device-mockup img {
   max-width: 100%;
   margin-left: 0;
 }
@@ -2377,20 +2640,20 @@ blockquote:after {
   bottom: 0;
 }
 @media only screen and (max-width: 767px) {
-  .Hypercards #page-hero .device-mockup {
+  .Cards #page-hero .device-mockup {
     width: 200%;
     margin-left: -57%;
   }
 }
-.Hypercards #page-hero .device-mockup .screen {
+.Cards #page-hero .device-mockup .screen {
   background-color: #D9232E;
   overflow: visible;
 }
-.Hypercards #page-hero .device-mockup .screen:hover .highlight-zone .hypercard-img {
+.Cards #page-hero .device-mockup .screen:hover .highlight-zone .hypercard-img {
   -webkit-animation: 0 !important;
   animation: 0 !important;
 }
-.Hypercards #page-hero .device-mockup .instructions {
+.Cards #page-hero .device-mockup .instructions {
   display: block;
   position: absolute;
   z-index: 2;
@@ -2410,14 +2673,14 @@ blockquote:after {
   letter-spacing: 0.05em;
 }
 @media only screen and (min-width: 768px) {
-  .Hypercards #page-hero .device-mockup .instructions {
+  .Cards #page-hero .device-mockup .instructions {
     left: 0;
     width: 100%;
     bottom: 0;
     top: auto;
   }
 }
-.Hypercards #page-hero .device-mockup .highlight-zone {
+.Cards #page-hero .device-mockup .highlight-zone {
   position: absolute;
   display: inline-block;
   background-color: transparent;
@@ -2425,11 +2688,11 @@ blockquote:after {
   width: 10%;
 }
 @media only screen and (min-width: 768px) {
-  .Hypercards #page-hero .device-mockup .highlight-zone {
+  .Cards #page-hero .device-mockup .highlight-zone {
     height: 40px;
   }
 }
-.Hypercards #page-hero .device-mockup .highlight-zone .hypercard-img {
+.Cards #page-hero .device-mockup .highlight-zone .hypercard-img {
   position: absolute;
   z-index: -1;
   opacity: 0;
@@ -2442,16 +2705,16 @@ blockquote:after {
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-.Hypercards #page-hero .device-mockup .highlight-zone:hover .hypercard-img {
+.Cards #page-hero .device-mockup .highlight-zone:hover .hypercard-img {
   opacity: 1;
   right: 100%!important;
   z-index: 3;
 }
-.Hypercards #page-hero .device-mockup .highlight-zone.company {
+.Cards #page-hero .device-mockup .highlight-zone.company {
   top: 13%;
   left: 26%;
 }
-.Hypercards #page-hero .device-mockup .highlight-zone.company .hypercard-img {
+.Cards #page-hero .device-mockup .highlight-zone.company .hypercard-img {
   right: auto;
   top: calc(100% - 20px);
   left: 50%;
@@ -2460,58 +2723,58 @@ blockquote:after {
   -webkit-animation: hero-card-appear-below 10s linear 3s normal infinite;
   animation: hero-card-appear-below 10s linear 3s normal infinite;
 }
-.Hypercards #page-hero .device-mockup .highlight-zone.company:hover .hypercard-img {
+.Cards #page-hero .device-mockup .highlight-zone.company:hover .hypercard-img {
   right: auto!important;
   top: 100%!important;
 }
-.Hypercards #page-hero .device-mockup .highlight-zone.company-2 {
+.Cards #page-hero .device-mockup .highlight-zone.company-2 {
   top: 36%;
   left: 25%;
 }
-.Hypercards #page-hero .device-mockup .highlight-zone.company-2 .hypercard-img {
+.Cards #page-hero .device-mockup .highlight-zone.company-2 .hypercard-img {
   right: auto;
   left: calc(100% - 20px);
 }
-.Hypercards #page-hero .device-mockup .highlight-zone.company-2:hover .hypercard-img {
+.Cards #page-hero .device-mockup .highlight-zone.company-2:hover .hypercard-img {
   right: auto!important;
   left: 100%!important;
 }
-.Hypercards #page-hero .device-mockup .highlight-zone.company-3 {
+.Cards #page-hero .device-mockup .highlight-zone.company-3 {
   top: 61%;
   left: 50%;
 }
-.Hypercards #page-hero .device-mockup .highlight-zone.company-3 .hypercard-img {
+.Cards #page-hero .device-mockup .highlight-zone.company-3 .hypercard-img {
   bottom: -100%;
   top: auto;
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
-.Hypercards #page-hero .device-mockup .highlight-zone.person {
+.Cards #page-hero .device-mockup .highlight-zone.person {
   top: 41%;
   left: 56%;
 }
-.Hypercards #page-hero .device-mockup .highlight-zone.person .hypercard-img {
+.Cards #page-hero .device-mockup .highlight-zone.person .hypercard-img {
   -webkit-animation: hero-card-appear-left 10s linear 6s normal infinite;
   animation: hero-card-appear-left 10s linear 6s normal infinite;
 }
-.Hypercards #page-hero .device-mockup .highlight-zone.other {
+.Cards #page-hero .device-mockup .highlight-zone.other {
   top: 46%;
   left: 73%;
 }
-.Hypercards #page-hero .device-mockup .highlight-zone.other .hypercard-img {
+.Cards #page-hero .device-mockup .highlight-zone.other .hypercard-img {
   -webkit-animation: hero-card-appear-left 10s linear 9s normal infinite;
   animation: hero-card-appear-left 10s linear 9s normal infinite;
 }
-.Hypercards #connect-to-data #connected-card-diagram .card-row {
+.Cards #connect-to-data #connected-card-diagram .card-row {
   position: relative;
   padding-bottom: 40px;
 }
-.Hypercards #connect-to-data #connected-card-diagram .card-row:before {
+.Cards #connect-to-data #connected-card-diagram .card-row:before {
   content: '';
   position: absolute;
   display: block;
 }
-.Hypercards #connect-to-data #connected-card-diagram .card-row:before {
+.Cards #connect-to-data #connected-card-diagram .card-row:before {
   height: 40px;
   width: 1px;
   bottom: 0;
@@ -2519,17 +2782,17 @@ blockquote:after {
   margin-left: -2px;
   border-left: 5px dashed #CCCCCC;
 }
-.Hypercards #connect-to-data #connected-card-diagram .logo-row .grid-item {
+.Cards #connect-to-data #connected-card-diagram .logo-row .grid-item {
   position: relative;
   padding-top: 50px;
 }
-.Hypercards #connect-to-data #connected-card-diagram .logo-row .grid-item:before,
-.Hypercards #connect-to-data #connected-card-diagram .logo-row .grid-item:after {
+.Cards #connect-to-data #connected-card-diagram .logo-row .grid-item:before,
+.Cards #connect-to-data #connected-card-diagram .logo-row .grid-item:after {
   content: '';
   position: absolute;
   display: block;
 }
-.Hypercards #connect-to-data #connected-card-diagram .logo-row .grid-item:before {
+.Cards #connect-to-data #connected-card-diagram .logo-row .grid-item:before {
   height: 50px;
   width: 1px;
   top: 0;
@@ -2537,44 +2800,44 @@ blockquote:after {
   margin-left: -2px;
   border-left: 5px dashed #CCCCCC;
 }
-.Hypercards #connect-to-data #connected-card-diagram .logo-row .grid-item:after {
+.Cards #connect-to-data #connected-card-diagram .logo-row .grid-item:after {
   width: 100%;
   height: 1px;
   top: 0;
   left: 0;
   border-top: 5px dashed #CCCCCC;
 }
-.Hypercards #connect-to-data #connected-card-diagram .logo-row .grid-item:first-child:after {
+.Cards #connect-to-data #connected-card-diagram .logo-row .grid-item:first-child:after {
   width: 50%;
   left: 50%;
 }
-.Hypercards #connect-to-data #connected-card-diagram .logo-row .grid-item:nth-child(2):after {
+.Cards #connect-to-data #connected-card-diagram .logo-row .grid-item:nth-child(2):after {
   width: 50%;
   left: auto;
   right: 50%;
 }
-.Hypercards #connect-to-data #connected-card-diagram .logo-row .grid-item:last-child:after {
+.Cards #connect-to-data #connected-card-diagram .logo-row .grid-item:last-child:after {
   width: 0;
   left: auto;
   right: 50%;
 }
 @media only screen and (min-width: 768px) {
-  .Hypercards #connect-to-data #connected-card-diagram .logo-row .grid-item:nth-child(2):after {
+  .Cards #connect-to-data #connected-card-diagram .logo-row .grid-item:nth-child(2):after {
     width: 100%;
     left: 0;
     right: 0;
   }
-  .Hypercards #connect-to-data #connected-card-diagram .logo-row .grid-item:last-child:after {
+  .Cards #connect-to-data #connected-card-diagram .logo-row .grid-item:last-child:after {
     width: 50%;
   }
 }
-.Hypercards #card-style-animation {
+.Cards #card-style-animation {
   display: inline-block;
   position: relative;
   overflow: visible;
   margin: 0 0 60px 60px;
 }
-.Hypercards #card-style-animation .hypercard-img {
+.Cards #card-style-animation .hypercard-img {
   position: absolute;
   z-index: 0;
   margin: 0;
@@ -2583,19 +2846,19 @@ blockquote:after {
   -webkit-animation: card-stack-cycle 8s linear 0s normal infinite;
   animation: card-stack-cycle 8s linear 0s normal infinite;
 }
-.Hypercards #card-style-animation .hypercard-img:first-child {
+.Cards #card-style-animation .hypercard-img:first-child {
   position: relative;
   width: 400px;
 }
-.Hypercards #card-style-animation .hypercard-img:nth-child(2) {
+.Cards #card-style-animation .hypercard-img:nth-child(2) {
   -webkit-animation-delay: -2s !important;
   animation-delay: -2s !important;
 }
-.Hypercards #card-style-animation .hypercard-img:nth-child(3) {
+.Cards #card-style-animation .hypercard-img:nth-child(3) {
   -webkit-animation-delay: -4s !important;
   animation-delay: -4s !important;
 }
-.Hypercards #card-style-animation .hypercard-img:nth-child(4) {
+.Cards #card-style-animation .hypercard-img:nth-child(4) {
   -webkit-animation-delay: -6s !important;
   animation-delay: -6s !important;
 }
@@ -2748,6 +3011,18 @@ blockquote:after {
   -webkit-animation: app-lock-animation 7s 2s ease-out infinite;
   animation: app-lock-animation 7s 2s ease-out infinite;
 }
+.Mobile #hypermobile .device-mockup.iphone-x {
+  position: absolute;
+  z-index: 2;
+  width: 35%;
+  bottom: 0;
+  right: 5%;
+}
+.Mobile #hypermobile .device-mockup.ipad {
+  position: relative;
+  z-index: 1;
+  margin-right: 10%;
+}
 .Emm #hero .ipad {
   z-index: 0;
   width: 150%;
@@ -2768,9 +3043,14 @@ blockquote:after {
   -webkit-animation: app-lock-animation 7s 2s ease-out infinite;
   animation: app-lock-animation 7s 2s ease-out infinite;
 }
-.Emm #emm-vendors .logo {
-  max-height: calc(100% - 20px);
-  max-width: calc(100% - 20px);
+.Emm #page-hero .ipad .app-lock {
+  position: absolute;
+  width: 4%;
+  right: 26%;
+  top: 6%;
+  opacity: 0;
+  -webkit-animation: app-lock-animation 7s 2s ease-out infinite;
+  animation: app-lock-animation 7s 2s ease-out infinite;
 }
 .Transactions #hero .img-col {
   position: relative;
@@ -2793,6 +3073,17 @@ blockquote:after {
   right: 20px;
   bottom: 20px;
   z-index: 1;
+}
+.Transactions #page-hero .device-mockup.ipad {
+  z-index: 0;
+  margin-left: 10%;
+}
+.Transactions #page-hero .device-mockup.iphone {
+  position: absolute;
+  z-index: 1;
+  width: 25%;
+  left: 0;
+  bottom: 0;
 }
 .Transactions #take-action .image-row {
   position: relative;
@@ -2819,8 +3110,262 @@ blockquote:after {
   bottom: 5%;
   left: 35%;
 }
+.Transactions #take-action .stacked-mockups .iphone {
+  position: absolute;
+  z-index: 2;
+  width: 15%;
+  bottom: 0;
+  left: 0;
+}
+.Transactions #take-action .stacked-mockups .ipad {
+  width: 60%;
+}
+.Transactions #take-action .stacked-mockups .ipad.right {
+  position: relative;
+  z-index: 0;
+  margin-left: auto;
+  margin-bottom: 10%;
+}
+.Transactions #take-action .stacked-mockups .ipad.center {
+  position: absolute;
+  z-index: 1;
+  bottom: 5%;
+  right: 35%;
+}
+.Hyperintelligence #introduction .device-mockup {
+  width: 190%;
+}
+.Hyperintelligence #introduction .device-mockup .cursor {
+  position: absolute;
+  z-index: 2;
+  width: 10px;
+  top: 50%;
+  left: 50%;
+  -webkit-animation: hero-cursor-hyperint 10s linear 0s normal infinite;
+  animation: hero-cursor-hyperint 10s linear 0s normal infinite;
+}
+@media only screen and (min-width: 768px) {
+  .Hyperintelligence #introduction .device-mockup .cursor {
+    width: 15px;
+  }
+}
+.Hyperintelligence #introduction .device-mockup .hypercard-img {
+  position: absolute;
+  top: 20%;
+  left: 48%;
+  width: 25%;
+  opacity: 0;
+  -webkit-animation: hero-card-appear-hyperint 10s linear 0s normal infinite;
+  animation: hero-card-appear-hyperint 10s linear 0s normal infinite;
+}
+.Hyperintelligence #hyper-mobile .device-mockup.iphone {
+  position: absolute;
+  z-index: 2;
+  width: 35%;
+  bottom: 0;
+  right: 5%;
+}
+.Hyperintelligence #hyper-mobile .device-mockup.ipad {
+  position: relative;
+  z-index: 1;
+  margin-right: 10%;
+}
+.Hyperintelligence #enterprise-platform {
+  overflow: visible;
+}
+.Hyperintelligence #enterprise-platform .flex-row > div:first-child {
+  position: relative;
+  z-index: 1;
+}
+.Hyperintelligence #enterprise-platform .offpage-image {
+  position: relative;
+  z-index: 0;
+  margin-left: -10%;
+  margin-top: -20%;
+}
+@media only screen and (min-width: 768px) {
+  .Hyperintelligence #enterprise-platform .offpage-image {
+    width: 330%;
+    margin-top: 30%;
+    margin-left: -145%;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .Hyperintelligence #enterprise-platform .offpage-image {
+    width: auto;
+    margin-top: -5%;
+    margin-left: -110%;
+  }
+}
+.Hypermobile #page-hero .device-mockup.iphone-x {
+  position: absolute;
+  z-index: 2;
+  width: 25%;
+  bottom: 0;
+  right: 0;
+}
+.Hypermobile #page-hero .device-mockup.ipad {
+  position: relative;
+  z-index: 1;
+  margin-right: 5%;
+}
+.Hypermobile #card-deployment .device-mockup.iphone-x {
+  position: absolute;
+  z-index: 2;
+  width: 27%;
+  bottom: 0;
+  left: 5%;
+}
+.Hypermobile #card-deployment .device-mockup.macbook-pro {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 5%;
+}
 .EnterprisePlatform #introduction .device-mockup {
   width: 215%;
+}
+.EnterprisePlatform #analyze-build-empower {
+  position: relative;
+}
+.EnterprisePlatform #analyze-build-empower > .flex-row {
+  position: relative;
+  z-index: 2;
+}
+.EnterprisePlatform #analyze-build-empower .mac-thunderbolt {
+  position: relative;
+  margin: 0 auto 40px auto;
+}
+@media only screen and (min-width: 768px) {
+  .EnterprisePlatform #analyze-build-empower .mac-thunderbolt {
+    width: 80%;
+  }
+}
+.EnterprisePlatform #analyze-build-empower .device-background {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.EnterprisePlatform #analyze-build-empower .device-background .device-mockup {
+  position: absolute;
+}
+.EnterprisePlatform #analyze-build-empower .device-background .iphone-x {
+  width: 25%;
+}
+@media only screen and (min-width: 768px) {
+  .EnterprisePlatform #analyze-build-empower .device-background .iphone-x {
+    width: 15%;
+  }
+}
+.EnterprisePlatform #analyze-build-empower .device-background .ipad {
+  width: 75%;
+}
+@media only screen and (min-width: 768px) {
+  .EnterprisePlatform #analyze-build-empower .device-background .ipad {
+    width: 50%;
+  }
+}
+.EnterprisePlatform #analyze-build-empower .device-background .macbook-air {
+  width: 145%;
+}
+@media only screen and (min-width: 768px) {
+  .EnterprisePlatform #analyze-build-empower .device-background .macbook-air {
+    width: 80%;
+  }
+}
+.EnterprisePlatform #analyze-build-empower .device-background .macbook-pro {
+  width: 140%;
+}
+@media only screen and (min-width: 768px) {
+  .EnterprisePlatform #analyze-build-empower .device-background .macbook-pro {
+    width: 90%;
+  }
+}
+.EnterprisePlatform #analyze-build-empower .device-background .left-side {
+  position: absolute;
+  right: 50%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  max-width: 600px;
+}
+.EnterprisePlatform #analyze-build-empower .device-background .left-side .ipad {
+  top: 25%;
+  right: 45%;
+}
+.EnterprisePlatform #analyze-build-empower .device-background .left-side .ipad.white {
+  display: none;
+}
+.EnterprisePlatform #analyze-build-empower .device-background .left-side .macbook-air {
+  top: -40%;
+  right: 50%;
+}
+.EnterprisePlatform #analyze-build-empower .device-background .left-side .iphone-x {
+  top: -32%;
+  right: 30%;
+}
+@media only screen and (min-width: 768px) {
+  .EnterprisePlatform #analyze-build-empower .device-background .left-side .ipad {
+    top: 0;
+    right: 135%;
+  }
+  .EnterprisePlatform #analyze-build-empower .device-background .left-side .ipad.white {
+    display: block;
+    top: 35%;
+    right: 110%;
+  }
+  .EnterprisePlatform #analyze-build-empower .device-background .left-side .macbook-air {
+    top: 1%;
+    right: 55%;
+  }
+  .EnterprisePlatform #analyze-build-empower .device-background .left-side .iphone-x {
+    top: 32%;
+    right: 70%;
+  }
+}
+.EnterprisePlatform #analyze-build-empower .device-background .right-side {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 50%;
+  height: 70%;
+  max-width: 600px;
+}
+.EnterprisePlatform #analyze-build-empower .device-background .right-side .ipad {
+  top: 35%;
+  left: 30%;
+}
+.EnterprisePlatform #analyze-build-empower .device-background .right-side .ipad.white {
+  top: 85%;
+  left: 70%;
+}
+.EnterprisePlatform #analyze-build-empower .device-background .right-side .macbook-pro {
+  top: 10%;
+  left: 55%;
+}
+.EnterprisePlatform #analyze-build-empower .device-background .right-side .iphone-x {
+  top: 25%;
+  left: 30%;
+}
+@media only screen and (min-width: 768px) {
+  .EnterprisePlatform #analyze-build-empower .device-background .right-side .ipad {
+    top: 50%;
+    left: 145%;
+  }
+  .EnterprisePlatform #analyze-build-empower .device-background .right-side .ipad.white {
+    top: 3%;
+    left: 105%;
+  }
+  .EnterprisePlatform #analyze-build-empower .device-background .right-side .macbook-pro {
+    top: 45%;
+    left: 55%;
+  }
+  .EnterprisePlatform #analyze-build-empower .device-background .right-side .iphone-x {
+    top: 10%;
+    left: 75%;
+  }
 }
 .EnterprisePlatform #federated-data-diagram {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -3076,9 +3621,66 @@ blockquote:after {
   float: right;
   width: 100%;
 }
+.FederatedAnalytics #data-scientists {
+  overflow: visible;
+}
+.FederatedAnalytics #data-scientists .flex-row > div:first-child {
+  position: relative;
+  z-index: 1;
+}
+.FederatedAnalytics #data-scientists .offpage-image {
+  position: relative;
+  z-index: 0;
+  width: 200%;
+  margin-right: -65%;
+}
 @media only screen and (min-width: 768px) {
-  .EmbeddedAnalytics #customized-apps .custom-mobile-sdk-graphic .device-mockup {
-    width: 115%;
+  .FederatedAnalytics #data-scientists .offpage-image {
+    width: 350%;
+    margin-right: -125%;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .FederatedAnalytics #data-scientists .offpage-image {
+    width: 300%;
+    margin-right: -100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .FederatedAnalytics #data-scientists .offpage-image {
+    width: 270%;
+    margin-right: -90%;
+  }
+}
+.FederatedAnalytics #developers {
+  overflow: visible;
+}
+.FederatedAnalytics #developers .flex-row > div:first-child {
+  position: relative;
+  z-index: 1;
+}
+.FederatedAnalytics #developers .offpage-image {
+  position: relative;
+  z-index: 0;
+  width: 200%;
+  margin-left: -65%;
+}
+@media only screen and (min-width: 768px) {
+  .FederatedAnalytics #developers .offpage-image {
+    width: 350%;
+    margin-left: -125%;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .FederatedAnalytics #developers .offpage-image {
+    width: 300%;
+    margin-left: -100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .FederatedAnalytics #developers .offpage-image {
+    width: 270%;
+    margin-left: -90%;
   }
 }
 .IdentityAndTelemetry #hero .angle-wrapper .angle.right {
@@ -3224,42 +3826,45 @@ blockquote:after {
   position: absolute;
   z-index: 0;
   width: 35%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  margin-left: -25%;
+  bottom: 40px;
+  left: 5%;
 }
 .DigitalCredentials #customize-credentials .device-mockup.iphone-x.right {
-  margin-left: 25%;
+  left: auto;
+  right: 5%;
 }
-.SecureGateways #hero .img-col {
+.BadgeCommunicator #page-hero .first-md,
+.BadgeCommunicator #hero .first-md {
   position: relative;
 }
-.SecureGateways #hero .img-col .macbook-pro {
+.BadgeCommunicator #page-hero .device-mockup.macbook-pro,
+.BadgeCommunicator #hero .device-mockup.macbook-pro {
   z-index: 0;
   margin-left: 7%;
   margin-bottom: 7%;
 }
-.SecureGateways #hero .img-col .ipad {
+.BadgeCommunicator #page-hero .device-mockup.ipad,
+.BadgeCommunicator #hero .device-mockup.ipad {
   position: absolute;
   z-index: 1;
   width: 55%;
   left: 7%;
   bottom: 7%;
 }
-.SecureGateways #hero .img-col .iphone,
-.SecureGateways #hero .img-col .iphone-x {
+.BadgeCommunicator #page-hero .device-mockup.iphone,
+.BadgeCommunicator #hero .device-mockup.iphone,
+.BadgeCommunicator #page-hero .device-mockup.iphone-x,
+.BadgeCommunicator #hero .device-mockup.iphone-x {
   position: absolute;
   z-index: 2;
   width: 15%;
   left: 20px;
   bottom: 20px;
 }
-.SecureGateways #physical-infrastructure .img-col {
+.BadgeCommunicator #physical-infrastructure .img-col {
   position: relative;
 }
-.SecureGateways #physical-infrastructure .img-col .ipad {
+.BadgeCommunicator #physical-infrastructure .device-mockup.ipad {
   z-index: 0;
   width: 150%;
   float: left;
@@ -3267,22 +3872,22 @@ blockquote:after {
   margin-bottom: 30px;
 }
 @media only screen and (min-width: 980px) {
-  .SecureGateways #physical-infrastructure .img-col .ipad {
+  .BadgeCommunicator #physical-infrastructure .device-mockup.ipad {
     margin-bottom: 40px;
   }
 }
-.SecureGateways #physical-infrastructure .img-col .iphone,
-.SecureGateways #physical-infrastructure .img-col .iphone-x {
+.BadgeCommunicator #physical-infrastructure .device-mockup.iphone,
+.BadgeCommunicator #physical-infrastructure .device-mockup.iphone-x {
   position: absolute;
   z-index: 1;
   width: 35%;
   left: 10%;
   bottom: 15px;
 }
-.SecureGateways #logical-access .img-col {
+.BadgeCommunicator #logical-access .img-col {
   position: relative;
 }
-.SecureGateways #logical-access .img-col .macbook-air {
+.BadgeCommunicator #logical-access .device-mockup.macbook-air {
   z-index: 0;
   width: 200%;
   float: right;
@@ -3290,12 +3895,12 @@ blockquote:after {
   margin-bottom: 30px;
 }
 @media only screen and (min-width: 980px) {
-  .SecureGateways #logical-access .img-col .macbook-air {
+  .BadgeCommunicator #logical-access .device-mockup.macbook-air {
     margin-bottom: 40px;
   }
 }
-.SecureGateways #logical-access .img-col .iphone,
-.SecureGateways #logical-access .img-col .iphone-x {
+.BadgeCommunicator #logical-access .device-mockup.iphone,
+.BadgeCommunicator #logical-access .device-mockup.iphone-x {
   position: absolute;
   z-index: 1;
   width: 35%;
@@ -3850,50 +4455,8 @@ blockquote:after {
 .InternetExplorer.WhatsNew #hero.background-image.overlay:after {
   background-color: rgba(0, 0, 0, 0.5);
 }
-.WhatsNew .related-items {
-  background-color: #FFFFFF;
-}
-.WhatsNew .related-items .flex-row.start {
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-.WhatsNew .related-items h2.text-normal.text-dark-gray {
-  font-size: 1.57rem;
-  line-height: 1.4;
-  text-align: center;
-  color: #333333;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-.WhatsNew #slim-cta [class*="col-"].shrink {
-  max-width: 100%;
-}
 .WhatsNew .resource-thumbnail.transparent:after {
   background-color: transparent;
-}
-.WhatsNew .slick-dots {
-  margin-top: 20px;
-}
-.WhatsNew .slick-dots li button {
-  border-radius: 0;
-  width: 50px;
-  height: auto;
-  padding: 15px 0;
-  background-color: transparent;
-}
-.WhatsNew .slick-dots li button:after {
-  content: '';
-  display: block;
-  background-color: #CCCCCC;
-  width: 100%;
-  height: 5px;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-.WhatsNew .slick-dots li.slick-active button:after {
-  background-color: #D9232E;
-  height: 10px;
 }
 .WhatsNew #federated-diagram .tool-lockup {
   position: relative;
@@ -4198,73 +4761,6 @@ blockquote:after {
     margin-top: -20%;
     margin-left: -110%;
   }
-}
-.WhatsNew.Hyperintelligence #alexa-animation .speech {
-  display: block;
-  margin-top: 40px;
-  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 600;
-}
-@media only screen and (min-width: 768px) {
-  .WhatsNew.Hyperintelligence #alexa-animation .speech {
-    font-size: 20px;
-    line-height: 24px;
-  }
-}
-.WhatsNew.Hyperintelligence #alexa-animation .speech > span {
-  display: inline-block;
-  position: relative;
-  border-radius: 10px;
-  padding: .75em 2em;
-  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
-  max-width: 500px;
-}
-.WhatsNew.Hyperintelligence #alexa-animation .speech > span:before {
-  content: '';
-  position: absolute;
-  display: block;
-  top: 100%;
-  left: 50%;
-  margin-left: -14px;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-top: 15px solid #4789A3;
-  border-right: 15px solid transparent;
-}
-.WhatsNew.Hyperintelligence #alexa-animation .speech.question {
-  padding-left: 10%;
-}
-.WhatsNew.Hyperintelligence #alexa-animation .speech.question > span {
-  background-color: #e5e5e5;
-  color: #777777;
-  -webkit-animation: alexa-question-animation 10s linear 0s normal infinite;
-  animation: alexa-question-animation 10s linear 0s normal infinite;
-}
-.WhatsNew.Hyperintelligence #alexa-animation .speech.question > span:before {
-  border-bottom-color: #e5e5e5;
-  left: 15%;
-  border-left: 0 solid transparent;
-  border-top: 25px solid #e5e5e5;
-  border-right: 25px solid transparent;
-}
-.WhatsNew.Hyperintelligence #alexa-animation .speech.answer {
-  text-align: center;
-}
-.WhatsNew.Hyperintelligence #alexa-animation .speech.answer > span {
-  background-color: #4789A3;
-  color: #FFFFFF;
-  -webkit-animation: alexa-answer-animation 10s linear 0s normal infinite;
-  animation: alexa-answer-animation 10s linear 0s normal infinite;
-}
-.WhatsNew.Hyperintelligence #alexa-animation .speech.answer > span:before {
-  border-bottom-color: #4789A3;
-}
-.WhatsNew.Hyperintelligence #alexa-animation .device {
-  display: block;
-  margin-top: 40px;
 }
 .WhatsNew.TransformationalMobility #build-apps {
   display: -webkit-flex;
@@ -5621,6 +6117,50 @@ blockquote:after {
     left: 50%;
   }
 }
+@-webkit-keyframes hero-cursor-hyperint {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+  5% {
+    top: 50%;
+    left: 78%;
+  }
+  70% {
+    top: 50%;
+    left: 78%;
+  }
+  75% {
+    top: 50%;
+    left: 50%;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+  }
+}
+@keyframes hero-cursor-hyperint {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+  5% {
+    top: 50%;
+    left: 78%;
+  }
+  70% {
+    top: 50%;
+    left: 78%;
+  }
+  75% {
+    top: 50%;
+    left: 50%;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+  }
+}
 @-webkit-keyframes hero-card-appear {
   0% {
     opacity: 0;
@@ -5683,6 +6223,70 @@ blockquote:after {
     opacity: 0;
     -webkit-transform: translateY(10%);
     transform: translateY(10%);
+  }
+}
+@-webkit-keyframes hero-card-appear-hyperint {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10%);
+    transform: translateX(-10%);
+  }
+  5% {
+    opacity: 0;
+    -webkit-transform: translateX(-10%);
+    transform: translateX(-10%);
+  }
+  7% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  72% {
+    opacity: 0;
+    -webkit-transform: translateX(10%);
+    transform: translateX(10%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(10%);
+    transform: translateX(10%);
+  }
+}
+@keyframes hero-card-appear-hyperint {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10%);
+    transform: translateX(-10%);
+  }
+  5% {
+    opacity: 0;
+    -webkit-transform: translateX(-10%);
+    transform: translateX(-10%);
+  }
+  7% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  72% {
+    opacity: 0;
+    -webkit-transform: translateX(10%);
+    transform: translateX(10%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(10%);
+    transform: translateX(10%);
   }
 }
 @-webkit-keyframes hero-card-appear-above {
