@@ -101,6 +101,11 @@
   position: relative;
   z-index: 3;
 }
+@media only screen and (max-width: 767px) {
+  .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a .icon {
+    display: none;
+  }
+}
 @media only screen and (min-width: 768px) {
   .panelstack.vertical-panelstack {
     display: -webkit-flex;
@@ -146,9 +151,18 @@
     border: none;
   }
   .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
     color: #FFFFFF;
     padding: 15px 40px 15px 20px;
     opacity: 0.5;
+  }
+  .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a .icon {
+    margin: 0 15px 0 0;
   }
   .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a:hover {
     color: #FFFFFF;
@@ -198,23 +212,21 @@
     animation: fade-slide-right 0.3s ease-out 0.2s normal forwards;
     padding: 30px;
   }
+  .panelstack.vertical-panelstack .panel-content .video-wrapper {
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease-out 0s;
+    transition: opacity 0.5s ease-out 0s;
+  }
+  .panelstack.vertical-panelstack .panel-content.hide .video-wrapper {
+    opacity: 0;
+    -webkit-transition: opacity 2.5s ease-out 1s;
+    transition: opacity 2.5s ease-out 1s;
+  }
   .panelstack.vertical-panelstack.red .panel-nav .panel-nav-elem.active-panel > a {
     background-color: #D9232E;
   }
   .panelstack.vertical-panelstack.red .panel-nav .panel-nav-elem.active-panel > a:before {
     border-left-color: #D9232E;
-  }
-  .panelstack.vertical-panelstack.blue .panel-nav .panel-nav-elem.active-panel > a {
-    background-color: #4789A3;
-  }
-  .panelstack.vertical-panelstack.blue .panel-nav .panel-nav-elem.active-panel > a:before {
-    border-left-color: #4789A3;
-  }
-  .panelstack.vertical-panelstack.navy-blue .panel-nav .panel-nav-elem.active-panel > a {
-    background-color: #11566F;
-  }
-  .panelstack.vertical-panelstack.navy-blue .panel-nav .panel-nav-elem.active-panel > a:before {
-    border-left-color: #11566F;
   }
   .panelstack.vertical-panelstack.orange .panel-nav .panel-nav-elem.active-panel > a {
     background-color: #FF9100;
@@ -228,35 +240,17 @@
   .panelstack.vertical-panelstack.green .panel-nav .panel-nav-elem.active-panel > a:before {
     border-left-color: #68AA00;
   }
-  .panelstack.vertical-panelstack.gray .panel-nav .panel-nav-elem.active-panel > a {
-    background-color: #999999;
+  .panelstack.vertical-panelstack.blue .panel-nav .panel-nav-elem.active-panel > a {
+    background-color: #4789A3;
   }
-  .panelstack.vertical-panelstack.gray .panel-nav .panel-nav-elem.active-panel > a:before {
-    border-left-color: #999999;
+  .panelstack.vertical-panelstack.blue .panel-nav .panel-nav-elem.active-panel > a:before {
+    border-left-color: #4789A3;
   }
-  .panelstack.vertical-panelstack.light-gray .panel-nav .panel-nav-elem.active-panel > a {
-    background-color: #f2f2f2;
+  .panelstack.vertical-panelstack.navy .panel-nav .panel-nav-elem.active-panel > a {
+    background-color: #11566F;
   }
-  .panelstack.vertical-panelstack.light-gray .panel-nav .panel-nav-elem.active-panel > a:before {
-    border-left-color: #f2f2f2;
-  }
-  .panelstack.vertical-panelstack.dark-gray .panel-nav .panel-nav-elem.active-panel > a {
-    background-color: #777777;
-  }
-  .panelstack.vertical-panelstack.dark-gray .panel-nav .panel-nav-elem.active-panel > a:before {
-    border-left-color: #777777;
-  }
-  .panelstack.vertical-panelstack.black .panel-nav .panel-nav-elem.active-panel > a {
-    background-color: #333333;
-  }
-  .panelstack.vertical-panelstack.black .panel-nav .panel-nav-elem.active-panel > a:before {
-    border-left-color: #333333;
-  }
-  .panelstack.vertical-panelstack.white .panel-nav .panel-nav-elem.active-panel > a {
-    background-color: #FFFFFF;
-  }
-  .panelstack.vertical-panelstack.white .panel-nav .panel-nav-elem.active-panel > a:before {
-    border-left-color: #FFFFFF;
+  .panelstack.vertical-panelstack.navy .panel-nav .panel-nav-elem.active-panel > a:before {
+    border-left-color: #11566F;
   }
 }
 @media only screen and (min-width: 980px) {
@@ -1561,7 +1555,7 @@
     width: 35%;
   }
 }
-.JobOpenings #page-hero .image-background {
+.JobSearch #page-hero .image-background {
   position: absolute;
   z-index: 1;
   top: 70%;
@@ -1573,7 +1567,7 @@
   opacity: 0.45;
 }
 @media only screen and (min-width: 768px) {
-  .JobOpenings #page-hero .image-background {
+  .JobSearch #page-hero .image-background {
     width: 110%;
     height: auto;
   }

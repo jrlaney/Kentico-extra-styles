@@ -1,11 +1,20 @@
 @import '../settings.less';
 
 p:empty {margin-bottom:0!important;}
+
 [class*="col-"].shrink {max-width:100%;}
+
+a.text-white, a.text-white:hover {
+    color:@white;
+    text-decoration:underline;
+}
+
+.button-group .button {max-width:100%;}
 
 //new components
 @import '../_new-components/anchor-link-grid.less';
 @import '../_new-components/background-color-filters.less';
+@import '../_new-components/blockquote.less';
 @import '../_new-components/customer-success-logo-video-slider.less';
 @import '../_new-components/multi-item-slider-nav.less';
 @import '../_new-components/popup-window-multiple-sizes.less';
@@ -15,80 +24,137 @@ p:empty {margin-bottom:0!important;}
 
 // OVERRIDES
 
-    // remove secondary-navigation from landing pages
-    .top-banner .secondary-fullwidth { display: none!important; }
-    .top-banner .is-sticky{min-height:0}
-
-    // remove top line from gated landing pages
-    .landing-page .hero .line:first-child,
-    .landing-page #hero .line:first-child { display: none; }
-
-    // vertically center hero sections on gated landing pages
-    .landing-page .hero > .flex-row,
-    .landing-page #hero{ .align-items(center); }
-
-    // remove landing page headline to allow an image on top of the headling on health assessment landing pages
-    .health-assessment.landing-page .hero .text-col h2:first-of-type,
-    .health-assessment.landing-page #hero .text-col h2:first-of-type{ display: none; }
-
-    // change color of text for hero banners with background images
-    .landing-page .hero.background-image .text-col, .landing-page #hero.background-image .text-col { h1, h2, h3, h4, h5, h6, p { color: @white; } }
-
-    // change color of text for form if you used an overlay
-    .landing-page .background-image.overlay .form-col {color: @black;}
-
-    //remove the overlay from a background image block
-    .overlay.no-overlay:after {display:none;}
+    // // remove secondary-navigation from landing pages
+    // .top-banner .secondary-fullwidth { display: none!important; }
+    // .top-banner .is-sticky{min-height:0}
+    //
+    // // remove top line from gated landing pages
+    // .landing-page .hero .line:first-child,
+    // .landing-page #hero .line:first-child { display: none; }
+    //
+    // // vertically center hero sections on gated landing pages
+    // .landing-page .hero > .flex-row,
+    // .landing-page #hero{ .align-items(center); }
+    //
+    // // remove landing page headline to allow an image on top of the headling on health assessment landing pages
+    // .health-assessment.landing-page .hero .text-col h2:first-of-type,
+    // .health-assessment.landing-page #hero .text-col h2:first-of-type{ display: none; }
+    //
+    // // change color of text for hero banners with background images
+    // .landing-page .hero.background-image .text-col, .landing-page #hero.background-image .text-col { h1, h2, h3, h4, h5, h6, p { color: @white; } }
+    //
+    // // change color of text for form if you used an overlay
+    // .landing-page .background-image.overlay .form-col {color: @black;}
+    //
+    // //remove the overlay from a background image block
+    // .overlay.no-overlay:after {display:none;}
 
 // HERO BANNER IMAGES
 
-#hero.background-image {
-
-    // default hero banner image
-    background-image: url('/getmedia/68437a18-5129-4e1d-b6ab-4da328d490ec/microstrategy-10');
-
-    // default hero banner images for competitor landing pages
-    .competitors & { background-image: url('/getmedia/15396046-3ebb-40b8-9c9e-30627ddf54ef/analytics-dashboard-on-glass-desk'); }
-
-    // default hero banner images for health assessment landing pages
-    .health-assessment & { background-image: url('/getmedia/363276df-682e-42e4-9fcc-7621ebc50878/laptop-on-desk-with-espresso-and-sketchbook'); }
-
-    // default hero banner images for education landing pages
-    .education & { background-image: url('/getmedia/d12af49b-de8e-4532-a199-f7a33f36dbf3/education'); }
-
-    // default hero banner images for academics landing pages
-    .academics.students & { background-image: url('/getmedia/4789f7ca-6699-4c17-b7fa-ae092e9de135/students'); }
-    .academics.instructors & { background-image: url('/getmedia/3452a3b2-0530-426c-b6d0-08f8230c934b/instructors'); }
-
-    // default hero banner images for product landing pages
-    .desktop & { background-image: url('/getmedia/97a4b0f1-a811-45f4-b556-272f87f183ed/desktop'); }
-
-    // default hero banner images for platform landing pages
-    .analytics & { background-image: url('/getmedia/98e213c0-439c-4450-b1b8-ff71bafc1ec3/analytics'); }
-    .mobile & { background-image: url('/getmedia/3860d01d-5f68-4830-9ce0-024ce4b75ded/mobile'); }
-    .cloud & { background-image: url('/getmedia/35ab5009-ad93-4516-8b9a-071f5799712d/cloud'); }
-
-    // default hero banner images for capability landing pages
-    .data-discovery & { background-image: url('/getmedia/47f7bd5d-d2bb-45cd-93cc-ee69b309fb05/data-discovery'); }
-    .embedded-analytics & { background-image: url('/getmedia/6e625b85-56e3-4ac6-a4d9-7a1b216679f7/embedded-analytics'); }
-
-    // default hero banner images for solution landing pages
-    .retail & { background-image: url('/getmedia/389bacbd-e868-44d9-a0df-c757fe7bdc24/retail'); }
-    .banking & { background-image: url('/getmedia/d873f654-bfff-4f52-8713-7aebe2d66bc8/banking'); }
-    .sales & { background-image: url('/getmedia/e5a10e33-8f00-48ed-be2f-2940a0bec304/sales'); }
-    .healthcare & { background-image: url('/getmedia/e739b77d-9271-4e19-a755-463250e873ba/healthcare'); }
-    .manufacturing & { background-image: url('/getmedia/20f97917-db4e-40eb-89b2-f09c2d48b1ba/manufacturing'); }
-    .higher-education & { background-image: url('/getmedia/6880d700-f8b3-4f81-9539-45c1e30f15a8/higher-education'); }
-
-    // custom hero banner images for customer landing pages
-    #the-container-store & { background-image: url('/getmedia/584f0faf-301a-48a4-81aa-ea07eaee1066/the-container-store');}
-
-    // custom hero banner images for competitor landing pages
-
-}
+// #hero.background-image {
+//
+//     // default hero banner image
+//     background-image: url('/getmedia/68437a18-5129-4e1d-b6ab-4da328d490ec/microstrategy-10');
+//
+//     // default hero banner images for competitor landing pages
+//     .competitors & { background-image: url('/getmedia/15396046-3ebb-40b8-9c9e-30627ddf54ef/analytics-dashboard-on-glass-desk'); }
+//
+//     // default hero banner images for health assessment landing pages
+//     .health-assessment & { background-image: url('/getmedia/363276df-682e-42e4-9fcc-7621ebc50878/laptop-on-desk-with-espresso-and-sketchbook'); }
+//
+//     // default hero banner images for education landing pages
+//     .education & { background-image: url('/getmedia/d12af49b-de8e-4532-a199-f7a33f36dbf3/education'); }
+//
+//     // default hero banner images for academics landing pages
+//     .academics.students & { background-image: url('/getmedia/4789f7ca-6699-4c17-b7fa-ae092e9de135/students'); }
+//     .academics.instructors & { background-image: url('/getmedia/3452a3b2-0530-426c-b6d0-08f8230c934b/instructors'); }
+//
+//     // default hero banner images for product landing pages
+//     .desktop & { background-image: url('/getmedia/97a4b0f1-a811-45f4-b556-272f87f183ed/desktop'); }
+//
+//     // default hero banner images for platform landing pages
+//     .analytics & { background-image: url('/getmedia/98e213c0-439c-4450-b1b8-ff71bafc1ec3/analytics'); }
+//     .mobile & { background-image: url('/getmedia/3860d01d-5f68-4830-9ce0-024ce4b75ded/mobile'); }
+//     .cloud & { background-image: url('/getmedia/35ab5009-ad93-4516-8b9a-071f5799712d/cloud'); }
+//
+//     // default hero banner images for capability landing pages
+//     .data-discovery & { background-image: url('/getmedia/47f7bd5d-d2bb-45cd-93cc-ee69b309fb05/data-discovery'); }
+//     .embedded-analytics & { background-image: url('/getmedia/6e625b85-56e3-4ac6-a4d9-7a1b216679f7/embedded-analytics'); }
+//
+//     // default hero banner images for solution landing pages
+//     .retail & { background-image: url('/getmedia/389bacbd-e868-44d9-a0df-c757fe7bdc24/retail'); }
+//     .banking & { background-image: url('/getmedia/d873f654-bfff-4f52-8713-7aebe2d66bc8/banking'); }
+//     .sales & { background-image: url('/getmedia/e5a10e33-8f00-48ed-be2f-2940a0bec304/sales'); }
+//     .healthcare & { background-image: url('/getmedia/e739b77d-9271-4e19-a755-463250e873ba/healthcare'); }
+//     .manufacturing & { background-image: url('/getmedia/20f97917-db4e-40eb-89b2-f09c2d48b1ba/manufacturing'); }
+//     .higher-education & { background-image: url('/getmedia/6880d700-f8b3-4f81-9539-45c1e30f15a8/higher-education'); }
+//
+//     // custom hero banner images for customer landing pages
+//     #the-container-store & { background-image: url('/getmedia/584f0faf-301a-48a4-81aa-ea07eaee1066/the-container-store');}
+//
+//     // custom hero banner images for competitor landing pages
+//
+// }
 
 // default background image for symposium sections
-section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-68011851ad81/symposia'); }
+// section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-68011851ad81/symposia'); }
+
+
+
+
+#page-hero.form-fix {
+    > .flex-row {
+        .justify-content(space-between);
+        .col-md-6.col-xl-5:first-child {
+            h1.text-large {font-weight:400;}
+            @media @medium {.flex(0,0,50%);}
+        }
+    }
+    #lead-gen-form {
+        width:~"calc(100% - 40px)";
+        margin-left:auto; margin-right:auto;
+        padding:20px 15px;
+        @media @medium {width:~"calc(100% - 30px)";}
+        box-shadow: 1px 1px 5px fade(@pure-black, 50%);
+    }
+}
+
+
+
+
+#page-hero.form-overlap {
+    @media @medium {
+        overflow:hidden;
+        padding-bottom:0;
+        > .flex-row {
+            .align-items(stretch);
+            .col-md-6.col-xl-5:first-child {
+                .display(flex);
+                .flex-direction(column);
+                .align-items(flex-start);
+            }
+        }
+        .above-cut-content {
+            margin-bottom:120px;
+        }
+        .below-cut-content {
+            .flex(1, 1, 0px);
+            position:relative;
+            padding:60px 0;
+            color:@black;
+            &:after {
+                content:'';
+                position:absolute; z-index:-1;
+                background-color:@white;
+                height:~"calc(100% + 15px)"; width:~"calc(100vw + 15px)";
+                bottom:-15px; left:100%;
+                .translateX(-50%);
+            }
+        }
+    }
+}
+
+
 
 
 
@@ -176,36 +242,36 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
 
 
 // SCROLLDOWN BUTTON + ICON
-.scrolldown {
-    position:absolute!important;
-    bottom:0; left:0;
-    width:100%!important;
-    padding:15px 20px;
-    max-height:40px;
-    @media @medium {max-height:80px;}
-    @media @large {max-height:120px;}
-
-    font-family:@myriad-pro;
-    text-align:center;
-    color:@white;
-    .uppercase;
-    font-weight:600;
-    font-size:14px; line-height:1em;
-
-    &:hover {
-        color:@white;
-        background-color: fade(@pure-black, 50%);
-    }
-
-    .cta-text {
-        display:block;
-        margin-bottom:5px;
-        @media @small-only {display:none;}
-    }
-    .icon {
-        @media @medium {font-size:24px;}
-    }
-}
+// .scrolldown {
+//     position:absolute!important;
+//     bottom:0; left:0;
+//     width:100%!important;
+//     padding:15px 20px;
+//     max-height:40px;
+//     @media @medium {max-height:80px;}
+//     @media @large {max-height:120px;}
+//
+//     font-family:@myriad-pro;
+//     text-align:center;
+//     color:@white;
+//     .uppercase;
+//     font-weight:600;
+//     font-size:14px; line-height:1em;
+//
+//     &:hover {
+//         color:@white;
+//         background-color: fade(@pure-black, 50%);
+//     }
+//
+//     .cta-text {
+//         display:block;
+//         margin-bottom:5px;
+//         @media @small-only {display:none;}
+//     }
+//     .icon {
+//         @media @medium {font-size:24px;}
+//     }
+// }
 
 
 //RESOURCE THUMB W/ NO MASK
@@ -216,19 +282,19 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
 }
 
 //iframe styles for demos in magnific popups (education ecourseware page)
-.white-popup.demo-popup {
-    max-width:100%;
-    @media @xlarge {max-width:@large-breakpoint;}
-    .demo-wrapper {
-        position:relative;
-        padding-top:58.6%;
-        .demo-embed {
-            position:absolute;
-            width:100%; height:100%;
-            top:0; left:0;
-        }
-    }
-}
+// .white-popup.demo-popup {
+//     max-width:100%;
+//     @media @xlarge {max-width:@large-breakpoint;}
+//     .demo-wrapper {
+//         position:relative;
+//         padding-top:58.6%;
+//         .demo-embed {
+//             position:absolute;
+//             width:100%; height:100%;
+//             top:0; left:0;
+//         }
+//     }
+// }
 
 
 //DIV WITH A NUMBER NEXT TO IT
@@ -261,41 +327,41 @@ section#symposium { background-image: url('/getmedia/b03015fc-cbe0-4634-b210-680
 
 
 //SPECIAL BLOCKQUOTE
-blockquote {
-    display:block; position:relative;
-    padding:0; margin:20px 40px;
-    font-family:@myriad-pro;
-    font-weight:400;
-    font-size:22px; line-height:26px;
-    @media @medium {font-size:24px; line-height:33px;}
-
-    > footer, > span {
-        display:block;
-        margin-top:30px;
-        font-weight:600;
-        font-size:16px; line-height:20px;
-        .uppercase;
-        @media @medium {font-size:18px;}
-    }
-
-	&:before, &:after {
-        content:'“';
-	    display:block; position:absolute;
-	    top:0.2em; left:-50px;
-	    height:56px; width:68px;
-
-        font-family:@lucida-grande;
-        font-size:250px;
-        opacity:.2;
-	}
-	&:after {
-        content:'”';
-        top:auto;
-        left:auto;
-        bottom:-0.2em;
-        right:-35px;
-    }
-}
+// blockquote {
+//     display:block; position:relative;
+//     padding:0; margin:20px 40px;
+//     font-family:@myriad-pro;
+//     font-weight:400;
+//     font-size:22px; line-height:26px;
+//     @media @medium {font-size:24px; line-height:33px;}
+//
+//     > footer, > span {
+//         display:block;
+//         margin-top:30px;
+//         font-weight:600;
+//         font-size:16px; line-height:20px;
+//         .uppercase;
+//         @media @medium {font-size:18px;}
+//     }
+//
+// 	&:before, &:after {
+//         content:'“';
+// 	    display:block; position:absolute;
+// 	    top:0.2em; left:-50px;
+// 	    height:56px; width:68px;
+//
+//         font-family:@lucida-grande;
+//         font-size:250px;
+//         opacity:.2;
+// 	}
+// 	&:after {
+//         content:'”';
+//         top:auto;
+//         left:auto;
+//         bottom:-0.2em;
+//         right:-35px;
+//     }
+// }
 
 //stretch columns
 .flex-row.stretch-column-content > div {
@@ -437,25 +503,24 @@ section.below-card {overflow:visible!important;}
 
 
 // LEAD GEN FORMS
-
-.iframe-form-container {
-    padding: @column-gutter;
-    background-color: @white;
-    color: @black;
-
-    .form-wrapper {
-        height: 500px;
-    }
-}
-.form-wrapper {
-    position: relative;
-    width: 100%;
-
-    iframe {
-        .position(absolute, 0, 0);
-        .size(100%);
-    }
-}
+// .iframe-form-container {
+//     padding: @column-gutter;
+//     background-color: @white;
+//     color: @black;
+//
+//     .form-wrapper {
+//         height: 500px;
+//     }
+// }
+// .form-wrapper {
+//     position: relative;
+//     width: 100%;
+//
+//     iframe {
+//         .position(absolute, 0, 0);
+//         .size(100%);
+//     }
+// }
 
 //Photo slider with dots and arrows
 #photo-slider {
@@ -492,6 +557,17 @@ section.below-card {overflow:visible!important;}
 
 
 // OTHER / INDIVIDUAL PAGE STUFF
+
+//get rid of the header contact number on some pages
+.RequestADemo,
+.RequestPricing {
+    #page-header-contact {display:none!important;}
+}
+
+
+
+
+
 .VirtualSymposium {
     #workshops-selector {
         #multi-control-slider-nav {
@@ -518,6 +594,9 @@ section.below-card {overflow:visible!important;}
         }
     }
 }
+
+
+
 
 
 @hero-over-card-overlap:250px;
@@ -571,9 +650,16 @@ section.below-card {overflow:visible!important;}
 }
 
 
+
+
+
 .WorldLive {
     #form-success-content #page-hero {display:none;}
 }
+
+
+
+
 
 .Academics.Students {
     #step1 {
@@ -589,22 +675,27 @@ section.below-card {overflow:visible!important;}
     }
 }
 
+
+
+
+
 //get started > desktop help page
-#desktop-help.microsite #dashboards-visualizations img {
-    max-width: none;
-    width: 180%;
+// #desktop-help.microsite #dashboards-visualizations img {
+//     max-width: none;
+//     width: 180%;
+//
+//     @media @medium {
+//         width: 150%;
+//         margin-left: -25%;
+//     }
+// }
+//
+// @media @medium {
+//
+//     #retail.solutions.landing-page #distribution img { margin-top: 33px; }
+//     #manufacturing.solutions.landing-page #stores img[src$="store.png"] { margin-top: 32px }
+// }
 
-    @media @medium {
-        width: 150%;
-        margin-left: -25%;
-    }
-}
-
-@media @medium {
-
-    #retail.solutions.landing-page #distribution img { margin-top: 33px; }
-    #manufacturing.solutions.landing-page #stores img[src$="store.png"] { margin-top: 32px }
-}
 
 
 

@@ -17,3 +17,21 @@ section.above-card {
     @media @medium {padding-bottom:150px!important; position:relative; z-index:4;}
 }
 section.below-card {overflow:visible!important;}
+
+
+//NEWER VERSION
+#page-hero, #hero {
+    &.overlap-section-below {
+        padding-bottom:200px;
+        & + section {
+            position:relative; z-index:5;
+            margin-top:-200px;
+        }
+    }
+    @media @medium {
+        &.overlap-section-below {
+            padding-bottom:300px;
+            & + section {margin-top:-300px;}
+        }
+    }
+}
