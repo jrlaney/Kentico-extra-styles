@@ -2,6 +2,7 @@
 .number-group {
     position:relative; z-index:1;
     padding:15px 0 5px 30px;
+    min-height:50px;
     &:before {
         display:block; position:absolute; z-index:-1;
         content:'';
@@ -12,6 +13,7 @@
     }
     @media @medium {
         padding-top:30px; padding-left:50px;
+        min-height:100px;
         &:before {
             font-size:120px; line-height:120px;
         }
