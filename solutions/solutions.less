@@ -1,5 +1,12 @@
 @import '../settings.less';
+
+//component includes
 @import '../../Microstrategy-2015/CMS/CMSTemplates/microstrategy/css/less/components/gridder.less';
+@import '../_new-components/blockquote.less';
+@import '../_new-components/customer-success-logo-video-slider.less';
+@import '../_new-components/content-between-sections.less';
+
+
 
 .card .solution-category {
     .display(flex);
@@ -150,44 +157,47 @@
 
 }
 
-//text-based logos
-.logo {
-    margin-bottom:0px!important;
-    &.text-logo {
-        width: ~"calc(100% - 20px)";
+
+
+
+
+//CUSTOMER STORY PAGE
+.CustomerStories.CompanyStory {
+    #company-solutions {
         font-family:@myriad-pro;
-        color:@black;
-        text-align:center;
-        font-weight:600;
-        //background-color:fade(@pure-black, 5%);
-
-        font-size:14px; line-height:1.2em;
-        &.tiny {font-size:10px;}
-        &.small {font-size:12px;}
-        &.large {font-size:16px;}
-        &.jumbo {font-size:20px;}
-
-        @media @medium {
-            font-size:25px;
-            &.tiny {font-size:16px;}
-            &.small {font-size:20px;}
-            &.large {font-size:30px;}
-            &.jumbo {font-size:35px;}
+        font-size: 1.43rem; line-height: 1.4;
+        @media @medium {font-size: 1.57rem;}
+        font-weight:300;
+        .company-headline {font-weight:400; margin-bottom:20px;}
+    }
+    #company-details {
+        .company-category-header {
+            font-family:@myriad-pro;
+            font-size:16px; line-height:1.4;
+            .uppercase;
+            font-weight:600;
         }
-        @media @large {
-            font-size:30px;
-            &.tiny {font-size:20px;}
-            &.small {font-size:25px;}
-            &.large {font-size:35px;}
-            &.jumbo {font-size:40px;}
-        }
-        @media @xlarge {
-            font-size:35px;
-            &.tiny {font-size:22px;}
-            &.small {font-size:30px;}
-            &.large {font-size:40px;}
-            &.jumbo {font-size:45px;}
-        }
+        .company-category-tags {
+            list-style:none;
+            padding:0;
 
+            font-family:@myriad-pro;
+            font-size:16px; line-height:1.4;
+            font-weight:400;
+            color:@dark-gray;
+            > li {
+                position:relative;
+                padding:0 0 5px 20px;
+                &:before {
+                    content:'';
+                    display:block; position:absolute;
+                    top:5px; left:-10px;
+                    width:0; height:0;
+                    border-left: 10px solid transparent;
+                    border-top: 10px solid transparent;
+                    border-right: 10px solid @red;
+                }
+            }
+        }
     }
 }

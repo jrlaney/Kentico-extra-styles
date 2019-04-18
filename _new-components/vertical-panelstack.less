@@ -1,4 +1,7 @@
 //new vertical panelstack
+@media @small-only {
+    .panelstack.vertical-panelstack .panel-nav .panel-nav-elem>a .icon {display:none;}
+}
 @media @medium {
     .panelstack.vertical-panelstack {
         .display(flex);
@@ -28,9 +31,14 @@
                  width:100%;
                  border:none;
                  > a {
+                     .display(flex);
+                     .align-items(center);
+                     .justify-content(flex-start);
                      color:@white;
                      padding:15px 40px 15px 20px;
                      opacity:0.5;
+
+                     .icon {margin:0 15px 0 0;}
                      &:hover {
                          color:@white;
                          opacity:1;
@@ -72,22 +80,32 @@
             opacity:0;
             .animation(fade-slide-right 0.3s ease-out 0.2s normal forwards);
             padding:30px;
+            .video-wrapper {opacity:1; .transition(opacity 0.5s ease-out 0s);}
+            &.hide .video-wrapper {opacity:0;  .transition(opacity 2.5s ease-out 1s);}
         }//end panel content
     }// end panelstack vertical
 
     .panelstack.vertical-panelstack {
-        .loop-colors(@i) when (@i > 0) {
-            .loop-colors(@i - 1);
-
-            @color-class: extract(@color-classes, @i);
-            @color: extract(@colors, @i);
-
-            &.@{color-class} {
-                .panel-nav .panel-nav-elem.active-panel>a {background-color:@color}
-                .panel-nav .panel-nav-elem.active-panel>a:before {border-left-color:@color;}
-            }
+        &.red {
+            .panel-nav .panel-nav-elem.active-panel>a {background-color:@red}
+            .panel-nav .panel-nav-elem.active-panel>a:before {border-left-color:@red;}
         }
-        .loop-colors(length(@color-classes));
+        &.orange {
+            .panel-nav .panel-nav-elem.active-panel>a {background-color:@orange}
+            .panel-nav .panel-nav-elem.active-panel>a:before {border-left-color:@orange;}
+        }
+        &.green {
+            .panel-nav .panel-nav-elem.active-panel>a {background-color:@green}
+            .panel-nav .panel-nav-elem.active-panel>a:before {border-left-color:@green;}
+        }
+        &.blue {
+            .panel-nav .panel-nav-elem.active-panel>a {background-color:@blue}
+            .panel-nav .panel-nav-elem.active-panel>a:before {border-left-color:@blue;}
+        }
+        &.navy {
+            .panel-nav .panel-nav-elem.active-panel>a {background-color:@navy-blue}
+            .panel-nav .panel-nav-elem.active-panel>a:before {border-left-color:@navy-blue;}
+        }
     }
 }//end medium media query
 @media @large {

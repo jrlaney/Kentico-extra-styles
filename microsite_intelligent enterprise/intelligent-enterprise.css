@@ -77,6 +77,7 @@
   position: relative;
   z-index: 1;
   padding: 15px 0 5px 30px;
+  min-height: 50px;
 }
 .number-group:before {
   display: block;
@@ -94,6 +95,7 @@
   .number-group {
     padding-top: 30px;
     padding-left: 50px;
+    min-height: 100px;
   }
   .number-group:before {
     font-size: 120px;
@@ -144,6 +146,16 @@ blockquote:last-child {
   blockquote {
     font-size: 24px;
     line-height: 33px;
+  }
+}
+blockquote.text-small {
+  font-size: 20px;
+  line-height: 24px;
+}
+@media only screen and (min-width: 768px) {
+  blockquote.text-small {
+    font-size: 22px;
+    line-height: 28px;
   }
 }
 blockquote > footer,

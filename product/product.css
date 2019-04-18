@@ -10,6 +10,7 @@ section {
 }
 .text-block {
   font-weight: 600;
+  color: #FFFFFF;
 }
 .video-wrapper.ratio-tablet-portrait {
   padding-top: 136.88%;
@@ -278,6 +279,16 @@ blockquote:last-child {
   blockquote {
     font-size: 24px;
     line-height: 33px;
+  }
+}
+blockquote.text-small {
+  font-size: 20px;
+  line-height: 24px;
+}
+@media only screen and (min-width: 768px) {
+  blockquote.text-small {
+    font-size: 22px;
+    line-height: 28px;
   }
 }
 blockquote > footer,
@@ -577,6 +588,26 @@ blockquote:after {
 section.below-card {
   overflow: visible!important;
 }
+#page-hero.overlap-section-below,
+#hero.overlap-section-below {
+  padding-bottom: 200px;
+}
+#page-hero.overlap-section-below + section,
+#hero.overlap-section-below + section {
+  position: relative;
+  z-index: 5;
+  margin-top: -200px;
+}
+@media only screen and (min-width: 768px) {
+  #page-hero.overlap-section-below,
+  #hero.overlap-section-below {
+    padding-bottom: 300px;
+  }
+  #page-hero.overlap-section-below + section,
+  #hero.overlap-section-below + section {
+    margin-top: -300px;
+  }
+}
 .hypercard-img {
   border-radius: 10%/6%;
   border: 1px solid #CCCCCC;
@@ -719,6 +750,7 @@ section.below-card {
   position: relative;
   z-index: 1;
   padding: 15px 0 5px 30px;
+  min-height: 50px;
 }
 .number-group:before {
   display: block;
@@ -736,6 +768,7 @@ section.below-card {
   .number-group {
     padding-top: 30px;
     padding-left: 50px;
+    min-height: 100px;
   }
   .number-group:before {
     font-size: 120px;
@@ -908,6 +941,11 @@ section.below-card {
 .triangle-group.black:before {
   border-right-color: #333333;
 }
+@media only screen and (max-width: 767px) {
+  .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a .icon {
+    display: none;
+  }
+}
 @media only screen and (min-width: 768px) {
   .panelstack.vertical-panelstack {
     display: -webkit-flex;
@@ -953,9 +991,18 @@ section.below-card {
     border: none;
   }
   .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
     color: #FFFFFF;
     padding: 15px 40px 15px 20px;
     opacity: 0.5;
+  }
+  .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a .icon {
+    margin: 0 15px 0 0;
   }
   .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a:hover {
     color: #FFFFFF;
@@ -1005,23 +1052,21 @@ section.below-card {
     animation: fade-slide-right 0.3s ease-out 0.2s normal forwards;
     padding: 30px;
   }
+  .panelstack.vertical-panelstack .panel-content .video-wrapper {
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease-out 0s;
+    transition: opacity 0.5s ease-out 0s;
+  }
+  .panelstack.vertical-panelstack .panel-content.hide .video-wrapper {
+    opacity: 0;
+    -webkit-transition: opacity 2.5s ease-out 1s;
+    transition: opacity 2.5s ease-out 1s;
+  }
   .panelstack.vertical-panelstack.red .panel-nav .panel-nav-elem.active-panel > a {
     background-color: #D9232E;
   }
   .panelstack.vertical-panelstack.red .panel-nav .panel-nav-elem.active-panel > a:before {
     border-left-color: #D9232E;
-  }
-  .panelstack.vertical-panelstack.blue .panel-nav .panel-nav-elem.active-panel > a {
-    background-color: #4789A3;
-  }
-  .panelstack.vertical-panelstack.blue .panel-nav .panel-nav-elem.active-panel > a:before {
-    border-left-color: #4789A3;
-  }
-  .panelstack.vertical-panelstack.navy-blue .panel-nav .panel-nav-elem.active-panel > a {
-    background-color: #11566F;
-  }
-  .panelstack.vertical-panelstack.navy-blue .panel-nav .panel-nav-elem.active-panel > a:before {
-    border-left-color: #11566F;
   }
   .panelstack.vertical-panelstack.orange .panel-nav .panel-nav-elem.active-panel > a {
     background-color: #FF9100;
@@ -1035,35 +1080,17 @@ section.below-card {
   .panelstack.vertical-panelstack.green .panel-nav .panel-nav-elem.active-panel > a:before {
     border-left-color: #68AA00;
   }
-  .panelstack.vertical-panelstack.gray .panel-nav .panel-nav-elem.active-panel > a {
-    background-color: #999999;
+  .panelstack.vertical-panelstack.blue .panel-nav .panel-nav-elem.active-panel > a {
+    background-color: #4789A3;
   }
-  .panelstack.vertical-panelstack.gray .panel-nav .panel-nav-elem.active-panel > a:before {
-    border-left-color: #999999;
+  .panelstack.vertical-panelstack.blue .panel-nav .panel-nav-elem.active-panel > a:before {
+    border-left-color: #4789A3;
   }
-  .panelstack.vertical-panelstack.light-gray .panel-nav .panel-nav-elem.active-panel > a {
-    background-color: #f2f2f2;
+  .panelstack.vertical-panelstack.navy .panel-nav .panel-nav-elem.active-panel > a {
+    background-color: #11566F;
   }
-  .panelstack.vertical-panelstack.light-gray .panel-nav .panel-nav-elem.active-panel > a:before {
-    border-left-color: #f2f2f2;
-  }
-  .panelstack.vertical-panelstack.dark-gray .panel-nav .panel-nav-elem.active-panel > a {
-    background-color: #777777;
-  }
-  .panelstack.vertical-panelstack.dark-gray .panel-nav .panel-nav-elem.active-panel > a:before {
-    border-left-color: #777777;
-  }
-  .panelstack.vertical-panelstack.black .panel-nav .panel-nav-elem.active-panel > a {
-    background-color: #333333;
-  }
-  .panelstack.vertical-panelstack.black .panel-nav .panel-nav-elem.active-panel > a:before {
-    border-left-color: #333333;
-  }
-  .panelstack.vertical-panelstack.white .panel-nav .panel-nav-elem.active-panel > a {
-    background-color: #FFFFFF;
-  }
-  .panelstack.vertical-panelstack.white .panel-nav .panel-nav-elem.active-panel > a:before {
-    border-left-color: #FFFFFF;
+  .panelstack.vertical-panelstack.navy .panel-nav .panel-nav-elem.active-panel > a:before {
+    border-left-color: #11566F;
   }
 }
 @media only screen and (min-width: 980px) {
