@@ -1,37 +1,41 @@
 @import '../settings.less';
 
-
 #section-navigation-sticky-wrapper {
-    max-width: @row-width;
-    margin: 0 auto;
+  max-width: @row-width;
+  margin: 0 auto;
 }
 
 #press-center {
 
-    #hero.background-image { background-image: url('/getmedia/cd722862-2349-4c56-85f1-1ce7feb2314c/press'); }
+  #hero.background-image { background-image: url('/getmedia/cd722862-2349-4c56-85f1-1ce7feb2314c/press'); }
 
-    .company-name {
-        display: block;
-        max-width: 65%;
-        text-align: center;
-        .margin-x(auto);
-    }
-    .company-logo {
-        max-width: 75%;
-        max-height: 125px;
-    }
-    .publication {
-        font-family: @myriad-pro;
-    }
-    .publication-title {
-        font-weight: @normal;
-    }
-    .publication-byline {
-        .uppercase;
-    }
-    .publication-organization {
-        font-weight: @normal;
-    }
+  .company-name {
+    display: block;
+    max-width: 65%;
+    text-align: center;
+    .margin-x(auto);
+  }
+
+  .company-logo {
+    max-width: 75%;
+    max-height: 125px;
+  }
+
+  .publication {
+    font-family: @myriad-pro;
+  }
+
+  .publication-title {
+    font-weight: @normal;
+  }
+
+  .publication-byline {
+    .uppercase;
+  }
+
+  .publication-organization {
+    font-weight: @normal;
+  }
 }
 
 .Publication.Single {
@@ -47,11 +51,13 @@
       color: @light-gray;
     }
   }
+
   article.publication {
 
     section {
       .padding-y(@base-spacing);
     }
+
     p, li {
       font-family: @myriad-pro;
       font-size: 18px;
@@ -59,26 +65,80 @@
       font-weight: @light;
       letter-spacing: 0.01em;
     }
+
     a {
       font-weight: @normal;
     }
+
     strong {
       font-weight: @bold;
     }
+
     em {
       font-weight: @light;
     }
+
     .source {
       font-weight: @bold;
-
       a { font-weight: @bold; }
     }
+
     #bwbodyimg {
       margin-bottom: @base-spacing;
 
       p {
         font-size: 14px;
         font-weight: @normal;
+      }
+    }
+
+    table {
+      table-layout: auto;
+
+      tbody tr:nth-child(even) {
+        background-color: @light-gray;
+      }
+
+      tbody tr:first-child td:first-child {
+        width: 25%;
+      }
+
+      td, td p {
+        font-family: @lucida-grande;
+        font-size: 14px;
+        line-height: 1.4;
+      }
+
+      td strong {
+        font-size: 16px;
+      }
+
+      td {
+        padding: @base-spacing / 2;
+      }
+
+      td:empty {
+        width: 1%;
+        white-space: nowrap;
+      }
+
+      td.bw {
+
+        &vertalignm {
+          vertical-align: middle;
+        }
+
+        &vertalignb {
+          vertical-align: bottom;
+        }
+
+        &alignc {
+          text-align: center;
+        }
+
+        &alignr {
+          text-align: right;
+        }
       }
     }
   }
