@@ -71,3 +71,81 @@
         }
     }
 }
+
+.gradient-overlay {
+    &-red {
+        &:after {
+            //display:none;
+            background-color:fade(@pure-black, 20%);
+        }
+        &:before {
+            content:'';
+            position:absolute; z-index:1;
+            bottom:0; left:0;
+            height:100%; width:100%;
+            background: -moz-linear-gradient(top, fade(@red, 0%) 10%, fade(@red, 85%) 100%);
+            background: -webkit-linear-gradient(top, fade(@red, 0%) 10%, fade(@red, 85%) 100%);
+            background: linear-gradient(to bottom, fade(@red, 0%) 10%, fade(@red, 85%) 100%);
+        }
+    }
+    &-orange {
+        &:after {
+            //display:none;
+            background-color:fade(@pure-black, 20%);
+        }
+        &:before {
+            content:'';
+            position:absolute; z-index:1;
+            bottom:0; left:0;
+            height:100%; width:100%;
+            background: -moz-linear-gradient(top, fade(@orange, 0%) 10%, fade(@orange, 85%) 100%);
+            background: -webkit-linear-gradient(top, fade(@orange, 0%) 10%, fade(@orange, 85%) 100%);
+            background: linear-gradient(to bottom, fade(@orange, 0%) 10%, fade(@orange, 85%) 100%);
+        }
+    }
+    &-green {
+        &:after {
+            //display:none;
+            background-color:fade(@pure-black, 20%);
+        }
+        &:before {
+            content:'';
+            position:absolute; z-index:1;
+            bottom:0; left:0;
+            height:100%; width:100%;
+            background: -moz-linear-gradient(top, fade(@green, 0%) 10%, fade(@green, 85%) 100%);
+            background: -webkit-linear-gradient(top, fade(@green, 0%) 10%, fade(@green, 85%) 100%);
+            background: linear-gradient(to bottom, fade(@green, 0%) 10%, fade(@green, 85%) 100%);
+        }
+    }
+    &-blue {
+        &:after {
+            //display:none;
+            background-color:fade(@pure-black, 20%);
+        }
+        &:before {
+            content:'';
+            position:absolute; z-index:1;
+            bottom:0; left:0;
+            height:100%; width:100%;
+            background: -moz-linear-gradient(top, fade(@blue, 0%) 10%, fade(@blue, 85%) 100%);
+            background: -webkit-linear-gradient(top, fade(@blue, 0%) 10%, fade(@blue, 85%) 100%);
+            background: linear-gradient(to bottom, fade(@blue, 0%) 10%, fade(@blue, 85%) 100%);
+        }
+    }
+    &-navy-blue {
+        &:after {
+            //display:none;
+            background-color:fade(@pure-black, 20%);
+        }
+        &:before {
+            content:'';
+            position:absolute; z-index:1;
+            bottom:0; left:0;
+            height:100%; width:100%;
+            background: -moz-linear-gradient(top, fade(@navy-blue, 0%) 10%, fade(@navy-blue, 85%) 100%);
+            background: -webkit-linear-gradient(top, fade(@navy-blue, 0%) 10%, fade(@navy-blue, 85%) 100%);
+            background: linear-gradient(to bottom, fade(@navy-blue, 0%) 10%, fade(@navy-blue, 85%) 100%);
+        }
+    }
+}

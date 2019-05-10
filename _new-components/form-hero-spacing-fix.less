@@ -1,0 +1,17 @@
+//some overrides for the form to fill the space better
+#page-hero.form-fix {
+    > .flex-row {
+        .justify-content(space-between);
+        .col-md-6.col-xl-5:first-child {
+            h1.text-large {font-weight:400;}
+            @media @medium {.flex(0,0,50%);}
+        }
+    }
+    #lead-gen-form {
+        width:~"calc(100% - 40px)";
+        margin-left:auto; margin-right:auto;
+        padding:20px 15px;
+        @media @medium {width:~"calc(100% - 30px)";}
+        box-shadow: 1px 1px 5px fade(@pure-black, 50%);
+    }
+}

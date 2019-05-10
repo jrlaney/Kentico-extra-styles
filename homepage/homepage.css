@@ -78,9 +78,80 @@
   left: 0;
   background-color: rgba(17, 86, 111, 0.7);
 }
-.ai-title,
-.ai-subtitle {
-  display: none;
+.gradient-overlay-red:after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.gradient-overlay-red:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(217, 35, 46, 0) 10%, rgba(217, 35, 46, 0.85) 100%);
+  background: -webkit-linear-gradient(top, rgba(217, 35, 46, 0) 10%, rgba(217, 35, 46, 0.85) 100%);
+  background: linear-gradient(to bottom, rgba(217, 35, 46, 0) 10%, rgba(217, 35, 46, 0.85) 100%);
+}
+.gradient-overlay-orange:after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.gradient-overlay-orange:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(255, 145, 0, 0) 10%, rgba(255, 145, 0, 0.85) 100%);
+  background: -webkit-linear-gradient(top, rgba(255, 145, 0, 0) 10%, rgba(255, 145, 0, 0.85) 100%);
+  background: linear-gradient(to bottom, rgba(255, 145, 0, 0) 10%, rgba(255, 145, 0, 0.85) 100%);
+}
+.gradient-overlay-green:after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.gradient-overlay-green:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(104, 170, 0, 0) 10%, rgba(104, 170, 0, 0.85) 100%);
+  background: -webkit-linear-gradient(top, rgba(104, 170, 0, 0) 10%, rgba(104, 170, 0, 0.85) 100%);
+  background: linear-gradient(to bottom, rgba(104, 170, 0, 0) 10%, rgba(104, 170, 0, 0.85) 100%);
+}
+.gradient-overlay-blue:after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.gradient-overlay-blue:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(71, 137, 163, 0) 10%, rgba(71, 137, 163, 0.85) 100%);
+  background: -webkit-linear-gradient(top, rgba(71, 137, 163, 0) 10%, rgba(71, 137, 163, 0.85) 100%);
+  background: linear-gradient(to bottom, rgba(71, 137, 163, 0) 10%, rgba(71, 137, 163, 0.85) 100%);
+}
+.gradient-overlay-navy-blue:after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.gradient-overlay-navy-blue:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(17, 86, 111, 0) 10%, rgba(17, 86, 111, 0.85) 100%);
+  background: -webkit-linear-gradient(top, rgba(17, 86, 111, 0) 10%, rgba(17, 86, 111, 0.85) 100%);
+  background: linear-gradient(to bottom, rgba(17, 86, 111, 0) 10%, rgba(17, 86, 111, 0.85) 100%);
 }
 #hero {
   overflow: hidden;
@@ -94,6 +165,11 @@
   padding-bottom: 150px;
   z-index: 1;
 }
+#hero.hyperintelligence .button.new-item-button {
+  opacity: 0;
+  -webkit-animation: fade-slide-down 0.5s ease-out 0.8s normal forwards;
+  animation: fade-slide-down 0.5s ease-out 0.8s normal forwards;
+}
 #hero.hyperintelligence .title {
   opacity: 0;
   -webkit-animation: fade-slide-down 0.5s ease-out 1s normal forwards;
@@ -104,7 +180,8 @@
   -webkit-animation: fade-slide-down 0.5s ease-out 1.4s normal forwards;
   animation: fade-slide-down 0.5s ease-out 1.4s normal forwards;
 }
-#hero.hyperintelligence .button {
+#hero.hyperintelligence .button,
+#hero.hyperintelligence a {
   opacity: 0;
   -webkit-animation: fade-slide-down 0.5s ease-out 1.8s normal forwards;
   animation: fade-slide-down 0.5s ease-out 1.8s normal forwards;
@@ -125,10 +202,12 @@
 }
 #hero.hyperintelligence .content-col {
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 @media only screen and (min-width: 768px) {
   #hero.hyperintelligence .content-col {
-    padding-top: 15px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 #hero.hyperintelligence .title > span {
@@ -234,6 +313,20 @@
 #hero.hyperintelligence .revolving-panels .rev-panel.email .cursor {
   -webkit-animation: hero-cursor-email 12s linear -15s normal infinite;
   animation: hero-cursor-email 12s linear -15s normal infinite;
+}
+.button.new-item-button {
+  font-weight: 600;
+  padding: 10px 2.5em 10px 0;
+}
+.button.new-item-button > span {
+  padding: 5px 10px;
+  margin-left: -10px;
+  margin-right: 10px;
+  font-size: 12px;
+  line-height: 12px;
+  background-color: #333333;
+  letter-spacing: 0.2em;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 #explore-product .link-block {
   display: -webkit-flex;

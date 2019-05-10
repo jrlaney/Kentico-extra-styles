@@ -54,6 +54,34 @@ main, section {overflow:hidden;}
 
 
 
+.revolving-panels {
+    display:inline-block;
+    position:relative;
+    overflow:visible;
+    margin:0 0 60px 60px;
+
+    &.panles- {
+        &3-up {margin:0 0 40px 40px;}
+        &4-up {margin:0 0 60px 60px;}
+        &5-up {margin:0 0 80px 80px;}
+    }
+    .rev-panel {
+        position:absolute; z-index:0;
+        margin:0;
+        top:0; left:0;
+        .animation(card-stack-cycle 8s linear 0s normal infinite);
+        &:first-child{position:relative;}
+        &:nth-child(2) {.animation-delay(-2s~"!important");}
+        &:nth-child(3) {.animation-delay(-4s~"!important");}
+        &:nth-child(4) {.animation-delay(-6s~"!important");}
+        &:nth-child(5) {.animation-delay(-8s~"!important");}
+    }
+}
+
+
+
+
+
 // #hyper-experience-playlist {
 //     .panelstack.vertical-panelstack {
 //         .panel-nav-elem > a {
@@ -1169,7 +1197,7 @@ main, section {overflow:hidden;}
     }
 }//end mapping
 
-.Cards {
+.HyperintelligenceForWeb {
     #page-hero {
         .device-mockup {
             @media @small-only {
@@ -1261,6 +1289,50 @@ main, section {overflow:hidden;}
             }
         }
     }
+    #multiple-cards {
+        .chrome-extension-graphic {
+            position:relative;
+            > img {
+                position:relative;
+                z-index:1;
+                width:50%;
+                margin:0;
+            }
+            .diagram-label {
+                position:absolute;
+                display:block;
+                right:0;
+                width:50%;
+                padding-left:20%;
+
+                font-family: @myriad-pro;
+                font-weight:600;
+                font-size:16px; line-height:18px;
+                &:nth-child(2) {top:3%;}
+                &:nth-child(3) {top:30%;}
+                &:nth-child(4) {bottom:5%;}
+                &:before, &:after {
+                    content:'';
+                    display:block;
+                    position:absolute; z-index:2;
+                    background-color:@red;
+                }
+                &:after {
+                    height:2px;
+                    width:~"calc(40% - 15px)";
+                    top:50%; left:0;
+                    margin-top:-1px;
+                }
+                &:before {
+                    height:14px; width:14px;
+                    border-radius:50%;
+                    top:50%; left:-5px;
+                    margin-top:-7px;
+                }
+            }
+        }
+    }
+    //retiring pending intl catchup
     #connect-to-data {
         #connected-card-diagram {
             //all the connecting lines are handled below
@@ -1323,26 +1395,6 @@ main, section {overflow:hidden;}
                     }
                 }
             }
-        }
-    }
-    #card-style-animation {
-        display:inline-block;
-        position:relative;
-        overflow:visible;
-        margin:0 0 60px 60px;
-
-        .hypercard-img {
-            position:absolute; z-index:0;
-            margin:0;
-            top:0; left:0;
-            .animation(card-stack-cycle 8s linear 0s normal infinite);
-            &:first-child{
-                position:relative;
-                width:400px;
-            }
-            &:nth-child(2) {.animation-delay(-2s~"!important");}
-            &:nth-child(3) {.animation-delay(-4s~"!important");}
-            &:nth-child(4) {.animation-delay(-6s~"!important");}
         }
     }
 }
@@ -1652,9 +1704,28 @@ main, section {overflow:hidden;}
 
 
 
+.Cards {
+    #page-hero {
+        .device-mockup {
+            &.iphone-x {
+                position:absolute; z-index:2;
+                width:27%;
+                bottom:0; left:5%;
+            }
+            &.macbook-pro {
+                position:relative; z-index:1;
+                margin-bottom:5%;
+            }
+        }
+    }
+}
 
-//hyperintelligence PAGE
-.Hypermobile {
+
+
+
+
+//hypermobile PAGE
+.HyperintelligenceForMobile {
     #page-hero {
         .device-mockup {
             &.iphone-x {

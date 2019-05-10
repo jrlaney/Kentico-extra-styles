@@ -11,96 +11,19 @@
 @snappy-ease-in: cubic-bezier(.98,0,.76,1);
 
 
-//temporarily disable intro titles for intl pages
-.ai-title, .ai-subtitle {display:none;}
-
 //HERO BANNER STYLES
 #hero {
 	overflow:hidden;
 
-	//animations after loading
-	// .logo                     {opacity:0; .animation(fade-slide-down 0.5s ease-out 0.3s normal forwards);}
-	// .title                    {opacity:0; .animation(fade-slide-down 0.5s ease-out 0.5s normal forwards);}
-	// //.line                   {opacity:0; .animation(fade-slide-down 0.5s ease-out 0.8s normal forwards);}
-	// .subtitle                 {opacity:0; .animation(fade-slide-down 0.5s ease-out 0.7s normal forwards);}
-	// .content-col > .flex-row  {opacity:0; .animation(fade-slide-down 0.5s ease-out 0.9s normal forwards);}
-	// .button                   {opacity:0; .animation(fade-slide-down 0.5s ease-out 1.1s normal forwards);}
-	//.device-row             {opacity:0; .animation(fade-slide-up 0.7s @custom-bez 1.4s normal forwards);}
-
 	> .flex-row {position:relative; z-index:2;}
-
-	// &.static-version {
-	// 	//animations on loading
-	// 	.device-mockup {opacity:0; .animation(fade-slide-up 0.7s @custom-bez 1.4s normal forwards);}
-	// 	.device-mockup.ipad {.animation-delay(1.6s~"!important");}
-	// 	.device-mockup.iphone {.animation-delay(1.8s~"!important");}
-    //
-	// 	.angle.top    {will-change:opacity; opacity:0; .animation(fade-diagonal-down-left 0.3s ease-out 1.6s normal forwards);}
-	// 	.angle.bottom {will-change:opacity; opacity:0; .animation(fade-diagonal-up-left 0.4s ease-out 1.8s normal forwards);}
-    //
-	// 	position:relative;
-	// 	overflow:hidden;
-	// 	.stacked-devices {
-	// 		position:relative; height:250px;
-	// 		margin-top:30px;
-	// 		.device-mockup {position:absolute;}
-	// 		.macbook-pro {
-	// 			z-index:3;
-	// 			width:110%;
-	// 			top:0; left:50%; margin-left:-55%;
-	// 		}
-	// 		.ipad {
-	// 			z-index:4;
-	// 			width:60%;
-	// 			top:40%; left:-15%;
-	// 		}
-	// 		.iphone {
-	// 			z-index:5;
-	// 			width:20%;
-	// 			top:40%; right:0;
-	// 		}
-	// 		@media @medium {
-	// 			.macbook-pro {width:90%; margin-left:-45%;}
-	// 			.ipad {width:55%; top:55%; left:-7%;}
-	// 			.iphone {width:20%; top:40%; right:2%;}
-	// 		}
-	// 		@media @xlarge {
-	// 			.ipad {width:50%; left:-3%;}
-	// 			.iphone {right:-3%;}
-	// 		}
-	// 	}//end stacked devices
-	//     .angle-wrapper {
-	//         display:block; position:absolute; z-index:1;
-	//         height:100%; width:100%;
-	//         top:0; left:0;
-    //
-	//         &.red .angle {fill:@red;}
-	//         &.orange .angle {fill:@orange;}
-	//         &.green .angle {fill:@green;}
-	//         &.blue .angle {fill:@blue;}
-	//         &.navy-blue .angle {fill:@navy-blue;}
-	//     }
-	//     .angle.top {right:0; top:0; height:auto; width:150%;}
-	//     .angle.bottom {right:0; bottom:0; height:auto; width:150%;}
-	//     .angle {
-	//         display:block; position:absolute;
-	//         fill-rule:evenodd;
-	//         fill:@pure-black;
-	//         mix-blend-mode:multiply;
-	//     }
-    //
-	//     @media @medium {
-	//         .angle.top {height:40%; width:auto;}
-	//         .angle.bottom {height:105%; width:auto;}
-	//     }
-	// }
 
 	&.hyperintelligence {
 		//starting animations
-		.title            {opacity:0; .animation(fade-slide-down 0.5s ease-out 1s normal forwards);}
-		.subtitle         {opacity:0; .animation(fade-slide-down 0.5s ease-out 1.4s normal forwards);}
-		.button           {opacity:0; .animation(fade-slide-down 0.5s ease-out 1.8s normal forwards);}
-		.revolving-panels {opacity:0; .animation(revolving-panel-intro 3s ease-out 2s normal forwards);}
+		.button.new-item-button {opacity:0; .animation(fade-slide-down 0.5s ease-out 0.8s normal forwards);}
+		.title                  {opacity:0; .animation(fade-slide-down 0.5s ease-out 1s normal forwards);}
+		.subtitle               {opacity:0; .animation(fade-slide-down 0.5s ease-out 1.4s normal forwards);}
+		.button, a              {opacity:0; .animation(fade-slide-down 0.5s ease-out 1.8s normal forwards);}
+		.revolving-panels       {opacity:0; .animation(revolving-panel-intro 3s ease-out 2s normal forwards);}
 
 		//actual styles
 		position:relative;
@@ -116,7 +39,8 @@
 		}
         .content-col {
             padding-top:60px;
-            @media @medium {padding-top:15px;}
+			padding-bottom:60px;
+            @media @medium {padding-top:40px; padding-bottom:40px;}
         }
         .title > span {display:block; margin-bottom:5px; font-size:.6em; line-height:1;}
 
@@ -125,7 +49,6 @@
 			padding:0 0 70px 60px;
 			width:150%;
 			margin-bottom:-100px;
-			//float:left;
 
 			.screen {
 				display:block; z-index:1;
@@ -185,6 +108,19 @@
 				}
 			}
 		}
+	}
+}
+.button.new-item-button {
+	font-weight:600;
+	padding:10px 2.5em 10px 0;
+	> span {
+		padding:5px 10px;
+		margin-left:-10px;
+		margin-right:10px;
+		font-size:12px; line-height:12px;
+		background-color:@black;
+		letter-spacing:0.2em;
+		box-shadow:1px 1px 2px fade(@pure-black, 50%);
 	}
 }
 
