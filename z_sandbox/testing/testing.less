@@ -110,46 +110,42 @@
 					}
 				}
 
-				@media @xlarge {
-					padding-bottom:30%;
-					.device-mockup {
-						&.isometric-macbook-pro {
-							width:75%;
-							margin-top:-38%;
-							margin-left:30%;
-						}
-						&.isometric-ipad-tilted {
-							width:45%;
-							margin-top:-1%;
-							margin-left:65%;
-						}
-						&.isometric-iphone {
-							width:38%;
-							margin-top:5%;
-							margin-left:5%;
-						}
-						&.isometric-screenshot-landscape {
-							width:75%;
-							margin-left:-18%;
-						}
-						&.isometric-screenshot-portrait {
-							width:75%;
-							margin-top:13%;
-							margin-left:-63%;
-						}
-					}
-				}//end x-large special
+				// @media @xlarge {
+				// 	padding-bottom:30%;
+				// 	.device-mockup {
+				// 		&.isometric-macbook-pro {
+				// 			width:75%;
+				// 			margin-top:-38%;
+				// 			margin-left:30%;
+				// 		}
+				// 		&.isometric-ipad-tilted {
+				// 			width:45%;
+				// 			margin-top:-1%;
+				// 			margin-left:65%;
+				// 		}
+				// 		&.isometric-iphone {
+				// 			width:38%;
+				// 			margin-top:5%;
+				// 			margin-left:5%;
+				// 		}
+				// 		&.isometric-screenshot-landscape {
+				// 			width:75%;
+				// 			margin-left:-18%;
+				// 		}
+				// 		&.isometric-screenshot-portrait {
+				// 			width:75%;
+				// 			margin-top:13%;
+				// 			margin-left:-63%;
+				// 		}
+				// 	}
+				// }//end x-large special
 			}
 		}
 	}
-	#customer-success {
+	#customer-logos {
 		margin-top:-20px;
 		@media @medium {margin-top:-120px;}
 		@media @large {margin-top:-150px;}
-	}
-	.feature-row {
-		padding-top:60px; padding-bottom:60px;
-		@media @medium {padding-top:80px; padding-bottom:80px;}
 	}
 
 	.m-icon {
@@ -158,295 +154,115 @@
 		.transform(rotateX(54.7deg) rotateZ(45deg));
 		.logo {max-width:60%; max-height:60%;}
 	}
-	#analyze-anything {
-		.isometric-diagram {
-			position:relative;
-			padding-bottom:63%;
-			//border:1px solid red;
-			.middle-section {
-				position:absolute;
-				width:24%;
-				bottom:-3%; left:18%;
-			}
-			.left-section {
-				position:absolute;
-				//border:1px solid blue;
-				left:0; bottom:32%;
-				width:25%;
-				padding-top:35%;
+	#isometric-diagram {
+		position:relative;
+		padding-bottom:63%;
+		//border:1px solid red;
+		.middle-section {
+			position:absolute;
+			width:24%;
+			bottom:-3%; left:18%;
+		}
+		.left-section {
+			position:absolute;
+			//border:1px solid blue;
+			left:0; bottom:32%;
+			width:25%;
+			padding-top:35%;
 
-				.speech-bubble {
-					position:absolute;
-					top:0; left:30%;
-					height:18%; width:75%;
-					.transform(rotateX(54.7deg) rotateZ(45deg) skew(45deg));
-					.transform-origin(top, left);
-	                background-color:darken(@light-gray, 5%);
-
-	                &:before {
-						content:'';
-						position:absolute;
-	                    border-bottom-color:darken(@light-gray, 5%);
-	                    top:100%; left:15%;
-	                    border-left:0 solid transparent;
-	                    border-top:18px solid darken(@light-gray, 5%);
-	                    border-right:18px solid transparent;
-	                }
-					&.blue {
-	                	background-color:@blue;
-						top:30%; left:47%;
-						&:before {border-top-color:@blue;}
-					}
-				}
-				.echo-dot {
-					position:absolute;
-					width:65%;
-					bottom:0; left:0;
-					.device {position:relative; z-index:1;}
-					&:after {
-		                content:'';
-		                position:absolute; z-index:0;
-		                //border:1px solid red;
-		                height:69%; width:100%;
-		                bottom:0;
-		                left:0;
-		                border-radius:50%;
-		                background-color:fade(@pure-black, 30%);
-		                box-shadow:15px 15px 20px fade(@pure-black, 30%);
-					}
-				}
-			}
-			.top-section {
+			.speech-bubble {
 				position:absolute;
-				bottom:14%; right:0;
-				width:65%;
-				padding-top:54%;
-				.isometric-ipad-tilted {
-					position:absolute;
-					width:35%;
-					top:0; left:0;
-				}
-				.isometric-macbook-pro {
-					position:absolute;
-					width:60%;
-					bottom:0; right:0;
-				}
-			}
-			.diagram-lines {
-				position:absolute; z-index:-1;
-				.transform(rotateX(54.7deg) rotateZ(45deg));
-				width:50%;
-				bottom:-6%; left:23%;
-				.diagram-line {
-					position:absolute;
-					width:3px; height:50%;
-					background-color:@iron;
-					&.left-root {
-						.transform(rotate(90deg));
-						.transform-origin(bottom, left);
-						bottom:0; left:0;
-					}
-					&.top-root {
-						.transform-origin(bottom, left);
-						bottom:0; left:50%;
-					}
-					&.top-bar {
-						height:100%;
-						.transform(rotate(90deg));
-						.transform-origin(bottom, left);
-						bottom:50%; left:0;
-					}
-					&.top-fork-left {
-						top:0; left:0;
-					}
-					&.top-fork-right {
-						top:0; right:0;
-					}
-				}
-				&:before {
+				top:0; left:30%;
+				height:18%; width:75%;
+				.transform(rotateX(54.7deg) rotateZ(45deg) skew(45deg));
+				.transform-origin(top, left);
+                background-color:darken(@light-gray, 5%);
+
+                &:before {
 					content:'';
-					display:block;
-					width:100%;
-					padding-top:100%;
+					position:absolute;
+                    border-bottom-color:darken(@light-gray, 5%);
+                    top:100%; left:15%;
+                    border-left:0 solid transparent;
+                    border-top:18px solid darken(@light-gray, 5%);
+                    border-right:18px solid transparent;
+                }
+				&.blue {
+                	background-color:@blue;
+					top:30%; left:47%;
+					&:before {border-top-color:@blue;}
+				}
+			}
+			.echo-dot {
+				position:absolute;
+				width:65%;
+				bottom:0; left:0;
+				.device {position:relative; z-index:1;}
+				&:after {
+	                content:'';
+	                position:absolute; z-index:0;
+	                //border:1px solid red;
+	                height:69%; width:100%;
+	                bottom:0;
+	                left:0;
+	                border-radius:50%;
+	                background-color:fade(@pure-black, 30%);
+	                box-shadow:15px 15px 20px fade(@pure-black, 30%);
 				}
 			}
 		}
-	}
-	#go-mobile {
-		.isometric-diagram {
-			position:relative;
-			padding-bottom:63%;
-			//border:1px solid red;
-			.middle-section {
+		.top-section {
+			position:absolute;
+			bottom:14%; right:0;
+			width:65%;
+			padding-top:54%;
+			.isometric-ipad-tilted {
 				position:absolute;
-				width:24%;
-				bottom:-3%; left:18%;
+				width:35%;
+				top:0; left:0;
 			}
-			.top-section {
+			.isometric-macbook-pro {
 				position:absolute;
-				bottom:14%; right:0;
-				width:65%;
-				padding-top:54%;
-				.isometric-ipad-tilted {
-					position:absolute;
-					width:35%;
-					top:0; left:0;
-				}
-				.isometric-macbook-pro {
-					position:absolute;
-					width:60%;
-					bottom:0; right:0;
-				}
-			}
-			.diagram-lines {
-				position:absolute; z-index:-1;
-				.transform(rotateX(54.7deg) rotateZ(45deg));
-				width:50%;
-				bottom:-6%; left:23%;
-				.diagram-line {
-					position:absolute;
-					width:3px; height:50%;
-					background-color:@iron;
-					&.top-root {
-						.transform-origin(bottom, left);
-						bottom:0; left:50%;
-					}
-					&.top-bar {
-						height:100%;
-						.transform(rotate(90deg));
-						.transform-origin(bottom, left);
-						bottom:50%; left:0;
-					}
-					&.top-fork-left {
-						top:0; left:0;
-					}
-					&.top-fork-center {
-						top:0; left:50%;
-					}
-					&.top-fork-right {
-						top:0; right:0;
-					}
-				}
-				&:before {
-					content:'';
-					display:block;
-					width:100%;
-					padding-top:100%;
-				}
+				width:60%;
+				bottom:0; right:0;
 			}
 		}
-	}
-	#realize-vision {
-		.isometric-diagram {
-			position:relative;
-			padding-bottom:63%;
-			//border:1px solid red;
-			.middle-section {
+		.diagram-lines {
+			position:absolute; z-index:-1;
+			.transform(rotateX(54.7deg) rotateZ(45deg));
+			width:50%;
+			bottom:-6%; left:23%;
+			.diagram-line {
 				position:absolute;
-				width:24%;
-				bottom:-3%; left:18%;
-			}
-			.left-section {
-				position:absolute;
-				//border:1px solid blue;
-				left:0; bottom:32%;
-				width:25%;
-				padding-top:35%;
-
-				.speech-bubble {
-					position:absolute;
-					top:0; left:30%;
-					height:18%; width:75%;
-					.transform(rotateX(54.7deg) rotateZ(45deg) skew(45deg));
-					.transform-origin(top, left);
-	                background-color:darken(@light-gray, 5%);
-
-	                &:before {
-						content:'';
-						position:absolute;
-	                    border-bottom-color:darken(@light-gray, 5%);
-	                    top:100%; left:15%;
-	                    border-left:0 solid transparent;
-	                    border-top:18px solid darken(@light-gray, 5%);
-	                    border-right:18px solid transparent;
-	                }
-					&.blue {
-	                	background-color:@blue;
-						top:30%; left:47%;
-						&:before {border-top-color:@blue;}
-					}
-				}
-				.echo-dot {
-					position:absolute;
-					width:65%;
+				width:3px; height:50%;
+				background-color:@iron;
+				&.left-root {
+					.transform(rotate(90deg));
+					.transform-origin(bottom, left);
 					bottom:0; left:0;
-					.device {position:relative; z-index:1;}
-					&:after {
-		                content:'';
-		                position:absolute; z-index:0;
-		                //border:1px solid red;
-		                height:69%; width:100%;
-		                bottom:0;
-		                left:0;
-		                border-radius:50%;
-		                background-color:fade(@pure-black, 30%);
-		                box-shadow:15px 15px 20px fade(@pure-black, 30%);
-					}
 				}
-			}
-			.top-section {
-				position:absolute;
-				bottom:14%; right:0;
-				width:65%;
-				padding-top:54%;
-				.isometric-ipad-tilted {
-					position:absolute;
-					width:35%;
+				&.top-root {
+					.transform-origin(bottom, left);
+					bottom:0; left:50%;
+				}
+				&.top-bar {
+					height:100%;
+					.transform(rotate(90deg));
+					.transform-origin(bottom, left);
+					bottom:50%; left:0;
+				}
+				&.top-fork-left {
 					top:0; left:0;
 				}
-				.isometric-macbook-pro {
-					position:absolute;
-					width:60%;
-					bottom:0; right:0;
+				&.top-fork-right {
+					top:0; right:0;
 				}
 			}
-			.diagram-lines {
-				position:absolute; z-index:-1;
-				.transform(rotateX(54.7deg) rotateZ(45deg));
-				width:50%;
-				bottom:-6%; left:23%;
-				.diagram-line {
-					position:absolute;
-					width:3px; height:50%;
-					background-color:@iron;
-					&.left-root {
-						.transform(rotate(90deg));
-						.transform-origin(bottom, left);
-						bottom:0; left:0;
-					}
-					&.top-root {
-						.transform-origin(bottom, left);
-						bottom:0; left:50%;
-					}
-					&.top-bar {
-						height:100%;
-						.transform(rotate(90deg));
-						.transform-origin(bottom, left);
-						bottom:50%; left:0;
-					}
-					&.top-fork-left {
-						top:0; left:0;
-					}
-					&.top-fork-right {
-						top:0; right:0;
-					}
-				}
-				&:before {
-					content:'';
-					display:block;
-					width:100%;
-					padding-top:100%;
-				}
+			&:before {
+				content:'';
+				display:block;
+				width:100%;
+				padding-top:100%;
 			}
 		}
 	}

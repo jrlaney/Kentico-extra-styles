@@ -393,6 +393,9 @@ blockquote:after {
     width: calc(100% - 30px);
   }
 }
+p:empty {
+  margin-bottom: 0!important;
+}
 .number-group {
   position: relative;
   z-index: 1;
@@ -749,25 +752,13 @@ blockquote:after {
     right: 0;
   }
 }
-#academics-overview #hero.background-image {
-  background-image: url('/getmedia/fe9ad21a-1f9a-4682-89ff-56fadff6a3ed/higher-education');
-}
-.Academics.Students #step1 {
+.Academics.Students #page-hero {
+  padding: 60px 0;
   background-color: transparent;
 }
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  .Academics.Students #step1 .form-col {
-    -webkit-flex: 0 0 auto;
-    flex: 0 0 auto;
-    max-width: none;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .Academics.Students #step1 .text-col {
-    -webkit-flex: 0 0 58.33333333%;
-    flex: 0 0 58.33333333%;
-    max-width: 58.33333333%;
-  }
+.Academics.Students #page-hero h1,
+.Academics.Students #page-hero .line {
+  display: none;
 }
 @media only screen and (min-width: 768px) {
   .passed-view .delay02 {

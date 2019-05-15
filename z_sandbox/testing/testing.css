@@ -776,56 +776,17 @@ blockquote:after {
   margin-top: 11.5%;
   margin-left: -57%;
 }
-@media only screen and (min-width: 1200px) {
-  .NewHomepage #page-hero .device-row .stacked-mockups {
-    padding-bottom: 30%;
-  }
-  .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-macbook-pro {
-    width: 75%;
-    margin-top: -38%;
-    margin-left: 30%;
-  }
-  .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-ipad-tilted {
-    width: 45%;
-    margin-top: -1%;
-    margin-left: 65%;
-  }
-  .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-iphone {
-    width: 38%;
-    margin-top: 5%;
-    margin-left: 5%;
-  }
-  .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-screenshot-landscape {
-    width: 75%;
-    margin-left: -18%;
-  }
-  .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-screenshot-portrait {
-    width: 75%;
-    margin-top: 13%;
-    margin-left: -63%;
-  }
-}
-.NewHomepage #customer-success {
+.NewHomepage #customer-logos {
   margin-top: -20px;
 }
 @media only screen and (min-width: 768px) {
-  .NewHomepage #customer-success {
+  .NewHomepage #customer-logos {
     margin-top: -120px;
   }
 }
 @media only screen and (min-width: 980px) {
-  .NewHomepage #customer-success {
+  .NewHomepage #customer-logos {
     margin-top: -150px;
-  }
-}
-.NewHomepage .feature-row {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-@media only screen and (min-width: 768px) {
-  .NewHomepage .feature-row {
-    padding-top: 80px;
-    padding-bottom: 80px;
   }
 }
 .NewHomepage .m-icon {
@@ -839,24 +800,24 @@ blockquote:after {
   max-width: 60%;
   max-height: 60%;
 }
-.NewHomepage #analyze-anything .isometric-diagram {
+.NewHomepage #isometric-diagram {
   position: relative;
   padding-bottom: 63%;
 }
-.NewHomepage #analyze-anything .isometric-diagram .middle-section {
+.NewHomepage #isometric-diagram .middle-section {
   position: absolute;
   width: 24%;
   bottom: -3%;
   left: 18%;
 }
-.NewHomepage #analyze-anything .isometric-diagram .left-section {
+.NewHomepage #isometric-diagram .left-section {
   position: absolute;
   left: 0;
   bottom: 32%;
   width: 25%;
   padding-top: 35%;
 }
-.NewHomepage #analyze-anything .isometric-diagram .left-section .speech-bubble {
+.NewHomepage #isometric-diagram .left-section .speech-bubble {
   position: absolute;
   top: 0;
   left: 30%;
@@ -868,7 +829,7 @@ blockquote:after {
   transform-origin: top left;
   background-color: #e5e5e5;
 }
-.NewHomepage #analyze-anything .isometric-diagram .left-section .speech-bubble:before {
+.NewHomepage #isometric-diagram .left-section .speech-bubble:before {
   content: '';
   position: absolute;
   border-bottom-color: #e5e5e5;
@@ -878,25 +839,25 @@ blockquote:after {
   border-top: 18px solid #e5e5e5;
   border-right: 18px solid transparent;
 }
-.NewHomepage #analyze-anything .isometric-diagram .left-section .speech-bubble.blue {
+.NewHomepage #isometric-diagram .left-section .speech-bubble.blue {
   background-color: #4789A3;
   top: 30%;
   left: 47%;
 }
-.NewHomepage #analyze-anything .isometric-diagram .left-section .speech-bubble.blue:before {
+.NewHomepage #isometric-diagram .left-section .speech-bubble.blue:before {
   border-top-color: #4789A3;
 }
-.NewHomepage #analyze-anything .isometric-diagram .left-section .echo-dot {
+.NewHomepage #isometric-diagram .left-section .echo-dot {
   position: absolute;
   width: 65%;
   bottom: 0;
   left: 0;
 }
-.NewHomepage #analyze-anything .isometric-diagram .left-section .echo-dot .device {
+.NewHomepage #isometric-diagram .left-section .echo-dot .device {
   position: relative;
   z-index: 1;
 }
-.NewHomepage #analyze-anything .isometric-diagram .left-section .echo-dot:after {
+.NewHomepage #isometric-diagram .left-section .echo-dot:after {
   content: '';
   position: absolute;
   z-index: 0;
@@ -908,26 +869,26 @@ blockquote:after {
   background-color: rgba(0, 0, 0, 0.3);
   box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
 }
-.NewHomepage #analyze-anything .isometric-diagram .top-section {
+.NewHomepage #isometric-diagram .top-section {
   position: absolute;
   bottom: 14%;
   right: 0;
   width: 65%;
   padding-top: 54%;
 }
-.NewHomepage #analyze-anything .isometric-diagram .top-section .isometric-ipad-tilted {
+.NewHomepage #isometric-diagram .top-section .isometric-ipad-tilted {
   position: absolute;
   width: 35%;
   top: 0;
   left: 0;
 }
-.NewHomepage #analyze-anything .isometric-diagram .top-section .isometric-macbook-pro {
+.NewHomepage #isometric-diagram .top-section .isometric-macbook-pro {
   position: absolute;
   width: 60%;
   bottom: 0;
   right: 0;
 }
-.NewHomepage #analyze-anything .isometric-diagram .diagram-lines {
+.NewHomepage #isometric-diagram .diagram-lines {
   position: absolute;
   z-index: -1;
   -webkit-transform: rotateX(54.7deg) rotateZ(45deg);
@@ -936,13 +897,13 @@ blockquote:after {
   bottom: -6%;
   left: 23%;
 }
-.NewHomepage #analyze-anything .isometric-diagram .diagram-lines .diagram-line {
+.NewHomepage #isometric-diagram .diagram-lines .diagram-line {
   position: absolute;
   width: 3px;
   height: 50%;
   background-color: #CCCCCC;
 }
-.NewHomepage #analyze-anything .isometric-diagram .diagram-lines .diagram-line.left-root {
+.NewHomepage #isometric-diagram .diagram-lines .diagram-line.left-root {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   -webkit-transform-origin: bottom left;
@@ -950,13 +911,13 @@ blockquote:after {
   bottom: 0;
   left: 0;
 }
-.NewHomepage #analyze-anything .isometric-diagram .diagram-lines .diagram-line.top-root {
+.NewHomepage #isometric-diagram .diagram-lines .diagram-line.top-root {
   -webkit-transform-origin: bottom left;
   transform-origin: bottom left;
   bottom: 0;
   left: 50%;
 }
-.NewHomepage #analyze-anything .isometric-diagram .diagram-lines .diagram-line.top-bar {
+.NewHomepage #isometric-diagram .diagram-lines .diagram-line.top-bar {
   height: 100%;
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
@@ -965,232 +926,15 @@ blockquote:after {
   bottom: 50%;
   left: 0;
 }
-.NewHomepage #analyze-anything .isometric-diagram .diagram-lines .diagram-line.top-fork-left {
+.NewHomepage #isometric-diagram .diagram-lines .diagram-line.top-fork-left {
   top: 0;
   left: 0;
 }
-.NewHomepage #analyze-anything .isometric-diagram .diagram-lines .diagram-line.top-fork-right {
-  top: 0;
-  right: 0;
-}
-.NewHomepage #analyze-anything .isometric-diagram .diagram-lines:before {
-  content: '';
-  display: block;
-  width: 100%;
-  padding-top: 100%;
-}
-.NewHomepage #go-mobile .isometric-diagram {
-  position: relative;
-  padding-bottom: 63%;
-}
-.NewHomepage #go-mobile .isometric-diagram .middle-section {
-  position: absolute;
-  width: 24%;
-  bottom: -3%;
-  left: 18%;
-}
-.NewHomepage #go-mobile .isometric-diagram .top-section {
-  position: absolute;
-  bottom: 14%;
-  right: 0;
-  width: 65%;
-  padding-top: 54%;
-}
-.NewHomepage #go-mobile .isometric-diagram .top-section .isometric-ipad-tilted {
-  position: absolute;
-  width: 35%;
-  top: 0;
-  left: 0;
-}
-.NewHomepage #go-mobile .isometric-diagram .top-section .isometric-macbook-pro {
-  position: absolute;
-  width: 60%;
-  bottom: 0;
-  right: 0;
-}
-.NewHomepage #go-mobile .isometric-diagram .diagram-lines {
-  position: absolute;
-  z-index: -1;
-  -webkit-transform: rotateX(54.7deg) rotateZ(45deg);
-  transform: rotateX(54.7deg) rotateZ(45deg);
-  width: 50%;
-  bottom: -6%;
-  left: 23%;
-}
-.NewHomepage #go-mobile .isometric-diagram .diagram-lines .diagram-line {
-  position: absolute;
-  width: 3px;
-  height: 50%;
-  background-color: #CCCCCC;
-}
-.NewHomepage #go-mobile .isometric-diagram .diagram-lines .diagram-line.top-root {
-  -webkit-transform-origin: bottom left;
-  transform-origin: bottom left;
-  bottom: 0;
-  left: 50%;
-}
-.NewHomepage #go-mobile .isometric-diagram .diagram-lines .diagram-line.top-bar {
-  height: 100%;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  -webkit-transform-origin: bottom left;
-  transform-origin: bottom left;
-  bottom: 50%;
-  left: 0;
-}
-.NewHomepage #go-mobile .isometric-diagram .diagram-lines .diagram-line.top-fork-left {
-  top: 0;
-  left: 0;
-}
-.NewHomepage #go-mobile .isometric-diagram .diagram-lines .diagram-line.top-fork-center {
-  top: 0;
-  left: 50%;
-}
-.NewHomepage #go-mobile .isometric-diagram .diagram-lines .diagram-line.top-fork-right {
+.NewHomepage #isometric-diagram .diagram-lines .diagram-line.top-fork-right {
   top: 0;
   right: 0;
 }
-.NewHomepage #go-mobile .isometric-diagram .diagram-lines:before {
-  content: '';
-  display: block;
-  width: 100%;
-  padding-top: 100%;
-}
-.NewHomepage #realize-vision .isometric-diagram {
-  position: relative;
-  padding-bottom: 63%;
-}
-.NewHomepage #realize-vision .isometric-diagram .middle-section {
-  position: absolute;
-  width: 24%;
-  bottom: -3%;
-  left: 18%;
-}
-.NewHomepage #realize-vision .isometric-diagram .left-section {
-  position: absolute;
-  left: 0;
-  bottom: 32%;
-  width: 25%;
-  padding-top: 35%;
-}
-.NewHomepage #realize-vision .isometric-diagram .left-section .speech-bubble {
-  position: absolute;
-  top: 0;
-  left: 30%;
-  height: 18%;
-  width: 75%;
-  -webkit-transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg);
-  transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg);
-  -webkit-transform-origin: top left;
-  transform-origin: top left;
-  background-color: #e5e5e5;
-}
-.NewHomepage #realize-vision .isometric-diagram .left-section .speech-bubble:before {
-  content: '';
-  position: absolute;
-  border-bottom-color: #e5e5e5;
-  top: 100%;
-  left: 15%;
-  border-left: 0 solid transparent;
-  border-top: 18px solid #e5e5e5;
-  border-right: 18px solid transparent;
-}
-.NewHomepage #realize-vision .isometric-diagram .left-section .speech-bubble.blue {
-  background-color: #4789A3;
-  top: 30%;
-  left: 47%;
-}
-.NewHomepage #realize-vision .isometric-diagram .left-section .speech-bubble.blue:before {
-  border-top-color: #4789A3;
-}
-.NewHomepage #realize-vision .isometric-diagram .left-section .echo-dot {
-  position: absolute;
-  width: 65%;
-  bottom: 0;
-  left: 0;
-}
-.NewHomepage #realize-vision .isometric-diagram .left-section .echo-dot .device {
-  position: relative;
-  z-index: 1;
-}
-.NewHomepage #realize-vision .isometric-diagram .left-section .echo-dot:after {
-  content: '';
-  position: absolute;
-  z-index: 0;
-  height: 69%;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
-}
-.NewHomepage #realize-vision .isometric-diagram .top-section {
-  position: absolute;
-  bottom: 14%;
-  right: 0;
-  width: 65%;
-  padding-top: 54%;
-}
-.NewHomepage #realize-vision .isometric-diagram .top-section .isometric-ipad-tilted {
-  position: absolute;
-  width: 35%;
-  top: 0;
-  left: 0;
-}
-.NewHomepage #realize-vision .isometric-diagram .top-section .isometric-macbook-pro {
-  position: absolute;
-  width: 60%;
-  bottom: 0;
-  right: 0;
-}
-.NewHomepage #realize-vision .isometric-diagram .diagram-lines {
-  position: absolute;
-  z-index: -1;
-  -webkit-transform: rotateX(54.7deg) rotateZ(45deg);
-  transform: rotateX(54.7deg) rotateZ(45deg);
-  width: 50%;
-  bottom: -6%;
-  left: 23%;
-}
-.NewHomepage #realize-vision .isometric-diagram .diagram-lines .diagram-line {
-  position: absolute;
-  width: 3px;
-  height: 50%;
-  background-color: #CCCCCC;
-}
-.NewHomepage #realize-vision .isometric-diagram .diagram-lines .diagram-line.left-root {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  -webkit-transform-origin: bottom left;
-  transform-origin: bottom left;
-  bottom: 0;
-  left: 0;
-}
-.NewHomepage #realize-vision .isometric-diagram .diagram-lines .diagram-line.top-root {
-  -webkit-transform-origin: bottom left;
-  transform-origin: bottom left;
-  bottom: 0;
-  left: 50%;
-}
-.NewHomepage #realize-vision .isometric-diagram .diagram-lines .diagram-line.top-bar {
-  height: 100%;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  -webkit-transform-origin: bottom left;
-  transform-origin: bottom left;
-  bottom: 50%;
-  left: 0;
-}
-.NewHomepage #realize-vision .isometric-diagram .diagram-lines .diagram-line.top-fork-left {
-  top: 0;
-  left: 0;
-}
-.NewHomepage #realize-vision .isometric-diagram .diagram-lines .diagram-line.top-fork-right {
-  top: 0;
-  right: 0;
-}
-.NewHomepage #realize-vision .isometric-diagram .diagram-lines:before {
+.NewHomepage #isometric-diagram .diagram-lines:before {
   content: '';
   display: block;
   width: 100%;
