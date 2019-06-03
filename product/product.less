@@ -37,9 +37,11 @@ main, section {overflow:hidden;}
 @import '../_new-components/anchor-link-grid.less';
 @import '../_new-components/background-color-filters.less';
 @import '../_new-components/blockquote.less';
+@import '../_new-components/button-with-flag.less';
 @import '../_new-components/center-mode-image-slider.less';
 @import '../_new-components/customer-success-logo-video-slider.less';
 @import '../_new-components/content-between-sections.less';
+@import '../_new-components/form-hero-spacing-fix.less';
 @import '../_new-components/hypercard-graphic.less';
 @import '../_new-components/multi-item-slider-nav.less';
 @import '../_new-components/new-device-mockups.less';
@@ -47,7 +49,9 @@ main, section {overflow:hidden;}
 @import '../_new-components/offpage-image.less';
 @import '../_new-components/popup-window-multiple-sizes.less';
 @import '../_new-components/related-items-reset.less';
+//@import '../_new-components/standard-gridder.less';
 @import '../_new-components/triangle-group.less';
+@import '../_new-components/vertical-diagram.less';
 @import '../_new-components/vertical-panelstack.less';
 
 
@@ -79,32 +83,15 @@ main, section {overflow:hidden;}
 }
 
 
-
-
-
-// #hyper-experience-playlist {
-//     .panelstack.vertical-panelstack {
-//         .panel-nav-elem > a {
-//             .display(flex);
-//             .align-items(center);
-//             .justify-content(flex-start);
-//
-//             .icon {margin:0 15px 0 0;}
-//         }
-//         .panel-content .video-wrapper {opacity:1; .transition(opacity 0.5s ease-out 0s);}
-//         .panel-content.hide .video-wrapper {opacity:0;  .transition(opacity 2.5s ease-out 1s);}
-//     }
-// }
-
 // special typography for feature pages (to be retired)
-.Product.PageMenuItem .page-title {
-    font-family:@myriad-pro;
-    font-size:20px; line-height:22px;
-    text-transform:uppercase;
-    letter-spacing:0.2em;
-    font-weight:600;
-    color:@red;
-}
+// .Product.PageMenuItem .page-title {
+//     font-family:@myriad-pro;
+//     font-size:20px; line-height:22px;
+//     text-transform:uppercase;
+//     letter-spacing:0.2em;
+//     font-weight:600;
+//     color:@red;
+// }
 
 //for a demo iframe
 .demo-wrapper {
@@ -164,40 +151,40 @@ main, section {overflow:hidden;}
 
 
 //feature hero white triangle bottom
-#hero.bottom-white-triangle, #page-hero.bottom-white-triangle {
-    position:relative; overflow:hidden;
-    padding-bottom:50px + 20px!important;
-    @media @medium { padding-bottom:75px + 20px!important; }
-    @media @large { padding-bottom:100px + 20px!important; }
-    @media @xlarge { padding-bottom:130px + 20px!important; }
-
-    &:before, &:after {
-        content:'';
-        display:block; position:absolute;
-    }
-    &:before {
-        z-index:1;
-        height:0; width:0;
-        bottom:0; left:50%;
-        .translateX(-50%);
-        border-left:50vw solid transparent;
-        border-right:50vw solid transparent;
-        border-top:50px solid @white;
-        @media @medium { border-top-width:75px; }
-        @media @large { border-top-width:100px; }
-        @media @xlarge { border-top-width:130px; }
-    }
-    &:after {
-        z-index:0;
-        bottom:0; left:0;
-        width:100%;
-        background-color:@light-gray;
-        height:50px;
-        @media @medium { height:75px; }
-        @media @large { height:100px; }
-        @media @xlarge { height:130px; }
-    }
-}
+// #hero.bottom-white-triangle, #page-hero.bottom-white-triangle {
+//     position:relative; overflow:hidden;
+//     padding-bottom:50px + 20px!important;
+//     @media @medium { padding-bottom:75px + 20px!important; }
+//     @media @large { padding-bottom:100px + 20px!important; }
+//     @media @xlarge { padding-bottom:130px + 20px!important; }
+//
+//     &:before, &:after {
+//         content:'';
+//         display:block; position:absolute;
+//     }
+//     &:before {
+//         z-index:1;
+//         height:0; width:0;
+//         bottom:0; left:50%;
+//         .translateX(-50%);
+//         border-left:50vw solid transparent;
+//         border-right:50vw solid transparent;
+//         border-top:50px solid @white;
+//         @media @medium { border-top-width:75px; }
+//         @media @large { border-top-width:100px; }
+//         @media @xlarge { border-top-width:130px; }
+//     }
+//     &:after {
+//         z-index:0;
+//         bottom:0; left:0;
+//         width:100%;
+//         background-color:@light-gray;
+//         height:50px;
+//         @media @medium { height:75px; }
+//         @media @large { height:100px; }
+//         @media @xlarge { height:130px; }
+//     }
+// }
 
 //single angled hero for feature pages
 .single-angle-cross-hero {
@@ -246,189 +233,189 @@ main, section {overflow:hidden;}
 }
 
 //standard styles for gridder usage
-.gridder {
-    position:relative; overflow:hidden;
-    padding-left:20px;
-    padding-right:20px;
-    padding-bottom:40px;
-    .single-transition;
-    &:after { //the dark background that shows up when the grid is opened
-        display:block; position:absolute; z-index:1;
-        content:"";
-        width:100%; height:100%;
-        top:0; left:0; right:0; bottom:0;
-        .angled-gradient(#222222, #444444);
-
-        //animated properties
-        opacity:0;
-        .single-transition(0.3s, ease-out, opacity, 0.5s);
-    }
-    .grid-item {
-        position:relative;
-        padding:5px; z-index:2;
-        .order(-1);
-    }
-    .card {
-        cursor:pointer;
-        border-top-color:@gainsboro;
-        .card-content:first-child {
-            border-bottom:1px solid @gainsboro;
-        }
-        .card-content .logo {
-            .position(absolute, 50%, 50%, null, null);
-            max-height: ~"calc(100% - 40px)";
-            max-width: ~"calc(100% - 40px)";
-            .translate(-50%, -50%);
-        }
-        //animated properties
-        opacity:1;
-        .translateY(0);
-        -webkit-transition:opacity 0.3s ease-in 0.5s, transform 0.3s ease-in 0.5s, box-shadow 0.2s ease-out 0s;
-        transition:opacity 0.3s ease-in 0.5s, transform 0.3s ease-in 0.5s, box-shadow 0.2s ease-out 0s;
-    }
-    .gridder-show {
-        position:absolute; z-index:3;
-        padding:0;
-        width:100%; top:0px; left:10px;
-        margin-left:-10px; margin-right:-10px;
-        overflow:hidden;
-        color:#ffffff; text-align:left;
-    }
-    .gridder-padding {
-        display:block; position:relative;
-        padding:70px 20px 40px 20px;
-
-        //animation for when the content block appears
-        .animation(fade-slide-down 0.5s 0s ease-out both);
-    }
-    .gridder-close {
-        position:absolute; z-index:3;
-        top:35px; right:0;
-        height:50px; width:50px;
-        cursor:pointer;
-        &:before,
-        &:after {
-            position:absolute; display:block;
-            content:"";
-            top:50%; left:50%;
-            margin-top:-15px; margin-right:-15px;
-            height:30px; width:2px;
-            background-color:#dddddd;
-        }
-        &:before {.rotate(45deg);}
-        &:after {.rotate(-45deg);}
-        //ANIMATED PROPERTIES
-        background-color:rgba(0,0,0,0.0);
-        .single-transition;
-        &:hover {background-color:rgba(0,0,0,0.4); color:@white;}
-    }
-    .gridder-nav {
-        position:absolute; z-index:3;
-        top:35px; left:0;
-        height:50px; width:50px;
-        cursor:pointer;
-        //ANIMATED PROPERTIES
-        background-color:rgba(0,0,0,0.0);
-        .single-transition;
-        &:hover {background-color:rgba(0,0,0,0.4); color:@white;}
-        &.next {
-            left:50px;
-            .rotate(180deg);
-        }
-        &.disabled,
-        &.disabled:hover {
-            opacity:0.2;
-            cursor:default;
-            background-color:rgba(0,0,0,0.0);
-        }
-        &:before,
-        &:after {
-            position:absolute; display:block;
-            content:"";
-            top:50%; left:50%; margin-left:-4px;
-            height:18px; width:2px;
-            background-color:#dddddd;
-        }
-        &:before {
-            margin-top:-15px;
-            .rotate(45deg);
-        }
-        &:after {
-            margin-top:-3px;
-            .rotate(-45deg);
-        }
-    }
-    .gridder-back {
-        position:absolute; z-index:3;
-        top:0; left:0; right:0;
-        padding:10px 20px 10px 40px;
-        height:35px;
-        background-color:rgba(0,0,0,0.4);
-        font-family:@myriad-pro;
-        font-weight:300;
-        font-size:14px; line-height:16px;
-        color:@gray; .uppercase;
-        &:before,
-        &:after {
-            position:absolute; display:block;
-            content:"";
-            top:50%; left:20px;
-            height:10px; width:2px;
-            background-color:@gray;
-        }
-        &:before {
-            margin-top:-9px;
-            .rotate(45deg);
-        }
-        &:after {
-            margin-top:-2px;
-            .rotate(-45deg);
-        }
-    }
-
-    //ANIMATION END STATES
-    &.hasSelectedItem {
-        .card {
-            /*opening timing on the cards*/
-            opacity:0;
-            .translateY(10px);
-            -webkit-transition:opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s, box-shadow 0.2s ease-out 0s;
-            transition:opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s, box-shadow 0.2s ease-out 0s;
-        }
-        &:after {
-          opacity:1;
-          .single-transition(0.5s, ease-out, opacity, 0.3s);
-        }
-    }
-
-    @media @medium {
-        margin-left:0; margin-right:0;
-        padding-left:0; padding-right:0; padding-bottom:60px;
-        .grid-item {padding:10px;}
-        .gridder-show {position:relative; top:auto; left:auto;}
-        .gridder-padding {padding:70px 50px 0 50px;}
-        .gridder-close {top:0;}
-        .gridder-nav {
-            top:50%;
-            height:100px;
-            margin-top:-30px;
-            &.next {right:0; left:auto;}
-        }
-        .gridder-back {
-            right:auto;
-            height:auto;
-            font-size:18px; line-height:20px;
-        }
-        .card .title {font-size:26px; line-height:32px;}
-        .gridder-back {
-            background-color:rgba(0,0,0,0.0);
-            .single-transition;
-        }
-        .gridder-back:hover {background-color:rgba(0,0,0,0.4); color:#ffffff;}
-    }
-    @media @large {padding-bottom:80px;}
-}
-.gridder-content {display:none;}
+// .gridder {
+//     position:relative; overflow:hidden;
+//     padding-left:20px;
+//     padding-right:20px;
+//     padding-bottom:40px;
+//     .single-transition;
+//     &:after { //the dark background that shows up when the grid is opened
+//         display:block; position:absolute; z-index:1;
+//         content:"";
+//         width:100%; height:100%;
+//         top:0; left:0; right:0; bottom:0;
+//         .angled-gradient(#222222, #444444);
+//
+//         //animated properties
+//         opacity:0;
+//         .single-transition(0.3s, ease-out, opacity, 0.5s);
+//     }
+//     .grid-item {
+//         position:relative;
+//         padding:5px; z-index:2;
+//         .order(-1);
+//     }
+//     .card {
+//         cursor:pointer;
+//         border-top-color:@gainsboro;
+//         .card-content:first-child {
+//             border-bottom:1px solid @gainsboro;
+//         }
+//         .card-content .logo {
+//             .position(absolute, 50%, 50%, null, null);
+//             max-height: ~"calc(100% - 40px)";
+//             max-width: ~"calc(100% - 40px)";
+//             .translate(-50%, -50%);
+//         }
+//         //animated properties
+//         opacity:1;
+//         .translateY(0);
+//         -webkit-transition:opacity 0.3s ease-in 0.5s, transform 0.3s ease-in 0.5s, box-shadow 0.2s ease-out 0s;
+//         transition:opacity 0.3s ease-in 0.5s, transform 0.3s ease-in 0.5s, box-shadow 0.2s ease-out 0s;
+//     }
+//     .gridder-show {
+//         position:absolute; z-index:3;
+//         padding:0;
+//         width:100%; top:0px; left:10px;
+//         margin-left:-10px; margin-right:-10px;
+//         overflow:hidden;
+//         color:#ffffff; text-align:left;
+//     }
+//     .gridder-padding {
+//         display:block; position:relative;
+//         padding:70px 20px 40px 20px;
+//
+//         //animation for when the content block appears
+//         .animation(fade-slide-down 0.5s 0s ease-out both);
+//     }
+//     .gridder-close {
+//         position:absolute; z-index:3;
+//         top:35px; right:0;
+//         height:50px; width:50px;
+//         cursor:pointer;
+//         &:before,
+//         &:after {
+//             position:absolute; display:block;
+//             content:"";
+//             top:50%; left:50%;
+//             margin-top:-15px; margin-right:-15px;
+//             height:30px; width:2px;
+//             background-color:#dddddd;
+//         }
+//         &:before {.rotate(45deg);}
+//         &:after {.rotate(-45deg);}
+//         //ANIMATED PROPERTIES
+//         background-color:rgba(0,0,0,0.0);
+//         .single-transition;
+//         &:hover {background-color:rgba(0,0,0,0.4); color:@white;}
+//     }
+//     .gridder-nav {
+//         position:absolute; z-index:3;
+//         top:35px; left:0;
+//         height:50px; width:50px;
+//         cursor:pointer;
+//         //ANIMATED PROPERTIES
+//         background-color:rgba(0,0,0,0.0);
+//         .single-transition;
+//         &:hover {background-color:rgba(0,0,0,0.4); color:@white;}
+//         &.next {
+//             left:50px;
+//             .rotate(180deg);
+//         }
+//         &.disabled,
+//         &.disabled:hover {
+//             opacity:0.2;
+//             cursor:default;
+//             background-color:rgba(0,0,0,0.0);
+//         }
+//         &:before,
+//         &:after {
+//             position:absolute; display:block;
+//             content:"";
+//             top:50%; left:50%; margin-left:-4px;
+//             height:18px; width:2px;
+//             background-color:#dddddd;
+//         }
+//         &:before {
+//             margin-top:-15px;
+//             .rotate(45deg);
+//         }
+//         &:after {
+//             margin-top:-3px;
+//             .rotate(-45deg);
+//         }
+//     }
+//     .gridder-back {
+//         position:absolute; z-index:3;
+//         top:0; left:0; right:0;
+//         padding:10px 20px 10px 40px;
+//         height:35px;
+//         background-color:rgba(0,0,0,0.4);
+//         font-family:@myriad-pro;
+//         font-weight:300;
+//         font-size:14px; line-height:16px;
+//         color:@gray; .uppercase;
+//         &:before,
+//         &:after {
+//             position:absolute; display:block;
+//             content:"";
+//             top:50%; left:20px;
+//             height:10px; width:2px;
+//             background-color:@gray;
+//         }
+//         &:before {
+//             margin-top:-9px;
+//             .rotate(45deg);
+//         }
+//         &:after {
+//             margin-top:-2px;
+//             .rotate(-45deg);
+//         }
+//     }
+//
+//     //ANIMATION END STATES
+//     &.hasSelectedItem {
+//         .card {
+//             /*opening timing on the cards*/
+//             opacity:0;
+//             .translateY(10px);
+//             -webkit-transition:opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s, box-shadow 0.2s ease-out 0s;
+//             transition:opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s, box-shadow 0.2s ease-out 0s;
+//         }
+//         &:after {
+//           opacity:1;
+//           .single-transition(0.5s, ease-out, opacity, 0.3s);
+//         }
+//     }
+//
+//     @media @medium {
+//         margin-left:0; margin-right:0;
+//         padding-left:0; padding-right:0; padding-bottom:60px;
+//         .grid-item {padding:10px;}
+//         .gridder-show {position:relative; top:auto; left:auto;}
+//         .gridder-padding {padding:70px 50px 0 50px;}
+//         .gridder-close {top:0;}
+//         .gridder-nav {
+//             top:50%;
+//             height:100px;
+//             margin-top:-30px;
+//             &.next {right:0; left:auto;}
+//         }
+//         .gridder-back {
+//             right:auto;
+//             height:auto;
+//             font-size:18px; line-height:20px;
+//         }
+//         .card .title {font-size:26px; line-height:32px;}
+//         .gridder-back {
+//             background-color:rgba(0,0,0,0.0);
+//             .single-transition;
+//         }
+//         .gridder-back:hover {background-color:rgba(0,0,0,0.4); color:#ffffff;}
+//     }
+//     @media @large {padding-bottom:80px;}
+// }
+// .gridder-content {display:none;}
 
 
 .device-mockup.shadow {
@@ -660,124 +647,7 @@ main, section {overflow:hidden;}
     }
 }
 
-//vertical diagram
-@vertical-diagram-spacing: 40px;
-.vertical-diagram {
-    font-family:@myriad-pro;
-    font-weight:400;
-    color:@dark-gray;
 
-    .item-row {
-        position:relative;
-
-        &:before {
-            content:'';
-            position:absolute;
-            height:@vertical-diagram-spacing;
-            width:1px;
-            left:50%;
-            margin-left:-2px;
-            border-left:5px dashed @iron;
-        }
-
-        .grid-item {
-            position:relative;
-            &:before, &:after {
-                content:'';
-                position:absolute;
-            }
-            &:before {
-                height:@vertical-diagram-spacing;
-                width:1px;
-                left:50%;
-                margin-left:-2px;
-                border-left:5px dashed @iron;
-            }
-            &:after {
-                height:1px;
-                width:100%;
-                left:0;
-                border-top:5px dashed @iron;
-            }
-            &:first-child:after {left:50%; width:50%;}
-            &:last-child:after {width:50%;}
-        }
-
-        &.row-above {
-            padding-bottom:@vertical-diagram-spacing;
-            &:before {bottom:0;}
-            .grid-item {
-                padding-bottom:@vertical-diagram-spacing;
-                &:before, &:after {bottom:0;}
-            }
-        }
-        &.row-below {
-            padding-top:@vertical-diagram-spacing;
-            &:before {top:0;}
-            .grid-item {
-                padding-top:@vertical-diagram-spacing;
-                &:before, &:after {top:0;}
-            }
-        }
-    }
-
-    .top-point-up {
-        position:relative;
-        margin-top:15px;
-        &:before {
-            content:'';
-            position:absolute; display:block;
-            bottom:100%; left:50%;
-            margin-left:-14px;
-            width:0; height:0;
-            border-left:15px solid transparent;
-            border-bottom:15px solid @red;
-            border-right:15px solid transparent;
-        }
-    }
-    .top-point-down {
-        position:relative;
-        margin-top:15px;
-        &:after {
-            content:'';
-            position:absolute; display:block;
-            bottom:100%; left:50%;
-            margin-left:-14px;
-            width:0; height:0;
-            border-left:15px solid transparent;
-            border-top:15px solid @red;
-            border-right:15px solid transparent;
-        }
-    }
-    .bottom-point-up {
-        position:relative;
-        margin-bottom:15px;
-        &:before {
-            content:'';
-            position:absolute; display:block;
-            top:100%; left:50%;
-            margin-left:-14px;
-            width:0; height:0;
-            border-left:15px solid transparent;
-            border-bottom:15px solid @red;
-            border-right:15px solid transparent;
-        }
-    }
-    .bottom-point-down {
-        position:relative;
-        margin-bottom:15px;
-        &:after {
-            content:'';
-            position:absolute; display:block;
-            top:100%; left:50%;
-            margin-left:-14px;
-            width:0; height:0;
-            border-left:15px solid transparent;
-            border-top:15px solid @red;
-            border-right:15px solid transparent;
-        }
-    }
-}//end diagram
 
 
 
@@ -789,7 +659,7 @@ main, section {overflow:hidden;}
 //INDIVIDUAL PAGE STYLES
 
 //PRODUCTS OVERVIEW
-#products-overview {
+#products-overview, .productOverview {
     .device-family {
         position:relative;
         padding-bottom:5%; padding-top:30px; margin-bottom:30px;
@@ -898,6 +768,8 @@ main, section {overflow:hidden;}
 
 
 
+
+
 //ANALYTICS PAGES
 .Analytics {
     #introduction {
@@ -949,55 +821,71 @@ main, section {overflow:hidden;}
     }
 }//end analytics overview page
 
-.BigData {
-    #hero.bottom-white-triangle {
-        .device-mockup {
-            @media @large {width:215%; margin-right:-15%;}
-            img {max-width:100%!important; margin-left:0!important;}
-        }
-    }
-    @media @medium {
-        #hadoop-diagram-platform {
-            .padding-y(@column-gutter / 2);
-
-            .flex {
-                position: relative;
-
-                &:after {
-                    content: '';
-                    display: block;
-                    .size(@thin, @column-gutter);
-                    .position(absolute, @left:50%, @bottom:@column-gutter * -1);
-                    background-color: @gray;
-                }
+.FederatedAnalytics  {
+    // #for-analysts {
+    //     overflow:visible;
+    //     .flex-row > div:first-child {position:relative; z-index:1;}
+    //     .offpage-image {
+    //         position:relative; z-index:0;
+    //         width:200%;
+    //         margin-right:-65%;
+    //         @media @medium {
+    //             width:540%;
+    //             margin-right:-200%;
+    //         }
+    //         @media @large {
+    //             width:400%;
+    //             margin-right:-145%;
+    //         }
+    //         @media @xlarge {
+    //             width:330%;
+    //             margin-right:-115%;
+    //         }
+    //     }
+    // }
+    #for-analysts, #data-scientists {
+        overflow:visible;
+        .flex-row > div:first-child {position:relative; z-index:1;}
+        .offpage-image {
+            position:relative; z-index:0;
+            width:200%;
+            margin-right:-65%;
+            @media @medium {
+                width:350%;
+                margin-right:-125%;
             }
-        }
-        #hadoop-diagram-sql {
-            padding-top: @column-gutter / 2;
-
-            .grid-item {
-                position: relative;
-
-                &:before {
-                    content: '';
-                    display: block;
-                    .size(@thin, @column-gutter);
-                    .position(absolute, @column-gutter / -2, 50%);
-                    background-color: @gray;
-                }
-                &:after {
-                    content: '';
-                    display: block;
-                    height: @thin;
-                    .position(absolute, @column-gutter / -2, 0, 0);
-                    background-color: @gray;
-                }
-                &:first-child:after { left: 50%; }
-                &:last-child:after { right: 50%; }
+            @media @large {
+                width:300%;
+                margin-right:-100%;
+            }
+            @media @xlarge {
+                width:230%;
+                margin-right:-80%;
             }
         }
     }
-}//end big data
+    #developers {
+        overflow:visible;
+        .flex-row > div:first-child {position:relative; z-index:1;}
+        .offpage-image {
+            position:relative; z-index:0;
+            width:200%;
+            margin-left:-65%;
+            @media @medium {
+                width:350%;
+                margin-left:-125%;
+            }
+            @media @large {
+                width:300%;
+                margin-left:-100%;
+            }
+            @media @xlarge {
+                width:230%;
+                margin-left:-80%;
+            }
+        }
+    }
+}
 
 .PersonalizationCollaboration {
     #communication-and-collaboration {
@@ -1031,171 +919,508 @@ main, section {overflow:hidden;}
     }
 }//end collaboration
 
-.DataConnectivity {
-    #hero {
-        padding-bottom: 20px;
-        @media @medium { padding-bottom: 30px; }
-        @media @large { padding-bottom: 40px; }
+// .BigData {
+//     // #hero.bottom-white-triangle {
+//     //     .device-mockup {
+//     //         @media @large {width:215%; margin-right:-15%;}
+//     //         img {max-width:100%!important; margin-left:0!important;}
+//     //     }
+//     // }
+//     // @media @medium {
+//     //     #hadoop-diagram-platform {
+//     //         .padding-y(@column-gutter / 2);
+//     //
+//     //         .flex {
+//     //             position: relative;
+//     //
+//     //             &:after {
+//     //                 content: '';
+//     //                 display: block;
+//     //                 .size(@thin, @column-gutter);
+//     //                 .position(absolute, @left:50%, @bottom:@column-gutter * -1);
+//     //                 background-color: @gray;
+//     //             }
+//     //         }
+//     //     }
+//     //     #hadoop-diagram-sql {
+//     //         padding-top: @column-gutter / 2;
+//     //
+//     //         .grid-item {
+//     //             position: relative;
+//     //
+//     //             &:before {
+//     //                 content: '';
+//     //                 display: block;
+//     //                 .size(@thin, @column-gutter);
+//     //                 .position(absolute, @column-gutter / -2, 50%);
+//     //                 background-color: @gray;
+//     //             }
+//     //             &:after {
+//     //                 content: '';
+//     //                 display: block;
+//     //                 height: @thin;
+//     //                 .position(absolute, @column-gutter / -2, 0, 0);
+//     //                 background-color: @gray;
+//     //             }
+//     //             &:first-child:after { left: 50%; }
+//     //             &:last-child:after { right: 50%; }
+//     //         }
+//     //     }
+//     // }
+// }//end big data
 
+
+
+// .DataConnectivity {
+//     #hero {
+//         padding-bottom: 20px;
+//         @media @medium { padding-bottom: 30px; }
+//         @media @large { padding-bottom: 40px; }
+//
+//         .device-mockup {
+//             width:200%; float:right; margin-right:-10%;
+//             @media @xlarge {width:150%;}
+//         }
+//     }
+//     //#connector-list .card .card-content:first-child {border-bottom: 1px solid #ddd;}
+// }//end data connectivity
+
+// .DataVisualization {
+//     // #hero {
+//     //     &.bottom-white-triangle {
+//     //         .flex-row > div:first-child {z-index:1;}
+//     // 		.offpage-image {
+//     // 			position:relative; z-index:0;
+//     //             margin-left:-30%;
+//     //             @media @medium {width:300%; margin-left:-125%; margin-top:-5%;}
+//     // 			@media @large {width:auto; margin-left:-100%;}
+//     // 		}
+//     //     }
+// 	// }
+//
+//     //old dashboard row
+//     #dashboard-design {
+// 		img {
+// 	        @media @medium {
+// 	            max-width: none;
+// 	            margin-left: -110%;
+// 	        }
+// 	        @media @large {
+// 	            margin-left: -50%;
+// 	        }
+// 	        @media @xlarge {
+// 	            margin-left: -25%;
+// 	        }
+// 		}
+// 		.offpage-image {
+// 			img {margin-left:0; max-width:100%;}
+// 		}
+//     }
+//     #dashboard-sharing {
+// 		img {
+// 			@media @medium {
+// 				max-width: 600px;
+// 				margin-left: -75%;
+// 			}
+// 			@media @large {
+// 				max-width: 900px;
+// 				margin-left: -90%;
+// 			}
+// 			@media @xlarge {
+// 				max-width: 1200px;
+// 				margin-left: -110%;
+// 			}
+// 		}
+//
+// 	    .device-mockup {
+// 	        &.macbook-pro {position:relative; z-index:0; margin-right:15%;}
+// 	        &.ipad {
+// 	            position:absolute; z-index:1;
+// 	            width:80%;
+// 	            right:15%; bottom:-10px;
+// 	        }
+// 	        &.iphone {
+// 	            position:absolute; z-index:2;
+// 	            width:20%;
+// 	            right:5%; bottom:-20px;
+// 	        }
+// 			img {max-width:100%; margin-left:0;}
+// 	    }
+// 	}
+// }//end data discovery
+
+// .Distribution {
+//     #hero img {
+//         @media @large {
+//             max-width: none;
+//             margin-left: -130%;
+//         }
+//         @media @xlarge {
+//             margin-left: -90%;
+//         }
+//     }
+// }//end distribution
+
+// .DossiersAndDashboards {
+//     #hero {
+//         .hero-screenshots {
+//             position:relative;
+//             .screenshot- {
+//                 &center {
+//                     position:relative; z-index:1;
+//                     max-width:80%;
+//                     @media @medium {max-width:700px;}
+//                     margin-bottom:0;
+//                 }
+//                 &left, &right {
+//                     position:absolute; z-index:0;
+//                     max-height:80%;
+//                     top:50%;
+//                     .translateY(-50%); margin-bottom:0;
+//                 }
+//                 &left {right:50%;}
+//                 &right {left:50%;}
+//             }
+//         }
+//     }
+//
+//     #app-library {
+//         .device-mockup {
+//             &.macbook-air {position:relative; z-index:0;}
+//             &.ipad {
+//                 position:absolute; z-index:1;
+//                 width:50%;
+//                 left:0; bottom:0;
+//             }
+//         }
+//     }
+// }//end dossiers
+
+// .EnterpriseReporting {
+//     #hero img {
+//         max-width: 150%;
+//         margin-left: -30%;
+//         @media @xlarge { margin-left: -15%; }
+//     }
+// }//end reporting
+//END ANALYTICS PAGES
+
+
+
+
+
+//MOBILE PAGES
+.Mobile {
+    #introduction {
         .device-mockup {
-            width:200%; float:right; margin-right:-10%;
-            @media @xlarge {width:150%;}
-        }
-    }
-    #connector-list .card .card-content:first-child {border-bottom: 1px solid #ddd;}
-}//end data connectivity
-
-.DataVisualization {
-    #hero {
-        &.bottom-white-triangle {
-            .flex-row > div:first-child {z-index:1;}
-    		.offpage-image {
-    			position:relative; z-index:0;
-                margin-left:-30%;
-                @media @medium {width:300%; margin-left:-125%; margin-top:-5%;}
-    			@media @large {width:auto; margin-left:-100%;}
-    		}
-        }
-	}
-
-    //old dashboard row
-    #dashboard-design {
-		img {
-	        @media @medium {
-	            max-width: none;
-	            margin-left: -110%;
-	        }
-	        @media @large {
-	            margin-left: -50%;
-	        }
-	        @media @xlarge {
-	            margin-left: -25%;
-	        }
-		}
-		.offpage-image {
-			img {margin-left:0; max-width:100%;}
-		}
-    }
-    #dashboard-sharing {
-		img {
-			@media @medium {
-				max-width: 600px;
-				margin-left: -75%;
-			}
-			@media @large {
-				max-width: 900px;
-				margin-left: -90%;
-			}
-			@media @xlarge {
-				max-width: 1200px;
-				margin-left: -110%;
-			}
-		}
-
-	    .device-mockup {
-	        &.macbook-pro {position:relative; z-index:0; margin-right:15%;}
-	        &.ipad {
-	            position:absolute; z-index:1;
-	            width:80%;
-	            right:15%; bottom:-10px;
-	        }
-	        &.iphone {
-	            position:absolute; z-index:2;
-	            width:20%;
-	            right:5%; bottom:-20px;
-	        }
-			img {max-width:100%; margin-left:0;}
-	    }
-	}
-}//end data discovery
-
-.Distribution {
-    #hero img {
-        @media @large {
-            max-width: none;
-            margin-left: -130%;
-        }
-        @media @xlarge {
-            margin-left: -90%;
-        }
-    }
-}//end distribution
-
-.DossiersAndDashboards {
-    #hero {
-        .hero-screenshots {
-            position:relative;
-            .screenshot- {
-                &center {
-                    position:relative; z-index:1;
-                    max-width:80%;
-                    @media @medium {max-width:700px;}
-                    margin-bottom:0;
-                }
-                &left, &right {
-                    position:absolute; z-index:0;
-                    max-height:80%;
-                    top:50%;
-                    .translateY(-50%); margin-bottom:0;
-                }
-                &left {right:50%;}
-                &right {left:50%;}
-            }
-        }
-    }
-
-    #app-library {
-        .device-mockup {
-            &.macbook-air {position:relative; z-index:0;}
             &.ipad {
+                position:relative; z-index:0;
+                width:130%;
+                margin-right:20%;
+                margin-bottom:20px;
+            }
+            &.iphone {
                 position:absolute; z-index:1;
-                width:50%;
-                left:0; bottom:0;
+                width:30%;
+                right:10%; bottom:20px;
+            }
+            @media @medium {
+                &.ipad {width:150%;}
+                &.iphone {width:35%;}
             }
         }
     }
-}//end dossiers
 
-.EnterpriseReporting {
-    #hero img {
-        max-width: 150%;
-        margin-left: -30%;
-        @media @xlarge { margin-left: -15%; }
-    }
-}//end reporting
-
-.GeospatialIntelligence  {
-    #hero {
-        .stacked-mockups {margin-bottom:40px;}
+    #mobile-apps-deploy {
         .device-mockup {
             &.macbook-pro {
                 position:relative; z-index:0;
-                margin-left:10%;
+                width:120%;
+                margin-left:-10%;
+                float:none;
             }
             &.ipad {
-                position:absolute; z-index:1;
+                position:relative; z-index:1;
                 width:80%;
-                left:10%; bottom:-5px;
+                margin:-20% auto 0 auto;
             }
-            &.iphone {
-                position:absolute; z-index:2;
-                width:20%;
-                left:5%; bottom:-10px;
+            @media @medium {
+                &.macbook-pro {
+                    width:90%;
+                    margin-right:45%;
+                    float:right;
+                }
+                &.ipad {
+                    position:absolute; z-index:1;
+                    width:45%;
+                    right:20px; top:50%; margin-top:-20%;
+                }
+            }
+            @media @large {
+                &.macbook-pro {width:75%}
+                &.ipad {margin-top:-17%}
+            }
+            @media @xlarge {
+                &.macbook-pro {width:75%}
+                &.ipad {margin-top:-17%}
             }
         }
     }
 
-    #app-library {
+    // #transactions {
+    //     .device-mockup {
+    //         &.ipad {
+    //             position:relative; z-index:0;
+    //             margin-left:10%;
+    //             margin-bottom:20px;
+    //             width:140%;
+    //             @media @large {width:120%;}
+    //         }
+    //         &.iphone {
+    //             position:absolute; z-index:1;
+    //             width:20%;
+    //             left:20px; bottom:20px;
+    //             width:30%;
+    //             @media @large {width:25%;}
+    //         }
+    //     }
+    // }
+
+    // #mobile-external-apps-slider {
+    //     .slick-slide {
+    //         position:relative;
+    //         > span {
+    //             position:absolute;
+    //             left:0; bottom:20px;
+    //             width:100%;
+    //             padding:50px 15px 15px 15px;
+    //             background: fade(@pure-black, 60%);
+    //             background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 90%, rgba(0,0,0,0.6) 100%);
+    //             background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 90%,rgba(0,0,0,0.6) 100%);
+    //             background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 90%,rgba(0,0,0,0.6) 100%);
+    //             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=0 );
+    //
+    //             font-family:@myriad-pro;
+    //             .uppercase;
+    //             font-weight:600;
+    //             font-size:16px; line-height:16px;
+    //             text-align:center;
+    //             color:@white;
+    //         }
+    //     }
+    // }
+
+    // #emm {
+    //     .device-col {
+    //         overflow:hidden; margin-bottom:30px;
+    //         @media @large {overflow:visible; margin-bottom:none;}
+    //     }
+    //     .device-mockup.offpage-image {
+    //         margin-right:5%;
+    //         width:150%; margin-bottom:-40%;
+    //         @media @medium {width:115%;}
+    //         @media @large {width:150%; margin-bottom:0;}
+    //     }
+    //     .app-lock {
+    //         position:absolute;
+    //         width:4%;
+    //         right:26%; top:6%;
+    //         opacity:0;
+    //         .animation(app-lock-animation 7s 2s ease-out infinite);
+    //     }
+    // }
+    // #hypermobile {
+    //     .device-mockup {
+    //         &.iphone-x {
+    //             position:absolute; z-index:2;
+    //             width:35%;
+    //             bottom:0; right:5%;
+    //         }
+    //         &.ipad {
+    //             position:relative; z-index:1;
+    //             margin-right:10%;
+    //         }
+    //     }
+    // }
+}
+.Emm {
+    // #hero .ipad {
+    //     z-index:0;
+    //     width:150%;
+    //     float:right;
+    //     margin-right:10%;
+    //     @media @large {width:130%;}
+    //
+    //     .app-lock {
+    //         position:absolute;
+    //         width:4%;
+    //         right:26%; top:6%;
+    //         opacity:0;
+    //         .animation(app-lock-animation 7s 2s ease-out infinite);
+    //     }
+    // }
+    #page-hero .ipad {
+        .app-lock {
+            position:absolute;
+            width:4%;
+            right:26%; top:6%;
+            opacity:0;
+            .animation(app-lock-animation 7s 2s ease-out infinite);
+        }
+    }
+}//end emm
+.Transactions {
+    // #hero {
+    //     .img-col {
+    //         position:relative;
+    //         .ipad {
+    //             z-index:0;
+    //             width:150%;
+    //             float:right;
+    //             margin-right:15%; margin-bottom:20px;
+    //             @media @large {
+    //                 margin-bottom:30px;
+    //             }
+    //         }
+    //         .iphone {
+    //             position:absolute;
+    //             width:35%;
+    //             right:@base-spacing; bottom:@base-spacing;
+    //             z-index:1;
+    //         }
+    //     }
+    // }// end hero
+    #page-hero {
         .device-mockup {
-            &.macbook-air {position:relative; z-index:0;}
             &.ipad {
+                z-index:0;
+                margin-left:10%;
+            }
+            &.iphone {
                 position:absolute; z-index:1;
-                width:50%;
+                width:25%;
                 left:0; bottom:0;
             }
         }
+    }// end hero
+
+    #take-action {
+        .image-row {
+            position:relative;
+            .iphone {
+                position:absolute; z-index:2;
+                width:15%;
+                bottom:0; right:0;
+            }
+            .ipad {
+                width:60%;
+                &.left {
+                    position:relative; z-index:0;
+                    margin-left:0;
+                    margin-bottom:10%;
+                }
+                &.right {
+                    position:absolute; z-index:1;
+                    bottom:5%; left:35%;
+                }
+            }
+        }
+        .stacked-mockups {
+            .iphone {
+                position:absolute; z-index:2;
+                width:15%;
+                bottom:0; left:0;
+            }
+            .ipad {
+                width:60%;
+                &.right {
+                    position:relative; z-index:0;
+                    margin-left:auto;
+                    margin-bottom:10%;
+                }
+                &.center {
+                    position:absolute; z-index:1;
+                    bottom:5%; right:35%;
+                }
+            }
+        }
     }
-}//end mapping
+}//end transactions
+
+
+
+
+
+//hyperintelligence PAGEs
+.Hyperintelligence {
+    #introduction {
+        .device-mockup {
+            width:190%;
+            .cursor {
+                position:absolute; z-index:2;
+                width:10px;
+                @media @medium {width:15px;}
+                top:50%; left:50%;
+                .animation(hero-cursor-hyperint 10s linear 0s normal infinite);
+            }
+            .hypercard-img {
+                position:absolute;
+                top:20%; left:48%;
+                width:25%;
+                opacity:0;
+                .animation(hero-card-appear-hyperint 10s linear 0s normal infinite);
+            }
+        }
+    }
+    // #hyper-mobile {
+    //     .device-mockup {
+    //         &.iphone {
+    //             position:absolute; z-index:2;
+    //             width:35%;
+    //             bottom:0; right:5%;
+    //         }
+    //         &.ipad {
+    //             position:relative; z-index:1;
+    //             margin-right:10%;
+    //         }
+    //     }
+    // }
+    // #enterprise-platform {
+    //     overflow:visible;
+    //     .flex-row > div:first-child {position:relative; z-index:1;}
+    //     .offpage-image {
+    //         position:relative; z-index:0;
+    //         margin-left:-10%;
+    //         margin-top:-20%;
+    //         @media @medium {
+    //             width:330%;
+    //             margin-top:30%;
+    //             margin-left: -145%;
+    //         }
+    //         @media @large {
+    //             width:auto;
+    //             margin-top:-5%;
+    //             margin-left: -110%;
+    //         }
+    //     }
+    // }
+}
+
+.Cards {
+    #page-hero {
+        .device-mockup {
+            &.iphone-x {
+                position:absolute; z-index:2;
+                width:27%;
+                bottom:0; left:5%;
+            }
+            &.macbook-pro {
+                position:relative; z-index:1;
+                margin-bottom:5%;
+            }
+        }
+    }
+}
 
 .HyperintelligenceForWeb {
     #page-hero {
@@ -1333,396 +1558,71 @@ main, section {overflow:hidden;}
         }
     }
     //retiring pending intl catchup
-    #connect-to-data {
-        #connected-card-diagram {
-            //all the connecting lines are handled below
-            .card-row {
-                position:relative;
-                padding-bottom:40px;
-                //line from platform to the tools
-                &:before {
-                    content:'';
-                    position:absolute;
-                    display:block;
-                }
-                &:before {
-                    height:40px; width:1px;
-                    bottom:0; left:50%;
-                    margin-left:-2px;
-                    border-left:5px dashed @iron;
-                }
-            }
-            .logo-row {
-                .grid-item {
-                    position:relative;
-                    padding-top:50px;
-                    &:before, &:after {
-                        content:'';
-                        position:absolute;
-                        display:block;
-                    }
-                    &:before {
-                        height:50px; width:1px;
-                        top:0; left:50%;
-                        margin-left:-2px;
-                        border-left:5px dashed @iron;
-                    }
-                    &:after {
-                        width:100%; height:1px;
-                        top:0; left:0;
-                        border-top:5px dashed @iron;
-                    }
-                    &:first-child:after {
-                        width:50%;
-                        left:50%;
-                    }
-                    &:nth-child(2):after {
-                        width:50%;
-                        left:auto; right:50%;
-                    }
-                    &:last-child:after {
-                        width:0;
-                        left:auto; right:50%;
-                    }
-                    @media @medium {
-                        &:nth-child(2):after {
-                            width:100%;
-                            left:0; right:0;
-                        }
-                        &:last-child:after {
-                            width:50%;
-                        }
-                    }
-                }
-            }
-        }
-    }
+    // #connect-to-data {
+    //     #connected-card-diagram {
+    //         //all the connecting lines are handled below
+    //         .card-row {
+    //             position:relative;
+    //             padding-bottom:40px;
+    //             //line from platform to the tools
+    //             &:before {
+    //                 content:'';
+    //                 position:absolute;
+    //                 display:block;
+    //             }
+    //             &:before {
+    //                 height:40px; width:1px;
+    //                 bottom:0; left:50%;
+    //                 margin-left:-2px;
+    //                 border-left:5px dashed @iron;
+    //             }
+    //         }
+    //         .logo-row {
+    //             .grid-item {
+    //                 position:relative;
+    //                 padding-top:50px;
+    //                 &:before, &:after {
+    //                     content:'';
+    //                     position:absolute;
+    //                     display:block;
+    //                 }
+    //                 &:before {
+    //                     height:50px; width:1px;
+    //                     top:0; left:50%;
+    //                     margin-left:-2px;
+    //                     border-left:5px dashed @iron;
+    //                 }
+    //                 &:after {
+    //                     width:100%; height:1px;
+    //                     top:0; left:0;
+    //                     border-top:5px dashed @iron;
+    //                 }
+    //                 &:first-child:after {
+    //                     width:50%;
+    //                     left:50%;
+    //                 }
+    //                 &:nth-child(2):after {
+    //                     width:50%;
+    //                     left:auto; right:50%;
+    //                 }
+    //                 &:last-child:after {
+    //                     width:0;
+    //                     left:auto; right:50%;
+    //                 }
+    //                 @media @medium {
+    //                     &:nth-child(2):after {
+    //                         width:100%;
+    //                         left:0; right:0;
+    //                     }
+    //                     &:last-child:after {
+    //                         width:50%;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }
-//END ANALYTICS PAGES
-
-
-
-
-
-//MOBILE PAGES
-.Mobile {
-    #introduction {
-        .device-mockup {
-            &.ipad {
-                position:relative; z-index:0;
-                width:130%;
-                margin-right:20%;
-                margin-bottom:20px;
-            }
-            &.iphone {
-                position:absolute; z-index:1;
-                width:30%;
-                right:10%; bottom:20px;
-            }
-            @media @medium {
-                &.ipad {width:150%;}
-                &.iphone {width:35%;}
-            }
-        }
-    }
-
-    #mobile-apps-deploy {
-        .device-mockup {
-            &.macbook-pro {
-                position:relative; z-index:0;
-                width:120%;
-                margin-left:-10%;
-                float:none;
-            }
-            &.ipad {
-                position:relative; z-index:1;
-                width:80%;
-                margin:-20% auto 0 auto;
-            }
-            @media @medium {
-                &.macbook-pro {
-                    width:90%;
-                    margin-right:45%;
-                    float:right;
-                }
-                &.ipad {
-                    position:absolute; z-index:1;
-                    width:45%;
-                    right:20px; top:50%; margin-top:-20%;
-                }
-            }
-            @media @large {
-                &.macbook-pro {width:75%}
-                &.ipad {margin-top:-17%}
-            }
-            @media @xlarge {
-                &.macbook-pro {width:75%}
-                &.ipad {margin-top:-17%}
-            }
-        }
-    }
-
-    #transactions {
-        .device-mockup {
-            &.ipad {
-                position:relative; z-index:0;
-                margin-left:10%;
-                margin-bottom:20px;
-                width:140%;
-                @media @large {width:120%;}
-            }
-            &.iphone {
-                position:absolute; z-index:1;
-                width:20%;
-                left:20px; bottom:20px;
-                width:30%;
-                @media @large {width:25%;}
-            }
-        }
-    }
-
-    #mobile-external-apps-slider {
-        .slick-slide {
-            position:relative;
-            > span {
-                position:absolute;
-                left:0; bottom:20px;
-                width:100%;
-                padding:50px 15px 15px 15px;
-                background: fade(@pure-black, 60%);
-                background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 90%, rgba(0,0,0,0.6) 100%);
-                background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 90%,rgba(0,0,0,0.6) 100%);
-                background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 90%,rgba(0,0,0,0.6) 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=0 );
-
-                font-family:@myriad-pro;
-                .uppercase;
-                font-weight:600;
-                font-size:16px; line-height:16px;
-                text-align:center;
-                color:@white;
-            }
-        }
-    }
-
-    #emm {
-        .device-col {
-            overflow:hidden; margin-bottom:30px;
-            @media @large {overflow:visible; margin-bottom:none;}
-        }
-        .device-mockup.offpage-image {
-            margin-right:5%;
-            width:150%; margin-bottom:-40%;
-            @media @medium {width:115%;}
-            @media @large {width:150%; margin-bottom:0;}
-        }
-        .app-lock {
-            position:absolute;
-            width:4%;
-            right:26%; top:6%;
-            opacity:0;
-            .animation(app-lock-animation 7s 2s ease-out infinite);
-        }
-    }
-    #hypermobile {
-        .device-mockup {
-            &.iphone-x {
-                position:absolute; z-index:2;
-                width:35%;
-                bottom:0; right:5%;
-            }
-            &.ipad {
-                position:relative; z-index:1;
-                margin-right:10%;
-            }
-        }
-    }
-}
-.Emm {
-    #hero .ipad {
-        z-index:0;
-        width:150%;
-        float:right;
-        margin-right:10%;
-        @media @large {width:130%;}
-
-        .app-lock {
-            position:absolute;
-            width:4%;
-            right:26%; top:6%;
-            opacity:0;
-            .animation(app-lock-animation 7s 2s ease-out infinite);
-        }
-    }
-    #page-hero .ipad {
-        .app-lock {
-            position:absolute;
-            width:4%;
-            right:26%; top:6%;
-            opacity:0;
-            .animation(app-lock-animation 7s 2s ease-out infinite);
-        }
-    }
-}//end emm
-.Transactions {
-    #hero {
-        .img-col {
-            position:relative;
-            .ipad {
-                z-index:0;
-                width:150%;
-                float:right;
-                margin-right:15%; margin-bottom:20px;
-                @media @large {
-                    margin-bottom:30px;
-                }
-            }
-            .iphone {
-                position:absolute;
-                width:35%;
-                right:@base-spacing; bottom:@base-spacing;
-                z-index:1;
-            }
-        }
-    }// end hero
-    #page-hero {
-        .device-mockup {
-            &.ipad {
-                z-index:0;
-                margin-left:10%;
-            }
-            &.iphone {
-                position:absolute; z-index:1;
-                width:25%;
-                left:0; bottom:0;
-            }
-        }
-    }// end hero
-
-    #take-action {
-        .image-row {
-            position:relative;
-            .iphone {
-                position:absolute; z-index:2;
-                width:15%;
-                bottom:0; right:0;
-            }
-            .ipad {
-                width:60%;
-                &.left {
-                    position:relative; z-index:0;
-                    margin-left:0;
-                    margin-bottom:10%;
-                }
-                &.right {
-                    position:absolute; z-index:1;
-                    bottom:5%; left:35%;
-                }
-            }
-        }
-        .stacked-mockups {
-            .iphone {
-                position:absolute; z-index:2;
-                width:15%;
-                bottom:0; left:0;
-            }
-            .ipad {
-                width:60%;
-                &.right {
-                    position:relative; z-index:0;
-                    margin-left:auto;
-                    margin-bottom:10%;
-                }
-                &.center {
-                    position:absolute; z-index:1;
-                    bottom:5%; right:35%;
-                }
-            }
-        }
-    }
-}//end transactions
-
-
-
-
-
-//hyperintelligence PAGE
-.Hyperintelligence {
-    #introduction {
-        .device-mockup {
-            width:190%;
-            .cursor {
-                position:absolute; z-index:2;
-                width:10px;
-                @media @medium {width:15px;}
-                top:50%; left:50%;
-                .animation(hero-cursor-hyperint 10s linear 0s normal infinite);
-            }
-            .hypercard-img {
-                position:absolute;
-                top:20%; left:48%;
-                width:25%;
-                opacity:0;
-                .animation(hero-card-appear-hyperint 10s linear 0s normal infinite);
-            }
-        }
-    }
-    #hyper-mobile {
-        .device-mockup {
-            &.iphone {
-                position:absolute; z-index:2;
-                width:35%;
-                bottom:0; right:5%;
-            }
-            &.ipad {
-                position:relative; z-index:1;
-                margin-right:10%;
-            }
-        }
-    }
-    #enterprise-platform {
-        overflow:visible;
-        .flex-row > div:first-child {position:relative; z-index:1;}
-        .offpage-image {
-            position:relative; z-index:0;
-            margin-left:-10%;
-            margin-top:-20%;
-            @media @medium {
-                width:330%;
-                margin-top:30%;
-                margin-left: -145%;
-            }
-            @media @large {
-                width:auto;
-                margin-top:-5%;
-                margin-left: -110%;
-            }
-        }
-    }
-}
-
-
-
-
-.Cards {
-    #page-hero {
-        .device-mockup {
-            &.iphone-x {
-                position:absolute; z-index:2;
-                width:27%;
-                bottom:0; left:5%;
-            }
-            &.macbook-pro {
-                position:relative; z-index:1;
-                margin-bottom:5%;
-            }
-        }
-    }
-}
-
-
-
-
 
 //hypermobile PAGE
 .HyperintelligenceForMobile {
@@ -1758,8 +1658,8 @@ main, section {overflow:hidden;}
 
 
 
-@diagram-line-height: 20px;
 //PLATFORM PAGE
+@diagram-line-height: 20px;
 .EnterprisePlatform {
     #introduction {
         .device-mockup {
@@ -1841,162 +1741,162 @@ main, section {overflow:hidden;}
         }
     }//end analyze empower row
     //old page version
-    #federated-data-diagram {
-        font-family:@myriad-pro;
-        font-weight:400;
-        color:@dark-gray;
-
-        .content-label {
-            font-size:16px; line-height:18px;
-            .uppercase;
-            font-weight:600;
-        }
-
-        .feature-group-row {
-            @media @medium {
-                .display(flex);
-                .align-items(center);
-            }
-            > .content-label {
-                display:block;
-                background-color:@red;
-                color:@white;
-                padding:15px;
-                @media @medium {width:20%; min-width:140px;}
-            }
-            .feature-group {
-                border-left:5px solid @red;
-                box-shadow:1px 1px 5px fade(@pure-black, 30%);
-
-                font-size:14px; line-height:14px;
-                text-align:left;
-
-                > .grid-item {
-                    border:1px solid @light-gray;
-                }
-                .icon {
-                    color:@red;
-                    margin-right:10px;
-                }
-            }//feature group
-        }//feature group row
-
-        .results-row {
-            padding-top:20px;
-
-            > div {
-                position:relative;
-                margin-bottom:40px;
-
-                &:after {
-                    content:'';
-                    position:absolute;
-                    top:100%; left:50%;
-                    .translateX(-50%);
-                    width:5px; height:20px;
-                    background-color:@red;
-                }
-
-                &:last-child:after {background-color:@blue;}
-
-                @media @medium {
-                    &:after {width:2px;}
-                    &:last-child:after {height:40px;}
-                }
-            }
-        }//end results row
-
-        .sources-row {
-            position:relative;
-
-            @media @small-only {
-                .in-memory-cubes, .other-sources {border:1px solid @iron;}
-            }
-            //these are the horizontal lines
-            &:before, &:after {
-                content:'';
-                position:absolute;
-                bottom:~"calc(100% + 20px)";
-                width:~"calc(50% - 10px)"; height:5px;
-            }
-            //red one
-            &:before {left:0; background-color:@red;}
-            //blue one
-            &:after {left:50%; background-color:@blue;}
-
-            @media @medium {
-                //these are the horizontal lines
-                &:before, &:after {height:2px;}
-                //red one
-                &:before {left:50%; width:66.9%; .translateX(-65.3%);}
-                //blue one
-                &:after {left:50%; width:66%; .translateX(-33.8%); bottom:100%;}
-            }
-
-            .grid-item {
-                margin-top:@diagram-line-height;
-                &.selected {
-                    position:relative;
-
-                    &:after {
-                        content:'';
-                        position:absolute;
-                        bottom:100%; left:50%;
-                        .translateX(-50%);
-                        width:5px; height:@diagram-line-height;
-                        background-color:@red;
-                    }
-                    &.blue:after {background-color:@blue;}
-
-                    &.both {
-                        &:before, &:after {
-                            content:'';
-                            position:absolute;
-                            bottom:100%; left:50%;
-                            .translateX(-50%);
-                            width:5px; height:@diagram-line-height;
-                        }
-                        //red one
-                        &:before {
-                            left:~"calc(50% - 10px)";
-                            background-color:@red;
-                        }
-                        //blue one
-                        &:after {
-                            left:~"calc(50% + 10px)";
-                            background-color:@blue;
-                        }
-                    }
-
-                    @media @medium {
-                        &:after {width:2px; height:@diagram-line-height + 55px;}
-                        &.blue:after {background-color:@blue; height:@diagram-line-height + 35px;}
-
-                        &.both {
-                            &:before, &:after {width:2px; height:@diagram-line-height + 35px;}
-                            //red one
-                            &:before {height:@diagram-line-height + 55px;}
-                        }
-                    }
-                }// end .selected state
-            }// end grid-item, top lines for all the selected items
-            .database {
-                position:relative;
-                min-height:150px;
-
-                .grid-item {
-                    margin:@diagram-line-height 0;
-                }
-
-                .cylinder-background {
-                    position:absolute; z-index:-1;
-                    height:90%;
-                    top:-5%; left:50%;
-                    .translateX(-50%);
-                }
-            }//end database
-        }//end sources row
-    }//end diagram
+    // #federated-data-diagram {
+    //     font-family:@myriad-pro;
+    //     font-weight:400;
+    //     color:@dark-gray;
+    //
+    //     .content-label {
+    //         font-size:16px; line-height:18px;
+    //         .uppercase;
+    //         font-weight:600;
+    //     }
+    //
+    //     .feature-group-row {
+    //         @media @medium {
+    //             .display(flex);
+    //             .align-items(center);
+    //         }
+    //         > .content-label {
+    //             display:block;
+    //             background-color:@red;
+    //             color:@white;
+    //             padding:15px;
+    //             @media @medium {width:20%; min-width:140px;}
+    //         }
+    //         .feature-group {
+    //             border-left:5px solid @red;
+    //             box-shadow:1px 1px 5px fade(@pure-black, 30%);
+    //
+    //             font-size:14px; line-height:14px;
+    //             text-align:left;
+    //
+    //             > .grid-item {
+    //                 border:1px solid @light-gray;
+    //             }
+    //             .icon {
+    //                 color:@red;
+    //                 margin-right:10px;
+    //             }
+    //         }//feature group
+    //     }//feature group row
+    //
+    //     .results-row {
+    //         padding-top:20px;
+    //
+    //         > div {
+    //             position:relative;
+    //             margin-bottom:40px;
+    //
+    //             &:after {
+    //                 content:'';
+    //                 position:absolute;
+    //                 top:100%; left:50%;
+    //                 .translateX(-50%);
+    //                 width:5px; height:20px;
+    //                 background-color:@red;
+    //             }
+    //
+    //             &:last-child:after {background-color:@blue;}
+    //
+    //             @media @medium {
+    //                 &:after {width:2px;}
+    //                 &:last-child:after {height:40px;}
+    //             }
+    //         }
+    //     }//end results row
+    //
+    //     .sources-row {
+    //         position:relative;
+    //
+    //         @media @small-only {
+    //             .in-memory-cubes, .other-sources {border:1px solid @iron;}
+    //         }
+    //         //these are the horizontal lines
+    //         &:before, &:after {
+    //             content:'';
+    //             position:absolute;
+    //             bottom:~"calc(100% + 20px)";
+    //             width:~"calc(50% - 10px)"; height:5px;
+    //         }
+    //         //red one
+    //         &:before {left:0; background-color:@red;}
+    //         //blue one
+    //         &:after {left:50%; background-color:@blue;}
+    //
+    //         @media @medium {
+    //             //these are the horizontal lines
+    //             &:before, &:after {height:2px;}
+    //             //red one
+    //             &:before {left:50%; width:66.9%; .translateX(-65.3%);}
+    //             //blue one
+    //             &:after {left:50%; width:66%; .translateX(-33.8%); bottom:100%;}
+    //         }
+    //
+    //         .grid-item {
+    //             margin-top:@diagram-line-height;
+    //             &.selected {
+    //                 position:relative;
+    //
+    //                 &:after {
+    //                     content:'';
+    //                     position:absolute;
+    //                     bottom:100%; left:50%;
+    //                     .translateX(-50%);
+    //                     width:5px; height:@diagram-line-height;
+    //                     background-color:@red;
+    //                 }
+    //                 &.blue:after {background-color:@blue;}
+    //
+    //                 &.both {
+    //                     &:before, &:after {
+    //                         content:'';
+    //                         position:absolute;
+    //                         bottom:100%; left:50%;
+    //                         .translateX(-50%);
+    //                         width:5px; height:@diagram-line-height;
+    //                     }
+    //                     //red one
+    //                     &:before {
+    //                         left:~"calc(50% - 10px)";
+    //                         background-color:@red;
+    //                     }
+    //                     //blue one
+    //                     &:after {
+    //                         left:~"calc(50% + 10px)";
+    //                         background-color:@blue;
+    //                     }
+    //                 }
+    //
+    //                 @media @medium {
+    //                     &:after {width:2px; height:@diagram-line-height + 55px;}
+    //                     &.blue:after {background-color:@blue; height:@diagram-line-height + 35px;}
+    //
+    //                     &.both {
+    //                         &:before, &:after {width:2px; height:@diagram-line-height + 35px;}
+    //                         //red one
+    //                         &:before {height:@diagram-line-height + 55px;}
+    //                     }
+    //                 }
+    //             }// end .selected state
+    //         }// end grid-item, top lines for all the selected items
+    //         .database {
+    //             position:relative;
+    //             min-height:150px;
+    //
+    //             .grid-item {
+    //                 margin:@diagram-line-height 0;
+    //             }
+    //
+    //             .cylinder-background {
+    //                 position:absolute; z-index:-1;
+    //                 height:90%;
+    //                 top:-5%; left:50%;
+    //                 .translateX(-50%);
+    //             }
+    //         }//end database
+    //     }//end sources row
+    // }//end diagram
 }
 
 
@@ -2005,14 +1905,14 @@ main, section {overflow:hidden;}
 
 //EMBEDDED PAGE
 .EmbeddedAnalytics {
-    #hero {
-        .angle-wrapper .angle.right {background-position:left center;}
-    }
-    #introduction {
-        .device-mockup {
-            width:200%;
-        }
-    }
+    // #hero {
+    //     .angle-wrapper .angle.right {background-position:left center;}
+    // }
+    // #introduction {
+    //     .device-mockup {
+    //         width:200%;
+    //     }
+    // }
     #customized-apps {
         .custom-mobile-sdk-graphic {
             margin-top:64px;
@@ -2057,50 +1957,6 @@ main, section {overflow:hidden;}
 
 
 
-.FederatedAnalytics  {
-    #data-scientists {
-        overflow:visible;
-        .flex-row > div:first-child {position:relative; z-index:1;}
-        .offpage-image {
-            position:relative; z-index:0;
-            width:200%;
-            margin-right:-65%;
-            @media @medium {
-                width:350%;
-                margin-right:-125%;
-            }
-            @media @large {
-                width:300%;
-                margin-right:-100%;
-            }
-            @media @xlarge {
-                width:270%;
-                margin-right:-90%;
-            }
-        }
-    }
-    #developers {
-        overflow:visible;
-        .flex-row > div:first-child {position:relative; z-index:1;}
-        .offpage-image {
-            position:relative; z-index:0;
-            width:200%;
-            margin-left:-65%;
-            @media @medium {
-                width:350%;
-                margin-left:-125%;
-            }
-            @media @large {
-                width:300%;
-                margin-left:-100%;
-            }
-            @media @xlarge {
-                width:270%;
-                margin-left:-90%;
-            }
-        }
-    }
-}
 
 
 
@@ -2120,40 +1976,40 @@ main, section {overflow:hidden;}
                 margin-right:20%;
                 margin-bottom:20px;
             }
-            &.iphone, &.iphone-x {
+            &.iphone-x {
                 position:absolute; z-index:1;
                 width:30%;
                 right:10%; bottom:20px;
             }
             @media @medium {
                 &.ipad {width:150%;}
-                &.iphone, &.iphone-x {width:35%;}
+                &.iphone-x {width:35%;}
             }
         }
     }
-    #physical-logical-access {
-        .device-mockup {
-            &.macbook-pro {
-                position:relative; z-index:0;
-                width:130%;
-                margin-left:10%;
-                margin-bottom:20px;
-            }
-            &.iphone, &.iphone-x {
-                position:absolute; z-index:1;
-                width:25%;
-                left:10%; bottom:20px;
-            }
-            @media @medium {
-                &.macbook-pro {width:150%;}
-                &.iphone, &.iphone-x {width:30%;}
-            }
-        }
-    }
+    // #physical-logical-access {
+    //     .device-mockup {
+    //         &.macbook-pro {
+    //             position:relative; z-index:0;
+    //             width:130%;
+    //             margin-left:10%;
+    //             margin-bottom:20px;
+    //         }
+    //         &.iphone, &.iphone-x {
+    //             position:absolute; z-index:1;
+    //             width:25%;
+    //             left:10%; bottom:20px;
+    //         }
+    //         @media @medium {
+    //             &.macbook-pro {width:150%;}
+    //             &.iphone, &.iphone-x {width:30%;}
+    //         }
+    //     }
+    // }
 }//end id and telemetry overview
 .DigitalCredentials {
     #logical-access {
-        > div > div > img { max-width: 175%; margin-left: -75%;}
+        //> div > div > img { max-width: 175%; margin-left: -75%;}
         .device-mockup {
             &.macbook-pro {
                 position:relative; z-index:0;
@@ -2161,19 +2017,19 @@ main, section {overflow:hidden;}
                 margin-right:10%;
                 margin-bottom:20px;
             }
-            &.iphone, &.iphone-x {
+            &.iphone-x {
                 position:absolute; z-index:1;
                 width:35%;
                 right:10%; bottom:20px;
             }
             @media @large {
                 &.macbook-pro {width:150%;}
-                &.iphone, &.iphone-x {width:30%;}
+                &.iphone-x {width:30%;}
             }
         }
     }
     #physical-access {
-        > div > div > img {max-width: 150%;}
+        //> div > div > img {max-width: 150%;}
         .device-mockup {
             &.ipad {
                 position:relative; z-index:0;
@@ -2181,37 +2037,37 @@ main, section {overflow:hidden;}
                 margin-left:20%;
                 margin-bottom:20px;
             }
-            &.iphone, &.iphone-x {
+            &.iphone-x {
                 position:absolute; z-index:1;
                 width:35%;
                 left:10%; bottom:20px;
             }
             @media @medium {
                 &.ipad {width:130%;}
-                &.iphone, &.iphone-x {width:30%;}
+                &.iphone-x {width:30%;}
             }
         }
     }
 
-    #logical-access {
-        .img-col {
-            position:relative;
-            .macbook-air {
-                z-index:0;
-                width:200%;
-                float:right;
-                margin-right:10%; margin-bottom:30px;
-                @media @large {
-                    margin-bottom:40px;
-                }
-            }
-            .iphone, .iphone-x {
-                position:absolute; z-index:1;
-                width:35%;
-                right:10%; bottom:15px;
-            }
-        }
-    }
+    // #logical-access {
+    //     .img-col {
+    //         position:relative;
+    //         .macbook-air {
+    //             z-index:0;
+    //             width:200%;
+    //             float:right;
+    //             margin-right:10%; margin-bottom:30px;
+    //             @media @large {
+    //                 margin-bottom:40px;
+    //             }
+    //         }
+    //         .iphone, .iphone-x {
+    //             position:absolute; z-index:1;
+    //             width:35%;
+    //             right:10%; bottom:15px;
+    //         }
+    //     }
+    // }
 	#customize-credentials {
         .stacked-mockups {margin-bottom:40px;}
         .device-mockup.iphone-x {
@@ -2229,12 +2085,11 @@ main, section {overflow:hidden;}
             &.right {left:auto; right:5%;}
         }
 	}
-
 }//end digital credentials
+
 .BadgeCommunicator {
-    #page-hero, #hero {
-        //temp to fix intl page hero
-        .first-md {position:relative;}
+    #page-hero {
+        //.first-md {position:relative;}
         .device-mockup {
             &.macbook-pro {
                 z-index:0;
@@ -2245,7 +2100,7 @@ main, section {overflow:hidden;}
                 width:55%;
                 left:7%; bottom:7%;
             }
-            &.iphone, &.iphone-x {
+            &.iphone-x {
                 position:absolute;z-index:2;
                 width:15%;
                 left:20px; bottom:20px;
@@ -2255,7 +2110,7 @@ main, section {overflow:hidden;}
 
     #physical-infrastructure {
         //temp for old pages
-        .img-col {position:relative;}
+        //.img-col {position:relative;}
         .device-mockup {
             &.ipad {
                 z-index:0;
@@ -2266,7 +2121,7 @@ main, section {overflow:hidden;}
                     margin-bottom:40px;
                 }
             }
-            &.iphone, &.iphone-x {
+            &.iphone-x {
                 position:absolute; z-index:1;
                 width:35%;
                 left:10%; bottom:15px;
@@ -2276,7 +2131,7 @@ main, section {overflow:hidden;}
 
     #logical-access {
         //temp for old pages
-        .img-col {position:relative;}
+        //.img-col {position:relative;}
         .device-mockup {
             &.macbook-air {
                 z-index:0;
@@ -2287,7 +2142,7 @@ main, section {overflow:hidden;}
                     margin-bottom:40px;
                 }
             }
-            &.iphone, &.iphone-x {
+            &.iphone-x {
                 position:absolute; z-index:1;
                 width:35%;
                 right:10%; bottom:15px;
@@ -2295,6 +2150,7 @@ main, section {overflow:hidden;}
         }
     }
 }//end badge communicator
+
 
 
 
@@ -2311,19 +2167,19 @@ main, section {overflow:hidden;}
         }
     }
 
-    #cloud-capabilities {
-        .device-mockup {
-            &.ipad {
-                position:relative; z-index:0;
-                margin-left:27.33333333%;
-            }
-            &.iphone {
-                position:absolute; z-index:1;
-                width:20%;
-                left:0; bottom:0;
-            }
-        }
-    }
+    // #cloud-capabilities {
+    //     .device-mockup {
+    //         &.ipad {
+    //             position:relative; z-index:0;
+    //             margin-left:27.33333333%;
+    //         }
+    //         &.iphone {
+    //             position:absolute; z-index:1;
+    //             width:20%;
+    //             left:0; bottom:0;
+    //         }
+    //     }
+    // }
 
     #cloud-service-options.white-popup {
         max-width:1000px;
@@ -2331,67 +2187,67 @@ main, section {overflow:hidden;}
         > h3 {margin:0; padding:20px;}
     }
 
-    #services-and-tools-diagram {
-        .icon-col {
-            position:relative;
-            @media @medium {padding-bottom:35px; margin-bottom:20px;}
-
-            .grid-item {.display(inline-flex);}
-            .background-light-gray, .background-white {
-                .flex(0, 1, auto);
-                .display(flex);
-                .flex-direction(row);
-                .flex-wrap(wrap);
-                .align-items(flex-start);
-                width: 100%;
-                position: relative;
-                > p {width:100%;}
-            }
-            .label {
-                @media @small-only {
-                    .display(flex);
-                    .flex(0, 0, 100%);
-                }
-                display:block; position:relative;
-                padding:25px 25px 30px 25px; margin:0;
-                font-family:@myriad-pro;
-                font-size:14px; line-height:1em;
-                font-weight:600;
-                .uppercase;
-                color:@gray;
-                text-align:center;
-
-                @media @medium {
-                    position:absolute;
-                    bottom:0; left:0;
-                    width:50%;
-                    padding:25px 0 0 0;
-                    &.full {
-                        width:100%;
-                        .line {width:~"calc(50% - 40px)";}
-                    }
-                    &.two-third {width:66.66%}
-                    &.one-third {width:33.33%}
-                    &:last-of-type {left:auto; right:0;}
-                }
-                .line {
-                    position:absolute;
-                    top:15px; left:50%;
-                    .translateX(-50%);
-                    height:1px; width:~"calc(100% - 40px)";
-                    background-color:@gray;
-                    &:before, &:after {
-                        position:absolute;
-                        content:'';
-                        bottom:0; left:0;
-                        height:15px; width:1px;
-                        background-color:@gray;
-                    }
-                    &:after {left:auto; right:0;}
-                }
-            }
-        }
-    }
+    // #services-and-tools-diagram {
+    //     .icon-col {
+    //         position:relative;
+    //         @media @medium {padding-bottom:35px; margin-bottom:20px;}
+    //
+    //         .grid-item {.display(inline-flex);}
+    //         .background-light-gray, .background-white {
+    //             .flex(0, 1, auto);
+    //             .display(flex);
+    //             .flex-direction(row);
+    //             .flex-wrap(wrap);
+    //             .align-items(flex-start);
+    //             width: 100%;
+    //             position: relative;
+    //             > p {width:100%;}
+    //         }
+    //         .label {
+    //             @media @small-only {
+    //                 .display(flex);
+    //                 .flex(0, 0, 100%);
+    //             }
+    //             display:block; position:relative;
+    //             padding:25px 25px 30px 25px; margin:0;
+    //             font-family:@myriad-pro;
+    //             font-size:14px; line-height:1em;
+    //             font-weight:600;
+    //             .uppercase;
+    //             color:@gray;
+    //             text-align:center;
+    //
+    //             @media @medium {
+    //                 position:absolute;
+    //                 bottom:0; left:0;
+    //                 width:50%;
+    //                 padding:25px 0 0 0;
+    //                 &.full {
+    //                     width:100%;
+    //                     .line {width:~"calc(50% - 40px)";}
+    //                 }
+    //                 &.two-third {width:66.66%}
+    //                 &.one-third {width:33.33%}
+    //                 &:last-of-type {left:auto; right:0;}
+    //             }
+    //             .line {
+    //                 position:absolute;
+    //                 top:15px; left:50%;
+    //                 .translateX(-50%);
+    //                 height:1px; width:~"calc(100% - 40px)";
+    //                 background-color:@gray;
+    //                 &:before, &:after {
+    //                     position:absolute;
+    //                     content:'';
+    //                     bottom:0; left:0;
+    //                     height:15px; width:1px;
+    //                     background-color:@gray;
+    //                 }
+    //                 &:after {left:auto; right:0;}
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 
@@ -2399,7 +2255,6 @@ main, section {overflow:hidden;}
 
 // WHY MICROSTRATEGY PAGE
 .WhyMicrostrategy {
-
     // TIMELINE COMPONENT STYLES
     @media @medium {.hero-col {opacity:0px; .animation(fade-in 0.5s ease-out 0.5s normal forwards);}}
     //TIMELINE STYLES
@@ -3314,6 +3169,40 @@ main, section {overflow:hidden;}
         }
     }
 }
+
+//mapping page for details
+.GeospatialIntelligence  {
+    #hero {
+        .stacked-mockups {margin-bottom:40px;}
+        .device-mockup {
+            &.macbook-pro {
+                position:relative; z-index:0;
+                margin-left:10%;
+            }
+            &.ipad {
+                position:absolute; z-index:1;
+                width:80%;
+                left:10%; bottom:-5px;
+            }
+            &.iphone {
+                position:absolute; z-index:2;
+                width:20%;
+                left:5%; bottom:-10px;
+            }
+        }
+    }
+
+    // #app-library {
+    //     .device-mockup {
+    //         &.macbook-air {position:relative; z-index:0;}
+    //         &.ipad {
+    //             position:absolute; z-index:1;
+    //             width:50%;
+    //             left:0; bottom:0;
+    //         }
+    //     }
+    // }
+}//end mapping
 
 
 

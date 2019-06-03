@@ -511,18 +511,21 @@ section.below-card {
     background-color: #D9232E;
   }
 }
-.CustomerStories.CompanyStory #company-solutions {
+.CustomerStories.CompanyStory #company-solutions,
+.CustomerStories.CompanyStory #company-pitch p {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.43rem;
   line-height: 1.4;
   font-weight: 300;
 }
 @media only screen and (min-width: 768px) {
-  .CustomerStories.CompanyStory #company-solutions {
+  .CustomerStories.CompanyStory #company-solutions,
+  .CustomerStories.CompanyStory #company-pitch p {
     font-size: 1.57rem;
   }
 }
-.CustomerStories.CompanyStory #company-solutions .company-headline {
+.CustomerStories.CompanyStory #company-solutions .company-headline,
+.CustomerStories.CompanyStory #company-pitch p .company-headline {
   font-weight: 400;
   margin-bottom: 20px;
 }

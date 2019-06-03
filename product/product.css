@@ -413,6 +413,44 @@ blockquote:after {
 .FRFR blockquote:after {
   content: "»";
 }
+.button.arrow.flagged-button {
+  font-weight: 600;
+  padding: 10px 2.5em 10px 0;
+  letter-spacing: 0.2em;
+}
+.button.arrow.flagged-button > .flag {
+  padding: 5px 10px;
+  margin-left: -10px;
+  margin-right: 10px;
+  background-color: #333333;
+  font-size: 12px;
+  line-height: 12px;
+  color: #FFFFFF;
+  letter-spacing: 0.2em;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.button.arrow.flagged-button > .flag.red {
+  background-color: #D9232E;
+}
+.button.arrow.flagged-button > .flag.orange {
+  background-color: #FF9100;
+}
+.button.arrow.flagged-button > .flag.green {
+  background-color: #68AA00;
+}
+.button.arrow.flagged-button > .flag.blue {
+  background-color: #4789A3;
+}
+.button.arrow.flagged-button > .flag.navy-blue {
+  background-color: #11566F;
+}
+.button.arrow.flagged-button > .flag.white {
+  background-color: #FFFFFF;
+  color: #333333;
+}
+.button.arrow.flagged-button > .flag.gray {
+  background-color: #999999;
+}
 @media only screen and (min-width: 768px) {
   .center-mode-slider {
     position: relative;
@@ -683,6 +721,35 @@ section.below-card {
     margin-top: -300px;
   }
 }
+#page-hero.form-fix > .flex-row {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+#page-hero.form-fix > .flex-row .col-md-6.col-xl-5:first-child h1.text-large {
+  font-weight: 400;
+}
+@media only screen and (min-width: 768px) {
+  #page-hero.form-fix > .flex-row .col-md-6.col-xl-5:first-child {
+    -webkit-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+#page-hero.form-fix #lead-gen-form {
+  width: calc(100% - 40px);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 15px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+@media only screen and (min-width: 768px) {
+  #page-hero.form-fix #lead-gen-form {
+    width: calc(100% - 30px);
+  }
+}
+p:empty {
+  margin-bottom: 0!important;
+}
 .hypercard-img {
   border-radius: 10%/6%;
   border: 1px solid #CCCCCC;
@@ -722,9 +789,6 @@ section.below-card {
   border-bottom-color: #D9232E;
   -webkit-transform: translateY(-5px) !important;
   transform: translateY(-5px) !important;
-}
-#multi-control-slider-nav .grid-item > * {
-  width: 100%;
 }
 #multi-control-slider-nav .grid-item.component-orange.slick-current .icon,
 #multi-control-slider-nav .grid-item.component-orange:hover .icon {
@@ -1229,6 +1293,145 @@ section.below-card {
 .triangle-group.black:before {
   border-right-color: #333333;
 }
+.vertical-diagram {
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #777777;
+}
+.vertical-diagram .item-row {
+  position: relative;
+}
+.vertical-diagram .item-row:before {
+  content: '';
+  position: absolute;
+  height: 40px;
+  width: 1px;
+  left: 50%;
+  margin-left: -2px;
+  border-left: 5px dashed #CCCCCC;
+}
+.vertical-diagram .item-row .grid-item {
+  position: relative;
+}
+.vertical-diagram .item-row .grid-item:before,
+.vertical-diagram .item-row .grid-item:after {
+  content: '';
+  position: absolute;
+}
+.vertical-diagram .item-row .grid-item:before {
+  height: 40px;
+  width: 1px;
+  left: 50%;
+  margin-left: -2px;
+  border-left: 5px dashed #CCCCCC;
+}
+.vertical-diagram .item-row .grid-item:after {
+  height: 1px;
+  width: 100%;
+  left: 0;
+  border-top: 5px dashed #CCCCCC;
+}
+.vertical-diagram .item-row .grid-item:first-child:after {
+  left: 50%;
+  width: 50%;
+}
+.vertical-diagram .item-row .grid-item:last-child:after {
+  width: 50%;
+}
+.vertical-diagram .item-row.row-above {
+  padding-bottom: 40px;
+}
+.vertical-diagram .item-row.row-above:before {
+  bottom: 0;
+}
+.vertical-diagram .item-row.row-above .grid-item {
+  padding-bottom: 40px;
+}
+.vertical-diagram .item-row.row-above .grid-item:before,
+.vertical-diagram .item-row.row-above .grid-item:after {
+  bottom: 0;
+}
+.vertical-diagram .item-row.row-below {
+  padding-top: 40px;
+}
+.vertical-diagram .item-row.row-below:before {
+  top: 0;
+}
+.vertical-diagram .item-row.row-below .grid-item {
+  padding-top: 40px;
+}
+.vertical-diagram .item-row.row-below .grid-item:before,
+.vertical-diagram .item-row.row-below .grid-item:after {
+  top: 0;
+}
+.vertical-diagram .top-point-up {
+  position: relative;
+  margin-top: 15px;
+}
+.vertical-diagram .top-point-up:before {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -14px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid #D9232E;
+  border-right: 15px solid transparent;
+}
+.vertical-diagram .top-point-down {
+  position: relative;
+  margin-top: 15px;
+}
+.vertical-diagram .top-point-down:after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -14px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-top: 15px solid #D9232E;
+  border-right: 15px solid transparent;
+}
+.vertical-diagram .bottom-point-up {
+  position: relative;
+  margin-bottom: 15px;
+}
+.vertical-diagram .bottom-point-up:before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 50%;
+  margin-left: -14px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid #D9232E;
+  border-right: 15px solid transparent;
+}
+.vertical-diagram .bottom-point-down {
+  position: relative;
+  margin-bottom: 15px;
+}
+.vertical-diagram .bottom-point-down:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 50%;
+  margin-left: -14px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-top: 15px solid #D9232E;
+  border-right: 15px solid transparent;
+}
 @media only screen and (max-width: 767px) {
   .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a .icon {
     display: none;
@@ -1433,15 +1636,6 @@ section.below-card {
   -webkit-animation-delay: -8s !important;
   animation-delay: -8s !important;
 }
-.Product.PageMenuItem .page-title {
-  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  line-height: 22px;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-weight: 600;
-  color: #D9232E;
-}
 .demo-wrapper {
   position: relative;
   width: 100%!important;
@@ -1538,96 +1732,6 @@ section.below-card {
   top: 19%;
   left: 19%;
 }
-#hero.bottom-white-triangle,
-#page-hero.bottom-white-triangle {
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 70px !important;
-}
-@media only screen and (min-width: 768px) {
-  #hero.bottom-white-triangle,
-  #page-hero.bottom-white-triangle {
-    padding-bottom: 95px !important;
-  }
-}
-@media only screen and (min-width: 980px) {
-  #hero.bottom-white-triangle,
-  #page-hero.bottom-white-triangle {
-    padding-bottom: 120px !important;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #hero.bottom-white-triangle,
-  #page-hero.bottom-white-triangle {
-    padding-bottom: 150px !important;
-  }
-}
-#hero.bottom-white-triangle:before,
-#page-hero.bottom-white-triangle:before,
-#hero.bottom-white-triangle:after,
-#page-hero.bottom-white-triangle:after {
-  content: '';
-  display: block;
-  position: absolute;
-}
-#hero.bottom-white-triangle:before,
-#page-hero.bottom-white-triangle:before {
-  z-index: 1;
-  height: 0;
-  width: 0;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  border-left: 50vw solid transparent;
-  border-right: 50vw solid transparent;
-  border-top: 50px solid #FFFFFF;
-}
-@media only screen and (min-width: 768px) {
-  #hero.bottom-white-triangle:before,
-  #page-hero.bottom-white-triangle:before {
-    border-top-width: 75px;
-  }
-}
-@media only screen and (min-width: 980px) {
-  #hero.bottom-white-triangle:before,
-  #page-hero.bottom-white-triangle:before {
-    border-top-width: 100px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #hero.bottom-white-triangle:before,
-  #page-hero.bottom-white-triangle:before {
-    border-top-width: 130px;
-  }
-}
-#hero.bottom-white-triangle:after,
-#page-hero.bottom-white-triangle:after {
-  z-index: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #f2f2f2;
-  height: 50px;
-}
-@media only screen and (min-width: 768px) {
-  #hero.bottom-white-triangle:after,
-  #page-hero.bottom-white-triangle:after {
-    height: 75px;
-  }
-}
-@media only screen and (min-width: 980px) {
-  #hero.bottom-white-triangle:after,
-  #page-hero.bottom-white-triangle:after {
-    height: 100px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #hero.bottom-white-triangle:after,
-  #page-hero.bottom-white-triangle:after {
-    height: 130px;
-  }
-}
 .single-angle-cross-hero {
   position: relative;
   padding: 60px 0 20px!important;
@@ -1699,277 +1803,6 @@ section.below-card {
   background: #11566F;
   background: -webkit-linear-gradient(45deg, #0d6b8d, #104456);
   background: linear-gradient(45deg, #0d6b8d, #104456);
-}
-.gridder {
-  position: relative;
-  overflow: hidden;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 40px;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-.gridder:after {
-  display: block;
-  position: absolute;
-  z-index: 1;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #444444;
-  background: -webkit-linear-gradient(45deg, #222222, #444444);
-  background: linear-gradient(45deg, #222222, #444444);
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-out 0.5s;
-  transition: opacity 0.3s ease-out 0.5s;
-}
-.gridder .grid-item {
-  position: relative;
-  padding: 5px;
-  z-index: 2;
-  -webkit-order: -1;
-  order: -1;
-}
-.gridder .card {
-  cursor: pointer;
-  border-top-color: #DDDDDD;
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-transition: opacity 0.3s ease-in 0.5s, transform 0.3s ease-in 0.5s, box-shadow 0.2s ease-out 0s;
-  transition: opacity 0.3s ease-in 0.5s, transform 0.3s ease-in 0.5s, box-shadow 0.2s ease-out 0s;
-}
-.gridder .card .card-content:first-child {
-  border-bottom: 1px solid #DDDDDD;
-}
-.gridder .card .card-content .logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  max-height: calc(100% - 40px);
-  max-width: calc(100% - 40px);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.gridder .gridder-show {
-  position: absolute;
-  z-index: 3;
-  padding: 0;
-  width: 100%;
-  top: 0px;
-  left: 10px;
-  margin-left: -10px;
-  margin-right: -10px;
-  overflow: hidden;
-  color: #ffffff;
-  text-align: left;
-}
-.gridder .gridder-padding {
-  display: block;
-  position: relative;
-  padding: 70px 20px 40px 20px;
-  -webkit-animation: fade-slide-down 0.5s 0s ease-out both;
-  animation: fade-slide-down 0.5s 0s ease-out both;
-}
-.gridder .gridder-close {
-  position: absolute;
-  z-index: 3;
-  top: 35px;
-  right: 0;
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0);
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-.gridder .gridder-close:before,
-.gridder .gridder-close:after {
-  position: absolute;
-  display: block;
-  content: "";
-  top: 50%;
-  left: 50%;
-  margin-top: -15px;
-  margin-right: -15px;
-  height: 30px;
-  width: 2px;
-  background-color: #dddddd;
-}
-.gridder .gridder-close:before {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.gridder .gridder-close:after {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-.gridder .gridder-close:hover {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #FFFFFF;
-}
-.gridder .gridder-nav {
-  position: absolute;
-  z-index: 3;
-  top: 35px;
-  left: 0;
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0);
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-.gridder .gridder-nav:hover {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #FFFFFF;
-}
-.gridder .gridder-nav.next {
-  left: 50px;
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-.gridder .gridder-nav.disabled,
-.gridder .gridder-nav.disabled:hover {
-  opacity: 0.2;
-  cursor: default;
-  background-color: rgba(0, 0, 0, 0);
-}
-.gridder .gridder-nav:before,
-.gridder .gridder-nav:after {
-  position: absolute;
-  display: block;
-  content: "";
-  top: 50%;
-  left: 50%;
-  margin-left: -4px;
-  height: 18px;
-  width: 2px;
-  background-color: #dddddd;
-}
-.gridder .gridder-nav:before {
-  margin-top: -15px;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.gridder .gridder-nav:after {
-  margin-top: -3px;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-.gridder .gridder-back {
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 10px 20px 10px 40px;
-  height: 35px;
-  background-color: rgba(0, 0, 0, 0.4);
-  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 16px;
-  color: #999999;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-.gridder .gridder-back:before,
-.gridder .gridder-back:after {
-  position: absolute;
-  display: block;
-  content: "";
-  top: 50%;
-  left: 20px;
-  height: 10px;
-  width: 2px;
-  background-color: #999999;
-}
-.gridder .gridder-back:before {
-  margin-top: -9px;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.gridder .gridder-back:after {
-  margin-top: -2px;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-.gridder.hasSelectedItem .card {
-  /*opening timing on the cards*/
-  opacity: 0;
-  -webkit-transform: translateY(10px);
-  transform: translateY(10px);
-  -webkit-transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s, box-shadow 0.2s ease-out 0s;
-  transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s, box-shadow 0.2s ease-out 0s;
-}
-.gridder.hasSelectedItem:after {
-  opacity: 1;
-  -webkit-transition: opacity 0.5s ease-out 0.3s;
-  transition: opacity 0.5s ease-out 0.3s;
-}
-@media only screen and (min-width: 768px) {
-  .gridder {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 60px;
-  }
-  .gridder .grid-item {
-    padding: 10px;
-  }
-  .gridder .gridder-show {
-    position: relative;
-    top: auto;
-    left: auto;
-  }
-  .gridder .gridder-padding {
-    padding: 70px 50px 0 50px;
-  }
-  .gridder .gridder-close {
-    top: 0;
-  }
-  .gridder .gridder-nav {
-    top: 50%;
-    height: 100px;
-    margin-top: -30px;
-  }
-  .gridder .gridder-nav.next {
-    right: 0;
-    left: auto;
-  }
-  .gridder .gridder-back {
-    right: auto;
-    height: auto;
-    font-size: 18px;
-    line-height: 20px;
-  }
-  .gridder .card .title {
-    font-size: 26px;
-    line-height: 32px;
-  }
-  .gridder .gridder-back {
-    background-color: rgba(0, 0, 0, 0);
-    -webkit-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-  }
-  .gridder .gridder-back:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-    color: #ffffff;
-  }
-}
-@media only screen and (min-width: 980px) {
-  .gridder {
-    padding-bottom: 80px;
-  }
-}
-.gridder-content {
-  display: none;
 }
 .device-mockup.shadow {
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
@@ -2352,206 +2185,79 @@ section.below-card {
   display: block;
   margin-top: 40px;
 }
-.vertical-diagram {
-  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  color: #777777;
-}
-.vertical-diagram .item-row {
-  position: relative;
-}
-.vertical-diagram .item-row:before {
-  content: '';
-  position: absolute;
-  height: 40px;
-  width: 1px;
-  left: 50%;
-  margin-left: -2px;
-  border-left: 5px dashed #CCCCCC;
-}
-.vertical-diagram .item-row .grid-item {
-  position: relative;
-}
-.vertical-diagram .item-row .grid-item:before,
-.vertical-diagram .item-row .grid-item:after {
-  content: '';
-  position: absolute;
-}
-.vertical-diagram .item-row .grid-item:before {
-  height: 40px;
-  width: 1px;
-  left: 50%;
-  margin-left: -2px;
-  border-left: 5px dashed #CCCCCC;
-}
-.vertical-diagram .item-row .grid-item:after {
-  height: 1px;
-  width: 100%;
-  left: 0;
-  border-top: 5px dashed #CCCCCC;
-}
-.vertical-diagram .item-row .grid-item:first-child:after {
-  left: 50%;
-  width: 50%;
-}
-.vertical-diagram .item-row .grid-item:last-child:after {
-  width: 50%;
-}
-.vertical-diagram .item-row.row-above {
-  padding-bottom: 40px;
-}
-.vertical-diagram .item-row.row-above:before {
-  bottom: 0;
-}
-.vertical-diagram .item-row.row-above .grid-item {
-  padding-bottom: 40px;
-}
-.vertical-diagram .item-row.row-above .grid-item:before,
-.vertical-diagram .item-row.row-above .grid-item:after {
-  bottom: 0;
-}
-.vertical-diagram .item-row.row-below {
-  padding-top: 40px;
-}
-.vertical-diagram .item-row.row-below:before {
-  top: 0;
-}
-.vertical-diagram .item-row.row-below .grid-item {
-  padding-top: 40px;
-}
-.vertical-diagram .item-row.row-below .grid-item:before,
-.vertical-diagram .item-row.row-below .grid-item:after {
-  top: 0;
-}
-.vertical-diagram .top-point-up {
-  position: relative;
-  margin-top: 15px;
-}
-.vertical-diagram .top-point-up:before {
-  content: '';
-  position: absolute;
-  display: block;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -14px;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-bottom: 15px solid #D9232E;
-  border-right: 15px solid transparent;
-}
-.vertical-diagram .top-point-down {
-  position: relative;
-  margin-top: 15px;
-}
-.vertical-diagram .top-point-down:after {
-  content: '';
-  position: absolute;
-  display: block;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -14px;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-top: 15px solid #D9232E;
-  border-right: 15px solid transparent;
-}
-.vertical-diagram .bottom-point-up {
-  position: relative;
-  margin-bottom: 15px;
-}
-.vertical-diagram .bottom-point-up:before {
-  content: '';
-  position: absolute;
-  display: block;
-  top: 100%;
-  left: 50%;
-  margin-left: -14px;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-bottom: 15px solid #D9232E;
-  border-right: 15px solid transparent;
-}
-.vertical-diagram .bottom-point-down {
-  position: relative;
-  margin-bottom: 15px;
-}
-.vertical-diagram .bottom-point-down:after {
-  content: '';
-  position: absolute;
-  display: block;
-  top: 100%;
-  left: 50%;
-  margin-left: -14px;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-top: 15px solid #D9232E;
-  border-right: 15px solid transparent;
-}
-#products-overview .device-family {
+#products-overview .device-family,
+.productOverview .device-family {
   position: relative;
   padding-bottom: 5%;
   padding-top: 30px;
   margin-bottom: 30px;
 }
-#products-overview .device-family .device-mockup {
+#products-overview .device-family .device-mockup,
+.productOverview .device-family .device-mockup {
   position: absolute;
   z-index: 1;
 }
-#products-overview .device-family .device-mockup.iphone {
+#products-overview .device-family .device-mockup.iphone,
+.productOverview .device-family .device-mockup.iphone {
   width: 8%;
   bottom: 0;
   left: 0;
   z-index: 2;
 }
-#products-overview .device-family .device-mockup.macbook-pro {
+#products-overview .device-family .device-mockup.macbook-pro,
+.productOverview .device-family .device-mockup.macbook-pro {
   width: 47%;
   bottom: 5%;
   left: 0;
 }
-#products-overview .device-family .device-mockup.ipad {
+#products-overview .device-family .device-mockup.ipad,
+.productOverview .device-family .device-mockup.ipad {
   width: 24%;
   bottom: 0;
   right: 0;
   z-index: 2;
 }
-#products-overview .device-family .device-mockup.ipad.white {
+#products-overview .device-family .device-mockup.ipad.white,
+.productOverview .device-family .device-mockup.ipad.white {
   width: 30%;
   bottom: 6%;
   right: 5%;
 }
-#products-overview .device-family .device-mockup.mac-thunderbolt {
+#products-overview .device-family .device-mockup.mac-thunderbolt,
+.productOverview .device-family .device-mockup.mac-thunderbolt {
   position: relative;
   z-index: 0;
   margin: 0 auto;
   width: 60%;
 }
 @media only screen and (min-width: 768px) {
-  #products-overview #analytics .offpage-image {
+  #products-overview #analytics .offpage-image,
+  .productOverview #analytics .offpage-image {
     width: 200%;
   }
 }
 @media only screen and (min-width: 980px) {
-  #products-overview #analytics .offpage-image {
+  #products-overview #analytics .offpage-image,
+  .productOverview #analytics .offpage-image {
     width: 230%;
   }
 }
 @media only screen and (min-width: 980px) {
-  #products-overview #analytics .offpage-image {
+  #products-overview #analytics .offpage-image,
+  .productOverview #analytics .offpage-image {
     width: 200%;
   }
 }
-#products-overview #mobile .device-mockup.ipad {
+#products-overview #mobile .device-mockup.ipad,
+.productOverview #mobile .device-mockup.ipad {
   position: relative;
   z-index: 0;
   width: 130%;
   margin-right: 20%;
   margin-bottom: 20px;
 }
-#products-overview #mobile .device-mockup.iphone {
+#products-overview #mobile .device-mockup.iphone,
+.productOverview #mobile .device-mockup.iphone {
   position: absolute;
   z-index: 1;
   width: 30%;
@@ -2559,17 +2265,21 @@ section.below-card {
   bottom: 20px;
 }
 @media only screen and (min-width: 768px) {
-  #products-overview #mobile .device-mockup.ipad {
+  #products-overview #mobile .device-mockup.ipad,
+  .productOverview #mobile .device-mockup.ipad {
     width: 150%;
   }
-  #products-overview #mobile .device-mockup.iphone {
+  #products-overview #mobile .device-mockup.iphone,
+  .productOverview #mobile .device-mockup.iphone {
     width: 35%;
   }
 }
-#products-overview #hyperintelligence .device-mockup {
+#products-overview #hyperintelligence .device-mockup,
+.productOverview #hyperintelligence .device-mockup {
   width: 190%;
 }
-#products-overview #hyperintelligence .device-mockup .cursor {
+#products-overview #hyperintelligence .device-mockup .cursor,
+.productOverview #hyperintelligence .device-mockup .cursor {
   position: absolute;
   z-index: 2;
   width: 10px;
@@ -2579,11 +2289,13 @@ section.below-card {
   animation: hero-cursor-website 7.5s linear 0s normal infinite;
 }
 @media only screen and (min-width: 768px) {
-  #products-overview #hyperintelligence .device-mockup .cursor {
+  #products-overview #hyperintelligence .device-mockup .cursor,
+  .productOverview #hyperintelligence .device-mockup .cursor {
     width: 15px;
   }
 }
-#products-overview #hyperintelligence .device-mockup .hypercard-img {
+#products-overview #hyperintelligence .device-mockup .hypercard-img,
+.productOverview #hyperintelligence .device-mockup .hypercard-img {
   position: absolute;
   top: 22%;
   left: 22%;
@@ -2593,37 +2305,44 @@ section.below-card {
   animation: hero-card-appear 7.5s linear 0s normal infinite;
 }
 @media only screen and (min-width: 768px) {
-  #products-overview #enterprise-platform .offpage-image {
+  #products-overview #enterprise-platform .offpage-image,
+  .productOverview #enterprise-platform .offpage-image {
     width: 200%;
   }
 }
 @media only screen and (min-width: 980px) {
-  #products-overview #enterprise-platform .offpage-image {
+  #products-overview #enterprise-platform .offpage-image,
+  .productOverview #enterprise-platform .offpage-image {
     width: 230%;
   }
 }
 @media only screen and (min-width: 980px) {
-  #products-overview #enterprise-platform .offpage-image {
+  #products-overview #enterprise-platform .offpage-image,
+  .productOverview #enterprise-platform .offpage-image {
     width: 200%;
   }
 }
-#products-overview #embedded-analytics .offpage-image {
+#products-overview #embedded-analytics .offpage-image,
+.productOverview #embedded-analytics .offpage-image {
   position: relative;
   z-index: 0;
 }
 @media only screen and (min-width: 768px) {
-  #products-overview #embedded-analytics .offpage-image {
+  #products-overview #embedded-analytics .offpage-image,
+  .productOverview #embedded-analytics .offpage-image {
     width: 200%;
   }
 }
-#products-overview #digital-id-mobile-telemetry .device-mockup.ipad {
+#products-overview #digital-id-mobile-telemetry .device-mockup.ipad,
+.productOverview #digital-id-mobile-telemetry .device-mockup.ipad {
   position: relative;
   z-index: 0;
   width: 130%;
   margin-right: 20%;
   margin-bottom: 20px;
 }
-#products-overview #digital-id-mobile-telemetry .device-mockup.iphone {
+#products-overview #digital-id-mobile-telemetry .device-mockup.iphone,
+.productOverview #digital-id-mobile-telemetry .device-mockup.iphone {
   position: absolute;
   z-index: 1;
   width: 30%;
@@ -2631,19 +2350,23 @@ section.below-card {
   bottom: 20px;
 }
 @media only screen and (min-width: 768px) {
-  #products-overview #digital-id-mobile-telemetry .device-mockup.ipad {
+  #products-overview #digital-id-mobile-telemetry .device-mockup.ipad,
+  .productOverview #digital-id-mobile-telemetry .device-mockup.ipad {
     width: 150%;
   }
-  #products-overview #digital-id-mobile-telemetry .device-mockup.iphone {
+  #products-overview #digital-id-mobile-telemetry .device-mockup.iphone,
+  .productOverview #digital-id-mobile-telemetry .device-mockup.iphone {
     width: 35%;
   }
 }
-#products-overview #cloud .offpage-image {
+#products-overview #cloud .offpage-image,
+.productOverview #cloud .offpage-image {
   position: relative;
   z-index: 0;
 }
 @media only screen and (min-width: 768px) {
-  #products-overview #cloud .offpage-image {
+  #products-overview #cloud .offpage-image,
+  .productOverview #cloud .offpage-image {
     width: 200%;
   }
 }
@@ -2710,65 +2433,72 @@ section.below-card {
     right: -10%;
   }
 }
-@media only screen and (min-width: 980px) {
-  .BigData #hero.bottom-white-triangle .device-mockup {
-    width: 215%;
-    margin-right: -15%;
-  }
+.FederatedAnalytics #for-analysts,
+.FederatedAnalytics #data-scientists {
+  overflow: visible;
 }
-.BigData #hero.bottom-white-triangle .device-mockup img {
-  max-width: 100%!important;
-  margin-left: 0!important;
+.FederatedAnalytics #for-analysts .flex-row > div:first-child,
+.FederatedAnalytics #data-scientists .flex-row > div:first-child {
+  position: relative;
+  z-index: 1;
+}
+.FederatedAnalytics #for-analysts .offpage-image,
+.FederatedAnalytics #data-scientists .offpage-image {
+  position: relative;
+  z-index: 0;
+  width: 200%;
+  margin-right: -65%;
 }
 @media only screen and (min-width: 768px) {
-  .BigData #hadoop-diagram-platform {
-    padding-top: 15px;
-    padding-bottom: 15px;
+  .FederatedAnalytics #for-analysts .offpage-image,
+  .FederatedAnalytics #data-scientists .offpage-image {
+    width: 350%;
+    margin-right: -125%;
   }
-  .BigData #hadoop-diagram-platform .flex {
-    position: relative;
+}
+@media only screen and (min-width: 980px) {
+  .FederatedAnalytics #for-analysts .offpage-image,
+  .FederatedAnalytics #data-scientists .offpage-image {
+    width: 300%;
+    margin-right: -100%;
   }
-  .BigData #hadoop-diagram-platform .flex:after {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 30px;
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    background-color: #999999;
+}
+@media only screen and (min-width: 1200px) {
+  .FederatedAnalytics #for-analysts .offpage-image,
+  .FederatedAnalytics #data-scientists .offpage-image {
+    width: 230%;
+    margin-right: -80%;
   }
-  .BigData #hadoop-diagram-sql {
-    padding-top: 15px;
+}
+.FederatedAnalytics #developers {
+  overflow: visible;
+}
+.FederatedAnalytics #developers .flex-row > div:first-child {
+  position: relative;
+  z-index: 1;
+}
+.FederatedAnalytics #developers .offpage-image {
+  position: relative;
+  z-index: 0;
+  width: 200%;
+  margin-left: -65%;
+}
+@media only screen and (min-width: 768px) {
+  .FederatedAnalytics #developers .offpage-image {
+    width: 350%;
+    margin-left: -125%;
   }
-  .BigData #hadoop-diagram-sql .grid-item {
-    position: relative;
+}
+@media only screen and (min-width: 980px) {
+  .FederatedAnalytics #developers .offpage-image {
+    width: 300%;
+    margin-left: -100%;
   }
-  .BigData #hadoop-diagram-sql .grid-item:before {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 30px;
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    background-color: #999999;
-  }
-  .BigData #hadoop-diagram-sql .grid-item:after {
-    content: '';
-    display: block;
-    height: 1px;
-    position: absolute;
-    top: -15px;
-    right: 0;
-    left: 0;
-    background-color: #999999;
-  }
-  .BigData #hadoop-diagram-sql .grid-item:first-child:after {
-    left: 50%;
-  }
-  .BigData #hadoop-diagram-sql .grid-item:last-child:after {
-    right: 50%;
+}
+@media only screen and (min-width: 1200px) {
+  .FederatedAnalytics #developers .offpage-image {
+    width: 230%;
+    margin-left: -80%;
   }
 }
 .PersonalizationCollaboration #communication-and-collaboration .stacked-mockups .device-mockup.ipad:first-child {
@@ -2795,207 +2525,176 @@ section.below-card {
   right: 15px;
   bottom: 15px;
 }
-.DataConnectivity #hero {
-  padding-bottom: 20px;
+.Mobile #introduction .device-mockup.ipad {
+  position: relative;
+  z-index: 0;
+  width: 130%;
+  margin-right: 20%;
+  margin-bottom: 20px;
+}
+.Mobile #introduction .device-mockup.iphone {
+  position: absolute;
+  z-index: 1;
+  width: 30%;
+  right: 10%;
+  bottom: 20px;
 }
 @media only screen and (min-width: 768px) {
-  .DataConnectivity #hero {
-    padding-bottom: 30px;
-  }
-}
-@media only screen and (min-width: 980px) {
-  .DataConnectivity #hero {
-    padding-bottom: 40px;
-  }
-}
-.DataConnectivity #hero .device-mockup {
-  width: 200%;
-  float: right;
-  margin-right: -10%;
-}
-@media only screen and (min-width: 1200px) {
-  .DataConnectivity #hero .device-mockup {
+  .Mobile #introduction .device-mockup.ipad {
     width: 150%;
   }
+  .Mobile #introduction .device-mockup.iphone {
+    width: 35%;
+  }
 }
-.DataConnectivity #connector-list .card .card-content:first-child {
-  border-bottom: 1px solid #ddd;
-}
-.DataVisualization #hero.bottom-white-triangle .flex-row > div:first-child {
-  z-index: 1;
-}
-.DataVisualization #hero.bottom-white-triangle .offpage-image {
+.Mobile #mobile-apps-deploy .device-mockup.macbook-pro {
   position: relative;
   z-index: 0;
-  margin-left: -30%;
+  width: 120%;
+  margin-left: -10%;
+  float: none;
 }
-@media only screen and (min-width: 768px) {
-  .DataVisualization #hero.bottom-white-triangle .offpage-image {
-    width: 300%;
-    margin-left: -125%;
-    margin-top: -5%;
-  }
-}
-@media only screen and (min-width: 980px) {
-  .DataVisualization #hero.bottom-white-triangle .offpage-image {
-    width: auto;
-    margin-left: -100%;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .DataVisualization #dashboard-design img {
-    max-width: none;
-    margin-left: -110%;
-  }
-}
-@media only screen and (min-width: 980px) {
-  .DataVisualization #dashboard-design img {
-    margin-left: -50%;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .DataVisualization #dashboard-design img {
-    margin-left: -25%;
-  }
-}
-.DataVisualization #dashboard-design .offpage-image img {
-  margin-left: 0;
-  max-width: 100%;
-}
-@media only screen and (min-width: 768px) {
-  .DataVisualization #dashboard-sharing img {
-    max-width: 600px;
-    margin-left: -75%;
-  }
-}
-@media only screen and (min-width: 980px) {
-  .DataVisualization #dashboard-sharing img {
-    max-width: 900px;
-    margin-left: -90%;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .DataVisualization #dashboard-sharing img {
-    max-width: 1200px;
-    margin-left: -110%;
-  }
-}
-.DataVisualization #dashboard-sharing .device-mockup.macbook-pro {
+.Mobile #mobile-apps-deploy .device-mockup.ipad {
   position: relative;
-  z-index: 0;
-  margin-right: 15%;
-}
-.DataVisualization #dashboard-sharing .device-mockup.ipad {
-  position: absolute;
   z-index: 1;
   width: 80%;
-  right: 15%;
-  bottom: -10px;
-}
-.DataVisualization #dashboard-sharing .device-mockup.iphone {
-  position: absolute;
-  z-index: 2;
-  width: 20%;
-  right: 5%;
-  bottom: -20px;
-}
-.DataVisualization #dashboard-sharing .device-mockup img {
-  max-width: 100%;
-  margin-left: 0;
-}
-@media only screen and (min-width: 980px) {
-  .Distribution #hero img {
-    max-width: none;
-    margin-left: -130%;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .Distribution #hero img {
-    margin-left: -90%;
-  }
-}
-.DossiersAndDashboards #hero .hero-screenshots {
-  position: relative;
-}
-.DossiersAndDashboards #hero .hero-screenshots .screenshot-center {
-  position: relative;
-  z-index: 1;
-  max-width: 80%;
-  margin-bottom: 0;
+  margin: -20% auto 0 auto;
 }
 @media only screen and (min-width: 768px) {
-  .DossiersAndDashboards #hero .hero-screenshots .screenshot-center {
-    max-width: 700px;
+  .Mobile #mobile-apps-deploy .device-mockup.macbook-pro {
+    width: 90%;
+    margin-right: 45%;
+    float: right;
+  }
+  .Mobile #mobile-apps-deploy .device-mockup.ipad {
+    position: absolute;
+    z-index: 1;
+    width: 45%;
+    right: 20px;
+    top: 50%;
+    margin-top: -20%;
   }
 }
-.DossiersAndDashboards #hero .hero-screenshots .screenshot-left,
-.DossiersAndDashboards #hero .hero-screenshots .screenshot-right {
-  position: absolute;
-  z-index: 0;
-  max-height: 80%;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  margin-bottom: 0;
-}
-.DossiersAndDashboards #hero .hero-screenshots .screenshot-left {
-  right: 50%;
-}
-.DossiersAndDashboards #hero .hero-screenshots .screenshot-right {
-  left: 50%;
-}
-.DossiersAndDashboards #app-library .device-mockup.macbook-air {
-  position: relative;
-  z-index: 0;
-}
-.DossiersAndDashboards #app-library .device-mockup.ipad {
-  position: absolute;
-  z-index: 1;
-  width: 50%;
-  left: 0;
-  bottom: 0;
-}
-.EnterpriseReporting #hero img {
-  max-width: 150%;
-  margin-left: -30%;
+@media only screen and (min-width: 980px) {
+  .Mobile #mobile-apps-deploy .device-mockup.macbook-pro {
+    width: 75%;
+  }
+  .Mobile #mobile-apps-deploy .device-mockup.ipad {
+    margin-top: -17%;
+  }
 }
 @media only screen and (min-width: 1200px) {
-  .EnterpriseReporting #hero img {
-    margin-left: -15%;
+  .Mobile #mobile-apps-deploy .device-mockup.macbook-pro {
+    width: 75%;
+  }
+  .Mobile #mobile-apps-deploy .device-mockup.ipad {
+    margin-top: -17%;
   }
 }
-.GeospatialIntelligence #hero .stacked-mockups {
-  margin-bottom: 40px;
+.Emm #page-hero .ipad .app-lock {
+  position: absolute;
+  width: 4%;
+  right: 26%;
+  top: 6%;
+  opacity: 0;
+  -webkit-animation: app-lock-animation 7s 2s ease-out infinite;
+  animation: app-lock-animation 7s 2s ease-out infinite;
 }
-.GeospatialIntelligence #hero .device-mockup.macbook-pro {
-  position: relative;
+.Transactions #page-hero .device-mockup.ipad {
   z-index: 0;
   margin-left: 10%;
 }
-.GeospatialIntelligence #hero .device-mockup.ipad {
+.Transactions #page-hero .device-mockup.iphone {
   position: absolute;
   z-index: 1;
-  width: 80%;
-  left: 10%;
-  bottom: -5px;
-}
-.GeospatialIntelligence #hero .device-mockup.iphone {
-  position: absolute;
-  z-index: 2;
-  width: 20%;
-  left: 5%;
-  bottom: -10px;
-}
-.GeospatialIntelligence #app-library .device-mockup.macbook-air {
-  position: relative;
-  z-index: 0;
-}
-.GeospatialIntelligence #app-library .device-mockup.ipad {
-  position: absolute;
-  z-index: 1;
-  width: 50%;
+  width: 25%;
   left: 0;
   bottom: 0;
+}
+.Transactions #take-action .image-row {
+  position: relative;
+}
+.Transactions #take-action .image-row .iphone {
+  position: absolute;
+  z-index: 2;
+  width: 15%;
+  bottom: 0;
+  right: 0;
+}
+.Transactions #take-action .image-row .ipad {
+  width: 60%;
+}
+.Transactions #take-action .image-row .ipad.left {
+  position: relative;
+  z-index: 0;
+  margin-left: 0;
+  margin-bottom: 10%;
+}
+.Transactions #take-action .image-row .ipad.right {
+  position: absolute;
+  z-index: 1;
+  bottom: 5%;
+  left: 35%;
+}
+.Transactions #take-action .stacked-mockups .iphone {
+  position: absolute;
+  z-index: 2;
+  width: 15%;
+  bottom: 0;
+  left: 0;
+}
+.Transactions #take-action .stacked-mockups .ipad {
+  width: 60%;
+}
+.Transactions #take-action .stacked-mockups .ipad.right {
+  position: relative;
+  z-index: 0;
+  margin-left: auto;
+  margin-bottom: 10%;
+}
+.Transactions #take-action .stacked-mockups .ipad.center {
+  position: absolute;
+  z-index: 1;
+  bottom: 5%;
+  right: 35%;
+}
+.Hyperintelligence #introduction .device-mockup {
+  width: 190%;
+}
+.Hyperintelligence #introduction .device-mockup .cursor {
+  position: absolute;
+  z-index: 2;
+  width: 10px;
+  top: 50%;
+  left: 50%;
+  -webkit-animation: hero-cursor-hyperint 10s linear 0s normal infinite;
+  animation: hero-cursor-hyperint 10s linear 0s normal infinite;
+}
+@media only screen and (min-width: 768px) {
+  .Hyperintelligence #introduction .device-mockup .cursor {
+    width: 15px;
+  }
+}
+.Hyperintelligence #introduction .device-mockup .hypercard-img {
+  position: absolute;
+  top: 20%;
+  left: 48%;
+  width: 25%;
+  opacity: 0;
+  -webkit-animation: hero-card-appear-hyperint 10s linear 0s normal infinite;
+  animation: hero-card-appear-hyperint 10s linear 0s normal infinite;
+}
+.Cards #page-hero .device-mockup.iphone-x {
+  position: absolute;
+  z-index: 2;
+  width: 27%;
+  bottom: 0;
+  left: 5%;
+}
+.Cards #page-hero .device-mockup.macbook-pro {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 5%;
 }
 @media only screen and (max-width: 767px) {
   .HyperintelligenceForWeb #page-hero .device-mockup {
@@ -3175,419 +2874,6 @@ section.below-card {
   left: -5px;
   margin-top: -7px;
 }
-.HyperintelligenceForWeb #connect-to-data #connected-card-diagram .card-row {
-  position: relative;
-  padding-bottom: 40px;
-}
-.HyperintelligenceForWeb #connect-to-data #connected-card-diagram .card-row:before {
-  content: '';
-  position: absolute;
-  display: block;
-}
-.HyperintelligenceForWeb #connect-to-data #connected-card-diagram .card-row:before {
-  height: 40px;
-  width: 1px;
-  bottom: 0;
-  left: 50%;
-  margin-left: -2px;
-  border-left: 5px dashed #CCCCCC;
-}
-.HyperintelligenceForWeb #connect-to-data #connected-card-diagram .logo-row .grid-item {
-  position: relative;
-  padding-top: 50px;
-}
-.HyperintelligenceForWeb #connect-to-data #connected-card-diagram .logo-row .grid-item:before,
-.HyperintelligenceForWeb #connect-to-data #connected-card-diagram .logo-row .grid-item:after {
-  content: '';
-  position: absolute;
-  display: block;
-}
-.HyperintelligenceForWeb #connect-to-data #connected-card-diagram .logo-row .grid-item:before {
-  height: 50px;
-  width: 1px;
-  top: 0;
-  left: 50%;
-  margin-left: -2px;
-  border-left: 5px dashed #CCCCCC;
-}
-.HyperintelligenceForWeb #connect-to-data #connected-card-diagram .logo-row .grid-item:after {
-  width: 100%;
-  height: 1px;
-  top: 0;
-  left: 0;
-  border-top: 5px dashed #CCCCCC;
-}
-.HyperintelligenceForWeb #connect-to-data #connected-card-diagram .logo-row .grid-item:first-child:after {
-  width: 50%;
-  left: 50%;
-}
-.HyperintelligenceForWeb #connect-to-data #connected-card-diagram .logo-row .grid-item:nth-child(2):after {
-  width: 50%;
-  left: auto;
-  right: 50%;
-}
-.HyperintelligenceForWeb #connect-to-data #connected-card-diagram .logo-row .grid-item:last-child:after {
-  width: 0;
-  left: auto;
-  right: 50%;
-}
-@media only screen and (min-width: 768px) {
-  .HyperintelligenceForWeb #connect-to-data #connected-card-diagram .logo-row .grid-item:nth-child(2):after {
-    width: 100%;
-    left: 0;
-    right: 0;
-  }
-  .HyperintelligenceForWeb #connect-to-data #connected-card-diagram .logo-row .grid-item:last-child:after {
-    width: 50%;
-  }
-}
-.Mobile #introduction .device-mockup.ipad {
-  position: relative;
-  z-index: 0;
-  width: 130%;
-  margin-right: 20%;
-  margin-bottom: 20px;
-}
-.Mobile #introduction .device-mockup.iphone {
-  position: absolute;
-  z-index: 1;
-  width: 30%;
-  right: 10%;
-  bottom: 20px;
-}
-@media only screen and (min-width: 768px) {
-  .Mobile #introduction .device-mockup.ipad {
-    width: 150%;
-  }
-  .Mobile #introduction .device-mockup.iphone {
-    width: 35%;
-  }
-}
-.Mobile #mobile-apps-deploy .device-mockup.macbook-pro {
-  position: relative;
-  z-index: 0;
-  width: 120%;
-  margin-left: -10%;
-  float: none;
-}
-.Mobile #mobile-apps-deploy .device-mockup.ipad {
-  position: relative;
-  z-index: 1;
-  width: 80%;
-  margin: -20% auto 0 auto;
-}
-@media only screen and (min-width: 768px) {
-  .Mobile #mobile-apps-deploy .device-mockup.macbook-pro {
-    width: 90%;
-    margin-right: 45%;
-    float: right;
-  }
-  .Mobile #mobile-apps-deploy .device-mockup.ipad {
-    position: absolute;
-    z-index: 1;
-    width: 45%;
-    right: 20px;
-    top: 50%;
-    margin-top: -20%;
-  }
-}
-@media only screen and (min-width: 980px) {
-  .Mobile #mobile-apps-deploy .device-mockup.macbook-pro {
-    width: 75%;
-  }
-  .Mobile #mobile-apps-deploy .device-mockup.ipad {
-    margin-top: -17%;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .Mobile #mobile-apps-deploy .device-mockup.macbook-pro {
-    width: 75%;
-  }
-  .Mobile #mobile-apps-deploy .device-mockup.ipad {
-    margin-top: -17%;
-  }
-}
-.Mobile #transactions .device-mockup.ipad {
-  position: relative;
-  z-index: 0;
-  margin-left: 10%;
-  margin-bottom: 20px;
-  width: 140%;
-}
-@media only screen and (min-width: 980px) {
-  .Mobile #transactions .device-mockup.ipad {
-    width: 120%;
-  }
-}
-.Mobile #transactions .device-mockup.iphone {
-  position: absolute;
-  z-index: 1;
-  width: 20%;
-  left: 20px;
-  bottom: 20px;
-  width: 30%;
-}
-@media only screen and (min-width: 980px) {
-  .Mobile #transactions .device-mockup.iphone {
-    width: 25%;
-  }
-}
-.Mobile #mobile-external-apps-slider .slick-slide {
-  position: relative;
-}
-.Mobile #mobile-external-apps-slider .slick-slide > span {
-  position: absolute;
-  left: 0;
-  bottom: 20px;
-  width: 100%;
-  padding: 50px 15px 15px 15px;
-  background: rgba(0, 0, 0, 0.6);
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 90%, rgba(0, 0, 0, 0.6) 100%);
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 90%, rgba(0, 0, 0, 0.6) 100%);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 90%, rgba(0, 0, 0, 0.6) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#99000000', GradientType=0);
-  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 16px;
-  text-align: center;
-  color: #FFFFFF;
-}
-.Mobile #emm .device-col {
-  overflow: hidden;
-  margin-bottom: 30px;
-}
-@media only screen and (min-width: 980px) {
-  .Mobile #emm .device-col {
-    overflow: visible;
-    margin-bottom: none;
-  }
-}
-.Mobile #emm .device-mockup.offpage-image {
-  margin-right: 5%;
-  width: 150%;
-  margin-bottom: -40%;
-}
-@media only screen and (min-width: 768px) {
-  .Mobile #emm .device-mockup.offpage-image {
-    width: 115%;
-  }
-}
-@media only screen and (min-width: 980px) {
-  .Mobile #emm .device-mockup.offpage-image {
-    width: 150%;
-    margin-bottom: 0;
-  }
-}
-.Mobile #emm .app-lock {
-  position: absolute;
-  width: 4%;
-  right: 26%;
-  top: 6%;
-  opacity: 0;
-  -webkit-animation: app-lock-animation 7s 2s ease-out infinite;
-  animation: app-lock-animation 7s 2s ease-out infinite;
-}
-.Mobile #hypermobile .device-mockup.iphone-x {
-  position: absolute;
-  z-index: 2;
-  width: 35%;
-  bottom: 0;
-  right: 5%;
-}
-.Mobile #hypermobile .device-mockup.ipad {
-  position: relative;
-  z-index: 1;
-  margin-right: 10%;
-}
-.Emm #hero .ipad {
-  z-index: 0;
-  width: 150%;
-  float: right;
-  margin-right: 10%;
-}
-@media only screen and (min-width: 980px) {
-  .Emm #hero .ipad {
-    width: 130%;
-  }
-}
-.Emm #hero .ipad .app-lock {
-  position: absolute;
-  width: 4%;
-  right: 26%;
-  top: 6%;
-  opacity: 0;
-  -webkit-animation: app-lock-animation 7s 2s ease-out infinite;
-  animation: app-lock-animation 7s 2s ease-out infinite;
-}
-.Emm #page-hero .ipad .app-lock {
-  position: absolute;
-  width: 4%;
-  right: 26%;
-  top: 6%;
-  opacity: 0;
-  -webkit-animation: app-lock-animation 7s 2s ease-out infinite;
-  animation: app-lock-animation 7s 2s ease-out infinite;
-}
-.Transactions #hero .img-col {
-  position: relative;
-}
-.Transactions #hero .img-col .ipad {
-  z-index: 0;
-  width: 150%;
-  float: right;
-  margin-right: 15%;
-  margin-bottom: 20px;
-}
-@media only screen and (min-width: 980px) {
-  .Transactions #hero .img-col .ipad {
-    margin-bottom: 30px;
-  }
-}
-.Transactions #hero .img-col .iphone {
-  position: absolute;
-  width: 35%;
-  right: 20px;
-  bottom: 20px;
-  z-index: 1;
-}
-.Transactions #page-hero .device-mockup.ipad {
-  z-index: 0;
-  margin-left: 10%;
-}
-.Transactions #page-hero .device-mockup.iphone {
-  position: absolute;
-  z-index: 1;
-  width: 25%;
-  left: 0;
-  bottom: 0;
-}
-.Transactions #take-action .image-row {
-  position: relative;
-}
-.Transactions #take-action .image-row .iphone {
-  position: absolute;
-  z-index: 2;
-  width: 15%;
-  bottom: 0;
-  right: 0;
-}
-.Transactions #take-action .image-row .ipad {
-  width: 60%;
-}
-.Transactions #take-action .image-row .ipad.left {
-  position: relative;
-  z-index: 0;
-  margin-left: 0;
-  margin-bottom: 10%;
-}
-.Transactions #take-action .image-row .ipad.right {
-  position: absolute;
-  z-index: 1;
-  bottom: 5%;
-  left: 35%;
-}
-.Transactions #take-action .stacked-mockups .iphone {
-  position: absolute;
-  z-index: 2;
-  width: 15%;
-  bottom: 0;
-  left: 0;
-}
-.Transactions #take-action .stacked-mockups .ipad {
-  width: 60%;
-}
-.Transactions #take-action .stacked-mockups .ipad.right {
-  position: relative;
-  z-index: 0;
-  margin-left: auto;
-  margin-bottom: 10%;
-}
-.Transactions #take-action .stacked-mockups .ipad.center {
-  position: absolute;
-  z-index: 1;
-  bottom: 5%;
-  right: 35%;
-}
-.Hyperintelligence #introduction .device-mockup {
-  width: 190%;
-}
-.Hyperintelligence #introduction .device-mockup .cursor {
-  position: absolute;
-  z-index: 2;
-  width: 10px;
-  top: 50%;
-  left: 50%;
-  -webkit-animation: hero-cursor-hyperint 10s linear 0s normal infinite;
-  animation: hero-cursor-hyperint 10s linear 0s normal infinite;
-}
-@media only screen and (min-width: 768px) {
-  .Hyperintelligence #introduction .device-mockup .cursor {
-    width: 15px;
-  }
-}
-.Hyperintelligence #introduction .device-mockup .hypercard-img {
-  position: absolute;
-  top: 20%;
-  left: 48%;
-  width: 25%;
-  opacity: 0;
-  -webkit-animation: hero-card-appear-hyperint 10s linear 0s normal infinite;
-  animation: hero-card-appear-hyperint 10s linear 0s normal infinite;
-}
-.Hyperintelligence #hyper-mobile .device-mockup.iphone {
-  position: absolute;
-  z-index: 2;
-  width: 35%;
-  bottom: 0;
-  right: 5%;
-}
-.Hyperintelligence #hyper-mobile .device-mockup.ipad {
-  position: relative;
-  z-index: 1;
-  margin-right: 10%;
-}
-.Hyperintelligence #enterprise-platform {
-  overflow: visible;
-}
-.Hyperintelligence #enterprise-platform .flex-row > div:first-child {
-  position: relative;
-  z-index: 1;
-}
-.Hyperintelligence #enterprise-platform .offpage-image {
-  position: relative;
-  z-index: 0;
-  margin-left: -10%;
-  margin-top: -20%;
-}
-@media only screen and (min-width: 768px) {
-  .Hyperintelligence #enterprise-platform .offpage-image {
-    width: 330%;
-    margin-top: 30%;
-    margin-left: -145%;
-  }
-}
-@media only screen and (min-width: 980px) {
-  .Hyperintelligence #enterprise-platform .offpage-image {
-    width: auto;
-    margin-top: -5%;
-    margin-left: -110%;
-  }
-}
-.Cards #page-hero .device-mockup.iphone-x {
-  position: absolute;
-  z-index: 2;
-  width: 27%;
-  bottom: 0;
-  left: 5%;
-}
-.Cards #page-hero .device-mockup.macbook-pro {
-  position: relative;
-  z-index: 1;
-  margin-bottom: 5%;
-}
 .HyperintelligenceForMobile #page-hero .device-mockup.iphone-x {
   position: absolute;
   z-index: 2;
@@ -3758,204 +3044,6 @@ section.below-card {
     left: 75%;
   }
 }
-.EnterprisePlatform #federated-data-diagram {
-  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  color: #777777;
-}
-.EnterprisePlatform #federated-data-diagram .content-label {
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 600;
-}
-@media only screen and (min-width: 768px) {
-  .EnterprisePlatform #federated-data-diagram .feature-group-row {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-  }
-}
-.EnterprisePlatform #federated-data-diagram .feature-group-row > .content-label {
-  display: block;
-  background-color: #D9232E;
-  color: #FFFFFF;
-  padding: 15px;
-}
-@media only screen and (min-width: 768px) {
-  .EnterprisePlatform #federated-data-diagram .feature-group-row > .content-label {
-    width: 20%;
-    min-width: 140px;
-  }
-}
-.EnterprisePlatform #federated-data-diagram .feature-group-row .feature-group {
-  border-left: 5px solid #D9232E;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-  font-size: 14px;
-  line-height: 14px;
-  text-align: left;
-}
-.EnterprisePlatform #federated-data-diagram .feature-group-row .feature-group > .grid-item {
-  border: 1px solid #f2f2f2;
-}
-.EnterprisePlatform #federated-data-diagram .feature-group-row .feature-group .icon {
-  color: #D9232E;
-  margin-right: 10px;
-}
-.EnterprisePlatform #federated-data-diagram .results-row {
-  padding-top: 20px;
-}
-.EnterprisePlatform #federated-data-diagram .results-row > div {
-  position: relative;
-  margin-bottom: 40px;
-}
-.EnterprisePlatform #federated-data-diagram .results-row > div:after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: 5px;
-  height: 20px;
-  background-color: #D9232E;
-}
-.EnterprisePlatform #federated-data-diagram .results-row > div:last-child:after {
-  background-color: #4789A3;
-}
-@media only screen and (min-width: 768px) {
-  .EnterprisePlatform #federated-data-diagram .results-row > div:after {
-    width: 2px;
-  }
-  .EnterprisePlatform #federated-data-diagram .results-row > div:last-child:after {
-    height: 40px;
-  }
-}
-.EnterprisePlatform #federated-data-diagram .sources-row {
-  position: relative;
-}
-@media only screen and (max-width: 767px) {
-  .EnterprisePlatform #federated-data-diagram .sources-row .in-memory-cubes,
-  .EnterprisePlatform #federated-data-diagram .sources-row .other-sources {
-    border: 1px solid #CCCCCC;
-  }
-}
-.EnterprisePlatform #federated-data-diagram .sources-row:before,
-.EnterprisePlatform #federated-data-diagram .sources-row:after {
-  content: '';
-  position: absolute;
-  bottom: calc(100% + 20px);
-  width: calc(50% - 10px);
-  height: 5px;
-}
-.EnterprisePlatform #federated-data-diagram .sources-row:before {
-  left: 0;
-  background-color: #D9232E;
-}
-.EnterprisePlatform #federated-data-diagram .sources-row:after {
-  left: 50%;
-  background-color: #4789A3;
-}
-@media only screen and (min-width: 768px) {
-  .EnterprisePlatform #federated-data-diagram .sources-row:before,
-  .EnterprisePlatform #federated-data-diagram .sources-row:after {
-    height: 2px;
-  }
-  .EnterprisePlatform #federated-data-diagram .sources-row:before {
-    left: 50%;
-    width: 66.9%;
-    -webkit-transform: translateX(-65.3%);
-    transform: translateX(-65.3%);
-  }
-  .EnterprisePlatform #federated-data-diagram .sources-row:after {
-    left: 50%;
-    width: 66%;
-    -webkit-transform: translateX(-33.8%);
-    transform: translateX(-33.8%);
-    bottom: 100%;
-  }
-}
-.EnterprisePlatform #federated-data-diagram .sources-row .grid-item {
-  margin-top: 20px;
-}
-.EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected {
-  position: relative;
-}
-.EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected:after {
-  content: '';
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: 5px;
-  height: 20px;
-  background-color: #D9232E;
-}
-.EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected.blue:after {
-  background-color: #4789A3;
-}
-.EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected.both:before,
-.EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected.both:after {
-  content: '';
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: 5px;
-  height: 20px;
-}
-.EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected.both:before {
-  left: calc(50% - 10px);
-  background-color: #D9232E;
-}
-.EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected.both:after {
-  left: calc(50% + 10px);
-  background-color: #4789A3;
-}
-@media only screen and (min-width: 768px) {
-  .EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected:after {
-    width: 2px;
-    height: 75px;
-  }
-  .EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected.blue:after {
-    background-color: #4789A3;
-    height: 55px;
-  }
-  .EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected.both:before,
-  .EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected.both:after {
-    width: 2px;
-    height: 55px;
-  }
-  .EnterprisePlatform #federated-data-diagram .sources-row .grid-item.selected.both:before {
-    height: 75px;
-  }
-}
-.EnterprisePlatform #federated-data-diagram .sources-row .database {
-  position: relative;
-  min-height: 150px;
-}
-.EnterprisePlatform #federated-data-diagram .sources-row .database .grid-item {
-  margin: 20px 0;
-}
-.EnterprisePlatform #federated-data-diagram .sources-row .database .cylinder-background {
-  position: absolute;
-  z-index: -1;
-  height: 90%;
-  top: -5%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-.EmbeddedAnalytics #hero .angle-wrapper .angle.right {
-  background-position: left center;
-}
-.EmbeddedAnalytics #introduction .device-mockup {
-  width: 200%;
-}
 .EmbeddedAnalytics #customized-apps .custom-mobile-sdk-graphic {
   margin-top: 64px;
 }
@@ -4012,68 +3100,6 @@ section.below-card {
   float: right;
   width: 100%;
 }
-.FederatedAnalytics #data-scientists {
-  overflow: visible;
-}
-.FederatedAnalytics #data-scientists .flex-row > div:first-child {
-  position: relative;
-  z-index: 1;
-}
-.FederatedAnalytics #data-scientists .offpage-image {
-  position: relative;
-  z-index: 0;
-  width: 200%;
-  margin-right: -65%;
-}
-@media only screen and (min-width: 768px) {
-  .FederatedAnalytics #data-scientists .offpage-image {
-    width: 350%;
-    margin-right: -125%;
-  }
-}
-@media only screen and (min-width: 980px) {
-  .FederatedAnalytics #data-scientists .offpage-image {
-    width: 300%;
-    margin-right: -100%;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .FederatedAnalytics #data-scientists .offpage-image {
-    width: 270%;
-    margin-right: -90%;
-  }
-}
-.FederatedAnalytics #developers {
-  overflow: visible;
-}
-.FederatedAnalytics #developers .flex-row > div:first-child {
-  position: relative;
-  z-index: 1;
-}
-.FederatedAnalytics #developers .offpage-image {
-  position: relative;
-  z-index: 0;
-  width: 200%;
-  margin-left: -65%;
-}
-@media only screen and (min-width: 768px) {
-  .FederatedAnalytics #developers .offpage-image {
-    width: 350%;
-    margin-left: -125%;
-  }
-}
-@media only screen and (min-width: 980px) {
-  .FederatedAnalytics #developers .offpage-image {
-    width: 300%;
-    margin-left: -100%;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .FederatedAnalytics #developers .offpage-image {
-    width: 270%;
-    margin-left: -90%;
-  }
-}
 .IdentityAndTelemetry #hero .angle-wrapper .angle.right {
   background-position: left center;
 }
@@ -4084,7 +3110,6 @@ section.below-card {
   margin-right: 20%;
   margin-bottom: 20px;
 }
-.IdentityAndTelemetry #introduction .device-mockup.iphone,
 .IdentityAndTelemetry #introduction .device-mockup.iphone-x {
   position: absolute;
   z-index: 1;
@@ -4096,38 +3121,9 @@ section.below-card {
   .IdentityAndTelemetry #introduction .device-mockup.ipad {
     width: 150%;
   }
-  .IdentityAndTelemetry #introduction .device-mockup.iphone,
   .IdentityAndTelemetry #introduction .device-mockup.iphone-x {
     width: 35%;
   }
-}
-.IdentityAndTelemetry #physical-logical-access .device-mockup.macbook-pro {
-  position: relative;
-  z-index: 0;
-  width: 130%;
-  margin-left: 10%;
-  margin-bottom: 20px;
-}
-.IdentityAndTelemetry #physical-logical-access .device-mockup.iphone,
-.IdentityAndTelemetry #physical-logical-access .device-mockup.iphone-x {
-  position: absolute;
-  z-index: 1;
-  width: 25%;
-  left: 10%;
-  bottom: 20px;
-}
-@media only screen and (min-width: 768px) {
-  .IdentityAndTelemetry #physical-logical-access .device-mockup.macbook-pro {
-    width: 150%;
-  }
-  .IdentityAndTelemetry #physical-logical-access .device-mockup.iphone,
-  .IdentityAndTelemetry #physical-logical-access .device-mockup.iphone-x {
-    width: 30%;
-  }
-}
-.DigitalCredentials #logical-access > div > div > img {
-  max-width: 175%;
-  margin-left: -75%;
 }
 .DigitalCredentials #logical-access .device-mockup.macbook-pro {
   position: relative;
@@ -4136,7 +3132,6 @@ section.below-card {
   margin-right: 10%;
   margin-bottom: 20px;
 }
-.DigitalCredentials #logical-access .device-mockup.iphone,
 .DigitalCredentials #logical-access .device-mockup.iphone-x {
   position: absolute;
   z-index: 1;
@@ -4148,13 +3143,9 @@ section.below-card {
   .DigitalCredentials #logical-access .device-mockup.macbook-pro {
     width: 150%;
   }
-  .DigitalCredentials #logical-access .device-mockup.iphone,
   .DigitalCredentials #logical-access .device-mockup.iphone-x {
     width: 30%;
   }
-}
-.DigitalCredentials #physical-access > div > div > img {
-  max-width: 150%;
 }
 .DigitalCredentials #physical-access .device-mockup.ipad {
   position: relative;
@@ -4163,7 +3154,6 @@ section.below-card {
   margin-left: 20%;
   margin-bottom: 20px;
 }
-.DigitalCredentials #physical-access .device-mockup.iphone,
 .DigitalCredentials #physical-access .device-mockup.iphone-x {
   position: absolute;
   z-index: 1;
@@ -4175,33 +3165,9 @@ section.below-card {
   .DigitalCredentials #physical-access .device-mockup.ipad {
     width: 130%;
   }
-  .DigitalCredentials #physical-access .device-mockup.iphone,
   .DigitalCredentials #physical-access .device-mockup.iphone-x {
     width: 30%;
   }
-}
-.DigitalCredentials #logical-access .img-col {
-  position: relative;
-}
-.DigitalCredentials #logical-access .img-col .macbook-air {
-  z-index: 0;
-  width: 200%;
-  float: right;
-  margin-right: 10%;
-  margin-bottom: 30px;
-}
-@media only screen and (min-width: 980px) {
-  .DigitalCredentials #logical-access .img-col .macbook-air {
-    margin-bottom: 40px;
-  }
-}
-.DigitalCredentials #logical-access .img-col .iphone,
-.DigitalCredentials #logical-access .img-col .iphone-x {
-  position: absolute;
-  z-index: 1;
-  width: 35%;
-  right: 10%;
-  bottom: 15px;
 }
 .DigitalCredentials #customize-credentials .stacked-mockups {
   margin-bottom: 40px;
@@ -4224,36 +3190,24 @@ section.below-card {
   left: auto;
   right: 5%;
 }
-.BadgeCommunicator #page-hero .first-md,
-.BadgeCommunicator #hero .first-md {
-  position: relative;
-}
-.BadgeCommunicator #page-hero .device-mockup.macbook-pro,
-.BadgeCommunicator #hero .device-mockup.macbook-pro {
+.BadgeCommunicator #page-hero .device-mockup.macbook-pro {
   z-index: 0;
   margin-left: 7%;
   margin-bottom: 7%;
 }
-.BadgeCommunicator #page-hero .device-mockup.ipad,
-.BadgeCommunicator #hero .device-mockup.ipad {
+.BadgeCommunicator #page-hero .device-mockup.ipad {
   position: absolute;
   z-index: 1;
   width: 55%;
   left: 7%;
   bottom: 7%;
 }
-.BadgeCommunicator #page-hero .device-mockup.iphone,
-.BadgeCommunicator #hero .device-mockup.iphone,
-.BadgeCommunicator #page-hero .device-mockup.iphone-x,
-.BadgeCommunicator #hero .device-mockup.iphone-x {
+.BadgeCommunicator #page-hero .device-mockup.iphone-x {
   position: absolute;
   z-index: 2;
   width: 15%;
   left: 20px;
   bottom: 20px;
-}
-.BadgeCommunicator #physical-infrastructure .img-col {
-  position: relative;
 }
 .BadgeCommunicator #physical-infrastructure .device-mockup.ipad {
   z-index: 0;
@@ -4267,16 +3221,12 @@ section.below-card {
     margin-bottom: 40px;
   }
 }
-.BadgeCommunicator #physical-infrastructure .device-mockup.iphone,
 .BadgeCommunicator #physical-infrastructure .device-mockup.iphone-x {
   position: absolute;
   z-index: 1;
   width: 35%;
   left: 10%;
   bottom: 15px;
-}
-.BadgeCommunicator #logical-access .img-col {
-  position: relative;
 }
 .BadgeCommunicator #logical-access .device-mockup.macbook-air {
   z-index: 0;
@@ -4290,7 +3240,6 @@ section.below-card {
     margin-bottom: 40px;
   }
 }
-.BadgeCommunicator #logical-access .device-mockup.iphone,
 .BadgeCommunicator #logical-access .device-mockup.iphone-x {
   position: absolute;
   z-index: 1;
@@ -4304,18 +3253,6 @@ section.below-card {
 .Cloud #introduction .device-mockup {
   width: 200%;
 }
-.Cloud #cloud-capabilities .device-mockup.ipad {
-  position: relative;
-  z-index: 0;
-  margin-left: 27.33333333%;
-}
-.Cloud #cloud-capabilities .device-mockup.iphone {
-  position: absolute;
-  z-index: 1;
-  width: 20%;
-  left: 0;
-  bottom: 0;
-}
 .Cloud #cloud-service-options.white-popup {
   max-width: 1000px;
 }
@@ -4327,111 +3264,6 @@ section.below-card {
 .Cloud #cloud-service-options.white-popup > h3 {
   margin: 0;
   padding: 20px;
-}
-.Cloud #services-and-tools-diagram .icon-col {
-  position: relative;
-}
-@media only screen and (min-width: 768px) {
-  .Cloud #services-and-tools-diagram .icon-col {
-    padding-bottom: 35px;
-    margin-bottom: 20px;
-  }
-}
-.Cloud #services-and-tools-diagram .icon-col .grid-item {
-  display: -webkit-inline-flex;
-  display: inline-flex;
-}
-.Cloud #services-and-tools-diagram .icon-col .background-light-gray,
-.Cloud #services-and-tools-diagram .icon-col .background-white {
-  -webkit-flex: 0 1 auto;
-  flex: 0 1 auto;
-  max-width: none;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  align-items: flex-start;
-  width: 100%;
-  position: relative;
-}
-.Cloud #services-and-tools-diagram .icon-col .background-light-gray > p,
-.Cloud #services-and-tools-diagram .icon-col .background-white > p {
-  width: 100%;
-}
-.Cloud #services-and-tools-diagram .icon-col .label {
-  display: block;
-  position: relative;
-  padding: 25px 25px 30px 25px;
-  margin: 0;
-  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1em;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #999999;
-  text-align: center;
-}
-@media only screen and (max-width: 767px) {
-  .Cloud #services-and-tools-diagram .icon-col .label {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .Cloud #services-and-tools-diagram .icon-col .label {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50%;
-    padding: 25px 0 0 0;
-  }
-  .Cloud #services-and-tools-diagram .icon-col .label.full {
-    width: 100%;
-  }
-  .Cloud #services-and-tools-diagram .icon-col .label.full .line {
-    width: calc(50% - 40px);
-  }
-  .Cloud #services-and-tools-diagram .icon-col .label.two-third {
-    width: 66.66%;
-  }
-  .Cloud #services-and-tools-diagram .icon-col .label.one-third {
-    width: 33.33%;
-  }
-  .Cloud #services-and-tools-diagram .icon-col .label:last-of-type {
-    left: auto;
-    right: 0;
-  }
-}
-.Cloud #services-and-tools-diagram .icon-col .label .line {
-  position: absolute;
-  top: 15px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  height: 1px;
-  width: calc(100% - 40px);
-  background-color: #999999;
-}
-.Cloud #services-and-tools-diagram .icon-col .label .line:before,
-.Cloud #services-and-tools-diagram .icon-col .label .line:after {
-  position: absolute;
-  content: '';
-  bottom: 0;
-  left: 0;
-  height: 15px;
-  width: 1px;
-  background-color: #999999;
-}
-.Cloud #services-and-tools-diagram .icon-col .label .line:after {
-  left: auto;
-  right: 0;
 }
 @media only screen and (min-width: 768px) {
   .WhyMicrostrategy .hero-col {
@@ -5718,6 +4550,28 @@ section.below-card {
 #product-packaging #to-top:active .label {
   opacity: 1;
   padding: 0 16px;
+}
+.GeospatialIntelligence #hero .stacked-mockups {
+  margin-bottom: 40px;
+}
+.GeospatialIntelligence #hero .device-mockup.macbook-pro {
+  position: relative;
+  z-index: 0;
+  margin-left: 10%;
+}
+.GeospatialIntelligence #hero .device-mockup.ipad {
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+  left: 10%;
+  bottom: -5px;
+}
+.GeospatialIntelligence #hero .device-mockup.iphone {
+  position: absolute;
+  z-index: 2;
+  width: 20%;
+  left: 5%;
+  bottom: -10px;
 }
 @media only screen and (min-width: 768px) {
   .passed-view .delay02 {

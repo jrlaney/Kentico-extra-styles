@@ -226,6 +226,44 @@ blockquote:after {
 .FRFR blockquote:after {
   content: "»";
 }
+.button.arrow.flagged-button {
+  font-weight: 600;
+  padding: 10px 2.5em 10px 0;
+  letter-spacing: 0.2em;
+}
+.button.arrow.flagged-button > .flag {
+  padding: 5px 10px;
+  margin-left: -10px;
+  margin-right: 10px;
+  background-color: #333333;
+  font-size: 12px;
+  line-height: 12px;
+  color: #FFFFFF;
+  letter-spacing: 0.2em;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.button.arrow.flagged-button > .flag.red {
+  background-color: #D9232E;
+}
+.button.arrow.flagged-button > .flag.orange {
+  background-color: #FF9100;
+}
+.button.arrow.flagged-button > .flag.green {
+  background-color: #68AA00;
+}
+.button.arrow.flagged-button > .flag.blue {
+  background-color: #4789A3;
+}
+.button.arrow.flagged-button > .flag.navy-blue {
+  background-color: #11566F;
+}
+.button.arrow.flagged-button > .flag.white {
+  background-color: #FFFFFF;
+  color: #333333;
+}
+.button.arrow.flagged-button > .flag.gray {
+  background-color: #999999;
+}
 #customer-story-slider {
   background-color: #FFFFFF;
   margin: 0 30px;
@@ -361,6 +399,11 @@ blockquote:after {
   -webkit-transform: translateY(-5px);
   transform: translateY(-5px);
   border-bottom-color: #D9232E;
+}
+.hypercard-img {
+  border-radius: 10%/6%;
+  border: 1px solid #CCCCCC;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
 }
 .device-mockup.ipad-portrait {
   background-image: url('/getmedia/4e02c74e-0c01-42cd-b475-3d46f625fa8d/ipad-portrait_black');
@@ -669,31 +712,6 @@ blockquote:after {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-.button.new-item-button {
-  padding: 7px 40px 7px 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 600;
-  text-transform: none;
-  letter-spacing: normal;
-}
-.button.new-item-button:hover {
-  background-color: rgba(234, 43, 55, 0.7);
-}
-.button.new-item-button > span {
-  padding: 5px 10px;
-  -webkit-transform: translate(-5px, calc(-1em - 5px));
-  transform: translate(-5px, calc(-1em - 5px));
-  margin-right: 10px;
-  background-color: #D9232E;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-  font-size: 12px;
-  line-height: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-}
 .NewHomepage #page-hero .text-content-row {
   position: relative;
   padding-top: 80px;
@@ -776,6 +794,35 @@ blockquote:after {
   margin-top: 11.5%;
   margin-left: -57%;
 }
+@media only screen and (min-width: 1200px) {
+  .NewHomepage #page-hero .device-row .stacked-mockups {
+    padding-bottom: 30%;
+  }
+  .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-macbook-pro {
+    width: 75%;
+    margin-top: -38%;
+    margin-left: 30%;
+  }
+  .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-ipad-tilted {
+    width: 45%;
+    margin-top: -1%;
+    margin-left: 65%;
+  }
+  .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-iphone {
+    width: 38%;
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+  .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-screenshot-landscape {
+    width: 75%;
+    margin-left: -18%;
+  }
+  .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-screenshot-portrait {
+    width: 75%;
+    margin-top: 13%;
+    margin-left: -63%;
+  }
+}
 .NewHomepage #customer-logos {
   margin-top: -20px;
 }
@@ -789,47 +836,52 @@ blockquote:after {
     margin-top: -150px;
   }
 }
-.NewHomepage .m-icon {
+.NewHomepage #isometric-diagram {
   position: relative;
+  padding-bottom: 57%;
+}
+.NewHomepage #isometric-diagram .diagram-item {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.NewHomepage #isometric-diagram .m-icon {
+  opacity: 1!important;
   z-index: 2;
+  width: 21%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   -webkit-transform: rotateX(54.7deg) rotateZ(45deg);
   transform: rotateX(54.7deg) rotateZ(45deg);
 }
-.NewHomepage .m-icon .logo {
+.NewHomepage #isometric-diagram .m-icon .logo {
   max-width: 60%;
   max-height: 60%;
 }
-.NewHomepage #isometric-diagram {
+.NewHomepage #isometric-diagram .echo-dot-comp {
+  width: 27%;
+  border: 1px solid blue;
+}
+.NewHomepage #isometric-diagram .echo-dot-comp:before {
+  content: '';
+  padding-top: 120%;
+  display: block;
   position: relative;
-  padding-bottom: 63%;
 }
-.NewHomepage #isometric-diagram .middle-section {
-  position: absolute;
-  width: 24%;
-  bottom: -3%;
-  left: 18%;
-}
-.NewHomepage #isometric-diagram .left-section {
-  position: absolute;
-  left: 0;
-  bottom: 32%;
-  width: 25%;
-  padding-top: 35%;
-}
-.NewHomepage #isometric-diagram .left-section .speech-bubble {
+.NewHomepage #isometric-diagram .echo-dot-comp .speech-bubble {
   position: absolute;
   top: 0;
-  left: 30%;
+  left: 35%;
   height: 18%;
-  width: 75%;
+  width: 70%;
   -webkit-transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg);
   transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg);
   -webkit-transform-origin: top left;
   transform-origin: top left;
   background-color: #e5e5e5;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
-.NewHomepage #isometric-diagram .left-section .speech-bubble:before {
+.NewHomepage #isometric-diagram .echo-dot-comp .speech-bubble:before {
   content: '';
   position: absolute;
   border-bottom-color: #e5e5e5;
@@ -839,28 +891,25 @@ blockquote:after {
   border-top: 18px solid #e5e5e5;
   border-right: 18px solid transparent;
 }
-.NewHomepage #isometric-diagram .left-section .speech-bubble.blue {
+.NewHomepage #isometric-diagram .echo-dot-comp .speech-bubble.blue {
   background-color: #4789A3;
   top: 30%;
-  left: 47%;
+  left: 51%;
 }
-.NewHomepage #isometric-diagram .left-section .speech-bubble.blue:before {
+.NewHomepage #isometric-diagram .echo-dot-comp .speech-bubble.blue:before {
   border-top-color: #4789A3;
 }
-.NewHomepage #isometric-diagram .left-section .echo-dot {
+.NewHomepage #isometric-diagram .echo-dot-comp .device {
   position: absolute;
-  width: 65%;
+  width: 68%;
   bottom: 0;
   left: 0;
 }
-.NewHomepage #isometric-diagram .left-section .echo-dot .device {
-  position: relative;
-  z-index: 1;
-}
-.NewHomepage #isometric-diagram .left-section .echo-dot:after {
+.NewHomepage #isometric-diagram .echo-dot-comp .device:after {
   content: '';
   position: absolute;
   z-index: 0;
+  border: 1px solid red;
   height: 69%;
   width: 100%;
   bottom: 0;
@@ -869,20 +918,42 @@ blockquote:after {
   background-color: rgba(0, 0, 0, 0.3);
   box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
 }
-.NewHomepage #isometric-diagram .top-section {
-  position: absolute;
-  bottom: 14%;
-  right: 0;
-  width: 65%;
-  padding-top: 54%;
+.NewHomepage #isometric-diagram .card-device-comp {
+  width: 42%;
+  border: 1px solid blue;
 }
-.NewHomepage #isometric-diagram .top-section .isometric-ipad-tilted {
+.NewHomepage #isometric-diagram .card-device-comp .hypercard-img {
   position: absolute;
-  width: 35%;
+  z-index: 2;
+  top: 2%;
+  left: 28%;
+  width: 23%;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg);
+  transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+.NewHomepage #isometric-diagram .card-device-comp .hypercard-img:nth-child(2) {
+  top: 30%;
+  left: 50%;
+}
+.NewHomepage #isometric-diagram .card-device-comp .hypercard-img:nth-child(3) {
+  top: 10%;
+  left: 75%;
+}
+.NewHomepage #isometric-diagram .card-device-comp .device-mockup {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+.NewHomepage #isometric-diagram .isometric-ipad-tilted {
+  position: absolute;
+  width: 25%;
   top: 0;
-  left: 0;
+  left: 50%;
 }
-.NewHomepage #isometric-diagram .top-section .isometric-macbook-pro {
+.NewHomepage #isometric-diagram .isometric-macbook-pro {
   position: absolute;
   width: 60%;
   bottom: 0;
@@ -890,53 +961,103 @@ blockquote:after {
 }
 .NewHomepage #isometric-diagram .diagram-lines {
   position: absolute;
-  z-index: -1;
+  z-index: 2;
   -webkit-transform: rotateX(54.7deg) rotateZ(45deg);
   transform: rotateX(54.7deg) rotateZ(45deg);
   width: 50%;
-  bottom: -6%;
-  left: 23%;
-}
-.NewHomepage #isometric-diagram .diagram-lines .diagram-line {
-  position: absolute;
-  width: 3px;
-  height: 50%;
-  background-color: #CCCCCC;
-}
-.NewHomepage #isometric-diagram .diagram-lines .diagram-line.left-root {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  -webkit-transform-origin: bottom left;
-  transform-origin: bottom left;
-  bottom: 0;
-  left: 0;
-}
-.NewHomepage #isometric-diagram .diagram-lines .diagram-line.top-root {
-  -webkit-transform-origin: bottom left;
-  transform-origin: bottom left;
-  bottom: 0;
-  left: 50%;
-}
-.NewHomepage #isometric-diagram .diagram-lines .diagram-line.top-bar {
-  height: 100%;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  -webkit-transform-origin: bottom left;
-  transform-origin: bottom left;
-  bottom: 50%;
-  left: 0;
-}
-.NewHomepage #isometric-diagram .diagram-lines .diagram-line.top-fork-left {
-  top: 0;
-  left: 0;
-}
-.NewHomepage #isometric-diagram .diagram-lines .diagram-line.top-fork-right {
-  top: 0;
-  right: 0;
+  border: 1px solid green;
 }
 .NewHomepage #isometric-diagram .diagram-lines:before {
   content: '';
   display: block;
   width: 100%;
   padding-top: 100%;
+}
+.NewHomepage #isometric-diagram .diagram-lines .diagram-line {
+  position: absolute;
+  width: 6px;
+  height: 50%;
+  -webkit-transform-origin: bottom left;
+  transform-origin: bottom left;
+  background-color: #CCCCCC;
+  opacity: 0;
+}
+.NewHomepage #isometric-diagram .diagram-lines .diagram-line.left-root {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  bottom: 0;
+  left: 50%;
+}
+.NewHomepage #isometric-diagram .diagram-lines .diagram-line.top-root {
+  bottom: 0;
+  left: 50%;
+}
+.NewHomepage #isometric-diagram .diagram-lines .diagram-line.right-root {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  margin-bottom: 6px;
+  bottom: 0;
+  left: 50%;
+}
+.NewHomepage #isometric-diagram .diagram-lines .diagram-line.top-bar-left {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  bottom: 50%;
+  left: 50%;
+}
+.NewHomepage #isometric-diagram .diagram-lines .diagram-line.top-bar-right {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  margin-bottom: 6px;
+  bottom: 50%;
+  left: 50%;
+}
+.NewHomepage #isometric-diagram .diagram-lines .diagram-line.top-fork-left {
+  bottom: 50%;
+  left: 0;
+}
+.NewHomepage #isometric-diagram .diagram-lines .diagram-line.top-fork-center {
+  bottom: 50%;
+  left: 50%;
+}
+.NewHomepage #isometric-diagram .diagram-lines .diagram-line.top-fork-right {
+  bottom: 50%;
+  right: 0;
+}
+.NewHomepage #top-benefits.hyperintelligence .diagram-item.hyper {
+  opacity: 1;
+}
+.NewHomepage #top-benefits.hyperintelligence .diagram-lines {
+  bottom: -4.5%;
+  left: 23%;
+}
+.NewHomepage #top-benefits.hyperintelligence .diagram-lines .diagram-line.left-root,
+.NewHomepage #top-benefits.hyperintelligence .diagram-lines .diagram-line.top-root,
+.NewHomepage #top-benefits.hyperintelligence .diagram-lines .diagram-line.top-bar-left,
+.NewHomepage #top-benefits.hyperintelligence .diagram-lines .diagram-line.top-bar-right,
+.NewHomepage #top-benefits.hyperintelligence .diagram-lines .diagram-line.top-fork-left,
+.NewHomepage #top-benefits.hyperintelligence .diagram-lines .diagram-line.top-fork-right {
+  opacity: 1;
+}
+.NewHomepage #top-benefits.hyperintelligence .m-icon {
+  bottom: -3%;
+  left: 50%;
+}
+.NewHomepage #top-benefits.hyperintelligence .echo-device-comp {
+  top: 0;
+  left: 0;
+}
+.NewHomepage #top-benefits.hyperintelligence .isometric-ipad-tilted.hyper {
+  top: 0;
+  left: 30%;
+}
+.NewHomepage #top-benefits.hyperintelligence .card-device-comp {
+  top: 0;
+  right: 0;
+}
+.NewHomepage #top-benefits.mobility .diagram-item.mobile {
+  opacity: 1;
+}
+.NewHomepage #top-benefits.federated-analytics .diagram-item.federated {
+  opacity: 1;
 }

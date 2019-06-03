@@ -1,0 +1,118 @@
+//vertical diagram
+@vertical-diagram-spacing: 40px;
+.vertical-diagram {
+    font-family:@myriad-pro;
+    font-weight:400;
+    color:@dark-gray;
+
+    .item-row {
+        position:relative;
+
+        &:before {
+            content:'';
+            position:absolute;
+            height:@vertical-diagram-spacing;
+            width:1px;
+            left:50%;
+            margin-left:-2px;
+            border-left:5px dashed @iron;
+        }
+
+        .grid-item {
+            position:relative;
+            &:before, &:after {
+                content:'';
+                position:absolute;
+            }
+            &:before {
+                height:@vertical-diagram-spacing;
+                width:1px;
+                left:50%;
+                margin-left:-2px;
+                border-left:5px dashed @iron;
+            }
+            &:after {
+                height:1px;
+                width:100%;
+                left:0;
+                border-top:5px dashed @iron;
+            }
+            &:first-child:after {left:50%; width:50%;}
+            &:last-child:after {width:50%;}
+        }
+
+        &.row-above {
+            padding-bottom:@vertical-diagram-spacing;
+            &:before {bottom:0;}
+            .grid-item {
+                padding-bottom:@vertical-diagram-spacing;
+                &:before, &:after {bottom:0;}
+            }
+        }
+        &.row-below {
+            padding-top:@vertical-diagram-spacing;
+            &:before {top:0;}
+            .grid-item {
+                padding-top:@vertical-diagram-spacing;
+                &:before, &:after {top:0;}
+            }
+        }
+    }
+
+    .top-point-up {
+        position:relative;
+        margin-top:15px;
+        &:before {
+            content:'';
+            position:absolute; display:block;
+            bottom:100%; left:50%;
+            margin-left:-14px;
+            width:0; height:0;
+            border-left:15px solid transparent;
+            border-bottom:15px solid @red;
+            border-right:15px solid transparent;
+        }
+    }
+    .top-point-down {
+        position:relative;
+        margin-top:15px;
+        &:after {
+            content:'';
+            position:absolute; display:block;
+            bottom:100%; left:50%;
+            margin-left:-14px;
+            width:0; height:0;
+            border-left:15px solid transparent;
+            border-top:15px solid @red;
+            border-right:15px solid transparent;
+        }
+    }
+    .bottom-point-up {
+        position:relative;
+        margin-bottom:15px;
+        &:before {
+            content:'';
+            position:absolute; display:block;
+            top:100%; left:50%;
+            margin-left:-14px;
+            width:0; height:0;
+            border-left:15px solid transparent;
+            border-bottom:15px solid @red;
+            border-right:15px solid transparent;
+        }
+    }
+    .bottom-point-down {
+        position:relative;
+        margin-bottom:15px;
+        &:after {
+            content:'';
+            position:absolute; display:block;
+            top:100%; left:50%;
+            margin-left:-14px;
+            width:0; height:0;
+            border-left:15px solid transparent;
+            border-top:15px solid @red;
+            border-right:15px solid transparent;
+        }
+    }
+}//end diagram

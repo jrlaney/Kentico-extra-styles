@@ -603,9 +603,6 @@ section.below-card {
   -webkit-transform: translateY(-5px) !important;
   transform: translateY(-5px) !important;
 }
-#multi-control-slider-nav .grid-item > * {
-  width: 100%;
-}
 #multi-control-slider-nav .grid-item.component-orange.slick-current .icon,
 #multi-control-slider-nav .grid-item.component-orange:hover .icon {
   color: #FF9100;
@@ -1628,6 +1625,8 @@ section.below-card {
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
 }
 .AlwaysOnCampaign #featured-resources {
+  position: relative;
+  z-index: 3;
   padding-top: 0;
   margin-top: -250px;
 }

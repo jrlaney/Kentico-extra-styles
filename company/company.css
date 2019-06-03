@@ -297,9 +297,6 @@
   -webkit-transform: translateY(-5px) !important;
   transform: translateY(-5px) !important;
 }
-#multi-control-slider-nav .grid-item > * {
-  width: 100%;
-}
 #multi-control-slider-nav .grid-item.component-orange.slick-current .icon,
 #multi-control-slider-nav .grid-item.component-orange:hover .icon {
   color: #FF9100;

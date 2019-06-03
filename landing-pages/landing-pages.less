@@ -12,7 +12,7 @@ a.text-white, a.text-white:hover {
 .button-group .button {max-width:100%;}
 
 //new components
-@import '../_new-components/anchor-link-grid.less'; 
+@import '../_new-components/anchor-link-grid.less';
 @import '../_new-components/background-color-filters.less';
 @import '../_new-components/blockquote.less';
 @import '../_new-components/content-between-sections.less';
@@ -528,6 +528,7 @@ a.text-white, a.text-white:hover {
     }
     //overlap the featured resources with the hero
     #featured-resources {
+        position:relative; z-index:3;
         padding-top:0;
         margin-top:-@hero-over-card-overlap;
         .card {box-shadow:1px 1px 5px fade(@pure-black, 30%);}
