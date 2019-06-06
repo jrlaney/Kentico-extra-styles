@@ -132,14 +132,14 @@
 }
 .company-details .company-description {
   font-size: 15px;
-  line-height: 1.4;
+  line-height: 1.43;
   font-weight: 300;
   letter-spacing: .01em;
 }
 .company-details .company-category-header {
   margin-bottom: 10px;
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.43;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -340,7 +340,7 @@
   padding-left: 2.5em;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 21px;
-  line-height: 1.4;
+  line-height: 1.43;
   font-weight: 300;
 }
 .CompanyStory.Page blockquote:before {

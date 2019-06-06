@@ -459,7 +459,7 @@ section.overlap-section-below + section {
 }
 #explore .section-name {
   font-size: 18px;
-  line-height: 1.4;
+  line-height: 1.43;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -476,7 +476,7 @@ section.overlap-section-below + section {
 }
 #explore .label {
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.43;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
