@@ -1,41 +1,3 @@
-.button.arrow.flagged-button {
-  font-weight: 600;
-  padding: 10px 2.5em 10px 0;
-  letter-spacing: 0.2em;
-}
-.button.arrow.flagged-button > .flag {
-  padding: 5px 10px;
-  margin-left: -10px;
-  margin-right: 10px;
-  background-color: #333333;
-  font-size: 12px;
-  line-height: 12px;
-  color: #FFFFFF;
-  letter-spacing: 0.2em;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-.button.arrow.flagged-button > .flag.red {
-  background-color: #D9232E;
-}
-.button.arrow.flagged-button > .flag.orange {
-  background-color: #FF9100;
-}
-.button.arrow.flagged-button > .flag.green {
-  background-color: #68AA00;
-}
-.button.arrow.flagged-button > .flag.blue {
-  background-color: #4789A3;
-}
-.button.arrow.flagged-button > .flag.navy-blue {
-  background-color: #11566F;
-}
-.button.arrow.flagged-button > .flag.white {
-  background-color: #FFFFFF;
-  color: #333333;
-}
-.button.arrow.flagged-button > .flag.gray {
-  background-color: #999999;
-}
 .filter-red {
   background-color: #D9232E;
   -webkit-background-blend-mode: multiply;
@@ -185,6 +147,44 @@
   background: -moz-linear-gradient(top, rgba(17, 86, 111, 0) 10%, rgba(17, 86, 111, 0.85) 100%);
   background: -webkit-linear-gradient(top, rgba(17, 86, 111, 0) 10%, rgba(17, 86, 111, 0.85) 100%);
   background: linear-gradient(to bottom, rgba(17, 86, 111, 0) 10%, rgba(17, 86, 111, 0.85) 100%);
+}
+.button.arrow.flagged-button {
+  font-weight: 600;
+  padding: 10px 2.5em 10px 0;
+  letter-spacing: 0.2em;
+}
+.button.arrow.flagged-button > .flag {
+  padding: 5px 10px;
+  margin-left: -10px;
+  margin-right: 10px;
+  background-color: #333333;
+  font-size: 12px;
+  line-height: 12px;
+  color: #FFFFFF;
+  letter-spacing: 0.2em;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.button.arrow.flagged-button > .flag.red {
+  background-color: #D9232E;
+}
+.button.arrow.flagged-button > .flag.orange {
+  background-color: #FF9100;
+}
+.button.arrow.flagged-button > .flag.green {
+  background-color: #68AA00;
+}
+.button.arrow.flagged-button > .flag.blue {
+  background-color: #4789A3;
+}
+.button.arrow.flagged-button > .flag.navy-blue {
+  background-color: #11566F;
+}
+.button.arrow.flagged-button > .flag.white {
+  background-color: #FFFFFF;
+  color: #333333;
+}
+.button.arrow.flagged-button > .flag.gray {
+  background-color: #999999;
 }
 .hypercard-img {
   border-radius: 10%/6%;

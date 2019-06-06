@@ -33,25 +33,37 @@ main, section {overflow:hidden;}
     li.slick-active button:after {background-color:@red; height:10px;}
 }
 
-//component styles
-@import '../_new-components/anchor-link-grid.less';
-@import '../_new-components/background-color-filters.less';
-@import '../_new-components/blockquote.less';
-@import '../_new-components/button-with-flag.less';
-@import '../_new-components/center-mode-image-slider.less';
-@import '../_new-components/customer-success-logo-video-slider.less';
-@import '../_new-components/content-between-sections.less';
-@import '../_new-components/form-hero-spacing-fix.less';
-@import '../_new-components/hypercard-graphic.less';
-@import '../_new-components/multi-item-slider-nav.less';
-@import '../_new-components/new-device-mockups.less';
-@import '../_new-components/number-group.less';
-@import '../_new-components/offpage-image.less';
-@import '../_new-components/popup-window-multiple-sizes.less';
-@import '../_new-components/related-items-reset.less';
-@import '../_new-components/triangle-group.less';
-@import '../_new-components/vertical-diagram.less';
-@import '../_new-components/vertical-panelstack.less';
+
+
+//new components
+@import '../_new-components/components-and-expansions/anchor-link-grid.less';
+@import '../_new-components/components-and-expansions/background-color-filters.less';
+@import '../_new-components/components-and-expansions/blockquote.less';
+@import '../_new-components/components-and-expansions/button-with-flag.less';
+@import '../_new-components/components-and-expansions/device-mockups-new-plus-options.less';
+@import '../_new-components/components-and-expansions/hypercard-graphic.less';
+@import '../_new-components/components-and-expansions/number-group.less';
+@import '../_new-components/components-and-expansions/offpage-image.less';
+@import '../_new-components/components-and-expansions/popup-window-multiple-sizes.less';
+// @import '../_new-components/components-and-expansions/stacked-icons.less';
+@import '../_new-components/components-and-expansions/triangle-group.less';
+@import '../_new-components/components-and-expansions/vertical-diagram.less';
+// @import '../_new-components/components-and-expansions/video-embedded-reveal.less';
+
+//resets and fixes
+@import '../_new-components/resets-and-fixes/form-spacing.less';
+@import '../_new-components/resets-and-fixes/related-items.less';
+@import '../_new-components/resets-and-fixes/vertical-panelstack.less';
+
+//new sections and heros
+@import '../_new-components/sections-and-heros/hero-banner-single-angle.less';
+@import '../_new-components/sections-and-heros/section-content-between.less';
+
+//new sliders
+@import '../_new-components/sliders/center-mode-image.less';
+@import '../_new-components/sliders/customer-success-logo-video.less';
+@import '../_new-components/sliders/multi-item-nav.less';
+// @import '../_new-components/sliders/photos.less';
 
 
 
@@ -137,51 +149,7 @@ main, section {overflow:hidden;}
     }
 }
 
-//single angled hero for feature pages
-.single-angle-cross-hero {
-    position:relative;
-    padding:60px 0 20px!important;
-    @media @medium {padding:80px 0 40px!important;}
-    overflow:visible!important;
-    > .flex-row {
-        position:relative;
-        z-index:1;
-        color:@white;
-    }
-    .inline-flex {
-        padding:15px;
-        background-color:fade(@pure-black, 30%);
-        box-shadow:1px 1px 5px fade(@pure-black, 20%);
-    }
-    .text-uppercase {letter-spacing:0.2em;}
-    &:before {
-        content:'';
-        position:absolute; z-index:0;
-        top:0; left:0;
-        width:100%; height:100%;
-        background-color:@black;
 
-		-webkit-clip-path: polygon(0 100%, 300% 0, 0 0)!important;
-		clip-path: polygon(0 100%, 300% 0, 0 0)!important;
-        @media @medium {
-            height:105%;
-    		-webkit-clip-path: polygon(0 100%, 170% 0, 0 0)!important;
-    		clip-path: polygon(0 100%, 170% 0, 0 0)!important;
-        }
-    }
-	.InternetExplorer & {
-		&:before {
-			height:75%;
-			.transform(skew(0, -10deg));
-		}
-	}
-
-    .page-red &:before {.angled-gradient(@light-red, @dark-red, @red);}
-    .page-orange &:before {.angled-gradient(@light-orange, @dark-orange, @orange);}
-    .page-green &:before {.angled-gradient(@light-green, @dark-green, @green);}
-    .page-blue &:before {.angled-gradient(@light-blue, @dark-blue, @blue);}
-    .page-navy-blue &:before {.angled-gradient(@light-navy-blue, @dark-navy-blue, @navy-blue);}
-}
 
 
 //fancy angled banner for products child pages
@@ -1628,46 +1596,7 @@ main, section {overflow:hidden;}
 @cursor-movement-bezier: cubic-bezier(.11,.49,.92,1.07);
 
 //ANIMATION LIBRARY
-@media @medium {
-    .passed-view .delay02 {.animation-delay(0.2s~"!important");}
-    .passed-view .delay04 {.animation-delay(0.4s~"!important");}
-    .passed-view .delay06 {.animation-delay(0.6s~"!important");}
-    .passed-view .delay08 {.animation-delay(0.8s~"!important");}
-    .passed-view .delay10 {.animation-delay(1.0s~"!important");}
-    .passed-view .delay12 {.animation-delay(1.2s~"!important");}
-    .passed-view .delay14 {.animation-delay(1.4s~"!important");}
-    .passed-view .delay16 {.animation-delay(1.6s~"!important");}
-    .passed-view .delay18 {.animation-delay(1.8s~"!important");}
-    .passed-view .delay20 {.animation-delay(2.0s~"!important");}
-
-    .slide-up, .slide-left, .slide-right, .slide-down, .fade-in {opacity:0;}
-    .passed-view .slide-up {.animation(fade-slide-up 0.3s ease-out 0s normal forwards);}
-    .passed-view .slide-left {.animation(fade-slide-left 0.3s ease-out 0s normal forwards);}
-    .passed-view .slide-right {.animation(fade-slide-right 0.3s ease-out 0s normal forwards);}
-    .passed-view .slide-down {.animation(fade-slide-down 0.3s ease-out 0s normal forwards);}
-    .passed-view .fade-in {.animation(fade-in 0.3s ease-out 0s normal forwards);}
-}
-
-.keyframes(fade-in;{
-    0%{opacity:0;}
-    100%{opacity:1;}
-});
-.keyframes(fade-slide-up;{
-    0%{opacity:0; .translateY(10%);}
-    100%{opacity:1; .translateY(0);}
-});
-.keyframes(fade-slide-down;{
-    0%{opacity:0; .translateY(-10%);}
-    100%{opacity:1; .translateY(0);}
-});
-.keyframes(fade-slide-left;{
-    0%{opacity:0; .translateX(10%);}
-    100%{opacity:1; .translateX(0);}
-});
-.keyframes(fade-slide-right;{
-    0%{opacity:0; .translateX(-10%);}
-    100%{opacity:1; .translateX(0);}
-});
+@import '../_new-components/components-and-expansions/keyframes-basic-animate-on-scroll.less';
 
 //for the lock animation on the EMM page
 .keyframes(app-lock-animation;{

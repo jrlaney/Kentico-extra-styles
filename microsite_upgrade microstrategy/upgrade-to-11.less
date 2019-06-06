@@ -2,64 +2,34 @@
 
 main, section {overflow:hidden;}
 
-//component styles
-@import '../_new-components/background-color-filters.less';
-@import '../_new-components/offpage-image.less';
-@import '../_new-components/stacked-icons.less';
-@import '../_new-components/triangle-group.less';
-@import '../_new-components/vertical-panelstack.less';
-@import '../_new-components/number-group.less';
+//new components
+@import '../_new-components/components-and-expansions/anchor-link-grid.less';
+@import '../_new-components/components-and-expansions/background-color-filters.less';
+// @import '../_new-components/components-and-expansions/blockquote.less';
+// @import '../_new-components/components-and-expansions/button-with-flag.less';
+// @import '../_new-components/components-and-expansions/hypercard-graphic.less';
+@import '../_new-components/components-and-expansions/number-group.less';
+@import '../_new-components/components-and-expansions/offpage-image.less';
+// @import '../_new-components/components-and-expansions/popup-window-multiple-sizes.less';
+@import '../_new-components/components-and-expansions/stacked-icons.less';
+@import '../_new-components/components-and-expansions/triangle-group.less';
+// @import '../_new-components/components-and-expansions/video-embedded-reveal.less';
 
-//for a grid of links with colored icons and left border hover state
-.icon-link-grid {
-    .grid-item {
-        .display(flex);
-        .align-items(center);
-        position:relative; overflow:hidden;
-        padding-top:20px; padding-bottom:20px;
+//resets and fixes
+@import '../_new-components/resets-and-fixes/vertical-panelstack.less';
 
-        font-family:@myriad-pro;
-        font-size:14px; line-height:1.2em;
-        .uppercase;
-        font-weight:400;
+//new sections and heros
+// @import '../_new-components/sections-and-heros/hero-banner-single-angle.less';
+// @import '../_new-components/sections-and-heros/section-content-between.less';
 
-        .icon {margin-right:10px;}
-        &:before {
-            content:'';
-            display:block; position:absolute;
-            top:0; left:0;
-            width:3px; height:100%;
-            .translateX(-3px);
-            .single-transition;
-        }
-        &.red:before {background-color:@red;}
-        &.orange:before {background-color:@orange;}
-        &.green:before {background-color:@green;}
-        &.blue:before {background-color:@blue;}
-        &.navy-blue:before {background-color:@navy-blue;}
-        &:hover {
-            padding-left:20px; padding-right:10px;
-            &:before {.translateX(0);}
-            &.red .icon {color:@red;}
-            &.orange .icon {color:@orange;}
-            &.green .icon {color:@green;}
-            &.blue .icon {color:@blue;}
-            &.navy-blue .icon {color:@navy-blue;}
-        }
-    }
-    &.light .grid-item {
-        color:@black;
-        border:1px solid fade(@pure-black, 10%);
-        border-width:0 1px 1px 0;
-        &:hover {background-color:fade(@white, 50%);}
-    }
-    &.dark .grid-item {
-        color:@white;
-        border:1px solid fade(@white, 10%);
-        border-width:0 1px 1px 0;
-        &:hover {background-color:fade(@pure-black, 40%);}
-    }
-}
+//new sliders
+// @import '../_new-components/sliders/multi-item-nav.less';
+// @import '../_new-components/sliders/customer-success-logo-video.less';
+// @import '../_new-components/sliders/photos.less';
+
+
+
+
 
 //add the ability to have a no-background image resource thumbnail (used in hero banners)
 .resource-thumbnail.transparent:after {background-color:transparent;}
@@ -301,4 +271,4 @@ main, section {overflow:hidden;}
 
 
 //KEYFRAMES FOR EVERYTHING
-@import '../_new-components/basic-animate-on-scroll-keyframes.less';
+@import '../_new-components/components-and-expansions/keyframes-basic-animate-on-scroll.less';

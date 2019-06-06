@@ -13,7 +13,7 @@
         .align-items(stretch);
         background-color:@light-gray;
 
-        .panel-nav, .panel-content {
+        .panel-nav {
             .flex(0, 1, auto);
             .display(flex);
             .flex-direction(column);
@@ -86,23 +86,23 @@
     }// end panelstack vertical
 
     .panelstack.vertical-panelstack {
-        &.red {
+        &.component-red, &.red {
             .panel-nav .panel-nav-elem.active-panel>a {background-color:@red}
             .panel-nav .panel-nav-elem.active-panel>a:before {border-left-color:@red;}
         }
-        &.orange {
+        &.component-orange, &.orange {
             .panel-nav .panel-nav-elem.active-panel>a {background-color:@orange}
             .panel-nav .panel-nav-elem.active-panel>a:before {border-left-color:@orange;}
         }
-        &.green {
+        &.component-green, &.green {
             .panel-nav .panel-nav-elem.active-panel>a {background-color:@green}
             .panel-nav .panel-nav-elem.active-panel>a:before {border-left-color:@green;}
         }
-        &.blue {
+        &.component-blue, &.blue {
             .panel-nav .panel-nav-elem.active-panel>a {background-color:@blue}
             .panel-nav .panel-nav-elem.active-panel>a:before {border-left-color:@blue;}
         }
-        &.navy {
+        &.component-navy-blue, &.navy-blue {
             .panel-nav .panel-nav-elem.active-panel>a {background-color:@navy-blue}
             .panel-nav .panel-nav-elem.active-panel>a:before {border-left-color:@navy-blue;}
         }

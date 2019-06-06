@@ -1,0 +1,30 @@
+//Photo slider with dots and arrows
+#photo-slider {
+    .slick-list {
+        width:~"calc(100% - 40px)";
+        margin:0 auto;
+        background-color:@black;
+        box-shadow:1px 1px 5px fade(@pure-black, 30%);
+    }
+    .slick-dots {
+        margin-top:20px;
+        li {
+            padding:0;
+            button {
+                border-radius:0;
+                width:auto; height:auto;
+                padding:5px;
+                background-color:transparent;
+                &:after {
+                    content:'';
+                    display:block;
+                    margin:0 auto;
+                    background-color:@iron;
+                    width:10px; height:10px;
+                    .single-transition;
+                }
+            }
+        }
+        li.slick-active button:after {background-color:@red;}
+    }
+}

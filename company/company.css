@@ -1,3 +1,49 @@
+.offpage-image {
+  width: 150%;
+  max-width: none;
+}
+.offpage-image.left {
+  float: right;
+}
+.offpage-image.right {
+  float: left;
+}
+.offpage-image.centered {
+  margin-left: -25%;
+}
+@media only screen and (min-width: 980px) {
+  .offpage-image.left {
+    margin-right: 5%;
+  }
+  .offpage-image.left.pc-laptop,
+  .offpage-image.left.macbook-pro,
+  .offpage-image.left.macbook-air {
+    margin-right: -10%;
+  }
+  .offpage-image.right {
+    margin-left: 5%;
+  }
+  .offpage-image.right.pc-laptop,
+  .offpage-image.right.macbook-pro,
+  .offpage-image.right.macbook-air {
+    margin-left: -10%;
+  }
+}
+.stacked-mockups {
+  position: relative;
+}
+.z-1 {
+  position: relative;
+  z-index: 1;
+}
+.z-2 {
+  position: relative;
+  z-index: 2;
+}
+.z-3 {
+  position: relative;
+  z-index: 3;
+}
 .triangle-group {
   position: relative;
   padding: 5px 0 5px 20px;
@@ -55,52 +101,6 @@
 .triangle-group.black:before {
   border-right-color: #333333;
 }
-.offpage-image {
-  width: 150%;
-  max-width: none;
-}
-.offpage-image.left {
-  float: right;
-}
-.offpage-image.right {
-  float: left;
-}
-.offpage-image.centered {
-  margin-left: -25%;
-}
-@media only screen and (min-width: 980px) {
-  .offpage-image.left {
-    margin-right: 5%;
-  }
-  .offpage-image.left.pc-laptop,
-  .offpage-image.left.macbook-pro,
-  .offpage-image.left.macbook-air {
-    margin-right: -10%;
-  }
-  .offpage-image.right {
-    margin-left: 5%;
-  }
-  .offpage-image.right.pc-laptop,
-  .offpage-image.right.macbook-pro,
-  .offpage-image.right.macbook-air {
-    margin-left: -10%;
-  }
-}
-.stacked-mockups {
-  position: relative;
-}
-.z-1 {
-  position: relative;
-  z-index: 1;
-}
-.z-2 {
-  position: relative;
-  z-index: 2;
-}
-.z-3 {
-  position: relative;
-  z-index: 3;
-}
 @media only screen and (max-width: 767px) {
   .panelstack.vertical-panelstack .panel-nav .panel-nav-elem > a .icon {
     display: none;
@@ -124,8 +124,7 @@
     align-items: stretch;
     background-color: #f2f2f2;
   }
-  .panelstack.vertical-panelstack .panel-nav,
-  .panelstack.vertical-panelstack .panel-content {
+  .panelstack.vertical-panelstack .panel-nav {
     -webkit-flex: 0 1 auto;
     flex: 0 1 auto;
     max-width: none;
@@ -222,34 +221,44 @@
     -webkit-transition: opacity 2.5s ease-out 1s;
     transition: opacity 2.5s ease-out 1s;
   }
+  .panelstack.vertical-panelstack.component-red .panel-nav .panel-nav-elem.active-panel > a,
   .panelstack.vertical-panelstack.red .panel-nav .panel-nav-elem.active-panel > a {
     background-color: #D9232E;
   }
+  .panelstack.vertical-panelstack.component-red .panel-nav .panel-nav-elem.active-panel > a:before,
   .panelstack.vertical-panelstack.red .panel-nav .panel-nav-elem.active-panel > a:before {
     border-left-color: #D9232E;
   }
+  .panelstack.vertical-panelstack.component-orange .panel-nav .panel-nav-elem.active-panel > a,
   .panelstack.vertical-panelstack.orange .panel-nav .panel-nav-elem.active-panel > a {
     background-color: #FF9100;
   }
+  .panelstack.vertical-panelstack.component-orange .panel-nav .panel-nav-elem.active-panel > a:before,
   .panelstack.vertical-panelstack.orange .panel-nav .panel-nav-elem.active-panel > a:before {
     border-left-color: #FF9100;
   }
+  .panelstack.vertical-panelstack.component-green .panel-nav .panel-nav-elem.active-panel > a,
   .panelstack.vertical-panelstack.green .panel-nav .panel-nav-elem.active-panel > a {
     background-color: #68AA00;
   }
+  .panelstack.vertical-panelstack.component-green .panel-nav .panel-nav-elem.active-panel > a:before,
   .panelstack.vertical-panelstack.green .panel-nav .panel-nav-elem.active-panel > a:before {
     border-left-color: #68AA00;
   }
+  .panelstack.vertical-panelstack.component-blue .panel-nav .panel-nav-elem.active-panel > a,
   .panelstack.vertical-panelstack.blue .panel-nav .panel-nav-elem.active-panel > a {
     background-color: #4789A3;
   }
+  .panelstack.vertical-panelstack.component-blue .panel-nav .panel-nav-elem.active-panel > a:before,
   .panelstack.vertical-panelstack.blue .panel-nav .panel-nav-elem.active-panel > a:before {
     border-left-color: #4789A3;
   }
-  .panelstack.vertical-panelstack.navy .panel-nav .panel-nav-elem.active-panel > a {
+  .panelstack.vertical-panelstack.component-navy-blue .panel-nav .panel-nav-elem.active-panel > a,
+  .panelstack.vertical-panelstack.navy-blue .panel-nav .panel-nav-elem.active-panel > a {
     background-color: #11566F;
   }
-  .panelstack.vertical-panelstack.navy .panel-nav .panel-nav-elem.active-panel > a:before {
+  .panelstack.vertical-panelstack.component-navy-blue .panel-nav .panel-nav-elem.active-panel > a:before,
+  .panelstack.vertical-panelstack.navy-blue .panel-nav .panel-nav-elem.active-panel > a:before {
     border-left-color: #11566F;
   }
 }
@@ -261,6 +270,22 @@
     width: 70%;
     padding: 30px 50px;
   }
+}
+.related-items {
+  background-color: #FFFFFF;
+}
+.related-items .flex-row.start {
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.related-items h2.text-normal.text-dark-gray {
+  font-size: 1.57rem;
+  line-height: 1.4;
+  text-align: center;
+  color: #333333;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 #multi-control-slider-nav .grid-item {
   -webkit-flex-direction: column;
@@ -359,22 +384,6 @@
 #multi-control-slider-nav.nav-above .grid-item.component-navy-blue.slick-current:before,
 #multi-control-slider-nav.nav-above .grid-item.component-navy-blue:hover:before {
   border-top-color: #11566F;
-}
-.related-items {
-  background-color: #FFFFFF;
-}
-.related-items .flex-row.start {
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-.related-items h2.text-normal.text-dark-gray {
-  font-size: 1.57rem;
-  line-height: 1.4;
-  text-align: center;
-  color: #333333;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 .icon-instagram::before {
   content: "\eaf1";

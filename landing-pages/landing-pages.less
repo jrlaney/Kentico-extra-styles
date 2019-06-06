@@ -12,23 +12,45 @@ a.text-white, a.text-white:hover {
 .button-group .button {max-width:100%;}
 
 //new components
-@import '../_new-components/anchor-link-grid.less';
-@import '../_new-components/background-color-filters.less';
-@import '../_new-components/blockquote.less';
-@import '../_new-components/content-between-sections.less';
-@import '../_new-components/customer-success-logo-video-slider.less';
-@import '../_new-components/multi-item-slider-nav.less';
-@import '../_new-components/number-group.less';
-@import '../_new-components/popup-window-multiple-sizes.less';
-@import '../_new-components/offpage-image.less';
-@import '../_new-components/vertical-panelstack.less';
-@import '../_new-components/triangle-group.less';
+@import '../_new-components/components-and-expansions/anchor-link-grid.less';
+@import '../_new-components/components-and-expansions/background-color-filters.less';
+@import '../_new-components/components-and-expansions/blockquote.less';
+@import '../_new-components/components-and-expansions/number-group.less';
+@import '../_new-components/components-and-expansions/offpage-image.less';
+@import '../_new-components/components-and-expansions/popup-window-multiple-sizes.less';
+@import '../_new-components/components-and-expansions/triangle-group.less';
+@import '../_new-components/components-and-expansions/video-embedded-reveal.less';
+
+//resets and fixes
+@import '../_new-components/resets-and-fixes/vertical-panelstack.less';
+
+//new sections and heros
+@import '../_new-components/sections-and-heros/hero-banner-single-angle.less';
+@import '../_new-components/sections-and-heros/section-content-between.less';
+
+//new sliders
+@import '../_new-components/sliders/multi-item-nav.less';
+@import '../_new-components/sliders/customer-success-logo-video.less';
+@import '../_new-components/sliders/photos.less';
 
 
 
 
 
 //unique components
+
+#demo-slider.screen {
+    overflow:visible;
+    .slick-arrow {
+        .translate(-75%, -50%);
+        &.slick-next {
+            .translate(75%, -50%);
+        }
+    }
+}
+
+
+
 
 //some overrides for the form to fill the space better
 #page-hero.form-fix {
@@ -139,38 +161,38 @@ a.text-white, a.text-white:hover {
 
 
 //REVEAL EMBEDDED VIDEO AFTER CLICK COMPONENT
-.media-wrapper {
-    position:relative;
-    padding-bottom:200px;
-    height:0;
-    margin-top:30px;
-    .single-transition(0.3s, ease-out, all, 0s);
-
-    .resource-thumbnail {
-        position:absolute; z-index:1;
-        height:100%; width:100%;
-        top:0; left:0;
-        cursor:pointer;
-        .single-transition(0.3s, ease-out, all, 0s);
-        &:before {margin-top:-15px;}
-        .cta {margin-top:50px; opacity:1;}
-        &:after {display:none;}
-    }
-    .video-wrapper {
-        position:absolute; z-index:0;
-        width:100%;
-        top:50%; left:50%;
-        .translate(-50%, -40%);
-        opacity:0;
-        .single-transition(0.3s, ease-out, all, 0.3s);
-    }
-
-    &.video-playing {
-        padding-bottom:56.25%;
-        .resource-thumbnail {opacity:0; .translateY(-50px);}
-        .video-wrapper {opacity:1; z-index:2; .translate(-50%, -50%);}
-    }
-}
+// .media-wrapper {
+//     position:relative;
+//     padding-bottom:200px;
+//     height:0;
+//     margin-top:30px;
+//     .single-transition(0.3s, ease-out, all, 0s);
+//
+//     .resource-thumbnail {
+//         position:absolute; z-index:1;
+//         height:100%; width:100%;
+//         top:0; left:0;
+//         cursor:pointer;
+//         .single-transition(0.3s, ease-out, all, 0s);
+//         &:before {margin-top:-15px;}
+//         .cta {margin-top:50px; opacity:1;}
+//         &:after {display:none;}
+//     }
+//     .video-wrapper {
+//         position:absolute; z-index:0;
+//         width:100%;
+//         top:50%; left:50%;
+//         .translate(-50%, -40%);
+//         opacity:0;
+//         .single-transition(0.3s, ease-out, all, 0.3s);
+//     }
+//
+//     &.video-playing {
+//         padding-bottom:56.25%;
+//         .resource-thumbnail {opacity:0; .translateY(-50px);}
+//         .video-wrapper {opacity:1; z-index:2; .translate(-50%, -50%);}
+//     }
+// }
 
 
 
@@ -211,31 +233,6 @@ a.text-white, a.text-white:hover {
         }
     }
 }
-
-
-
-
-
-//CARD BETWEEN ROWS
-// .in-between-card.flex-row,
-// [class*="flex-grid"].in-between-card {
-//     position:relative; z-index:5;
-//     .card {
-//         position:relative; z-index:5;
-//         background-color:@white;
-//         padding:10px;
-//         .box-shadow(1px 1px 5px fade(@pure-black, 50%));
-//         margin-bottom:30px;
-//     }
-//     @media @medium {
-// 		margin-top:-150px; margin-bottom:60px;
-//         .card {padding:15px;}
-//     }
-// }
-// section.above-card {
-//     @media @medium {padding-bottom:150px; position:relative; z-index:4;}
-// }
-// section.below-card {overflow:visible!important;}
 
 
 
@@ -321,41 +318,6 @@ a.text-white, a.text-white:hover {
         }
     }
     .loop-sizes(length(@size-classes));
-}
-
-
-
-
-
-//Photo slider with dots and arrows
-#photo-slider {
-    .slick-list {
-        width:~"calc(100% - 40px)";
-        margin:0 auto;
-        background-color:@black;
-        box-shadow:1px 1px 5px fade(@pure-black, 30%);
-    }
-    .slick-dots {
-        margin-top:20px;
-        li {
-            padding:0;
-            button {
-                border-radius:0;
-                width:auto; height:auto;
-                padding:5px;
-                background-color:transparent;
-                &:after {
-                    content:'';
-                    display:block;
-                    margin:0 auto;
-                    background-color:@iron;
-                    width:10px; height:10px;
-                    .single-transition;
-                }
-            }
-        }
-        li.slick-active button:after {background-color:@red;}
-    }
 }
 
 
@@ -1000,7 +962,7 @@ a.text-white, a.text-white:hover {
 
 
     //KEYFRAMES FOR EVERYTHING
-    @import '../_new-components/basic-animate-on-scroll-keyframes.less';
+    @import '../_new-components/components-and-expansions/keyframes-basic-animate-on-scroll.less';
 
     @scroll-bounce-bezier: cubic-bezier(.21,-0.16,.8,1.22);
 
