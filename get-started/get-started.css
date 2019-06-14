@@ -283,6 +283,28 @@ blockquote:after {
   width: 100%;
   height: 100%;
 }
+.device-mockup.isometric-mac-monitor {
+  background-image: url('/getmedia/6ac11f50-cb40-4541-a903-2cb459c2e9c3/mac-monitor-isometric_white');
+}
+.device-mockup.isometric-mac-monitor:before {
+  padding-top: 141.28521127%;
+}
+.device-mockup.isometric-mac-monitor .screen {
+  position: absolute;
+  height: 57.2%;
+  top: 3.8%;
+  left: 3.5%;
+  right: -34.5%;
+  -webkit-transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg);
+  transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg);
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  border-color: #CCCCCC;
+}
+.device-mockup.isometric-mac-monitor .screen .screenshot {
+  width: 100%;
+  height: 100%;
+}
 .device-mockup.isometric-ipad-tilted {
   background-image: url('/getmedia/5a7c04e0-9652-4148-b828-558bd46759a8/ipad-isometric-tilted_white');
 }
@@ -303,6 +325,29 @@ blockquote:after {
   border-radius: 1%/2%;
 }
 .device-mockup.isometric-ipad-tilted .screen .screenshot {
+  width: 100%;
+  height: 100%;
+}
+.device-mockup.isometric-ipad-portrait {
+  background-image: url('/getmedia/fee58bf2-a876-4cab-983f-7d5ea200a6bd/ipad-portrait-isometric_white');
+}
+.device-mockup.isometric-ipad-portrait:before {
+  padding-top: 59.41666667%;
+}
+.device-mockup.isometric-ipad-portrait .screen {
+  position: absolute;
+  height: 132%;
+  top: 3%;
+  left: 58.3%;
+  right: -12.9%;
+  -webkit-transform: rotateX(54.7deg) rotateZ(45deg);
+  transform: rotateX(54.7deg) rotateZ(45deg);
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  border-color: #CCCCCC;
+  border-radius: 2%/1%;
+}
+.device-mockup.isometric-ipad-portrait .screen .screenshot {
   width: 100%;
   height: 100%;
 }

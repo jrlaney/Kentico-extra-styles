@@ -51,19 +51,6 @@
 				height:100%; width:100vw;
 				top:0; left:50%;
 				.translateX(-50%);
-				&:after {
-					//display:none;
-					background-color:fade(@pure-black, 20%);
-				}
-				&:before {
-					content:'';
-					position:absolute; z-index:1;
-					bottom:0; left:0;
-					height:100%; width:100%;
-					background: -moz-linear-gradient(top, fade(@red, 0%) 10%, fade(@red, 85%) 100%);
-					background: -webkit-linear-gradient(top, fade(@red, 0%) 10%, fade(@red, 85%) 100%);
-					background: linear-gradient(to bottom, fade(@red, 0%) 10%, fade(@red, 85%) 100%);
-				}
 			}
 		}
 		.device-row {
@@ -141,7 +128,8 @@
 	#customer-logos {
 		margin-top:-20px;
 		@media @medium {margin-top:-120px;}
-		@media @large {margin-top:-150px;}
+		@media @large {margin-top:-160px;}
+		@media @xlarge {margin-top:-200px;}
 	}
 	#isometric-diagram {
 		position:relative;
@@ -149,8 +137,9 @@
 		//border:1px solid red;
 
 		.diagram-item {
-			position:absolute;
+			position:absolute; z-index:1;
 			opacity:0;
+			//border:1px solid blue;
 			.single-transition;
 		}
 
@@ -163,7 +152,7 @@
 		}
 		.echo-dot-comp {
 			width:27%;
-			border:1px solid blue;
+			//border:1px solid blue;
 			&:before {
 				content:'';
 				padding-top:120%;
@@ -212,7 +201,6 @@
 		}
 		.card-device-comp {
 			width:42%;
-			border:1px solid blue;
 			.hypercard-img {
 				position:absolute; z-index:2;
 				top:2%; left:28%;
@@ -234,17 +222,31 @@
 			width:25%;
 			top:0; left:50%;
 		}
+		.isometric-ipad-portrait {
+			position:absolute;
+			width:40%;
+			top:0; left:50%;
+		}
 		.isometric-macbook-pro {
 			position:absolute;
-			width:60%;
+			width:30%;
 			bottom:0; right:0;
 		}
+		.isometric-mac-monitor {
+			position:absolute;
+			width:22.6%;
+			top:0; left:0;
+		}
+		.isometric-iphone {
+			position:absolute;
+			width:25%;
+			top:0; left:0;
+		}
 		.diagram-lines {
-			position:absolute; z-index:2;
+			position:absolute; z-index:0;
 			.transform(rotateX(54.7deg) rotateZ(45deg));
-			width:50%;
-			//top:5%; left:5%;
-			border:1px solid green;
+			width:44%;
+			//border:1px solid green;
 			&:before {
 				content:'';
 				display:block;
@@ -292,9 +294,13 @@
 	}
 	#top-benefits {
 		&.hyperintelligence {
+			// #isometric-diagram {
+			// 	background:no-repeat center url('/getmedia/98b4b772-723e-48ca-899f-69df8cdb8d26/_hyper-guide') transparent;
+			// 	background-size:cover;
+			// }
 			.diagram-item.hyper {opacity:1;}
 			.diagram-lines {
-				bottom:-4.5%; left:23%;
+				bottom:-6.5%; left:24%;
 				.diagram-line {
 					&.left-root,
 					&.top-root,
@@ -304,16 +310,52 @@
 					&.top-fork-right {opacity:1;}
 				}
 			}
-			.m-icon {bottom:-3%; left:50%;}
-			.echo-device-comp            {top:0; left:0;}
-			.isometric-ipad-tilted.hyper {top:0; left:30%;}
-			.card-device-comp            {top:0; right:0;}
+			.m-icon                      {bottom:-3%; left:20%;}
+			.echo-dot-comp               {top:16%; left:0;}
+			.isometric-ipad-tilted.hyper {top:0; left:29%;}
+			.card-device-comp            {top:11%; right:0;}
 		}
 		&.mobility {
+			// #isometric-diagram {
+			// 	background:no-repeat center url('/getmedia/5875cac8-70c1-433b-8198-0c24881d877b/_mobile-guide') transparent;
+			// 	background-size:cover;
+			// }
 			.diagram-item.mobile {opacity:1;}
+			.diagram-lines {
+				width:50%;
+				bottom:-15.5%; left:11%;
+				.diagram-line {
+					&.top-root,
+					&.top-bar-left,
+					&.top-bar-right,
+					&.top-fork-left,
+					&.top-fork-center,
+					&.top-fork-right {opacity:1;}
+				}
+			}
+			.m-icon                       {bottom:-3%; left:13%;}
+			.isometric-ipad-tilted.mobile {top:0; left:16%;}
+			.isometric-iphone             {top:41.5%; left:41.5%;}
+			.isometric-ipad-portrait      {top:47.5%; left:53.5%;}
 		}
 		&.federated-analytics {
+			// #isometric-diagram {
+			// 	background:no-repeat center url('/getmedia/af72876d-97d8-4270-b5ea-cfe01a2828f4/_federated-guide') transparent;
+			// 	background-size:cover;
+			// }
 			.diagram-item.federated {opacity:1;}
+			.diagram-lines {
+				bottom:15%; left:43%;
+				.diagram-line {
+					&.top-root,
+					&.left-root,
+					&.right-root {opacity:1;}
+				}
+			}
+			.m-icon                                     {bottom:19%; left:39%;}
+			.isometric-macbook-pro.federated.left-side  {top:0; left:13%; bottom:auto; right:auto;}
+			.isometric-mac-monitor                      {top:0; left:51.5%;}
+			.isometric-macbook-pro.federated.right-side {bottom:0; right:12.5%;}
 		}
 	}
 }

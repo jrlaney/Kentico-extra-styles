@@ -1,17 +1,17 @@
 $(document).ready(function(){
     //script that flips through the 3 diagram classe son a timer
-    // var images = ['hyperintelligence', 'mobility', 'federated-analytics'];
-    // var classIndex = -1;
-    // function changeBackground() {
-    //     var diagram = $("#top-benefits");
-    //     if (classIndex >= 0) {
-    //         diagram.removeClass(images[classIndex]);
-    //     }
-    //     classIndex = (classIndex + 1) % images.length;
-    //     diagram.addClass(images[classIndex]);
-    // }
-    // changeBackground();
-    // setInterval(changeBackground, 6000);
+    var images = ['hyperintelligence', 'mobility', 'federated-analytics'];
+    var classIndex = -1;
+    function changeBackground() {
+        var diagram = $("#top-benefits");
+        if (classIndex >= 0) {
+            diagram.removeClass(images[classIndex]);
+        }
+        classIndex = (classIndex + 1) % images.length;
+        diagram.addClass(images[classIndex]);
+    }
+    changeBackground();
+    setInterval(changeBackground, 6000);
 
     //customer story slider script
     $('#customer-story-slider').slick({

@@ -636,18 +636,95 @@ main, section {overflow:hidden;}
                 margin-right:20%;
                 margin-bottom:20px;
             }
-            &.iphone {
+            &.iphone, &.iphone-x {
                 position:absolute; z-index:1;
                 width:30%;
                 right:10%; bottom:20px;
             }
             @media @medium {
                 &.ipad {width:150%;}
-                &.iphone {width:35%;}
+                &.iphone, &.iphone-x {width:35%;}
             }
         }
     }
 
+    #mobile-dossier {
+        .slick-arrow {
+            z-index:3;
+            left:-23.5%;
+            top:140%;
+            @media @medium {top:50%;}
+            &.slick-next {
+                left:auto;
+                right:-37%;
+            }
+            .icon-block {height:50px; width:50px;}
+        }
+        .slick-dots {
+            position:absolute;
+            width:136%;
+            top:107%;
+            left:-11.5%;
+        }
+        .device-mockup {
+            &.ipad {
+                position:relative; z-index:0;
+                z-index:0;
+                margin-right:10%;
+                .screen {overflow:visible;}
+            }
+            &.iphone-x {
+                position:absolute; z-index:1;
+                width:23%;
+                right:0; bottom:-3px;
+            }
+        }
+    }
+
+    #productivity-apps {
+        .slide {display:block; padding:0 40px;}
+    }
+
+    .custom-mobile-sdk-graphic {
+        margin-top:64px;
+        > div {.display(flex);}
+        .graphic-block {
+            .display(flex);
+            .flex-direction(column);
+            .flex-wrap(wrap);
+            .align-items(center);
+            .justify-content(center);
+            width:100%;
+
+            position:relative;
+            padding:30px 0px;
+            .graphic-label {
+                width:100%;
+                font-family:@myriad-pro;
+                font-size:14px; line-height:14px;
+                font-weight:600;
+                text-align:center;
+            }
+        }
+        .mstr-icon, .customapp-icon {
+            display:block; margin:0 auto;
+            width:70px;
+            @media @medium {max-width:80%; width:100px;}
+        }
+        .icon {
+            display:block;
+            position:absolute;
+            top:100%; left:50%;
+            margin-left:-6px;
+            .transform(rotate(0deg) translate(-15px, -50%));
+        }
+        .device-mockup {
+            width:80%;
+            @media @large {width:75%;}
+        }
+    }
+
+    //to be retired when translations are in for new carousel
     #mobile-apps-deploy {
         .device-mockup {
             &.macbook-pro {

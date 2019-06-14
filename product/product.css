@@ -416,7 +416,6 @@ blockquote:after {
 .button.arrow.flagged-button {
   font-weight: 600;
   padding: 10px 2.5em 10px 0;
-  letter-spacing: 0.2em;
 }
 .button.arrow.flagged-button > .flag {
   padding: 5px 10px;
@@ -426,7 +425,6 @@ blockquote:after {
   font-size: 12px;
   line-height: 12px;
   color: #FFFFFF;
-  letter-spacing: 0.2em;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .button.arrow.flagged-button > .flag.red {
@@ -505,6 +503,28 @@ blockquote:after {
   width: 100%;
   height: 100%;
 }
+.device-mockup.isometric-mac-monitor {
+  background-image: url('/getmedia/6ac11f50-cb40-4541-a903-2cb459c2e9c3/mac-monitor-isometric_white');
+}
+.device-mockup.isometric-mac-monitor:before {
+  padding-top: 141.28521127%;
+}
+.device-mockup.isometric-mac-monitor .screen {
+  position: absolute;
+  height: 57.2%;
+  top: 3.8%;
+  left: 3.5%;
+  right: -34.5%;
+  -webkit-transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg);
+  transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg);
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  border-color: #CCCCCC;
+}
+.device-mockup.isometric-mac-monitor .screen .screenshot {
+  width: 100%;
+  height: 100%;
+}
 .device-mockup.isometric-ipad-tilted {
   background-image: url('/getmedia/5a7c04e0-9652-4148-b828-558bd46759a8/ipad-isometric-tilted_white');
 }
@@ -525,6 +545,29 @@ blockquote:after {
   border-radius: 1%/2%;
 }
 .device-mockup.isometric-ipad-tilted .screen .screenshot {
+  width: 100%;
+  height: 100%;
+}
+.device-mockup.isometric-ipad-portrait {
+  background-image: url('/getmedia/fee58bf2-a876-4cab-983f-7d5ea200a6bd/ipad-portrait-isometric_white');
+}
+.device-mockup.isometric-ipad-portrait:before {
+  padding-top: 59.41666667%;
+}
+.device-mockup.isometric-ipad-portrait .screen {
+  position: absolute;
+  height: 132%;
+  top: 3%;
+  left: 58.3%;
+  right: -12.9%;
+  -webkit-transform: rotateX(54.7deg) rotateZ(45deg);
+  transform: rotateX(54.7deg) rotateZ(45deg);
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  border-color: #CCCCCC;
+  border-radius: 2%/1%;
+}
+.device-mockup.isometric-ipad-portrait .screen .screenshot {
   width: 100%;
   height: 100%;
 }
@@ -2535,7 +2578,8 @@ section.overlap-section-below + section {
   margin-right: 20%;
   margin-bottom: 20px;
 }
-.Mobile #introduction .device-mockup.iphone {
+.Mobile #introduction .device-mockup.iphone,
+.Mobile #introduction .device-mockup.iphone-x {
   position: absolute;
   z-index: 1;
   width: 30%;
@@ -2546,8 +2590,112 @@ section.overlap-section-below + section {
   .Mobile #introduction .device-mockup.ipad {
     width: 150%;
   }
-  .Mobile #introduction .device-mockup.iphone {
+  .Mobile #introduction .device-mockup.iphone,
+  .Mobile #introduction .device-mockup.iphone-x {
     width: 35%;
+  }
+}
+.Mobile #mobile-dossier .slick-arrow {
+  z-index: 3;
+  left: -23.5%;
+  top: 140%;
+}
+@media only screen and (min-width: 768px) {
+  .Mobile #mobile-dossier .slick-arrow {
+    top: 50%;
+  }
+}
+.Mobile #mobile-dossier .slick-arrow.slick-next {
+  left: auto;
+  right: -37%;
+}
+.Mobile #mobile-dossier .slick-arrow .icon-block {
+  height: 50px;
+  width: 50px;
+}
+.Mobile #mobile-dossier .slick-dots {
+  position: absolute;
+  width: 136%;
+  top: 107%;
+  left: -11.5%;
+}
+.Mobile #mobile-dossier .device-mockup.ipad {
+  position: relative;
+  z-index: 0;
+  margin-right: 10%;
+}
+.Mobile #mobile-dossier .device-mockup.ipad .screen {
+  overflow: visible;
+}
+.Mobile #mobile-dossier .device-mockup.iphone-x {
+  position: absolute;
+  z-index: 1;
+  width: 23%;
+  right: 0;
+  bottom: -3px;
+}
+.Mobile #productivity-apps .slide {
+  display: block;
+  padding: 0 40px;
+}
+.Mobile .custom-mobile-sdk-graphic {
+  margin-top: 64px;
+}
+.Mobile .custom-mobile-sdk-graphic > div {
+  display: -webkit-flex;
+  display: flex;
+}
+.Mobile .custom-mobile-sdk-graphic .graphic-block {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  padding: 30px 0px;
+}
+.Mobile .custom-mobile-sdk-graphic .graphic-block .graphic-label {
+  width: 100%;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+.Mobile .custom-mobile-sdk-graphic .mstr-icon,
+.Mobile .custom-mobile-sdk-graphic .customapp-icon {
+  display: block;
+  margin: 0 auto;
+  width: 70px;
+}
+@media only screen and (min-width: 768px) {
+  .Mobile .custom-mobile-sdk-graphic .mstr-icon,
+  .Mobile .custom-mobile-sdk-graphic .customapp-icon {
+    max-width: 80%;
+    width: 100px;
+  }
+}
+.Mobile .custom-mobile-sdk-graphic .icon {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  -webkit-transform: rotate(0deg) translate(-15px, -50%);
+  transform: rotate(0deg) translate(-15px, -50%);
+}
+.Mobile .custom-mobile-sdk-graphic .device-mockup {
+  width: 80%;
+}
+@media only screen and (min-width: 980px) {
+  .Mobile .custom-mobile-sdk-graphic .device-mockup {
+    width: 75%;
   }
 }
 .Mobile #mobile-apps-deploy .device-mockup.macbook-pro {
