@@ -49,6 +49,25 @@
             .screenshot {width:100%; height:100%;}
         }
     }
+    &.isometric-ipad {
+        background-image: url('/getmedia/c252b2cf-61e4-4977-ae88-1edba813db6f/ipad-isometric_white');
+        &:before {
+            .aspect-ratio(1198px, 711px);
+        }
+        .screen {
+            position: absolute;
+            height:92.5%;
+            top:2.7%;
+            left:41.7%;
+            right:-20.4%;
+            .transform(rotateX(54.7deg) rotateZ(45deg));
+            .transform-origin(top, left);
+            border-color:@iron;
+			border-radius: ~"1%/2%";
+
+            .screenshot {width:100%; height:100%;}
+        }
+    }
     &.isometric-ipad-tilted {
         background-image: url('/getmedia/5a7c04e0-9652-4148-b828-558bd46759a8/ipad-isometric-tilted_white');
         &:before {

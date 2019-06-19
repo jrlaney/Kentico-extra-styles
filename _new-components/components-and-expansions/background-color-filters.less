@@ -74,10 +74,6 @@
 
 .gradient-overlay {
     &-red {
-        &:after {
-            //display:none;
-            background-color:fade(@pure-black, 20%);
-        }
         &:before {
             content:'';
             position:absolute; z-index:1;
@@ -89,10 +85,6 @@
         }
     }
     &-orange {
-        &:after {
-            //display:none;
-            background-color:fade(@pure-black, 20%);
-        }
         &:before {
             content:'';
             position:absolute; z-index:1;
@@ -104,10 +96,6 @@
         }
     }
     &-green {
-        &:after {
-            //display:none;
-            background-color:fade(@pure-black, 20%);
-        }
         &:before {
             content:'';
             position:absolute; z-index:1;
@@ -119,10 +107,6 @@
         }
     }
     &-blue {
-        &:after {
-            //display:none;
-            background-color:fade(@pure-black, 20%);
-        }
         &:before {
             content:'';
             position:absolute; z-index:1;
@@ -134,10 +118,6 @@
         }
     }
     &-navy-blue {
-        &:after {
-            //display:none;
-            background-color:fade(@pure-black, 20%);
-        }
         &:before {
             content:'';
             position:absolute; z-index:1;
@@ -146,6 +126,17 @@
             background: -moz-linear-gradient(top, fade(@navy-blue, 0%) 10%, fade(@navy-blue, 85%) 100%);
             background: -webkit-linear-gradient(top, fade(@navy-blue, 0%) 10%, fade(@navy-blue, 85%) 100%);
             background: linear-gradient(to bottom, fade(@navy-blue, 0%) 10%, fade(@navy-blue, 85%) 100%);
+        }
+    }
+    &-black {
+        &:before {
+            content:'';
+            position:absolute; z-index:1;
+            bottom:0; left:0;
+            height:100%; width:100%;
+            background: -moz-linear-gradient(top, fade(@pure-black, 0%) 50%, fade(@pure-black, 50%) 100%);
+            background: -webkit-linear-gradient(top, fade(@pure-black, 0%) 50%, fade(@pure-black, 50%) 100%);
+            background: linear-gradient(to bottom, fade(@pure-black, 0%) 50%, fade(@pure-black, 50%) 100%);
         }
     }
 }

@@ -26,6 +26,14 @@ blockquote.text-small {
     line-height: 28px;
   }
 }
+blockquote.text-tiny {
+  font-size: 16px;
+  line-height: 24px;
+}
+blockquote.text-tiny:before,
+blockquote.text-tiny:after {
+  font-size: 200px;
+}
 blockquote > footer,
 blockquote > span {
   display: block;
