@@ -3444,6 +3444,144 @@ section.overlap-section-below + section {
   margin: 0;
   padding: 20px;
 }
+.WhatsNew #user-types {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .WhatsNew #page-hero {
+    padding-bottom: 120px;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  .WhatsNew #page-hero[data-selected="red"] {
+    background-color: #D9232E;
+  }
+  .WhatsNew #page-hero[data-selected="red"] .line {
+    background-color: #D9232E;
+  }
+  .WhatsNew #page-hero[data-selected="red"] .button:not(.white) {
+    background-color: #D9232E;
+  }
+  .WhatsNew #page-hero[data-selected="orange"] {
+    background-color: #FF9100;
+  }
+  .WhatsNew #page-hero[data-selected="orange"] .line {
+    background-color: #FF9100;
+  }
+  .WhatsNew #page-hero[data-selected="orange"] .button:not(.white) {
+    background-color: #FF9100;
+  }
+  .WhatsNew #page-hero[data-selected="blue"] {
+    background-color: #4789A3;
+  }
+  .WhatsNew #page-hero[data-selected="blue"] .line {
+    background-color: #4789A3;
+  }
+  .WhatsNew #page-hero[data-selected="blue"] .button:not(.white) {
+    background-color: #4789A3;
+  }
+  .WhatsNew #page-hero[data-selected="green"] {
+    background-color: #68AA00;
+  }
+  .WhatsNew #page-hero[data-selected="green"] .line {
+    background-color: #68AA00;
+  }
+  .WhatsNew #page-hero[data-selected="green"] .button:not(.white) {
+    background-color: #68AA00;
+  }
+  .WhatsNew #page-hero[data-selected="navy-blue"] {
+    background-color: #11566F;
+  }
+  .WhatsNew #page-hero[data-selected="navy-blue"] .line {
+    background-color: #11566F;
+  }
+  .WhatsNew #page-hero[data-selected="navy-blue"] .button:not(.white) {
+    background-color: #11566F;
+  }
+  .WhatsNew #user-types {
+    display: block;
+    padding-top: 0px;
+    margin-top: -80px;
+  }
+  .WhatsNew .path-panel {
+    overflow: hidden;
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+    -webkit-animation: fade-slide-down 0.3s ease-out 0.2s normal forwards;
+    animation: fade-slide-down 0.3s ease-out 0.2s normal forwards;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  .WhatsNew .path-panel.current {
+    -webkit-animation: fade-slide-up 0.3s ease-out 0.2s normal forwards;
+    animation: fade-slide-up 0.3s ease-out 0.2s normal forwards;
+    max-height: 5000px;
+    padding: 0 0 60px 0;
+  }
+  .WhatsNew .path-box {
+    min-height: 100%;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    background-color: #FFFFFF;
+    border: 3px solid #f2f2f2;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  .WhatsNew .path-box:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 0px;
+    width: 0px;
+    left: 50%;
+    top: calc(100% - 30px);
+    margin-left: -25px;
+    border: 25px solid transparent;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  .WhatsNew .path-box:hover {
+    cursor: pointer;
+  }
+  .WhatsNew .path-box.current:after {
+    opacity: 1;
+    top: 100%;
+  }
+  .WhatsNew .path-box.current.component-red {
+    border: 3px solid #D9232E;
+  }
+  .WhatsNew .path-box.current.component-red:after {
+    border-top-color: #D9232E;
+  }
+  .WhatsNew .path-box.current.component-orange {
+    border: 3px solid #FF9100;
+  }
+  .WhatsNew .path-box.current.component-orange:after {
+    border-top-color: #FF9100;
+  }
+  .WhatsNew .path-box.current.component-green {
+    border: 3px solid #68AA00;
+  }
+  .WhatsNew .path-box.current.component-green:after {
+    border-top-color: #68AA00;
+  }
+  .WhatsNew .path-box.current.component-blue {
+    border: 3px solid #4789A3;
+  }
+  .WhatsNew .path-box.current.component-blue:after {
+    border-top-color: #4789A3;
+  }
+  .WhatsNew .path-box.current.component-navy-blue {
+    border: 3px solid #11566F;
+  }
+  .WhatsNew .path-box.current.component-navy-blue:after {
+    border-top-color: #11566F;
+  }
+}
 @media only screen and (min-width: 768px) {
   .WhyMicrostrategy .hero-col {
     opacity: 0px;

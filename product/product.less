@@ -1351,6 +1351,106 @@ main, section {overflow:hidden;}
 
 
 
+//WHATS NEW PAGE
+.WhatsNew {
+    #user-types {display:none;}
+    @media @medium {
+        #page-hero {
+            padding-bottom:120px;
+            .single-transition();
+            &[data-selected="red"] {
+                background-color:@red;
+                .line {background-color:@red;}
+                .button:not(.white) {background-color:@red;}
+            }
+            &[data-selected="orange"] {
+                background-color:@orange;
+                .line {background-color:@orange;}
+                .button:not(.white) {background-color:@orange;}
+            }
+            &[data-selected="blue"] {
+                background-color:@blue;
+                .line {background-color:@blue;}
+                .button:not(.white) {background-color:@blue;}
+            }
+            &[data-selected="green"] {
+                background-color:@green;
+                .line {background-color:@green;}
+                .button:not(.white) {background-color:@green;}
+            }
+            &[data-selected="navy-blue"] {
+                background-color:@navy-blue;
+                .line {background-color:@navy-blue;}
+                .button:not(.white) {background-color:@navy-blue;}
+            }
+        }
+        #user-types {display:block; padding-top:0px; margin-top:-120 + 40px;}
+        //animation for the panel-switch in the hero
+        .path-panel {
+            overflow:hidden;
+            max-height:0;
+            padding:0;
+            opacity:0;
+            .animation(fade-slide-down 0.3s ease-out 0.2s normal forwards);
+            .single-transition;
+            &.current {.animation(fade-slide-up 0.3s ease-out 0.2s normal forwards); max-height:5000px; padding:0 0 60px 0;}
+        }
+        .path-box {
+            min-height:100%;
+            position:relative;
+            padding:20px;
+            text-align:center;
+            background-color:@white;
+            border:3px solid @light-gray;
+            box-shadow:3px 3px 7px fade(@pure-black, 30%);
+            .single-transition;
+
+            &:after {
+                content:'';
+                position:absolute; z-index:-1;
+                height:0px; width:0px;
+                left:50%; top:~"calc(100% - 30px)";
+                margin-left:-25px;
+                border:25px solid transparent;
+                opacity:0;
+                .single-transition;
+            }
+
+            &:hover {cursor:pointer;}
+
+            &.current {
+                &:after {
+                    opacity:1;
+                    top:100%;
+                }
+                &.component-red {
+                    border:3px solid @red;
+                    &:after {border-top-color:@red;}
+                }
+                &.component-orange {
+                    border:3px solid @orange;
+                    &:after {border-top-color:@orange;}
+                }
+                &.component-green {
+                    border:3px solid @green;
+                    &:after {border-top-color:@green;}
+                }
+                &.component-blue {
+                    border:3px solid @blue;
+                    &:after {border-top-color:@blue;}
+                }
+                &.component-navy-blue {
+                    border:3px solid @navy-blue;
+                    &:after {border-top-color:@navy-blue;}
+                }
+            }
+        }
+    }
+}
+
+
+
+
 
 // WHY MICROSTRATEGY PAGE
 .WhyMicrostrategy {
