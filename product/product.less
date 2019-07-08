@@ -68,6 +68,12 @@ main, section {overflow:hidden;}
 
 
 
+.hero-icon-lockup {
+    padding:15px;
+    background-color:fade(@pure-black, 30%);
+    box-shadow:1px 1px 5px fade(@pure-black, 20%);
+}
+
 
 .revolving-panels {
     display:inline-block;
@@ -1353,7 +1359,9 @@ main, section {overflow:hidden;}
 
 //WHATS NEW PAGE
 .WhatsNew {
+    //dont show the fancy selector in mobile view
     #user-types {display:none;}
+
     @media @medium {
         #page-hero {
             padding-bottom:120px;
@@ -1391,9 +1399,30 @@ main, section {overflow:hidden;}
             max-height:0;
             padding:0;
             opacity:0;
-            .animation(fade-slide-down 0.3s ease-out 0.2s normal forwards);
-            .single-transition;
-            &.current {.animation(fade-slide-up 0.3s ease-out 0.2s normal forwards); max-height:5000px; padding:0 0 60px 0;}
+            .translateY(30px);
+            .transition(~"
+                max-height 0.05s linear 0.2s,
+                padding 0.05s linear 0.2s,
+                opacity 0.2s linear 0s,
+                transform 0.2s linear 0s
+            ");
+            //.animation(fade-slide-down 0.3s ease-out 0.2s normal forwards);
+            //.single-transition;
+            .auto-slider-with-dots {opacity:0;}
+            &.current {
+                //.animation(fade-slide-up 0.3s ease-out 0.2s normal forwards);
+                max-height:5000px;
+                padding:0 0 60px 0;
+                opacity:1;
+                .translateY(0);
+                .transition(~"
+                    max-height 0.05s linear 0s,
+                    padding 0.05s linear 0s,
+                    opacity 0.2s linear 0.2s,
+                    transform 0.2s linear 0.2s
+                ");
+                .auto-slider-with-dots {opacity:1;}
+            }
         }
         .path-box {
             min-height:100%;
@@ -1442,6 +1471,39 @@ main, section {overflow:hidden;}
                 &.component-navy-blue {
                     border:3px solid @navy-blue;
                     &:after {border-top-color:@navy-blue;}
+                }
+            }
+        }
+    }
+
+    .caption {
+        position:relative;
+        z-index:2;
+        display:block;
+        background-color:@white;
+        padding:20px 15px 0 15px;
+        text-align:center;
+
+        font-family:@myriad-pro;
+        color:@dark-gray;
+        font-weight:400;
+        font-size:16px; line-height:18px;
+    }
+    .auto-slider-with-dots .slide {display:block;}
+    #business-users .slide {
+        .device-mockup {z-index:1;}
+        .stacked-mockups {
+            z-index:1;
+             width:100%;
+             padding-top: 57.66666667%;
+             overflow:hidden;
+            .google-pixel {
+                position:absolute;
+                width:40%;
+                top:0; left:15%;
+                &:last-child {
+                    position:absolute;
+                    left:45%; top:10%;
                 }
             }
         }
