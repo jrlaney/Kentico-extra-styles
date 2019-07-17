@@ -385,6 +385,11 @@
 #multi-control-slider-nav.nav-above .grid-item.component-navy-blue:hover:before {
   border-top-color: #11566F;
 }
+#multi-control-slider .slick-slide {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  min-height: 20px;
+}
 .icon-instagram::before {
   content: "\eaf1";
 }

@@ -1147,6 +1147,11 @@ section.overlap-section-below.small-overlap + section {
 #multi-control-slider-nav.nav-above .grid-item.component-navy-blue:hover:before {
   border-top-color: #11566F;
 }
+#multi-control-slider .slick-slide {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  min-height: 20px;
+}
 #customer-story-slider {
   background-color: #FFFFFF;
   margin: 0 30px;
@@ -1314,6 +1319,19 @@ section.overlap-section-below.small-overlap + section {
 }
 #photo-slider .slick-dots li.slick-active button:after {
   background-color: #D9232E;
+}
+.caption {
+  position: relative;
+  z-index: 2;
+  display: block;
+  background-color: #FFFFFF;
+  padding: 20px 15px 0 15px;
+  text-align: center;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #777777;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
 }
 #demo-slider.screen {
   overflow: visible;

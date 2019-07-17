@@ -1,0 +1,100 @@
+﻿@gridder-nav-size: 80px;
+
+.gridder {
+
+    &.cards {
+        //display: block;
+
+        .gridder-list {
+            width: 100%;
+
+            .card {
+                cursor: pointer;
+            }
+        }
+
+        &.hasSelectedItem .gridder-list .card {
+            opacity: .5;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    .gridder-content {
+        display: none;
+    }
+
+    .gridder-show {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        float: left;
+        padding: @column-gutter / 2;
+    }
+
+    .gridder-padding {
+        position: relative;
+        padding: @column-gutter / 2;
+
+        @media @medium {
+            padding: @column-gutter;
+        }
+
+        background-color: @white;
+        border: @thin-border @gray;
+    }
+
+    .gridder-navigation {
+        .display(inline-flex);
+        float: right;
+
+        a {
+            .flex(1, 1, auto);
+            display: block;
+            position: relative;
+            padding: @gridder-nav-size / 4;
+            .single-transition;
+
+            &.gridder-close {
+                .shape-x(@gridder-nav-size / 4, @dark-gray);
+                .order(1);
+            }
+
+            &.gridder-nav {
+
+                &:before {
+                    content: "\e901";
+                    display: block;
+                    .position(absolute, 50%, 50%);
+                    .translate(-50%, -50%);
+                    font-family: @icon-font-name;
+                    .pretty-icon;
+                    font-size: 16px;
+                    line-height: 1;
+                    color: @dark-gray;
+                }
+
+                &.prev:before {
+                    .transform(translate(-50%, -50%) rotate(180deg));
+                    .transform-origin(center, center);
+                }
+
+                &.disabled {
+                    opacity: .25;
+                    cursor: default;
+                }
+            }
+
+            &.gridder-nav:not(.disabled):hover:before {
+                color: @black;
+            }
+
+            &.gridder-close:hover:before,
+            &.gridder-close:hover:after {
+                background-color: @black;
+            }
+        }
+    }
+}

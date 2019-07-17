@@ -1801,6 +1801,11 @@ section.overlap-section-below.small-overlap + section {
 #multi-control-slider-nav.nav-above .grid-item.component-navy-blue:hover:before {
   border-top-color: #11566F;
 }
+#multi-control-slider .slick-slide {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  min-height: 20px;
+}
 .hero-icon-lockup {
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.3);
@@ -2678,6 +2683,11 @@ section.overlap-section-below.small-overlap + section {
   .Mobile #introduction .device-mockup.iphone,
   .Mobile #introduction .device-mockup.iphone-x {
     width: 35%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .Mobile #mobile-dossier .stacked-mockups {
+    margin-bottom: 150px!important;
   }
 }
 .Mobile #mobile-dossier .slick-arrow {

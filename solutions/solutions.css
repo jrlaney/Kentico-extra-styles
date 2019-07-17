@@ -1,5 +1,85 @@
-.gridder.cards {
+blockquote {
+  display: inline-block;
+  position: relative;
+  padding: 20px 40px;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+}
+blockquote:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 768px) {
+  blockquote {
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
+blockquote.text-small {
+  font-size: 20px;
+  line-height: 24px;
+}
+@media only screen and (min-width: 768px) {
+  blockquote.text-small {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+blockquote.text-tiny {
+  font-size: 16px;
+  line-height: 24px;
+}
+blockquote.text-tiny:before,
+blockquote.text-tiny:after {
+  font-size: 200px;
+}
+blockquote > footer,
+blockquote > span {
   display: block;
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+@media only screen and (min-width: 768px) {
+  blockquote > footer,
+  blockquote > span {
+    font-size: 18px;
+  }
+}
+blockquote:before,
+blockquote:after {
+  content: '“';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 56px;
+  width: 68px;
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 250px;
+  line-height: 0.8em;
+  opacity: .2;
+}
+blockquote:after {
+  content: '”';
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 0;
+}
+.FRFR blockquote:before,
+.FRFR blockquote:after {
+  content: "«";
+  font-size: 120px;
+  line-height: 0.3em;
+  width: 60px;
+}
+.FRFR blockquote:after {
+  content: "»";
 }
 .gridder.cards .gridder-list {
   width: 100%;
@@ -119,89 +199,6 @@
 .gridder .gridder-navigation a.gridder-close:hover:before,
 .gridder .gridder-navigation a.gridder-close:hover:after {
   background-color: #333333;
-}
-blockquote {
-  display: inline-block;
-  position: relative;
-  padding: 20px 40px;
-  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
-}
-blockquote:last-child {
-  margin-bottom: 0;
-}
-@media only screen and (min-width: 768px) {
-  blockquote {
-    font-size: 24px;
-    line-height: 33px;
-  }
-}
-blockquote.text-small {
-  font-size: 20px;
-  line-height: 24px;
-}
-@media only screen and (min-width: 768px) {
-  blockquote.text-small {
-    font-size: 22px;
-    line-height: 28px;
-  }
-}
-blockquote.text-tiny {
-  font-size: 16px;
-  line-height: 24px;
-}
-blockquote.text-tiny:before,
-blockquote.text-tiny:after {
-  font-size: 200px;
-}
-blockquote > footer,
-blockquote > span {
-  display: block;
-  margin-top: 30px;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-@media only screen and (min-width: 768px) {
-  blockquote > footer,
-  blockquote > span {
-    font-size: 18px;
-  }
-}
-blockquote:before,
-blockquote:after {
-  content: '“';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 56px;
-  width: 68px;
-  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 250px;
-  line-height: 0.8em;
-  opacity: .2;
-}
-blockquote:after {
-  content: '”';
-  top: auto;
-  left: auto;
-  bottom: 0;
-  right: 0;
-}
-.FRFR blockquote:before,
-.FRFR blockquote:after {
-  content: "«";
-  font-size: 120px;
-  line-height: 0.3em;
-  width: 60px;
-}
-.FRFR blockquote:after {
-  content: "»";
 }
 .in-between-card.flex-row {
   position: relative;
