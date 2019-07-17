@@ -1,145 +1,165 @@
 @import '../settings.less';
 
 #section-navigation-sticky-wrapper {
-  max-width: @row-width;
-  margin: 0 auto;
+    max-width: @row-width;
+    margin: 0 auto;
 }
 
 #press-center {
 
-  #hero.background-image { background-image: url('/getmedia/cd722862-2349-4c56-85f1-1ce7feb2314c/press'); }
+    #hero.background-image { background-image: url('/getmedia/cd722862-2349-4c56-85f1-1ce7feb2314c/press'); }
 
-  .company-name {
-    display: block;
-    max-width: 65%;
-    text-align: center;
-    .margin-x(auto);
-  }
+    .company-name {
+        display: block;
+        max-width: 65%;
+        text-align: center;
+        .margin-x(auto);
+    }
 
-  .company-logo {
-    max-width: 75%;
-    max-height: 125px;
-  }
+    .company-logo {
+        max-width: 75%;
+        max-height: 125px;
+    }
 
-  .publication {
-    font-family: @myriad-pro;
-  }
+    .publication {
+        font-family: @myriad-pro;
+    }
 
-  .publication-title {
-    font-weight: @normal;
-  }
+    .publication-title {
+        font-weight: @normal;
+    }
 
-  .publication-byline {
-    .uppercase;
-  }
+    .publication-byline {
+        .uppercase;
+    }
 
-  .publication-organization {
-    font-weight: @normal;
-  }
+    .publication-organization {
+        font-weight: @normal;
+    }
 }
 
 .Publication.Single {
 
-  #page-hero {
-    padding: 40px 0;
-    @media @medium { padding: 50px 0; }
-    @media @large { padding: 60px 0; }
+    #page-hero {
+        padding: 40px 0;
+        @media @medium { padding: 50px 0; }
+        @media @large { padding: 60px 0; }
 
-    .date {
-      font-size: 14px;
-      .uppercase;
-      color: @light-gray;
-    }
-  }
-
-  article.publication {
-
-    section {
-      .padding-y(@base-spacing);
+        .date {
+            font-size: 14px;
+            .uppercase;
+            color: @light-gray;
+        }
     }
 
-    p, li {
-      font-family: @myriad-pro;
-      font-size: 18px;
-      line-height: 1.6;
-      font-weight: @light;
-      letter-spacing: 0.01em;
-    }
+    article.publication {
 
-    a {
-      font-weight: @normal;
-    }
-
-    strong {
-      font-weight: @bold;
-    }
-
-    em {
-      font-weight: @light;
-    }
-
-    .source {
-      font-weight: @bold;
-      a { font-weight: @bold; }
-    }
-
-    #bwbodyimg {
-      margin-bottom: @base-spacing;
-
-      p {
-        font-size: 14px;
-        font-weight: @normal;
-      }
-    }
-
-    table {
-      table-layout: auto;
-
-      tbody tr:nth-child(even) {
-        background-color: @light-gray;
-      }
-
-      tbody tr:first-child td:first-child {
-        width: 25%;
-      }
-
-      td, td p {
-        font-family: @lucida-grande;
-        font-size: 14px;
-        line-height: 1.4;
-      }
-
-      td strong {
-        font-size: 16px;
-      }
-
-      td {
-        padding: @base-spacing / 2;
-      }
-
-      td:empty {
-        width: 1%;
-        white-space: nowrap;
-      }
-
-      td.bw {
-
-        &vertalignm {
-          vertical-align: middle;
+        section {
+            .padding-y(@base-spacing);
         }
 
-        &vertalignb {
-          vertical-align: bottom;
+        p, li {
+            font-family: @myriad-pro;
+            font-size: 18px;
+            line-height: 1.6;
+            font-weight: @light;
+            letter-spacing: 0.01em;
         }
 
-        &alignc {
-          text-align: center;
+        a {
+            font-weight: @normal;
         }
 
-        &alignr {
-          text-align: right;
+        strong {
+            font-weight: @bold;
         }
-      }
+
+        em {
+            font-weight: @light;
+        }
+
+        .source {
+            font-weight: @bold;
+            a { font-weight: @bold; }
+        }
+
+        #bwbodyimg {
+            margin-bottom: @base-spacing;
+
+            p {
+                font-size: 14px;
+                font-weight: @normal;
+            }
+        }
+
+        table {
+            border:none;
+            table-layout: auto;
+            border-collapse: separate;
+            font-family: @lucida-grande;
+            font-size: 14px;
+            line-height: 1.4;
+
+            // tbody tr:nth-child(even) {
+            //     background-color: @light-gray;
+            // }
+
+            // tbody tr td.bwvertalignt {
+            //     width: 75%;
+            // }
+
+            td, td p {
+                font-family: @lucida-grande;
+                font-size: 14px;
+                line-height: 1.4;
+                margin:0; padding:0;
+            }
+
+            // strong {
+            //     font-size: 16px;
+            // }
+
+            td {
+                padding:2px 5px;
+            }
+
+            td:empty {
+                margin:0; padding:0;
+            }
+
+            .bwalignc {text-align:center;}
+            .bwalignl {text-align:left;}
+            .bwalignr  {text-align:right;}
+            .bwvertalignt {vertical-align:top;}
+            .bwvertalignm {vertical-align:middle;}
+            .bwvertalignb {vertical-align:bottom;}
+            .bwtxtalign {text-align:left;vertical-align:bottom;}
+            .bwnowrap {white-space:nowrap;}
+            /*borders*/
+            .bwsinglebottom {border-bottom:solid @black 1px;}
+            .bwdoublebottom {border-bottom:double @black 3px;}
+            .bwsingletop {border-top:solid @black 1px;}
+            .bwdoubletop {border-top:double @black 3px;}
+            .bwtopsingle{ border-top: solid @black 1.0pt}
+            .bwtopdouble{ border-top: double @black 2.25pt}
+            .bwbottomsingle{ border-bottom: solid @black 1.0pt}
+            .bwbottomdouble{ border-bottom: double @black 2.25pt; }
+            .bwleftsingle{ border-left: solid @black 1.0pt}
+            .bwleftdouble{ border-left: double @black 2.25pt}
+            .bwrightsingle{ border-right: solid @black 1.0pt}
+            .bwrightdouble{ border-right: double @black 2.25pt}
+            /*table cell paddings*/
+            .bwpadl0 {padding-left:0.0px !important;}
+            .bwpadl1 {padding-left:5.0px !important;}
+            .bwpadl2 {padding-left:10.0px !important;}
+            .bwpadl4 {padding-left: 20.0px !important;}
+            .bwpadr0 {padding-right:0.0px !important;}
+            .bwpadr1 {padding-right:5.0px !important;}
+            .bwpadr2 {padding-right:10.0px !important;}
+            .bwpadt1 {padding-top:10.0px;}
+            .bwpadb1 {padding-bottom:2.0px;}
+            .bwpadb2 {padding-bottom:3.0px;}
+            .bwpadb3 {padding-bottom:4.0px;}
+        }
     }
-  }
 }
