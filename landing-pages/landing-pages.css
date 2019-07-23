@@ -891,6 +891,70 @@ p:empty {
   background: -webkit-linear-gradient(45deg, #0d6b8d, #104456);
   background: linear-gradient(45deg, #0d6b8d, #104456);
 }
+#page-hero.overlap-section-below,
+#hero.overlap-section-below,
+section.overlap-section-below {
+  padding-bottom: 200px;
+}
+#page-hero.overlap-section-below + section,
+#hero.overlap-section-below + section,
+section.overlap-section-below + section {
+  position: relative;
+  z-index: 5;
+  margin-top: -200px;
+}
+#page-hero.overlap-section-below.small-overlap,
+#hero.overlap-section-below.small-overlap,
+section.overlap-section-below.small-overlap {
+  padding-bottom: 100px;
+}
+#page-hero.overlap-section-below.small-overlap + section,
+#hero.overlap-section-below.small-overlap + section,
+section.overlap-section-below.small-overlap + section {
+  margin-top: -100px;
+}
+#page-hero.overlap-section-below.medium-overlap,
+#hero.overlap-section-below.medium-overlap,
+section.overlap-section-below.medium-overlap {
+  padding-bottom: 150px;
+}
+#page-hero.overlap-section-below.medium-overlap + section,
+#hero.overlap-section-below.medium-overlap + section,
+section.overlap-section-below.medium-overlap + section {
+  margin-top: -150px;
+}
+@media only screen and (min-width: 768px) {
+  #page-hero.overlap-section-below,
+  #hero.overlap-section-below,
+  section.overlap-section-below {
+    padding-bottom: 300px;
+  }
+  #page-hero.overlap-section-below + section,
+  #hero.overlap-section-below + section,
+  section.overlap-section-below + section {
+    margin-top: -300px;
+  }
+  #page-hero.overlap-section-below.small-overlap,
+  #hero.overlap-section-below.small-overlap,
+  section.overlap-section-below.small-overlap {
+    padding-bottom: 150px;
+  }
+  #page-hero.overlap-section-below.small-overlap + section,
+  #hero.overlap-section-below.small-overlap + section,
+  section.overlap-section-below.small-overlap + section {
+    margin-top: -150px;
+  }
+  #page-hero.overlap-section-below.medium-overlap,
+  #hero.overlap-section-below.medium-overlap,
+  section.overlap-section-below.medium-overlap {
+    padding-bottom: 200px;
+  }
+  #page-hero.overlap-section-below.medium-overlap + section,
+  #hero.overlap-section-below.medium-overlap + section,
+  section.overlap-section-below.medium-overlap + section {
+    margin-top: -200px;
+  }
+}
 .in-between-card.flex-row {
   position: relative;
   z-index: 5;
@@ -921,50 +985,6 @@ p:empty {
 }
 section.below-card {
   overflow: visible!important;
-}
-#page-hero.overlap-section-below,
-#hero.overlap-section-below,
-section.overlap-section-below {
-  padding-bottom: 200px;
-}
-#page-hero.overlap-section-below + section,
-#hero.overlap-section-below + section,
-section.overlap-section-below + section {
-  position: relative;
-  z-index: 5;
-  margin-top: -200px;
-}
-#page-hero.overlap-section-below.small-overlap,
-#hero.overlap-section-below.small-overlap,
-section.overlap-section-below.small-overlap {
-  padding-bottom: 100px;
-}
-#page-hero.overlap-section-below.small-overlap + section,
-#hero.overlap-section-below.small-overlap + section,
-section.overlap-section-below.small-overlap + section {
-  margin-top: -100px;
-}
-@media only screen and (min-width: 768px) {
-  #page-hero.overlap-section-below,
-  #hero.overlap-section-below,
-  section.overlap-section-below {
-    padding-bottom: 300px;
-  }
-  #page-hero.overlap-section-below + section,
-  #hero.overlap-section-below + section,
-  section.overlap-section-below + section {
-    margin-top: -300px;
-  }
-  #page-hero.overlap-section-below.small-overlap,
-  #hero.overlap-section-below.small-overlap,
-  section.overlap-section-below.small-overlap {
-    padding-bottom: 150px;
-  }
-  #page-hero.overlap-section-below.small-overlap + section,
-  #hero.overlap-section-below.small-overlap + section,
-  section.overlap-section-below.small-overlap + section {
-    margin-top: -150px;
-  }
 }
 @media only screen and (min-width: 768px) {
   .center-mode-slider {

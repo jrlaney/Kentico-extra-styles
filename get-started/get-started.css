@@ -529,6 +529,31 @@ blockquote:after {
   -webkit-transform-origin: top left;
   transform-origin: top left;
 }
+.device-mockup.shadow.isometric-mac-monitor {
+  background-image: none;
+}
+.device-mockup.shadow.isometric-mac-monitor:before {
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-image: url('/getmedia/6ac11f50-cb40-4541-a903-2cb459c2e9c3/mac-monitor-isometric_white');
+}
+.device-mockup.shadow.isometric-mac-monitor:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
+  height: 23%;
+  width: 34%;
+  bottom: 3%;
+  right: 48%;
+  border-radius: 12%;
+  -webkit-transform: rotateX(58.7deg) rotateZ(48deg);
+  transform: rotateX(58.7deg) rotateZ(48deg);
+  -webkit-transform-origin: bottom right;
+  transform-origin: bottom right;
+}
 .device-mockup.shadow.isometric-ipad-tilted {
   background-image: none;
 }
@@ -553,6 +578,31 @@ blockquote:after {
   transform: rotateX(54.7deg) rotateZ(45deg);
   -webkit-transform-origin: top left;
   transform-origin: top left;
+}
+.device-mockup.shadow.isometric-ipad-portrait {
+  background-image: none;
+}
+.device-mockup.shadow.isometric-ipad-portrait:before {
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-image: url('/getmedia/fee58bf2-a876-4cab-983f-7d5ea200a6bd/ipad-portrait-isometric_white');
+}
+.device-mockup.shadow.isometric-ipad-portrait:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
+  height: 145%;
+  top: -1%;
+  left: 58.3%;
+  right: -20.9%;
+  -webkit-transform: rotateX(54.7deg) rotateZ(45deg);
+  transform: rotateX(54.7deg) rotateZ(45deg);
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  border-radius: 9%/8%;
 }
 .device-mockup.shadow.isometric-iphone {
   background-image: none;

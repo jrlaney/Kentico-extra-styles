@@ -1,4 +1,38 @@
-//CARD BETWEEN ROWS
+//NEWER VERSION
+#page-hero, #hero, section {
+    &.overlap-section-below {
+        padding-bottom:200px;
+        & + section {
+            position:relative; z-index:5;
+            margin-top:-200px;
+        }
+        &.small-overlap {
+            padding-bottom:100px;
+            & + section {margin-top:-100px;}
+        }
+        &.medium-overlap {
+            padding-bottom:150px;
+            & + section {margin-top:-150px;}
+        }
+    }
+    @media @medium {
+        &.overlap-section-below {
+            padding-bottom:300px;
+            & + section {margin-top:-300px;}
+            &.small-overlap {
+                padding-bottom:150px;
+                & + section {margin-top:-150px;}
+            }
+            &.medium-overlap {
+                padding-bottom:200px;
+                & + section {margin-top:-200px;}
+            }
+        }
+    }
+}
+
+
+//CARD BETWEEN ROWS (RETIRING)
 .in-between-card.flex-row {
     position:relative; z-index:5;
     .card {
@@ -17,29 +51,3 @@ section.above-card {
     @media @medium {padding-bottom:150px!important; position:relative; z-index:4;}
 }
 section.below-card {overflow:visible!important;}
-
-
-//NEWER VERSION
-#page-hero, #hero, section {
-    &.overlap-section-below {
-        padding-bottom:200px;
-        & + section {
-            position:relative; z-index:5;
-            margin-top:-200px;
-        }
-        &.small-overlap {
-            padding-bottom:100px;
-            & + section {margin-top:-100px;}
-        }
-    }
-    @media @medium {
-        &.overlap-section-below {
-            padding-bottom:300px;
-            & + section {margin-top:-300px;}
-            &.small-overlap {
-                padding-bottom:150px;
-                & + section {margin-top:-150px;}
-            }
-        }
-    }
-}

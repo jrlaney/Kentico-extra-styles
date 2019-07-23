@@ -227,6 +227,29 @@
                 .transform-origin(top, left);
             }
         }
+        &.isometric-mac-monitor {
+            background-image: none;
+            &:before {
+                background-position: center;
+                background-size: 100% auto;
+                background-repeat: no-repeat;
+                background-image: url('/getmedia/6ac11f50-cb40-4541-a903-2cb459c2e9c3/mac-monitor-isometric_white');
+            }
+            &:after {
+                content:'';
+                position:absolute; z-index:-1;
+                //border:1px solid red;
+                background-color:fade(@pure-black, 30%);
+                box-shadow:15px 15px 20px fade(@pure-black, 30%);
+
+                height:23%; width:34%;
+                bottom:3%;
+                right:48%;
+                border-radius:12%;
+                .transform(rotateX(58.7deg) rotateZ(48deg));
+                .transform-origin(bottom, right);
+            }
+        }
         &.isometric-ipad-tilted {
             background-image: none;
             &:before {
@@ -248,6 +271,30 @@
                 box-shadow:15px 15px 20px fade(@pure-black, 30%);
                 .transform(rotateX(54.7deg) rotateZ(45deg));
                 .transform-origin(top, left);
+            }
+        }
+        &.isometric-ipad-portrait {
+            background-image: none;
+            &:before {
+                background-position: center;
+                background-size: 100% auto;
+                background-repeat: no-repeat;
+                background-image: url('/getmedia/fee58bf2-a876-4cab-983f-7d5ea200a6bd/ipad-portrait-isometric_white');
+            }
+            &:after {
+                content:'';
+                position: absolute; z-index:-1;
+                //border:1px solid red;
+                background-color:fade(@pure-black, 30%);
+                box-shadow:15px 15px 20px fade(@pure-black, 30%);
+
+                height:145%;
+                top:-1%;
+                left:58.3%;
+                right:-20.9%;
+                .transform(rotateX(54.7deg) rotateZ(45deg));
+                .transform-origin(top, left);
+    			border-radius: ~"9%/8%";
             }
         }
         &.isometric-iphone {
