@@ -45,6 +45,7 @@
 //for the new homepage
 .NewHomepage {
 	#page-hero {
+		position:relative; z-index:0;
 		.text-content-row {
 			position:relative;
 			padding-top:80px; padding-bottom:80px;
@@ -60,71 +61,59 @@
 			position:relative; z-index:2;
 			@media @medium {margin-top:-80px;}
 			.stacked-mockups {
-				padding-bottom:24%;
+				padding-bottom:18%;
 				.device-mockup {
 					position:absolute; z-index:0;
 					top:50%; left:50%;
 					.translate(-50%, -50%);
-					&.isometric-macbook-pro {
-						width:63%;
-						margin-top:-36%;
-						margin-left:20%;
+					&.isometric-mac-monitor {
+						width:46%;
+						margin-top:-34%;
+						margin-left:36%;
 					}
+					// &.isometric-macbook-pro {
+					// 	width:63%;
+					// 	margin-top:-36%;
+					// 	margin-left:20%;
+					// }
 					&.isometric-ipad-tilted {
 						z-index:1;
-						width:35%;
-						margin-top:-5%;
-						margin-left:47%;
+						width:32%;
+						margin-top:-4.5%;
+						margin-left:58%;
 					}
 					&.isometric-iphone {
-						width:30%;
-						margin-top:3%;
-						margin-left:5%;
+						width:23%;
+						margin-top:1%;
+						margin-left:22%;
 					}
 					&.isometric-screenshot-landscape {
 						position:relative;
-						width:60%;
+						width:57%;
 						top:auto; left:auto;
 						.translate(0,0);
-						margin-left:-6%;
+						margin-left:10%;
+						&.second {
+							position:absolute; z-index:0;
+							top:50%; left:50%;
+							.translate(-50%, -50%);
+							margin-top:-21%;
+							margin-left:-66%;
+						}
 					}
-					&.isometric-screenshot-portrait {
+					&.isometric-ipad-portrait {
 						z-index:1;
-						width:60%;
-						margin-top:11.5%;
-						margin-left:-57%;
+						width:46%;
+						margin-top:3.5%;
+						margin-left:-46%;
 					}
+					// &.isometric-screenshot-portrait {
+					// 	z-index:1;
+					// 	width:60%;
+					// 	margin-top:11.5%;
+					// 	margin-left:-57%;
+					// }
 				}
-
-				@media @large {
-					padding-bottom:25%;
-					.device-mockup {
-						&.isometric-macbook-pro {
-							width:65%;
-							margin-top:-36%;
-							margin-left:28%;
-						}
-						&.isometric-ipad-tilted {
-							width:35%;
-							margin-top:-3%;
-							margin-left:57%;
-						}
-						&.isometric-iphone {
-							width:28%;
-							margin-top:4%;
-							margin-left:15%;
-						}
-						&.isometric-screenshot-landscape {
-							width:65%;
-							margin-left:0%;
-						}
-						&.isometric-screenshot-portrait {
-							width:65%;
-							margin-top:5%;
-							margin-left:-58%;
-						}
-					}
-				}//end x-large special
 			}
 		}
 		.card-animation {
@@ -157,10 +146,33 @@
 		}
 	}
 	#customer-logos {
+		position:relative; z-index:1;
 		margin-top:-20px;
+		> div {position:relative; z-index:1;}
 		@media @medium {margin-top:-120px;}
 		@media @large {margin-top:-160px;}
 		@media @xlarge {margin-top:-200px;}
+
+		.logo {opacity:0.99; .single-transition;}
+		.overlay-button {
+			position:absolute; z-index:0;
+			width:100%; height:100%;
+			max-width:@large-breakpoint;
+			top:0; left:50%;
+			.translateX(-50%);
+			opacity:0;
+			.single-transition;
+
+			.button {
+				position:absolute; z-index:3;
+				top:50%; left:50%;
+				.translate(-50%, -50%);
+			}
+		}
+		&:hover {
+			.overlay-button {opacity:1; z-index:2;}
+			.logo {opacity:0.25;}
+		}
 	}
 	#animated-isometric-diagram {
 		position:relative;
@@ -662,6 +674,16 @@
 			&:before {display:none;}
 			&.passed-view:after {height:50%;}
 		}
+	}
+	#why-microstrategy {
+		.slick-slider {
+			padding-left:40px; padding-right:40px;
+			@media @large {padding-left:0px; padding-right:0px;}
+			.slick-slide {
+				.flex-direction(column);
+			}
+		}
+		.ratio {width:250px;}
 	}
 }
 

@@ -36,6 +36,33 @@ $(document).ready(function(){
         $('#top-benefits').attr('data-currentBenefit', bene_id);
     });
 
+    //analyst review slider
+    $('#review-slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-prev"><i class="icon icon-chevron-left icon-block small black"></button>',
+        nextArrow: '<button type="button" class="slick-next"><i class="icon icon-chevron-right icon-block small black"></button>',
+        dots: false,
+        //centerMode: true,
+        focusOnSelect: false,
+        draggable: true,
+        responsive: [
+            {
+                breakpoint: 980,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+
     //customer story slider script
     $('#customer-story-slider').slick({
         autoplay: false,
