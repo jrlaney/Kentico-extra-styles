@@ -1,3 +1,10 @@
+.cards .card {
+  opacity: 1;
+  border: 1px solid #f2f2f2;
+}
+.button {
+  font-weight: 600;
+}
 .offpage-image {
   width: 150%;
   max-width: none;
@@ -310,6 +317,9 @@
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
+#multi-control-slider-nav .grid-item:hover .icon {
+  color: #D9232E;
+}
 #multi-control-slider-nav .grid-item:hover:before {
   -webkit-transform: translateY(-5px) !important;
   transform: translateY(-5px) !important;
@@ -354,6 +364,14 @@
 #multi-control-slider-nav .grid-item.component-navy-blue:hover:before {
   border-bottom-color: #11566F;
 }
+#multi-control-slider-nav .grid-item.component-black.slick-current .icon,
+#multi-control-slider-nav .grid-item.component-black:hover .icon {
+  color: #333333;
+}
+#multi-control-slider-nav .grid-item.component-black.slick-current:before,
+#multi-control-slider-nav .grid-item.component-black:hover:before {
+  border-bottom-color: #333333;
+}
 #multi-control-slider-nav.nav-above .grid-item {
   padding: 20px 15px 35px 15px;
 }
@@ -384,6 +402,10 @@
 #multi-control-slider-nav.nav-above .grid-item.component-navy-blue.slick-current:before,
 #multi-control-slider-nav.nav-above .grid-item.component-navy-blue:hover:before {
   border-top-color: #11566F;
+}
+#multi-control-slider-nav.nav-above .grid-item.component-black.slick-current:before,
+#multi-control-slider-nav.nav-above .grid-item.component-black:hover:before {
+  border-top-color: #333333;
 }
 #multi-control-slider .slick-slide {
   -webkit-align-items: flex-start;

@@ -3,27 +3,17 @@ blockquote {
     padding:20px 40px;
     font-family:@myriad-pro;
     font-weight:400;
-    font-size:22px; line-height:26px;
+    font-size:20px; line-height:24px;
     &:last-child {margin-bottom:0;}
     @media @medium {font-size:24px; line-height:33px;}
 
-    &.text-small {
-        font-size:20px; line-height:24px;
-        @media @medium {font-size:22px; line-height:28px;}
-    }
-
-    &.text-tiny {
-        font-size:16px; line-height:24px;
-        &:before, &:after {font-size:200px;}
-    }
-
     > footer, > span {
         display:block;
-        margin-top:30px;
+        margin-top:1.7em;
         font-weight:600;
-        font-size:16px; line-height:20px;
+        font-size:0.75em; line-height:0.75em;
         .uppercase;
-        @media @medium {font-size:18px;}
+        //@media @medium {font-size:18px;}
     }
 
 	&:before, &:after {
@@ -33,8 +23,9 @@ blockquote {
 	    height:56px; width:68px;
 
         font-family:@lucida-grande;
-        font-size:250px; line-height:0.8em;
+        font-size:200px; line-height:0.8em;
         opacity:.2;
+        @media @medium {font-size:250px;}
 	}
 	&:after {
         content:'”';
@@ -42,6 +33,17 @@ blockquote {
         left:auto;
         bottom:0;
         right:0;
+    }
+
+    &.text-small {
+        font-size:18px; line-height:22px;
+        @media @medium {font-size:22px; line-height:28px;}
+    }
+
+    &.text-tiny {
+        font-size:16px; line-height:24px;
+        &:before, &:after {font-size:200px;}
+        > footer, > span {font-size:0.9em; line-height:0.9em;}
     }
     .FRFR & {
         &:before, &:after {

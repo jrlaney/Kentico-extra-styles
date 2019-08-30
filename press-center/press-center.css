@@ -1,3 +1,10 @@
+.cards .card {
+  opacity: 1;
+  border: 1px solid #f2f2f2;
+}
+.button {
+  font-weight: 600;
+}
 #section-navigation-sticky-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -81,6 +88,9 @@
 .Publication.Single article.publication #bwbodyimg p {
   font-size: 14px;
   font-weight: 400;
+}
+.Publication.Single article.publication .bw-release-table-js {
+  margin-bottom: 40px;
 }
 .Publication.Single article.publication table {
   border: none;

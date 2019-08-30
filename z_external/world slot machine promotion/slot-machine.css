@@ -1,3 +1,10 @@
+.cards .card {
+  opacity: 1;
+  border: 1px solid #f2f2f2;
+}
+.button {
+  font-weight: 600;
+}
 #slot-machine .input-group label {
   width: 100%;
   font-size: 12px;

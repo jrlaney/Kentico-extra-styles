@@ -1,3 +1,7 @@
+.cards .card {
+  opacity: 1;
+  border: 1px solid #f2f2f2;
+}
 .button {
   font-weight: 600;
 }
@@ -154,8 +158,8 @@ blockquote {
   padding: 20px 40px;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 20px;
+  line-height: 24px;
 }
 blockquote:last-child {
   margin-bottom: 0;
@@ -166,9 +170,46 @@ blockquote:last-child {
     line-height: 33px;
   }
 }
+blockquote > footer,
+blockquote > span {
+  display: block;
+  margin-top: 1.7em;
+  font-weight: 600;
+  font-size: 0.75em;
+  line-height: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+blockquote:before,
+blockquote:after {
+  content: '“';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 56px;
+  width: 68px;
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 200px;
+  line-height: 0.8em;
+  opacity: .2;
+}
+@media only screen and (min-width: 768px) {
+  blockquote:before,
+  blockquote:after {
+    font-size: 250px;
+  }
+}
+blockquote:after {
+  content: '”';
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 0;
+}
 blockquote.text-small {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 22px;
 }
 @media only screen and (min-width: 768px) {
   blockquote.text-small {
@@ -184,42 +225,10 @@ blockquote.text-tiny:before,
 blockquote.text-tiny:after {
   font-size: 200px;
 }
-blockquote > footer,
-blockquote > span {
-  display: block;
-  margin-top: 30px;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-@media only screen and (min-width: 768px) {
-  blockquote > footer,
-  blockquote > span {
-    font-size: 18px;
-  }
-}
-blockquote:before,
-blockquote:after {
-  content: '“';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 56px;
-  width: 68px;
-  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 250px;
-  line-height: 0.8em;
-  opacity: .2;
-}
-blockquote:after {
-  content: '”';
-  top: auto;
-  left: auto;
-  bottom: 0;
-  right: 0;
+blockquote.text-tiny > footer,
+blockquote.text-tiny > span {
+  font-size: 0.9em;
+  line-height: 0.9em;
 }
 .FRFR blockquote:before,
 .FRFR blockquote:after {
@@ -266,6 +275,9 @@ blockquote:after {
 }
 .button.arrow.flagged-button > .flag.gray {
   background-color: #999999;
+}
+.device-mockup .screen {
+  z-index: 2;
 }
 .device-mockup.ipad-portrait {
   max-width: 850px;
@@ -521,26 +533,58 @@ blockquote:after {
 .device-mockup.shadow {
   box-shadow: none;
 }
+.device-mockup.shadow.iphone-x,
+.device-mockup.shadow.ipad,
+.device-mockup.shadow.isometric-screenshot-landscape .screen,
+.device-mockup.shadow.isometric-screenshot-portrait .screen,
+.device-mockup.shadow.isometric-macbook-pro:after,
+.device-mockup.shadow.isometric-mac-monitor:after,
+.device-mockup.shadow.isometric-ipad-tilted:after,
+.device-mockup.shadow.isometric-ipad-portrait:after,
+.device-mockup.shadow.isometric-iphone:after {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+@media only screen and (min-width: 768px) {
+  .device-mockup.shadow.iphone-x,
+  .device-mockup.shadow.ipad,
+  .device-mockup.shadow.isometric-screenshot-landscape .screen,
+  .device-mockup.shadow.isometric-screenshot-portrait .screen,
+  .device-mockup.shadow.isometric-macbook-pro:after,
+  .device-mockup.shadow.isometric-mac-monitor:after,
+  .device-mockup.shadow.isometric-ipad-tilted:after,
+  .device-mockup.shadow.isometric-ipad-portrait:after,
+  .device-mockup.shadow.isometric-iphone:after {
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+.Safari .device-mockup.shadow.iphone-x,
+.Safari .device-mockup.shadow.ipad,
+.Safari .device-mockup.shadow.isometric-screenshot-landscape .screen,
+.Safari .device-mockup.shadow.isometric-screenshot-portrait .screen {
+  box-shadow: none;
+}
+.Safari .device-mockup.shadow.isometric-macbook-pro:after,
+.Safari .device-mockup.shadow.isometric-mac-monitor:after,
+.Safari .device-mockup.shadow.isometric-ipad-tilted:after,
+.Safari .device-mockup.shadow.isometric-ipad-portrait:after,
+.Safari .device-mockup.shadow.isometric-iphone:after {
+  display: none;
+}
 .device-mockup.shadow.iphone-x {
   border-radius: 17%/7%;
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
   background-color: rgba(0, 0, 0, 0.1);
 }
 .device-mockup.shadow.ipad {
   border-radius: 4%/5%;
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
   background-color: rgba(0, 0, 0, 0.1);
-}
-.device-mockup.shadow.isometric-screenshot-landscape .screen {
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
-}
-.device-mockup.shadow.isometric-screenshot-portrait .screen {
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
 }
 .device-mockup.shadow.isometric-macbook-pro {
   background-image: none;
 }
 .device-mockup.shadow.isometric-macbook-pro:before {
+  position: relative;
+  display: block;
+  z-index: 1;
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -549,14 +593,13 @@ blockquote:after {
 .device-mockup.shadow.isometric-macbook-pro:after {
   content: '';
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   height: 55%;
   width: 84%;
   top: 45%;
   left: 40%;
   border-radius: 4%/5%;
   background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
   -webkit-transform: rotateX(54.7deg) rotateZ(45deg);
   transform: rotateX(54.7deg) rotateZ(45deg);
   -webkit-transform-origin: top left;
@@ -566,6 +609,9 @@ blockquote:after {
   background-image: none;
 }
 .device-mockup.shadow.isometric-mac-monitor:before {
+  position: relative;
+  display: block;
+  z-index: 1;
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -574,9 +620,8 @@ blockquote:after {
 .device-mockup.shadow.isometric-mac-monitor:after {
   content: '';
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
   height: 23%;
   width: 34%;
   bottom: 3%;
@@ -591,6 +636,9 @@ blockquote:after {
   background-image: none;
 }
 .device-mockup.shadow.isometric-ipad-tilted:before {
+  position: relative;
+  display: block;
+  z-index: 1;
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -599,14 +647,13 @@ blockquote:after {
 .device-mockup.shadow.isometric-ipad-tilted:after {
   content: '';
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   height: 5.9%;
   top: 56.3%;
   left: 3.8%;
   right: -40.7%;
   border-radius: 17%/50%;
   background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
   -webkit-transform: rotateX(54.7deg) rotateZ(45deg);
   transform: rotateX(54.7deg) rotateZ(45deg);
   -webkit-transform-origin: top left;
@@ -616,6 +663,9 @@ blockquote:after {
   background-image: none;
 }
 .device-mockup.shadow.isometric-ipad-portrait:before {
+  position: relative;
+  display: block;
+  z-index: 1;
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -624,9 +674,8 @@ blockquote:after {
 .device-mockup.shadow.isometric-ipad-portrait:after {
   content: '';
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
   height: 145%;
   top: -1%;
   left: 58.3%;
@@ -641,6 +690,9 @@ blockquote:after {
   background-image: none;
 }
 .device-mockup.shadow.isometric-iphone:before {
+  position: relative;
+  display: block;
+  z-index: 1;
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -649,14 +701,13 @@ blockquote:after {
 .device-mockup.shadow.isometric-iphone:after {
   content: '';
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   height: 169%;
   width: 52%;
   top: -2%;
   left: 67%;
   border-radius: 18%/12%;
   background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
   -webkit-transform: rotateX(54.7deg) rotateZ(45deg);
   transform: rotateX(54.7deg) rotateZ(45deg);
   -webkit-transform-origin: top left;
@@ -762,6 +813,12 @@ blockquote:after {
     height: 300px;
   }
 }
+.customer-quote-slide .logo-quote {
+  width: 100%;
+}
+.customer-quote-slide .logo-quote > * {
+  max-width: 100%;
+}
 .customer-quote-slide .logo-quote .ratio {
   max-width: 250px;
   margin: 0 auto;
@@ -785,6 +842,8 @@ blockquote:after {
     flex-direction: column;
     -webkit-align-items: center;
     align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
     width: 45%;
     height: 100%;
     padding: 30px;
@@ -875,6 +934,10 @@ blockquote:after {
   padding-bottom: 80px;
   color: #FFFFFF;
 }
+.NewHomepage #page-hero .text-content-row > div:first-child {
+  position: relative;
+  z-index: 3;
+}
 .NewHomepage #page-hero .text-content-row .background-image {
   position: absolute;
   z-index: -1;
@@ -894,9 +957,6 @@ blockquote:after {
     margin-top: -80px;
   }
 }
-.NewHomepage #page-hero .device-row .stacked-mockups {
-  padding-bottom: 18%;
-}
 .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup {
   position: absolute;
   z-index: 0;
@@ -906,45 +966,91 @@ blockquote:after {
   transform: translate(-50%, -50%);
 }
 .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-mac-monitor {
-  width: 46%;
-  margin-top: -34%;
-  margin-left: 36%;
-}
-.NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-ipad-tilted {
-  z-index: 1;
-  width: 32%;
-  margin-top: -4.5%;
-  margin-left: 58%;
-}
-.NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-iphone {
-  width: 23%;
-  margin-top: 1%;
-  margin-left: 22%;
-}
-.NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-screenshot-landscape {
   position: relative;
-  width: 57%;
   top: auto;
   left: auto;
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
-  margin-left: 10%;
+  width: 57%;
+  margin-top: -25%;
+  margin-left: 66%;
+}
+.NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-ipad-tilted {
+  z-index: 1;
+  width: 32%;
+  margin-top: -6.5%;
+  margin-left: 12%;
+}
+.NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-iphone {
+  width: 23%;
+  margin-top: 15%;
+  margin-left: 2%;
+}
+.NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-screenshot-landscape {
+  width: 57%;
+  margin-top: -21%;
+  margin-left: -14%;
 }
 .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-screenshot-landscape.second {
-  position: absolute;
-  z-index: 0;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  margin-top: -21%;
-  margin-left: -66%;
+  margin-top: -13%;
+  margin-left: -51%;
 }
 .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-ipad-portrait {
-  z-index: 1;
   width: 46%;
-  margin-top: 3.5%;
-  margin-left: -46%;
+  margin-top: 7.5%;
+  margin-left: -22%;
+}
+@media only screen and (min-width: 768px) {
+  .NewHomepage #page-hero .device-row .stacked-mockups {
+    padding-bottom: 18%;
+  }
+  .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-mac-monitor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 46%;
+    margin-top: -34%;
+    margin-left: 36%;
+  }
+  .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-ipad-tilted {
+    z-index: 1;
+    width: 32%;
+    margin-top: -4.5%;
+    margin-left: 58%;
+  }
+  .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-iphone {
+    width: 23%;
+    margin-top: 1%;
+    margin-left: 22%;
+  }
+  .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-screenshot-landscape {
+    position: relative;
+    top: auto;
+    left: auto;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    width: 57%;
+    margin-top: 0;
+    margin-left: 10%;
+  }
+  .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-screenshot-landscape.second {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-top: -21%;
+    margin-left: -66%;
+  }
+  .NewHomepage #page-hero .device-row .stacked-mockups .device-mockup.isometric-ipad-portrait {
+    z-index: 1;
+    width: 46%;
+    margin-top: 3.5%;
+    margin-left: -46%;
+  }
 }
 .NewHomepage #page-hero .card-animation .cursor {
   position: absolute;
@@ -984,7 +1090,6 @@ blockquote:after {
 .NewHomepage #customer-logos {
   position: relative;
   z-index: 1;
-  margin-top: -20px;
 }
 .NewHomepage #customer-logos > div {
   position: relative;
@@ -1004,40 +1109,6 @@ blockquote:after {
   .NewHomepage #customer-logos {
     margin-top: -200px;
   }
-}
-.NewHomepage #customer-logos .logo {
-  opacity: 0.99;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-.NewHomepage #customer-logos .overlay-button {
-  position: absolute;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  max-width: 1200px;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  opacity: 0;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-.NewHomepage #customer-logos .overlay-button .button {
-  position: absolute;
-  z-index: 3;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.NewHomepage #customer-logos:hover .overlay-button {
-  opacity: 1;
-  z-index: 2;
-}
-.NewHomepage #customer-logos:hover .logo {
-  opacity: 0.25;
 }
 .NewHomepage #animated-isometric-diagram {
   position: relative;
@@ -1143,28 +1214,28 @@ blockquote:after {
 }
 .NewHomepage #animated-isometric-diagram .card-device-comp .hypercard-img {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   width: 15%;
   -webkit-transform-origin: top left;
   transform-origin: top left;
-  -webkit-transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg);
-  transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg);
+  -webkit-transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg) translateX(200%) translateY(-40%) translateZ(0);
+  transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg) translateX(200%) translateY(-40%) translateZ(0);
   box-shadow: 7px 7px 10px rgba(0, 0, 0, 0);
   opacity: 0;
   -webkit-transition: all 0.3s ease-out 1.425s;
   transition: all 0.3s ease-out 1.425s;
-  top: 7%;
-  left: 44%;
+  top: 0;
+  left: 0;
 }
 .NewHomepage #animated-isometric-diagram .card-device-comp .hypercard-img:nth-child(2) {
-  top: 25%;
-  left: 60%;
+  -webkit-transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg) translateX(340%) translateY(5%) translateZ(0);
+  transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg) translateX(340%) translateY(5%) translateZ(0);
   -webkit-transition-delay: 1.725s;
   transition-delay: 1.725s;
 }
 .NewHomepage #animated-isometric-diagram .card-device-comp .hypercard-img:nth-child(3) {
-  top: 29%;
-  left: 81%;
+  -webkit-transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg) translateX(470%) translateY(-115%) translateZ(0);
+  transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg) translateX(470%) translateY(-115%) translateZ(0);
   -webkit-transition-delay: 2.025s;
   transition-delay: 2.025s;
 }
@@ -1213,7 +1284,7 @@ blockquote:after {
 .NewHomepage #animated-isometric-diagram .floating-icon {
   display: block;
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   top: 10%;
   left: 53%;
   width: 30%;
@@ -1289,193 +1360,194 @@ blockquote:after {
   bottom: 50%;
   right: 0;
 }
-.NewHomepage #top-benefits .benefit-col {
-  position: relative;
-  padding-bottom: 60px;
-  color: #777777;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+.NewHomepage #top-benefits {
+  padding-top: 0;
 }
-.NewHomepage #top-benefits .benefit-col .icon {
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+@media only screen and (min-width: 768px) {
+  .NewHomepage #top-benefits .benefit-col {
+    position: relative;
+    padding-bottom: 60px;
+    color: #777777;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  .NewHomepage #top-benefits .benefit-col .icon {
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  .NewHomepage #top-benefits .benefit-col:before {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -15px;
+    width: 0px;
+    height: 0px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #CCCCCC;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  .NewHomepage #top-benefits .benefit-col:hover {
+    cursor: pointer;
+    color: #333333;
+  }
+  .NewHomepage #top-benefits .benefit-col:hover:before {
+    border-top-color: #999999;
+  }
 }
-.NewHomepage #top-benefits .benefit-col:before {
-  content: '';
-  position: absolute;
-  display: block;
-  bottom: 20px;
-  left: 50%;
-  margin-left: -15px;
-  width: 0px;
-  height: 0px;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid #CCCCCC;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+@media only screen and (min-width: 768px) {
+  .NewHomepage #top-benefits.hyperintelligence .benefit-col.hyper {
+    color: #333333;
+  }
+  .NewHomepage #top-benefits.hyperintelligence .benefit-col.hyper .icon {
+    color: #D9232E;
+  }
+  .NewHomepage #top-benefits.hyperintelligence .benefit-col.hyper:before {
+    border-top-color: #D9232E;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
 }
-.NewHomepage #top-benefits .benefit-col:hover {
-  cursor: pointer;
-  color: #333333;
-}
-.NewHomepage #top-benefits .benefit-col:hover:before {
-  border-top-color: #999999;
-}
-.NewHomepage #top-benefits[data-currentBenefit="hyperintelligence"] .benefit-col.hyper {
-  color: #333333;
-}
-.NewHomepage #top-benefits[data-currentBenefit="hyperintelligence"] .benefit-col.hyper .icon {
-  color: #D9232E;
-}
-.NewHomepage #top-benefits[data-currentBenefit="hyperintelligence"] .benefit-col.hyper:before {
-  border-top-color: #D9232E;
-  -webkit-transform: translateY(10px);
-  transform: translateY(10px);
-}
-.NewHomepage #top-benefits[data-currentBenefit="hyperintelligence"] .diagram-lines {
+.NewHomepage #top-benefits.hyperintelligence .diagram-lines {
   bottom: -6.5%;
   left: 24%;
 }
-.NewHomepage #top-benefits[data-currentBenefit="hyperintelligence"] .diagram-lines .diagram-line.left-root,
-.NewHomepage #top-benefits[data-currentBenefit="hyperintelligence"] .diagram-lines .diagram-line.top-root {
+.NewHomepage #top-benefits.hyperintelligence .diagram-lines .diagram-line.left-root,
+.NewHomepage #top-benefits.hyperintelligence .diagram-lines .diagram-line.top-root {
   -webkit-animation: line-cycle-root 5.5s ease-out 0.5s normal forwards;
   animation: line-cycle-root 5.5s ease-out 0.5s normal forwards;
 }
-.NewHomepage #top-benefits[data-currentBenefit="hyperintelligence"] .diagram-lines .diagram-line.top-bar-left,
-.NewHomepage #top-benefits[data-currentBenefit="hyperintelligence"] .diagram-lines .diagram-line.top-bar-right {
+.NewHomepage #top-benefits.hyperintelligence .diagram-lines .diagram-line.top-bar-left,
+.NewHomepage #top-benefits.hyperintelligence .diagram-lines .diagram-line.top-bar-right {
   -webkit-animation: line-cycle-bar 5.5s ease-out 0.5s normal forwards;
   animation: line-cycle-bar 5.5s ease-out 0.5s normal forwards;
 }
-.NewHomepage #top-benefits[data-currentBenefit="hyperintelligence"] .diagram-lines .diagram-line.top-fork-left,
-.NewHomepage #top-benefits[data-currentBenefit="hyperintelligence"] .diagram-lines .diagram-line.top-fork-right {
+.NewHomepage #top-benefits.hyperintelligence .diagram-lines .diagram-line.top-fork-left,
+.NewHomepage #top-benefits.hyperintelligence .diagram-lines .diagram-line.top-fork-right {
   -webkit-animation: line-cycle-fork 5.5s ease-out 0.5s normal forwards;
   animation: line-cycle-fork 5.5s ease-out 0.5s normal forwards;
 }
-.NewHomepage #top-benefits[data-currentBenefit="hyperintelligence"] .m-icon {
+.NewHomepage #top-benefits.hyperintelligence .m-icon {
   bottom: -3%;
   left: 20%;
 }
-.NewHomepage #top-benefits[data-currentBenefit="hyperintelligence"] .echo-dot-comp {
+.NewHomepage #top-benefits.hyperintelligence .echo-dot-comp {
   top: 16%;
   left: 0;
   -webkit-animation: device-appear-left-root 5.5s ease-out 0.5s normal forwards;
   animation: device-appear-left-root 5.5s ease-out 0.5s normal forwards;
 }
-.NewHomepage #top-benefits[data-currentBenefit="hyperintelligence"] .isometric-ipad-tilted.hyper {
+.NewHomepage #top-benefits.hyperintelligence .isometric-ipad-tilted.hyper {
   top: 0;
   left: 29%;
   -webkit-animation: device-appear-top-fork 5.5s ease-out 0.5s normal forwards;
   animation: device-appear-top-fork 5.5s ease-out 0.5s normal forwards;
 }
-.NewHomepage #top-benefits[data-currentBenefit="hyperintelligence"] .card-device-comp {
+.NewHomepage #top-benefits.hyperintelligence .card-device-comp {
   top: 11%;
   right: 0;
   -webkit-animation: device-appear-top-fork 5.5s ease-out 0.5s normal forwards;
   animation: device-appear-top-fork 5.5s ease-out 0.5s normal forwards;
 }
-.NewHomepage #top-benefits[data-currentBenefit="hyperintelligence"] .card-device-comp .hypercard-img {
+.NewHomepage #top-benefits.hyperintelligence .card-device-comp .hypercard-img {
   opacity: 1;
   width: 23%;
-  top: 2%;
-  left: 28%;
   box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.3);
 }
-.NewHomepage #top-benefits[data-currentBenefit="hyperintelligence"] .card-device-comp .hypercard-img:nth-child(2) {
-  top: 30%;
-  left: 50%;
-}
-.NewHomepage #top-benefits[data-currentBenefit="hyperintelligence"] .card-device-comp .hypercard-img:nth-child(3) {
-  top: 10%;
-  left: 75%;
-}
-.NewHomepage #top-benefits[data-currentBenefit="hyperintelligence"] .echo-dot-comp .speech-bubble {
+.NewHomepage #top-benefits.hyperintelligence .echo-dot-comp .speech-bubble {
   opacity: 1;
   left: 35%;
 }
-.NewHomepage #top-benefits[data-currentBenefit="hyperintelligence"] .echo-dot-comp .speech-bubble.blue {
+.NewHomepage #top-benefits.hyperintelligence .echo-dot-comp .speech-bubble.blue {
   top: 30%;
   left: 51%;
 }
-.NewHomepage #top-benefits[data-currentBenefit="mobility"] .benefit-col.mobile {
-  color: #333333;
+@media only screen and (min-width: 768px) {
+  .NewHomepage #top-benefits.mobility .benefit-col.mobile {
+    color: #333333;
+  }
+  .NewHomepage #top-benefits.mobility .benefit-col.mobile .icon {
+    color: #D9232E;
+  }
+  .NewHomepage #top-benefits.mobility .benefit-col.mobile:before {
+    border-top-color: #D9232E;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
 }
-.NewHomepage #top-benefits[data-currentBenefit="mobility"] .benefit-col.mobile .icon {
-  color: #D9232E;
-}
-.NewHomepage #top-benefits[data-currentBenefit="mobility"] .benefit-col.mobile:before {
-  border-top-color: #D9232E;
-  -webkit-transform: translateY(10px);
-  transform: translateY(10px);
-}
-.NewHomepage #top-benefits[data-currentBenefit="mobility"] .diagram-lines {
+.NewHomepage #top-benefits.mobility .diagram-lines {
   width: 50%;
   bottom: -15.5%;
   left: 11%;
 }
-.NewHomepage #top-benefits[data-currentBenefit="mobility"] .diagram-lines .diagram-line.top-root {
+.NewHomepage #top-benefits.mobility .diagram-lines .diagram-line.top-root {
   -webkit-animation: line-cycle-root-2 5.5s ease-out 0.5s normal forwards;
   animation: line-cycle-root-2 5.5s ease-out 0.5s normal forwards;
 }
-.NewHomepage #top-benefits[data-currentBenefit="mobility"] .diagram-lines .diagram-line.top-bar-left,
-.NewHomepage #top-benefits[data-currentBenefit="mobility"] .diagram-lines .diagram-line.top-bar-right {
+.NewHomepage #top-benefits.mobility .diagram-lines .diagram-line.top-bar-left,
+.NewHomepage #top-benefits.mobility .diagram-lines .diagram-line.top-bar-right {
   -webkit-animation: line-cycle-bar-2 5.5s ease-out 0.5s normal forwards;
   animation: line-cycle-bar-2 5.5s ease-out 0.5s normal forwards;
 }
-.NewHomepage #top-benefits[data-currentBenefit="mobility"] .diagram-lines .diagram-line.top-fork-left,
-.NewHomepage #top-benefits[data-currentBenefit="mobility"] .diagram-lines .diagram-line.top-fork-center,
-.NewHomepage #top-benefits[data-currentBenefit="mobility"] .diagram-lines .diagram-line.top-fork-right {
+.NewHomepage #top-benefits.mobility .diagram-lines .diagram-line.top-fork-left,
+.NewHomepage #top-benefits.mobility .diagram-lines .diagram-line.top-fork-center,
+.NewHomepage #top-benefits.mobility .diagram-lines .diagram-line.top-fork-right {
   -webkit-animation: line-cycle-fork-2 5.5s ease-out 0.5s normal forwards;
   animation: line-cycle-fork-2 5.5s ease-out 0.5s normal forwards;
 }
-.NewHomepage #top-benefits[data-currentBenefit="mobility"] .m-icon {
+.NewHomepage #top-benefits.mobility .m-icon {
   bottom: -3%;
   left: 13%;
 }
-.NewHomepage #top-benefits[data-currentBenefit="mobility"] .isometric-ipad-tilted.mobile {
+.NewHomepage #top-benefits.mobility .isometric-ipad-tilted.mobile {
   top: 0;
   left: 16%;
   -webkit-animation: device-appear-top-fork 5.5s ease-out 0.5s normal forwards;
   animation: device-appear-top-fork 5.5s ease-out 0.5s normal forwards;
 }
-.NewHomepage #top-benefits[data-currentBenefit="mobility"] .isometric-iphone {
+.NewHomepage #top-benefits.mobility .isometric-iphone {
   top: 41.5%;
   left: 41.5%;
   -webkit-animation: device-appear-top-fork 5.5s ease-out 0.5s normal forwards;
   animation: device-appear-top-fork 5.5s ease-out 0.5s normal forwards;
 }
-.NewHomepage #top-benefits[data-currentBenefit="mobility"] .isometric-ipad-portrait {
+.NewHomepage #top-benefits.mobility .isometric-ipad-portrait {
   top: 47.5%;
   left: 53.5%;
   -webkit-animation: device-appear-top-fork 5.5s ease-out 0.5s normal forwards;
   animation: device-appear-top-fork 5.5s ease-out 0.5s normal forwards;
 }
-.NewHomepage #top-benefits[data-currentBenefit="federated-analytics"] .benefit-col.federated {
-  color: #333333;
+@media only screen and (min-width: 768px) {
+  .NewHomepage #top-benefits.federated-analytics .benefit-col.federated {
+    color: #333333;
+  }
+  .NewHomepage #top-benefits.federated-analytics .benefit-col.federated .icon {
+    color: #D9232E;
+  }
+  .NewHomepage #top-benefits.federated-analytics .benefit-col.federated:before {
+    border-top-color: #D9232E;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
 }
-.NewHomepage #top-benefits[data-currentBenefit="federated-analytics"] .benefit-col.federated .icon {
-  color: #D9232E;
-}
-.NewHomepage #top-benefits[data-currentBenefit="federated-analytics"] .benefit-col.federated:before {
-  border-top-color: #D9232E;
-  -webkit-transform: translateY(10px);
-  transform: translateY(10px);
-}
-.NewHomepage #top-benefits[data-currentBenefit="federated-analytics"] .diagram-lines {
+.NewHomepage #top-benefits.federated-analytics .diagram-lines {
   bottom: 15%;
   left: 43%;
 }
-.NewHomepage #top-benefits[data-currentBenefit="federated-analytics"] .diagram-lines .diagram-line.top-root,
-.NewHomepage #top-benefits[data-currentBenefit="federated-analytics"] .diagram-lines .diagram-line.left-root,
-.NewHomepage #top-benefits[data-currentBenefit="federated-analytics"] .diagram-lines .diagram-line.right-root {
+.NewHomepage #top-benefits.federated-analytics .diagram-lines .diagram-line.top-root,
+.NewHomepage #top-benefits.federated-analytics .diagram-lines .diagram-line.left-root,
+.NewHomepage #top-benefits.federated-analytics .diagram-lines .diagram-line.right-root {
   -webkit-animation: line-cycle-root-3 5s ease-out 1s normal forwards;
   animation: line-cycle-root-3 5s ease-out 1s normal forwards;
 }
-.NewHomepage #top-benefits[data-currentBenefit="federated-analytics"] .m-icon {
+.NewHomepage #top-benefits.federated-analytics .m-icon {
   bottom: 19%;
   left: 39%;
 }
-.NewHomepage #top-benefits[data-currentBenefit="federated-analytics"] .isometric-macbook-pro.federated.left-side {
+.NewHomepage #top-benefits.federated-analytics .isometric-macbook-pro.federated.left-side {
   top: 0;
   left: 13%;
   bottom: auto;
@@ -1483,23 +1555,23 @@ blockquote:after {
   -webkit-animation: device-appear-left-root 5.5s ease-out 0.5s normal forwards;
   animation: device-appear-left-root 5.5s ease-out 0.5s normal forwards;
 }
-.NewHomepage #top-benefits[data-currentBenefit="federated-analytics"] .isometric-mac-monitor {
+.NewHomepage #top-benefits.federated-analytics .isometric-mac-monitor {
   top: 0;
   left: 51.5%;
   -webkit-animation: device-appear-top-root 5.5s ease-out 0.5s normal forwards;
   animation: device-appear-top-root 5.5s ease-out 0.5s normal forwards;
 }
-.NewHomepage #top-benefits[data-currentBenefit="federated-analytics"] .isometric-macbook-pro.federated.right-side {
+.NewHomepage #top-benefits.federated-analytics .isometric-macbook-pro.federated.right-side {
   bottom: 0;
   right: 12.5%;
   -webkit-animation: device-appear-right-root 5.5s ease-out 0.5s normal forwards;
   animation: device-appear-right-root 5.5s ease-out 0.5s normal forwards;
 }
-.NewHomepage #top-benefits[data-currentBenefit="federated-analytics"] .floating-icon {
+.NewHomepage #top-benefits.federated-analytics .floating-icon {
   top: -5%;
   opacity: 1;
 }
-.NewHomepage #top-benefits[data-currentBenefit="federated-analytics"] .isometric-mac-monitor .floating-icon {
+.NewHomepage #top-benefits.federated-analytics .isometric-mac-monitor .floating-icon {
   top: 0;
   opacity: 1;
 }
@@ -1530,6 +1602,7 @@ blockquote:after {
 }
 .NewHomepage #features > section {
   position: relative;
+  padding-left: 25px;
 }
 .NewHomepage #features > section > .flex-row {
   position: relative;
@@ -1542,10 +1615,8 @@ blockquote:after {
   z-index: 0;
 }
 .NewHomepage #features > section:before {
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  left: 10px;
+  top: 60px;
   height: 0;
   width: 0;
   background-color: #D9232E;
@@ -1554,9 +1625,9 @@ blockquote:after {
   transition: all 0.3s cubic-bezier(0.74, 0.01, 0.68, 1.24) 0.8s;
 }
 .NewHomepage #features > section:after {
-  left: 50%;
+  left: 0;
   top: 0;
-  margin-left: -2px;
+  margin-left: 21px;
   height: 0;
   width: 4px;
   background-color: #D9232E;
@@ -1564,8 +1635,8 @@ blockquote:after {
   transition: height 0.7s ease-in 0.2s;
 }
 .NewHomepage #features > section.passed-view:before {
-  height: 60px;
-  width: 60px;
+  height: 25px;
+  width: 25px;
 }
 .NewHomepage #features > section.passed-view:after {
   height: 100%;
@@ -1576,6 +1647,27 @@ blockquote:after {
 }
 .NewHomepage #features > section.passed-view .isometric-diagram:after {
   width: calc(15% + 12px);
+}
+@media only screen and (min-width: 768px) {
+  .NewHomepage #features > section {
+    padding-left: 0;
+  }
+  .NewHomepage #features > section:before {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .NewHomepage #features > section:after {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .NewHomepage #features > section.passed-view:before {
+    height: 60px;
+    width: 60px;
+  }
 }
 .NewHomepage #features .isometric-diagram {
   position: relative;
@@ -1614,20 +1706,43 @@ blockquote:after {
   -webkit-transition: width 0.2s ease-in 1s;
   transition: width 0.2s ease-in 1s;
 }
+.NewHomepage #features #features-headline {
+  padding-left: 0;
+}
 .NewHomepage #features #features-headline:before {
   z-index: 1;
+  left: 50%;
   top: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   background-color: #FFFFFF;
   border: 5px solid #D9232E;
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
 .NewHomepage #features #features-headline:after {
-  display: none;
+  height: 4px;
+  width: 0;
+  left: auto;
+  right: 50%;
+  top: 100%;
+  margin-top: -2px;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+  -webkit-transition: width 0.5s ease-in 0.2s;
+  transition: width 0.5s ease-in 0.2s;
+}
+@media only screen and (min-width: 768px) {
+  .NewHomepage #features #features-headline:after {
+    display: none;
+  }
 }
 .NewHomepage #features #features-headline.passed-view:before {
   height: 40px;
   width: 40px;
+}
+.NewHomepage #features #features-headline.passed-view:after {
+  width: calc(50% - 21px);
 }
 .NewHomepage #features #analyze .isometric-diagram {
   padding-bottom: 61%;
@@ -1672,8 +1787,14 @@ blockquote:after {
   left: 18%;
 }
 .NewHomepage #features #mobilize .isometric-diagram .isometric-iphone.right-side {
-  top: 31%;
-  left: 4%;
+  top: 27%;
+  left: 66%;
+}
+@media only screen and (min-width: 768px) {
+  .NewHomepage #features #mobilize .isometric-diagram .isometric-iphone.right-side {
+    top: 31%;
+    left: 4%;
+  }
 }
 .NewHomepage #features #realize .isometric-diagram {
   padding-bottom: 91%;
@@ -1686,8 +1807,8 @@ blockquote:after {
 .NewHomepage #features #realize .isometric-diagram .echo-dot-comp {
   z-index: 1;
   width: 28%;
-  top: 28%;
-  left: 22%;
+  top: 30%;
+  left: 25%;
 }
 .NewHomepage #features #realize .isometric-diagram .echo-dot-comp:before {
   content: '';
@@ -1745,8 +1866,8 @@ blockquote:after {
 }
 .NewHomepage #features #realize .isometric-diagram .isometric-iphone {
   width: 27%;
-  top: 58%;
-  left: 35%;
+  top: 60%;
+  left: 39%;
 }
 .NewHomepage #features #realize .isometric-diagram .card-device-comp {
   z-index: 1;
@@ -1756,23 +1877,25 @@ blockquote:after {
 }
 .NewHomepage #features #realize .isometric-diagram .card-device-comp .hypercard-img {
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   width: 23%;
   -webkit-transform-origin: top left;
   transform-origin: top left;
-  -webkit-transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg);
-  transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg);
-  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0);
-  top: 2%;
-  left: 28%;
+  -webkit-transform-style: flat;
+  transform-style: flat;
+  -webkit-transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg) translateX(200%) translateY(-40%) translateZ(0);
+  transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg) translateX(200%) translateY(-40%) translateZ(0);
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
 }
 .NewHomepage #features #realize .isometric-diagram .card-device-comp .hypercard-img:nth-child(2) {
-  top: 30%;
-  left: 50%;
+  -webkit-transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg) translateX(340%) translateY(5%) translateZ(0);
+  transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg) translateX(340%) translateY(5%) translateZ(0);
 }
 .NewHomepage #features #realize .isometric-diagram .card-device-comp .hypercard-img:nth-child(3) {
-  top: 10%;
-  left: 75%;
+  -webkit-transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg) translateX(470%) translateY(-115%) translateZ(0);
+  transform: rotateX(54.7deg) rotateZ(45deg) skew(45deg) translateX(470%) translateY(-115%) translateZ(0);
 }
 .NewHomepage #features #realize .isometric-diagram .card-device-comp .device-mockup {
   position: relative;
@@ -1784,11 +1907,40 @@ blockquote:after {
   top: 0;
   left: 44%;
 }
+.NewHomepage #features #intelligent-enterprise {
+  padding-left: 0;
+}
 .NewHomepage #features #intelligent-enterprise:before {
-  display: none;
+  height: 4px;
+  width: 0;
+  left: 21px;
+  top: 0;
+  margin-top: -2px;
+  border-radius: 0;
+  -webkit-transition: width 0.5s ease-in 0s;
+  transition: width 0.5s ease-in 0s;
+}
+@media only screen and (min-width: 768px) {
+  .NewHomepage #features #intelligent-enterprise:before {
+    display: none;
+  }
+}
+.NewHomepage #features #intelligent-enterprise:after {
+  left: 50%;
+  margin-left: -2px;
+  -webkit-transition: height 0.2s ease-in 0.5s;
+  transition: height 0.2s ease-in 0.5s;
+}
+.NewHomepage #features #intelligent-enterprise.passed-view:before {
+  width: calc(50% - 19px);
 }
 .NewHomepage #features #intelligent-enterprise.passed-view:after {
-  height: 50%;
+  height: 55px;
+}
+@media only screen and (min-width: 768px) {
+  .NewHomepage #features #intelligent-enterprise.passed-view:after {
+    height: 80px;
+  }
 }
 .NewHomepage #why-microstrategy .slick-slider {
   padding-left: 40px;
@@ -1803,6 +1955,9 @@ blockquote:after {
 .NewHomepage #why-microstrategy .slick-slider .slick-slide {
   -webkit-flex-direction: column;
   flex-direction: column;
+}
+.NewHomepage #why-microstrategy .slick-slider .slick-slide > * {
+  max-width: 100%;
 }
 .NewHomepage #why-microstrategy .ratio {
   width: 250px;

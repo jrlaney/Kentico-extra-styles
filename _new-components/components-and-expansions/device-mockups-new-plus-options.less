@@ -1,5 +1,6 @@
 //new devices and colors
 .device-mockup {
+    .screen {z-index:2;}
     // devices
     &.ipad-portrait {
         max-width:850px;
@@ -190,25 +191,57 @@
     //add drop shadow
     &.shadow {
         box-shadow:none;
+        &.iphone-x,
+        &.ipad,
+        &.isometric-screenshot-landscape .screen,
+        &.isometric-screenshot-portrait .screen,
+        &.isometric-macbook-pro:after,
+        &.isometric-mac-monitor:after,
+        &.isometric-ipad-tilted:after,
+        &.isometric-ipad-portrait:after,
+        &.isometric-iphone:after {
+            box-shadow:5px 5px 10px fade(@pure-black, 30%);
+        }
+        @media @medium {
+            &.iphone-x,
+            &.ipad,
+            &.isometric-screenshot-landscape .screen,
+            &.isometric-screenshot-portrait .screen,
+            &.isometric-macbook-pro:after,
+            &.isometric-mac-monitor:after,
+            &.isometric-ipad-tilted:after,
+            &.isometric-ipad-portrait:after,
+            &.isometric-iphone:after {
+                box-shadow:15px 15px 20px fade(@pure-black, 30%);
+            }
+        }
+        .Safari & {
+            &.iphone-x,
+            &.ipad,
+            &.isometric-screenshot-landscape .screen,
+            &.isometric-screenshot-portrait .screen {box-shadow:none;}
+            &.isometric-macbook-pro:after,
+            &.isometric-mac-monitor:after,
+            &.isometric-ipad-tilted:after,
+            &.isometric-ipad-portrait:after,
+            &.isometric-iphone:after {
+                display:none
+            }
+        }
+
+
         &.iphone-x {
             border-radius: ~"17%/7%";
-            box-shadow:15px 15px 20px fade(@pure-black, 30%);
             background-color:fade(@pure-black, 10%);
         }
         &.ipad {
             border-radius:~"4%/5%";
-            box-shadow:15px 15px 20px fade(@pure-black, 30%);
             background-color:fade(@pure-black, 10%);
-        }
-        &.isometric-screenshot-landscape .screen {
-            box-shadow:15px 15px 20px fade(@pure-black, 30%);
-        }
-        &.isometric-screenshot-portrait .screen {
-            box-shadow:15px 15px 20px fade(@pure-black, 30%);
         }
         &.isometric-macbook-pro {
             background-image: none;
             &:before {
+                position:relative; display:block; z-index:1;
                 background-position: center;
                 background-size: 100% auto;
                 background-repeat: no-repeat;
@@ -216,13 +249,12 @@
             }
             &:after {
                 content:'';
-                position:absolute; z-index:-1;
+                position:absolute; z-index:0;
                 height:55%; width:84%;
                 top:45%;
                 left:40%;
                 border-radius:~"4%/5%";
                 background-color:fade(@pure-black, 30%);
-                box-shadow:15px 15px 20px fade(@pure-black, 30%);
                 .transform(rotateX(54.7deg) rotateZ(45deg));
                 .transform-origin(top, left);
             }
@@ -230,6 +262,7 @@
         &.isometric-mac-monitor {
             background-image: none;
             &:before {
+                position:relative; display:block; z-index:1;
                 background-position: center;
                 background-size: 100% auto;
                 background-repeat: no-repeat;
@@ -237,10 +270,9 @@
             }
             &:after {
                 content:'';
-                position:absolute; z-index:-1;
+                position:absolute; z-index:0;
                 //border:1px solid red;
                 background-color:fade(@pure-black, 30%);
-                box-shadow:15px 15px 20px fade(@pure-black, 30%);
 
                 height:23%; width:34%;
                 bottom:3%;
@@ -253,6 +285,7 @@
         &.isometric-ipad-tilted {
             background-image: none;
             &:before {
+                position:relative; display:block; z-index:1;
                 background-position: center;
                 background-size: 100% auto;
                 background-repeat: no-repeat;
@@ -260,7 +293,7 @@
             }
             &:after {
                 content:'';
-                position:absolute; z-index:-1;
+                position:absolute; z-index:0;
                 //border:1px solid red;
                 height: 5.9%;
                 top: 56.3%;
@@ -268,7 +301,6 @@
                 right: -40.7%;
                 border-radius: ~"17%/50%";
                 background-color:fade(@pure-black, 30%);
-                box-shadow:15px 15px 20px fade(@pure-black, 30%);
                 .transform(rotateX(54.7deg) rotateZ(45deg));
                 .transform-origin(top, left);
             }
@@ -276,6 +308,7 @@
         &.isometric-ipad-portrait {
             background-image: none;
             &:before {
+                position:relative; display:block; z-index:1;
                 background-position: center;
                 background-size: 100% auto;
                 background-repeat: no-repeat;
@@ -283,10 +316,9 @@
             }
             &:after {
                 content:'';
-                position: absolute; z-index:-1;
+                position: absolute; z-index:0;
                 //border:1px solid red;
                 background-color:fade(@pure-black, 30%);
-                box-shadow:15px 15px 20px fade(@pure-black, 30%);
 
                 height:145%;
                 top:-1%;
@@ -300,6 +332,7 @@
         &.isometric-iphone {
             background-image: none;
             &:before {
+                position:relative; display:block; z-index:1;
                 background-position: center;
                 background-size: 100% auto;
                 background-repeat: no-repeat;
@@ -307,14 +340,13 @@
             }
             &:after {
                 content:'';
-                position:absolute; z-index:-1;
+                position:absolute; z-index:0;
                 //border:1px solid red;
                 height:169%; width:52%;
                 top:-2%;
                 left:67%;
                 border-radius:~"18%/12%";
                 background-color:fade(@pure-black, 30%);
-                box-shadow:15px 15px 20px fade(@pure-black, 30%);
                 .transform(rotateX(54.7deg) rotateZ(45deg));
                 .transform-origin(top, left);
             }

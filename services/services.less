@@ -4,14 +4,14 @@
 
 
 //new components
-// @import '../_new-components/components-and-expansions/anchor-link-grid.less';
+@import '../_new-components/components-and-expansions/anchor-link-grid.less';
 @import '../_new-components/components-and-expansions/background-color-filters.less';
 @import '../_new-components/components-and-expansions/blockquote.less';
 // @import '../_new-components/components-and-expansions/button-with-flag.less';
 // @import '../_new-components/components-and-expansions/device-mockups-new-plus-options.less';
 // @import '../_new-components/components-and-expansions/hypercard-graphic.less';
 // @import '../_new-components/components-and-expansions/number-group.less';
-// @import '../_new-components/components-and-expansions/offpage-image.less';
+@import '../_new-components/components-and-expansions/offpage-image.less';
 // @import '../_new-components/components-and-expansions/popup-window-multiple-sizes.less';
 // @import '../_new-components/components-and-expansions/stacked-icons.less';
 @import '../_new-components/components-and-expansions/triangle-group.less';
@@ -19,7 +19,7 @@
 // @import '../_new-components/components-and-expansions/video-embedded-reveal.less';
 
 //resets and fixes
-// @import '../_new-components/resets-and-fixes/form-spacing.less';
+@import '../_new-components/resets-and-fixes/form-spacing.less';
 // @import '../_new-components/resets-and-fixes/related-items.less';
 // @import '../_new-components/resets-and-fixes/vertical-panelstack.less';
 
@@ -30,7 +30,7 @@
 //new sliders
 // @import '../_new-components/sliders/center-mode-image.less';
 // @import '../_new-components/sliders/customer-success-logo-video.less';
-// @import '../_new-components/sliders/multi-item-nav.less';
+@import '../_new-components/sliders/multi-item-nav.less';
 // @import '../_new-components/sliders/photos.less';
 
 
@@ -53,53 +53,60 @@
 
 
 
+.Consulting {
+    #multi-control-slider-nav {
+        padding-left:30px; padding-right:30px;
+    }
+}
 
 
 
-#support-contacts {
-    #contact-info {
+
+
+
+
+.GetSupport.Contacts {
+    .highlight-rows {
+        table-layout: auto;
+
+        .disable-highlight {
+            &:hover {background-color:transparent;}
+            > td:last-child {padding:0;}
+        }
         .highlight-rows {
-            table-layout: auto;
+            border:none;
+            tr:first-child {border-top:none;}
+            tr:last-child {border-bottom:none;}
+            td {padding:10px 20px;}
+        }
 
-            .disable-highlight {
-                &:hover {background-color:transparent;}
-                > td:last-child {padding:0;}
+        @media @small-only {
+            tr, th, td, tbody, thead {
+                display:block; width:100%;
             }
-            .highlight-rows {
-                border:none;
-                tr:first-child {border-top:none;}
-                tr:last-child {border-bottom:none;}
-                td {padding:10px 20px;}
+            td {
+                &:first-child {padding-bottom:5px;}
+                &:last-child {padding-top:0;}
+            }
+            .highlight-rows td {
+                padding-left:40px;
+                &:first-child {padding-bottom:10px;}
+                &:last-child {padding-top:0;}
             }
 
-            @media @small-only {
-                tr, th, td, tbody, thead {
-                    display:block; width:100%;
-                }
-                td {
-                    &:first-child {padding-bottom:5px;}
-                    &:last-child {padding-top:0;}
-                }
-                .highlight-rows td {
-                    padding-left:40px;
-                    &:first-child {padding-bottom:10px;}
-                    &:last-child {padding-top:0;}
-                }
+            //make the long link line break in mobile
+            a {
+                overflow-wrap: break-word;
+                word-wrap: break-word;
 
-                //make the long link line break in mobile
-                a {
-                    overflow-wrap: break-word;
-                    word-wrap: break-word;
+                -ms-word-break: break-all;
+                word-break: break-all;
+                word-break: break-word;
 
-                    -ms-word-break: break-all;
-                    word-break: break-all;
-                    word-break: break-word;
-
-                    -ms-hyphens: auto;
-                    -moz-hyphens: auto;
-                    -webkit-hyphens: auto;
-                    hyphens: auto;
-                }
+                -ms-hyphens: auto;
+                -moz-hyphens: auto;
+                -webkit-hyphens: auto;
+                hyphens: auto;
             }
         }
     }

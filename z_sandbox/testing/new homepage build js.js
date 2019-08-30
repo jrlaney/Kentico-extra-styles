@@ -9,11 +9,11 @@ $(document).ready(function(){
             //console.log('class change ran');
             var diagram = $('#top-benefits');
             if (classIndex >= 0) {
-                diagram.attr('data-currentBenefit', '');
+                diagram.removeClass();
             }
             classIndex = (classIndex + 1) % images.length;
             //diagram.addClass(images[classIndex]);
-            diagram.attr('data-currentBenefit', images[classIndex]);
+            diagram.addClass(images[classIndex]);
         }
     };
     changeBackground();
@@ -32,8 +32,8 @@ $(document).ready(function(){
     //change the animation on click
     $('.benefit-col').click(function(){
         var bene_id = $(this).attr('data-benefit');
-        $('#top-benefits').attr('data-currentBenefit', '');
-        $('#top-benefits').attr('data-currentBenefit', bene_id);
+        $('#top-benefits').removeClass();
+        $('#top-benefits').addClass(bene_id);
     });
 
     //analyst review slider

@@ -1,3 +1,10 @@
+.cards .card {
+  opacity: 1;
+  border: 1px solid #f2f2f2;
+}
+.button {
+  font-weight: 600;
+}
 p:empty {
   margin-bottom: 0!important;
 }
@@ -157,8 +164,8 @@ blockquote {
   padding: 20px 40px;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 20px;
+  line-height: 24px;
 }
 blockquote:last-child {
   margin-bottom: 0;
@@ -169,9 +176,46 @@ blockquote:last-child {
     line-height: 33px;
   }
 }
+blockquote > footer,
+blockquote > span {
+  display: block;
+  margin-top: 1.7em;
+  font-weight: 600;
+  font-size: 0.75em;
+  line-height: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+blockquote:before,
+blockquote:after {
+  content: '“';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 56px;
+  width: 68px;
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 200px;
+  line-height: 0.8em;
+  opacity: .2;
+}
+@media only screen and (min-width: 768px) {
+  blockquote:before,
+  blockquote:after {
+    font-size: 250px;
+  }
+}
+blockquote:after {
+  content: '”';
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 0;
+}
 blockquote.text-small {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 22px;
 }
 @media only screen and (min-width: 768px) {
   blockquote.text-small {
@@ -187,42 +231,10 @@ blockquote.text-tiny:before,
 blockquote.text-tiny:after {
   font-size: 200px;
 }
-blockquote > footer,
-blockquote > span {
-  display: block;
-  margin-top: 30px;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-@media only screen and (min-width: 768px) {
-  blockquote > footer,
-  blockquote > span {
-    font-size: 18px;
-  }
-}
-blockquote:before,
-blockquote:after {
-  content: '“';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 56px;
-  width: 68px;
-  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 250px;
-  line-height: 0.8em;
-  opacity: .2;
-}
-blockquote:after {
-  content: '”';
-  top: auto;
-  left: auto;
-  bottom: 0;
-  right: 0;
+blockquote.text-tiny > footer,
+blockquote.text-tiny > span {
+  font-size: 0.9em;
+  line-height: 0.9em;
 }
 .FRFR blockquote:before,
 .FRFR blockquote:after {
@@ -233,6 +245,9 @@ blockquote:after {
 }
 .FRFR blockquote:after {
   content: "»";
+}
+.device-mockup .screen {
+  z-index: 2;
 }
 .device-mockup.ipad-portrait {
   max-width: 850px;
@@ -488,26 +503,58 @@ blockquote:after {
 .device-mockup.shadow {
   box-shadow: none;
 }
+.device-mockup.shadow.iphone-x,
+.device-mockup.shadow.ipad,
+.device-mockup.shadow.isometric-screenshot-landscape .screen,
+.device-mockup.shadow.isometric-screenshot-portrait .screen,
+.device-mockup.shadow.isometric-macbook-pro:after,
+.device-mockup.shadow.isometric-mac-monitor:after,
+.device-mockup.shadow.isometric-ipad-tilted:after,
+.device-mockup.shadow.isometric-ipad-portrait:after,
+.device-mockup.shadow.isometric-iphone:after {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+@media only screen and (min-width: 768px) {
+  .device-mockup.shadow.iphone-x,
+  .device-mockup.shadow.ipad,
+  .device-mockup.shadow.isometric-screenshot-landscape .screen,
+  .device-mockup.shadow.isometric-screenshot-portrait .screen,
+  .device-mockup.shadow.isometric-macbook-pro:after,
+  .device-mockup.shadow.isometric-mac-monitor:after,
+  .device-mockup.shadow.isometric-ipad-tilted:after,
+  .device-mockup.shadow.isometric-ipad-portrait:after,
+  .device-mockup.shadow.isometric-iphone:after {
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+.Safari .device-mockup.shadow.iphone-x,
+.Safari .device-mockup.shadow.ipad,
+.Safari .device-mockup.shadow.isometric-screenshot-landscape .screen,
+.Safari .device-mockup.shadow.isometric-screenshot-portrait .screen {
+  box-shadow: none;
+}
+.Safari .device-mockup.shadow.isometric-macbook-pro:after,
+.Safari .device-mockup.shadow.isometric-mac-monitor:after,
+.Safari .device-mockup.shadow.isometric-ipad-tilted:after,
+.Safari .device-mockup.shadow.isometric-ipad-portrait:after,
+.Safari .device-mockup.shadow.isometric-iphone:after {
+  display: none;
+}
 .device-mockup.shadow.iphone-x {
   border-radius: 17%/7%;
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
   background-color: rgba(0, 0, 0, 0.1);
 }
 .device-mockup.shadow.ipad {
   border-radius: 4%/5%;
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
   background-color: rgba(0, 0, 0, 0.1);
-}
-.device-mockup.shadow.isometric-screenshot-landscape .screen {
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
-}
-.device-mockup.shadow.isometric-screenshot-portrait .screen {
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
 }
 .device-mockup.shadow.isometric-macbook-pro {
   background-image: none;
 }
 .device-mockup.shadow.isometric-macbook-pro:before {
+  position: relative;
+  display: block;
+  z-index: 1;
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -516,14 +563,13 @@ blockquote:after {
 .device-mockup.shadow.isometric-macbook-pro:after {
   content: '';
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   height: 55%;
   width: 84%;
   top: 45%;
   left: 40%;
   border-radius: 4%/5%;
   background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
   -webkit-transform: rotateX(54.7deg) rotateZ(45deg);
   transform: rotateX(54.7deg) rotateZ(45deg);
   -webkit-transform-origin: top left;
@@ -533,6 +579,9 @@ blockquote:after {
   background-image: none;
 }
 .device-mockup.shadow.isometric-mac-monitor:before {
+  position: relative;
+  display: block;
+  z-index: 1;
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -541,9 +590,8 @@ blockquote:after {
 .device-mockup.shadow.isometric-mac-monitor:after {
   content: '';
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
   height: 23%;
   width: 34%;
   bottom: 3%;
@@ -558,6 +606,9 @@ blockquote:after {
   background-image: none;
 }
 .device-mockup.shadow.isometric-ipad-tilted:before {
+  position: relative;
+  display: block;
+  z-index: 1;
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -566,14 +617,13 @@ blockquote:after {
 .device-mockup.shadow.isometric-ipad-tilted:after {
   content: '';
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   height: 5.9%;
   top: 56.3%;
   left: 3.8%;
   right: -40.7%;
   border-radius: 17%/50%;
   background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
   -webkit-transform: rotateX(54.7deg) rotateZ(45deg);
   transform: rotateX(54.7deg) rotateZ(45deg);
   -webkit-transform-origin: top left;
@@ -583,6 +633,9 @@ blockquote:after {
   background-image: none;
 }
 .device-mockup.shadow.isometric-ipad-portrait:before {
+  position: relative;
+  display: block;
+  z-index: 1;
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -591,9 +644,8 @@ blockquote:after {
 .device-mockup.shadow.isometric-ipad-portrait:after {
   content: '';
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
   height: 145%;
   top: -1%;
   left: 58.3%;
@@ -608,6 +660,9 @@ blockquote:after {
   background-image: none;
 }
 .device-mockup.shadow.isometric-iphone:before {
+  position: relative;
+  display: block;
+  z-index: 1;
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -616,14 +671,13 @@ blockquote:after {
 .device-mockup.shadow.isometric-iphone:after {
   content: '';
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   height: 169%;
   width: 52%;
   top: -2%;
   left: 67%;
   border-radius: 18%/12%;
   background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
   -webkit-transform: rotateX(54.7deg) rotateZ(45deg);
   transform: rotateX(54.7deg) rotateZ(45deg);
   -webkit-transform-origin: top left;
@@ -827,6 +881,12 @@ blockquote:after {
     height: 300px;
   }
 }
+.customer-quote-slide .logo-quote {
+  width: 100%;
+}
+.customer-quote-slide .logo-quote > * {
+  max-width: 100%;
+}
 .customer-quote-slide .logo-quote .ratio {
   max-width: 250px;
   margin: 0 auto;
@@ -850,6 +910,8 @@ blockquote:after {
     flex-direction: column;
     -webkit-align-items: center;
     align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
     width: 45%;
     height: 100%;
     padding: 30px;

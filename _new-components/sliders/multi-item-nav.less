@@ -18,7 +18,10 @@
             border-bottom:15px solid @iron;
             .single-transition;
         }
-        &:hover:before {.translateY(-5px)!important;}
+        &:hover{
+            .icon {color:@red;}
+            &:before {.translateY(-5px)!important;}
+        }
         &.slick-current{
             .icon {color:@red;}
             &:before {
@@ -26,7 +29,6 @@
                 .translateY(-5px)!important;
             }
         }
-        //> * {width:100%;}
 
         &.component-orange.slick-current,
         &.component-orange:hover {
@@ -47,6 +49,11 @@
         &.component-navy-blue:hover {
             .icon {color:@navy-blue;}
             &:before {border-bottom-color:@navy-blue;}
+        }
+        &.component-black.slick-current,
+        &.component-black:hover {
+            .icon {color:@black;}
+            &:before {border-bottom-color:@black;}
         }
     }
     &.nav-above .grid-item {
@@ -77,6 +84,10 @@
         &.component-navy-blue.slick-current:before,
         &.component-navy-blue:hover:before {
             border-top-color:@navy-blue;
+        }
+        &.component-black.slick-current:before,
+        &.component-black:hover:before {
+            border-top-color:@black;
         }
     }
 }

@@ -1,11 +1,5 @@
 @import '../../settings.less';
 
-.button {font-weight:600;}
-
-//time for each diagram animation slide
-@time-per-panel: 6s;
-@time-per-m-animation: 0.5s;
-
 
 //new components
 // @import '../../_new-components/components-and-expansions/anchor-link-grid.less';
@@ -40,8 +34,15 @@
 
 
 
-
+//time for each hypercard in hero mac
 @card-animation-time: 10s;
+
+
+//time for each diagram animation slide
+@time-per-panel: 6s;
+@time-per-m-animation: 0.5s;
+
+
 //for the new homepage
 .NewHomepage {
 	#page-hero {
@@ -50,6 +51,7 @@
 			position:relative;
 			padding-top:80px; padding-bottom:80px;
 			color:@white;
+			> div:first-child {position:relative; z-index:3;}
 			.background-image {
 				position:absolute; z-index:-1;
 				height:100%; width:100vw;
@@ -61,58 +63,88 @@
 			position:relative; z-index:2;
 			@media @medium {margin-top:-80px;}
 			.stacked-mockups {
-				padding-bottom:18%;
 				.device-mockup {
 					position:absolute; z-index:0;
 					top:50%; left:50%;
 					.translate(-50%, -50%);
 					&.isometric-mac-monitor {
-						width:46%;
-						margin-top:-34%;
-						margin-left:36%;
+						position:relative;
+						top:auto; left:auto;
+						.translate(0,0);
+						width:57%;
+						margin-top:-25%;
+						margin-left:66%;
 					}
-					// &.isometric-macbook-pro {
-					// 	width:63%;
-					// 	margin-top:-36%;
-					// 	margin-left:20%;
-					// }
 					&.isometric-ipad-tilted {
 						z-index:1;
 						width:32%;
-						margin-top:-4.5%;
-						margin-left:58%;
+						margin-top:-6.5%;
+						margin-left:12%;
 					}
 					&.isometric-iphone {
 						width:23%;
-						margin-top:1%;
-						margin-left:22%;
+						margin-top:15%;
+						margin-left:2%;
 					}
 					&.isometric-screenshot-landscape {
-						position:relative;
 						width:57%;
-						top:auto; left:auto;
-						.translate(0,0);
-						margin-left:10%;
+						margin-top:-21%;
+						margin-left:-14%;
 						&.second {
-							position:absolute; z-index:0;
-							top:50%; left:50%;
-							.translate(-50%, -50%);
-							margin-top:-21%;
-							margin-left:-66%;
+							margin-top:-13%;
+							margin-left:-51%;
 						}
 					}
 					&.isometric-ipad-portrait {
-						z-index:1;
 						width:46%;
-						margin-top:3.5%;
-						margin-left:-46%;
+						margin-top:7.5%;
+						margin-left:-22%;
 					}
-					// &.isometric-screenshot-portrait {
-					// 	z-index:1;
-					// 	width:60%;
-					// 	margin-top:11.5%;
-					// 	margin-left:-57%;
-					// }
+				}
+				@media @medium {
+					padding-bottom:18%;
+					.device-mockup {
+						&.isometric-mac-monitor {
+							position:absolute;
+							top:50%; left:50%;
+							.translate(-50%,-50%);
+							width:46%;
+							margin-top:-34%;
+							margin-left:36%;
+						}
+						&.isometric-ipad-tilted {
+							z-index:1;
+							width:32%;
+							margin-top:-4.5%;
+							margin-left:58%;
+						}
+						&.isometric-iphone {
+							width:23%;
+							margin-top:1%;
+							margin-left:22%;
+						}
+						&.isometric-screenshot-landscape {
+							position:relative;
+							top:auto; left:auto;
+							.translate(0,0);
+							width:57%;
+							margin-top:0;
+							margin-left:10%;
+							&.second {
+								position:absolute; z-index:0;
+								top:50%; left:50%;
+								.translate(-50%, -50%);
+								margin-top:-21%;
+								margin-left:-66%;
+							}
+						}
+						&.isometric-ipad-portrait {
+							z-index:1;
+							width:46%;
+							margin-top:3.5%;
+							margin-left:-46%;
+						}
+					}
 				}
 			}
 		}
@@ -147,32 +179,31 @@
 	}
 	#customer-logos {
 		position:relative; z-index:1;
-		margin-top:-20px;
 		> div {position:relative; z-index:1;}
 		@media @medium {margin-top:-120px;}
 		@media @large {margin-top:-160px;}
 		@media @xlarge {margin-top:-200px;}
 
-		.logo {opacity:0.99; .single-transition;}
-		.overlay-button {
-			position:absolute; z-index:0;
-			width:100%; height:100%;
-			max-width:@large-breakpoint;
-			top:0; left:50%;
-			.translateX(-50%);
-			opacity:0;
-			.single-transition;
-
-			.button {
-				position:absolute; z-index:3;
-				top:50%; left:50%;
-				.translate(-50%, -50%);
-			}
-		}
-		&:hover {
-			.overlay-button {opacity:1; z-index:2;}
-			.logo {opacity:0.25;}
-		}
+		// .logo {opacity:0.99; .single-transition;}
+		// .overlay-button {
+		// 	position:absolute; z-index:0;
+		// 	width:100%; height:100%;
+		// 	max-width:@large-breakpoint;
+		// 	top:0; left:50%;
+		// 	.translateX(-50%);
+		// 	opacity:0;
+		// 	.single-transition;
+		//
+		// 	.button {
+		// 		position:absolute; z-index:3;
+		// 		top:50%; left:50%;
+		// 		.translate(-50%, -50%);
+		// 	}
+		// }
+		// &:hover {
+		// 	.overlay-button {opacity:1; z-index:2;}
+		// 	.logo {opacity:0.25;}
+		// }
 	}
 	#animated-isometric-diagram {
 		position:relative;
@@ -258,16 +289,22 @@
 		.card-device-comp {
 			width:42%;
 			.hypercard-img {
-				position:absolute; z-index:2;
+				position:absolute; z-index:3;
 				width:15%;
 				.transform-origin(top, left);
-				.transform(rotateX(54.7deg) rotateZ(45deg) skew(45deg));
+				.transform(rotateX(54.7deg) rotateZ(45deg) skew(45deg) translateX(200%) translateY(-40%) translateZ(0));
 				box-shadow:7px 7px 10px fade(@pure-black, 0%);
 				opacity:0;
 				.transition(all 0.3s ease-out ((@time-per-panel - @time-per-m-animation) * 0.15 + 0.6));
-				top:7%; left:44%;
-				&:nth-child(2) {top:25%; left:60%; .transition-delay((@time-per-panel - @time-per-m-animation) * 0.15 + 0.9);}
-				&:nth-child(3) {top:29%; left:81%; .transition-delay((@time-per-panel - @time-per-m-animation) * 0.15 + 1.2);}
+				top:0; left:0;
+				&:nth-child(2) {
+					.transform(rotateX(54.7deg) rotateZ(45deg) skew(45deg) translateX(340%) translateY(5%) translateZ(0));
+					.transition-delay((@time-per-panel - @time-per-m-animation) * 0.15 + 0.9);
+				}
+				&:nth-child(3) {
+					.transform(rotateX(54.7deg) rotateZ(45deg) skew(45deg) translateX(470%) translateY(-115%) translateZ(0));
+					.transition-delay((@time-per-panel - @time-per-m-animation) * 0.15 + 1.2);
+				}
 			}
 			.device-mockup {
 				position:relative;
@@ -306,7 +343,7 @@
 			top:0; left:0;
 		}
 		.floating-icon {
-			display:block; position:absolute; z-index:2;
+			display:block; position:absolute; z-index:5;
 			top:10%; left:53%;
 			width:30%;
 			border-radius:50%;
@@ -366,37 +403,42 @@
 		}
 	}
 	#top-benefits {
-		.benefit-col {
-			position:relative;
-			padding-bottom:60px;
-			color:@dark-gray;
-			.single-transition;
-			.icon {.single-transition;}
-			&:before {
-				content:'';
-				position:absolute;
-				display:block;
-				bottom:20px; left:50%;
-				margin-left:-15px;
-				width:0px; height:0px;
-				border-left:20px solid transparent;
-				border-right:20px solid transparent;
-				border-top:20px solid @iron;
+		padding-top:0;
+		@media @medium {
+			.benefit-col {
+				position:relative;
+				padding-bottom:60px;
+				color:@dark-gray;
 				.single-transition;
-			}
-			&:hover {
-				cursor:pointer;
-				color:@black;
-				&:before {border-top-color:@gray;}
+				.icon {.single-transition;}
+				&:before {
+					content:'';
+					position:absolute;
+					display:block;
+					bottom:20px; left:50%;
+					margin-left:-15px;
+					width:0px; height:0px;
+					border-left:20px solid transparent;
+					border-right:20px solid transparent;
+					border-top:20px solid @iron;
+					.single-transition;
+				}
+				&:hover {
+					cursor:pointer;
+					color:@black;
+					&:before {border-top-color:@gray;}
+				}
 			}
 		}
 
-		&[data-currentBenefit="hyperintelligence"] {
+		&.hyperintelligence {
 			//.diagram-item.hyper {opacity:1;}
-			.benefit-col.hyper {
-				color:@black;
-				.icon {color:@red;}
-				&:before {border-top-color:@red; .translateY(10px);}
+			@media @medium {
+				.benefit-col.hyper {
+					color:@black;
+					.icon {color:@red;}
+					&:before {border-top-color:@red; .translateY(10px);}
+				}
 			}
 			.diagram-lines {
 				bottom:-6.5%; left:24%;
@@ -416,24 +458,22 @@
 			.card-device-comp .hypercard-img {
 				opacity:1;
 				width:23%;
-				top:2%; left:28%;
 				box-shadow:7px 7px 10px fade(@pure-black, 30%);
-				&:nth-child(2) {top:30%; left:50%;}
-				&:nth-child(3) {top:10%; left:75%;}
 			}
 			.echo-dot-comp .speech-bubble {
 				opacity:1;
 				left:35%;
 				&.blue {top:30%; left:51%;}
 			}
-
 		}
-		&[data-currentBenefit="mobility"] {
+		&.mobility {
 			//.diagram-item.mobile {opacity:1;}
-			.benefit-col.mobile {
-				color:@black;
-				.icon {color:@red;}
-				&:before {border-top-color:@red; .translateY(10px);}
+			@media @medium {
+				.benefit-col.mobile {
+					color:@black;
+					.icon {color:@red;}
+					&:before {border-top-color:@red; .translateY(10px);}
+				}
 			}
 			.diagram-lines {
 				width:50%;
@@ -452,12 +492,14 @@
 			.isometric-iphone             {top:41.5%; left:41.5%; .animation(device-appear-top-fork (@time-per-panel - @time-per-m-animation) ease-out @time-per-m-animation normal forwards);}
 			.isometric-ipad-portrait      {top:47.5%; left:53.5%; .animation(device-appear-top-fork (@time-per-panel - @time-per-m-animation) ease-out @time-per-m-animation normal forwards);}
 		}
-		&[data-currentBenefit="federated-analytics"] {
+		&.federated-analytics {
 			//.diagram-item.federated {opacity:1;}
-			.benefit-col.federated {
-				color:@black;
-				.icon {color:@red;}
-				&:before {border-top-color:@red; .translateY(10px);}
+			@media @medium {
+				.benefit-col.federated {
+					color:@black;
+					.icon {color:@red;}
+					&:before {border-top-color:@red; .translateY(10px);}
+				}
 			}
 			.diagram-lines {
 				bottom:15%; left:43%;
@@ -496,29 +538,39 @@
 		}
 		> section {
 			position:relative;
+			padding-left:25px;
 			> .flex-row {position:relative; z-index:1;}
 			&:before, &:after {content:''; position:absolute; z-index:0;}
 			&:before {
-				left:50%; top:50%;
-				.translate(-50%, -50%);
+				left:10px; top:60px;
 				height:0; width:0;
 				background-color:@red;
 				border-radius:50%;
 				.transition(all 0.3s @ease-in-end-bounce 0.8s);
 			}
 			&:after {
-				left:50%; top:0;
-				margin-left:-2px;
+				left:0; top:0;
+				margin-left:21px;
 				height:0; width:4px;
 				background-color:@red;
 				.transition(height 0.7s ease-in 0.2s);
 			}
 			&.passed-view {
-				&:before{height:60px; width:60px;}
+				&:before{height:25px; width:25px;}
 				&:after{height:100%;}
 				.isometric-diagram {
 					&:before{height:25px; width:25px;}
 					&:after{width:~"calc(15% + 12px)";}
+				}
+			}
+			@media @medium {
+				padding-left:0;
+				&:before {left:50%; top:50%; .translate(-50%, -50%);}
+				&:after {left:50%; margin-left:-2px;}
+			}
+			@media @large {
+				&.passed-view {
+					&:before{height:60px; width:60px;}
 				}
 			}
 		}
@@ -545,15 +597,27 @@
 			}
 		}
 		#features-headline {
+			padding-left:0;
 			&:before {
 				z-index:1;
-				top:100%;
+				left:50%; top:100%;
+				.translate(-50%, -50%);
 				background-color:@white;
 				 border:5px solid @red;
 				.transition-delay(0.2s);
 			}
-			&:after {display:none;}
-			&.passed-view:before {height:40px; width:40px;}
+			&:after {
+				height:4px; width:0;
+				left:auto; right:50%; top:100%;
+				margin-top:-2px;
+				.transform-origin(center, right);
+				.transition(width 0.5s ease-in 0.2s);
+				@media @medium {display:none;}
+			}
+			&.passed-view {
+				&:before {height:40px; width:40px;}
+				&:after {width:~"calc(50% - 21px)";}
+			}
 		}
 		#analyze .isometric-diagram {
 			padding-bottom:61%;
@@ -584,7 +648,10 @@
 			.isometric-iphone {
 				width:33%;
 				top:44%; left:18%;
-				&.right-side {top:31%; left:4%;}
+				&.right-side {
+					top:27%; left:66%;
+					@media @medium {top:31%; left:4%;}
+				}
 			}
 		}
 		#realize .isometric-diagram {
@@ -596,7 +663,7 @@
 			.echo-dot-comp {
 				z-index:1;
 				width:28%;
-				top:28%; left:22%;
+				top:30%; left:25%;
 				&:before {
 					content:'';
 					padding-top:120%;
@@ -643,21 +710,22 @@
 			}
 			.isometric-iphone {
 				width:27%;
-				top:58%; left:35%;
+				top:60%; left:39%;
 			}
 			.card-device-comp {
 				z-index:1;
 				width:46%;
 				top:45%; left:51%;
 				.hypercard-img {
-					position:absolute; z-index:2;
+					position:absolute; z-index:5;
 					width:23%;
 					.transform-origin(top, left);
-					.transform(rotateX(54.7deg) rotateZ(45deg) skew(45deg));
-					box-shadow:7px 7px 10px fade(@pure-black, 0%);
-					top:2%; left:28%;
-					&:nth-child(2) {top:30%; left:50%;}
-					&:nth-child(3) {top:10%; left:75%;}
+		            -webkit-transform-style:flat; transform-style:flat;
+					.transform(rotateX(54.7deg) rotateZ(45deg) skew(45deg) translateX(200%) translateY(-40%) translateZ(0));
+					box-shadow:5px 5px 7px fade(@pure-black, 30%);
+					top:0; left:0;
+					&:nth-child(2) {.transform(rotateX(54.7deg) rotateZ(45deg) skew(45deg) translateX(340%) translateY(5%) translateZ(0));}
+					&:nth-child(3) {.transform(rotateX(54.7deg) rotateZ(45deg) skew(45deg) translateX(470%) translateY(-115%) translateZ(0));}
 				}
 				.device-mockup {
 					position:relative;
@@ -671,8 +739,27 @@
 			}
 		}
 		#intelligent-enterprise {
-			&:before {display:none;}
-			&.passed-view:after {height:50%;}
+			padding-left:0;
+			&:before {
+				height:4px; width:0;
+				left:21px; top:0;
+				margin-top:-2px;
+				border-radius:0;
+				.transition(width 0.5s ease-in 0s);
+				@media @medium {display:none;}
+			}
+			&:after {
+				left:50%;
+				margin-left:-2px;
+				.transition(height 0.2s ease-in 0.5s);
+			}
+			&.passed-view{
+				&:before {width:~"calc(50% - 19px)";}
+				&:after {
+					height:55px;
+					@media @medium {height:80px;}
+				}
+			}
 		}
 	}
 	#why-microstrategy {
@@ -681,6 +768,7 @@
 			@media @large {padding-left:0px; padding-right:0px;}
 			.slick-slide {
 				.flex-direction(column);
+				> * {max-width:100%;}
 			}
 		}
 		.ratio {width:250px;}

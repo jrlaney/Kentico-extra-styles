@@ -1,3 +1,10 @@
+.cards .card {
+  opacity: 1;
+  border: 1px solid #f2f2f2;
+}
+.button {
+  font-weight: 600;
+}
 p:empty {
   margin-bottom: 0!important;
 }
@@ -309,8 +316,8 @@ blockquote {
   padding: 20px 40px;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 20px;
+  line-height: 24px;
 }
 blockquote:last-child {
   margin-bottom: 0;
@@ -321,9 +328,46 @@ blockquote:last-child {
     line-height: 33px;
   }
 }
+blockquote > footer,
+blockquote > span {
+  display: block;
+  margin-top: 1.7em;
+  font-weight: 600;
+  font-size: 0.75em;
+  line-height: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+blockquote:before,
+blockquote:after {
+  content: '“';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 56px;
+  width: 68px;
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 200px;
+  line-height: 0.8em;
+  opacity: .2;
+}
+@media only screen and (min-width: 768px) {
+  blockquote:before,
+  blockquote:after {
+    font-size: 250px;
+  }
+}
+blockquote:after {
+  content: '”';
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 0;
+}
 blockquote.text-small {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 22px;
 }
 @media only screen and (min-width: 768px) {
   blockquote.text-small {
@@ -339,42 +383,10 @@ blockquote.text-tiny:before,
 blockquote.text-tiny:after {
   font-size: 200px;
 }
-blockquote > footer,
-blockquote > span {
-  display: block;
-  margin-top: 30px;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-@media only screen and (min-width: 768px) {
-  blockquote > footer,
-  blockquote > span {
-    font-size: 18px;
-  }
-}
-blockquote:before,
-blockquote:after {
-  content: '“';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 56px;
-  width: 68px;
-  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 250px;
-  line-height: 0.8em;
-  opacity: .2;
-}
-blockquote:after {
-  content: '”';
-  top: auto;
-  left: auto;
-  bottom: 0;
-  right: 0;
+blockquote.text-tiny > footer,
+blockquote.text-tiny > span {
+  font-size: 0.9em;
+  line-height: 0.9em;
 }
 .FRFR blockquote:before,
 .FRFR blockquote:after {
@@ -1092,6 +1104,9 @@ section.below-card {
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
+#multi-control-slider-nav .grid-item:hover .icon {
+  color: #D9232E;
+}
 #multi-control-slider-nav .grid-item:hover:before {
   -webkit-transform: translateY(-5px) !important;
   transform: translateY(-5px) !important;
@@ -1136,6 +1151,14 @@ section.below-card {
 #multi-control-slider-nav .grid-item.component-navy-blue:hover:before {
   border-bottom-color: #11566F;
 }
+#multi-control-slider-nav .grid-item.component-black.slick-current .icon,
+#multi-control-slider-nav .grid-item.component-black:hover .icon {
+  color: #333333;
+}
+#multi-control-slider-nav .grid-item.component-black.slick-current:before,
+#multi-control-slider-nav .grid-item.component-black:hover:before {
+  border-bottom-color: #333333;
+}
 #multi-control-slider-nav.nav-above .grid-item {
   padding: 20px 15px 35px 15px;
 }
@@ -1166,6 +1189,10 @@ section.below-card {
 #multi-control-slider-nav.nav-above .grid-item.component-navy-blue.slick-current:before,
 #multi-control-slider-nav.nav-above .grid-item.component-navy-blue:hover:before {
   border-top-color: #11566F;
+}
+#multi-control-slider-nav.nav-above .grid-item.component-black.slick-current:before,
+#multi-control-slider-nav.nav-above .grid-item.component-black:hover:before {
+  border-top-color: #333333;
 }
 #multi-control-slider .slick-slide {
   -webkit-align-items: flex-start;
@@ -1205,6 +1232,12 @@ section.below-card {
     height: 300px;
   }
 }
+.customer-quote-slide .logo-quote {
+  width: 100%;
+}
+.customer-quote-slide .logo-quote > * {
+  max-width: 100%;
+}
 .customer-quote-slide .logo-quote .ratio {
   max-width: 250px;
   margin: 0 auto;
@@ -1228,6 +1261,8 @@ section.below-card {
     flex-direction: column;
     -webkit-align-items: center;
     align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
     width: 45%;
     height: 100%;
     padding: 30px;
@@ -1341,14 +1376,11 @@ section.below-card {
   background-color: #D9232E;
 }
 .caption {
-  position: relative;
-  z-index: 2;
   display: block;
-  background-color: #FFFFFF;
   padding: 20px 15px 0 15px;
   text-align: center;
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #777777;
+  opacity: 0.9;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
@@ -1722,13 +1754,11 @@ section.below-card {
   display: block;
   padding: 0 20px 10px 20px;
   text-align: center;
-  border: 1px solid transparent;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 .AlwaysOnCampaign .ao-scrolldown-link:hover {
   background-color: rgba(0, 0, 0, 0.5);
-  border-color: rgba(255, 255, 255, 0.3);
 }
 .AlwaysOnCampaign .ao-scrolldown-link > span {
   display: block;
