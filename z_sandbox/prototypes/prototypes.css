@@ -1,9 +1,41 @@
+p:empty {
+  margin-bottom: 0!important;
+}
+[class*="col-"].shrink {
+  max-width: 100%;
+}
+a.text-white,
+a.text-white:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.button-group .button {
+  max-width: 100%;
+}
 .cards .card {
   opacity: 1;
   border: 1px solid #f2f2f2;
 }
 .button {
   font-weight: 600;
+}
+.text-block,
+.text-block-group {
+  color: #333333;
+}
+.text-block.red,
+.text-block-group.red,
+.text-block.orange,
+.text-block-group.orange,
+.text-block.green,
+.text-block-group.green,
+.text-block.blue,
+.text-block-group.blue,
+.text-block.navy-blue,
+.text-block-group.navy-blue,
+.text-block.black,
+.text-block-group.black {
+  color: #FFFFFF;
 }
 .AnchorLinkGrid .icon-link-grid {
   background-color: transparent!important;
@@ -159,7 +191,9 @@
 .Accordion ul.accordion > li {
   position: relative;
   margin: 0;
-  padding: 0 0 0 30px;
+  padding: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .Accordion ul.accordion > li p {
   font-size: 1em;
@@ -171,7 +205,10 @@
   margin: 0;
   padding-top: 15px;
   padding-bottom: 15px;
+  padding-left: 30px;
   cursor: pointer;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .Accordion ul.accordion > li > h3:before,
 .Accordion ul.accordion > li > h3:after {
@@ -179,10 +216,12 @@
   position: absolute;
   display: block;
   width: 2px;
-  height: 15px;
+  height: 14px;
   background-color: #333333;
-  top: 22px;
-  left: -22px;
+  top: 23px;
+  left: 7px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .Accordion ul.accordion > li > h3:after {
   -webkit-transform: rotate(90deg);
@@ -193,18 +232,185 @@
   z-index: -1;
   opacity: 0;
   max-height: 0;
+  padding-left: 30px;
   -webkit-transform: translateY(50%);
   transform: translateY(50%);
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
+.Accordion ul.accordion > li.expanded > h3:before {
+  background-color: #D9232E;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.Accordion ul.accordion > li.expanded > h3:after {
+  background-color: #D9232E;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
 .Accordion ul.accordion > li.expanded > h3 + div {
   z-index: 0;
-  margin-bottom: 15px;
+  padding-bottom: 15px;
   opacity: 1;
   max-height: 1000px;
   -webkit-transform: translateY(0);
   transform: translateY(0);
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+}
+.Accordion ul.accordion.divider > li {
+  border-top: 1px solid #DDDDDD;
+}
+.Accordion ul.accordion.divider > li.expanded {
+  border-top: 3px solid #D9232E;
+}
+.Accordion ul.accordion.block > li {
+  background-color: #FFFFFF;
+  color: #333333;
+  border: 1px solid #DDDDDD;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0);
+}
+.Accordion ul.accordion.block > li > h3 {
+  padding-left: 37px;
+  padding-right: 15px;
+}
+.Accordion ul.accordion.block > li > h3:before,
+.Accordion ul.accordion.block > li > h3:after {
+  left: 17px;
+}
+.Accordion ul.accordion.block > li > h3 + div {
+  padding-left: 37px;
+  background-color: #f2f2f2;
+}
+.Accordion ul.accordion.block > li.expanded {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+.Accordion ul.accordion.block > li.expanded > h3 + div {
+  padding: 15px 15px 15px 40px;
+}
+.Accordion ul.accordion.chevron > li > h3:before,
+.Accordion ul.accordion.chevron > li > h3:after {
+  height: 10px;
+  top: 34px;
+  left: 7px;
+  -webkit-transform-origin: center top;
+  transform-origin: center top;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.Accordion ul.accordion.chevron > li > h3:after {
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.Accordion ul.accordion.chevron > li.expanded > h3:before {
+  top: 27px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.Accordion ul.accordion.chevron > li.expanded > h3:after {
+  top: 27px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.Accordion ul.accordion.chevron.block > li > h3:before,
+.Accordion ul.accordion.chevron.block > li > h3:after {
+  left: 17px;
+}
+.Accordion ul.accordion.triangle > li > h3:before {
+  height: 0px;
+  width: 0;
+  top: 19px;
+  left: 5px;
+  background-color: transparent;
+  border-left: 10px solid #333333;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.Accordion ul.accordion.triangle > li > h3:after {
+  display: none;
+}
+.Accordion ul.accordion.triangle > li.expanded > h3:before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  border-left-color: #D9232E;
+}
+.Accordion ul.accordion.triangle.block > li > h3:before {
+  left: 13px;
+}
+.Accordion ul.accordion.right > li > h3 {
+  padding-left: 0;
+  padding-right: 40px;
+}
+.Accordion ul.accordion.right > li > h3:before,
+.Accordion ul.accordion.right > li > h3:after {
+  left: auto;
+  right: 7px;
+}
+.Accordion ul.accordion.right.block > li > h3 {
+  padding-left: 15px;
+  padding-right: 37px;
+}
+.Accordion ul.accordion.right.block > li > h3:before,
+.Accordion ul.accordion.right.block > li > h3:after {
+  left: auto;
+  right: 17px;
+}
+.Accordion ul.accordion.smaller {
+  font-size: 14px;
+}
+.Accordion ul.accordion.smaller > li > h3 {
+  padding-left: 25px;
+}
+.Accordion ul.accordion.smaller > li > h3:before,
+.Accordion ul.accordion.smaller > li > h3:after {
+  top: 22px;
+  height: 12px;
+}
+.Accordion ul.accordion.smaller > li > h3 + div {
+  padding-left: 25px;
+}
+.Accordion ul.accordion.smaller.chevron > li > h3:before,
+.Accordion ul.accordion.smaller.chevron > li > h3:after {
+  left: 6px;
+  top: 31px;
+  height: 8px;
+}
+.Accordion ul.accordion.smaller.chevron > li.expanded > h3:before,
+.Accordion ul.accordion.smaller.chevron > li.expanded > h3:after {
+  top: 26px;
+}
+.Accordion ul.accordion.smaller.triangle > li > h3:before {
+  border-width: 7px 7px 7px;
+  left: 6px;
+  top: 21px;
+  height: 0;
+}
+.Accordion ul.accordion.larger {
+  font-size: 18px;
+}
+.Accordion ul.accordion.larger > li > h3 {
+  padding-left: 40px;
+}
+.Accordion ul.accordion.larger > li > h3:before,
+.Accordion ul.accordion.larger > li > h3:after {
+  top: 24px;
+  height: 18px;
+}
+.Accordion ul.accordion.larger > li > h3 + div {
+  padding-left: 40px;
+}
+.Accordion ul.accordion.larger.chevron > li > h3:before,
+.Accordion ul.accordion.larger.chevron > li > h3:after {
+  left: 10px;
+  top: 37px;
+  height: 12px;
+}
+.Accordion ul.accordion.larger.chevron > li.expanded > h3:before,
+.Accordion ul.accordion.larger.chevron > li.expanded > h3:after {
+  top: 28px;
+}
+.Accordion ul.accordion.larger.triangle > li > h3:before {
+  border-width: 12px 12px 12px;
+  top: 20px;
 }

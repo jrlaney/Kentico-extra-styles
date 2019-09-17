@@ -1,9 +1,41 @@
+p:empty {
+  margin-bottom: 0!important;
+}
+[class*="col-"].shrink {
+  max-width: 100%;
+}
+a.text-white,
+a.text-white:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.button-group .button {
+  max-width: 100%;
+}
 .cards .card {
   opacity: 1;
   border: 1px solid #f2f2f2;
 }
 .button {
   font-weight: 600;
+}
+.text-block,
+.text-block-group {
+  color: #333333;
+}
+.text-block.red,
+.text-block-group.red,
+.text-block.orange,
+.text-block-group.orange,
+.text-block.green,
+.text-block-group.green,
+.text-block.blue,
+.text-block-group.blue,
+.text-block.navy-blue,
+.text-block-group.navy-blue,
+.text-block.black,
+.text-block-group.black {
+  color: #FFFFFF;
 }
 .icon-link-grid {
   background-color: transparent!important;
@@ -457,6 +489,75 @@ blockquote.text-tiny > span {
     border-top-width: 15px;
   }
 }
+.triangle-group.large {
+  padding: 5px 0 5px 30px;
+}
+.triangle-group.large:before {
+  top: 5px;
+  left: -20px;
+  border-left-width: 20px;
+  border-right-width: 20px;
+  border-top-width: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .triangle-group.large {
+    padding-left: 40px;
+  }
+  .triangle-group.large:before {
+    left: -25px;
+    border-left-width: 25px;
+    border-right-width: 25px;
+    border-top-width: 25px;
+  }
+}
+.page-red .triangle-group:before {
+  border-right-color: #D9232E;
+}
+.page-orange .triangle-group:before {
+  border-right-color: #FF9100;
+}
+.page-green .triangle-group:before {
+  border-right-color: #68AA00;
+}
+.page-blue .triangle-group:before {
+  border-right-color: #4789A3;
+}
+.page-navy-blue .triangle-group:before {
+  border-right-color: #11566F;
+}
+.page-black .triangle-group:before {
+  border-right-color: #333333;
+}
+.page-gray .triangle-group:before {
+  border-right-color: #999999;
+}
+.page-white .triangle-group:before {
+  border-right-color: #FFFFFF;
+}
+.component-red .triangle-group:before {
+  border-right-color: #D9232E;
+}
+.component-orange .triangle-group:before {
+  border-right-color: #FF9100;
+}
+.component-green .triangle-group:before {
+  border-right-color: #68AA00;
+}
+.component-blue .triangle-group:before {
+  border-right-color: #4789A3;
+}
+.component-navy-blue .triangle-group:before {
+  border-right-color: #11566F;
+}
+.component-black .triangle-group:before {
+  border-right-color: #333333;
+}
+.component-gray .triangle-group:before {
+  border-right-color: #999999;
+}
+.component-white .triangle-group:before {
+  border-right-color: #FFFFFF;
+}
 .triangle-group.red:before {
   border-right-color: #D9232E;
 }
@@ -634,56 +735,196 @@ p:empty {
   align-items: flex-start;
   min-height: 20px;
 }
-.Consulting #multi-control-slider-nav {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.GetSupport.Contacts .highlight-rows {
-  table-layout: auto;
-}
-.GetSupport.Contacts .highlight-rows .disable-highlight:hover {
-  background-color: transparent;
-}
-.GetSupport.Contacts .highlight-rows .disable-highlight > td:last-child {
+ul.check-list {
+  list-style: none;
   padding: 0;
 }
-.GetSupport.Contacts .highlight-rows .highlight-rows {
+ul.check-list > li {
+  position: relative;
+  padding: 0 0 10px 35px;
+  min-height: 26px;
+}
+ul.check-list > li:before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  content: "\ea31";
+  font-family: microstrategy;
+  font-size: 16px;
+  color: #FFFFFF;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #333333;
+  padding: 5px;
+}
+ul.check-list > li:last-child {
+  padding-bottom: 0;
+}
+.page-red ul.check-list > li:before {
+  background-color: #D9232E;
+}
+.page-orange ul.check-list > li:before {
+  background-color: #FF9100;
+}
+.page-green ul.check-list > li:before {
+  background-color: #68AA00;
+}
+.page-blue ul.check-list > li:before {
+  background-color: #4789A3;
+}
+.page-navy-blue ul.check-list > li:before {
+  background-color: #11566F;
+}
+.page-black ul.check-list > li:before {
+  background-color: #333333;
+}
+.page-gray ul.check-list > li:before {
+  background-color: #999999;
+}
+.page-white ul.check-list > li:before {
+  background-color: #FFFFFF;
+}
+.component-red ul.check-list > li:before {
+  background-color: #D9232E;
+}
+.component-orange ul.check-list > li:before {
+  background-color: #FF9100;
+}
+.component-green ul.check-list > li:before {
+  background-color: #68AA00;
+}
+.component-blue ul.check-list > li:before {
+  background-color: #4789A3;
+}
+.component-navy-blue ul.check-list > li:before {
+  background-color: #11566F;
+}
+.component-black ul.check-list > li:before {
+  background-color: #333333;
+}
+.component-gray ul.check-list > li:before {
+  background-color: #999999;
+}
+.component-white ul.check-list > li:before {
+  background-color: #FFFFFF;
+}
+ul.check-list.red > li:before {
+  background-color: #D9232E;
+}
+ul.check-list.orange > li:before {
+  background-color: #FF9100;
+}
+ul.check-list.green > li:before {
+  background-color: #68AA00;
+}
+ul.check-list.blue > li:before {
+  background-color: #4789A3;
+}
+ul.check-list.navy-blue > li:before {
+  background-color: #11566F;
+}
+ul.check-list.black > li:before {
+  background-color: #333333;
+}
+ul.check-list.gray > li:before {
+  background-color: #999999;
+}
+ul.check-list.white > li:before {
+  background-color: #FFFFFF;
+}
+.Support.SupportOverview #multi-control-slider-nav {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+@media only screen and (min-width: 768px) {
+  .Support.SupportOverview #multi-control-slider-nav {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+.EnterpriseSupportBenefits .macbook-air {
+  width: 170%;
+}
+.EnterpriseSupportBenefits .stacked-mockups .ipad {
+  position: relative;
+  z-index: 0;
+  margin-right: 15%;
+  width: 123%;
+}
+.EnterpriseSupportBenefits .stacked-mockups .iphone-x {
+  position: absolute;
+  z-index: 1;
+  width: 30%;
+  bottom: 0;
+  right: 5%;
+}
+.EnterpriseSupportBenefits #multi-control-slider-nav {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+@media only screen and (min-width: 980px) {
+  .EnterpriseSupportBenefits #multi-control-slider-nav {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+.Consulting #multi-control-slider-nav {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+.Contacts .highlight-rows {
+  table-layout: auto;
+}
+.Contacts .highlight-rows .disable-highlight:hover {
+  background-color: transparent;
+}
+.Contacts .highlight-rows .disable-highlight > td:last-child {
+  padding: 0;
+}
+.Contacts .highlight-rows .highlight-rows {
   border: none;
 }
-.GetSupport.Contacts .highlight-rows .highlight-rows tr:first-child {
+.Contacts .highlight-rows .highlight-rows tr:first-child {
   border-top: none;
 }
-.GetSupport.Contacts .highlight-rows .highlight-rows tr:last-child {
+.Contacts .highlight-rows .highlight-rows tr:last-child {
   border-bottom: none;
 }
-.GetSupport.Contacts .highlight-rows .highlight-rows td {
+.Contacts .highlight-rows .highlight-rows td {
   padding: 10px 20px;
 }
 @media only screen and (max-width: 767px) {
-  .GetSupport.Contacts .highlight-rows tr,
-  .GetSupport.Contacts .highlight-rows th,
-  .GetSupport.Contacts .highlight-rows td,
-  .GetSupport.Contacts .highlight-rows tbody,
-  .GetSupport.Contacts .highlight-rows thead {
+  .Contacts .highlight-rows tr,
+  .Contacts .highlight-rows th,
+  .Contacts .highlight-rows td,
+  .Contacts .highlight-rows tbody,
+  .Contacts .highlight-rows thead {
     display: block;
     width: 100%;
   }
-  .GetSupport.Contacts .highlight-rows td:first-child {
+  .Contacts .highlight-rows td:first-child {
     padding-bottom: 5px;
   }
-  .GetSupport.Contacts .highlight-rows td:last-child {
+  .Contacts .highlight-rows td:last-child {
     padding-top: 0;
   }
-  .GetSupport.Contacts .highlight-rows .highlight-rows td {
+  .Contacts .highlight-rows .highlight-rows td {
     padding-left: 40px;
   }
-  .GetSupport.Contacts .highlight-rows .highlight-rows td:first-child {
+  .Contacts .highlight-rows .highlight-rows td:first-child {
     padding-bottom: 10px;
   }
-  .GetSupport.Contacts .highlight-rows .highlight-rows td:last-child {
+  .Contacts .highlight-rows .highlight-rows td:last-child {
     padding-top: 0;
   }
-  .GetSupport.Contacts .highlight-rows a {
+  .Contacts .highlight-rows a {
     overflow-wrap: break-word;
     word-wrap: break-word;
     -ms-word-break: break-all;

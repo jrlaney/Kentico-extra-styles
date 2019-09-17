@@ -20,6 +20,43 @@
             border-top-width: 15px;
         }
     }
+    &.large {
+        padding:5px 0 5px 30px;
+        &:before {
+            top:5px; left:-20px;
+            border-left-width:20px;
+            border-right-width:20px;
+            border-top-width:20px;
+        }
+        @media @medium {
+            padding-left:40px;
+            &:before {
+                left:-25px;
+                border-left-width:25px;
+                border-right-width:25px;
+                border-top-width:25px;
+            }
+        }
+    }
+
+    .page-red & {&:before{border-right-color:@red;}}
+    .page-orange & {&:before{border-right-color:@orange;}}
+    .page-green & {&:before{border-right-color:@green;}}
+    .page-blue & {&:before{border-right-color:@blue;}}
+    .page-navy-blue & {&:before{border-right-color:@navy-blue;}}
+    .page-black & {&:before{border-right-color:@black;}}
+    .page-gray & {&:before{border-right-color:@gray;}}
+    .page-white & {&:before{border-right-color:@white;}}
+
+    .component-red & {&:before{border-right-color:@red;}}
+    .component-orange & {&:before{border-right-color:@orange;}}
+    .component-green & {&:before{border-right-color:@green;}}
+    .component-blue & {&:before{border-right-color:@blue;}}
+    .component-navy-blue & {&:before{border-right-color:@navy-blue;}}
+    .component-black & {&:before{border-right-color:@black;}}
+    .component-gray & {&:before{border-right-color:@gray;}}
+    .component-white & {&:before{border-right-color:@white;}}
+
     &.red:before {border-right-color:@red;}
     &.orange:before {border-right-color:@orange;}
     &.green:before {border-right-color:@green;}

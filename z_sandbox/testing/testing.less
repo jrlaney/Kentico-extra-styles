@@ -34,15 +34,61 @@
 
 
 
+.ResourceLibrarySinglePage {
+	#resource-information {
+		padding-top:0px;
+	}
+	#resource-details {
+		font-family:@myriad-pro;
+		font-size:1.4rem;
+		font-weight:300;
+		p {font-size:1em;}
+	}
+	#resource-header {
+		position:relative;
+		color:@white;
+		padding:45px 20px;
+		@media @medium {padding-top:80px; padding-bottom:80px; padding-right:40px;}
+		@media @large {padding-top:100px; padding-bottom:100px;}
+		.background-image {
+		    position:absolute; z-index:-1;
+		    height:~"calc(100% + 15px)";
+		    width:100vw;
+		    bottom:0; left:0;
+			@media @medium {
+			    left:100%;
+			    .translateX(-50%);
+			}
+			@media @large {
+				left:86%;
+			}
+		}
+	}
+	#resource-description, #resource-form {
+		padding-top:45px;
+		@media @medium {padding-top:80px;}
+		@media @large {padding-top:100px;}
+	}
+	#resource-description {
+		padding-left:20px; padding-right:20px;
+		@media @medium {padding-right:40px;}
+	}
+	#lead-gen-form {
+		margin-left: auto; margin-right: auto;
+	    padding: 20px;
+	    box-shadow: 1px 1px 5px fade(@pure-black, 50%);
+	}
+}
+
+
+
+
+
 //time for each hypercard in hero mac
 @card-animation-time: 10s;
-
-
 //time for each diagram animation slide
 @time-per-panel: 6s;
 @time-per-m-animation: 0.5s;
-
-
 //for the new homepage
 .NewHomepage {
 	#page-hero {

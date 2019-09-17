@@ -1,9 +1,41 @@
+p:empty {
+  margin-bottom: 0!important;
+}
+[class*="col-"].shrink {
+  max-width: 100%;
+}
+a.text-white,
+a.text-white:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.button-group .button {
+  max-width: 100%;
+}
 .cards .card {
   opacity: 1;
   border: 1px solid #f2f2f2;
 }
 .button {
   font-weight: 600;
+}
+.text-block,
+.text-block-group {
+  color: #333333;
+}
+.text-block.red,
+.text-block-group.red,
+.text-block.orange,
+.text-block-group.orange,
+.text-block.green,
+.text-block-group.green,
+.text-block.blue,
+.text-block-group.blue,
+.text-block.navy-blue,
+.text-block-group.navy-blue,
+.text-block.black,
+.text-block-group.black {
+  color: #FFFFFF;
 }
 p:empty {
   margin-bottom: 0!important;
@@ -818,6 +850,75 @@ blockquote.text-tiny > span {
     border-top-width: 15px;
   }
 }
+.triangle-group.large {
+  padding: 5px 0 5px 30px;
+}
+.triangle-group.large:before {
+  top: 5px;
+  left: -20px;
+  border-left-width: 20px;
+  border-right-width: 20px;
+  border-top-width: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .triangle-group.large {
+    padding-left: 40px;
+  }
+  .triangle-group.large:before {
+    left: -25px;
+    border-left-width: 25px;
+    border-right-width: 25px;
+    border-top-width: 25px;
+  }
+}
+.page-red .triangle-group:before {
+  border-right-color: #D9232E;
+}
+.page-orange .triangle-group:before {
+  border-right-color: #FF9100;
+}
+.page-green .triangle-group:before {
+  border-right-color: #68AA00;
+}
+.page-blue .triangle-group:before {
+  border-right-color: #4789A3;
+}
+.page-navy-blue .triangle-group:before {
+  border-right-color: #11566F;
+}
+.page-black .triangle-group:before {
+  border-right-color: #333333;
+}
+.page-gray .triangle-group:before {
+  border-right-color: #999999;
+}
+.page-white .triangle-group:before {
+  border-right-color: #FFFFFF;
+}
+.component-red .triangle-group:before {
+  border-right-color: #D9232E;
+}
+.component-orange .triangle-group:before {
+  border-right-color: #FF9100;
+}
+.component-green .triangle-group:before {
+  border-right-color: #68AA00;
+}
+.component-blue .triangle-group:before {
+  border-right-color: #4789A3;
+}
+.component-navy-blue .triangle-group:before {
+  border-right-color: #11566F;
+}
+.component-black .triangle-group:before {
+  border-right-color: #333333;
+}
+.component-gray .triangle-group:before {
+  border-right-color: #999999;
+}
+.component-white .triangle-group:before {
+  border-right-color: #FFFFFF;
+}
 .triangle-group.red:before {
   border-right-color: #D9232E;
 }
@@ -847,6 +948,35 @@ blockquote.text-tiny > span {
 }
 .triangle-group.black:before {
   border-right-color: #333333;
+}
+#page-hero.form-fix > .flex-row {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+#page-hero.form-fix > .flex-row .col-md-6.col-xl-5:first-child h1.text-large {
+  font-weight: 400;
+}
+@media only screen and (min-width: 768px) {
+  #page-hero.form-fix > .flex-row .col-md-6.col-xl-5:first-child {
+    -webkit-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+#page-hero.form-fix #lead-gen-form {
+  width: calc(100% - 40px);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 15px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+@media only screen and (min-width: 768px) {
+  #page-hero.form-fix #lead-gen-form {
+    width: calc(100% - 30px);
+  }
+}
+p:empty {
+  margin-bottom: 0!important;
 }
 #customer-story-slider {
   background-color: #FFFFFF;
@@ -1079,28 +1209,31 @@ blockquote.text-tiny > span {
 .GetStarted.get-started-overview #hero .cards .card.component-navy-blue .text-block {
   background-color: #11566F;
 }
-.GetStarted.get-started-overview #page-hero:after {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-.GetStarted.get-started-overview #page-hero > .flex-row {
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-}
-.GetStarted.get-started-overview #page-hero > .flex-row > div:first-child h1.text-large {
-  display: none;
-}
-.GetStarted.get-started-overview #page-hero > .flex-row > div:first-child .line:first-of-type {
-  display: none;
-}
-@media only screen and (min-width: 1200px) {
-  .GetStarted.get-started-overview #page-hero > .flex-row > div:first-child {
-    -webkit-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .GetStarted.get-started-overview #more-options .cards .grid-item:last-child {
+    -webkit-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
-}
-.GetStarted.get-started-overview #page-hero #lead-gen-form {
-  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.6);
+  .GetStarted.get-started-overview #more-options .cards .grid-item:last-child .card {
+    padding-left: 40%;
+  }
+  .GetStarted.get-started-overview #more-options .cards .grid-item:last-child .card > .card-content:first-child {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+  }
+  .GetStarted.get-started-overview #more-options .cards .grid-item:last-child .card > .card-content:first-child .background-image {
+    height: 100%;
+  }
 }
 .CloudTrial #page-hero {
   overflow: visible;

@@ -17,5 +17,27 @@
 @snappy-ease-out: cubic-bezier(.2,0,.03,1);
 @snappy-ease-in: cubic-bezier(.98,0,.76,1);
 
+
+p:empty {margin-bottom:0!important;}
+
+[class*="col-"].shrink {max-width:100%;}
+
+a.text-white, a.text-white:hover {
+    color:@white;
+    text-decoration:underline;
+}
+
+.button-group .button {max-width:100%;}
+
 .cards .card {opacity:1; border:1px solid @light-gray;}
 .button {font-weight:600;}
+
+.text-block, .text-block-group {
+	color:@black;
+	&.red,
+	&.orange,
+	&.green,
+	&.blue,
+	&.navy-blue,
+	&.black {color:@white;}
+}

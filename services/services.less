@@ -36,26 +36,100 @@
 
 
 
+//NEW COMPONENTS
+ul.check-list {
+    list-style: none;
+    padding:0;
+    > li {
+        position: relative;
+        padding:0 0 10px 35px;
+        min-height:26px;
+        //for the check
+        &:before {
+            display: block;
+            position: absolute;
+            left:0; top:5px;
+            content: "\ea31";
+    		font-family: @icon-font-name;
+    		font-size: 16px;
+            color:@white;
+    		.pretty-icon;
+            background-color:@black;
+            padding:5px;
+        }
+        &:last-child {padding-bottom:0;}
+    }
+    .page-red & {> li:before{background-color:@red;}}
+    .page-orange & {> li:before{background-color:@orange;}}
+    .page-green & {> li:before{background-color:@green;}}
+    .page-blue & {> li:before{background-color:@blue;}}
+    .page-navy-blue & {> li:before{background-color:@navy-blue;}}
+    .page-black & {> li:before{background-color:@black;}}
+    .page-gray & {> li:before{background-color:@gray;}}
+    .page-white & {> li:before{background-color:@white;}}
+
+    .component-red & {> li:before{background-color:@red;}}
+    .component-orange & {> li:before{background-color:@orange;}}
+    .component-green & {> li:before{background-color:@green;}}
+    .component-blue & {> li:before{background-color:@blue;}}
+    .component-navy-blue & {> li:before{background-color:@navy-blue;}}
+    .component-black & {> li:before{background-color:@black;}}
+    .component-gray & {> li:before{background-color:@gray;}}
+    .component-white & {> li:before{background-color:@white;}}
+
+    &.red {> li:before{background-color:@red;}}
+    &.orange {> li:before{background-color:@orange;}}
+    &.green {> li:before{background-color:@green;}}
+    &.blue {> li:before{background-color:@blue;}}
+    &.navy-blue {> li:before{background-color:@navy-blue;}}
+    &.black {> li:before{background-color:@black;}}
+    &.gray {> li:before{background-color:@gray;}}
+    &.white {> li:before{background-color:@white;}}
+}
+
+
+
+
 //INDIVIDUAL PAGE STYLES
-// .TechnicalSupport.techSupportOverview {
-//     // #tech-support-services {
-//     //     .grid-item > div {height:100%;}
-//     // }
-//     // table {
-//     //     border-color:@iron;
-//     //     tbody tr {border-top-color:@iron;border-bottom-color:@iron;}
-//     // }
-//     // table.compare-columns thead th:empty {
-//     //     border-bottom-color: @iron;
-//     // }
-// }
+
+
+.Support.SupportOverview {
+    #multi-control-slider-nav {
+        padding-left:35px; padding-right:35px;
+        @media @medium {padding-left:0px; padding-right:0px;}
+    }
+}
+
+
+
+.EnterpriseSupportBenefits {
+    .macbook-air {
+        width:170%;
+    }
+    .stacked-mockups {
+        .ipad {
+            position:relative; z-index:0;
+            margin-right:15%;
+            width:123%;
+        }
+        .iphone-x {
+            position:absolute; z-index:1;
+            width:30%;
+            bottom:0; right:5%;
+        }
+    }
+    #multi-control-slider-nav {
+        padding-left:35px; padding-right:35px;
+        @media @large {padding-left:0px; padding-right:0px;}
+    }
+}
 
 
 
 
 .Consulting {
     #multi-control-slider-nav {
-        padding-left:30px; padding-right:30px;
+        padding-left:35px; padding-right:35px;
     }
 }
 
@@ -65,7 +139,7 @@
 
 
 
-.GetSupport.Contacts {
+.Contacts {
     .highlight-rows {
         table-layout: auto;
 
@@ -111,6 +185,23 @@
         }
     }
 }
+
+
+
+
+
+// .TechnicalSupport.techSupportOverview {
+//     // #tech-support-services {
+//     //     .grid-item > div {height:100%;}
+//     // }
+//     // table {
+//     //     border-color:@iron;
+//     //     tbody tr {border-top-color:@iron;border-bottom-color:@iron;}
+//     // }
+//     // table.compare-columns thead th:empty {
+//     //     border-bottom-color: @iron;
+//     // }
+// }
 
 // blockquote {
 //     display:inline-block; *zoom:1; *display:inline; position:relative;

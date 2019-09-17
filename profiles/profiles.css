@@ -1,9 +1,41 @@
+p:empty {
+  margin-bottom: 0!important;
+}
+[class*="col-"].shrink {
+  max-width: 100%;
+}
+a.text-white,
+a.text-white:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.button-group .button {
+  max-width: 100%;
+}
 .cards .card {
   opacity: 1;
   border: 1px solid #f2f2f2;
 }
 .button {
   font-weight: 600;
+}
+.text-block,
+.text-block-group {
+  color: #333333;
+}
+.text-block.red,
+.text-block-group.red,
+.text-block.orange,
+.text-block-group.orange,
+.text-block.green,
+.text-block-group.green,
+.text-block.blue,
+.text-block-group.blue,
+.text-block.navy-blue,
+.text-block-group.navy-blue,
+.text-block.black,
+.text-block-group.black {
+  color: #FFFFFF;
 }
 .Single.Page {
   font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;

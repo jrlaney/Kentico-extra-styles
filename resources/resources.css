@@ -1,9 +1,41 @@
+p:empty {
+  margin-bottom: 0!important;
+}
+[class*="col-"].shrink {
+  max-width: 100%;
+}
+a.text-white,
+a.text-white:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.button-group .button {
+  max-width: 100%;
+}
 .cards .card {
   opacity: 1;
   border: 1px solid #f2f2f2;
 }
 .button {
   font-weight: 600;
+}
+.text-block,
+.text-block-group {
+  color: #333333;
+}
+.text-block.red,
+.text-block-group.red,
+.text-block.orange,
+.text-block-group.orange,
+.text-block.green,
+.text-block-group.green,
+.text-block.blue,
+.text-block-group.blue,
+.text-block.navy-blue,
+.text-block-group.navy-blue,
+.text-block.black,
+.text-block-group.black {
+  color: #FFFFFF;
 }
 .icon-link-grid {
   background-color: transparent!important;
@@ -513,6 +545,75 @@ blockquote.text-tiny > span {
     border-right-width: 15px;
     border-top-width: 15px;
   }
+}
+.triangle-group.large {
+  padding: 5px 0 5px 30px;
+}
+.triangle-group.large:before {
+  top: 5px;
+  left: -20px;
+  border-left-width: 20px;
+  border-right-width: 20px;
+  border-top-width: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .triangle-group.large {
+    padding-left: 40px;
+  }
+  .triangle-group.large:before {
+    left: -25px;
+    border-left-width: 25px;
+    border-right-width: 25px;
+    border-top-width: 25px;
+  }
+}
+.page-red .triangle-group:before {
+  border-right-color: #D9232E;
+}
+.page-orange .triangle-group:before {
+  border-right-color: #FF9100;
+}
+.page-green .triangle-group:before {
+  border-right-color: #68AA00;
+}
+.page-blue .triangle-group:before {
+  border-right-color: #4789A3;
+}
+.page-navy-blue .triangle-group:before {
+  border-right-color: #11566F;
+}
+.page-black .triangle-group:before {
+  border-right-color: #333333;
+}
+.page-gray .triangle-group:before {
+  border-right-color: #999999;
+}
+.page-white .triangle-group:before {
+  border-right-color: #FFFFFF;
+}
+.component-red .triangle-group:before {
+  border-right-color: #D9232E;
+}
+.component-orange .triangle-group:before {
+  border-right-color: #FF9100;
+}
+.component-green .triangle-group:before {
+  border-right-color: #68AA00;
+}
+.component-blue .triangle-group:before {
+  border-right-color: #4789A3;
+}
+.component-navy-blue .triangle-group:before {
+  border-right-color: #11566F;
+}
+.component-black .triangle-group:before {
+  border-right-color: #333333;
+}
+.component-gray .triangle-group:before {
+  border-right-color: #999999;
+}
+.component-white .triangle-group:before {
+  border-right-color: #FFFFFF;
 }
 .triangle-group.red:before {
   border-right-color: #D9232E;
