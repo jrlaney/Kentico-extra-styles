@@ -405,6 +405,32 @@ blockquote.text-tiny > span {
 .gridder .gridder-navigation a.gridder-close:hover:after {
   background-color: #333333;
 }
+.iframe-wrapper {
+  position: relative;
+}
+.iframe-wrapper:before {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.iframe-wrapper > iframe,
+.iframe-wrapper .video-embed,
+.iframe-wrapper > object {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.iframe-wrapper.document:before {
+  padding-top: 117.64705882%;
+}
+@media only screen and (min-width: 768px) {
+  .iframe-wrapper.document {
+    height: 90vh;
+  }
+}
 .offpage-image {
   width: 150%;
   max-width: none;
@@ -450,6 +476,25 @@ blockquote.text-tiny > span {
 .z-3 {
   position: relative;
   z-index: 3;
+}
+.white-popup.popup-width-jumbo {
+  max-width: 1200px;
+}
+.white-popup.popup-width-large {
+  max-width: 1000px;
+}
+.white-popup.popup-width-medium {
+  max-width: 800px;
+}
+.white-popup.popup-width-small {
+  max-width: 600px;
+}
+.white-popup.popup-width-tiny {
+  max-width: 400px;
+}
+.white-popup.y-scroll {
+  max-height: 80vh;
+  overflow: auto;
 }
 #page-hero.form-fix > .flex-row {
   -webkit-justify-content: space-between;

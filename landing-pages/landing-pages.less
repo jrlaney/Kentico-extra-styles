@@ -30,6 +30,34 @@
 
 //unique components
 
+.cards .card.winner {
+    &:before {
+    	content: "Winner";
+    	position: absolute;
+    	z-index: 3;
+    	display: block;
+    	width: 200px;
+    	top: 20px;
+    	right: -70px;
+    	padding: 5px 10px;
+    	background-color: @black;
+    	box-shadow: 1px 1px 5px fade(@pure-black, 40%);
+    	.rotation(45deg);
+    	font-family: @myriad-pro;
+    	font-size: 12px;
+    	line-height: 12px;
+    	color: @white;
+    	font-weight: 600;
+    	.uppercase;
+    	text-align: center;
+    }
+    &.component-red:before {background-color:@red;}
+    &.component-orange:before {background-color:@orange;}
+    &.component-green:before {background-color:@green;}
+    &.component-blue:before {background-color:@blue;}
+    &.component-navy-blue:before {background-color:@navy-blue;}
+}
+
 .caption {
     display:block;
     padding:20px 15px 0 15px;
@@ -50,7 +78,6 @@
         }
     }
 }
-
 
 
 

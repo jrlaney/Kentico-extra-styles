@@ -1390,6 +1390,43 @@ section.below-card {
 #photo-slider .slick-dots li.slick-active button:after {
   background-color: #D9232E;
 }
+.cards .card.winner:before {
+  content: "Winner";
+  position: absolute;
+  z-index: 3;
+  display: block;
+  width: 200px;
+  top: 20px;
+  right: -70px;
+  padding: 5px 10px;
+  background-color: #333333;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  color: #FFFFFF;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+.cards .card.winner.component-red:before {
+  background-color: #D9232E;
+}
+.cards .card.winner.component-orange:before {
+  background-color: #FF9100;
+}
+.cards .card.winner.component-green:before {
+  background-color: #68AA00;
+}
+.cards .card.winner.component-blue:before {
+  background-color: #4789A3;
+}
+.cards .card.winner.component-navy-blue:before {
+  background-color: #11566F;
+}
 .caption {
   display: block;
   padding: 20px 15px 0 15px;

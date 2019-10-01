@@ -1,0 +1,318 @@
+p:empty {
+  margin-bottom: 0!important;
+}
+[class*="col-"].shrink {
+  max-width: 100%;
+}
+a.text-white,
+a.text-white:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.button-group .button {
+  max-width: 100%;
+}
+.cards .card {
+  opacity: 1;
+  border: 1px solid #f2f2f2;
+}
+.button {
+  font-weight: 600;
+}
+.text-block,
+.text-block-group {
+  color: #333333;
+}
+.text-block.red,
+.text-block-group.red,
+.text-block.orange,
+.text-block-group.orange,
+.text-block.green,
+.text-block-group.green,
+.text-block.blue,
+.text-block-group.blue,
+.text-block.navy-blue,
+.text-block-group.navy-blue,
+.text-block.black,
+.text-block-group.black {
+  color: #FFFFFF;
+}
+.filter-red {
+  background-color: #D9232E;
+  -webkit-background-blend-mode: multiply;
+  background-blend-mode: multiply;
+}
+.InternetExplorer .filter-red:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(217, 35, 46, 0.7);
+}
+.filter-orange {
+  background-color: #FF9100;
+  -webkit-background-blend-mode: multiply;
+  background-blend-mode: multiply;
+}
+.InternetExplorer .filter-orange:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 145, 0, 0.7);
+}
+.filter-green {
+  background-color: #68AA00;
+  -webkit-background-blend-mode: multiply;
+  background-blend-mode: multiply;
+}
+.InternetExplorer .filter-green:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(104, 170, 0, 0.7);
+}
+.filter-blue {
+  background-color: #4789A3;
+  -webkit-background-blend-mode: multiply;
+  background-blend-mode: multiply;
+}
+.InternetExplorer .filter-blue:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(71, 137, 163, 0.7);
+}
+.filter-navy-blue {
+  background-color: #11566F;
+  -webkit-background-blend-mode: multiply;
+  background-blend-mode: multiply;
+}
+.InternetExplorer .filter-navy-blue:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 86, 111, 0.7);
+}
+.gradient-overlay-red:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(217, 35, 46, 0) 10%, rgba(217, 35, 46, 0.85) 100%);
+  background: -webkit-linear-gradient(top, rgba(217, 35, 46, 0) 10%, rgba(217, 35, 46, 0.85) 100%);
+  background: linear-gradient(to bottom, rgba(217, 35, 46, 0) 10%, rgba(217, 35, 46, 0.85) 100%);
+}
+.gradient-overlay-orange:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(255, 145, 0, 0) 10%, rgba(255, 145, 0, 0.85) 100%);
+  background: -webkit-linear-gradient(top, rgba(255, 145, 0, 0) 10%, rgba(255, 145, 0, 0.85) 100%);
+  background: linear-gradient(to bottom, rgba(255, 145, 0, 0) 10%, rgba(255, 145, 0, 0.85) 100%);
+}
+.gradient-overlay-green:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(104, 170, 0, 0) 10%, rgba(104, 170, 0, 0.85) 100%);
+  background: -webkit-linear-gradient(top, rgba(104, 170, 0, 0) 10%, rgba(104, 170, 0, 0.85) 100%);
+  background: linear-gradient(to bottom, rgba(104, 170, 0, 0) 10%, rgba(104, 170, 0, 0.85) 100%);
+}
+.gradient-overlay-blue:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(71, 137, 163, 0) 10%, rgba(71, 137, 163, 0.85) 100%);
+  background: -webkit-linear-gradient(top, rgba(71, 137, 163, 0) 10%, rgba(71, 137, 163, 0.85) 100%);
+  background: linear-gradient(to bottom, rgba(71, 137, 163, 0) 10%, rgba(71, 137, 163, 0.85) 100%);
+}
+.gradient-overlay-navy-blue:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(17, 86, 111, 0) 10%, rgba(17, 86, 111, 0.85) 100%);
+  background: -webkit-linear-gradient(top, rgba(17, 86, 111, 0) 10%, rgba(17, 86, 111, 0.85) 100%);
+  background: linear-gradient(to bottom, rgba(17, 86, 111, 0) 10%, rgba(17, 86, 111, 0.85) 100%);
+}
+.gradient-overlay-black:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+}
+#page-hero.overlap-section-below,
+#hero.overlap-section-below,
+section.overlap-section-below {
+  padding-bottom: 200px;
+}
+#page-hero.overlap-section-below + section,
+#hero.overlap-section-below + section,
+section.overlap-section-below + section {
+  position: relative;
+  z-index: 5;
+  margin-top: -200px;
+}
+#page-hero.overlap-section-below.small-overlap,
+#hero.overlap-section-below.small-overlap,
+section.overlap-section-below.small-overlap {
+  padding-bottom: 100px;
+}
+#page-hero.overlap-section-below.small-overlap + section,
+#hero.overlap-section-below.small-overlap + section,
+section.overlap-section-below.small-overlap + section {
+  margin-top: -100px;
+}
+#page-hero.overlap-section-below.medium-overlap,
+#hero.overlap-section-below.medium-overlap,
+section.overlap-section-below.medium-overlap {
+  padding-bottom: 150px;
+}
+#page-hero.overlap-section-below.medium-overlap + section,
+#hero.overlap-section-below.medium-overlap + section,
+section.overlap-section-below.medium-overlap + section {
+  margin-top: -150px;
+}
+@media only screen and (min-width: 768px) {
+  #page-hero.overlap-section-below,
+  #hero.overlap-section-below,
+  section.overlap-section-below {
+    padding-bottom: 300px;
+  }
+  #page-hero.overlap-section-below + section,
+  #hero.overlap-section-below + section,
+  section.overlap-section-below + section {
+    margin-top: -300px;
+  }
+  #page-hero.overlap-section-below.small-overlap,
+  #hero.overlap-section-below.small-overlap,
+  section.overlap-section-below.small-overlap {
+    padding-bottom: 150px;
+  }
+  #page-hero.overlap-section-below.small-overlap + section,
+  #hero.overlap-section-below.small-overlap + section,
+  section.overlap-section-below.small-overlap + section {
+    margin-top: -150px;
+  }
+  #page-hero.overlap-section-below.medium-overlap,
+  #hero.overlap-section-below.medium-overlap,
+  section.overlap-section-below.medium-overlap {
+    padding-bottom: 200px;
+  }
+  #page-hero.overlap-section-below.medium-overlap + section,
+  #hero.overlap-section-below.medium-overlap + section,
+  section.overlap-section-below.medium-overlap + section {
+    margin-top: -200px;
+  }
+}
+.in-between-card.flex-row {
+  position: relative;
+  z-index: 5;
+}
+.in-between-card.flex-row .card {
+  position: relative;
+  z-index: 5;
+  background-color: #FFFFFF;
+  padding: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 768px) {
+  .in-between-card.flex-row {
+    margin-top: -150px;
+    margin-bottom: 60px;
+  }
+  .in-between-card.flex-row .card {
+    padding: 15px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section.above-card {
+    padding-bottom: 150px!important;
+    position: relative;
+    z-index: 4;
+  }
+}
+section.below-card {
+  overflow: visible!important;
+}
+#page-hero input.reverse {
+  font-size: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+@media only screen and (min-width: 980px) {
+  #page-hero input.reverse {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+#page-hero input.reverse:focus {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#page-hero.error-500 {
+  min-height: 350px;
+  height: calc(100vh - 65px);
+  max-height: 900px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+@media only screen and (min-width: 768px) {
+  #page-hero.error-500 {
+    min-height: 550px;
+  }
+}
+#page-hero.error-500 > .flex-row {
+  display: -webkit-flex;
+  display: flex;
+}

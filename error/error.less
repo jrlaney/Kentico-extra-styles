@@ -1,0 +1,57 @@
+@import '../settings.less';
+
+
+//new components
+// @import '../_new-components/components-and-expansions/anchor-link-grid.less';
+@import '../_new-components/components-and-expansions/background-color-filters.less';
+// @import '../_new-components/components-and-expansions/blockquote.less';
+// @import '../_new-components/components-and-expansions/button-with-flag.less';
+// @import '../_new-components/components-and-expansions/device-mockups-new-plus-options.less';
+// @import '../_new-components/components-and-expansions/hypercard-graphic.less';
+// @import '../_new-components/components-and-expansions/number-group.less';
+// @import '../_new-components/components-and-expansions/offpage-image.less';
+// @import '../_new-components/components-and-expansions/popup-window-multiple-sizes.less';
+// @import '../_new-components/components-and-expansions/stacked-icons.less';
+// @import '../_new-components/components-and-expansions/triangle-group.less';
+// @import '../_new-components/components-and-expansions/vertical-diagram.less';
+// @import '../_new-components/components-and-expansions/video-embedded-reveal.less';
+
+//resets and fixes
+// @import '../_new-components/resets-and-fixes/form-spacing.less';
+// @import '../_new-components/resets-and-fixes/related-items.less';
+// @import '../_new-components/resets-and-fixes/vertical-panelstack.less';
+
+//new sections and heros
+// @import '../_new-components/sections-and-heros/hero-banner-single-angle.less';
+@import '../_new-components/sections-and-heros/section-content-between.less';
+
+//new sliders
+// @import '../_new-components/sliders/center-mode-image.less';
+// @import '../_new-components/sliders/customer-success-logo-video.less';
+// @import '../_new-components/sliders/multi-item-nav.less';
+// @import '../_new-components/sliders/photos.less';
+
+
+#page-hero {
+	input.reverse {
+		font-size:18px;
+		border:1px solid fade(@white, 30%);
+		background-color:fade(@pure-black, 40%);
+		@media @large {max-width:80%; margin-left:auto; margin-right:auto;}
+		&:focus {
+			background-color:fade(@pure-black, 70%);
+		}
+	}
+	&.error-500 {
+		min-height:350px;
+		@media @medium {min-height:550px;}
+		height:~"calc(100vh - 65px)";
+		max-height:900px;
+		.display(flex);
+		.flex-direction(column);
+		.align-items(center);
+		.justify-content(center);
+
+	    > .flex-row {.display(flex);}
+	}
+}
