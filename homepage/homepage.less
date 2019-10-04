@@ -9,7 +9,7 @@
 //@import '../_new-components/components-and-expansions/device-mockups-new-plus-options.less';
 @import '../_new-components/components-and-expansions/hypercard-graphic.less';
 // @import '../_new-components/components-and-expansions/number-group.less';
-@import '../_new-components/components-and-expansions/offpage-image.less';
+//@import '../_new-components/components-and-expansions/offpage-image.less';
 // @import '../_new-components/components-and-expansions/popup-window-multiple-sizes.less';
 // @import '../_new-components/components-and-expansions/triangle-group.less';
 // @import '../_new-components/components-and-expansions/video-embedded-reveal.less';
@@ -33,9 +33,26 @@
 
 
 
+//rectangle slick dots
+.slick-dots {
+    margin-top:20px;
+    li button {
+        border-radius:0;
+        width:50px; height:auto;
+        padding:15px 0;
+        background-color:transparent!important;
+        &:after {
+            content:'';
+            display:block;
+            background-color:@iron;
+            width:100%; height:5px;
+            .single-transition;
+        }
+    }
+    li.slick-active button:after {background-color:@red; height:10px;}
+}
 
-
-//new devices and colors, modified to reduce size
+//new devices and colors, modified to reduce image size
 .device-mockup {
     .screen {z-index:2;}
 
@@ -221,8 +238,6 @@
             }
         }
         .Safari & {
-            &.iphone-x,
-            &.ipad,
             &.isometric-screenshot-landscape .screen,
             &.isometric-screenshot-portrait .screen {box-shadow:none;}
             &.isometric-macbook-pro:after,
@@ -232,6 +247,10 @@
             &.isometric-iphone:after {
                 display:none
             }
+        }
+        &.iphone-x {
+            border-radius: ~"17%/7%";
+            background-color:fade(@pure-black, 10%);
         }
         &.isometric-macbook-pro {
             background-image: none;
@@ -351,6 +370,8 @@
 
 
 
+
+
 //time for each hypercard in hero mac
 @card-animation-time: 10s;
 
@@ -358,6 +379,88 @@
 //for the new homepage
 #page-hero {
 	position:relative; z-index:0;
+    &.flat-devices-version {
+        padding-top:0; padding-bottom:0;
+        .hero-copy {
+    		position:relative;
+    		color:@white;
+    		padding:45px 20px;
+    		@media @medium {padding-top:80px; padding-bottom:80px;}
+    		@media @large {padding-top:120px; padding-bottom:120px;}
+    		.background-image {
+    		    position:absolute; z-index:-1;
+    		    height:~"calc(100% + 15px)";
+    		    width:100vw;
+    		    bottom:0; left:0;
+    			@media @medium {
+    			    left:100%;
+    			    .translateX(-50%);
+    			}
+    			@media @large {
+    				left:86%;
+    			}
+    		}
+        }
+        .cards {
+            display:block; margin:0;
+            margin-top:-40px;
+            padding:20px;
+            @media @medium {
+                margin-top:-50px;
+                width:80%;
+            }
+        }
+        .stacked-mockups {
+            position:relative;
+    		margin-top:30px;
+            padding-bottom:10%;
+            .macbook-pro {
+                position:relative; z-index:0;
+                width:150%; float:left;
+                margin-left:-8%;
+            }
+            .iphone-x {
+                position:absolute; z-index:1;
+                width:30%;
+                top:30%; left:5%;
+            }
+    		@media @medium {
+                margin-top:80px;
+                .macbook-pro {
+                    width:170%;
+                    margin-left:-15%;
+                }
+                .iphone-x {
+                    width:35%;
+                    left:0;
+                }
+            }
+    		@media @large {
+                margin-top:120px;
+                .macbook-pro {
+                    width:215%;
+                    margin-left:-22%;
+                }
+                .iphone-x {
+                    width:45%;
+                    top:32%;
+                }
+            }
+    		@media @xlarge {
+                .iphone-x {
+                    left:-7%;
+                }
+            }
+        }
+        .slick-dots {
+            position:absolute;
+            width:136%;
+            top:115%;
+            left:-11.5%;
+        }
+    }
+
+    //isometric stuff (retiring)
 	.text-content-row {
 		position:relative;
 		padding-top:80px; padding-bottom:80px;
@@ -370,7 +473,7 @@
 			.translateX(-50%);
 		}
 	}
-	.device-row {
+    .device-row {
 		position:relative; z-index:2;
 		margin-top:-80px;
         @media @medium {margin-top:-50px;}

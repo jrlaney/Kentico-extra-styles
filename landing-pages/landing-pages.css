@@ -1390,6 +1390,10 @@ section.below-card {
 #photo-slider .slick-dots li.slick-active button:after {
   background-color: #D9232E;
 }
+.accordion .toggler.text-white:before,
+.accordion .toggler.text-white:after {
+  background-color: #FFFFFF;
+}
 .cards .card.winner:before {
   content: "Winner";
   position: absolute;

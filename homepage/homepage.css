@@ -277,52 +277,6 @@ blockquote.text-tiny > span {
   border: 1px solid #CCCCCC;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
 }
-.offpage-image {
-  width: 150%;
-  max-width: none;
-}
-.offpage-image.left {
-  float: right;
-}
-.offpage-image.right {
-  float: left;
-}
-.offpage-image.centered {
-  margin-left: -25%;
-}
-@media only screen and (min-width: 980px) {
-  .offpage-image.left {
-    margin-right: 5%;
-  }
-  .offpage-image.left.pc-laptop,
-  .offpage-image.left.macbook-pro,
-  .offpage-image.left.macbook-air {
-    margin-right: -10%;
-  }
-  .offpage-image.right {
-    margin-left: 5%;
-  }
-  .offpage-image.right.pc-laptop,
-  .offpage-image.right.macbook-pro,
-  .offpage-image.right.macbook-air {
-    margin-left: -10%;
-  }
-}
-.stacked-mockups {
-  position: relative;
-}
-.z-1 {
-  position: relative;
-  z-index: 1;
-}
-.z-2 {
-  position: relative;
-  z-index: 2;
-}
-.z-3 {
-  position: relative;
-  z-index: 3;
-}
 .related-items {
   background-color: #FFFFFF;
 }
@@ -338,6 +292,29 @@ blockquote.text-tiny > span {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+.slick-dots {
+  margin-top: 20px;
+}
+.slick-dots li button {
+  border-radius: 0;
+  width: 50px;
+  height: auto;
+  padding: 15px 0;
+  background-color: transparent!important;
+}
+.slick-dots li button:after {
+  content: '';
+  display: block;
+  background-color: #CCCCCC;
+  width: 100%;
+  height: 5px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.slick-dots li.slick-active button:after {
+  background-color: #D9232E;
+  height: 10px;
 }
 .device-mockup .screen {
   z-index: 2;
@@ -556,8 +533,6 @@ blockquote.text-tiny > span {
     box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
   }
 }
-.Safari .device-mockup.shadow.iphone-x,
-.Safari .device-mockup.shadow.ipad,
 .Safari .device-mockup.shadow.isometric-screenshot-landscape .screen,
 .Safari .device-mockup.shadow.isometric-screenshot-portrait .screen {
   box-shadow: none;
@@ -568,6 +543,10 @@ blockquote.text-tiny > span {
 .Safari .device-mockup.shadow.isometric-ipad-portrait:after,
 .Safari .device-mockup.shadow.isometric-iphone:after {
   display: none;
+}
+.device-mockup.shadow.iphone-x {
+  border-radius: 17%/7%;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .device-mockup.shadow.isometric-macbook-pro {
   background-image: none;
@@ -707,6 +686,115 @@ blockquote.text-tiny > span {
 #page-hero {
   position: relative;
   z-index: 0;
+}
+#page-hero.flat-devices-version {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#page-hero.flat-devices-version .hero-copy {
+  position: relative;
+  color: #FFFFFF;
+  padding: 45px 20px;
+}
+@media only screen and (min-width: 768px) {
+  #page-hero.flat-devices-version .hero-copy {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #page-hero.flat-devices-version .hero-copy {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+#page-hero.flat-devices-version .hero-copy .background-image {
+  position: absolute;
+  z-index: -1;
+  height: calc(100% + 15px);
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+}
+@media only screen and (min-width: 768px) {
+  #page-hero.flat-devices-version .hero-copy .background-image {
+    left: 100%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+@media only screen and (min-width: 980px) {
+  #page-hero.flat-devices-version .hero-copy .background-image {
+    left: 86%;
+  }
+}
+#page-hero.flat-devices-version .cards {
+  display: block;
+  margin: 0;
+  margin-top: -40px;
+  padding: 20px;
+}
+@media only screen and (min-width: 768px) {
+  #page-hero.flat-devices-version .cards {
+    margin-top: -50px;
+    width: 80%;
+  }
+}
+#page-hero.flat-devices-version .stacked-mockups {
+  position: relative;
+  margin-top: 30px;
+  padding-bottom: 10%;
+}
+#page-hero.flat-devices-version .stacked-mockups .macbook-pro {
+  position: relative;
+  z-index: 0;
+  width: 150%;
+  float: left;
+  margin-left: -8%;
+}
+#page-hero.flat-devices-version .stacked-mockups .iphone-x {
+  position: absolute;
+  z-index: 1;
+  width: 30%;
+  top: 30%;
+  left: 5%;
+}
+@media only screen and (min-width: 768px) {
+  #page-hero.flat-devices-version .stacked-mockups {
+    margin-top: 80px;
+  }
+  #page-hero.flat-devices-version .stacked-mockups .macbook-pro {
+    width: 170%;
+    margin-left: -15%;
+  }
+  #page-hero.flat-devices-version .stacked-mockups .iphone-x {
+    width: 35%;
+    left: 0;
+  }
+}
+@media only screen and (min-width: 980px) {
+  #page-hero.flat-devices-version .stacked-mockups {
+    margin-top: 120px;
+  }
+  #page-hero.flat-devices-version .stacked-mockups .macbook-pro {
+    width: 215%;
+    margin-left: -22%;
+  }
+  #page-hero.flat-devices-version .stacked-mockups .iphone-x {
+    width: 45%;
+    top: 32%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #page-hero.flat-devices-version .stacked-mockups .iphone-x {
+    left: -7%;
+  }
+}
+#page-hero.flat-devices-version .slick-dots {
+  position: absolute;
+  width: 136%;
+  top: 115%;
+  left: -11.5%;
 }
 #page-hero .text-content-row {
   position: relative;
