@@ -1,0 +1,63 @@
+ul.circle-list {
+    // page colors
+    .loop-colors(@i) when (@i > 0) {
+        .loop-colors(@i - 1);
+
+        @color-class: extract(@color-classes, @i);
+        @color: extract(@colors, @i);
+
+		.page-@{color-class} & > li:before {
+            background-color: @color;
+        }
+    }
+    // component colors
+    .loop-colors(@i) when (@i > 0) {
+        .loop-colors(@i - 1);
+
+        @color-class: extract(@color-classes, @i);
+        @color: extract(@colors, @i);
+
+		.component-@{color-class} & > li:before {
+            background-color: @color;
+        }
+    }
+
+    .loop-colors(length(@color-classes));
+}
+
+ul {
+    &.circle-list {
+        list-style: none;
+
+        & > li {
+            position: relative;
+			padding-top:0px;
+			padding-bottom:10px;
+
+            &:before {
+                content: "";
+                display: block;
+                .size(7px);
+				border-radius:50%;
+                position: absolute;
+                top:5px; left:-20px;
+				background-color:@black;
+            }
+			&:last-child {padding-bottom:0;}
+        }
+
+        // colors
+        .loop-colors(@i) when (@i > 0) {
+            .loop-colors(@i - 1);
+
+            @color-class: extract(@color-classes, @i);
+            @color: extract(@colors, @i);
+
+            &.@{color-class} > li:before {
+                background-color: @color;
+            }
+        }
+
+        .loop-colors(length(@color-classes));
+    }
+}

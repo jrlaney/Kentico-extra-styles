@@ -316,6 +316,9 @@ blockquote.text-tiny > span {
   background-color: #D9232E;
   height: 10px;
 }
+.stacked-mockups {
+  position: relative;
+}
 .device-mockup .screen {
   z-index: 2;
 }
@@ -795,6 +798,35 @@ blockquote.text-tiny > span {
   width: 136%;
   top: 115%;
   left: -11.5%;
+}
+#page-hero #hypercard-slide {
+  position: relative;
+}
+#page-hero #hypercard-slide .cursor {
+  position: absolute;
+  z-index: 2;
+  width: 15px;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: all 0.1s linear 0.5s;
+  transition: all 0.1s linear 0.5s;
+}
+#page-hero #hypercard-slide .hypercard-img {
+  opacity: 0;
+  position: absolute;
+  width: 25%;
+  top: 22%;
+  left: 25%;
+}
+#page-hero #hypercard-slide.slick-current .cursor {
+  -webkit-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
+  top: 16%;
+  left: 27%;
+}
+#page-hero #hypercard-slide.slick-current .hypercard-img {
+  -webkit-animation: fade-slide-down 0.2s ease-out 0.8s normal forwards;
+  animation: fade-slide-down 0.2s ease-out 0.8s normal forwards;
 }
 #page-hero .text-content-row {
   position: relative;
