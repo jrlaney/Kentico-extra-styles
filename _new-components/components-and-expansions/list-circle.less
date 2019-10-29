@@ -10,7 +10,11 @@ ul.circle-list {
             background-color: @color;
         }
     }
-    // component colors
+
+    .loop-colors(length(@color-classes));
+}
+ul.circle-list {
+    // page colors
     .loop-colors(@i) when (@i > 0) {
         .loop-colors(@i - 1);
 
