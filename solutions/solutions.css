@@ -522,6 +522,9 @@ blockquote.text-tiny > span {
     width: calc(100% - 30px);
   }
 }
+#page-hero.form-fix #form-success-content-div {
+  padding: 10px 15px;
+}
 p:empty {
   margin-bottom: 0!important;
 }
