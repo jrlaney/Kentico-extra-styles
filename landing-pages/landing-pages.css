@@ -1397,6 +1397,30 @@ section.below-card {
 .accordion .toggler.text-white:after {
   background-color: #FFFFFF;
 }
+.prize-box {
+  display: block;
+  position: relative;
+  padding: 75px 20px 0 20px;
+}
+.prize-box .background-text {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 70px;
+  line-height: 47px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  overflow-wrap: break-word;
+}
+.prize-box .background-text sup {
+  font-size: 0.5em;
+}
 .cards .card.winner:before {
   content: "Winner";
   position: absolute;
@@ -1630,6 +1654,247 @@ section.below-card {
 }
 .DossierContest .center-mode-slider .slick-list {
   overflow: visible;
+}
+.DossierContest .cards .card.world-card {
+  background-color: #000000;
+  color: #FFFFFF;
+  overflow: hidden;
+}
+.DossierContest .cards .card.world-card > section {
+  z-index: 2;
+}
+@media only screen and (min-width: 980px) {
+  .DossierContest .cards .card.world-card > section {
+    padding: 50px 25% 50px 30px;
+  }
+}
+.DossierContest .cards .card.world-card .card-description {
+  color: #FFFFFF;
+  font-size: 22px;
+  line-height: 32px;
+}
+.DossierContest .cards .card.world-card .button {
+  min-width: 50%;
+}
+.DossierContest .cards .card.world-card:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.DossierContest .cards .card.world-card:hover:after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.DossierContest .cards .card.world-card .world-iris {
+  position: absolute;
+  z-index: 0;
+  width: 250%;
+  padding-bottom: 100%;
+  top: -5%;
+  left: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+@media only screen and (min-width: 980px) {
+  .DossierContest .cards .card.world-card .world-iris {
+    width: 200%;
+  }
+}
+.DossierContest .cards .card.world-card .world-iris .iris-layer {
+  position: absolute;
+  z-index: 0;
+  max-width: none;
+  top: 50%;
+  left: 50%;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.DossierContest .cards .card.world-card .world-iris .iris-layer.first {
+  z-index: 0;
+  width: 100%;
+  -webkit-animation: continual-rotate 600s linear 0s infinite;
+  animation: continual-rotate 600s linear 0s infinite;
+}
+.DossierContest .cards .card.world-card .world-iris .iris-layer.second {
+  z-index: 1;
+  width: 48.85%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-animation: continual-rotate 400s linear -50s infinite;
+  animation: continual-rotate 400s linear -50s infinite;
+}
+.DossierContest .cards .card.world-card .world-iris .iris-layer.third {
+  z-index: 2;
+  width: 40.76%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-animation: continual-rotate 270s linear -100s infinite;
+  animation: continual-rotate 270s linear -100s infinite;
+}
+.DossierContest .cards .card.world-card .world-iris .iris-layer.fourth {
+  z-index: 1;
+  width: 24.66%;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-animation: continual-rotate 200s linear 0s infinite;
+  animation: continual-rotate 200s linear 0s infinite;
+}
+.World2020DossierContest main#page-content {
+  background-color: #000000;
+  overflow: hidden;
+  color: #FFFFFF;
+}
+.World2020DossierContest main#page-content > section {
+  position: relative;
+  overflow: visible;
+}
+.World2020DossierContest main#page-content > section.overlay:after {
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.World2020DossierContest main#page-content [class*="col-"] {
+  position: relative;
+  z-index: 2;
+}
+.World2020DossierContest .background-animated-world2020 {
+  position: relative;
+}
+.World2020DossierContest .background-animated-world2020 .world-iris {
+  position: absolute;
+  z-index: 0;
+  width: 300%;
+  padding-bottom: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+@media only screen and (min-width: 980px) {
+  .World2020DossierContest .background-animated-world2020 .world-iris {
+    width: 250%;
+  }
+}
+.World2020DossierContest .background-animated-world2020 .world-iris.top-right {
+  top: -5%;
+  left: 100%;
+}
+.World2020DossierContest .background-animated-world2020 .world-iris.bottom-left {
+  top: 105%;
+  left: 0%;
+}
+.World2020DossierContest .background-animated-world2020 .world-iris .iris-layer {
+  position: absolute;
+  z-index: 0;
+  max-width: none;
+  top: 50%;
+  left: 50%;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.World2020DossierContest .background-animated-world2020 .world-iris .iris-layer.first {
+  z-index: 0;
+  width: 100%;
+  -webkit-animation: continual-rotate 600s linear 0s infinite;
+  animation: continual-rotate 600s linear 0s infinite;
+}
+.World2020DossierContest .background-animated-world2020 .world-iris .iris-layer.second {
+  z-index: 1;
+  width: 48.85%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-animation: continual-rotate 400s linear -50s infinite;
+  animation: continual-rotate 400s linear -50s infinite;
+}
+.World2020DossierContest .background-animated-world2020 .world-iris .iris-layer.third {
+  z-index: 2;
+  width: 40.76%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-animation: continual-rotate 270s linear -100s infinite;
+  animation: continual-rotate 270s linear -100s infinite;
+}
+.World2020DossierContest .background-animated-world2020 .world-iris .iris-layer.fourth {
+  z-index: 1;
+  width: 24.66%;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-animation: continual-rotate 200s linear 0s infinite;
+  animation: continual-rotate 200s linear 0s infinite;
+}
+.World2020DossierContest .screenshot {
+  position: relative;
+}
+.World2020DossierContest .screenshot .caption {
+  position: absolute;
+  font-weight: 600;
+  padding: 10px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.World2020DossierContest #past-winners > .flex-row.expand {
+  max-width: 1700px;
+}
+@media only screen and (min-width: 980px) {
+  .World2020DossierContest #past-winners > .flex-row.expand {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.World2020DossierContest #past-winners > .flex-row.expand > div {
+  position: relative;
+}
+.World2020DossierContest #past-winners .screenshot {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  margin: 0 auto;
+  width: 33.333%;
+  top: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.World2020DossierContest #past-winners .screenshot.center {
+  position: relative;
+  z-index: 3;
+  width: 45%;
+}
+.World2020DossierContest #past-winners .screenshot.left {
+  left: 15px;
+}
+.World2020DossierContest #past-winners .screenshot.left .caption {
+  padding-right: 23%;
+}
+.World2020DossierContest #past-winners .screenshot.right {
+  right: 15px;
+}
+.World2020DossierContest #past-winners .screenshot.right .caption {
+  padding-left: 23%;
+}
+.World2020DossierContest #freeform-visuals .stacked-mockups > img {
+  margin: 0 20px 20px 0;
+}
+.World2020DossierContest #freeform-visuals .stacked-mockups .animation-img {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 40%;
+}
+.World2020DossierContest #enter {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .HyperChallenge #tweet-text:not(:empty) {
   padding: 20px;
@@ -2137,5 +2402,25 @@ section.below-card {
     -webkit-transform: translateY(20px);
     transform: translateY(20px);
     opacity: 0;
+  }
+}
+@-webkit-keyframes continual-rotate {
+  0% {
+    -webkit-transform: rotate(0deg) translate(-50%, -50%);
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translate(-50%, -50%);
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
+@keyframes continual-rotate {
+  0% {
+    -webkit-transform: rotate(0deg) translate(-50%, -50%);
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translate(-50%, -50%);
+    transform: rotate(360deg) translate(-50%, -50%);
   }
 }
