@@ -1495,15 +1495,52 @@ main, section {overflow:hidden;}
         font-size:16px; line-height:18px;
     }
     .auto-slider-with-dots .slide {display:block;}
-    #business-users .slide {
-        .device-mockup {z-index:1;}
+    //arrange screenshots within slideshows
+    .ratio {
+        .device-mockup {position:absolute; z-index:1;}
+        &.overlap-phone-tablet {
+            .ipad {
+                top:0; left:0;
+                width:85%;
+            }
+            .iphone-x {
+                z-index:2;
+                top:20%; right:0;
+                width:30%;
+            }
+        }
+        &.single-phone {
+            .device-mockup {
+                width:50%;
+                top:0; left:50%;
+                .translateX(-50%,);
+            }
+        }
+        &.single-laptop {
+            .device-mockup {
+                width:97%;
+                bottom:0; left:50%;
+                .translateX(-50%);
+            }
+        }
+        &.single-mac-monitor {
+            .device-mockup {
+                width:85%;
+                top:0; left:50%;
+                .translateX(-50%);
+            }
+        }
+    }
+
+    //retring after 2020 updates to intl
+    #business-users {
         .stacked-mockups {
             z-index:1;
              width:100%;
              padding-top: 57.66666667%;
              overflow:hidden;
             .google-pixel {
-                position:absolute;
+                position:absolute; z-index:1;
                 width:40%;
                 top:0; left:15%;
                 &:last-child {

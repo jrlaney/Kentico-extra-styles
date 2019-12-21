@@ -4,6 +4,7 @@
 @import '../_new-components/components-and-expansions/anchor-link-grid.less';
 @import '../_new-components/components-and-expansions/background-color-filters.less';
 @import '../_new-components/components-and-expansions/blockquote.less';
+@import '../_new-components/components-and-expansions/hypercard-graphic.less';
 @import '../_new-components/components-and-expansions/number-group.less';
 @import '../_new-components/components-and-expansions/offpage-image.less';
 @import '../_new-components/components-and-expansions/popup-window-multiple-sizes.less';
@@ -25,6 +26,33 @@
 @import '../_new-components/sliders/photos.less';
 
 
+
+
+
+//stacked panels that revolve to reveal the next in line
+.revolving-panels {
+    display:inline-block;
+    position:relative;
+    overflow:visible;
+    margin:0 0 60px 60px;
+
+    &.panles- {
+        &3-up {margin:0 0 40px 40px;}
+        &4-up {margin:0 0 60px 60px;}
+        &5-up {margin:0 0 80px 80px;}
+    }
+    .rev-panel {
+        position:absolute; z-index:0;
+        margin:0;
+        top:0; left:0;
+        .animation(card-stack-cycle 8s linear 0s normal infinite);
+        &:first-child{position:relative;}
+        &:nth-child(2) {.animation-delay(-2s~"!important");}
+        &:nth-child(3) {.animation-delay(-4s~"!important");}
+        &:nth-child(4) {.animation-delay(-6s~"!important");}
+        &:nth-child(5) {.animation-delay(-8s~"!important");}
+    }
+}
 
 
 
@@ -653,4 +681,22 @@
 .keyframes(continual-rotate;{
 	0%   {.transform(rotate(0deg) translate(-50%, -50%));}
 	100%  {.transform(rotate(360deg) translate(-50%, -50%));}
+});
+
+//for the hyper card cycling on the hypercard page
+.keyframes(card-stack-cycle;{
+    0% {.translate(0,0); opacity:1; z-index:0;}
+    5% {.translate(-20px,20px); opacity:1; z-index:0;}
+
+    25% {.translate(-20px,20px); opacity:1; z-index:1;}
+    30% {.translate(-40px,40px); opacity:1; z-index:1;}
+
+    50% {.translate(-40px,40px); opacity:1; z-index:2;}
+    55% {.translate(-60px,60px); opacity:1; z-index:2;}
+
+    75% {.translate(-60px,60px); opacity:1; z-index:3;}
+    80% {.translate(-60px,80px); opacity:0; z-index:3;}
+
+    95% {.translate(0,20px); opacity:0; z-index:0;}
+    100%{.translate(0,0); opacity:1; z-index:0;}
 });
