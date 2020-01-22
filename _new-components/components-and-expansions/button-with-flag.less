@@ -1,10 +1,11 @@
 .button.arrow.flagged-button {
 	font-weight:600;
-	padding:10px 2.5em 10px 0;
+	padding:10px 2.5em 10px 1.25em;
 	> .flag {
+		display:inline-block;
 		padding:5px 10px;
-		margin-left:-10px;
-		margin-right:10px;
+		margin-left:~"calc(-1.25em - 10px)";
+		margin-bottom:10px;
 		background-color:@black;
 		font-size:12px; line-height:12px;
 		color:@white;

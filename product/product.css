@@ -37,6 +37,13 @@ a.text-white:hover {
 .text-block-group.black {
   color: #FFFFFF;
 }
+#lead-gen-form a {
+  color: #377ABD;
+  text-decoration: none;
+}
+#lead-gen-form a:hover {
+  color: #4EA2F6;
+}
 main,
 section {
   overflow: hidden;
@@ -464,12 +471,13 @@ blockquote.text-tiny > span {
 }
 .button.arrow.flagged-button {
   font-weight: 600;
-  padding: 10px 2.5em 10px 0;
+  padding: 10px 2.5em 10px 1.25em;
 }
 .button.arrow.flagged-button > .flag {
+  display: inline-block;
   padding: 5px 10px;
-  margin-left: -10px;
-  margin-right: 10px;
+  margin-left: calc(-1.25em - 10px);
+  margin-bottom: 10px;
   background-color: #333333;
   font-size: 12px;
   line-height: 12px;

@@ -37,6 +37,13 @@ a.text-white:hover {
 .text-block-group.black {
   color: #FFFFFF;
 }
+#lead-gen-form a {
+  color: #377ABD;
+  text-decoration: none;
+}
+#lead-gen-form a:hover {
+  color: #4EA2F6;
+}
 .offpage-image {
   width: 150%;
   max-width: none;

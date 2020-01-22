@@ -37,6 +37,13 @@ a.text-white:hover {
 .text-block-group.black {
   color: #FFFFFF;
 }
+#lead-gen-form a {
+  color: #377ABD;
+  text-decoration: none;
+}
+#lead-gen-form a:hover {
+  color: #4EA2F6;
+}
 #hero.background-image {
   background-image: url('/getmedia/1fd836d0-96bb-4f6f-ac34-c6784cbec71f/events');
 }

@@ -37,6 +37,13 @@ a.text-white:hover {
 .text-block-group.black {
   color: #FFFFFF;
 }
+#lead-gen-form a {
+  color: #377ABD;
+  text-decoration: none;
+}
+#lead-gen-form a:hover {
+  color: #4EA2F6;
+}
 .filter-red {
   background-color: #D9232E;
   -webkit-background-blend-mode: multiply;

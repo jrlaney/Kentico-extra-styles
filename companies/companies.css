@@ -37,6 +37,13 @@ a.text-white:hover {
 .text-block-group.black {
   color: #FFFFFF;
 }
+#lead-gen-form a {
+  color: #377ABD;
+  text-decoration: none;
+}
+#lead-gen-form a:hover {
+  color: #4EA2F6;
+}
 .Partners #hero.background-image {
   background-image: url('/getmedia/f7467b6a-e8f0-46bb-85cf-de71b8a35b7b/businesspeople-looking-at-mobile-device');
 }

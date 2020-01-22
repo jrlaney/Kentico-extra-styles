@@ -41,10 +41,12 @@ ul {
             &:before {
                 content: "";
                 display: block;
-                .size(7px);
+                width:0.4em; height:0.4em;
+                min-width:5px; min-height:5px;
+                max-width:15px; max-height:15px;
 				border-radius:50%;
                 position: absolute;
-                top:5px; left:-20px;
+                top:0.5em; left:-20px;
 				background-color:@black;
             }
 			&:last-child {padding-bottom:0;}
