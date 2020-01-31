@@ -136,6 +136,43 @@
     }
 }
 
+.countdown-wrapper {
+    display:block;
+    position:relative;
+    z-index:2;
+    background-color:fade(@pure-black, 75%);
+    padding-bottom:20px;
+    @media @medium {background-color:transparent;}
+
+    .time-block {
+        display:inline-block;
+        padding:0 25px;
+        width:~"calc(50% - 5px)";
+        margin-left:-5px;
+
+        font-family:@myriad-pro;
+        font-weight:400;
+        font-size:60px;
+        color:@white;
+        .uppercase;
+        text-align:center;
+        @media @medium {font-size:70px; width:auto; max-width:~"calc(25% - 5px)"; background-color:fade(@pure-black, 75%);}
+        @media @large {font-size:90px;}
+
+        span {
+            display:block;
+            margin-top:5px;
+
+            font-size:16px;
+            color:@white;
+            font-weight:600;
+        }
+        // &:nth-child(2) {color:@orange;}
+        // &:nth-child(3) {color:@green;}
+        // &:nth-child(4) {color:@blue;}
+    }
+}
+
 
 
 

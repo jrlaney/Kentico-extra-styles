@@ -37,11 +37,11 @@ a.text-white:hover {
 .text-block-group.black {
   color: #FFFFFF;
 }
-#lead-gen-form a {
+#lead-gen-form a:not(.button) {
   color: #377ABD;
   text-decoration: none;
 }
-#lead-gen-form a:hover {
+#lead-gen-form a:not(.button):hover {
   color: #4EA2F6;
 }
 .icon-link-grid {
@@ -1450,6 +1450,32 @@ section.below-card {
 }
 #photo-slider .slick-dots li.slick-active button:after {
   background-color: #D9232E;
+}
+.iframe-wrapper {
+  position: relative;
+}
+.iframe-wrapper:before {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.iframe-wrapper > iframe,
+.iframe-wrapper .video-embed,
+.iframe-wrapper > object {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.iframe-wrapper.document:before {
+  padding-top: 117.64705882%;
+}
+@media only screen and (min-width: 768px) {
+  .iframe-wrapper.document {
+    height: 90vh;
+  }
 }
 .revolving-panels {
   display: inline-block;

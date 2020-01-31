@@ -42,7 +42,7 @@ a.text-white, a.text-white:hover {
 	&.black {color:@white;}
 }
 
-#lead-gen-form { 
-    a {color:@link; text-decoration: none;}
-    a:hover {color:@hover;}
+#lead-gen-form {
+    a:not(.button) {color:@link; text-decoration: none;} 
+    a:not(.button):hover {color:@hover;}
 }

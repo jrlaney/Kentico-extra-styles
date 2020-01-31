@@ -29,6 +29,31 @@
 
 
 
+//flexible responsive iframe wrapper
+.iframe-wrapper {
+	position:relative;
+    &:before {
+        content:'';
+        display:block;
+        width:100%;
+        .aspect-ratio(16, 9);
+     }
+	> iframe, .video-embed, > object {
+		.size(100%);
+		.position(absolute, 0, 0);
+	}
+    &.document {
+        &:before {.aspect-ratio(8.5, 10);}
+    }
+	@media @medium {
+	    &.document {
+	        height:90vh;
+	    }
+	}
+}
+
+
+
 //stacked panels that revolve to reveal the next in line
 .revolving-panels {
     display:inline-block;

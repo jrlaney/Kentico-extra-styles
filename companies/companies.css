@@ -37,11 +37,11 @@ a.text-white:hover {
 .text-block-group.black {
   color: #FFFFFF;
 }
-#lead-gen-form a {
+#lead-gen-form a:not(.button) {
   color: #377ABD;
   text-decoration: none;
 }
-#lead-gen-form a:hover {
+#lead-gen-form a:not(.button):hover {
   color: #4EA2F6;
 }
 .Partners #hero.background-image {

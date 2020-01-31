@@ -37,11 +37,11 @@ a.text-white:hover {
 .text-block-group.black {
   color: #FFFFFF;
 }
-#lead-gen-form a {
+#lead-gen-form a:not(.button) {
   color: #377ABD;
   text-decoration: none;
 }
-#lead-gen-form a:hover {
+#lead-gen-form a:not(.button):hover {
   color: #4EA2F6;
 }
 .filter-red {
@@ -820,6 +820,51 @@ blockquote.text-tiny > span {
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
   -webkit-animation: continual-rotate 200s linear 0s 3;
   animation: continual-rotate 200s linear 0s 3;
+}
+.countdown-wrapper {
+  display: block;
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding-bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .countdown-wrapper {
+    background-color: transparent;
+  }
+}
+.countdown-wrapper .time-block {
+  display: inline-block;
+  padding: 0 25px;
+  width: calc(50% - 5px);
+  margin-left: -5px;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .countdown-wrapper .time-block {
+    font-size: 70px;
+    width: auto;
+    max-width: calc(25% - 5px);
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+}
+@media only screen and (min-width: 980px) {
+  .countdown-wrapper .time-block {
+    font-size: 90px;
+  }
+}
+.countdown-wrapper .time-block span {
+  display: block;
+  margin-top: 5px;
+  font-size: 16px;
+  color: #FFFFFF;
+  font-weight: 600;
 }
 section#page-hero {
   position: relative;
