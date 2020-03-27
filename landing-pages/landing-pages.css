@@ -1451,6 +1451,44 @@ section.below-card {
 #photo-slider .slick-dots li.slick-active button:after {
   background-color: #D9232E;
 }
+.countdown-wrapper {
+  display: block;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 20px;
+}
+.countdown-wrapper .time-block {
+  display: inline-block;
+  padding: 0 25px;
+  width: calc(50% - 5px);
+  margin-left: -5px;
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .countdown-wrapper .time-block {
+    font-size: 70px;
+    width: auto;
+    max-width: calc(25% - 5px);
+  }
+}
+@media only screen and (min-width: 980px) {
+  .countdown-wrapper .time-block {
+    font-size: 90px;
+  }
+}
+.countdown-wrapper .time-block span {
+  display: block;
+  margin-top: 5px;
+  font-size: 16px;
+  color: #FFFFFF;
+  font-weight: 600;
+}
 .iframe-wrapper {
   position: relative;
 }
@@ -1771,6 +1809,9 @@ section.below-card {
     margin-top: 0;
     margin-left: 20px!important;
   }
+}
+.World2020Live #formCompletionContent #content-hero {
+  display: none;
 }
 .DossierContest .center-mode-slider:before,
 .DossierContest .center-mode-slider:after {
