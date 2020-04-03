@@ -2883,8 +2883,8 @@ section.below-card {
 }
 .Hyperintelligence #introduction .device-mockup .hypercard-img {
   position: absolute;
-  top: 20%;
-  left: 48%;
+  top: 37%;
+  left: 59%;
   width: 25%;
   opacity: 0;
   -webkit-animation: hero-card-appear-hyperint 10s linear 0s normal infinite;
@@ -4678,12 +4678,12 @@ section.below-card {
     left: 50%;
   }
   5% {
-    top: 50%;
-    left: 78%;
+    top: 65%;
+    left: 53%;
   }
   70% {
-    top: 50%;
-    left: 78%;
+    top: 65%;
+    left: 53%;
   }
   75% {
     top: 50%;
@@ -4700,12 +4700,12 @@ section.below-card {
     left: 50%;
   }
   5% {
-    top: 50%;
-    left: 78%;
+    top: 65%;
+    left: 53%;
   }
   70% {
-    top: 50%;
-    left: 78%;
+    top: 65%;
+    left: 53%;
   }
   75% {
     top: 50%;
