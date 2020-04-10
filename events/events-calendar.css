@@ -44,6 +44,17 @@ a.text-white:hover {
 #lead-gen-form a:not(.button):hover {
   color: #4EA2F6;
 }
+.video-wrapper.portrait-size {
+  position: relative;
+  padding-top: 0;
+  max-width: 350px;
+  margin: 0 auto;
+}
+.video-wrapper.portrait-size:before {
+  content: '';
+  display: block;
+  padding-top: 177.8%;
+}
 #hero.background-image {
   background-image: url('/getmedia/1fd836d0-96bb-4f6f-ac34-c6784cbec71f/events');
 }

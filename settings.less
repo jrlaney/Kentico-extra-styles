@@ -46,3 +46,15 @@ a.text-white, a.text-white:hover {
     a:not(.button) {color:@link; text-decoration: none;}
     a:not(.button):hover {color:@hover;}
 }
+
+.video-wrapper.portrait-size {
+    position:relative;
+    padding-top:0;
+    max-width:350px;
+    margin:0 auto;
+    &:before {
+        content:'';
+        display:block;
+        padding-top:177.8%;
+    }
+}

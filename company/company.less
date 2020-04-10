@@ -3,10 +3,12 @@
 
 //new components
 // @import '../_new-components/components-and-expansions/anchor-link-grid.less';
-// @import '../_new-components/components-and-expansions/background-color-filters.less';
-// @import '../_new-components/components-and-expansions/blockquote.less';
+@import '../_new-components/components-and-expansions/background-color-filters.less';
+@import '../_new-components/components-and-expansions/blockquote.less';
+@import '../_new-components/components-and-expansions/list-circle.less';
+@import '../_new-components/components-and-expansions/hypercard-graphic.less';
 @import '../_new-components/components-and-expansions/iframe-wrapper.less';
-// @import '../_new-components/components-and-expansions/number-group.less';
+@import '../_new-components/components-and-expansions/number-group.less';
 @import '../_new-components/components-and-expansions/offpage-image.less';
 // @import '../_new-components/components-and-expansions/popup-demo-iframe.less';
 // @import '../_new-components/components-and-expansions/popup-window-multiple-sizes.less';
@@ -27,6 +29,53 @@
 // @import '../_new-components/sliders/photos.less';
 
 
+
+
+
+
+
+
+
+.IntelligentEnterpriseResources {
+    #empower-everyone {
+        .device-mockup {
+            &.ipad {
+                position:relative; z-index:0;
+                width:130%;
+                margin-right:20%;
+                margin-bottom:20px;
+            }
+            &.iphone {
+                position:absolute; z-index:1;
+                width:30%;
+                right:10%; bottom:20px;
+            }
+            @media @medium {
+                &.ipad {width:150%;}
+                &.iphone {width:35%;}
+            }
+        }
+    }
+    #faster-decisions {
+        .device-mockup {
+                width:190%;
+                .cursor {
+                position:absolute; z-index:2;
+                width:10px;
+                @media @medium {width:15px;}
+                top:50%; left:50%;
+                .animation(hero-cursor-website 7.5s linear 0s normal infinite);
+            }
+            .hypercard-img {
+                position:absolute;
+                top:22%; left:22%;
+                width:25%;
+                opacity:0;
+                .animation(hero-card-appear 7.5s linear 0s normal infinite);
+            }
+        }
+    }
+}
 
 
 
@@ -1120,6 +1169,23 @@
 .keyframes(fade-slide-right;{
     0%{opacity:0; .translateX(-10%);}
     100%{opacity:1; .translateX(0);}
+});
+
+
+.keyframes(hero-cursor-website;{
+    0%   {top:50%; left:50%;}
+    5%  {top:16%; left:27%;}
+    50%  {top:16%; left:27%;}
+    55% {top:50%; left:50%;}
+    100% {top:50%; left:50%;}
+});
+.keyframes(hero-card-appear;{
+    0%   {opacity:0; .translateY(-10%);}
+    5%  {opacity:0; .translateY(-10%);}
+    7%  {opacity:1; .translateY(0);}
+    50%  {opacity:1; .translateY(0);}
+    52%  {opacity:0; .translateY(10%);}
+    100% {opacity:0; .translateY(10%);}
 });
 
 

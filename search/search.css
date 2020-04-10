@@ -44,6 +44,17 @@ a.text-white:hover {
 #lead-gen-form a:not(.button):hover {
   color: #4EA2F6;
 }
+.video-wrapper.portrait-size {
+  position: relative;
+  padding-top: 0;
+  max-width: 350px;
+  margin: 0 auto;
+}
+.video-wrapper.portrait-size:before {
+  content: '';
+  display: block;
+  padding-top: 177.8%;
+}
 .results-item {
   padding: 20px;
   border-bottom: 1px solid #f2f2f2;
