@@ -1101,6 +1101,38 @@ section.below-card {
   -webkit-animation: fade-slide-down 0.2s ease-out 0.8s normal forwards;
   animation: fade-slide-down 0.2s ease-out 0.8s normal forwards;
 }
+#video-playlists > .flex-row {
+  max-width: 1600px;
+}
+#video-playlists .video-playlist {
+  margin: 0 -15px;
+}
+#video-playlists .video-playlist .slick-track {
+  padding-bottom: 10px;
+}
+#video-playlists .video-playlist .slick-slide {
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  margin: 0 15px;
+}
+#video-playlists .video-playlist .slick-slide .video {
+  width: 100%;
+}
+#video-playlists .video-playlist .slick-slide .resource-thumbnail {
+  margin-bottom: 20px;
+}
+#video-playlists .video-playlist .slick-slide h3 > a {
+  color: #333;
+}
+#video-playlists .video-playlist .slick-slide h3 > a:hover,
+#video-playlists .video-playlist .slick-slide h3 > a:focus {
+  color: #333;
+  text-decoration: underline;
+}
+#video-playlists .video-playlist button.slick-disabled {
+  opacity: 0;
+  cursor: default;
+}
 section#page-hero {
   position: relative;
   z-index: 0;
