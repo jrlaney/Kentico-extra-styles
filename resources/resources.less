@@ -47,17 +47,78 @@
     }
 }
 
-//#academics-overview #hero.background-image { background-image: url('/getmedia/fe9ad21a-1f9a-4682-89ff-56fadff6a3ed/higher-education'); }
-
 
 
 // OTHER / INDIVIDUAL PAGE STUFF
 
-// #hero.background-image {
-//     // default hero banner images for academics landing pages
-//     .academics.students & { background-image: url('/getmedia/4789f7ca-6699-4c17-b7fa-ae092e9de135/students'); }
-//     .academics.instructors & { background-image: url('/getmedia/3452a3b2-0530-426c-b6d0-08f8230c934b/instructors'); }
-// }
+.BuildYourIntelligentEnterprise {
+    .w-gallery-view__hero-content-wrapper {
+        display:none!important;
+        // max-width:1200px!important;
+        // margin:0 auto!important;
+        // padding:0 20px!important;
+        // h1 {
+        //     font-family: @myriad-pro!important;
+        //     font-size: 45px!important;
+        //     font-weight:600!important;
+        // }
+        // p {
+        //     font-family: @myriad-pro!important;
+        //     font-size: 22px!important;
+        //     font-weight:400!important;
+        // }
+    }
+    .w-gallery-view__hero-content {
+        margin:0!important;
+    }
+    .w-channel-big-button {
+        border-radius:0!important;
+        box-shadow:1px 1px 10px fade(@pure-black, 30%)!important;
+        padding: 20px 30px!important;
+    }
+    .w-gallery-view__section {
+        .w-gallery-view__video-cards > h2 {
+            font-family: @myriad-pro!important;
+            font-size: 25px!important;
+            font-weight:600!important;
+            letter-spacing:0.1em!important;
+            //text-align: center!important;
+            margin-bottom:40px!important;
+            &:before {
+                content:'';
+                display:block;
+                background-color:@red;
+                margin-bottom:20px;
+                height:10px; width:100px;
+            }
+        }
+        > button {
+            border-radius:0!important;
+            height:60%!important;
+            background-color:fade(@red, 80%)!important;
+            margin-top:50px!important;
+        }
+        .w-video-card__thumbnail-wrapper {
+            border:1px solid fade(@gray, 30%)!important;
+            box-shadow:1px 1px 10px fade(@pure-black, 30%)!important;
+        }
+        .w-video-card {
+            > div {
+                transform: scale(1)!important;
+                transition: transform 0.2s ease-out 0s!important;
+
+                > div {
+                    //transform: translateY(0.001%);
+                    transition: transform 0.2s ease-out 0s!important;
+                }
+            }
+            h3 {
+                font-size:22px!important;
+            }
+        }
+    }
+}
+
 
 .Academics.Students {
     #page-hero {

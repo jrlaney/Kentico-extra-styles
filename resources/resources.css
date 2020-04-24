@@ -932,6 +932,52 @@ p:empty {
     right: 0;
   }
 }
+.BuildYourIntelligentEnterprise .w-gallery-view__hero-content-wrapper {
+  display: none!important;
+}
+.BuildYourIntelligentEnterprise .w-gallery-view__hero-content {
+  margin: 0!important;
+}
+.BuildYourIntelligentEnterprise .w-channel-big-button {
+  border-radius: 0!important;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3) !important;
+  padding: 20px 30px!important;
+}
+.BuildYourIntelligentEnterprise .w-gallery-view__section .w-gallery-view__video-cards > h2 {
+  font-family: myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-size: 25px!important;
+  font-weight: 600!important;
+  letter-spacing: 0.1em!important;
+  margin-bottom: 40px!important;
+}
+.BuildYourIntelligentEnterprise .w-gallery-view__section .w-gallery-view__video-cards > h2:before {
+  content: '';
+  display: block;
+  background-color: #D9232E;
+  margin-bottom: 20px;
+  height: 10px;
+  width: 100px;
+}
+.BuildYourIntelligentEnterprise .w-gallery-view__section > button {
+  border-radius: 0!important;
+  height: 60%!important;
+  background-color: rgba(217, 35, 46, 0.8) !important;
+  margin-top: 50px!important;
+}
+.BuildYourIntelligentEnterprise .w-gallery-view__section .w-video-card__thumbnail-wrapper {
+  border: 1px solid rgba(153, 153, 153, 0.3) !important;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3) !important;
+}
+.BuildYourIntelligentEnterprise .w-gallery-view__section .w-video-card > div {
+  transform: scale(1) !important;
+  transition: transform 0.2s ease-out 0s !important;
+}
+.BuildYourIntelligentEnterprise .w-gallery-view__section .w-video-card > div > div {
+  transition: transform 0.2s ease-out 0s !important;
+}
+.BuildYourIntelligentEnterprise .w-gallery-view__section .w-video-card h3 {
+  font-size: 22px!important;
+}
 .Academics.Students #page-hero {
   padding: 60px 0;
   background-color: transparent;
