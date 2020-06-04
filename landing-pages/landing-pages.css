@@ -439,6 +439,122 @@ blockquote.text-tiny > span {
   border: 1px solid #CCCCCC;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
 }
+.page-red ul.circle-list > li:before {
+  background-color: #D9232E;
+}
+.page-blue ul.circle-list > li:before {
+  background-color: #4789A3;
+}
+.page-navy-blue ul.circle-list > li:before {
+  background-color: #11566F;
+}
+.page-orange ul.circle-list > li:before {
+  background-color: #FF9100;
+}
+.page-green ul.circle-list > li:before {
+  background-color: #68AA00;
+}
+.page-gray ul.circle-list > li:before {
+  background-color: #999999;
+}
+.page-light-gray ul.circle-list > li:before {
+  background-color: #f2f2f2;
+}
+.page-dark-gray ul.circle-list > li:before {
+  background-color: #777777;
+}
+.page-black ul.circle-list > li:before {
+  background-color: #333333;
+}
+.page-white ul.circle-list > li:before {
+  background-color: #FFFFFF;
+}
+.component-red ul.circle-list > li:before {
+  background-color: #D9232E;
+}
+.component-blue ul.circle-list > li:before {
+  background-color: #4789A3;
+}
+.component-navy-blue ul.circle-list > li:before {
+  background-color: #11566F;
+}
+.component-orange ul.circle-list > li:before {
+  background-color: #FF9100;
+}
+.component-green ul.circle-list > li:before {
+  background-color: #68AA00;
+}
+.component-gray ul.circle-list > li:before {
+  background-color: #999999;
+}
+.component-light-gray ul.circle-list > li:before {
+  background-color: #f2f2f2;
+}
+.component-dark-gray ul.circle-list > li:before {
+  background-color: #777777;
+}
+.component-black ul.circle-list > li:before {
+  background-color: #333333;
+}
+.component-white ul.circle-list > li:before {
+  background-color: #FFFFFF;
+}
+ul.circle-list {
+  list-style: none;
+}
+ul.circle-list > li {
+  position: relative;
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+ul.circle-list > li:before {
+  content: "";
+  display: block;
+  width: 0.4em;
+  height: 0.4em;
+  min-width: 5px;
+  min-height: 5px;
+  max-width: 15px;
+  max-height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.5em;
+  left: -20px;
+  background-color: #333333;
+}
+ul.circle-list > li:last-child {
+  padding-bottom: 0;
+}
+ul.circle-list.red > li:before {
+  background-color: #D9232E;
+}
+ul.circle-list.blue > li:before {
+  background-color: #4789A3;
+}
+ul.circle-list.navy-blue > li:before {
+  background-color: #11566F;
+}
+ul.circle-list.orange > li:before {
+  background-color: #FF9100;
+}
+ul.circle-list.green > li:before {
+  background-color: #68AA00;
+}
+ul.circle-list.gray > li:before {
+  background-color: #999999;
+}
+ul.circle-list.light-gray > li:before {
+  background-color: #f2f2f2;
+}
+ul.circle-list.dark-gray > li:before {
+  background-color: #777777;
+}
+ul.circle-list.black > li:before {
+  background-color: #333333;
+}
+ul.circle-list.white > li:before {
+  background-color: #FFFFFF;
+}
 .number-group {
   position: relative;
   z-index: 1;
@@ -742,21 +858,25 @@ blockquote.text-tiny > span {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-#page-hero.form-fix > .flex-row {
+#page-hero.form-fix > .flex-row,
+#hero.form-fix > .flex-row {
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
-#page-hero.form-fix > .flex-row .col-md-6.col-xl-5:first-child h1.text-large {
+#page-hero.form-fix > .flex-row .col-md-6.col-xl-5:first-child h1.text-large,
+#hero.form-fix > .flex-row .col-md-6.col-xl-5:first-child h1.text-large {
   font-weight: 400;
 }
 @media only screen and (min-width: 768px) {
-  #page-hero.form-fix > .flex-row .col-md-6.col-xl-5:first-child {
+  #page-hero.form-fix > .flex-row .col-md-6.col-xl-5:first-child,
+  #hero.form-fix > .flex-row .col-md-6.col-xl-5:first-child {
     -webkit-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
-#page-hero.form-fix #lead-gen-form {
+#page-hero.form-fix #lead-gen-form,
+#hero.form-fix #lead-gen-form {
   width: calc(100% - 40px);
   margin-left: auto;
   margin-right: auto;
@@ -764,11 +884,13 @@ blockquote.text-tiny > span {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 @media only screen and (min-width: 768px) {
-  #page-hero.form-fix #lead-gen-form {
+  #page-hero.form-fix #lead-gen-form,
+  #hero.form-fix #lead-gen-form {
     width: calc(100% - 30px);
   }
 }
-#page-hero.form-fix #form-success-content-div {
+#page-hero.form-fix #form-success-content-div,
+#hero.form-fix #form-success-content-div {
   padding: 10px 15px;
 }
 p:empty {

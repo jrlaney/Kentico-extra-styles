@@ -606,21 +606,25 @@ blockquote.text-tiny > span {
 .triangle-group.black:before {
   border-right-color: #333333;
 }
-#page-hero.form-fix > .flex-row {
+#page-hero.form-fix > .flex-row,
+#hero.form-fix > .flex-row {
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
-#page-hero.form-fix > .flex-row .col-md-6.col-xl-5:first-child h1.text-large {
+#page-hero.form-fix > .flex-row .col-md-6.col-xl-5:first-child h1.text-large,
+#hero.form-fix > .flex-row .col-md-6.col-xl-5:first-child h1.text-large {
   font-weight: 400;
 }
 @media only screen and (min-width: 768px) {
-  #page-hero.form-fix > .flex-row .col-md-6.col-xl-5:first-child {
+  #page-hero.form-fix > .flex-row .col-md-6.col-xl-5:first-child,
+  #hero.form-fix > .flex-row .col-md-6.col-xl-5:first-child {
     -webkit-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
-#page-hero.form-fix #lead-gen-form {
+#page-hero.form-fix #lead-gen-form,
+#hero.form-fix #lead-gen-form {
   width: calc(100% - 40px);
   margin-left: auto;
   margin-right: auto;
@@ -628,11 +632,13 @@ blockquote.text-tiny > span {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 @media only screen and (min-width: 768px) {
-  #page-hero.form-fix #lead-gen-form {
+  #page-hero.form-fix #lead-gen-form,
+  #hero.form-fix #lead-gen-form {
     width: calc(100% - 30px);
   }
 }
-#page-hero.form-fix #form-success-content-div {
+#page-hero.form-fix #form-success-content-div,
+#hero.form-fix #form-success-content-div {
   padding: 10px 15px;
 }
 p:empty {

@@ -104,38 +104,64 @@
 
 
 
-#video-playlists > .flex-row {
-  max-width: 1600px;
-  }
-#video-playlists .video-playlist {
-  margin: 0 -15px;
-  }
-#video-playlists .video-playlist .slick-track {
-  padding-bottom: 10px;
-  }
-#video-playlists .video-playlist .slick-slide {
-  -webkit-align-items: stretch;
-  align-items: stretch;
-  margin: 0 15px;
-  }
-#video-playlists .video-playlist .slick-slide .video {
-  width: 100%;
-  }
-#video-playlists .video-playlist .slick-slide .resource-thumbnail {
-  margin-bottom: 20px;
-  }
-#video-playlists .video-playlist .slick-slide h3 > a {
-  color: #333;
-  }
-#video-playlists .video-playlist .slick-slide h3 > a:hover,
-#video-playlists .video-playlist .slick-slide h3 > a:focus {
-  color: #333;
-  text-decoration: underline;
-  }
-#video-playlists .video-playlist button.slick-disabled {
-  opacity: 0;
-  cursor: default;
-  }
+section ~ section > .flex-row {
+    max-width: 1600px;
+    &:first-child {padding-top:20px;}
+}
+section.no-padding > div:first-child {
+    padding-left:15px;
+    padding-right:15px;
+}
+.video-playlist {
+    .slick-arrow {
+        top:30%;
+        .translate(0,0);
+    }
+    .slick-track {
+        padding-bottom: 10px;
+        min-height:0; min-width:0;
+    }
+    .slick-slide {
+        .align-items(flex-start);
+
+        h3 > a {color: #333;}
+        .video {min-width: 100%;}
+        .resource-thumbnail {width:100%; margin-bottom:10px;}
+    }
+    button.slick-disabled {
+        opacity: 0;
+        cursor: default;
+    }
+}
+// .video-playlist {
+//     margin: 0 -15px;
+// }
+// .video-playlist .slick-track {
+//     padding-bottom: 10px;
+// }
+// .video-playlist .slick-slide {
+//     .flex(0, 1, auto);
+// }
+// .video-playlist .slick-slide .video {
+//     .display(flex);
+//     .flex(0, 1, auto);
+//     .align-items(flex-start);
+//     min-width: 100%;
+// }
+// .video-playlist .slick-slide h3 {
+//     margin: 10px 0;
+// }
+// .video-playlist .slick-slide h3 > a {
+//     color: #333;
+// }
+// .video-playlist .slick-slide h3 > a:hover,
+// .video-playlist .slick-slide h3 > a:focus {
+//     color: #D9232E;
+// }
+// .video-playlist button.slick-disabled {
+//     opacity: 0;
+//     cursor: default;
+// }
 
 
 
