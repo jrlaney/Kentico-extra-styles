@@ -1,0 +1,313 @@
+﻿// DEBUG
+
+// use to see debug colors
+@debug: false;
+
+
+
+// BASE
+
+@base-font-size: 14px;
+@base-line-height: 20px;
+@base-spacing: @base-line-height;
+
+
+
+// GLOBAL
+
+// default list indexes
+@default-size: 3; // medium
+@default-color: 6; // gray
+
+// thickness
+@thin: 1px;
+@regular: 2px;
+@thick: 5px;
+
+// opacity
+@semi-opaque: .7;
+@semi-transparent: .25;
+
+// lighten/darken
+@lighten: 5%;
+@darken: 5%;
+
+// mobile
+@mobile-tap-space: 50px;
+
+// lists (for loops)
+@size-classes: tiny, small, medium, large, jumbo;
+@x-positions: left, right, center;
+@y-positions: top, bottom, middle;
+@positions: top, right, bottom, left;
+@directions: up, right, down, left;
+
+
+
+
+// DEVICES
+
+// iphone
+@iphone-action-bar-height: 69px;
+
+
+
+// GRID
+
+@row-width: 1200px;
+@column-gutter: 30px;
+@column-count: 12;
+
+
+
+// MEDIA QUERIES
+
+// breakpoints
+@small-breakpoint: 768px;
+@medium-breakpoint: 980px;
+@large-breakpoint: 1200px;
+
+@small-min: @small-breakpoint;
+@medium-min: @medium-breakpoint;
+@large-min: @large-breakpoint;
+
+@small-max: ( @small-breakpoint - 1 );
+@medium-max: ( @medium-breakpoint - 1 );
+@large-max: ( @large-breakpoint - 1 );
+
+// media
+@screen: ~'only screen';
+
+// conditions
+@max: ~'max-width';
+@min: ~'min-width';
+
+// media queries
+@small-up: ~'@{screen}';
+@medium-up: ~'@{screen} and (@{min}: @{small-min})';
+@large-up: ~'@{screen} and (@{min}: @{medium-min})';
+@xlarge-up: ~'@{screen} and (@{min}: @{large-min})';
+
+@small-only: ~'@{screen} and (@{max}: @{small-max})';
+@medium-only: ~'@{screen} and (@{min}: @{small-min}) and (@{max}: @{medium-max})';
+@large-only: ~'@{screen} and (@{min}: @{medium-min}) and (@{max}: @{large-max})';
+@xlarge-only: ~'@{screen} and (@{min}: @{large-min})';
+
+@xlarge-down: ~'@{screen}';
+@large-down: ~'@{screen} and (@{max}: @{large-max})';
+@medium-down: ~'@{screen} and (@{max}: @{medium-max})';
+@small-down: ~'@{screen} and (@{max}: @{small-max})';
+
+// mobile-first
+@small: @small-up;
+@medium: @medium-up;
+@large: @large-up;
+@xlarge: @xlarge-up;
+
+// media query lists (for loops)
+@screen-size-classes: sm, md, lg, xl;
+@breakpoints: none, @small-breakpoint, @medium-breakpoint, @large-breakpoint;
+@queries: @small, @medium, @large, @xlarge;
+
+
+
+// COLORS
+
+// brand colors
+@red: #D9232E;
+@blue: #4789A3;
+@navy-blue: #11566F;
+@orange: #FF9100;
+@green: #68AA00;
+
+// tints
+@light-red: lighten(saturate(@red, 10%), @lighten); //#f32532
+@light-blue: lighten(saturate(@blue, 10%), @lighten); //#5ea1bb
+@light-navy-blue: lighten(saturate(@navy-blue, 10%), @lighten); //#1e6c88
+@light-orange: lighten(saturate(@orange, 10%), @lighten); //#ffa733
+@light-green: lighten(saturate(@green, 10%), @lighten); //#79bc0f
+
+// shades
+@dark-red: darken(desaturate(@red, 5%), @darken); //#c5202a
+@dark-blue: darken(desaturate(@blue, 5%), @darken); //#3a7288
+@dark-navy-blue: darken(desaturate(@navy-blue, 5%), @darken); //#11485c
+@dark-orange: darken(desaturate(@orange, 5%), @darken); //#ef7d03
+@dark-green: darken(desaturate(@green, 5%), @darken); //#5d9209
+
+// grays
+@white: #FFFFFF;
+@ghost: #FAFAFA;
+@snow: #F9F9F9;
+@vapor: #F6F6F6;
+@white-smoke: #f2f2f2;
+@silver: #ececec;
+@smoke: #EEEEEE;
+@gainsboro: #DDDDDD;
+@iron: #CCCCCC;
+@base: #AAAAAA;
+@aluminum: #999999;
+@jumbo: #888888;
+@monsoon: #777777;
+@steel: #666666;
+@charcoal: #555555;
+@tuatara: #444444;
+@oil: #333333;
+@jet: #222222;
+@pure-black: #000000;
+
+@light-gray: @white-smoke;
+@gray: @aluminum;
+@dark-gray: @monsoon;
+@black: @oil;
+
+// link state colors
+@link: #377ABD;
+@hover: #4EA2F6;
+
+// other brand colors
+@facebook: #365397;
+@twitter: #00a9f1;
+@linkedin: #006db3;
+@google-plus: #e0452c;
+@youtube: #ff3333;
+@flickr: #ea0066;
+@xing: #026466;
+
+// color list (for loops)
+@color-classes: red, blue, navy-blue, orange, green, gray, light-gray, dark-gray, black, white;
+@colors: @red, @blue, @navy-blue, @orange, @green, @gray, @light-gray, @dark-gray, @black, @white;
+@tints: @light-red, @light-blue, @light-navy-blue, @light-orange, @light-green, lighten(@gray, @lighten), @snow, lighten(@dark-gray, @lighten), lighten(@black, @lighten), @light-gray;
+@shades: @dark-red, @dark-blue, @dark-navy-blue, @dark-orange, @dark-green, darken(@gray, @darken), darken(@light-gray, @darken), darken(@dark-gray, @darken), darken(@black, @darken), darken(@white, @darken);
+@contrast-colors: @white, @white, @white, @white, @white, @white, @black, @white, @white, @black;
+@link-colors: @light-gray, @light-gray, @light-gray, @light-gray, @light-gray, @white, @link, @light-gray, @light-gray, @link;
+
+// social color lists (for loops)
+@brands: facebook, twitter, linkedin, google-plus, youtube, flickr, xing;
+@brand-colors: @facebook, @twitter, @linkedin, @google-plus, @youtube, @flickr, @xing;
+
+
+
+// TYPOGRAPHY
+
+// font families
+@sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@myriad-pro: myriad-pro, 'Open Sans', @sans-serif;
+@lucida-grande: 'Lucida Grande', @sans-serif;
+
+// font weights
+@normal: 400;
+@light: 300;
+@bold: 600;
+
+// defaults
+@line-height: round( unit( @base-line-height / @base-font-size ), 2 );
+@uppercase-tracking: .05em;
+
+// lists (for loops)
+@weight-classes: normal, light, bold;
+@weights: @normal, @light, @bold;
+
+
+
+// TEMPLATE
+
+// main
+@body-color: @white;
+
+// header
+@header-height: 60px;
+@header-z-index: 900;
+@logo-widths: 160px, 180px, 220px;
+@menu-icon-width: 24px;
+@menu-icon-bar-thickness: @regular;
+
+// navigation
+@secondary-header-height: 60px;
+@secondary-nav-color: @black;
+
+// sections
+@section-padding: 30px, 45px, 60px, 60px; // small(1), medium(2), large(3), xlarge(4)
+
+
+
+// BORDERS
+
+// defaults
+@default-border-thickness: @thin;
+@default-border-style: solid;
+@default-border-color: extract(@colors, @default-color);
+
+// border thickness
+@thin-border: @thin @default-border-style;
+@medium-border: @regular @default-border-style;
+@thick-border: @thick @default-border-style;
+
+
+
+// COMPONENTS
+
+// base
+@default-component-padding: 1em;
+@default-component-margin: .5em;
+@component-base-sizes: 12px, 14px, 16px, 24px, 32px;
+@component-scale-sizes: 12px, 14px, 16px, 20px, 24px;
+
+// cards
+@card-border-thickness: @thin;
+@card-border-color: @gray;
+@card-border: @card-border-thickness solid @card-border-color;
+@card-hover-height: 8px;
+
+// buttons
+@button-x-padding: 1.25em;
+@button-y-padding: @default-component-padding;
+@button-padding: @button-y-padding @button-x-padding;
+@button-base-sizes: @component-base-sizes;
+@button-scale-sizes: @component-scale-sizes;
+
+// forms
+@form-field-padding: @default-component-padding;
+@form-field-base-sizes: @component-base-sizes;
+@form-field-scale-sizes: @component-scale-sizes;
+@label-font-size: 12px;
+
+// icons
+@icon-font-name: ~'microstrategy';
+@icon-font-location: ~'/Strategy/media/images/icons';
+@icon-sizes: 8px, 16px, 32px, 64px, 128px;
+@icon-block-padding: @default-component-padding;
+
+// text blocks
+@text-block-padding: .35em .5em;
+@text-block-sizes: 10px, 12px, 14px, 16px, 18px;
+
+// line dividers
+@line-divider-lengths: 10%, 30%, 50%, 75%, 100%;
+
+
+
+// TRANSITIONS
+
+// timing functions
+@ease: cubic-bezier(.86,.01,.23,1);
+@ease-out: cubic-bezier(.2,0,.03,1);
+@ease-in: cubic-bezier(.98,0,.76,1);
+
+// defaults
+@default-transition-property: all;
+@default-transition-duration: .2s;
+@default-transition-function: ease-out;
+@default-transition-delay: null;
+
+
+
+// SHAPES
+
+// triangles
+@triangle-size: @default-component-padding / 2;
+
+
+
+// DEBUG
+
+@debug-hidden-color: blue;
